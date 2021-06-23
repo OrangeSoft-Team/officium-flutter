@@ -41,12 +41,12 @@ Adicionalmente, se utilizan las siguientes plantillas para el repositorio:
 
 | Logo                                                                                                                                        | Tipo                       | Nombre         | Enlace de Descarga                       | Versión |
 | ------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------- | -------------- | ---------------------------------------- | ------- |
-| <img src="http://assets.stickpng.com/images/5847f289cef1014c0b5e486b.png" width="24">                                                       | Lenguaje                   | Dart           | https://dart.dev/                        | 2.13    |
+| <img src="https://cdn.worldvectorlogo.com/logos/dart.svg" width="24">                                                                       | Lenguaje                   | Dart           | https://dart.dev/                        | 2.13    |
 | <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Android_Studio_Icon_%282014-2019%29.svg" width="24">                          | Ambiente de ejecución      | Android Studio | https://developer.android.com/studio     | 4.2.1   |
-| <img src="https://raw.githubusercontent.com/felangel/bloc/master/docs/assets/bloc_logo_full.png" width="24">                                | Manejador de Estado        | BloC           | https://bloclibrary.dev/#/               | 7.0.0   |
-| <img src="https://flutter.dev/assets/flutter-lockup-1caf6476beed76adec3c477586da54de6b552b2f42108ec5bc68dc63bae2df75.png" width="24">       | Framework                  | Flutter        | https://flutter.dev/                     | 2.2     |
+| <img src="https://plugins.jetbrains.com/files/12129/118174/icon/pluginIcon.svg" width="24">                                                 | Manejador de Estado        | BloC           | https://bloclibrary.dev/#/               | 7.0.0   |
+| <img src="https://logowik.com/content/uploads/images/flutter5786.jpg" width="24">                                                           | Framework                  | Flutter        | https://flutter.dev/                     | 2.2     |
 | <img src="https://avatars.githubusercontent.com/u/32196900?s=400&v=4" width="24">                                                           | Testing                    | Jest           | https://jestjs.io/docs/getting-started   | 26.6.3  |
-| <img src="http://assets.stickpng.com/images/5847f289cef1014c0b5e486b.png" width="24">                                                       | Linter                     | Linter         | https://pub.dev/packages/linter          | 1.6.1   |
+| <img src="https://cdn.worldvectorlogo.com/logos/dart.svg" width="24">                                                                       | Linter                     | Linter         | https://pub.dev/packages/linter          | 1.6.1   | 
 
 ### :wrench: Instalación de la Aplicación
 
@@ -57,6 +57,7 @@ Para realizar la instalación de la aplicación, es necesario realizar los sigui
 - Cree una copia local del repositorio en su dispositivo.
 
 - Luego, ejecute el siguiente comando dentro de la carpeta para obtener el stack tecnológico de frameworks y librerías de las cuales depende la aplicación:
+
   `flutter pub get`
 
 ### :hammer: Construcción de la Aplicación (build)
