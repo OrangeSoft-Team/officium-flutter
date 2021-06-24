@@ -1,8 +1,8 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter/foundation.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:officium_flutter/dominio/core/errors.dart';
-import 'package:officium_flutter/dominio/core/factory_failures.dart';
+import 'package:officium_flutter/dominio/comun/errors.dart';
+import 'package:officium_flutter/dominio/comun/factory_failures.dart';
 import 'package:uuid/uuid.dart';
 
 @immutable

@@ -1,4 +1,4 @@
-import 'package:officium_flutter/dominio/core/factory_failures.dart';
+import 'package:officium_flutter/dominio/comun/factory_failures.dart';
 
 //Aquí estarán todas las clases de Error
 
