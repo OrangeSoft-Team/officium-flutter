@@ -3,7 +3,10 @@
 </p>
 <br>
 
-Officium Flutter es una aplicación móvil multiplataforma  desarrollado para el proyecto Officium elaborado utilizando los conceptos de "Arquitectura Hexagonal" o "Puertos y Adaptadores" para obtener una capa de dominio y capa de aplicación que se desacopla del framework principal, en este caso "Flutter" y de otros detalles de implementación, como lo es la utilización de API's y servicios para obtener datos.
+Officium Flutter es una aplicación móvil multiplataforma  desarrollado para el proyecto Officium elaborado utilizando
+los conceptos de "Arquitectura Hexagonal" o "Puertos y Adaptadores" para obtener una capa de dominio y capa de aplicación
+que se desacopla del framework principal, en este caso "Flutter" y de otros detalles de implementación, como lo es la 
+utilización de API's y servicios para obtener datos.
 
 ### :page_facing_up: Tabla de Contenidos
 
