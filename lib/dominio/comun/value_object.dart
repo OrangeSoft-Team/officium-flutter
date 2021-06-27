@@ -1,9 +1,9 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter/foundation.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:officium_flutter/dominio/comun/errores.dart';
-import 'package:officium_flutter/dominio/comun/factoriaValorErroneo.dart';
-import 'package:uuid/uuid.dart';
+
+import 'excepciones_dominio/errores.dart';
+import 'excepciones_dominio/valores_errones_value_object/factoriaValorErroneo.dart';
 
 @immutable
 abstract class ValueObject<T> {
