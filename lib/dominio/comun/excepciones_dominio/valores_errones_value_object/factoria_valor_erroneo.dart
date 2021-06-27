@@ -2,7 +2,7 @@ import 'dart:ffi';
 
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'factoriaValorErroneo.freezed.dart';
+part 'factoria_valor_erroneo.freezed.dart';
 
 //Aquí se encuentra la fábrica de ValueFailures que pueden estar presentes en las validaciones de los Value Objects a lo largo del projecto
 
@@ -40,4 +40,7 @@ abstract class ValorErroneo<T> with _$ValorErroneo<T> {
 
   const factory ValorErroneo.numVacantesNoVacia({required T valorErroneo}) =
       NumVacantesNoVacia<T>;
+  const factory ValorErroneo.turnoInvalido(
+      {required T valorErroneo,
+      required List<String> turnosValidos}) = TurnoInvalido<T>;
 }

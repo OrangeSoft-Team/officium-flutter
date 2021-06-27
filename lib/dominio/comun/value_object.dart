@@ -3,7 +3,7 @@ import 'package:flutter/foundation.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import 'excepciones_dominio/errores.dart';
-import 'excepciones_dominio/valores_errones_value_object/factoriaValorErroneo.dart';
+import 'excepciones_dominio/valores_errones_value_object/factoria_valor_erroneo.dart';
 
 @immutable
 abstract class ValueObject<T> {
