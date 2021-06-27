@@ -8,34 +8,36 @@ part 'factoriaValorErroneo.freezed.dart';
 
 @freezed
 abstract class ValorErroneo<T> with _$ValorErroneo<T> {
-  const factory ValorErroneo.excedeLongitudMaxima({
-    required T valorErroneo,
-    required int max,
-  }) = ExcedeLongitudMaxima<T>;
   const factory ValorErroneo.emailInvalido({
     required T valorErroneo,
   }) = EmailInvalido<T>;
   const factory ValorErroneo.contrasenaCorta({
     required T valorErroneo,
   }) = ContrasenaCorta<T>;
-  const factory ValorErroneo.ciudadInvalida({
+  const factory ValorErroneo.stringVacio({
     required T valorErroneo,
-  }) = CiudadInvalida<T>;
-  const factory ValorErroneo.fechaInvalida({
-    required T valorErroneo,
-  }) = FechaInvalida<T>;
+  }) = StringVacio<T>;
 
-  const factory ValorErroneo.cargoLongitudInvalida({
+  const factory ValorErroneo.longitudInvalida({
     required T valorErroneo,
     required int min,
     required int max,
-  }) = CargoLongitudInvalida<T>;
+  }) = LongitudInvalida<T>;
 
   const factory ValorErroneo.sueldoInvalido({
     required T valorErroneo,
     required double max,
   }) = SueldoInvalida<T>;
 
+  const factory ValorErroneo.sueldoVacio({
+    required T valorErroneo,
+  }) = SueldoVacio<T>;
+
   const factory ValorErroneo.fechaNula({required T fechaErronea}) =
       FechaNula<T>;
+  const factory ValorErroneo.numVacantesInvalido(
+      {required T numVacantesInvalido}) = NumVacantesInvalido<T>;
+
+  const factory ValorErroneo.numVacantesNoVacia({required T valorErroneo}) =
+      NumVacantesNoVacia<T>;
 }

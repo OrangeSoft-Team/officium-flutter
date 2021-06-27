@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
 import 'package:officium_flutter/dominio/comun/excepciones_dominio/valores_errones_value_object/factoriaValorErroneo.dart';
 
-Either<ValorErroneo<String>, String> validadorLongitudCargo(
+Either<ValorErroneo<String>, String> validadorLongitudInvalida(
   String input,
   int maxLength,
   int minLength,
@@ -10,7 +10,7 @@ Either<ValorErroneo<String>, String> validadorLongitudCargo(
     return right(input);
   } else {
     return left(
-      ValorErroneo.cargoLongitudInvalida(
+      ValorErroneo.longitudInvalida(
           valorErroneo: input, min: minLength, max: maxLength),
     );
   }

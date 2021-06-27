@@ -16,14 +16,6 @@ final _privateConstructorUsedError = UnsupportedError(
 class _$ValorErroneoTearOff {
   const _$ValorErroneoTearOff();
 
-  ExcedeLongitudMaxima<T> excedeLongitudMaxima<T>(
-      {required T valorErroneo, required int max}) {
-    return ExcedeLongitudMaxima<T>(
-      valorErroneo: valorErroneo,
-      max: max,
-    );
-  }
-
   EmailInvalido<T> emailInvalido<T>({required T valorErroneo}) {
     return EmailInvalido<T>(
       valorErroneo: valorErroneo,
@@ -36,21 +28,15 @@ class _$ValorErroneoTearOff {
     );
   }
 
-  CiudadInvalida<T> ciudadInvalida<T>({required T valorErroneo}) {
-    return CiudadInvalida<T>(
+  StringVacio<T> stringVacio<T>({required T valorErroneo}) {
+    return StringVacio<T>(
       valorErroneo: valorErroneo,
     );
   }
 
-  FechaInvalida<T> fechaInvalida<T>({required T valorErroneo}) {
-    return FechaInvalida<T>(
-      valorErroneo: valorErroneo,
-    );
-  }
-
-  CargoLongitudInvalida<T> cargoLongitudInvalida<T>(
+  LongitudInvalida<T> longitudInvalida<T>(
       {required T valorErroneo, required int min, required int max}) {
-    return CargoLongitudInvalida<T>(
+    return LongitudInvalida<T>(
       valorErroneo: valorErroneo,
       min: min,
       max: max,
@@ -65,9 +51,28 @@ class _$ValorErroneoTearOff {
     );
   }
 
+  SueldoVacio<T> sueldoVacio<T>({required T valorErroneo}) {
+    return SueldoVacio<T>(
+      valorErroneo: valorErroneo,
+    );
+  }
+
   FechaNula<T> fechaNula<T>({required T fechaErronea}) {
     return FechaNula<T>(
       fechaErronea: fechaErronea,
+    );
+  }
+
+  NumVacantesInvalido<T> numVacantesInvalido<T>(
+      {required T numVacantesInvalido}) {
+    return NumVacantesInvalido<T>(
+      numVacantesInvalido: numVacantesInvalido,
+    );
+  }
+
+  NumVacantesNoVacia<T> numVacantesNoVacia<T>({required T valorErroneo}) {
+    return NumVacantesNoVacia<T>(
+      valorErroneo: valorErroneo,
     );
   }
 }
@@ -79,54 +84,56 @@ const $ValorErroneo = _$ValorErroneoTearOff();
 mixin _$ValorErroneo<T> {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(T valorErroneo, int max) excedeLongitudMaxima,
     required TResult Function(T valorErroneo) emailInvalido,
     required TResult Function(T valorErroneo) contrasenaCorta,
-    required TResult Function(T valorErroneo) ciudadInvalida,
-    required TResult Function(T valorErroneo) fechaInvalida,
+    required TResult Function(T valorErroneo) stringVacio,
     required TResult Function(T valorErroneo, int min, int max)
-        cargoLongitudInvalida,
+        longitudInvalida,
     required TResult Function(T valorErroneo, double max) sueldoInvalido,
+    required TResult Function(T valorErroneo) sueldoVacio,
     required TResult Function(T fechaErronea) fechaNula,
+    required TResult Function(T numVacantesInvalido) numVacantesInvalido,
+    required TResult Function(T valorErroneo) numVacantesNoVacia,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(T valorErroneo, int max)? excedeLongitudMaxima,
     TResult Function(T valorErroneo)? emailInvalido,
     TResult Function(T valorErroneo)? contrasenaCorta,
-    TResult Function(T valorErroneo)? ciudadInvalida,
-    TResult Function(T valorErroneo)? fechaInvalida,
-    TResult Function(T valorErroneo, int min, int max)? cargoLongitudInvalida,
+    TResult Function(T valorErroneo)? stringVacio,
+    TResult Function(T valorErroneo, int min, int max)? longitudInvalida,
     TResult Function(T valorErroneo, double max)? sueldoInvalido,
+    TResult Function(T valorErroneo)? sueldoVacio,
     TResult Function(T fechaErronea)? fechaNula,
+    TResult Function(T numVacantesInvalido)? numVacantesInvalido,
+    TResult Function(T valorErroneo)? numVacantesNoVacia,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(ExcedeLongitudMaxima<T> value)
-        excedeLongitudMaxima,
     required TResult Function(EmailInvalido<T> value) emailInvalido,
     required TResult Function(ContrasenaCorta<T> value) contrasenaCorta,
-    required TResult Function(CiudadInvalida<T> value) ciudadInvalida,
-    required TResult Function(FechaInvalida<T> value) fechaInvalida,
-    required TResult Function(CargoLongitudInvalida<T> value)
-        cargoLongitudInvalida,
+    required TResult Function(StringVacio<T> value) stringVacio,
+    required TResult Function(LongitudInvalida<T> value) longitudInvalida,
     required TResult Function(SueldoInvalida<T> value) sueldoInvalido,
+    required TResult Function(SueldoVacio<T> value) sueldoVacio,
     required TResult Function(FechaNula<T> value) fechaNula,
+    required TResult Function(NumVacantesInvalido<T> value) numVacantesInvalido,
+    required TResult Function(NumVacantesNoVacia<T> value) numVacantesNoVacia,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(ExcedeLongitudMaxima<T> value)? excedeLongitudMaxima,
     TResult Function(EmailInvalido<T> value)? emailInvalido,
     TResult Function(ContrasenaCorta<T> value)? contrasenaCorta,
-    TResult Function(CiudadInvalida<T> value)? ciudadInvalida,
-    TResult Function(FechaInvalida<T> value)? fechaInvalida,
-    TResult Function(CargoLongitudInvalida<T> value)? cargoLongitudInvalida,
+    TResult Function(StringVacio<T> value)? stringVacio,
+    TResult Function(LongitudInvalida<T> value)? longitudInvalida,
     TResult Function(SueldoInvalida<T> value)? sueldoInvalido,
+    TResult Function(SueldoVacio<T> value)? sueldoVacio,
     TResult Function(FechaNula<T> value)? fechaNula,
+    TResult Function(NumVacantesInvalido<T> value)? numVacantesInvalido,
+    TResult Function(NumVacantesNoVacia<T> value)? numVacantesNoVacia,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -147,164 +154,6 @@ class _$ValorErroneoCopyWithImpl<T, $Res>
   final ValorErroneo<T> _value;
   // ignore: unused_field
   final $Res Function(ValorErroneo<T>) _then;
-}
-
-/// @nodoc
-abstract class $ExcedeLongitudMaximaCopyWith<T, $Res> {
-  factory $ExcedeLongitudMaximaCopyWith(ExcedeLongitudMaxima<T> value,
-          $Res Function(ExcedeLongitudMaxima<T>) then) =
-      _$ExcedeLongitudMaximaCopyWithImpl<T, $Res>;
-  $Res call({T valorErroneo, int max});
-}
-
-/// @nodoc
-class _$ExcedeLongitudMaximaCopyWithImpl<T, $Res>
-    extends _$ValorErroneoCopyWithImpl<T, $Res>
-    implements $ExcedeLongitudMaximaCopyWith<T, $Res> {
-  _$ExcedeLongitudMaximaCopyWithImpl(ExcedeLongitudMaxima<T> _value,
-      $Res Function(ExcedeLongitudMaxima<T>) _then)
-      : super(_value, (v) => _then(v as ExcedeLongitudMaxima<T>));
-
-  @override
-  ExcedeLongitudMaxima<T> get _value => super._value as ExcedeLongitudMaxima<T>;
-
-  @override
-  $Res call({
-    Object? valorErroneo = freezed,
-    Object? max = freezed,
-  }) {
-    return _then(ExcedeLongitudMaxima<T>(
-      valorErroneo: valorErroneo == freezed
-          ? _value.valorErroneo
-          : valorErroneo // ignore: cast_nullable_to_non_nullable
-              as T,
-      max: max == freezed
-          ? _value.max
-          : max // ignore: cast_nullable_to_non_nullable
-              as int,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$ExcedeLongitudMaxima<T> implements ExcedeLongitudMaxima<T> {
-  const _$ExcedeLongitudMaxima({required this.valorErroneo, required this.max});
-
-  @override
-  final T valorErroneo;
-  @override
-  final int max;
-
-  @override
-  String toString() {
-    return 'ValorErroneo<$T>.excedeLongitudMaxima(valorErroneo: $valorErroneo, max: $max)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other is ExcedeLongitudMaxima<T> &&
-            (identical(other.valorErroneo, valorErroneo) ||
-                const DeepCollectionEquality()
-                    .equals(other.valorErroneo, valorErroneo)) &&
-            (identical(other.max, max) ||
-                const DeepCollectionEquality().equals(other.max, max)));
-  }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(valorErroneo) ^
-      const DeepCollectionEquality().hash(max);
-
-  @JsonKey(ignore: true)
-  @override
-  $ExcedeLongitudMaximaCopyWith<T, ExcedeLongitudMaxima<T>> get copyWith =>
-      _$ExcedeLongitudMaximaCopyWithImpl<T, ExcedeLongitudMaxima<T>>(
-          this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(T valorErroneo, int max) excedeLongitudMaxima,
-    required TResult Function(T valorErroneo) emailInvalido,
-    required TResult Function(T valorErroneo) contrasenaCorta,
-    required TResult Function(T valorErroneo) ciudadInvalida,
-    required TResult Function(T valorErroneo) fechaInvalida,
-    required TResult Function(T valorErroneo, int min, int max)
-        cargoLongitudInvalida,
-    required TResult Function(T valorErroneo, double max) sueldoInvalido,
-    required TResult Function(T fechaErronea) fechaNula,
-  }) {
-    return excedeLongitudMaxima(valorErroneo, max);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(T valorErroneo, int max)? excedeLongitudMaxima,
-    TResult Function(T valorErroneo)? emailInvalido,
-    TResult Function(T valorErroneo)? contrasenaCorta,
-    TResult Function(T valorErroneo)? ciudadInvalida,
-    TResult Function(T valorErroneo)? fechaInvalida,
-    TResult Function(T valorErroneo, int min, int max)? cargoLongitudInvalida,
-    TResult Function(T valorErroneo, double max)? sueldoInvalido,
-    TResult Function(T fechaErronea)? fechaNula,
-    required TResult orElse(),
-  }) {
-    if (excedeLongitudMaxima != null) {
-      return excedeLongitudMaxima(valorErroneo, max);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(ExcedeLongitudMaxima<T> value)
-        excedeLongitudMaxima,
-    required TResult Function(EmailInvalido<T> value) emailInvalido,
-    required TResult Function(ContrasenaCorta<T> value) contrasenaCorta,
-    required TResult Function(CiudadInvalida<T> value) ciudadInvalida,
-    required TResult Function(FechaInvalida<T> value) fechaInvalida,
-    required TResult Function(CargoLongitudInvalida<T> value)
-        cargoLongitudInvalida,
-    required TResult Function(SueldoInvalida<T> value) sueldoInvalido,
-    required TResult Function(FechaNula<T> value) fechaNula,
-  }) {
-    return excedeLongitudMaxima(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(ExcedeLongitudMaxima<T> value)? excedeLongitudMaxima,
-    TResult Function(EmailInvalido<T> value)? emailInvalido,
-    TResult Function(ContrasenaCorta<T> value)? contrasenaCorta,
-    TResult Function(CiudadInvalida<T> value)? ciudadInvalida,
-    TResult Function(FechaInvalida<T> value)? fechaInvalida,
-    TResult Function(CargoLongitudInvalida<T> value)? cargoLongitudInvalida,
-    TResult Function(SueldoInvalida<T> value)? sueldoInvalido,
-    TResult Function(FechaNula<T> value)? fechaNula,
-    required TResult orElse(),
-  }) {
-    if (excedeLongitudMaxima != null) {
-      return excedeLongitudMaxima(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class ExcedeLongitudMaxima<T> implements ValorErroneo<T> {
-  const factory ExcedeLongitudMaxima(
-      {required T valorErroneo, required int max}) = _$ExcedeLongitudMaxima<T>;
-
-  T get valorErroneo => throw _privateConstructorUsedError;
-  int get max => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $ExcedeLongitudMaximaCopyWith<T, ExcedeLongitudMaxima<T>> get copyWith =>
-      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -373,15 +222,16 @@ class _$EmailInvalido<T> implements EmailInvalido<T> {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(T valorErroneo, int max) excedeLongitudMaxima,
     required TResult Function(T valorErroneo) emailInvalido,
     required TResult Function(T valorErroneo) contrasenaCorta,
-    required TResult Function(T valorErroneo) ciudadInvalida,
-    required TResult Function(T valorErroneo) fechaInvalida,
+    required TResult Function(T valorErroneo) stringVacio,
     required TResult Function(T valorErroneo, int min, int max)
-        cargoLongitudInvalida,
+        longitudInvalida,
     required TResult Function(T valorErroneo, double max) sueldoInvalido,
+    required TResult Function(T valorErroneo) sueldoVacio,
     required TResult Function(T fechaErronea) fechaNula,
+    required TResult Function(T numVacantesInvalido) numVacantesInvalido,
+    required TResult Function(T valorErroneo) numVacantesNoVacia,
   }) {
     return emailInvalido(valorErroneo);
   }
@@ -389,14 +239,15 @@ class _$EmailInvalido<T> implements EmailInvalido<T> {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(T valorErroneo, int max)? excedeLongitudMaxima,
     TResult Function(T valorErroneo)? emailInvalido,
     TResult Function(T valorErroneo)? contrasenaCorta,
-    TResult Function(T valorErroneo)? ciudadInvalida,
-    TResult Function(T valorErroneo)? fechaInvalida,
-    TResult Function(T valorErroneo, int min, int max)? cargoLongitudInvalida,
+    TResult Function(T valorErroneo)? stringVacio,
+    TResult Function(T valorErroneo, int min, int max)? longitudInvalida,
     TResult Function(T valorErroneo, double max)? sueldoInvalido,
+    TResult Function(T valorErroneo)? sueldoVacio,
     TResult Function(T fechaErronea)? fechaNula,
+    TResult Function(T numVacantesInvalido)? numVacantesInvalido,
+    TResult Function(T valorErroneo)? numVacantesNoVacia,
     required TResult orElse(),
   }) {
     if (emailInvalido != null) {
@@ -408,16 +259,15 @@ class _$EmailInvalido<T> implements EmailInvalido<T> {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(ExcedeLongitudMaxima<T> value)
-        excedeLongitudMaxima,
     required TResult Function(EmailInvalido<T> value) emailInvalido,
     required TResult Function(ContrasenaCorta<T> value) contrasenaCorta,
-    required TResult Function(CiudadInvalida<T> value) ciudadInvalida,
-    required TResult Function(FechaInvalida<T> value) fechaInvalida,
-    required TResult Function(CargoLongitudInvalida<T> value)
-        cargoLongitudInvalida,
+    required TResult Function(StringVacio<T> value) stringVacio,
+    required TResult Function(LongitudInvalida<T> value) longitudInvalida,
     required TResult Function(SueldoInvalida<T> value) sueldoInvalido,
+    required TResult Function(SueldoVacio<T> value) sueldoVacio,
     required TResult Function(FechaNula<T> value) fechaNula,
+    required TResult Function(NumVacantesInvalido<T> value) numVacantesInvalido,
+    required TResult Function(NumVacantesNoVacia<T> value) numVacantesNoVacia,
   }) {
     return emailInvalido(this);
   }
@@ -425,14 +275,15 @@ class _$EmailInvalido<T> implements EmailInvalido<T> {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(ExcedeLongitudMaxima<T> value)? excedeLongitudMaxima,
     TResult Function(EmailInvalido<T> value)? emailInvalido,
     TResult Function(ContrasenaCorta<T> value)? contrasenaCorta,
-    TResult Function(CiudadInvalida<T> value)? ciudadInvalida,
-    TResult Function(FechaInvalida<T> value)? fechaInvalida,
-    TResult Function(CargoLongitudInvalida<T> value)? cargoLongitudInvalida,
+    TResult Function(StringVacio<T> value)? stringVacio,
+    TResult Function(LongitudInvalida<T> value)? longitudInvalida,
     TResult Function(SueldoInvalida<T> value)? sueldoInvalido,
+    TResult Function(SueldoVacio<T> value)? sueldoVacio,
     TResult Function(FechaNula<T> value)? fechaNula,
+    TResult Function(NumVacantesInvalido<T> value)? numVacantesInvalido,
+    TResult Function(NumVacantesNoVacia<T> value)? numVacantesNoVacia,
     required TResult orElse(),
   }) {
     if (emailInvalido != null) {
@@ -517,15 +368,16 @@ class _$ContrasenaCorta<T> implements ContrasenaCorta<T> {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(T valorErroneo, int max) excedeLongitudMaxima,
     required TResult Function(T valorErroneo) emailInvalido,
     required TResult Function(T valorErroneo) contrasenaCorta,
-    required TResult Function(T valorErroneo) ciudadInvalida,
-    required TResult Function(T valorErroneo) fechaInvalida,
+    required TResult Function(T valorErroneo) stringVacio,
     required TResult Function(T valorErroneo, int min, int max)
-        cargoLongitudInvalida,
+        longitudInvalida,
     required TResult Function(T valorErroneo, double max) sueldoInvalido,
+    required TResult Function(T valorErroneo) sueldoVacio,
     required TResult Function(T fechaErronea) fechaNula,
+    required TResult Function(T numVacantesInvalido) numVacantesInvalido,
+    required TResult Function(T valorErroneo) numVacantesNoVacia,
   }) {
     return contrasenaCorta(valorErroneo);
   }
@@ -533,14 +385,15 @@ class _$ContrasenaCorta<T> implements ContrasenaCorta<T> {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(T valorErroneo, int max)? excedeLongitudMaxima,
     TResult Function(T valorErroneo)? emailInvalido,
     TResult Function(T valorErroneo)? contrasenaCorta,
-    TResult Function(T valorErroneo)? ciudadInvalida,
-    TResult Function(T valorErroneo)? fechaInvalida,
-    TResult Function(T valorErroneo, int min, int max)? cargoLongitudInvalida,
+    TResult Function(T valorErroneo)? stringVacio,
+    TResult Function(T valorErroneo, int min, int max)? longitudInvalida,
     TResult Function(T valorErroneo, double max)? sueldoInvalido,
+    TResult Function(T valorErroneo)? sueldoVacio,
     TResult Function(T fechaErronea)? fechaNula,
+    TResult Function(T numVacantesInvalido)? numVacantesInvalido,
+    TResult Function(T valorErroneo)? numVacantesNoVacia,
     required TResult orElse(),
   }) {
     if (contrasenaCorta != null) {
@@ -552,16 +405,15 @@ class _$ContrasenaCorta<T> implements ContrasenaCorta<T> {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(ExcedeLongitudMaxima<T> value)
-        excedeLongitudMaxima,
     required TResult Function(EmailInvalido<T> value) emailInvalido,
     required TResult Function(ContrasenaCorta<T> value) contrasenaCorta,
-    required TResult Function(CiudadInvalida<T> value) ciudadInvalida,
-    required TResult Function(FechaInvalida<T> value) fechaInvalida,
-    required TResult Function(CargoLongitudInvalida<T> value)
-        cargoLongitudInvalida,
+    required TResult Function(StringVacio<T> value) stringVacio,
+    required TResult Function(LongitudInvalida<T> value) longitudInvalida,
     required TResult Function(SueldoInvalida<T> value) sueldoInvalido,
+    required TResult Function(SueldoVacio<T> value) sueldoVacio,
     required TResult Function(FechaNula<T> value) fechaNula,
+    required TResult Function(NumVacantesInvalido<T> value) numVacantesInvalido,
+    required TResult Function(NumVacantesNoVacia<T> value) numVacantesNoVacia,
   }) {
     return contrasenaCorta(this);
   }
@@ -569,14 +421,15 @@ class _$ContrasenaCorta<T> implements ContrasenaCorta<T> {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(ExcedeLongitudMaxima<T> value)? excedeLongitudMaxima,
     TResult Function(EmailInvalido<T> value)? emailInvalido,
     TResult Function(ContrasenaCorta<T> value)? contrasenaCorta,
-    TResult Function(CiudadInvalida<T> value)? ciudadInvalida,
-    TResult Function(FechaInvalida<T> value)? fechaInvalida,
-    TResult Function(CargoLongitudInvalida<T> value)? cargoLongitudInvalida,
+    TResult Function(StringVacio<T> value)? stringVacio,
+    TResult Function(LongitudInvalida<T> value)? longitudInvalida,
     TResult Function(SueldoInvalida<T> value)? sueldoInvalido,
+    TResult Function(SueldoVacio<T> value)? sueldoVacio,
     TResult Function(FechaNula<T> value)? fechaNula,
+    TResult Function(NumVacantesInvalido<T> value)? numVacantesInvalido,
+    TResult Function(NumVacantesNoVacia<T> value)? numVacantesNoVacia,
     required TResult orElse(),
   }) {
     if (contrasenaCorta != null) {
@@ -597,29 +450,29 @@ abstract class ContrasenaCorta<T> implements ValorErroneo<T> {
 }
 
 /// @nodoc
-abstract class $CiudadInvalidaCopyWith<T, $Res> {
-  factory $CiudadInvalidaCopyWith(
-          CiudadInvalida<T> value, $Res Function(CiudadInvalida<T>) then) =
-      _$CiudadInvalidaCopyWithImpl<T, $Res>;
+abstract class $StringVacioCopyWith<T, $Res> {
+  factory $StringVacioCopyWith(
+          StringVacio<T> value, $Res Function(StringVacio<T>) then) =
+      _$StringVacioCopyWithImpl<T, $Res>;
   $Res call({T valorErroneo});
 }
 
 /// @nodoc
-class _$CiudadInvalidaCopyWithImpl<T, $Res>
+class _$StringVacioCopyWithImpl<T, $Res>
     extends _$ValorErroneoCopyWithImpl<T, $Res>
-    implements $CiudadInvalidaCopyWith<T, $Res> {
-  _$CiudadInvalidaCopyWithImpl(
-      CiudadInvalida<T> _value, $Res Function(CiudadInvalida<T>) _then)
-      : super(_value, (v) => _then(v as CiudadInvalida<T>));
+    implements $StringVacioCopyWith<T, $Res> {
+  _$StringVacioCopyWithImpl(
+      StringVacio<T> _value, $Res Function(StringVacio<T>) _then)
+      : super(_value, (v) => _then(v as StringVacio<T>));
 
   @override
-  CiudadInvalida<T> get _value => super._value as CiudadInvalida<T>;
+  StringVacio<T> get _value => super._value as StringVacio<T>;
 
   @override
   $Res call({
     Object? valorErroneo = freezed,
   }) {
-    return _then(CiudadInvalida<T>(
+    return _then(StringVacio<T>(
       valorErroneo: valorErroneo == freezed
           ? _value.valorErroneo
           : valorErroneo // ignore: cast_nullable_to_non_nullable
@@ -630,21 +483,21 @@ class _$CiudadInvalidaCopyWithImpl<T, $Res>
 
 /// @nodoc
 
-class _$CiudadInvalida<T> implements CiudadInvalida<T> {
-  const _$CiudadInvalida({required this.valorErroneo});
+class _$StringVacio<T> implements StringVacio<T> {
+  const _$StringVacio({required this.valorErroneo});
 
   @override
   final T valorErroneo;
 
   @override
   String toString() {
-    return 'ValorErroneo<$T>.ciudadInvalida(valorErroneo: $valorErroneo)';
+    return 'ValorErroneo<$T>.stringVacio(valorErroneo: $valorErroneo)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is CiudadInvalida<T> &&
+        (other is StringVacio<T> &&
             (identical(other.valorErroneo, valorErroneo) ||
                 const DeepCollectionEquality()
                     .equals(other.valorErroneo, valorErroneo)));
@@ -656,40 +509,42 @@ class _$CiudadInvalida<T> implements CiudadInvalida<T> {
 
   @JsonKey(ignore: true)
   @override
-  $CiudadInvalidaCopyWith<T, CiudadInvalida<T>> get copyWith =>
-      _$CiudadInvalidaCopyWithImpl<T, CiudadInvalida<T>>(this, _$identity);
+  $StringVacioCopyWith<T, StringVacio<T>> get copyWith =>
+      _$StringVacioCopyWithImpl<T, StringVacio<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(T valorErroneo, int max) excedeLongitudMaxima,
     required TResult Function(T valorErroneo) emailInvalido,
     required TResult Function(T valorErroneo) contrasenaCorta,
-    required TResult Function(T valorErroneo) ciudadInvalida,
-    required TResult Function(T valorErroneo) fechaInvalida,
+    required TResult Function(T valorErroneo) stringVacio,
     required TResult Function(T valorErroneo, int min, int max)
-        cargoLongitudInvalida,
+        longitudInvalida,
     required TResult Function(T valorErroneo, double max) sueldoInvalido,
+    required TResult Function(T valorErroneo) sueldoVacio,
     required TResult Function(T fechaErronea) fechaNula,
+    required TResult Function(T numVacantesInvalido) numVacantesInvalido,
+    required TResult Function(T valorErroneo) numVacantesNoVacia,
   }) {
-    return ciudadInvalida(valorErroneo);
+    return stringVacio(valorErroneo);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(T valorErroneo, int max)? excedeLongitudMaxima,
     TResult Function(T valorErroneo)? emailInvalido,
     TResult Function(T valorErroneo)? contrasenaCorta,
-    TResult Function(T valorErroneo)? ciudadInvalida,
-    TResult Function(T valorErroneo)? fechaInvalida,
-    TResult Function(T valorErroneo, int min, int max)? cargoLongitudInvalida,
+    TResult Function(T valorErroneo)? stringVacio,
+    TResult Function(T valorErroneo, int min, int max)? longitudInvalida,
     TResult Function(T valorErroneo, double max)? sueldoInvalido,
+    TResult Function(T valorErroneo)? sueldoVacio,
     TResult Function(T fechaErronea)? fechaNula,
+    TResult Function(T numVacantesInvalido)? numVacantesInvalido,
+    TResult Function(T valorErroneo)? numVacantesNoVacia,
     required TResult orElse(),
   }) {
-    if (ciudadInvalida != null) {
-      return ciudadInvalida(valorErroneo);
+    if (stringVacio != null) {
+      return stringVacio(valorErroneo);
     }
     return orElse();
   }
@@ -697,212 +552,67 @@ class _$CiudadInvalida<T> implements CiudadInvalida<T> {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(ExcedeLongitudMaxima<T> value)
-        excedeLongitudMaxima,
     required TResult Function(EmailInvalido<T> value) emailInvalido,
     required TResult Function(ContrasenaCorta<T> value) contrasenaCorta,
-    required TResult Function(CiudadInvalida<T> value) ciudadInvalida,
-    required TResult Function(FechaInvalida<T> value) fechaInvalida,
-    required TResult Function(CargoLongitudInvalida<T> value)
-        cargoLongitudInvalida,
+    required TResult Function(StringVacio<T> value) stringVacio,
+    required TResult Function(LongitudInvalida<T> value) longitudInvalida,
     required TResult Function(SueldoInvalida<T> value) sueldoInvalido,
+    required TResult Function(SueldoVacio<T> value) sueldoVacio,
     required TResult Function(FechaNula<T> value) fechaNula,
+    required TResult Function(NumVacantesInvalido<T> value) numVacantesInvalido,
+    required TResult Function(NumVacantesNoVacia<T> value) numVacantesNoVacia,
   }) {
-    return ciudadInvalida(this);
+    return stringVacio(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(ExcedeLongitudMaxima<T> value)? excedeLongitudMaxima,
     TResult Function(EmailInvalido<T> value)? emailInvalido,
     TResult Function(ContrasenaCorta<T> value)? contrasenaCorta,
-    TResult Function(CiudadInvalida<T> value)? ciudadInvalida,
-    TResult Function(FechaInvalida<T> value)? fechaInvalida,
-    TResult Function(CargoLongitudInvalida<T> value)? cargoLongitudInvalida,
+    TResult Function(StringVacio<T> value)? stringVacio,
+    TResult Function(LongitudInvalida<T> value)? longitudInvalida,
     TResult Function(SueldoInvalida<T> value)? sueldoInvalido,
+    TResult Function(SueldoVacio<T> value)? sueldoVacio,
     TResult Function(FechaNula<T> value)? fechaNula,
+    TResult Function(NumVacantesInvalido<T> value)? numVacantesInvalido,
+    TResult Function(NumVacantesNoVacia<T> value)? numVacantesNoVacia,
     required TResult orElse(),
   }) {
-    if (ciudadInvalida != null) {
-      return ciudadInvalida(this);
+    if (stringVacio != null) {
+      return stringVacio(this);
     }
     return orElse();
   }
 }
 
-abstract class CiudadInvalida<T> implements ValorErroneo<T> {
-  const factory CiudadInvalida({required T valorErroneo}) = _$CiudadInvalida<T>;
+abstract class StringVacio<T> implements ValorErroneo<T> {
+  const factory StringVacio({required T valorErroneo}) = _$StringVacio<T>;
 
   T get valorErroneo => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $CiudadInvalidaCopyWith<T, CiudadInvalida<T>> get copyWith =>
+  $StringVacioCopyWith<T, StringVacio<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $FechaInvalidaCopyWith<T, $Res> {
-  factory $FechaInvalidaCopyWith(
-          FechaInvalida<T> value, $Res Function(FechaInvalida<T>) then) =
-      _$FechaInvalidaCopyWithImpl<T, $Res>;
-  $Res call({T valorErroneo});
-}
-
-/// @nodoc
-class _$FechaInvalidaCopyWithImpl<T, $Res>
-    extends _$ValorErroneoCopyWithImpl<T, $Res>
-    implements $FechaInvalidaCopyWith<T, $Res> {
-  _$FechaInvalidaCopyWithImpl(
-      FechaInvalida<T> _value, $Res Function(FechaInvalida<T>) _then)
-      : super(_value, (v) => _then(v as FechaInvalida<T>));
-
-  @override
-  FechaInvalida<T> get _value => super._value as FechaInvalida<T>;
-
-  @override
-  $Res call({
-    Object? valorErroneo = freezed,
-  }) {
-    return _then(FechaInvalida<T>(
-      valorErroneo: valorErroneo == freezed
-          ? _value.valorErroneo
-          : valorErroneo // ignore: cast_nullable_to_non_nullable
-              as T,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$FechaInvalida<T> implements FechaInvalida<T> {
-  const _$FechaInvalida({required this.valorErroneo});
-
-  @override
-  final T valorErroneo;
-
-  @override
-  String toString() {
-    return 'ValorErroneo<$T>.fechaInvalida(valorErroneo: $valorErroneo)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other is FechaInvalida<T> &&
-            (identical(other.valorErroneo, valorErroneo) ||
-                const DeepCollectionEquality()
-                    .equals(other.valorErroneo, valorErroneo)));
-  }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(valorErroneo);
-
-  @JsonKey(ignore: true)
-  @override
-  $FechaInvalidaCopyWith<T, FechaInvalida<T>> get copyWith =>
-      _$FechaInvalidaCopyWithImpl<T, FechaInvalida<T>>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(T valorErroneo, int max) excedeLongitudMaxima,
-    required TResult Function(T valorErroneo) emailInvalido,
-    required TResult Function(T valorErroneo) contrasenaCorta,
-    required TResult Function(T valorErroneo) ciudadInvalida,
-    required TResult Function(T valorErroneo) fechaInvalida,
-    required TResult Function(T valorErroneo, int min, int max)
-        cargoLongitudInvalida,
-    required TResult Function(T valorErroneo, double max) sueldoInvalido,
-    required TResult Function(T fechaErronea) fechaNula,
-  }) {
-    return fechaInvalida(valorErroneo);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(T valorErroneo, int max)? excedeLongitudMaxima,
-    TResult Function(T valorErroneo)? emailInvalido,
-    TResult Function(T valorErroneo)? contrasenaCorta,
-    TResult Function(T valorErroneo)? ciudadInvalida,
-    TResult Function(T valorErroneo)? fechaInvalida,
-    TResult Function(T valorErroneo, int min, int max)? cargoLongitudInvalida,
-    TResult Function(T valorErroneo, double max)? sueldoInvalido,
-    TResult Function(T fechaErronea)? fechaNula,
-    required TResult orElse(),
-  }) {
-    if (fechaInvalida != null) {
-      return fechaInvalida(valorErroneo);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(ExcedeLongitudMaxima<T> value)
-        excedeLongitudMaxima,
-    required TResult Function(EmailInvalido<T> value) emailInvalido,
-    required TResult Function(ContrasenaCorta<T> value) contrasenaCorta,
-    required TResult Function(CiudadInvalida<T> value) ciudadInvalida,
-    required TResult Function(FechaInvalida<T> value) fechaInvalida,
-    required TResult Function(CargoLongitudInvalida<T> value)
-        cargoLongitudInvalida,
-    required TResult Function(SueldoInvalida<T> value) sueldoInvalido,
-    required TResult Function(FechaNula<T> value) fechaNula,
-  }) {
-    return fechaInvalida(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(ExcedeLongitudMaxima<T> value)? excedeLongitudMaxima,
-    TResult Function(EmailInvalido<T> value)? emailInvalido,
-    TResult Function(ContrasenaCorta<T> value)? contrasenaCorta,
-    TResult Function(CiudadInvalida<T> value)? ciudadInvalida,
-    TResult Function(FechaInvalida<T> value)? fechaInvalida,
-    TResult Function(CargoLongitudInvalida<T> value)? cargoLongitudInvalida,
-    TResult Function(SueldoInvalida<T> value)? sueldoInvalido,
-    TResult Function(FechaNula<T> value)? fechaNula,
-    required TResult orElse(),
-  }) {
-    if (fechaInvalida != null) {
-      return fechaInvalida(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class FechaInvalida<T> implements ValorErroneo<T> {
-  const factory FechaInvalida({required T valorErroneo}) = _$FechaInvalida<T>;
-
-  T get valorErroneo => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $FechaInvalidaCopyWith<T, FechaInvalida<T>> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $CargoLongitudInvalidaCopyWith<T, $Res> {
-  factory $CargoLongitudInvalidaCopyWith(CargoLongitudInvalida<T> value,
-          $Res Function(CargoLongitudInvalida<T>) then) =
-      _$CargoLongitudInvalidaCopyWithImpl<T, $Res>;
+abstract class $LongitudInvalidaCopyWith<T, $Res> {
+  factory $LongitudInvalidaCopyWith(
+          LongitudInvalida<T> value, $Res Function(LongitudInvalida<T>) then) =
+      _$LongitudInvalidaCopyWithImpl<T, $Res>;
   $Res call({T valorErroneo, int min, int max});
 }
 
 /// @nodoc
-class _$CargoLongitudInvalidaCopyWithImpl<T, $Res>
+class _$LongitudInvalidaCopyWithImpl<T, $Res>
     extends _$ValorErroneoCopyWithImpl<T, $Res>
-    implements $CargoLongitudInvalidaCopyWith<T, $Res> {
-  _$CargoLongitudInvalidaCopyWithImpl(CargoLongitudInvalida<T> _value,
-      $Res Function(CargoLongitudInvalida<T>) _then)
-      : super(_value, (v) => _then(v as CargoLongitudInvalida<T>));
+    implements $LongitudInvalidaCopyWith<T, $Res> {
+  _$LongitudInvalidaCopyWithImpl(
+      LongitudInvalida<T> _value, $Res Function(LongitudInvalida<T>) _then)
+      : super(_value, (v) => _then(v as LongitudInvalida<T>));
 
   @override
-  CargoLongitudInvalida<T> get _value =>
-      super._value as CargoLongitudInvalida<T>;
+  LongitudInvalida<T> get _value => super._value as LongitudInvalida<T>;
 
   @override
   $Res call({
@@ -910,7 +620,7 @@ class _$CargoLongitudInvalidaCopyWithImpl<T, $Res>
     Object? min = freezed,
     Object? max = freezed,
   }) {
-    return _then(CargoLongitudInvalida<T>(
+    return _then(LongitudInvalida<T>(
       valorErroneo: valorErroneo == freezed
           ? _value.valorErroneo
           : valorErroneo // ignore: cast_nullable_to_non_nullable
@@ -929,8 +639,8 @@ class _$CargoLongitudInvalidaCopyWithImpl<T, $Res>
 
 /// @nodoc
 
-class _$CargoLongitudInvalida<T> implements CargoLongitudInvalida<T> {
-  const _$CargoLongitudInvalida(
+class _$LongitudInvalida<T> implements LongitudInvalida<T> {
+  const _$LongitudInvalida(
       {required this.valorErroneo, required this.min, required this.max});
 
   @override
@@ -942,13 +652,13 @@ class _$CargoLongitudInvalida<T> implements CargoLongitudInvalida<T> {
 
   @override
   String toString() {
-    return 'ValorErroneo<$T>.cargoLongitudInvalida(valorErroneo: $valorErroneo, min: $min, max: $max)';
+    return 'ValorErroneo<$T>.longitudInvalida(valorErroneo: $valorErroneo, min: $min, max: $max)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is CargoLongitudInvalida<T> &&
+        (other is LongitudInvalida<T> &&
             (identical(other.valorErroneo, valorErroneo) ||
                 const DeepCollectionEquality()
                     .equals(other.valorErroneo, valorErroneo)) &&
@@ -967,41 +677,42 @@ class _$CargoLongitudInvalida<T> implements CargoLongitudInvalida<T> {
 
   @JsonKey(ignore: true)
   @override
-  $CargoLongitudInvalidaCopyWith<T, CargoLongitudInvalida<T>> get copyWith =>
-      _$CargoLongitudInvalidaCopyWithImpl<T, CargoLongitudInvalida<T>>(
-          this, _$identity);
+  $LongitudInvalidaCopyWith<T, LongitudInvalida<T>> get copyWith =>
+      _$LongitudInvalidaCopyWithImpl<T, LongitudInvalida<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(T valorErroneo, int max) excedeLongitudMaxima,
     required TResult Function(T valorErroneo) emailInvalido,
     required TResult Function(T valorErroneo) contrasenaCorta,
-    required TResult Function(T valorErroneo) ciudadInvalida,
-    required TResult Function(T valorErroneo) fechaInvalida,
+    required TResult Function(T valorErroneo) stringVacio,
     required TResult Function(T valorErroneo, int min, int max)
-        cargoLongitudInvalida,
+        longitudInvalida,
     required TResult Function(T valorErroneo, double max) sueldoInvalido,
+    required TResult Function(T valorErroneo) sueldoVacio,
     required TResult Function(T fechaErronea) fechaNula,
+    required TResult Function(T numVacantesInvalido) numVacantesInvalido,
+    required TResult Function(T valorErroneo) numVacantesNoVacia,
   }) {
-    return cargoLongitudInvalida(valorErroneo, min, max);
+    return longitudInvalida(valorErroneo, min, max);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(T valorErroneo, int max)? excedeLongitudMaxima,
     TResult Function(T valorErroneo)? emailInvalido,
     TResult Function(T valorErroneo)? contrasenaCorta,
-    TResult Function(T valorErroneo)? ciudadInvalida,
-    TResult Function(T valorErroneo)? fechaInvalida,
-    TResult Function(T valorErroneo, int min, int max)? cargoLongitudInvalida,
+    TResult Function(T valorErroneo)? stringVacio,
+    TResult Function(T valorErroneo, int min, int max)? longitudInvalida,
     TResult Function(T valorErroneo, double max)? sueldoInvalido,
+    TResult Function(T valorErroneo)? sueldoVacio,
     TResult Function(T fechaErronea)? fechaNula,
+    TResult Function(T numVacantesInvalido)? numVacantesInvalido,
+    TResult Function(T valorErroneo)? numVacantesNoVacia,
     required TResult orElse(),
   }) {
-    if (cargoLongitudInvalida != null) {
-      return cargoLongitudInvalida(valorErroneo, min, max);
+    if (longitudInvalida != null) {
+      return longitudInvalida(valorErroneo, min, max);
     }
     return orElse();
   }
@@ -1009,51 +720,51 @@ class _$CargoLongitudInvalida<T> implements CargoLongitudInvalida<T> {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(ExcedeLongitudMaxima<T> value)
-        excedeLongitudMaxima,
     required TResult Function(EmailInvalido<T> value) emailInvalido,
     required TResult Function(ContrasenaCorta<T> value) contrasenaCorta,
-    required TResult Function(CiudadInvalida<T> value) ciudadInvalida,
-    required TResult Function(FechaInvalida<T> value) fechaInvalida,
-    required TResult Function(CargoLongitudInvalida<T> value)
-        cargoLongitudInvalida,
+    required TResult Function(StringVacio<T> value) stringVacio,
+    required TResult Function(LongitudInvalida<T> value) longitudInvalida,
     required TResult Function(SueldoInvalida<T> value) sueldoInvalido,
+    required TResult Function(SueldoVacio<T> value) sueldoVacio,
     required TResult Function(FechaNula<T> value) fechaNula,
+    required TResult Function(NumVacantesInvalido<T> value) numVacantesInvalido,
+    required TResult Function(NumVacantesNoVacia<T> value) numVacantesNoVacia,
   }) {
-    return cargoLongitudInvalida(this);
+    return longitudInvalida(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(ExcedeLongitudMaxima<T> value)? excedeLongitudMaxima,
     TResult Function(EmailInvalido<T> value)? emailInvalido,
     TResult Function(ContrasenaCorta<T> value)? contrasenaCorta,
-    TResult Function(CiudadInvalida<T> value)? ciudadInvalida,
-    TResult Function(FechaInvalida<T> value)? fechaInvalida,
-    TResult Function(CargoLongitudInvalida<T> value)? cargoLongitudInvalida,
+    TResult Function(StringVacio<T> value)? stringVacio,
+    TResult Function(LongitudInvalida<T> value)? longitudInvalida,
     TResult Function(SueldoInvalida<T> value)? sueldoInvalido,
+    TResult Function(SueldoVacio<T> value)? sueldoVacio,
     TResult Function(FechaNula<T> value)? fechaNula,
+    TResult Function(NumVacantesInvalido<T> value)? numVacantesInvalido,
+    TResult Function(NumVacantesNoVacia<T> value)? numVacantesNoVacia,
     required TResult orElse(),
   }) {
-    if (cargoLongitudInvalida != null) {
-      return cargoLongitudInvalida(this);
+    if (longitudInvalida != null) {
+      return longitudInvalida(this);
     }
     return orElse();
   }
 }
 
-abstract class CargoLongitudInvalida<T> implements ValorErroneo<T> {
-  const factory CargoLongitudInvalida(
+abstract class LongitudInvalida<T> implements ValorErroneo<T> {
+  const factory LongitudInvalida(
       {required T valorErroneo,
       required int min,
-      required int max}) = _$CargoLongitudInvalida<T>;
+      required int max}) = _$LongitudInvalida<T>;
 
   T get valorErroneo => throw _privateConstructorUsedError;
   int get min => throw _privateConstructorUsedError;
   int get max => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $CargoLongitudInvalidaCopyWith<T, CargoLongitudInvalida<T>> get copyWith =>
+  $LongitudInvalidaCopyWith<T, LongitudInvalida<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1134,15 +845,16 @@ class _$SueldoInvalida<T> implements SueldoInvalida<T> {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(T valorErroneo, int max) excedeLongitudMaxima,
     required TResult Function(T valorErroneo) emailInvalido,
     required TResult Function(T valorErroneo) contrasenaCorta,
-    required TResult Function(T valorErroneo) ciudadInvalida,
-    required TResult Function(T valorErroneo) fechaInvalida,
+    required TResult Function(T valorErroneo) stringVacio,
     required TResult Function(T valorErroneo, int min, int max)
-        cargoLongitudInvalida,
+        longitudInvalida,
     required TResult Function(T valorErroneo, double max) sueldoInvalido,
+    required TResult Function(T valorErroneo) sueldoVacio,
     required TResult Function(T fechaErronea) fechaNula,
+    required TResult Function(T numVacantesInvalido) numVacantesInvalido,
+    required TResult Function(T valorErroneo) numVacantesNoVacia,
   }) {
     return sueldoInvalido(valorErroneo, max);
   }
@@ -1150,14 +862,15 @@ class _$SueldoInvalida<T> implements SueldoInvalida<T> {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(T valorErroneo, int max)? excedeLongitudMaxima,
     TResult Function(T valorErroneo)? emailInvalido,
     TResult Function(T valorErroneo)? contrasenaCorta,
-    TResult Function(T valorErroneo)? ciudadInvalida,
-    TResult Function(T valorErroneo)? fechaInvalida,
-    TResult Function(T valorErroneo, int min, int max)? cargoLongitudInvalida,
+    TResult Function(T valorErroneo)? stringVacio,
+    TResult Function(T valorErroneo, int min, int max)? longitudInvalida,
     TResult Function(T valorErroneo, double max)? sueldoInvalido,
+    TResult Function(T valorErroneo)? sueldoVacio,
     TResult Function(T fechaErronea)? fechaNula,
+    TResult Function(T numVacantesInvalido)? numVacantesInvalido,
+    TResult Function(T valorErroneo)? numVacantesNoVacia,
     required TResult orElse(),
   }) {
     if (sueldoInvalido != null) {
@@ -1169,16 +882,15 @@ class _$SueldoInvalida<T> implements SueldoInvalida<T> {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(ExcedeLongitudMaxima<T> value)
-        excedeLongitudMaxima,
     required TResult Function(EmailInvalido<T> value) emailInvalido,
     required TResult Function(ContrasenaCorta<T> value) contrasenaCorta,
-    required TResult Function(CiudadInvalida<T> value) ciudadInvalida,
-    required TResult Function(FechaInvalida<T> value) fechaInvalida,
-    required TResult Function(CargoLongitudInvalida<T> value)
-        cargoLongitudInvalida,
+    required TResult Function(StringVacio<T> value) stringVacio,
+    required TResult Function(LongitudInvalida<T> value) longitudInvalida,
     required TResult Function(SueldoInvalida<T> value) sueldoInvalido,
+    required TResult Function(SueldoVacio<T> value) sueldoVacio,
     required TResult Function(FechaNula<T> value) fechaNula,
+    required TResult Function(NumVacantesInvalido<T> value) numVacantesInvalido,
+    required TResult Function(NumVacantesNoVacia<T> value) numVacantesNoVacia,
   }) {
     return sueldoInvalido(this);
   }
@@ -1186,14 +898,15 @@ class _$SueldoInvalida<T> implements SueldoInvalida<T> {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(ExcedeLongitudMaxima<T> value)? excedeLongitudMaxima,
     TResult Function(EmailInvalido<T> value)? emailInvalido,
     TResult Function(ContrasenaCorta<T> value)? contrasenaCorta,
-    TResult Function(CiudadInvalida<T> value)? ciudadInvalida,
-    TResult Function(FechaInvalida<T> value)? fechaInvalida,
-    TResult Function(CargoLongitudInvalida<T> value)? cargoLongitudInvalida,
+    TResult Function(StringVacio<T> value)? stringVacio,
+    TResult Function(LongitudInvalida<T> value)? longitudInvalida,
     TResult Function(SueldoInvalida<T> value)? sueldoInvalido,
+    TResult Function(SueldoVacio<T> value)? sueldoVacio,
     TResult Function(FechaNula<T> value)? fechaNula,
+    TResult Function(NumVacantesInvalido<T> value)? numVacantesInvalido,
+    TResult Function(NumVacantesNoVacia<T> value)? numVacantesNoVacia,
     required TResult orElse(),
   }) {
     if (sueldoInvalido != null) {
@@ -1211,6 +924,152 @@ abstract class SueldoInvalida<T> implements ValorErroneo<T> {
   double get max => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $SueldoInvalidaCopyWith<T, SueldoInvalida<T>> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $SueldoVacioCopyWith<T, $Res> {
+  factory $SueldoVacioCopyWith(
+          SueldoVacio<T> value, $Res Function(SueldoVacio<T>) then) =
+      _$SueldoVacioCopyWithImpl<T, $Res>;
+  $Res call({T valorErroneo});
+}
+
+/// @nodoc
+class _$SueldoVacioCopyWithImpl<T, $Res>
+    extends _$ValorErroneoCopyWithImpl<T, $Res>
+    implements $SueldoVacioCopyWith<T, $Res> {
+  _$SueldoVacioCopyWithImpl(
+      SueldoVacio<T> _value, $Res Function(SueldoVacio<T>) _then)
+      : super(_value, (v) => _then(v as SueldoVacio<T>));
+
+  @override
+  SueldoVacio<T> get _value => super._value as SueldoVacio<T>;
+
+  @override
+  $Res call({
+    Object? valorErroneo = freezed,
+  }) {
+    return _then(SueldoVacio<T>(
+      valorErroneo: valorErroneo == freezed
+          ? _value.valorErroneo
+          : valorErroneo // ignore: cast_nullable_to_non_nullable
+              as T,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$SueldoVacio<T> implements SueldoVacio<T> {
+  const _$SueldoVacio({required this.valorErroneo});
+
+  @override
+  final T valorErroneo;
+
+  @override
+  String toString() {
+    return 'ValorErroneo<$T>.sueldoVacio(valorErroneo: $valorErroneo)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is SueldoVacio<T> &&
+            (identical(other.valorErroneo, valorErroneo) ||
+                const DeepCollectionEquality()
+                    .equals(other.valorErroneo, valorErroneo)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(valorErroneo);
+
+  @JsonKey(ignore: true)
+  @override
+  $SueldoVacioCopyWith<T, SueldoVacio<T>> get copyWith =>
+      _$SueldoVacioCopyWithImpl<T, SueldoVacio<T>>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(T valorErroneo) emailInvalido,
+    required TResult Function(T valorErroneo) contrasenaCorta,
+    required TResult Function(T valorErroneo) stringVacio,
+    required TResult Function(T valorErroneo, int min, int max)
+        longitudInvalida,
+    required TResult Function(T valorErroneo, double max) sueldoInvalido,
+    required TResult Function(T valorErroneo) sueldoVacio,
+    required TResult Function(T fechaErronea) fechaNula,
+    required TResult Function(T numVacantesInvalido) numVacantesInvalido,
+    required TResult Function(T valorErroneo) numVacantesNoVacia,
+  }) {
+    return sueldoVacio(valorErroneo);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(T valorErroneo)? emailInvalido,
+    TResult Function(T valorErroneo)? contrasenaCorta,
+    TResult Function(T valorErroneo)? stringVacio,
+    TResult Function(T valorErroneo, int min, int max)? longitudInvalida,
+    TResult Function(T valorErroneo, double max)? sueldoInvalido,
+    TResult Function(T valorErroneo)? sueldoVacio,
+    TResult Function(T fechaErronea)? fechaNula,
+    TResult Function(T numVacantesInvalido)? numVacantesInvalido,
+    TResult Function(T valorErroneo)? numVacantesNoVacia,
+    required TResult orElse(),
+  }) {
+    if (sueldoVacio != null) {
+      return sueldoVacio(valorErroneo);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(EmailInvalido<T> value) emailInvalido,
+    required TResult Function(ContrasenaCorta<T> value) contrasenaCorta,
+    required TResult Function(StringVacio<T> value) stringVacio,
+    required TResult Function(LongitudInvalida<T> value) longitudInvalida,
+    required TResult Function(SueldoInvalida<T> value) sueldoInvalido,
+    required TResult Function(SueldoVacio<T> value) sueldoVacio,
+    required TResult Function(FechaNula<T> value) fechaNula,
+    required TResult Function(NumVacantesInvalido<T> value) numVacantesInvalido,
+    required TResult Function(NumVacantesNoVacia<T> value) numVacantesNoVacia,
+  }) {
+    return sueldoVacio(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(EmailInvalido<T> value)? emailInvalido,
+    TResult Function(ContrasenaCorta<T> value)? contrasenaCorta,
+    TResult Function(StringVacio<T> value)? stringVacio,
+    TResult Function(LongitudInvalida<T> value)? longitudInvalida,
+    TResult Function(SueldoInvalida<T> value)? sueldoInvalido,
+    TResult Function(SueldoVacio<T> value)? sueldoVacio,
+    TResult Function(FechaNula<T> value)? fechaNula,
+    TResult Function(NumVacantesInvalido<T> value)? numVacantesInvalido,
+    TResult Function(NumVacantesNoVacia<T> value)? numVacantesNoVacia,
+    required TResult orElse(),
+  }) {
+    if (sueldoVacio != null) {
+      return sueldoVacio(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class SueldoVacio<T> implements ValorErroneo<T> {
+  const factory SueldoVacio({required T valorErroneo}) = _$SueldoVacio<T>;
+
+  T get valorErroneo => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $SueldoVacioCopyWith<T, SueldoVacio<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1280,15 +1139,16 @@ class _$FechaNula<T> implements FechaNula<T> {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(T valorErroneo, int max) excedeLongitudMaxima,
     required TResult Function(T valorErroneo) emailInvalido,
     required TResult Function(T valorErroneo) contrasenaCorta,
-    required TResult Function(T valorErroneo) ciudadInvalida,
-    required TResult Function(T valorErroneo) fechaInvalida,
+    required TResult Function(T valorErroneo) stringVacio,
     required TResult Function(T valorErroneo, int min, int max)
-        cargoLongitudInvalida,
+        longitudInvalida,
     required TResult Function(T valorErroneo, double max) sueldoInvalido,
+    required TResult Function(T valorErroneo) sueldoVacio,
     required TResult Function(T fechaErronea) fechaNula,
+    required TResult Function(T numVacantesInvalido) numVacantesInvalido,
+    required TResult Function(T valorErroneo) numVacantesNoVacia,
   }) {
     return fechaNula(fechaErronea);
   }
@@ -1296,14 +1156,15 @@ class _$FechaNula<T> implements FechaNula<T> {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(T valorErroneo, int max)? excedeLongitudMaxima,
     TResult Function(T valorErroneo)? emailInvalido,
     TResult Function(T valorErroneo)? contrasenaCorta,
-    TResult Function(T valorErroneo)? ciudadInvalida,
-    TResult Function(T valorErroneo)? fechaInvalida,
-    TResult Function(T valorErroneo, int min, int max)? cargoLongitudInvalida,
+    TResult Function(T valorErroneo)? stringVacio,
+    TResult Function(T valorErroneo, int min, int max)? longitudInvalida,
     TResult Function(T valorErroneo, double max)? sueldoInvalido,
+    TResult Function(T valorErroneo)? sueldoVacio,
     TResult Function(T fechaErronea)? fechaNula,
+    TResult Function(T numVacantesInvalido)? numVacantesInvalido,
+    TResult Function(T valorErroneo)? numVacantesNoVacia,
     required TResult orElse(),
   }) {
     if (fechaNula != null) {
@@ -1315,16 +1176,15 @@ class _$FechaNula<T> implements FechaNula<T> {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(ExcedeLongitudMaxima<T> value)
-        excedeLongitudMaxima,
     required TResult Function(EmailInvalido<T> value) emailInvalido,
     required TResult Function(ContrasenaCorta<T> value) contrasenaCorta,
-    required TResult Function(CiudadInvalida<T> value) ciudadInvalida,
-    required TResult Function(FechaInvalida<T> value) fechaInvalida,
-    required TResult Function(CargoLongitudInvalida<T> value)
-        cargoLongitudInvalida,
+    required TResult Function(StringVacio<T> value) stringVacio,
+    required TResult Function(LongitudInvalida<T> value) longitudInvalida,
     required TResult Function(SueldoInvalida<T> value) sueldoInvalido,
+    required TResult Function(SueldoVacio<T> value) sueldoVacio,
     required TResult Function(FechaNula<T> value) fechaNula,
+    required TResult Function(NumVacantesInvalido<T> value) numVacantesInvalido,
+    required TResult Function(NumVacantesNoVacia<T> value) numVacantesNoVacia,
   }) {
     return fechaNula(this);
   }
@@ -1332,14 +1192,15 @@ class _$FechaNula<T> implements FechaNula<T> {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(ExcedeLongitudMaxima<T> value)? excedeLongitudMaxima,
     TResult Function(EmailInvalido<T> value)? emailInvalido,
     TResult Function(ContrasenaCorta<T> value)? contrasenaCorta,
-    TResult Function(CiudadInvalida<T> value)? ciudadInvalida,
-    TResult Function(FechaInvalida<T> value)? fechaInvalida,
-    TResult Function(CargoLongitudInvalida<T> value)? cargoLongitudInvalida,
+    TResult Function(StringVacio<T> value)? stringVacio,
+    TResult Function(LongitudInvalida<T> value)? longitudInvalida,
     TResult Function(SueldoInvalida<T> value)? sueldoInvalido,
+    TResult Function(SueldoVacio<T> value)? sueldoVacio,
     TResult Function(FechaNula<T> value)? fechaNula,
+    TResult Function(NumVacantesInvalido<T> value)? numVacantesInvalido,
+    TResult Function(NumVacantesNoVacia<T> value)? numVacantesNoVacia,
     required TResult orElse(),
   }) {
     if (fechaNula != null) {
@@ -1355,5 +1216,302 @@ abstract class FechaNula<T> implements ValorErroneo<T> {
   T get fechaErronea => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $FechaNulaCopyWith<T, FechaNula<T>> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $NumVacantesInvalidoCopyWith<T, $Res> {
+  factory $NumVacantesInvalidoCopyWith(NumVacantesInvalido<T> value,
+          $Res Function(NumVacantesInvalido<T>) then) =
+      _$NumVacantesInvalidoCopyWithImpl<T, $Res>;
+  $Res call({T numVacantesInvalido});
+}
+
+/// @nodoc
+class _$NumVacantesInvalidoCopyWithImpl<T, $Res>
+    extends _$ValorErroneoCopyWithImpl<T, $Res>
+    implements $NumVacantesInvalidoCopyWith<T, $Res> {
+  _$NumVacantesInvalidoCopyWithImpl(NumVacantesInvalido<T> _value,
+      $Res Function(NumVacantesInvalido<T>) _then)
+      : super(_value, (v) => _then(v as NumVacantesInvalido<T>));
+
+  @override
+  NumVacantesInvalido<T> get _value => super._value as NumVacantesInvalido<T>;
+
+  @override
+  $Res call({
+    Object? numVacantesInvalido = freezed,
+  }) {
+    return _then(NumVacantesInvalido<T>(
+      numVacantesInvalido: numVacantesInvalido == freezed
+          ? _value.numVacantesInvalido
+          : numVacantesInvalido // ignore: cast_nullable_to_non_nullable
+              as T,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$NumVacantesInvalido<T> implements NumVacantesInvalido<T> {
+  const _$NumVacantesInvalido({required this.numVacantesInvalido});
+
+  @override
+  final T numVacantesInvalido;
+
+  @override
+  String toString() {
+    return 'ValorErroneo<$T>.numVacantesInvalido(numVacantesInvalido: $numVacantesInvalido)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is NumVacantesInvalido<T> &&
+            (identical(other.numVacantesInvalido, numVacantesInvalido) ||
+                const DeepCollectionEquality()
+                    .equals(other.numVacantesInvalido, numVacantesInvalido)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(numVacantesInvalido);
+
+  @JsonKey(ignore: true)
+  @override
+  $NumVacantesInvalidoCopyWith<T, NumVacantesInvalido<T>> get copyWith =>
+      _$NumVacantesInvalidoCopyWithImpl<T, NumVacantesInvalido<T>>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(T valorErroneo) emailInvalido,
+    required TResult Function(T valorErroneo) contrasenaCorta,
+    required TResult Function(T valorErroneo) stringVacio,
+    required TResult Function(T valorErroneo, int min, int max)
+        longitudInvalida,
+    required TResult Function(T valorErroneo, double max) sueldoInvalido,
+    required TResult Function(T valorErroneo) sueldoVacio,
+    required TResult Function(T fechaErronea) fechaNula,
+    required TResult Function(T numVacantesInvalido) numVacantesInvalido,
+    required TResult Function(T valorErroneo) numVacantesNoVacia,
+  }) {
+    return numVacantesInvalido(this.numVacantesInvalido);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(T valorErroneo)? emailInvalido,
+    TResult Function(T valorErroneo)? contrasenaCorta,
+    TResult Function(T valorErroneo)? stringVacio,
+    TResult Function(T valorErroneo, int min, int max)? longitudInvalida,
+    TResult Function(T valorErroneo, double max)? sueldoInvalido,
+    TResult Function(T valorErroneo)? sueldoVacio,
+    TResult Function(T fechaErronea)? fechaNula,
+    TResult Function(T numVacantesInvalido)? numVacantesInvalido,
+    TResult Function(T valorErroneo)? numVacantesNoVacia,
+    required TResult orElse(),
+  }) {
+    if (numVacantesInvalido != null) {
+      return numVacantesInvalido(this.numVacantesInvalido);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(EmailInvalido<T> value) emailInvalido,
+    required TResult Function(ContrasenaCorta<T> value) contrasenaCorta,
+    required TResult Function(StringVacio<T> value) stringVacio,
+    required TResult Function(LongitudInvalida<T> value) longitudInvalida,
+    required TResult Function(SueldoInvalida<T> value) sueldoInvalido,
+    required TResult Function(SueldoVacio<T> value) sueldoVacio,
+    required TResult Function(FechaNula<T> value) fechaNula,
+    required TResult Function(NumVacantesInvalido<T> value) numVacantesInvalido,
+    required TResult Function(NumVacantesNoVacia<T> value) numVacantesNoVacia,
+  }) {
+    return numVacantesInvalido(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(EmailInvalido<T> value)? emailInvalido,
+    TResult Function(ContrasenaCorta<T> value)? contrasenaCorta,
+    TResult Function(StringVacio<T> value)? stringVacio,
+    TResult Function(LongitudInvalida<T> value)? longitudInvalida,
+    TResult Function(SueldoInvalida<T> value)? sueldoInvalido,
+    TResult Function(SueldoVacio<T> value)? sueldoVacio,
+    TResult Function(FechaNula<T> value)? fechaNula,
+    TResult Function(NumVacantesInvalido<T> value)? numVacantesInvalido,
+    TResult Function(NumVacantesNoVacia<T> value)? numVacantesNoVacia,
+    required TResult orElse(),
+  }) {
+    if (numVacantesInvalido != null) {
+      return numVacantesInvalido(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class NumVacantesInvalido<T> implements ValorErroneo<T> {
+  const factory NumVacantesInvalido({required T numVacantesInvalido}) =
+      _$NumVacantesInvalido<T>;
+
+  T get numVacantesInvalido => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $NumVacantesInvalidoCopyWith<T, NumVacantesInvalido<T>> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $NumVacantesNoVaciaCopyWith<T, $Res> {
+  factory $NumVacantesNoVaciaCopyWith(NumVacantesNoVacia<T> value,
+          $Res Function(NumVacantesNoVacia<T>) then) =
+      _$NumVacantesNoVaciaCopyWithImpl<T, $Res>;
+  $Res call({T valorErroneo});
+}
+
+/// @nodoc
+class _$NumVacantesNoVaciaCopyWithImpl<T, $Res>
+    extends _$ValorErroneoCopyWithImpl<T, $Res>
+    implements $NumVacantesNoVaciaCopyWith<T, $Res> {
+  _$NumVacantesNoVaciaCopyWithImpl(
+      NumVacantesNoVacia<T> _value, $Res Function(NumVacantesNoVacia<T>) _then)
+      : super(_value, (v) => _then(v as NumVacantesNoVacia<T>));
+
+  @override
+  NumVacantesNoVacia<T> get _value => super._value as NumVacantesNoVacia<T>;
+
+  @override
+  $Res call({
+    Object? valorErroneo = freezed,
+  }) {
+    return _then(NumVacantesNoVacia<T>(
+      valorErroneo: valorErroneo == freezed
+          ? _value.valorErroneo
+          : valorErroneo // ignore: cast_nullable_to_non_nullable
+              as T,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$NumVacantesNoVacia<T> implements NumVacantesNoVacia<T> {
+  const _$NumVacantesNoVacia({required this.valorErroneo});
+
+  @override
+  final T valorErroneo;
+
+  @override
+  String toString() {
+    return 'ValorErroneo<$T>.numVacantesNoVacia(valorErroneo: $valorErroneo)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is NumVacantesNoVacia<T> &&
+            (identical(other.valorErroneo, valorErroneo) ||
+                const DeepCollectionEquality()
+                    .equals(other.valorErroneo, valorErroneo)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(valorErroneo);
+
+  @JsonKey(ignore: true)
+  @override
+  $NumVacantesNoVaciaCopyWith<T, NumVacantesNoVacia<T>> get copyWith =>
+      _$NumVacantesNoVaciaCopyWithImpl<T, NumVacantesNoVacia<T>>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(T valorErroneo) emailInvalido,
+    required TResult Function(T valorErroneo) contrasenaCorta,
+    required TResult Function(T valorErroneo) stringVacio,
+    required TResult Function(T valorErroneo, int min, int max)
+        longitudInvalida,
+    required TResult Function(T valorErroneo, double max) sueldoInvalido,
+    required TResult Function(T valorErroneo) sueldoVacio,
+    required TResult Function(T fechaErronea) fechaNula,
+    required TResult Function(T numVacantesInvalido) numVacantesInvalido,
+    required TResult Function(T valorErroneo) numVacantesNoVacia,
+  }) {
+    return numVacantesNoVacia(valorErroneo);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(T valorErroneo)? emailInvalido,
+    TResult Function(T valorErroneo)? contrasenaCorta,
+    TResult Function(T valorErroneo)? stringVacio,
+    TResult Function(T valorErroneo, int min, int max)? longitudInvalida,
+    TResult Function(T valorErroneo, double max)? sueldoInvalido,
+    TResult Function(T valorErroneo)? sueldoVacio,
+    TResult Function(T fechaErronea)? fechaNula,
+    TResult Function(T numVacantesInvalido)? numVacantesInvalido,
+    TResult Function(T valorErroneo)? numVacantesNoVacia,
+    required TResult orElse(),
+  }) {
+    if (numVacantesNoVacia != null) {
+      return numVacantesNoVacia(valorErroneo);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(EmailInvalido<T> value) emailInvalido,
+    required TResult Function(ContrasenaCorta<T> value) contrasenaCorta,
+    required TResult Function(StringVacio<T> value) stringVacio,
+    required TResult Function(LongitudInvalida<T> value) longitudInvalida,
+    required TResult Function(SueldoInvalida<T> value) sueldoInvalido,
+    required TResult Function(SueldoVacio<T> value) sueldoVacio,
+    required TResult Function(FechaNula<T> value) fechaNula,
+    required TResult Function(NumVacantesInvalido<T> value) numVacantesInvalido,
+    required TResult Function(NumVacantesNoVacia<T> value) numVacantesNoVacia,
+  }) {
+    return numVacantesNoVacia(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(EmailInvalido<T> value)? emailInvalido,
+    TResult Function(ContrasenaCorta<T> value)? contrasenaCorta,
+    TResult Function(StringVacio<T> value)? stringVacio,
+    TResult Function(LongitudInvalida<T> value)? longitudInvalida,
+    TResult Function(SueldoInvalida<T> value)? sueldoInvalido,
+    TResult Function(SueldoVacio<T> value)? sueldoVacio,
+    TResult Function(FechaNula<T> value)? fechaNula,
+    TResult Function(NumVacantesInvalido<T> value)? numVacantesInvalido,
+    TResult Function(NumVacantesNoVacia<T> value)? numVacantesNoVacia,
+    required TResult orElse(),
+  }) {
+    if (numVacantesNoVacia != null) {
+      return numVacantesNoVacia(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class NumVacantesNoVacia<T> implements ValorErroneo<T> {
+  const factory NumVacantesNoVacia({required T valorErroneo}) =
+      _$NumVacantesNoVacia<T>;
+
+  T get valorErroneo => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $NumVacantesNoVaciaCopyWith<T, NumVacantesNoVacia<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }

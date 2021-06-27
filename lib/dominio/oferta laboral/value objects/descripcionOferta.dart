@@ -4,17 +4,17 @@ import 'package:officium_flutter/dominio/comun/servicios_dominio/validadores_val
 import 'package:officium_flutter/dominio/comun/servicios_dominio/validadores_value_objects/validador_longitudString.dart';
 import 'package:officium_flutter/dominio/comun/value_object.dart';
 
-class TituloOfertaLaboral extends ValueObject<String> {
+class DescripcionOferta extends ValueObject<String> {
   @override
   final Either<ValorErroneo<String>, String> value;
-  static const maxLength = 80;
-  static const minLength = 4;
+  static const maxLength = 512;
+  static const minLength = 32;
 
-  factory TituloOfertaLaboral(String input) {
-    return TituloOfertaLaboral._(
+  factory DescripcionOferta(String input) {
+    return DescripcionOferta._(
         validadorLongitudInvalida(input, maxLength, minLength)
             .flatMap(validadorStringNoVacio));
   }
 
-  const TituloOfertaLaboral._(this.value);
+  const DescripcionOferta._(this.value);
 }
