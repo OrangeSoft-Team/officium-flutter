@@ -7,7 +7,7 @@ import '../value_object.dart';
 
 class Identificador extends ValueObject<String> {
   @override
-  final Either<ValorErroneo<String>, String> valor;
+  final Either<ValorErroneo<String>, String> value;
 
   factory Identificador() {
     return Identificador._(
@@ -15,11 +15,11 @@ class Identificador extends ValueObject<String> {
     );
   }
 
-  factory Identificador.fromUniqueString(String idUnico) {
+  factory Identificador.fromUniqueString(String uniqueId) {
     return Identificador._(
-      right(idUnico),
+      right(uniqueId),
     );
   }
 
-  const Identificador._(this.valor);
+  const Identificador._(this.value);
 }

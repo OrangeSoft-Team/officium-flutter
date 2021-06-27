@@ -47,6 +47,23 @@ class _$ValorErroneoTearOff {
       valorErroneo: valorErroneo,
     );
   }
+
+  CargoLongitudInvalida<T> cargoLongitudInvalida<T>(
+      {required T valorErroneo, required int min, required int max}) {
+    return CargoLongitudInvalida<T>(
+      valorErroneo: valorErroneo,
+      min: min,
+      max: max,
+    );
+  }
+
+  SueldoInvalida<T> sueldoInvalido<T>(
+      {required T valorErroneo, required double max}) {
+    return SueldoInvalida<T>(
+      valorErroneo: valorErroneo,
+      max: max,
+    );
+  }
 }
 
 /// @nodoc
@@ -63,6 +80,9 @@ mixin _$ValorErroneo<T> {
     required TResult Function(T valorErroneo) contrasenaCorta,
     required TResult Function(T valorErroneo) ciudadInvalida,
     required TResult Function(T valorErroneo) fechaInvalida,
+    required TResult Function(T valorErroneo, int min, int max)
+        cargoLongitudInvalida,
+    required TResult Function(T valorErroneo, double max) sueldoInvalido,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -72,6 +92,8 @@ mixin _$ValorErroneo<T> {
     TResult Function(T valorErroneo)? contrasenaCorta,
     TResult Function(T valorErroneo)? ciudadInvalida,
     TResult Function(T valorErroneo)? fechaInvalida,
+    TResult Function(T valorErroneo, int min, int max)? cargoLongitudInvalida,
+    TResult Function(T valorErroneo, double max)? sueldoInvalido,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -83,6 +105,9 @@ mixin _$ValorErroneo<T> {
     required TResult Function(ContrasenaCorta<T> value) contrasenaCorta,
     required TResult Function(CiudadInvalida<T> value) ciudadInvalida,
     required TResult Function(FechaInvalida<T> value) fechaInvalida,
+    required TResult Function(CargoLongitudInvalida<T> value)
+        cargoLongitudInvalida,
+    required TResult Function(SueldoInvalida<T> value) sueldoInvalido,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -92,6 +117,8 @@ mixin _$ValorErroneo<T> {
     TResult Function(ContrasenaCorta<T> value)? contrasenaCorta,
     TResult Function(CiudadInvalida<T> value)? ciudadInvalida,
     TResult Function(FechaInvalida<T> value)? fechaInvalida,
+    TResult Function(CargoLongitudInvalida<T> value)? cargoLongitudInvalida,
+    TResult Function(SueldoInvalida<T> value)? sueldoInvalido,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -216,6 +243,9 @@ class _$ExcedeLongitudMaxima<T> implements ExcedeLongitudMaxima<T> {
     required TResult Function(T valorErroneo) contrasenaCorta,
     required TResult Function(T valorErroneo) ciudadInvalida,
     required TResult Function(T valorErroneo) fechaInvalida,
+    required TResult Function(T valorErroneo, int min, int max)
+        cargoLongitudInvalida,
+    required TResult Function(T valorErroneo, double max) sueldoInvalido,
   }) {
     return excedeLongitudMaxima(valorErroneo, max);
   }
@@ -228,6 +258,8 @@ class _$ExcedeLongitudMaxima<T> implements ExcedeLongitudMaxima<T> {
     TResult Function(T valorErroneo)? contrasenaCorta,
     TResult Function(T valorErroneo)? ciudadInvalida,
     TResult Function(T valorErroneo)? fechaInvalida,
+    TResult Function(T valorErroneo, int min, int max)? cargoLongitudInvalida,
+    TResult Function(T valorErroneo, double max)? sueldoInvalido,
     required TResult orElse(),
   }) {
     if (excedeLongitudMaxima != null) {
@@ -245,6 +277,9 @@ class _$ExcedeLongitudMaxima<T> implements ExcedeLongitudMaxima<T> {
     required TResult Function(ContrasenaCorta<T> value) contrasenaCorta,
     required TResult Function(CiudadInvalida<T> value) ciudadInvalida,
     required TResult Function(FechaInvalida<T> value) fechaInvalida,
+    required TResult Function(CargoLongitudInvalida<T> value)
+        cargoLongitudInvalida,
+    required TResult Function(SueldoInvalida<T> value) sueldoInvalido,
   }) {
     return excedeLongitudMaxima(this);
   }
@@ -257,6 +292,8 @@ class _$ExcedeLongitudMaxima<T> implements ExcedeLongitudMaxima<T> {
     TResult Function(ContrasenaCorta<T> value)? contrasenaCorta,
     TResult Function(CiudadInvalida<T> value)? ciudadInvalida,
     TResult Function(FechaInvalida<T> value)? fechaInvalida,
+    TResult Function(CargoLongitudInvalida<T> value)? cargoLongitudInvalida,
+    TResult Function(SueldoInvalida<T> value)? sueldoInvalido,
     required TResult orElse(),
   }) {
     if (excedeLongitudMaxima != null) {
@@ -352,6 +389,9 @@ class _$EmailInvalido<T> implements EmailInvalido<T> {
     required TResult Function(T valorErroneo) contrasenaCorta,
     required TResult Function(T valorErroneo) ciudadInvalida,
     required TResult Function(T valorErroneo) fechaInvalida,
+    required TResult Function(T valorErroneo, int min, int max)
+        cargoLongitudInvalida,
+    required TResult Function(T valorErroneo, double max) sueldoInvalido,
   }) {
     return emailInvalido(valorErroneo);
   }
@@ -364,6 +404,8 @@ class _$EmailInvalido<T> implements EmailInvalido<T> {
     TResult Function(T valorErroneo)? contrasenaCorta,
     TResult Function(T valorErroneo)? ciudadInvalida,
     TResult Function(T valorErroneo)? fechaInvalida,
+    TResult Function(T valorErroneo, int min, int max)? cargoLongitudInvalida,
+    TResult Function(T valorErroneo, double max)? sueldoInvalido,
     required TResult orElse(),
   }) {
     if (emailInvalido != null) {
@@ -381,6 +423,9 @@ class _$EmailInvalido<T> implements EmailInvalido<T> {
     required TResult Function(ContrasenaCorta<T> value) contrasenaCorta,
     required TResult Function(CiudadInvalida<T> value) ciudadInvalida,
     required TResult Function(FechaInvalida<T> value) fechaInvalida,
+    required TResult Function(CargoLongitudInvalida<T> value)
+        cargoLongitudInvalida,
+    required TResult Function(SueldoInvalida<T> value) sueldoInvalido,
   }) {
     return emailInvalido(this);
   }
@@ -393,6 +438,8 @@ class _$EmailInvalido<T> implements EmailInvalido<T> {
     TResult Function(ContrasenaCorta<T> value)? contrasenaCorta,
     TResult Function(CiudadInvalida<T> value)? ciudadInvalida,
     TResult Function(FechaInvalida<T> value)? fechaInvalida,
+    TResult Function(CargoLongitudInvalida<T> value)? cargoLongitudInvalida,
+    TResult Function(SueldoInvalida<T> value)? sueldoInvalido,
     required TResult orElse(),
   }) {
     if (emailInvalido != null) {
@@ -486,6 +533,9 @@ class _$ContrasenaCorta<T> implements ContrasenaCorta<T> {
     required TResult Function(T valorErroneo) contrasenaCorta,
     required TResult Function(T valorErroneo) ciudadInvalida,
     required TResult Function(T valorErroneo) fechaInvalida,
+    required TResult Function(T valorErroneo, int min, int max)
+        cargoLongitudInvalida,
+    required TResult Function(T valorErroneo, double max) sueldoInvalido,
   }) {
     return contrasenaCorta(valorErroneo);
   }
@@ -498,6 +548,8 @@ class _$ContrasenaCorta<T> implements ContrasenaCorta<T> {
     TResult Function(T valorErroneo)? contrasenaCorta,
     TResult Function(T valorErroneo)? ciudadInvalida,
     TResult Function(T valorErroneo)? fechaInvalida,
+    TResult Function(T valorErroneo, int min, int max)? cargoLongitudInvalida,
+    TResult Function(T valorErroneo, double max)? sueldoInvalido,
     required TResult orElse(),
   }) {
     if (contrasenaCorta != null) {
@@ -515,6 +567,9 @@ class _$ContrasenaCorta<T> implements ContrasenaCorta<T> {
     required TResult Function(ContrasenaCorta<T> value) contrasenaCorta,
     required TResult Function(CiudadInvalida<T> value) ciudadInvalida,
     required TResult Function(FechaInvalida<T> value) fechaInvalida,
+    required TResult Function(CargoLongitudInvalida<T> value)
+        cargoLongitudInvalida,
+    required TResult Function(SueldoInvalida<T> value) sueldoInvalido,
   }) {
     return contrasenaCorta(this);
   }
@@ -527,6 +582,8 @@ class _$ContrasenaCorta<T> implements ContrasenaCorta<T> {
     TResult Function(ContrasenaCorta<T> value)? contrasenaCorta,
     TResult Function(CiudadInvalida<T> value)? ciudadInvalida,
     TResult Function(FechaInvalida<T> value)? fechaInvalida,
+    TResult Function(CargoLongitudInvalida<T> value)? cargoLongitudInvalida,
+    TResult Function(SueldoInvalida<T> value)? sueldoInvalido,
     required TResult orElse(),
   }) {
     if (contrasenaCorta != null) {
@@ -621,6 +678,9 @@ class _$CiudadInvalida<T> implements CiudadInvalida<T> {
     required TResult Function(T valorErroneo) contrasenaCorta,
     required TResult Function(T valorErroneo) ciudadInvalida,
     required TResult Function(T valorErroneo) fechaInvalida,
+    required TResult Function(T valorErroneo, int min, int max)
+        cargoLongitudInvalida,
+    required TResult Function(T valorErroneo, double max) sueldoInvalido,
   }) {
     return ciudadInvalida(valorErroneo);
   }
@@ -633,6 +693,8 @@ class _$CiudadInvalida<T> implements CiudadInvalida<T> {
     TResult Function(T valorErroneo)? contrasenaCorta,
     TResult Function(T valorErroneo)? ciudadInvalida,
     TResult Function(T valorErroneo)? fechaInvalida,
+    TResult Function(T valorErroneo, int min, int max)? cargoLongitudInvalida,
+    TResult Function(T valorErroneo, double max)? sueldoInvalido,
     required TResult orElse(),
   }) {
     if (ciudadInvalida != null) {
@@ -650,6 +712,9 @@ class _$CiudadInvalida<T> implements CiudadInvalida<T> {
     required TResult Function(ContrasenaCorta<T> value) contrasenaCorta,
     required TResult Function(CiudadInvalida<T> value) ciudadInvalida,
     required TResult Function(FechaInvalida<T> value) fechaInvalida,
+    required TResult Function(CargoLongitudInvalida<T> value)
+        cargoLongitudInvalida,
+    required TResult Function(SueldoInvalida<T> value) sueldoInvalido,
   }) {
     return ciudadInvalida(this);
   }
@@ -662,6 +727,8 @@ class _$CiudadInvalida<T> implements CiudadInvalida<T> {
     TResult Function(ContrasenaCorta<T> value)? contrasenaCorta,
     TResult Function(CiudadInvalida<T> value)? ciudadInvalida,
     TResult Function(FechaInvalida<T> value)? fechaInvalida,
+    TResult Function(CargoLongitudInvalida<T> value)? cargoLongitudInvalida,
+    TResult Function(SueldoInvalida<T> value)? sueldoInvalido,
     required TResult orElse(),
   }) {
     if (ciudadInvalida != null) {
@@ -755,6 +822,9 @@ class _$FechaInvalida<T> implements FechaInvalida<T> {
     required TResult Function(T valorErroneo) contrasenaCorta,
     required TResult Function(T valorErroneo) ciudadInvalida,
     required TResult Function(T valorErroneo) fechaInvalida,
+    required TResult Function(T valorErroneo, int min, int max)
+        cargoLongitudInvalida,
+    required TResult Function(T valorErroneo, double max) sueldoInvalido,
   }) {
     return fechaInvalida(valorErroneo);
   }
@@ -767,6 +837,8 @@ class _$FechaInvalida<T> implements FechaInvalida<T> {
     TResult Function(T valorErroneo)? contrasenaCorta,
     TResult Function(T valorErroneo)? ciudadInvalida,
     TResult Function(T valorErroneo)? fechaInvalida,
+    TResult Function(T valorErroneo, int min, int max)? cargoLongitudInvalida,
+    TResult Function(T valorErroneo, double max)? sueldoInvalido,
     required TResult orElse(),
   }) {
     if (fechaInvalida != null) {
@@ -784,6 +856,9 @@ class _$FechaInvalida<T> implements FechaInvalida<T> {
     required TResult Function(ContrasenaCorta<T> value) contrasenaCorta,
     required TResult Function(CiudadInvalida<T> value) ciudadInvalida,
     required TResult Function(FechaInvalida<T> value) fechaInvalida,
+    required TResult Function(CargoLongitudInvalida<T> value)
+        cargoLongitudInvalida,
+    required TResult Function(SueldoInvalida<T> value) sueldoInvalido,
   }) {
     return fechaInvalida(this);
   }
@@ -796,6 +871,8 @@ class _$FechaInvalida<T> implements FechaInvalida<T> {
     TResult Function(ContrasenaCorta<T> value)? contrasenaCorta,
     TResult Function(CiudadInvalida<T> value)? ciudadInvalida,
     TResult Function(FechaInvalida<T> value)? fechaInvalida,
+    TResult Function(CargoLongitudInvalida<T> value)? cargoLongitudInvalida,
+    TResult Function(SueldoInvalida<T> value)? sueldoInvalido,
     required TResult orElse(),
   }) {
     if (fechaInvalida != null) {
@@ -813,5 +890,335 @@ abstract class FechaInvalida<T> implements ValorErroneo<T> {
   @override
   @JsonKey(ignore: true)
   $FechaInvalidaCopyWith<T, FechaInvalida<T>> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $CargoLongitudInvalidaCopyWith<T, $Res>
+    implements $ValorErroneoCopyWith<T, $Res> {
+  factory $CargoLongitudInvalidaCopyWith(CargoLongitudInvalida<T> value,
+          $Res Function(CargoLongitudInvalida<T>) then) =
+      _$CargoLongitudInvalidaCopyWithImpl<T, $Res>;
+  @override
+  $Res call({T valorErroneo, int min, int max});
+}
+
+/// @nodoc
+class _$CargoLongitudInvalidaCopyWithImpl<T, $Res>
+    extends _$ValorErroneoCopyWithImpl<T, $Res>
+    implements $CargoLongitudInvalidaCopyWith<T, $Res> {
+  _$CargoLongitudInvalidaCopyWithImpl(CargoLongitudInvalida<T> _value,
+      $Res Function(CargoLongitudInvalida<T>) _then)
+      : super(_value, (v) => _then(v as CargoLongitudInvalida<T>));
+
+  @override
+  CargoLongitudInvalida<T> get _value =>
+      super._value as CargoLongitudInvalida<T>;
+
+  @override
+  $Res call({
+    Object? valorErroneo = freezed,
+    Object? min = freezed,
+    Object? max = freezed,
+  }) {
+    return _then(CargoLongitudInvalida<T>(
+      valorErroneo: valorErroneo == freezed
+          ? _value.valorErroneo
+          : valorErroneo // ignore: cast_nullable_to_non_nullable
+              as T,
+      min: min == freezed
+          ? _value.min
+          : min // ignore: cast_nullable_to_non_nullable
+              as int,
+      max: max == freezed
+          ? _value.max
+          : max // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$CargoLongitudInvalida<T> implements CargoLongitudInvalida<T> {
+  const _$CargoLongitudInvalida(
+      {required this.valorErroneo, required this.min, required this.max});
+
+  @override
+  final T valorErroneo;
+  @override
+  final int min;
+  @override
+  final int max;
+
+  @override
+  String toString() {
+    return 'ValorErroneo<$T>.cargoLongitudInvalida(valorErroneo: $valorErroneo, min: $min, max: $max)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is CargoLongitudInvalida<T> &&
+            (identical(other.valorErroneo, valorErroneo) ||
+                const DeepCollectionEquality()
+                    .equals(other.valorErroneo, valorErroneo)) &&
+            (identical(other.min, min) ||
+                const DeepCollectionEquality().equals(other.min, min)) &&
+            (identical(other.max, max) ||
+                const DeepCollectionEquality().equals(other.max, max)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(valorErroneo) ^
+      const DeepCollectionEquality().hash(min) ^
+      const DeepCollectionEquality().hash(max);
+
+  @JsonKey(ignore: true)
+  @override
+  $CargoLongitudInvalidaCopyWith<T, CargoLongitudInvalida<T>> get copyWith =>
+      _$CargoLongitudInvalidaCopyWithImpl<T, CargoLongitudInvalida<T>>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(T valorErroneo, int max) excedeLongitudMaxima,
+    required TResult Function(T valorErroneo) emailInvalido,
+    required TResult Function(T valorErroneo) contrasenaCorta,
+    required TResult Function(T valorErroneo) ciudadInvalida,
+    required TResult Function(T valorErroneo) fechaInvalida,
+    required TResult Function(T valorErroneo, int min, int max)
+        cargoLongitudInvalida,
+    required TResult Function(T valorErroneo, double max) sueldoInvalido,
+  }) {
+    return cargoLongitudInvalida(valorErroneo, min, max);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(T valorErroneo, int max)? excedeLongitudMaxima,
+    TResult Function(T valorErroneo)? emailInvalido,
+    TResult Function(T valorErroneo)? contrasenaCorta,
+    TResult Function(T valorErroneo)? ciudadInvalida,
+    TResult Function(T valorErroneo)? fechaInvalida,
+    TResult Function(T valorErroneo, int min, int max)? cargoLongitudInvalida,
+    TResult Function(T valorErroneo, double max)? sueldoInvalido,
+    required TResult orElse(),
+  }) {
+    if (cargoLongitudInvalida != null) {
+      return cargoLongitudInvalida(valorErroneo, min, max);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(ExcedeLongitudMaxima<T> value)
+        excedeLongitudMaxima,
+    required TResult Function(EmailInvalido<T> value) emailInvalido,
+    required TResult Function(ContrasenaCorta<T> value) contrasenaCorta,
+    required TResult Function(CiudadInvalida<T> value) ciudadInvalida,
+    required TResult Function(FechaInvalida<T> value) fechaInvalida,
+    required TResult Function(CargoLongitudInvalida<T> value)
+        cargoLongitudInvalida,
+    required TResult Function(SueldoInvalida<T> value) sueldoInvalido,
+  }) {
+    return cargoLongitudInvalida(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(ExcedeLongitudMaxima<T> value)? excedeLongitudMaxima,
+    TResult Function(EmailInvalido<T> value)? emailInvalido,
+    TResult Function(ContrasenaCorta<T> value)? contrasenaCorta,
+    TResult Function(CiudadInvalida<T> value)? ciudadInvalida,
+    TResult Function(FechaInvalida<T> value)? fechaInvalida,
+    TResult Function(CargoLongitudInvalida<T> value)? cargoLongitudInvalida,
+    TResult Function(SueldoInvalida<T> value)? sueldoInvalido,
+    required TResult orElse(),
+  }) {
+    if (cargoLongitudInvalida != null) {
+      return cargoLongitudInvalida(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class CargoLongitudInvalida<T> implements ValorErroneo<T> {
+  const factory CargoLongitudInvalida(
+      {required T valorErroneo,
+      required int min,
+      required int max}) = _$CargoLongitudInvalida<T>;
+
+  @override
+  T get valorErroneo => throw _privateConstructorUsedError;
+  int get min => throw _privateConstructorUsedError;
+  int get max => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  $CargoLongitudInvalidaCopyWith<T, CargoLongitudInvalida<T>> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $SueldoInvalidaCopyWith<T, $Res>
+    implements $ValorErroneoCopyWith<T, $Res> {
+  factory $SueldoInvalidaCopyWith(
+          SueldoInvalida<T> value, $Res Function(SueldoInvalida<T>) then) =
+      _$SueldoInvalidaCopyWithImpl<T, $Res>;
+  @override
+  $Res call({T valorErroneo, double max});
+}
+
+/// @nodoc
+class _$SueldoInvalidaCopyWithImpl<T, $Res>
+    extends _$ValorErroneoCopyWithImpl<T, $Res>
+    implements $SueldoInvalidaCopyWith<T, $Res> {
+  _$SueldoInvalidaCopyWithImpl(
+      SueldoInvalida<T> _value, $Res Function(SueldoInvalida<T>) _then)
+      : super(_value, (v) => _then(v as SueldoInvalida<T>));
+
+  @override
+  SueldoInvalida<T> get _value => super._value as SueldoInvalida<T>;
+
+  @override
+  $Res call({
+    Object? valorErroneo = freezed,
+    Object? max = freezed,
+  }) {
+    return _then(SueldoInvalida<T>(
+      valorErroneo: valorErroneo == freezed
+          ? _value.valorErroneo
+          : valorErroneo // ignore: cast_nullable_to_non_nullable
+              as T,
+      max: max == freezed
+          ? _value.max
+          : max // ignore: cast_nullable_to_non_nullable
+              as double,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$SueldoInvalida<T> implements SueldoInvalida<T> {
+  const _$SueldoInvalida({required this.valorErroneo, required this.max});
+
+  @override
+  final T valorErroneo;
+  @override
+  final double max;
+
+  @override
+  String toString() {
+    return 'ValorErroneo<$T>.sueldoInvalido(valorErroneo: $valorErroneo, max: $max)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is SueldoInvalida<T> &&
+            (identical(other.valorErroneo, valorErroneo) ||
+                const DeepCollectionEquality()
+                    .equals(other.valorErroneo, valorErroneo)) &&
+            (identical(other.max, max) ||
+                const DeepCollectionEquality().equals(other.max, max)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(valorErroneo) ^
+      const DeepCollectionEquality().hash(max);
+
+  @JsonKey(ignore: true)
+  @override
+  $SueldoInvalidaCopyWith<T, SueldoInvalida<T>> get copyWith =>
+      _$SueldoInvalidaCopyWithImpl<T, SueldoInvalida<T>>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(T valorErroneo, int max) excedeLongitudMaxima,
+    required TResult Function(T valorErroneo) emailInvalido,
+    required TResult Function(T valorErroneo) contrasenaCorta,
+    required TResult Function(T valorErroneo) ciudadInvalida,
+    required TResult Function(T valorErroneo) fechaInvalida,
+    required TResult Function(T valorErroneo, int min, int max)
+        cargoLongitudInvalida,
+    required TResult Function(T valorErroneo, double max) sueldoInvalido,
+  }) {
+    return sueldoInvalido(valorErroneo, max);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(T valorErroneo, int max)? excedeLongitudMaxima,
+    TResult Function(T valorErroneo)? emailInvalido,
+    TResult Function(T valorErroneo)? contrasenaCorta,
+    TResult Function(T valorErroneo)? ciudadInvalida,
+    TResult Function(T valorErroneo)? fechaInvalida,
+    TResult Function(T valorErroneo, int min, int max)? cargoLongitudInvalida,
+    TResult Function(T valorErroneo, double max)? sueldoInvalido,
+    required TResult orElse(),
+  }) {
+    if (sueldoInvalido != null) {
+      return sueldoInvalido(valorErroneo, max);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(ExcedeLongitudMaxima<T> value)
+        excedeLongitudMaxima,
+    required TResult Function(EmailInvalido<T> value) emailInvalido,
+    required TResult Function(ContrasenaCorta<T> value) contrasenaCorta,
+    required TResult Function(CiudadInvalida<T> value) ciudadInvalida,
+    required TResult Function(FechaInvalida<T> value) fechaInvalida,
+    required TResult Function(CargoLongitudInvalida<T> value)
+        cargoLongitudInvalida,
+    required TResult Function(SueldoInvalida<T> value) sueldoInvalido,
+  }) {
+    return sueldoInvalido(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(ExcedeLongitudMaxima<T> value)? excedeLongitudMaxima,
+    TResult Function(EmailInvalido<T> value)? emailInvalido,
+    TResult Function(ContrasenaCorta<T> value)? contrasenaCorta,
+    TResult Function(CiudadInvalida<T> value)? ciudadInvalida,
+    TResult Function(FechaInvalida<T> value)? fechaInvalida,
+    TResult Function(CargoLongitudInvalida<T> value)? cargoLongitudInvalida,
+    TResult Function(SueldoInvalida<T> value)? sueldoInvalido,
+    required TResult orElse(),
+  }) {
+    if (sueldoInvalido != null) {
+      return sueldoInvalido(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class SueldoInvalida<T> implements ValorErroneo<T> {
+  const factory SueldoInvalida({required T valorErroneo, required double max}) =
+      _$SueldoInvalida<T>;
+
+  @override
+  T get valorErroneo => throw _privateConstructorUsedError;
+  double get max => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  $SueldoInvalidaCopyWith<T, SueldoInvalida<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -1,9 +1,9 @@
-import 'package:officium_flutter/dominio/comun/factory_failures.dart';
-
 //Aquí estarán todas las clases de Error
 
+import 'package:officium_flutter/dominio/comun/excepciones_dominio/valores_errones_value_object/factoriaValorErroneo.dart';
+
 class UnexpectedValueError extends Error {
-  final ValueFailure valueFailure;
+  final ValorErroneo valueFailure;
 
   UnexpectedValueError(this.valueFailure);
 

@@ -1,16 +1,18 @@
-import 'dart:ffi';
-
-import 'package:dartz/dartz.dart';
-import 'package:officium_flutter/dominio/comun/factoriaValorErroneo.dart';
+import 'package:dartz/dartz.dart' show Either, right;
+import 'package:officium_flutter/dominio/comun/excepciones_dominio/valores_errones_value_object/factoriaValorErroneo.dart';
 import 'package:officium_flutter/dominio/comun/value_object.dart';
+import 'package:officium_flutter/dominio/oferta%20laboral/servicios_dominio/validadores_oferta_laboral/validador_sueldo.dart';
 
-class EmpresaNombre extends ValueObject<Float> {
+class Sueldo extends ValueObject<double> {
   @override
-  final Either<ValorErroneo<Float>, Float> valor;
+  final Either<ValorErroneo<double>, double> value;
+  static const double maxSueldo = 1000000.00;
 
-  factory EmpresaNombre(Float valor) {
-    return EmpresaNombre._(right(valor));
+  factory Sueldo(double input, double maxSueldo) {
+    return Sueldo._(
+      validadorSueldo(input, maxSueldo),
+    );
   }
 
-  const EmpresaNombre._(this.valor);
+  const Sueldo._(this.value);
 }
