@@ -43,4 +43,7 @@ abstract class ValorErroneo<T> with _$ValorErroneo<T> {
   const factory ValorErroneo.turnoInvalido(
       {required T valorErroneo,
       required List<String> turnosValidos}) = TurnoInvalido<T>;
+  const factory ValorErroneo.generoInvalido(
+      {required T valorErroneo,
+      required List<String> generosValidos}) = GeneroInvalido<T>;
 }

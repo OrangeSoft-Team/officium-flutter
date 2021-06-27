@@ -83,6 +83,14 @@ class _$ValorErroneoTearOff {
       turnosValidos: turnosValidos,
     );
   }
+
+  GeneroInvalido<T> generoInvalido<T>(
+      {required T valorErroneo, required List<String> generosValidos}) {
+    return GeneroInvalido<T>(
+      valorErroneo: valorErroneo,
+      generosValidos: generosValidos,
+    );
+  }
 }
 
 /// @nodoc
@@ -104,6 +112,8 @@ mixin _$ValorErroneo<T> {
     required TResult Function(T valorErroneo) numVacantesNoVacia,
     required TResult Function(T valorErroneo, List<String> turnosValidos)
         turnoInvalido,
+    required TResult Function(T valorErroneo, List<String> generosValidos)
+        generoInvalido,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -118,6 +128,8 @@ mixin _$ValorErroneo<T> {
     TResult Function(T numVacantesInvalido)? numVacantesInvalido,
     TResult Function(T valorErroneo)? numVacantesNoVacia,
     TResult Function(T valorErroneo, List<String> turnosValidos)? turnoInvalido,
+    TResult Function(T valorErroneo, List<String> generosValidos)?
+        generoInvalido,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -133,6 +145,7 @@ mixin _$ValorErroneo<T> {
     required TResult Function(NumVacantesInvalido<T> value) numVacantesInvalido,
     required TResult Function(NumVacantesNoVacia<T> value) numVacantesNoVacia,
     required TResult Function(TurnoInvalido<T> value) turnoInvalido,
+    required TResult Function(GeneroInvalido<T> value) generoInvalido,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -147,6 +160,7 @@ mixin _$ValorErroneo<T> {
     TResult Function(NumVacantesInvalido<T> value)? numVacantesInvalido,
     TResult Function(NumVacantesNoVacia<T> value)? numVacantesNoVacia,
     TResult Function(TurnoInvalido<T> value)? turnoInvalido,
+    TResult Function(GeneroInvalido<T> value)? generoInvalido,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -247,6 +261,8 @@ class _$EmailInvalido<T> implements EmailInvalido<T> {
     required TResult Function(T valorErroneo) numVacantesNoVacia,
     required TResult Function(T valorErroneo, List<String> turnosValidos)
         turnoInvalido,
+    required TResult Function(T valorErroneo, List<String> generosValidos)
+        generoInvalido,
   }) {
     return emailInvalido(valorErroneo);
   }
@@ -264,6 +280,8 @@ class _$EmailInvalido<T> implements EmailInvalido<T> {
     TResult Function(T numVacantesInvalido)? numVacantesInvalido,
     TResult Function(T valorErroneo)? numVacantesNoVacia,
     TResult Function(T valorErroneo, List<String> turnosValidos)? turnoInvalido,
+    TResult Function(T valorErroneo, List<String> generosValidos)?
+        generoInvalido,
     required TResult orElse(),
   }) {
     if (emailInvalido != null) {
@@ -285,6 +303,7 @@ class _$EmailInvalido<T> implements EmailInvalido<T> {
     required TResult Function(NumVacantesInvalido<T> value) numVacantesInvalido,
     required TResult Function(NumVacantesNoVacia<T> value) numVacantesNoVacia,
     required TResult Function(TurnoInvalido<T> value) turnoInvalido,
+    required TResult Function(GeneroInvalido<T> value) generoInvalido,
   }) {
     return emailInvalido(this);
   }
@@ -302,6 +321,7 @@ class _$EmailInvalido<T> implements EmailInvalido<T> {
     TResult Function(NumVacantesInvalido<T> value)? numVacantesInvalido,
     TResult Function(NumVacantesNoVacia<T> value)? numVacantesNoVacia,
     TResult Function(TurnoInvalido<T> value)? turnoInvalido,
+    TResult Function(GeneroInvalido<T> value)? generoInvalido,
     required TResult orElse(),
   }) {
     if (emailInvalido != null) {
@@ -398,6 +418,8 @@ class _$ContrasenaCorta<T> implements ContrasenaCorta<T> {
     required TResult Function(T valorErroneo) numVacantesNoVacia,
     required TResult Function(T valorErroneo, List<String> turnosValidos)
         turnoInvalido,
+    required TResult Function(T valorErroneo, List<String> generosValidos)
+        generoInvalido,
   }) {
     return contrasenaCorta(valorErroneo);
   }
@@ -415,6 +437,8 @@ class _$ContrasenaCorta<T> implements ContrasenaCorta<T> {
     TResult Function(T numVacantesInvalido)? numVacantesInvalido,
     TResult Function(T valorErroneo)? numVacantesNoVacia,
     TResult Function(T valorErroneo, List<String> turnosValidos)? turnoInvalido,
+    TResult Function(T valorErroneo, List<String> generosValidos)?
+        generoInvalido,
     required TResult orElse(),
   }) {
     if (contrasenaCorta != null) {
@@ -436,6 +460,7 @@ class _$ContrasenaCorta<T> implements ContrasenaCorta<T> {
     required TResult Function(NumVacantesInvalido<T> value) numVacantesInvalido,
     required TResult Function(NumVacantesNoVacia<T> value) numVacantesNoVacia,
     required TResult Function(TurnoInvalido<T> value) turnoInvalido,
+    required TResult Function(GeneroInvalido<T> value) generoInvalido,
   }) {
     return contrasenaCorta(this);
   }
@@ -453,6 +478,7 @@ class _$ContrasenaCorta<T> implements ContrasenaCorta<T> {
     TResult Function(NumVacantesInvalido<T> value)? numVacantesInvalido,
     TResult Function(NumVacantesNoVacia<T> value)? numVacantesNoVacia,
     TResult Function(TurnoInvalido<T> value)? turnoInvalido,
+    TResult Function(GeneroInvalido<T> value)? generoInvalido,
     required TResult orElse(),
   }) {
     if (contrasenaCorta != null) {
@@ -550,6 +576,8 @@ class _$StringVacio<T> implements StringVacio<T> {
     required TResult Function(T valorErroneo) numVacantesNoVacia,
     required TResult Function(T valorErroneo, List<String> turnosValidos)
         turnoInvalido,
+    required TResult Function(T valorErroneo, List<String> generosValidos)
+        generoInvalido,
   }) {
     return stringVacio(valorErroneo);
   }
@@ -567,6 +595,8 @@ class _$StringVacio<T> implements StringVacio<T> {
     TResult Function(T numVacantesInvalido)? numVacantesInvalido,
     TResult Function(T valorErroneo)? numVacantesNoVacia,
     TResult Function(T valorErroneo, List<String> turnosValidos)? turnoInvalido,
+    TResult Function(T valorErroneo, List<String> generosValidos)?
+        generoInvalido,
     required TResult orElse(),
   }) {
     if (stringVacio != null) {
@@ -588,6 +618,7 @@ class _$StringVacio<T> implements StringVacio<T> {
     required TResult Function(NumVacantesInvalido<T> value) numVacantesInvalido,
     required TResult Function(NumVacantesNoVacia<T> value) numVacantesNoVacia,
     required TResult Function(TurnoInvalido<T> value) turnoInvalido,
+    required TResult Function(GeneroInvalido<T> value) generoInvalido,
   }) {
     return stringVacio(this);
   }
@@ -605,6 +636,7 @@ class _$StringVacio<T> implements StringVacio<T> {
     TResult Function(NumVacantesInvalido<T> value)? numVacantesInvalido,
     TResult Function(NumVacantesNoVacia<T> value)? numVacantesNoVacia,
     TResult Function(TurnoInvalido<T> value)? turnoInvalido,
+    TResult Function(GeneroInvalido<T> value)? generoInvalido,
     required TResult orElse(),
   }) {
     if (stringVacio != null) {
@@ -723,6 +755,8 @@ class _$LongitudInvalida<T> implements LongitudInvalida<T> {
     required TResult Function(T valorErroneo) numVacantesNoVacia,
     required TResult Function(T valorErroneo, List<String> turnosValidos)
         turnoInvalido,
+    required TResult Function(T valorErroneo, List<String> generosValidos)
+        generoInvalido,
   }) {
     return longitudInvalida(valorErroneo, min, max);
   }
@@ -740,6 +774,8 @@ class _$LongitudInvalida<T> implements LongitudInvalida<T> {
     TResult Function(T numVacantesInvalido)? numVacantesInvalido,
     TResult Function(T valorErroneo)? numVacantesNoVacia,
     TResult Function(T valorErroneo, List<String> turnosValidos)? turnoInvalido,
+    TResult Function(T valorErroneo, List<String> generosValidos)?
+        generoInvalido,
     required TResult orElse(),
   }) {
     if (longitudInvalida != null) {
@@ -761,6 +797,7 @@ class _$LongitudInvalida<T> implements LongitudInvalida<T> {
     required TResult Function(NumVacantesInvalido<T> value) numVacantesInvalido,
     required TResult Function(NumVacantesNoVacia<T> value) numVacantesNoVacia,
     required TResult Function(TurnoInvalido<T> value) turnoInvalido,
+    required TResult Function(GeneroInvalido<T> value) generoInvalido,
   }) {
     return longitudInvalida(this);
   }
@@ -778,6 +815,7 @@ class _$LongitudInvalida<T> implements LongitudInvalida<T> {
     TResult Function(NumVacantesInvalido<T> value)? numVacantesInvalido,
     TResult Function(NumVacantesNoVacia<T> value)? numVacantesNoVacia,
     TResult Function(TurnoInvalido<T> value)? turnoInvalido,
+    TResult Function(GeneroInvalido<T> value)? generoInvalido,
     required TResult orElse(),
   }) {
     if (longitudInvalida != null) {
@@ -890,6 +928,8 @@ class _$SueldoInvalida<T> implements SueldoInvalida<T> {
     required TResult Function(T valorErroneo) numVacantesNoVacia,
     required TResult Function(T valorErroneo, List<String> turnosValidos)
         turnoInvalido,
+    required TResult Function(T valorErroneo, List<String> generosValidos)
+        generoInvalido,
   }) {
     return sueldoInvalido(valorErroneo, max);
   }
@@ -907,6 +947,8 @@ class _$SueldoInvalida<T> implements SueldoInvalida<T> {
     TResult Function(T numVacantesInvalido)? numVacantesInvalido,
     TResult Function(T valorErroneo)? numVacantesNoVacia,
     TResult Function(T valorErroneo, List<String> turnosValidos)? turnoInvalido,
+    TResult Function(T valorErroneo, List<String> generosValidos)?
+        generoInvalido,
     required TResult orElse(),
   }) {
     if (sueldoInvalido != null) {
@@ -928,6 +970,7 @@ class _$SueldoInvalida<T> implements SueldoInvalida<T> {
     required TResult Function(NumVacantesInvalido<T> value) numVacantesInvalido,
     required TResult Function(NumVacantesNoVacia<T> value) numVacantesNoVacia,
     required TResult Function(TurnoInvalido<T> value) turnoInvalido,
+    required TResult Function(GeneroInvalido<T> value) generoInvalido,
   }) {
     return sueldoInvalido(this);
   }
@@ -945,6 +988,7 @@ class _$SueldoInvalida<T> implements SueldoInvalida<T> {
     TResult Function(NumVacantesInvalido<T> value)? numVacantesInvalido,
     TResult Function(NumVacantesNoVacia<T> value)? numVacantesNoVacia,
     TResult Function(TurnoInvalido<T> value)? turnoInvalido,
+    TResult Function(GeneroInvalido<T> value)? generoInvalido,
     required TResult orElse(),
   }) {
     if (sueldoInvalido != null) {
@@ -1043,6 +1087,8 @@ class _$SueldoVacio<T> implements SueldoVacio<T> {
     required TResult Function(T valorErroneo) numVacantesNoVacia,
     required TResult Function(T valorErroneo, List<String> turnosValidos)
         turnoInvalido,
+    required TResult Function(T valorErroneo, List<String> generosValidos)
+        generoInvalido,
   }) {
     return sueldoVacio(valorErroneo);
   }
@@ -1060,6 +1106,8 @@ class _$SueldoVacio<T> implements SueldoVacio<T> {
     TResult Function(T numVacantesInvalido)? numVacantesInvalido,
     TResult Function(T valorErroneo)? numVacantesNoVacia,
     TResult Function(T valorErroneo, List<String> turnosValidos)? turnoInvalido,
+    TResult Function(T valorErroneo, List<String> generosValidos)?
+        generoInvalido,
     required TResult orElse(),
   }) {
     if (sueldoVacio != null) {
@@ -1081,6 +1129,7 @@ class _$SueldoVacio<T> implements SueldoVacio<T> {
     required TResult Function(NumVacantesInvalido<T> value) numVacantesInvalido,
     required TResult Function(NumVacantesNoVacia<T> value) numVacantesNoVacia,
     required TResult Function(TurnoInvalido<T> value) turnoInvalido,
+    required TResult Function(GeneroInvalido<T> value) generoInvalido,
   }) {
     return sueldoVacio(this);
   }
@@ -1098,6 +1147,7 @@ class _$SueldoVacio<T> implements SueldoVacio<T> {
     TResult Function(NumVacantesInvalido<T> value)? numVacantesInvalido,
     TResult Function(NumVacantesNoVacia<T> value)? numVacantesNoVacia,
     TResult Function(TurnoInvalido<T> value)? turnoInvalido,
+    TResult Function(GeneroInvalido<T> value)? generoInvalido,
     required TResult orElse(),
   }) {
     if (sueldoVacio != null) {
@@ -1194,6 +1244,8 @@ class _$FechaNula<T> implements FechaNula<T> {
     required TResult Function(T valorErroneo) numVacantesNoVacia,
     required TResult Function(T valorErroneo, List<String> turnosValidos)
         turnoInvalido,
+    required TResult Function(T valorErroneo, List<String> generosValidos)
+        generoInvalido,
   }) {
     return fechaNula(fechaErronea);
   }
@@ -1211,6 +1263,8 @@ class _$FechaNula<T> implements FechaNula<T> {
     TResult Function(T numVacantesInvalido)? numVacantesInvalido,
     TResult Function(T valorErroneo)? numVacantesNoVacia,
     TResult Function(T valorErroneo, List<String> turnosValidos)? turnoInvalido,
+    TResult Function(T valorErroneo, List<String> generosValidos)?
+        generoInvalido,
     required TResult orElse(),
   }) {
     if (fechaNula != null) {
@@ -1232,6 +1286,7 @@ class _$FechaNula<T> implements FechaNula<T> {
     required TResult Function(NumVacantesInvalido<T> value) numVacantesInvalido,
     required TResult Function(NumVacantesNoVacia<T> value) numVacantesNoVacia,
     required TResult Function(TurnoInvalido<T> value) turnoInvalido,
+    required TResult Function(GeneroInvalido<T> value) generoInvalido,
   }) {
     return fechaNula(this);
   }
@@ -1249,6 +1304,7 @@ class _$FechaNula<T> implements FechaNula<T> {
     TResult Function(NumVacantesInvalido<T> value)? numVacantesInvalido,
     TResult Function(NumVacantesNoVacia<T> value)? numVacantesNoVacia,
     TResult Function(TurnoInvalido<T> value)? turnoInvalido,
+    TResult Function(GeneroInvalido<T> value)? generoInvalido,
     required TResult orElse(),
   }) {
     if (fechaNula != null) {
@@ -1347,6 +1403,8 @@ class _$NumVacantesInvalido<T> implements NumVacantesInvalido<T> {
     required TResult Function(T valorErroneo) numVacantesNoVacia,
     required TResult Function(T valorErroneo, List<String> turnosValidos)
         turnoInvalido,
+    required TResult Function(T valorErroneo, List<String> generosValidos)
+        generoInvalido,
   }) {
     return numVacantesInvalido(this.numVacantesInvalido);
   }
@@ -1364,6 +1422,8 @@ class _$NumVacantesInvalido<T> implements NumVacantesInvalido<T> {
     TResult Function(T numVacantesInvalido)? numVacantesInvalido,
     TResult Function(T valorErroneo)? numVacantesNoVacia,
     TResult Function(T valorErroneo, List<String> turnosValidos)? turnoInvalido,
+    TResult Function(T valorErroneo, List<String> generosValidos)?
+        generoInvalido,
     required TResult orElse(),
   }) {
     if (numVacantesInvalido != null) {
@@ -1385,6 +1445,7 @@ class _$NumVacantesInvalido<T> implements NumVacantesInvalido<T> {
     required TResult Function(NumVacantesInvalido<T> value) numVacantesInvalido,
     required TResult Function(NumVacantesNoVacia<T> value) numVacantesNoVacia,
     required TResult Function(TurnoInvalido<T> value) turnoInvalido,
+    required TResult Function(GeneroInvalido<T> value) generoInvalido,
   }) {
     return numVacantesInvalido(this);
   }
@@ -1402,6 +1463,7 @@ class _$NumVacantesInvalido<T> implements NumVacantesInvalido<T> {
     TResult Function(NumVacantesInvalido<T> value)? numVacantesInvalido,
     TResult Function(NumVacantesNoVacia<T> value)? numVacantesNoVacia,
     TResult Function(TurnoInvalido<T> value)? turnoInvalido,
+    TResult Function(GeneroInvalido<T> value)? generoInvalido,
     required TResult orElse(),
   }) {
     if (numVacantesInvalido != null) {
@@ -1500,6 +1562,8 @@ class _$NumVacantesNoVacia<T> implements NumVacantesNoVacia<T> {
     required TResult Function(T valorErroneo) numVacantesNoVacia,
     required TResult Function(T valorErroneo, List<String> turnosValidos)
         turnoInvalido,
+    required TResult Function(T valorErroneo, List<String> generosValidos)
+        generoInvalido,
   }) {
     return numVacantesNoVacia(valorErroneo);
   }
@@ -1517,6 +1581,8 @@ class _$NumVacantesNoVacia<T> implements NumVacantesNoVacia<T> {
     TResult Function(T numVacantesInvalido)? numVacantesInvalido,
     TResult Function(T valorErroneo)? numVacantesNoVacia,
     TResult Function(T valorErroneo, List<String> turnosValidos)? turnoInvalido,
+    TResult Function(T valorErroneo, List<String> generosValidos)?
+        generoInvalido,
     required TResult orElse(),
   }) {
     if (numVacantesNoVacia != null) {
@@ -1538,6 +1604,7 @@ class _$NumVacantesNoVacia<T> implements NumVacantesNoVacia<T> {
     required TResult Function(NumVacantesInvalido<T> value) numVacantesInvalido,
     required TResult Function(NumVacantesNoVacia<T> value) numVacantesNoVacia,
     required TResult Function(TurnoInvalido<T> value) turnoInvalido,
+    required TResult Function(GeneroInvalido<T> value) generoInvalido,
   }) {
     return numVacantesNoVacia(this);
   }
@@ -1555,6 +1622,7 @@ class _$NumVacantesNoVacia<T> implements NumVacantesNoVacia<T> {
     TResult Function(NumVacantesInvalido<T> value)? numVacantesInvalido,
     TResult Function(NumVacantesNoVacia<T> value)? numVacantesNoVacia,
     TResult Function(TurnoInvalido<T> value)? turnoInvalido,
+    TResult Function(GeneroInvalido<T> value)? generoInvalido,
     required TResult orElse(),
   }) {
     if (numVacantesNoVacia != null) {
@@ -1665,6 +1733,8 @@ class _$TurnoInvalido<T> implements TurnoInvalido<T> {
     required TResult Function(T valorErroneo) numVacantesNoVacia,
     required TResult Function(T valorErroneo, List<String> turnosValidos)
         turnoInvalido,
+    required TResult Function(T valorErroneo, List<String> generosValidos)
+        generoInvalido,
   }) {
     return turnoInvalido(valorErroneo, turnosValidos);
   }
@@ -1682,6 +1752,8 @@ class _$TurnoInvalido<T> implements TurnoInvalido<T> {
     TResult Function(T numVacantesInvalido)? numVacantesInvalido,
     TResult Function(T valorErroneo)? numVacantesNoVacia,
     TResult Function(T valorErroneo, List<String> turnosValidos)? turnoInvalido,
+    TResult Function(T valorErroneo, List<String> generosValidos)?
+        generoInvalido,
     required TResult orElse(),
   }) {
     if (turnoInvalido != null) {
@@ -1703,6 +1775,7 @@ class _$TurnoInvalido<T> implements TurnoInvalido<T> {
     required TResult Function(NumVacantesInvalido<T> value) numVacantesInvalido,
     required TResult Function(NumVacantesNoVacia<T> value) numVacantesNoVacia,
     required TResult Function(TurnoInvalido<T> value) turnoInvalido,
+    required TResult Function(GeneroInvalido<T> value) generoInvalido,
   }) {
     return turnoInvalido(this);
   }
@@ -1720,6 +1793,7 @@ class _$TurnoInvalido<T> implements TurnoInvalido<T> {
     TResult Function(NumVacantesInvalido<T> value)? numVacantesInvalido,
     TResult Function(NumVacantesNoVacia<T> value)? numVacantesNoVacia,
     TResult Function(TurnoInvalido<T> value)? turnoInvalido,
+    TResult Function(GeneroInvalido<T> value)? generoInvalido,
     required TResult orElse(),
   }) {
     if (turnoInvalido != null) {
@@ -1738,5 +1812,178 @@ abstract class TurnoInvalido<T> implements ValorErroneo<T> {
   List<String> get turnosValidos => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $TurnoInvalidoCopyWith<T, TurnoInvalido<T>> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $GeneroInvalidoCopyWith<T, $Res> {
+  factory $GeneroInvalidoCopyWith(
+          GeneroInvalido<T> value, $Res Function(GeneroInvalido<T>) then) =
+      _$GeneroInvalidoCopyWithImpl<T, $Res>;
+  $Res call({T valorErroneo, List<String> generosValidos});
+}
+
+/// @nodoc
+class _$GeneroInvalidoCopyWithImpl<T, $Res>
+    extends _$ValorErroneoCopyWithImpl<T, $Res>
+    implements $GeneroInvalidoCopyWith<T, $Res> {
+  _$GeneroInvalidoCopyWithImpl(
+      GeneroInvalido<T> _value, $Res Function(GeneroInvalido<T>) _then)
+      : super(_value, (v) => _then(v as GeneroInvalido<T>));
+
+  @override
+  GeneroInvalido<T> get _value => super._value as GeneroInvalido<T>;
+
+  @override
+  $Res call({
+    Object? valorErroneo = freezed,
+    Object? generosValidos = freezed,
+  }) {
+    return _then(GeneroInvalido<T>(
+      valorErroneo: valorErroneo == freezed
+          ? _value.valorErroneo
+          : valorErroneo // ignore: cast_nullable_to_non_nullable
+              as T,
+      generosValidos: generosValidos == freezed
+          ? _value.generosValidos
+          : generosValidos // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$GeneroInvalido<T> implements GeneroInvalido<T> {
+  const _$GeneroInvalido(
+      {required this.valorErroneo, required this.generosValidos});
+
+  @override
+  final T valorErroneo;
+  @override
+  final List<String> generosValidos;
+
+  @override
+  String toString() {
+    return 'ValorErroneo<$T>.generoInvalido(valorErroneo: $valorErroneo, generosValidos: $generosValidos)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is GeneroInvalido<T> &&
+            (identical(other.valorErroneo, valorErroneo) ||
+                const DeepCollectionEquality()
+                    .equals(other.valorErroneo, valorErroneo)) &&
+            (identical(other.generosValidos, generosValidos) ||
+                const DeepCollectionEquality()
+                    .equals(other.generosValidos, generosValidos)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(valorErroneo) ^
+      const DeepCollectionEquality().hash(generosValidos);
+
+  @JsonKey(ignore: true)
+  @override
+  $GeneroInvalidoCopyWith<T, GeneroInvalido<T>> get copyWith =>
+      _$GeneroInvalidoCopyWithImpl<T, GeneroInvalido<T>>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(T valorErroneo) emailInvalido,
+    required TResult Function(T valorErroneo) contrasenaCorta,
+    required TResult Function(T valorErroneo) stringVacio,
+    required TResult Function(T valorErroneo, int min, int max)
+        longitudInvalida,
+    required TResult Function(T valorErroneo, double max) sueldoInvalido,
+    required TResult Function(T valorErroneo) sueldoVacio,
+    required TResult Function(T fechaErronea) fechaNula,
+    required TResult Function(T numVacantesInvalido) numVacantesInvalido,
+    required TResult Function(T valorErroneo) numVacantesNoVacia,
+    required TResult Function(T valorErroneo, List<String> turnosValidos)
+        turnoInvalido,
+    required TResult Function(T valorErroneo, List<String> generosValidos)
+        generoInvalido,
+  }) {
+    return generoInvalido(valorErroneo, generosValidos);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(T valorErroneo)? emailInvalido,
+    TResult Function(T valorErroneo)? contrasenaCorta,
+    TResult Function(T valorErroneo)? stringVacio,
+    TResult Function(T valorErroneo, int min, int max)? longitudInvalida,
+    TResult Function(T valorErroneo, double max)? sueldoInvalido,
+    TResult Function(T valorErroneo)? sueldoVacio,
+    TResult Function(T fechaErronea)? fechaNula,
+    TResult Function(T numVacantesInvalido)? numVacantesInvalido,
+    TResult Function(T valorErroneo)? numVacantesNoVacia,
+    TResult Function(T valorErroneo, List<String> turnosValidos)? turnoInvalido,
+    TResult Function(T valorErroneo, List<String> generosValidos)?
+        generoInvalido,
+    required TResult orElse(),
+  }) {
+    if (generoInvalido != null) {
+      return generoInvalido(valorErroneo, generosValidos);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(EmailInvalido<T> value) emailInvalido,
+    required TResult Function(ContrasenaCorta<T> value) contrasenaCorta,
+    required TResult Function(StringVacio<T> value) stringVacio,
+    required TResult Function(LongitudInvalida<T> value) longitudInvalida,
+    required TResult Function(SueldoInvalida<T> value) sueldoInvalido,
+    required TResult Function(SueldoVacio<T> value) sueldoVacio,
+    required TResult Function(FechaNula<T> value) fechaNula,
+    required TResult Function(NumVacantesInvalido<T> value) numVacantesInvalido,
+    required TResult Function(NumVacantesNoVacia<T> value) numVacantesNoVacia,
+    required TResult Function(TurnoInvalido<T> value) turnoInvalido,
+    required TResult Function(GeneroInvalido<T> value) generoInvalido,
+  }) {
+    return generoInvalido(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(EmailInvalido<T> value)? emailInvalido,
+    TResult Function(ContrasenaCorta<T> value)? contrasenaCorta,
+    TResult Function(StringVacio<T> value)? stringVacio,
+    TResult Function(LongitudInvalida<T> value)? longitudInvalida,
+    TResult Function(SueldoInvalida<T> value)? sueldoInvalido,
+    TResult Function(SueldoVacio<T> value)? sueldoVacio,
+    TResult Function(FechaNula<T> value)? fechaNula,
+    TResult Function(NumVacantesInvalido<T> value)? numVacantesInvalido,
+    TResult Function(NumVacantesNoVacia<T> value)? numVacantesNoVacia,
+    TResult Function(TurnoInvalido<T> value)? turnoInvalido,
+    TResult Function(GeneroInvalido<T> value)? generoInvalido,
+    required TResult orElse(),
+  }) {
+    if (generoInvalido != null) {
+      return generoInvalido(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GeneroInvalido<T> implements ValorErroneo<T> {
+  const factory GeneroInvalido(
+      {required T valorErroneo,
+      required List<String> generosValidos}) = _$GeneroInvalido<T>;
+
+  T get valorErroneo => throw _privateConstructorUsedError;
+  List<String> get generosValidos => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $GeneroInvalidoCopyWith<T, GeneroInvalido<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
