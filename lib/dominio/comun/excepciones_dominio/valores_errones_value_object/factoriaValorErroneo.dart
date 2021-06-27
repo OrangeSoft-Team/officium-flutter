@@ -35,4 +35,7 @@ abstract class ValorErroneo<T> with _$ValorErroneo<T> {
     required T valorErroneo,
     required double max,
   }) = SueldoInvalida<T>;
+
+  const factory ValorErroneo.fechaNula({required T fechaErronea}) =
+      FechaNula<T>;
 }

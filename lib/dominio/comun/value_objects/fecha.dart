@@ -1,6 +1,16 @@
 import 'package:dartz/dartz.dart' show Either, right;
+import 'package:officium_flutter/dominio/comun/excepciones_dominio/valores_errones_value_object/factoriaValorErroneo.dart';
+import 'package:officium_flutter/dominio/comun/servicios_dominio/validadores_value_objects/validador_fecha.dart';
 import 'package:uuid/uuid.dart';
 
 import '../value_object.dart';
 
-//Creo que fecha no hace falta
+class Fecha extends ValueObject<DateTime> {
+  @override
+  final Either<ValorErroneo<DateTime>, DateTime> value;
+
+  factory Fecha(DateTime value) {
+    return Fecha._(validadorFecha(value));
+  }
+  const Fecha._(this.value);
+}
