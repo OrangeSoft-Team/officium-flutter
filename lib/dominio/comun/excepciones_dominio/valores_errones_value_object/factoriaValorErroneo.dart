@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'factoriaValorErroneo.freezed.dart';
@@ -22,4 +24,15 @@ abstract class ValorErroneo<T> with _$ValorErroneo<T> {
   const factory ValorErroneo.fechaInvalida({
     required T valorErroneo,
   }) = FechaInvalida<T>;
+
+  const factory ValorErroneo.cargoLongitudInvalida({
+    required T valorErroneo,
+    required int min,
+    required int max,
+  }) = CargoLongitudInvalida<T>;
+
+  const factory ValorErroneo.sueldoInvalido({
+    required T valorErroneo,
+    required double max,
+  }) = SueldoInvalida<T>;
 }
