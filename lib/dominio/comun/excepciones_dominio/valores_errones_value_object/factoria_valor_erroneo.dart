@@ -11,9 +11,11 @@ abstract class ValorErroneo<T> with _$ValorErroneo<T> {
   const factory ValorErroneo.emailInvalido({
     required T valorErroneo,
   }) = EmailInvalido<T>;
+
   const factory ValorErroneo.contrasenaCorta({
     required T valorErroneo,
   }) = ContrasenaCorta<T>;
+
   const factory ValorErroneo.stringVacio({
     required T valorErroneo,
   }) = StringVacio<T>;
@@ -35,9 +37,9 @@ abstract class ValorErroneo<T> with _$ValorErroneo<T> {
 
   const factory ValorErroneo.fechaNula({required T fechaErronea}) =
       FechaNula<T>;
+
   const factory ValorErroneo.numVacantesInvalido(
       {required T numVacantesInvalido}) = NumVacantesInvalido<T>;
-
   const factory ValorErroneo.numVacantesNoVacia({required T valorErroneo}) =
       NumVacantesNoVacia<T>;
   const factory ValorErroneo.turnoInvalido(
@@ -49,7 +51,6 @@ abstract class ValorErroneo<T> with _$ValorErroneo<T> {
   const factory ValorErroneo.fechaNacimientoMenorEdad({
     required T fechaErronea,
   }) = FechaNacimientoMenorEdad<T>;
-
   const factory ValorErroneo.numeroTelefonicoInvalido({
     required T numeroErroneo,
   }) = NumeroTelefonicoInvalido<T>;
