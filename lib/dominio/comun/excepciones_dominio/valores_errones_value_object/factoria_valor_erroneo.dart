@@ -11,9 +11,11 @@ abstract class ValorErroneo<T> with _$ValorErroneo<T> {
   const factory ValorErroneo.emailInvalido({
     required T valorErroneo,
   }) = EmailInvalido<T>;
+
   const factory ValorErroneo.contrasenaCorta({
     required T valorErroneo,
   }) = ContrasenaCorta<T>;
+
   const factory ValorErroneo.stringVacio({
     required T valorErroneo,
   }) = StringVacio<T>;
@@ -33,19 +35,51 @@ abstract class ValorErroneo<T> with _$ValorErroneo<T> {
     required T valorErroneo,
   }) = SueldoVacio<T>;
 
-  const factory ValorErroneo.fechaNula({required T fechaErronea}) =
-      FechaNula<T>;
-  const factory ValorErroneo.numVacantesInvalido(
-      {required T numVacantesInvalido}) = NumVacantesInvalido<T>;
+  const factory ValorErroneo.duracionEstimadaValorInvalido({
+    required T valorInvalido,
+    required int minValor,
+    required int maxValor,
+  }) = DuracionEstimadaValorInvalido<T>;
 
-  const factory ValorErroneo.numVacantesNoVacia({required T valorErroneo}) =
-      NumVacantesNoVacia<T>;
-  const factory ValorErroneo.turnoInvalido(
-      {required T valorErroneo,
-      required List<String> turnosValidos}) = TurnoInvalido<T>;
-  const factory ValorErroneo.generoInvalido(
-      {required T valorErroneo,
-      required List<String> generosValidos}) = GeneroInvalido<T>;
+  const factory ValorErroneo.duracionEstimadaValorVacio({
+    required T valorInvalido,
+  }) = DuracionEstimadaValorVacio<T>;
+
+  const factory ValorErroneo.duractionEstimadaEscalaInvalida({
+    required T escalaInvalida,
+    required List<String> escalasValidas,
+  }) = DuractionEstimadaEscalaInvalida<T>;
+
+  const factory ValorErroneo.duracionEstimadaEscalaVacia({
+    required T valorInvalido,
+  }) = DuracionEstimadaEscalaVacia<T>;
+
+  const factory ValorErroneo.fechaNula({
+    required T fechaErronea,
+  }) = FechaNula<T>;
+
+  const factory ValorErroneo.numVacantesInvalido({
+    required T numVacantesInvalido,
+  }) = NumVacantesInvalido<T>;
+
+  const factory ValorErroneo.numVacantesNoVacia({
+    required T valorErroneo,
+  }) = NumVacantesNoVacia<T>;
+
+  const factory ValorErroneo.turnoInvalido({
+    required T valorErroneo,
+    required List<String> turnosValidos,
+  }) = TurnoInvalido<T>;
+
+  const factory ValorErroneo.turnoVacio({
+    required T valorErroneo,
+  }) = TurnoVacio<T>;
+
+  const factory ValorErroneo.generoInvalido({
+    required T valorErroneo,
+    required List<String> generosValidos,
+  }) = GeneroInvalido<T>;
+
   const factory ValorErroneo.fechaNacimientoMenorEdad({
     required T fechaErronea,
   }) = FechaNacimientoMenorEdad<T>;
@@ -53,6 +87,7 @@ abstract class ValorErroneo<T> with _$ValorErroneo<T> {
   const factory ValorErroneo.numeroTelefonicoInvalido({
     required T numeroErroneo,
   }) = NumeroTelefonicoInvalido<T>;
+
   const factory ValorErroneo.numeroTelefonicoVacio({
     required T numeroErroneo,
   }) = NumeroTelefonicoVacio<T>;
