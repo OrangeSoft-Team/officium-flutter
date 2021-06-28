@@ -57,39 +57,6 @@ class _$ValorErroneoTearOff {
     );
   }
 
-  DuracionEstimadaValorInvalido<T> duracionEstimadaValorInvalido<T>(
-      {required T valorInvalido,
-      required int minValor,
-      required int maxValor}) {
-    return DuracionEstimadaValorInvalido<T>(
-      valorInvalido: valorInvalido,
-      minValor: minValor,
-      maxValor: maxValor,
-    );
-  }
-
-  DuracionEstimadaValorVacio<T> duracionEstimadaValorVacio<T>(
-      {required T valorInvalido}) {
-    return DuracionEstimadaValorVacio<T>(
-      valorInvalido: valorInvalido,
-    );
-  }
-
-  DuractionEstimadaEscalaInvalida<T> duractionEstimadaEscalaInvalida<T>(
-      {required T escalaInvalida, required List<String> escalasValidas}) {
-    return DuractionEstimadaEscalaInvalida<T>(
-      escalaInvalida: escalaInvalida,
-      escalasValidas: escalasValidas,
-    );
-  }
-
-  DuracionEstimadaEscalaVacia<T> duracionEstimadaEscalaVacia<T>(
-      {required T valorInvalido}) {
-    return DuracionEstimadaEscalaVacia<T>(
-      valorInvalido: valorInvalido,
-    );
-  }
-
   FechaNula<T> fechaNula<T>({required T fechaErronea}) {
     return FechaNula<T>(
       fechaErronea: fechaErronea,
@@ -114,12 +81,6 @@ class _$ValorErroneoTearOff {
     return TurnoInvalido<T>(
       valorErroneo: valorErroneo,
       turnosValidos: turnosValidos,
-    );
-  }
-
-  TurnoVacio<T> turnoVacio<T>({required T valorErroneo}) {
-    return TurnoVacio<T>(
-      valorErroneo: valorErroneo,
     );
   }
 
@@ -175,18 +136,11 @@ mixin _$ValorErroneo<T> {
         longitudInvalida,
     required TResult Function(T valorErroneo, double max) sueldoInvalido,
     required TResult Function(T valorErroneo) sueldoVacio,
-    required TResult Function(T valorInvalido, int minValor, int maxValor)
-        duracionEstimadaValorInvalido,
-    required TResult Function(T valorInvalido) duracionEstimadaValorVacio,
-    required TResult Function(T escalaInvalida, List<String> escalasValidas)
-        duractionEstimadaEscalaInvalida,
-    required TResult Function(T valorInvalido) duracionEstimadaEscalaVacia,
     required TResult Function(T fechaErronea) fechaNula,
     required TResult Function(T numVacantesInvalido) numVacantesInvalido,
     required TResult Function(T valorErroneo) numVacantesNoVacia,
     required TResult Function(T valorErroneo, List<String> turnosValidos)
         turnoInvalido,
-    required TResult Function(T valorErroneo) turnoVacio,
     required TResult Function(T valorErroneo, List<String> generosValidos)
         generoInvalido,
     required TResult Function(T fechaErronea) fechaNacimientoMenorEdad,
@@ -204,17 +158,10 @@ mixin _$ValorErroneo<T> {
     TResult Function(T valorErroneo, int min, int max)? longitudInvalida,
     TResult Function(T valorErroneo, double max)? sueldoInvalido,
     TResult Function(T valorErroneo)? sueldoVacio,
-    TResult Function(T valorInvalido, int minValor, int maxValor)?
-        duracionEstimadaValorInvalido,
-    TResult Function(T valorInvalido)? duracionEstimadaValorVacio,
-    TResult Function(T escalaInvalida, List<String> escalasValidas)?
-        duractionEstimadaEscalaInvalida,
-    TResult Function(T valorInvalido)? duracionEstimadaEscalaVacia,
     TResult Function(T fechaErronea)? fechaNula,
     TResult Function(T numVacantesInvalido)? numVacantesInvalido,
     TResult Function(T valorErroneo)? numVacantesNoVacia,
     TResult Function(T valorErroneo, List<String> turnosValidos)? turnoInvalido,
-    TResult Function(T valorErroneo)? turnoVacio,
     TResult Function(T valorErroneo, List<String> generosValidos)?
         generoInvalido,
     TResult Function(T fechaErronea)? fechaNacimientoMenorEdad,
@@ -233,19 +180,10 @@ mixin _$ValorErroneo<T> {
     required TResult Function(LongitudInvalida<T> value) longitudInvalida,
     required TResult Function(SueldoInvalida<T> value) sueldoInvalido,
     required TResult Function(SueldoVacio<T> value) sueldoVacio,
-    required TResult Function(DuracionEstimadaValorInvalido<T> value)
-        duracionEstimadaValorInvalido,
-    required TResult Function(DuracionEstimadaValorVacio<T> value)
-        duracionEstimadaValorVacio,
-    required TResult Function(DuractionEstimadaEscalaInvalida<T> value)
-        duractionEstimadaEscalaInvalida,
-    required TResult Function(DuracionEstimadaEscalaVacia<T> value)
-        duracionEstimadaEscalaVacia,
     required TResult Function(FechaNula<T> value) fechaNula,
     required TResult Function(NumVacantesInvalido<T> value) numVacantesInvalido,
     required TResult Function(NumVacantesNoVacia<T> value) numVacantesNoVacia,
     required TResult Function(TurnoInvalido<T> value) turnoInvalido,
-    required TResult Function(TurnoVacio<T> value) turnoVacio,
     required TResult Function(GeneroInvalido<T> value) generoInvalido,
     required TResult Function(FechaNacimientoMenorEdad<T> value)
         fechaNacimientoMenorEdad,
@@ -265,19 +203,10 @@ mixin _$ValorErroneo<T> {
     TResult Function(LongitudInvalida<T> value)? longitudInvalida,
     TResult Function(SueldoInvalida<T> value)? sueldoInvalido,
     TResult Function(SueldoVacio<T> value)? sueldoVacio,
-    TResult Function(DuracionEstimadaValorInvalido<T> value)?
-        duracionEstimadaValorInvalido,
-    TResult Function(DuracionEstimadaValorVacio<T> value)?
-        duracionEstimadaValorVacio,
-    TResult Function(DuractionEstimadaEscalaInvalida<T> value)?
-        duractionEstimadaEscalaInvalida,
-    TResult Function(DuracionEstimadaEscalaVacia<T> value)?
-        duracionEstimadaEscalaVacia,
     TResult Function(FechaNula<T> value)? fechaNula,
     TResult Function(NumVacantesInvalido<T> value)? numVacantesInvalido,
     TResult Function(NumVacantesNoVacia<T> value)? numVacantesNoVacia,
     TResult Function(TurnoInvalido<T> value)? turnoInvalido,
-    TResult Function(TurnoVacio<T> value)? turnoVacio,
     TResult Function(GeneroInvalido<T> value)? generoInvalido,
     TResult Function(FechaNacimientoMenorEdad<T> value)?
         fechaNacimientoMenorEdad,
@@ -380,18 +309,11 @@ class _$EmailInvalido<T> implements EmailInvalido<T> {
         longitudInvalida,
     required TResult Function(T valorErroneo, double max) sueldoInvalido,
     required TResult Function(T valorErroneo) sueldoVacio,
-    required TResult Function(T valorInvalido, int minValor, int maxValor)
-        duracionEstimadaValorInvalido,
-    required TResult Function(T valorInvalido) duracionEstimadaValorVacio,
-    required TResult Function(T escalaInvalida, List<String> escalasValidas)
-        duractionEstimadaEscalaInvalida,
-    required TResult Function(T valorInvalido) duracionEstimadaEscalaVacia,
     required TResult Function(T fechaErronea) fechaNula,
     required TResult Function(T numVacantesInvalido) numVacantesInvalido,
     required TResult Function(T valorErroneo) numVacantesNoVacia,
     required TResult Function(T valorErroneo, List<String> turnosValidos)
         turnoInvalido,
-    required TResult Function(T valorErroneo) turnoVacio,
     required TResult Function(T valorErroneo, List<String> generosValidos)
         generoInvalido,
     required TResult Function(T fechaErronea) fechaNacimientoMenorEdad,
@@ -412,17 +334,10 @@ class _$EmailInvalido<T> implements EmailInvalido<T> {
     TResult Function(T valorErroneo, int min, int max)? longitudInvalida,
     TResult Function(T valorErroneo, double max)? sueldoInvalido,
     TResult Function(T valorErroneo)? sueldoVacio,
-    TResult Function(T valorInvalido, int minValor, int maxValor)?
-        duracionEstimadaValorInvalido,
-    TResult Function(T valorInvalido)? duracionEstimadaValorVacio,
-    TResult Function(T escalaInvalida, List<String> escalasValidas)?
-        duractionEstimadaEscalaInvalida,
-    TResult Function(T valorInvalido)? duracionEstimadaEscalaVacia,
     TResult Function(T fechaErronea)? fechaNula,
     TResult Function(T numVacantesInvalido)? numVacantesInvalido,
     TResult Function(T valorErroneo)? numVacantesNoVacia,
     TResult Function(T valorErroneo, List<String> turnosValidos)? turnoInvalido,
-    TResult Function(T valorErroneo)? turnoVacio,
     TResult Function(T valorErroneo, List<String> generosValidos)?
         generoInvalido,
     TResult Function(T fechaErronea)? fechaNacimientoMenorEdad,
@@ -447,19 +362,10 @@ class _$EmailInvalido<T> implements EmailInvalido<T> {
     required TResult Function(LongitudInvalida<T> value) longitudInvalida,
     required TResult Function(SueldoInvalida<T> value) sueldoInvalido,
     required TResult Function(SueldoVacio<T> value) sueldoVacio,
-    required TResult Function(DuracionEstimadaValorInvalido<T> value)
-        duracionEstimadaValorInvalido,
-    required TResult Function(DuracionEstimadaValorVacio<T> value)
-        duracionEstimadaValorVacio,
-    required TResult Function(DuractionEstimadaEscalaInvalida<T> value)
-        duractionEstimadaEscalaInvalida,
-    required TResult Function(DuracionEstimadaEscalaVacia<T> value)
-        duracionEstimadaEscalaVacia,
     required TResult Function(FechaNula<T> value) fechaNula,
     required TResult Function(NumVacantesInvalido<T> value) numVacantesInvalido,
     required TResult Function(NumVacantesNoVacia<T> value) numVacantesNoVacia,
     required TResult Function(TurnoInvalido<T> value) turnoInvalido,
-    required TResult Function(TurnoVacio<T> value) turnoVacio,
     required TResult Function(GeneroInvalido<T> value) generoInvalido,
     required TResult Function(FechaNacimientoMenorEdad<T> value)
         fechaNacimientoMenorEdad,
@@ -482,19 +388,10 @@ class _$EmailInvalido<T> implements EmailInvalido<T> {
     TResult Function(LongitudInvalida<T> value)? longitudInvalida,
     TResult Function(SueldoInvalida<T> value)? sueldoInvalido,
     TResult Function(SueldoVacio<T> value)? sueldoVacio,
-    TResult Function(DuracionEstimadaValorInvalido<T> value)?
-        duracionEstimadaValorInvalido,
-    TResult Function(DuracionEstimadaValorVacio<T> value)?
-        duracionEstimadaValorVacio,
-    TResult Function(DuractionEstimadaEscalaInvalida<T> value)?
-        duractionEstimadaEscalaInvalida,
-    TResult Function(DuracionEstimadaEscalaVacia<T> value)?
-        duracionEstimadaEscalaVacia,
     TResult Function(FechaNula<T> value)? fechaNula,
     TResult Function(NumVacantesInvalido<T> value)? numVacantesInvalido,
     TResult Function(NumVacantesNoVacia<T> value)? numVacantesNoVacia,
     TResult Function(TurnoInvalido<T> value)? turnoInvalido,
-    TResult Function(TurnoVacio<T> value)? turnoVacio,
     TResult Function(GeneroInvalido<T> value)? generoInvalido,
     TResult Function(FechaNacimientoMenorEdad<T> value)?
         fechaNacimientoMenorEdad,
@@ -593,18 +490,11 @@ class _$ContrasenaCorta<T> implements ContrasenaCorta<T> {
         longitudInvalida,
     required TResult Function(T valorErroneo, double max) sueldoInvalido,
     required TResult Function(T valorErroneo) sueldoVacio,
-    required TResult Function(T valorInvalido, int minValor, int maxValor)
-        duracionEstimadaValorInvalido,
-    required TResult Function(T valorInvalido) duracionEstimadaValorVacio,
-    required TResult Function(T escalaInvalida, List<String> escalasValidas)
-        duractionEstimadaEscalaInvalida,
-    required TResult Function(T valorInvalido) duracionEstimadaEscalaVacia,
     required TResult Function(T fechaErronea) fechaNula,
     required TResult Function(T numVacantesInvalido) numVacantesInvalido,
     required TResult Function(T valorErroneo) numVacantesNoVacia,
     required TResult Function(T valorErroneo, List<String> turnosValidos)
         turnoInvalido,
-    required TResult Function(T valorErroneo) turnoVacio,
     required TResult Function(T valorErroneo, List<String> generosValidos)
         generoInvalido,
     required TResult Function(T fechaErronea) fechaNacimientoMenorEdad,
@@ -625,17 +515,10 @@ class _$ContrasenaCorta<T> implements ContrasenaCorta<T> {
     TResult Function(T valorErroneo, int min, int max)? longitudInvalida,
     TResult Function(T valorErroneo, double max)? sueldoInvalido,
     TResult Function(T valorErroneo)? sueldoVacio,
-    TResult Function(T valorInvalido, int minValor, int maxValor)?
-        duracionEstimadaValorInvalido,
-    TResult Function(T valorInvalido)? duracionEstimadaValorVacio,
-    TResult Function(T escalaInvalida, List<String> escalasValidas)?
-        duractionEstimadaEscalaInvalida,
-    TResult Function(T valorInvalido)? duracionEstimadaEscalaVacia,
     TResult Function(T fechaErronea)? fechaNula,
     TResult Function(T numVacantesInvalido)? numVacantesInvalido,
     TResult Function(T valorErroneo)? numVacantesNoVacia,
     TResult Function(T valorErroneo, List<String> turnosValidos)? turnoInvalido,
-    TResult Function(T valorErroneo)? turnoVacio,
     TResult Function(T valorErroneo, List<String> generosValidos)?
         generoInvalido,
     TResult Function(T fechaErronea)? fechaNacimientoMenorEdad,
@@ -660,19 +543,10 @@ class _$ContrasenaCorta<T> implements ContrasenaCorta<T> {
     required TResult Function(LongitudInvalida<T> value) longitudInvalida,
     required TResult Function(SueldoInvalida<T> value) sueldoInvalido,
     required TResult Function(SueldoVacio<T> value) sueldoVacio,
-    required TResult Function(DuracionEstimadaValorInvalido<T> value)
-        duracionEstimadaValorInvalido,
-    required TResult Function(DuracionEstimadaValorVacio<T> value)
-        duracionEstimadaValorVacio,
-    required TResult Function(DuractionEstimadaEscalaInvalida<T> value)
-        duractionEstimadaEscalaInvalida,
-    required TResult Function(DuracionEstimadaEscalaVacia<T> value)
-        duracionEstimadaEscalaVacia,
     required TResult Function(FechaNula<T> value) fechaNula,
     required TResult Function(NumVacantesInvalido<T> value) numVacantesInvalido,
     required TResult Function(NumVacantesNoVacia<T> value) numVacantesNoVacia,
     required TResult Function(TurnoInvalido<T> value) turnoInvalido,
-    required TResult Function(TurnoVacio<T> value) turnoVacio,
     required TResult Function(GeneroInvalido<T> value) generoInvalido,
     required TResult Function(FechaNacimientoMenorEdad<T> value)
         fechaNacimientoMenorEdad,
@@ -695,19 +569,10 @@ class _$ContrasenaCorta<T> implements ContrasenaCorta<T> {
     TResult Function(LongitudInvalida<T> value)? longitudInvalida,
     TResult Function(SueldoInvalida<T> value)? sueldoInvalido,
     TResult Function(SueldoVacio<T> value)? sueldoVacio,
-    TResult Function(DuracionEstimadaValorInvalido<T> value)?
-        duracionEstimadaValorInvalido,
-    TResult Function(DuracionEstimadaValorVacio<T> value)?
-        duracionEstimadaValorVacio,
-    TResult Function(DuractionEstimadaEscalaInvalida<T> value)?
-        duractionEstimadaEscalaInvalida,
-    TResult Function(DuracionEstimadaEscalaVacia<T> value)?
-        duracionEstimadaEscalaVacia,
     TResult Function(FechaNula<T> value)? fechaNula,
     TResult Function(NumVacantesInvalido<T> value)? numVacantesInvalido,
     TResult Function(NumVacantesNoVacia<T> value)? numVacantesNoVacia,
     TResult Function(TurnoInvalido<T> value)? turnoInvalido,
-    TResult Function(TurnoVacio<T> value)? turnoVacio,
     TResult Function(GeneroInvalido<T> value)? generoInvalido,
     TResult Function(FechaNacimientoMenorEdad<T> value)?
         fechaNacimientoMenorEdad,
@@ -807,18 +672,11 @@ class _$StringVacio<T> implements StringVacio<T> {
         longitudInvalida,
     required TResult Function(T valorErroneo, double max) sueldoInvalido,
     required TResult Function(T valorErroneo) sueldoVacio,
-    required TResult Function(T valorInvalido, int minValor, int maxValor)
-        duracionEstimadaValorInvalido,
-    required TResult Function(T valorInvalido) duracionEstimadaValorVacio,
-    required TResult Function(T escalaInvalida, List<String> escalasValidas)
-        duractionEstimadaEscalaInvalida,
-    required TResult Function(T valorInvalido) duracionEstimadaEscalaVacia,
     required TResult Function(T fechaErronea) fechaNula,
     required TResult Function(T numVacantesInvalido) numVacantesInvalido,
     required TResult Function(T valorErroneo) numVacantesNoVacia,
     required TResult Function(T valorErroneo, List<String> turnosValidos)
         turnoInvalido,
-    required TResult Function(T valorErroneo) turnoVacio,
     required TResult Function(T valorErroneo, List<String> generosValidos)
         generoInvalido,
     required TResult Function(T fechaErronea) fechaNacimientoMenorEdad,
@@ -839,17 +697,10 @@ class _$StringVacio<T> implements StringVacio<T> {
     TResult Function(T valorErroneo, int min, int max)? longitudInvalida,
     TResult Function(T valorErroneo, double max)? sueldoInvalido,
     TResult Function(T valorErroneo)? sueldoVacio,
-    TResult Function(T valorInvalido, int minValor, int maxValor)?
-        duracionEstimadaValorInvalido,
-    TResult Function(T valorInvalido)? duracionEstimadaValorVacio,
-    TResult Function(T escalaInvalida, List<String> escalasValidas)?
-        duractionEstimadaEscalaInvalida,
-    TResult Function(T valorInvalido)? duracionEstimadaEscalaVacia,
     TResult Function(T fechaErronea)? fechaNula,
     TResult Function(T numVacantesInvalido)? numVacantesInvalido,
     TResult Function(T valorErroneo)? numVacantesNoVacia,
     TResult Function(T valorErroneo, List<String> turnosValidos)? turnoInvalido,
-    TResult Function(T valorErroneo)? turnoVacio,
     TResult Function(T valorErroneo, List<String> generosValidos)?
         generoInvalido,
     TResult Function(T fechaErronea)? fechaNacimientoMenorEdad,
@@ -874,19 +725,10 @@ class _$StringVacio<T> implements StringVacio<T> {
     required TResult Function(LongitudInvalida<T> value) longitudInvalida,
     required TResult Function(SueldoInvalida<T> value) sueldoInvalido,
     required TResult Function(SueldoVacio<T> value) sueldoVacio,
-    required TResult Function(DuracionEstimadaValorInvalido<T> value)
-        duracionEstimadaValorInvalido,
-    required TResult Function(DuracionEstimadaValorVacio<T> value)
-        duracionEstimadaValorVacio,
-    required TResult Function(DuractionEstimadaEscalaInvalida<T> value)
-        duractionEstimadaEscalaInvalida,
-    required TResult Function(DuracionEstimadaEscalaVacia<T> value)
-        duracionEstimadaEscalaVacia,
     required TResult Function(FechaNula<T> value) fechaNula,
     required TResult Function(NumVacantesInvalido<T> value) numVacantesInvalido,
     required TResult Function(NumVacantesNoVacia<T> value) numVacantesNoVacia,
     required TResult Function(TurnoInvalido<T> value) turnoInvalido,
-    required TResult Function(TurnoVacio<T> value) turnoVacio,
     required TResult Function(GeneroInvalido<T> value) generoInvalido,
     required TResult Function(FechaNacimientoMenorEdad<T> value)
         fechaNacimientoMenorEdad,
@@ -909,19 +751,10 @@ class _$StringVacio<T> implements StringVacio<T> {
     TResult Function(LongitudInvalida<T> value)? longitudInvalida,
     TResult Function(SueldoInvalida<T> value)? sueldoInvalido,
     TResult Function(SueldoVacio<T> value)? sueldoVacio,
-    TResult Function(DuracionEstimadaValorInvalido<T> value)?
-        duracionEstimadaValorInvalido,
-    TResult Function(DuracionEstimadaValorVacio<T> value)?
-        duracionEstimadaValorVacio,
-    TResult Function(DuractionEstimadaEscalaInvalida<T> value)?
-        duractionEstimadaEscalaInvalida,
-    TResult Function(DuracionEstimadaEscalaVacia<T> value)?
-        duracionEstimadaEscalaVacia,
     TResult Function(FechaNula<T> value)? fechaNula,
     TResult Function(NumVacantesInvalido<T> value)? numVacantesInvalido,
     TResult Function(NumVacantesNoVacia<T> value)? numVacantesNoVacia,
     TResult Function(TurnoInvalido<T> value)? turnoInvalido,
-    TResult Function(TurnoVacio<T> value)? turnoVacio,
     TResult Function(GeneroInvalido<T> value)? generoInvalido,
     TResult Function(FechaNacimientoMenorEdad<T> value)?
         fechaNacimientoMenorEdad,
@@ -1042,18 +875,11 @@ class _$LongitudInvalida<T> implements LongitudInvalida<T> {
         longitudInvalida,
     required TResult Function(T valorErroneo, double max) sueldoInvalido,
     required TResult Function(T valorErroneo) sueldoVacio,
-    required TResult Function(T valorInvalido, int minValor, int maxValor)
-        duracionEstimadaValorInvalido,
-    required TResult Function(T valorInvalido) duracionEstimadaValorVacio,
-    required TResult Function(T escalaInvalida, List<String> escalasValidas)
-        duractionEstimadaEscalaInvalida,
-    required TResult Function(T valorInvalido) duracionEstimadaEscalaVacia,
     required TResult Function(T fechaErronea) fechaNula,
     required TResult Function(T numVacantesInvalido) numVacantesInvalido,
     required TResult Function(T valorErroneo) numVacantesNoVacia,
     required TResult Function(T valorErroneo, List<String> turnosValidos)
         turnoInvalido,
-    required TResult Function(T valorErroneo) turnoVacio,
     required TResult Function(T valorErroneo, List<String> generosValidos)
         generoInvalido,
     required TResult Function(T fechaErronea) fechaNacimientoMenorEdad,
@@ -1074,17 +900,10 @@ class _$LongitudInvalida<T> implements LongitudInvalida<T> {
     TResult Function(T valorErroneo, int min, int max)? longitudInvalida,
     TResult Function(T valorErroneo, double max)? sueldoInvalido,
     TResult Function(T valorErroneo)? sueldoVacio,
-    TResult Function(T valorInvalido, int minValor, int maxValor)?
-        duracionEstimadaValorInvalido,
-    TResult Function(T valorInvalido)? duracionEstimadaValorVacio,
-    TResult Function(T escalaInvalida, List<String> escalasValidas)?
-        duractionEstimadaEscalaInvalida,
-    TResult Function(T valorInvalido)? duracionEstimadaEscalaVacia,
     TResult Function(T fechaErronea)? fechaNula,
     TResult Function(T numVacantesInvalido)? numVacantesInvalido,
     TResult Function(T valorErroneo)? numVacantesNoVacia,
     TResult Function(T valorErroneo, List<String> turnosValidos)? turnoInvalido,
-    TResult Function(T valorErroneo)? turnoVacio,
     TResult Function(T valorErroneo, List<String> generosValidos)?
         generoInvalido,
     TResult Function(T fechaErronea)? fechaNacimientoMenorEdad,
@@ -1109,19 +928,10 @@ class _$LongitudInvalida<T> implements LongitudInvalida<T> {
     required TResult Function(LongitudInvalida<T> value) longitudInvalida,
     required TResult Function(SueldoInvalida<T> value) sueldoInvalido,
     required TResult Function(SueldoVacio<T> value) sueldoVacio,
-    required TResult Function(DuracionEstimadaValorInvalido<T> value)
-        duracionEstimadaValorInvalido,
-    required TResult Function(DuracionEstimadaValorVacio<T> value)
-        duracionEstimadaValorVacio,
-    required TResult Function(DuractionEstimadaEscalaInvalida<T> value)
-        duractionEstimadaEscalaInvalida,
-    required TResult Function(DuracionEstimadaEscalaVacia<T> value)
-        duracionEstimadaEscalaVacia,
     required TResult Function(FechaNula<T> value) fechaNula,
     required TResult Function(NumVacantesInvalido<T> value) numVacantesInvalido,
     required TResult Function(NumVacantesNoVacia<T> value) numVacantesNoVacia,
     required TResult Function(TurnoInvalido<T> value) turnoInvalido,
-    required TResult Function(TurnoVacio<T> value) turnoVacio,
     required TResult Function(GeneroInvalido<T> value) generoInvalido,
     required TResult Function(FechaNacimientoMenorEdad<T> value)
         fechaNacimientoMenorEdad,
@@ -1144,19 +954,10 @@ class _$LongitudInvalida<T> implements LongitudInvalida<T> {
     TResult Function(LongitudInvalida<T> value)? longitudInvalida,
     TResult Function(SueldoInvalida<T> value)? sueldoInvalido,
     TResult Function(SueldoVacio<T> value)? sueldoVacio,
-    TResult Function(DuracionEstimadaValorInvalido<T> value)?
-        duracionEstimadaValorInvalido,
-    TResult Function(DuracionEstimadaValorVacio<T> value)?
-        duracionEstimadaValorVacio,
-    TResult Function(DuractionEstimadaEscalaInvalida<T> value)?
-        duractionEstimadaEscalaInvalida,
-    TResult Function(DuracionEstimadaEscalaVacia<T> value)?
-        duracionEstimadaEscalaVacia,
     TResult Function(FechaNula<T> value)? fechaNula,
     TResult Function(NumVacantesInvalido<T> value)? numVacantesInvalido,
     TResult Function(NumVacantesNoVacia<T> value)? numVacantesNoVacia,
     TResult Function(TurnoInvalido<T> value)? turnoInvalido,
-    TResult Function(TurnoVacio<T> value)? turnoVacio,
     TResult Function(GeneroInvalido<T> value)? generoInvalido,
     TResult Function(FechaNacimientoMenorEdad<T> value)?
         fechaNacimientoMenorEdad,
@@ -1271,18 +1072,11 @@ class _$SueldoInvalida<T> implements SueldoInvalida<T> {
         longitudInvalida,
     required TResult Function(T valorErroneo, double max) sueldoInvalido,
     required TResult Function(T valorErroneo) sueldoVacio,
-    required TResult Function(T valorInvalido, int minValor, int maxValor)
-        duracionEstimadaValorInvalido,
-    required TResult Function(T valorInvalido) duracionEstimadaValorVacio,
-    required TResult Function(T escalaInvalida, List<String> escalasValidas)
-        duractionEstimadaEscalaInvalida,
-    required TResult Function(T valorInvalido) duracionEstimadaEscalaVacia,
     required TResult Function(T fechaErronea) fechaNula,
     required TResult Function(T numVacantesInvalido) numVacantesInvalido,
     required TResult Function(T valorErroneo) numVacantesNoVacia,
     required TResult Function(T valorErroneo, List<String> turnosValidos)
         turnoInvalido,
-    required TResult Function(T valorErroneo) turnoVacio,
     required TResult Function(T valorErroneo, List<String> generosValidos)
         generoInvalido,
     required TResult Function(T fechaErronea) fechaNacimientoMenorEdad,
@@ -1303,17 +1097,10 @@ class _$SueldoInvalida<T> implements SueldoInvalida<T> {
     TResult Function(T valorErroneo, int min, int max)? longitudInvalida,
     TResult Function(T valorErroneo, double max)? sueldoInvalido,
     TResult Function(T valorErroneo)? sueldoVacio,
-    TResult Function(T valorInvalido, int minValor, int maxValor)?
-        duracionEstimadaValorInvalido,
-    TResult Function(T valorInvalido)? duracionEstimadaValorVacio,
-    TResult Function(T escalaInvalida, List<String> escalasValidas)?
-        duractionEstimadaEscalaInvalida,
-    TResult Function(T valorInvalido)? duracionEstimadaEscalaVacia,
     TResult Function(T fechaErronea)? fechaNula,
     TResult Function(T numVacantesInvalido)? numVacantesInvalido,
     TResult Function(T valorErroneo)? numVacantesNoVacia,
     TResult Function(T valorErroneo, List<String> turnosValidos)? turnoInvalido,
-    TResult Function(T valorErroneo)? turnoVacio,
     TResult Function(T valorErroneo, List<String> generosValidos)?
         generoInvalido,
     TResult Function(T fechaErronea)? fechaNacimientoMenorEdad,
@@ -1338,19 +1125,10 @@ class _$SueldoInvalida<T> implements SueldoInvalida<T> {
     required TResult Function(LongitudInvalida<T> value) longitudInvalida,
     required TResult Function(SueldoInvalida<T> value) sueldoInvalido,
     required TResult Function(SueldoVacio<T> value) sueldoVacio,
-    required TResult Function(DuracionEstimadaValorInvalido<T> value)
-        duracionEstimadaValorInvalido,
-    required TResult Function(DuracionEstimadaValorVacio<T> value)
-        duracionEstimadaValorVacio,
-    required TResult Function(DuractionEstimadaEscalaInvalida<T> value)
-        duractionEstimadaEscalaInvalida,
-    required TResult Function(DuracionEstimadaEscalaVacia<T> value)
-        duracionEstimadaEscalaVacia,
     required TResult Function(FechaNula<T> value) fechaNula,
     required TResult Function(NumVacantesInvalido<T> value) numVacantesInvalido,
     required TResult Function(NumVacantesNoVacia<T> value) numVacantesNoVacia,
     required TResult Function(TurnoInvalido<T> value) turnoInvalido,
-    required TResult Function(TurnoVacio<T> value) turnoVacio,
     required TResult Function(GeneroInvalido<T> value) generoInvalido,
     required TResult Function(FechaNacimientoMenorEdad<T> value)
         fechaNacimientoMenorEdad,
@@ -1373,19 +1151,10 @@ class _$SueldoInvalida<T> implements SueldoInvalida<T> {
     TResult Function(LongitudInvalida<T> value)? longitudInvalida,
     TResult Function(SueldoInvalida<T> value)? sueldoInvalido,
     TResult Function(SueldoVacio<T> value)? sueldoVacio,
-    TResult Function(DuracionEstimadaValorInvalido<T> value)?
-        duracionEstimadaValorInvalido,
-    TResult Function(DuracionEstimadaValorVacio<T> value)?
-        duracionEstimadaValorVacio,
-    TResult Function(DuractionEstimadaEscalaInvalida<T> value)?
-        duractionEstimadaEscalaInvalida,
-    TResult Function(DuracionEstimadaEscalaVacia<T> value)?
-        duracionEstimadaEscalaVacia,
     TResult Function(FechaNula<T> value)? fechaNula,
     TResult Function(NumVacantesInvalido<T> value)? numVacantesInvalido,
     TResult Function(NumVacantesNoVacia<T> value)? numVacantesNoVacia,
     TResult Function(TurnoInvalido<T> value)? turnoInvalido,
-    TResult Function(TurnoVacio<T> value)? turnoVacio,
     TResult Function(GeneroInvalido<T> value)? generoInvalido,
     TResult Function(FechaNacimientoMenorEdad<T> value)?
         fechaNacimientoMenorEdad,
@@ -1486,18 +1255,11 @@ class _$SueldoVacio<T> implements SueldoVacio<T> {
         longitudInvalida,
     required TResult Function(T valorErroneo, double max) sueldoInvalido,
     required TResult Function(T valorErroneo) sueldoVacio,
-    required TResult Function(T valorInvalido, int minValor, int maxValor)
-        duracionEstimadaValorInvalido,
-    required TResult Function(T valorInvalido) duracionEstimadaValorVacio,
-    required TResult Function(T escalaInvalida, List<String> escalasValidas)
-        duractionEstimadaEscalaInvalida,
-    required TResult Function(T valorInvalido) duracionEstimadaEscalaVacia,
     required TResult Function(T fechaErronea) fechaNula,
     required TResult Function(T numVacantesInvalido) numVacantesInvalido,
     required TResult Function(T valorErroneo) numVacantesNoVacia,
     required TResult Function(T valorErroneo, List<String> turnosValidos)
         turnoInvalido,
-    required TResult Function(T valorErroneo) turnoVacio,
     required TResult Function(T valorErroneo, List<String> generosValidos)
         generoInvalido,
     required TResult Function(T fechaErronea) fechaNacimientoMenorEdad,
@@ -1518,17 +1280,10 @@ class _$SueldoVacio<T> implements SueldoVacio<T> {
     TResult Function(T valorErroneo, int min, int max)? longitudInvalida,
     TResult Function(T valorErroneo, double max)? sueldoInvalido,
     TResult Function(T valorErroneo)? sueldoVacio,
-    TResult Function(T valorInvalido, int minValor, int maxValor)?
-        duracionEstimadaValorInvalido,
-    TResult Function(T valorInvalido)? duracionEstimadaValorVacio,
-    TResult Function(T escalaInvalida, List<String> escalasValidas)?
-        duractionEstimadaEscalaInvalida,
-    TResult Function(T valorInvalido)? duracionEstimadaEscalaVacia,
     TResult Function(T fechaErronea)? fechaNula,
     TResult Function(T numVacantesInvalido)? numVacantesInvalido,
     TResult Function(T valorErroneo)? numVacantesNoVacia,
     TResult Function(T valorErroneo, List<String> turnosValidos)? turnoInvalido,
-    TResult Function(T valorErroneo)? turnoVacio,
     TResult Function(T valorErroneo, List<String> generosValidos)?
         generoInvalido,
     TResult Function(T fechaErronea)? fechaNacimientoMenorEdad,
@@ -1553,19 +1308,10 @@ class _$SueldoVacio<T> implements SueldoVacio<T> {
     required TResult Function(LongitudInvalida<T> value) longitudInvalida,
     required TResult Function(SueldoInvalida<T> value) sueldoInvalido,
     required TResult Function(SueldoVacio<T> value) sueldoVacio,
-    required TResult Function(DuracionEstimadaValorInvalido<T> value)
-        duracionEstimadaValorInvalido,
-    required TResult Function(DuracionEstimadaValorVacio<T> value)
-        duracionEstimadaValorVacio,
-    required TResult Function(DuractionEstimadaEscalaInvalida<T> value)
-        duractionEstimadaEscalaInvalida,
-    required TResult Function(DuracionEstimadaEscalaVacia<T> value)
-        duracionEstimadaEscalaVacia,
     required TResult Function(FechaNula<T> value) fechaNula,
     required TResult Function(NumVacantesInvalido<T> value) numVacantesInvalido,
     required TResult Function(NumVacantesNoVacia<T> value) numVacantesNoVacia,
     required TResult Function(TurnoInvalido<T> value) turnoInvalido,
-    required TResult Function(TurnoVacio<T> value) turnoVacio,
     required TResult Function(GeneroInvalido<T> value) generoInvalido,
     required TResult Function(FechaNacimientoMenorEdad<T> value)
         fechaNacimientoMenorEdad,
@@ -1588,19 +1334,10 @@ class _$SueldoVacio<T> implements SueldoVacio<T> {
     TResult Function(LongitudInvalida<T> value)? longitudInvalida,
     TResult Function(SueldoInvalida<T> value)? sueldoInvalido,
     TResult Function(SueldoVacio<T> value)? sueldoVacio,
-    TResult Function(DuracionEstimadaValorInvalido<T> value)?
-        duracionEstimadaValorInvalido,
-    TResult Function(DuracionEstimadaValorVacio<T> value)?
-        duracionEstimadaValorVacio,
-    TResult Function(DuractionEstimadaEscalaInvalida<T> value)?
-        duractionEstimadaEscalaInvalida,
-    TResult Function(DuracionEstimadaEscalaVacia<T> value)?
-        duracionEstimadaEscalaVacia,
     TResult Function(FechaNula<T> value)? fechaNula,
     TResult Function(NumVacantesInvalido<T> value)? numVacantesInvalido,
     TResult Function(NumVacantesNoVacia<T> value)? numVacantesNoVacia,
     TResult Function(TurnoInvalido<T> value)? turnoInvalido,
-    TResult Function(TurnoVacio<T> value)? turnoVacio,
     TResult Function(GeneroInvalido<T> value)? generoInvalido,
     TResult Function(FechaNacimientoMenorEdad<T> value)?
         fechaNacimientoMenorEdad,
@@ -1624,927 +1361,6 @@ abstract class SueldoVacio<T> implements ValorErroneo<T> {
   @JsonKey(ignore: true)
   $SueldoVacioCopyWith<T, SueldoVacio<T>> get copyWith =>
       throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $DuracionEstimadaValorInvalidoCopyWith<T, $Res> {
-  factory $DuracionEstimadaValorInvalidoCopyWith(
-          DuracionEstimadaValorInvalido<T> value,
-          $Res Function(DuracionEstimadaValorInvalido<T>) then) =
-      _$DuracionEstimadaValorInvalidoCopyWithImpl<T, $Res>;
-  $Res call({T valorInvalido, int minValor, int maxValor});
-}
-
-/// @nodoc
-class _$DuracionEstimadaValorInvalidoCopyWithImpl<T, $Res>
-    extends _$ValorErroneoCopyWithImpl<T, $Res>
-    implements $DuracionEstimadaValorInvalidoCopyWith<T, $Res> {
-  _$DuracionEstimadaValorInvalidoCopyWithImpl(
-      DuracionEstimadaValorInvalido<T> _value,
-      $Res Function(DuracionEstimadaValorInvalido<T>) _then)
-      : super(_value, (v) => _then(v as DuracionEstimadaValorInvalido<T>));
-
-  @override
-  DuracionEstimadaValorInvalido<T> get _value =>
-      super._value as DuracionEstimadaValorInvalido<T>;
-
-  @override
-  $Res call({
-    Object? valorInvalido = freezed,
-    Object? minValor = freezed,
-    Object? maxValor = freezed,
-  }) {
-    return _then(DuracionEstimadaValorInvalido<T>(
-      valorInvalido: valorInvalido == freezed
-          ? _value.valorInvalido
-          : valorInvalido // ignore: cast_nullable_to_non_nullable
-              as T,
-      minValor: minValor == freezed
-          ? _value.minValor
-          : minValor // ignore: cast_nullable_to_non_nullable
-              as int,
-      maxValor: maxValor == freezed
-          ? _value.maxValor
-          : maxValor // ignore: cast_nullable_to_non_nullable
-              as int,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$DuracionEstimadaValorInvalido<T>
-    implements DuracionEstimadaValorInvalido<T> {
-  const _$DuracionEstimadaValorInvalido(
-      {required this.valorInvalido,
-      required this.minValor,
-      required this.maxValor});
-
-  @override
-  final T valorInvalido;
-  @override
-  final int minValor;
-  @override
-  final int maxValor;
-
-  @override
-  String toString() {
-    return 'ValorErroneo<$T>.duracionEstimadaValorInvalido(valorInvalido: $valorInvalido, minValor: $minValor, maxValor: $maxValor)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other is DuracionEstimadaValorInvalido<T> &&
-            (identical(other.valorInvalido, valorInvalido) ||
-                const DeepCollectionEquality()
-                    .equals(other.valorInvalido, valorInvalido)) &&
-            (identical(other.minValor, minValor) ||
-                const DeepCollectionEquality()
-                    .equals(other.minValor, minValor)) &&
-            (identical(other.maxValor, maxValor) ||
-                const DeepCollectionEquality()
-                    .equals(other.maxValor, maxValor)));
-  }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(valorInvalido) ^
-      const DeepCollectionEquality().hash(minValor) ^
-      const DeepCollectionEquality().hash(maxValor);
-
-  @JsonKey(ignore: true)
-  @override
-  $DuracionEstimadaValorInvalidoCopyWith<T, DuracionEstimadaValorInvalido<T>>
-      get copyWith => _$DuracionEstimadaValorInvalidoCopyWithImpl<T,
-          DuracionEstimadaValorInvalido<T>>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(T valorErroneo) emailInvalido,
-    required TResult Function(T valorErroneo) contrasenaCorta,
-    required TResult Function(T valorErroneo) stringVacio,
-    required TResult Function(T valorErroneo, int min, int max)
-        longitudInvalida,
-    required TResult Function(T valorErroneo, double max) sueldoInvalido,
-    required TResult Function(T valorErroneo) sueldoVacio,
-    required TResult Function(T valorInvalido, int minValor, int maxValor)
-        duracionEstimadaValorInvalido,
-    required TResult Function(T valorInvalido) duracionEstimadaValorVacio,
-    required TResult Function(T escalaInvalida, List<String> escalasValidas)
-        duractionEstimadaEscalaInvalida,
-    required TResult Function(T valorInvalido) duracionEstimadaEscalaVacia,
-    required TResult Function(T fechaErronea) fechaNula,
-    required TResult Function(T numVacantesInvalido) numVacantesInvalido,
-    required TResult Function(T valorErroneo) numVacantesNoVacia,
-    required TResult Function(T valorErroneo, List<String> turnosValidos)
-        turnoInvalido,
-    required TResult Function(T valorErroneo) turnoVacio,
-    required TResult Function(T valorErroneo, List<String> generosValidos)
-        generoInvalido,
-    required TResult Function(T fechaErronea) fechaNacimientoMenorEdad,
-    required TResult Function(T numeroErroneo) numeroTelefonicoInvalido,
-    required TResult Function(T numeroErroneo) numeroTelefonicoVacio,
-    required TResult Function(T valorErroneo, List<String> turnosValidos)
-        estadoOfertaInvalido,
-  }) {
-    return duracionEstimadaValorInvalido(valorInvalido, minValor, maxValor);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(T valorErroneo)? emailInvalido,
-    TResult Function(T valorErroneo)? contrasenaCorta,
-    TResult Function(T valorErroneo)? stringVacio,
-    TResult Function(T valorErroneo, int min, int max)? longitudInvalida,
-    TResult Function(T valorErroneo, double max)? sueldoInvalido,
-    TResult Function(T valorErroneo)? sueldoVacio,
-    TResult Function(T valorInvalido, int minValor, int maxValor)?
-        duracionEstimadaValorInvalido,
-    TResult Function(T valorInvalido)? duracionEstimadaValorVacio,
-    TResult Function(T escalaInvalida, List<String> escalasValidas)?
-        duractionEstimadaEscalaInvalida,
-    TResult Function(T valorInvalido)? duracionEstimadaEscalaVacia,
-    TResult Function(T fechaErronea)? fechaNula,
-    TResult Function(T numVacantesInvalido)? numVacantesInvalido,
-    TResult Function(T valorErroneo)? numVacantesNoVacia,
-    TResult Function(T valorErroneo, List<String> turnosValidos)? turnoInvalido,
-    TResult Function(T valorErroneo)? turnoVacio,
-    TResult Function(T valorErroneo, List<String> generosValidos)?
-        generoInvalido,
-    TResult Function(T fechaErronea)? fechaNacimientoMenorEdad,
-    TResult Function(T numeroErroneo)? numeroTelefonicoInvalido,
-    TResult Function(T numeroErroneo)? numeroTelefonicoVacio,
-    TResult Function(T valorErroneo, List<String> turnosValidos)?
-        estadoOfertaInvalido,
-    required TResult orElse(),
-  }) {
-    if (duracionEstimadaValorInvalido != null) {
-      return duracionEstimadaValorInvalido(valorInvalido, minValor, maxValor);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(EmailInvalido<T> value) emailInvalido,
-    required TResult Function(ContrasenaCorta<T> value) contrasenaCorta,
-    required TResult Function(StringVacio<T> value) stringVacio,
-    required TResult Function(LongitudInvalida<T> value) longitudInvalida,
-    required TResult Function(SueldoInvalida<T> value) sueldoInvalido,
-    required TResult Function(SueldoVacio<T> value) sueldoVacio,
-    required TResult Function(DuracionEstimadaValorInvalido<T> value)
-        duracionEstimadaValorInvalido,
-    required TResult Function(DuracionEstimadaValorVacio<T> value)
-        duracionEstimadaValorVacio,
-    required TResult Function(DuractionEstimadaEscalaInvalida<T> value)
-        duractionEstimadaEscalaInvalida,
-    required TResult Function(DuracionEstimadaEscalaVacia<T> value)
-        duracionEstimadaEscalaVacia,
-    required TResult Function(FechaNula<T> value) fechaNula,
-    required TResult Function(NumVacantesInvalido<T> value) numVacantesInvalido,
-    required TResult Function(NumVacantesNoVacia<T> value) numVacantesNoVacia,
-    required TResult Function(TurnoInvalido<T> value) turnoInvalido,
-    required TResult Function(TurnoVacio<T> value) turnoVacio,
-    required TResult Function(GeneroInvalido<T> value) generoInvalido,
-    required TResult Function(FechaNacimientoMenorEdad<T> value)
-        fechaNacimientoMenorEdad,
-    required TResult Function(NumeroTelefonicoInvalido<T> value)
-        numeroTelefonicoInvalido,
-    required TResult Function(NumeroTelefonicoVacio<T> value)
-        numeroTelefonicoVacio,
-    required TResult Function(EstadoOfertaInvalido<T> value)
-        estadoOfertaInvalido,
-  }) {
-    return duracionEstimadaValorInvalido(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(EmailInvalido<T> value)? emailInvalido,
-    TResult Function(ContrasenaCorta<T> value)? contrasenaCorta,
-    TResult Function(StringVacio<T> value)? stringVacio,
-    TResult Function(LongitudInvalida<T> value)? longitudInvalida,
-    TResult Function(SueldoInvalida<T> value)? sueldoInvalido,
-    TResult Function(SueldoVacio<T> value)? sueldoVacio,
-    TResult Function(DuracionEstimadaValorInvalido<T> value)?
-        duracionEstimadaValorInvalido,
-    TResult Function(DuracionEstimadaValorVacio<T> value)?
-        duracionEstimadaValorVacio,
-    TResult Function(DuractionEstimadaEscalaInvalida<T> value)?
-        duractionEstimadaEscalaInvalida,
-    TResult Function(DuracionEstimadaEscalaVacia<T> value)?
-        duracionEstimadaEscalaVacia,
-    TResult Function(FechaNula<T> value)? fechaNula,
-    TResult Function(NumVacantesInvalido<T> value)? numVacantesInvalido,
-    TResult Function(NumVacantesNoVacia<T> value)? numVacantesNoVacia,
-    TResult Function(TurnoInvalido<T> value)? turnoInvalido,
-    TResult Function(TurnoVacio<T> value)? turnoVacio,
-    TResult Function(GeneroInvalido<T> value)? generoInvalido,
-    TResult Function(FechaNacimientoMenorEdad<T> value)?
-        fechaNacimientoMenorEdad,
-    TResult Function(NumeroTelefonicoInvalido<T> value)?
-        numeroTelefonicoInvalido,
-    TResult Function(NumeroTelefonicoVacio<T> value)? numeroTelefonicoVacio,
-    TResult Function(EstadoOfertaInvalido<T> value)? estadoOfertaInvalido,
-    required TResult orElse(),
-  }) {
-    if (duracionEstimadaValorInvalido != null) {
-      return duracionEstimadaValorInvalido(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class DuracionEstimadaValorInvalido<T> implements ValorErroneo<T> {
-  const factory DuracionEstimadaValorInvalido(
-      {required T valorInvalido,
-      required int minValor,
-      required int maxValor}) = _$DuracionEstimadaValorInvalido<T>;
-
-  T get valorInvalido => throw _privateConstructorUsedError;
-  int get minValor => throw _privateConstructorUsedError;
-  int get maxValor => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $DuracionEstimadaValorInvalidoCopyWith<T, DuracionEstimadaValorInvalido<T>>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $DuracionEstimadaValorVacioCopyWith<T, $Res> {
-  factory $DuracionEstimadaValorVacioCopyWith(
-          DuracionEstimadaValorVacio<T> value,
-          $Res Function(DuracionEstimadaValorVacio<T>) then) =
-      _$DuracionEstimadaValorVacioCopyWithImpl<T, $Res>;
-  $Res call({T valorInvalido});
-}
-
-/// @nodoc
-class _$DuracionEstimadaValorVacioCopyWithImpl<T, $Res>
-    extends _$ValorErroneoCopyWithImpl<T, $Res>
-    implements $DuracionEstimadaValorVacioCopyWith<T, $Res> {
-  _$DuracionEstimadaValorVacioCopyWithImpl(DuracionEstimadaValorVacio<T> _value,
-      $Res Function(DuracionEstimadaValorVacio<T>) _then)
-      : super(_value, (v) => _then(v as DuracionEstimadaValorVacio<T>));
-
-  @override
-  DuracionEstimadaValorVacio<T> get _value =>
-      super._value as DuracionEstimadaValorVacio<T>;
-
-  @override
-  $Res call({
-    Object? valorInvalido = freezed,
-  }) {
-    return _then(DuracionEstimadaValorVacio<T>(
-      valorInvalido: valorInvalido == freezed
-          ? _value.valorInvalido
-          : valorInvalido // ignore: cast_nullable_to_non_nullable
-              as T,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$DuracionEstimadaValorVacio<T> implements DuracionEstimadaValorVacio<T> {
-  const _$DuracionEstimadaValorVacio({required this.valorInvalido});
-
-  @override
-  final T valorInvalido;
-
-  @override
-  String toString() {
-    return 'ValorErroneo<$T>.duracionEstimadaValorVacio(valorInvalido: $valorInvalido)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other is DuracionEstimadaValorVacio<T> &&
-            (identical(other.valorInvalido, valorInvalido) ||
-                const DeepCollectionEquality()
-                    .equals(other.valorInvalido, valorInvalido)));
-  }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(valorInvalido);
-
-  @JsonKey(ignore: true)
-  @override
-  $DuracionEstimadaValorVacioCopyWith<T, DuracionEstimadaValorVacio<T>>
-      get copyWith => _$DuracionEstimadaValorVacioCopyWithImpl<T,
-          DuracionEstimadaValorVacio<T>>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(T valorErroneo) emailInvalido,
-    required TResult Function(T valorErroneo) contrasenaCorta,
-    required TResult Function(T valorErroneo) stringVacio,
-    required TResult Function(T valorErroneo, int min, int max)
-        longitudInvalida,
-    required TResult Function(T valorErroneo, double max) sueldoInvalido,
-    required TResult Function(T valorErroneo) sueldoVacio,
-    required TResult Function(T valorInvalido, int minValor, int maxValor)
-        duracionEstimadaValorInvalido,
-    required TResult Function(T valorInvalido) duracionEstimadaValorVacio,
-    required TResult Function(T escalaInvalida, List<String> escalasValidas)
-        duractionEstimadaEscalaInvalida,
-    required TResult Function(T valorInvalido) duracionEstimadaEscalaVacia,
-    required TResult Function(T fechaErronea) fechaNula,
-    required TResult Function(T numVacantesInvalido) numVacantesInvalido,
-    required TResult Function(T valorErroneo) numVacantesNoVacia,
-    required TResult Function(T valorErroneo, List<String> turnosValidos)
-        turnoInvalido,
-    required TResult Function(T valorErroneo) turnoVacio,
-    required TResult Function(T valorErroneo, List<String> generosValidos)
-        generoInvalido,
-    required TResult Function(T fechaErronea) fechaNacimientoMenorEdad,
-    required TResult Function(T numeroErroneo) numeroTelefonicoInvalido,
-    required TResult Function(T numeroErroneo) numeroTelefonicoVacio,
-    required TResult Function(T valorErroneo, List<String> turnosValidos)
-        estadoOfertaInvalido,
-  }) {
-    return duracionEstimadaValorVacio(valorInvalido);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(T valorErroneo)? emailInvalido,
-    TResult Function(T valorErroneo)? contrasenaCorta,
-    TResult Function(T valorErroneo)? stringVacio,
-    TResult Function(T valorErroneo, int min, int max)? longitudInvalida,
-    TResult Function(T valorErroneo, double max)? sueldoInvalido,
-    TResult Function(T valorErroneo)? sueldoVacio,
-    TResult Function(T valorInvalido, int minValor, int maxValor)?
-        duracionEstimadaValorInvalido,
-    TResult Function(T valorInvalido)? duracionEstimadaValorVacio,
-    TResult Function(T escalaInvalida, List<String> escalasValidas)?
-        duractionEstimadaEscalaInvalida,
-    TResult Function(T valorInvalido)? duracionEstimadaEscalaVacia,
-    TResult Function(T fechaErronea)? fechaNula,
-    TResult Function(T numVacantesInvalido)? numVacantesInvalido,
-    TResult Function(T valorErroneo)? numVacantesNoVacia,
-    TResult Function(T valorErroneo, List<String> turnosValidos)? turnoInvalido,
-    TResult Function(T valorErroneo)? turnoVacio,
-    TResult Function(T valorErroneo, List<String> generosValidos)?
-        generoInvalido,
-    TResult Function(T fechaErronea)? fechaNacimientoMenorEdad,
-    TResult Function(T numeroErroneo)? numeroTelefonicoInvalido,
-    TResult Function(T numeroErroneo)? numeroTelefonicoVacio,
-    TResult Function(T valorErroneo, List<String> turnosValidos)?
-        estadoOfertaInvalido,
-    required TResult orElse(),
-  }) {
-    if (duracionEstimadaValorVacio != null) {
-      return duracionEstimadaValorVacio(valorInvalido);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(EmailInvalido<T> value) emailInvalido,
-    required TResult Function(ContrasenaCorta<T> value) contrasenaCorta,
-    required TResult Function(StringVacio<T> value) stringVacio,
-    required TResult Function(LongitudInvalida<T> value) longitudInvalida,
-    required TResult Function(SueldoInvalida<T> value) sueldoInvalido,
-    required TResult Function(SueldoVacio<T> value) sueldoVacio,
-    required TResult Function(DuracionEstimadaValorInvalido<T> value)
-        duracionEstimadaValorInvalido,
-    required TResult Function(DuracionEstimadaValorVacio<T> value)
-        duracionEstimadaValorVacio,
-    required TResult Function(DuractionEstimadaEscalaInvalida<T> value)
-        duractionEstimadaEscalaInvalida,
-    required TResult Function(DuracionEstimadaEscalaVacia<T> value)
-        duracionEstimadaEscalaVacia,
-    required TResult Function(FechaNula<T> value) fechaNula,
-    required TResult Function(NumVacantesInvalido<T> value) numVacantesInvalido,
-    required TResult Function(NumVacantesNoVacia<T> value) numVacantesNoVacia,
-    required TResult Function(TurnoInvalido<T> value) turnoInvalido,
-    required TResult Function(TurnoVacio<T> value) turnoVacio,
-    required TResult Function(GeneroInvalido<T> value) generoInvalido,
-    required TResult Function(FechaNacimientoMenorEdad<T> value)
-        fechaNacimientoMenorEdad,
-    required TResult Function(NumeroTelefonicoInvalido<T> value)
-        numeroTelefonicoInvalido,
-    required TResult Function(NumeroTelefonicoVacio<T> value)
-        numeroTelefonicoVacio,
-    required TResult Function(EstadoOfertaInvalido<T> value)
-        estadoOfertaInvalido,
-  }) {
-    return duracionEstimadaValorVacio(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(EmailInvalido<T> value)? emailInvalido,
-    TResult Function(ContrasenaCorta<T> value)? contrasenaCorta,
-    TResult Function(StringVacio<T> value)? stringVacio,
-    TResult Function(LongitudInvalida<T> value)? longitudInvalida,
-    TResult Function(SueldoInvalida<T> value)? sueldoInvalido,
-    TResult Function(SueldoVacio<T> value)? sueldoVacio,
-    TResult Function(DuracionEstimadaValorInvalido<T> value)?
-        duracionEstimadaValorInvalido,
-    TResult Function(DuracionEstimadaValorVacio<T> value)?
-        duracionEstimadaValorVacio,
-    TResult Function(DuractionEstimadaEscalaInvalida<T> value)?
-        duractionEstimadaEscalaInvalida,
-    TResult Function(DuracionEstimadaEscalaVacia<T> value)?
-        duracionEstimadaEscalaVacia,
-    TResult Function(FechaNula<T> value)? fechaNula,
-    TResult Function(NumVacantesInvalido<T> value)? numVacantesInvalido,
-    TResult Function(NumVacantesNoVacia<T> value)? numVacantesNoVacia,
-    TResult Function(TurnoInvalido<T> value)? turnoInvalido,
-    TResult Function(TurnoVacio<T> value)? turnoVacio,
-    TResult Function(GeneroInvalido<T> value)? generoInvalido,
-    TResult Function(FechaNacimientoMenorEdad<T> value)?
-        fechaNacimientoMenorEdad,
-    TResult Function(NumeroTelefonicoInvalido<T> value)?
-        numeroTelefonicoInvalido,
-    TResult Function(NumeroTelefonicoVacio<T> value)? numeroTelefonicoVacio,
-    TResult Function(EstadoOfertaInvalido<T> value)? estadoOfertaInvalido,
-    required TResult orElse(),
-  }) {
-    if (duracionEstimadaValorVacio != null) {
-      return duracionEstimadaValorVacio(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class DuracionEstimadaValorVacio<T> implements ValorErroneo<T> {
-  const factory DuracionEstimadaValorVacio({required T valorInvalido}) =
-      _$DuracionEstimadaValorVacio<T>;
-
-  T get valorInvalido => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $DuracionEstimadaValorVacioCopyWith<T, DuracionEstimadaValorVacio<T>>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $DuractionEstimadaEscalaInvalidaCopyWith<T, $Res> {
-  factory $DuractionEstimadaEscalaInvalidaCopyWith(
-          DuractionEstimadaEscalaInvalida<T> value,
-          $Res Function(DuractionEstimadaEscalaInvalida<T>) then) =
-      _$DuractionEstimadaEscalaInvalidaCopyWithImpl<T, $Res>;
-  $Res call({T escalaInvalida, List<String> escalasValidas});
-}
-
-/// @nodoc
-class _$DuractionEstimadaEscalaInvalidaCopyWithImpl<T, $Res>
-    extends _$ValorErroneoCopyWithImpl<T, $Res>
-    implements $DuractionEstimadaEscalaInvalidaCopyWith<T, $Res> {
-  _$DuractionEstimadaEscalaInvalidaCopyWithImpl(
-      DuractionEstimadaEscalaInvalida<T> _value,
-      $Res Function(DuractionEstimadaEscalaInvalida<T>) _then)
-      : super(_value, (v) => _then(v as DuractionEstimadaEscalaInvalida<T>));
-
-  @override
-  DuractionEstimadaEscalaInvalida<T> get _value =>
-      super._value as DuractionEstimadaEscalaInvalida<T>;
-
-  @override
-  $Res call({
-    Object? escalaInvalida = freezed,
-    Object? escalasValidas = freezed,
-  }) {
-    return _then(DuractionEstimadaEscalaInvalida<T>(
-      escalaInvalida: escalaInvalida == freezed
-          ? _value.escalaInvalida
-          : escalaInvalida // ignore: cast_nullable_to_non_nullable
-              as T,
-      escalasValidas: escalasValidas == freezed
-          ? _value.escalasValidas
-          : escalasValidas // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$DuractionEstimadaEscalaInvalida<T>
-    implements DuractionEstimadaEscalaInvalida<T> {
-  const _$DuractionEstimadaEscalaInvalida(
-      {required this.escalaInvalida, required this.escalasValidas});
-
-  @override
-  final T escalaInvalida;
-  @override
-  final List<String> escalasValidas;
-
-  @override
-  String toString() {
-    return 'ValorErroneo<$T>.duractionEstimadaEscalaInvalida(escalaInvalida: $escalaInvalida, escalasValidas: $escalasValidas)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other is DuractionEstimadaEscalaInvalida<T> &&
-            (identical(other.escalaInvalida, escalaInvalida) ||
-                const DeepCollectionEquality()
-                    .equals(other.escalaInvalida, escalaInvalida)) &&
-            (identical(other.escalasValidas, escalasValidas) ||
-                const DeepCollectionEquality()
-                    .equals(other.escalasValidas, escalasValidas)));
-  }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(escalaInvalida) ^
-      const DeepCollectionEquality().hash(escalasValidas);
-
-  @JsonKey(ignore: true)
-  @override
-  $DuractionEstimadaEscalaInvalidaCopyWith<T,
-          DuractionEstimadaEscalaInvalida<T>>
-      get copyWith => _$DuractionEstimadaEscalaInvalidaCopyWithImpl<T,
-          DuractionEstimadaEscalaInvalida<T>>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(T valorErroneo) emailInvalido,
-    required TResult Function(T valorErroneo) contrasenaCorta,
-    required TResult Function(T valorErroneo) stringVacio,
-    required TResult Function(T valorErroneo, int min, int max)
-        longitudInvalida,
-    required TResult Function(T valorErroneo, double max) sueldoInvalido,
-    required TResult Function(T valorErroneo) sueldoVacio,
-    required TResult Function(T valorInvalido, int minValor, int maxValor)
-        duracionEstimadaValorInvalido,
-    required TResult Function(T valorInvalido) duracionEstimadaValorVacio,
-    required TResult Function(T escalaInvalida, List<String> escalasValidas)
-        duractionEstimadaEscalaInvalida,
-    required TResult Function(T valorInvalido) duracionEstimadaEscalaVacia,
-    required TResult Function(T fechaErronea) fechaNula,
-    required TResult Function(T numVacantesInvalido) numVacantesInvalido,
-    required TResult Function(T valorErroneo) numVacantesNoVacia,
-    required TResult Function(T valorErroneo, List<String> turnosValidos)
-        turnoInvalido,
-    required TResult Function(T valorErroneo) turnoVacio,
-    required TResult Function(T valorErroneo, List<String> generosValidos)
-        generoInvalido,
-    required TResult Function(T fechaErronea) fechaNacimientoMenorEdad,
-    required TResult Function(T numeroErroneo) numeroTelefonicoInvalido,
-    required TResult Function(T numeroErroneo) numeroTelefonicoVacio,
-    required TResult Function(T valorErroneo, List<String> turnosValidos)
-        estadoOfertaInvalido,
-  }) {
-    return duractionEstimadaEscalaInvalida(escalaInvalida, escalasValidas);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(T valorErroneo)? emailInvalido,
-    TResult Function(T valorErroneo)? contrasenaCorta,
-    TResult Function(T valorErroneo)? stringVacio,
-    TResult Function(T valorErroneo, int min, int max)? longitudInvalida,
-    TResult Function(T valorErroneo, double max)? sueldoInvalido,
-    TResult Function(T valorErroneo)? sueldoVacio,
-    TResult Function(T valorInvalido, int minValor, int maxValor)?
-        duracionEstimadaValorInvalido,
-    TResult Function(T valorInvalido)? duracionEstimadaValorVacio,
-    TResult Function(T escalaInvalida, List<String> escalasValidas)?
-        duractionEstimadaEscalaInvalida,
-    TResult Function(T valorInvalido)? duracionEstimadaEscalaVacia,
-    TResult Function(T fechaErronea)? fechaNula,
-    TResult Function(T numVacantesInvalido)? numVacantesInvalido,
-    TResult Function(T valorErroneo)? numVacantesNoVacia,
-    TResult Function(T valorErroneo, List<String> turnosValidos)? turnoInvalido,
-    TResult Function(T valorErroneo)? turnoVacio,
-    TResult Function(T valorErroneo, List<String> generosValidos)?
-        generoInvalido,
-    TResult Function(T fechaErronea)? fechaNacimientoMenorEdad,
-    TResult Function(T numeroErroneo)? numeroTelefonicoInvalido,
-    TResult Function(T numeroErroneo)? numeroTelefonicoVacio,
-    TResult Function(T valorErroneo, List<String> turnosValidos)?
-        estadoOfertaInvalido,
-    required TResult orElse(),
-  }) {
-    if (duractionEstimadaEscalaInvalida != null) {
-      return duractionEstimadaEscalaInvalida(escalaInvalida, escalasValidas);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(EmailInvalido<T> value) emailInvalido,
-    required TResult Function(ContrasenaCorta<T> value) contrasenaCorta,
-    required TResult Function(StringVacio<T> value) stringVacio,
-    required TResult Function(LongitudInvalida<T> value) longitudInvalida,
-    required TResult Function(SueldoInvalida<T> value) sueldoInvalido,
-    required TResult Function(SueldoVacio<T> value) sueldoVacio,
-    required TResult Function(DuracionEstimadaValorInvalido<T> value)
-        duracionEstimadaValorInvalido,
-    required TResult Function(DuracionEstimadaValorVacio<T> value)
-        duracionEstimadaValorVacio,
-    required TResult Function(DuractionEstimadaEscalaInvalida<T> value)
-        duractionEstimadaEscalaInvalida,
-    required TResult Function(DuracionEstimadaEscalaVacia<T> value)
-        duracionEstimadaEscalaVacia,
-    required TResult Function(FechaNula<T> value) fechaNula,
-    required TResult Function(NumVacantesInvalido<T> value) numVacantesInvalido,
-    required TResult Function(NumVacantesNoVacia<T> value) numVacantesNoVacia,
-    required TResult Function(TurnoInvalido<T> value) turnoInvalido,
-    required TResult Function(TurnoVacio<T> value) turnoVacio,
-    required TResult Function(GeneroInvalido<T> value) generoInvalido,
-    required TResult Function(FechaNacimientoMenorEdad<T> value)
-        fechaNacimientoMenorEdad,
-    required TResult Function(NumeroTelefonicoInvalido<T> value)
-        numeroTelefonicoInvalido,
-    required TResult Function(NumeroTelefonicoVacio<T> value)
-        numeroTelefonicoVacio,
-    required TResult Function(EstadoOfertaInvalido<T> value)
-        estadoOfertaInvalido,
-  }) {
-    return duractionEstimadaEscalaInvalida(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(EmailInvalido<T> value)? emailInvalido,
-    TResult Function(ContrasenaCorta<T> value)? contrasenaCorta,
-    TResult Function(StringVacio<T> value)? stringVacio,
-    TResult Function(LongitudInvalida<T> value)? longitudInvalida,
-    TResult Function(SueldoInvalida<T> value)? sueldoInvalido,
-    TResult Function(SueldoVacio<T> value)? sueldoVacio,
-    TResult Function(DuracionEstimadaValorInvalido<T> value)?
-        duracionEstimadaValorInvalido,
-    TResult Function(DuracionEstimadaValorVacio<T> value)?
-        duracionEstimadaValorVacio,
-    TResult Function(DuractionEstimadaEscalaInvalida<T> value)?
-        duractionEstimadaEscalaInvalida,
-    TResult Function(DuracionEstimadaEscalaVacia<T> value)?
-        duracionEstimadaEscalaVacia,
-    TResult Function(FechaNula<T> value)? fechaNula,
-    TResult Function(NumVacantesInvalido<T> value)? numVacantesInvalido,
-    TResult Function(NumVacantesNoVacia<T> value)? numVacantesNoVacia,
-    TResult Function(TurnoInvalido<T> value)? turnoInvalido,
-    TResult Function(TurnoVacio<T> value)? turnoVacio,
-    TResult Function(GeneroInvalido<T> value)? generoInvalido,
-    TResult Function(FechaNacimientoMenorEdad<T> value)?
-        fechaNacimientoMenorEdad,
-    TResult Function(NumeroTelefonicoInvalido<T> value)?
-        numeroTelefonicoInvalido,
-    TResult Function(NumeroTelefonicoVacio<T> value)? numeroTelefonicoVacio,
-    TResult Function(EstadoOfertaInvalido<T> value)? estadoOfertaInvalido,
-    required TResult orElse(),
-  }) {
-    if (duractionEstimadaEscalaInvalida != null) {
-      return duractionEstimadaEscalaInvalida(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class DuractionEstimadaEscalaInvalida<T> implements ValorErroneo<T> {
-  const factory DuractionEstimadaEscalaInvalida(
-          {required T escalaInvalida, required List<String> escalasValidas}) =
-      _$DuractionEstimadaEscalaInvalida<T>;
-
-  T get escalaInvalida => throw _privateConstructorUsedError;
-  List<String> get escalasValidas => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $DuractionEstimadaEscalaInvalidaCopyWith<T,
-          DuractionEstimadaEscalaInvalida<T>>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $DuracionEstimadaEscalaVaciaCopyWith<T, $Res> {
-  factory $DuracionEstimadaEscalaVaciaCopyWith(
-          DuracionEstimadaEscalaVacia<T> value,
-          $Res Function(DuracionEstimadaEscalaVacia<T>) then) =
-      _$DuracionEstimadaEscalaVaciaCopyWithImpl<T, $Res>;
-  $Res call({T valorInvalido});
-}
-
-/// @nodoc
-class _$DuracionEstimadaEscalaVaciaCopyWithImpl<T, $Res>
-    extends _$ValorErroneoCopyWithImpl<T, $Res>
-    implements $DuracionEstimadaEscalaVaciaCopyWith<T, $Res> {
-  _$DuracionEstimadaEscalaVaciaCopyWithImpl(
-      DuracionEstimadaEscalaVacia<T> _value,
-      $Res Function(DuracionEstimadaEscalaVacia<T>) _then)
-      : super(_value, (v) => _then(v as DuracionEstimadaEscalaVacia<T>));
-
-  @override
-  DuracionEstimadaEscalaVacia<T> get _value =>
-      super._value as DuracionEstimadaEscalaVacia<T>;
-
-  @override
-  $Res call({
-    Object? valorInvalido = freezed,
-  }) {
-    return _then(DuracionEstimadaEscalaVacia<T>(
-      valorInvalido: valorInvalido == freezed
-          ? _value.valorInvalido
-          : valorInvalido // ignore: cast_nullable_to_non_nullable
-              as T,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$DuracionEstimadaEscalaVacia<T>
-    implements DuracionEstimadaEscalaVacia<T> {
-  const _$DuracionEstimadaEscalaVacia({required this.valorInvalido});
-
-  @override
-  final T valorInvalido;
-
-  @override
-  String toString() {
-    return 'ValorErroneo<$T>.duracionEstimadaEscalaVacia(valorInvalido: $valorInvalido)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other is DuracionEstimadaEscalaVacia<T> &&
-            (identical(other.valorInvalido, valorInvalido) ||
-                const DeepCollectionEquality()
-                    .equals(other.valorInvalido, valorInvalido)));
-  }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(valorInvalido);
-
-  @JsonKey(ignore: true)
-  @override
-  $DuracionEstimadaEscalaVaciaCopyWith<T, DuracionEstimadaEscalaVacia<T>>
-      get copyWith => _$DuracionEstimadaEscalaVaciaCopyWithImpl<T,
-          DuracionEstimadaEscalaVacia<T>>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(T valorErroneo) emailInvalido,
-    required TResult Function(T valorErroneo) contrasenaCorta,
-    required TResult Function(T valorErroneo) stringVacio,
-    required TResult Function(T valorErroneo, int min, int max)
-        longitudInvalida,
-    required TResult Function(T valorErroneo, double max) sueldoInvalido,
-    required TResult Function(T valorErroneo) sueldoVacio,
-    required TResult Function(T valorInvalido, int minValor, int maxValor)
-        duracionEstimadaValorInvalido,
-    required TResult Function(T valorInvalido) duracionEstimadaValorVacio,
-    required TResult Function(T escalaInvalida, List<String> escalasValidas)
-        duractionEstimadaEscalaInvalida,
-    required TResult Function(T valorInvalido) duracionEstimadaEscalaVacia,
-    required TResult Function(T fechaErronea) fechaNula,
-    required TResult Function(T numVacantesInvalido) numVacantesInvalido,
-    required TResult Function(T valorErroneo) numVacantesNoVacia,
-    required TResult Function(T valorErroneo, List<String> turnosValidos)
-        turnoInvalido,
-    required TResult Function(T valorErroneo) turnoVacio,
-    required TResult Function(T valorErroneo, List<String> generosValidos)
-        generoInvalido,
-    required TResult Function(T fechaErronea) fechaNacimientoMenorEdad,
-    required TResult Function(T numeroErroneo) numeroTelefonicoInvalido,
-    required TResult Function(T numeroErroneo) numeroTelefonicoVacio,
-    required TResult Function(T valorErroneo, List<String> turnosValidos)
-        estadoOfertaInvalido,
-  }) {
-    return duracionEstimadaEscalaVacia(valorInvalido);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(T valorErroneo)? emailInvalido,
-    TResult Function(T valorErroneo)? contrasenaCorta,
-    TResult Function(T valorErroneo)? stringVacio,
-    TResult Function(T valorErroneo, int min, int max)? longitudInvalida,
-    TResult Function(T valorErroneo, double max)? sueldoInvalido,
-    TResult Function(T valorErroneo)? sueldoVacio,
-    TResult Function(T valorInvalido, int minValor, int maxValor)?
-        duracionEstimadaValorInvalido,
-    TResult Function(T valorInvalido)? duracionEstimadaValorVacio,
-    TResult Function(T escalaInvalida, List<String> escalasValidas)?
-        duractionEstimadaEscalaInvalida,
-    TResult Function(T valorInvalido)? duracionEstimadaEscalaVacia,
-    TResult Function(T fechaErronea)? fechaNula,
-    TResult Function(T numVacantesInvalido)? numVacantesInvalido,
-    TResult Function(T valorErroneo)? numVacantesNoVacia,
-    TResult Function(T valorErroneo, List<String> turnosValidos)? turnoInvalido,
-    TResult Function(T valorErroneo)? turnoVacio,
-    TResult Function(T valorErroneo, List<String> generosValidos)?
-        generoInvalido,
-    TResult Function(T fechaErronea)? fechaNacimientoMenorEdad,
-    TResult Function(T numeroErroneo)? numeroTelefonicoInvalido,
-    TResult Function(T numeroErroneo)? numeroTelefonicoVacio,
-    TResult Function(T valorErroneo, List<String> turnosValidos)?
-        estadoOfertaInvalido,
-    required TResult orElse(),
-  }) {
-    if (duracionEstimadaEscalaVacia != null) {
-      return duracionEstimadaEscalaVacia(valorInvalido);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(EmailInvalido<T> value) emailInvalido,
-    required TResult Function(ContrasenaCorta<T> value) contrasenaCorta,
-    required TResult Function(StringVacio<T> value) stringVacio,
-    required TResult Function(LongitudInvalida<T> value) longitudInvalida,
-    required TResult Function(SueldoInvalida<T> value) sueldoInvalido,
-    required TResult Function(SueldoVacio<T> value) sueldoVacio,
-    required TResult Function(DuracionEstimadaValorInvalido<T> value)
-        duracionEstimadaValorInvalido,
-    required TResult Function(DuracionEstimadaValorVacio<T> value)
-        duracionEstimadaValorVacio,
-    required TResult Function(DuractionEstimadaEscalaInvalida<T> value)
-        duractionEstimadaEscalaInvalida,
-    required TResult Function(DuracionEstimadaEscalaVacia<T> value)
-        duracionEstimadaEscalaVacia,
-    required TResult Function(FechaNula<T> value) fechaNula,
-    required TResult Function(NumVacantesInvalido<T> value) numVacantesInvalido,
-    required TResult Function(NumVacantesNoVacia<T> value) numVacantesNoVacia,
-    required TResult Function(TurnoInvalido<T> value) turnoInvalido,
-    required TResult Function(TurnoVacio<T> value) turnoVacio,
-    required TResult Function(GeneroInvalido<T> value) generoInvalido,
-    required TResult Function(FechaNacimientoMenorEdad<T> value)
-        fechaNacimientoMenorEdad,
-    required TResult Function(NumeroTelefonicoInvalido<T> value)
-        numeroTelefonicoInvalido,
-    required TResult Function(NumeroTelefonicoVacio<T> value)
-        numeroTelefonicoVacio,
-    required TResult Function(EstadoOfertaInvalido<T> value)
-        estadoOfertaInvalido,
-  }) {
-    return duracionEstimadaEscalaVacia(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(EmailInvalido<T> value)? emailInvalido,
-    TResult Function(ContrasenaCorta<T> value)? contrasenaCorta,
-    TResult Function(StringVacio<T> value)? stringVacio,
-    TResult Function(LongitudInvalida<T> value)? longitudInvalida,
-    TResult Function(SueldoInvalida<T> value)? sueldoInvalido,
-    TResult Function(SueldoVacio<T> value)? sueldoVacio,
-    TResult Function(DuracionEstimadaValorInvalido<T> value)?
-        duracionEstimadaValorInvalido,
-    TResult Function(DuracionEstimadaValorVacio<T> value)?
-        duracionEstimadaValorVacio,
-    TResult Function(DuractionEstimadaEscalaInvalida<T> value)?
-        duractionEstimadaEscalaInvalida,
-    TResult Function(DuracionEstimadaEscalaVacia<T> value)?
-        duracionEstimadaEscalaVacia,
-    TResult Function(FechaNula<T> value)? fechaNula,
-    TResult Function(NumVacantesInvalido<T> value)? numVacantesInvalido,
-    TResult Function(NumVacantesNoVacia<T> value)? numVacantesNoVacia,
-    TResult Function(TurnoInvalido<T> value)? turnoInvalido,
-    TResult Function(TurnoVacio<T> value)? turnoVacio,
-    TResult Function(GeneroInvalido<T> value)? generoInvalido,
-    TResult Function(FechaNacimientoMenorEdad<T> value)?
-        fechaNacimientoMenorEdad,
-    TResult Function(NumeroTelefonicoInvalido<T> value)?
-        numeroTelefonicoInvalido,
-    TResult Function(NumeroTelefonicoVacio<T> value)? numeroTelefonicoVacio,
-    TResult Function(EstadoOfertaInvalido<T> value)? estadoOfertaInvalido,
-    required TResult orElse(),
-  }) {
-    if (duracionEstimadaEscalaVacia != null) {
-      return duracionEstimadaEscalaVacia(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class DuracionEstimadaEscalaVacia<T> implements ValorErroneo<T> {
-  const factory DuracionEstimadaEscalaVacia({required T valorInvalido}) =
-      _$DuracionEstimadaEscalaVacia<T>;
-
-  T get valorInvalido => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $DuracionEstimadaEscalaVaciaCopyWith<T, DuracionEstimadaEscalaVacia<T>>
-      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -2620,23 +1436,18 @@ class _$FechaNula<T> implements FechaNula<T> {
         longitudInvalida,
     required TResult Function(T valorErroneo, double max) sueldoInvalido,
     required TResult Function(T valorErroneo) sueldoVacio,
-    required TResult Function(T valorInvalido, int minValor, int maxValor)
-        duracionEstimadaValorInvalido,
-    required TResult Function(T valorInvalido) duracionEstimadaValorVacio,
-    required TResult Function(T escalaInvalida, List<String> escalasValidas)
-        duractionEstimadaEscalaInvalida,
-    required TResult Function(T valorInvalido) duracionEstimadaEscalaVacia,
     required TResult Function(T fechaErronea) fechaNula,
     required TResult Function(T numVacantesInvalido) numVacantesInvalido,
     required TResult Function(T valorErroneo) numVacantesNoVacia,
     required TResult Function(T valorErroneo, List<String> turnosValidos)
         turnoInvalido,
-    required TResult Function(T valorErroneo) turnoVacio,
     required TResult Function(T valorErroneo, List<String> generosValidos)
         generoInvalido,
     required TResult Function(T fechaErronea) fechaNacimientoMenorEdad,
     required TResult Function(T numeroErroneo) numeroTelefonicoInvalido,
     required TResult Function(T numeroErroneo) numeroTelefonicoVacio,
+    required TResult Function(T valorErroneo, List<String> turnosValidos)
+        estadoOfertaInvalido,
   }) {
     return fechaNula(fechaErronea);
   }
@@ -2650,22 +1461,17 @@ class _$FechaNula<T> implements FechaNula<T> {
     TResult Function(T valorErroneo, int min, int max)? longitudInvalida,
     TResult Function(T valorErroneo, double max)? sueldoInvalido,
     TResult Function(T valorErroneo)? sueldoVacio,
-    TResult Function(T valorInvalido, int minValor, int maxValor)?
-        duracionEstimadaValorInvalido,
-    TResult Function(T valorInvalido)? duracionEstimadaValorVacio,
-    TResult Function(T escalaInvalida, List<String> escalasValidas)?
-        duractionEstimadaEscalaInvalida,
-    TResult Function(T valorInvalido)? duracionEstimadaEscalaVacia,
     TResult Function(T fechaErronea)? fechaNula,
     TResult Function(T numVacantesInvalido)? numVacantesInvalido,
     TResult Function(T valorErroneo)? numVacantesNoVacia,
     TResult Function(T valorErroneo, List<String> turnosValidos)? turnoInvalido,
-    TResult Function(T valorErroneo)? turnoVacio,
     TResult Function(T valorErroneo, List<String> generosValidos)?
         generoInvalido,
     TResult Function(T fechaErronea)? fechaNacimientoMenorEdad,
     TResult Function(T numeroErroneo)? numeroTelefonicoInvalido,
     TResult Function(T numeroErroneo)? numeroTelefonicoVacio,
+    TResult Function(T valorErroneo, List<String> turnosValidos)?
+        estadoOfertaInvalido,
     required TResult orElse(),
   }) {
     if (fechaNula != null) {
@@ -2683,19 +1489,10 @@ class _$FechaNula<T> implements FechaNula<T> {
     required TResult Function(LongitudInvalida<T> value) longitudInvalida,
     required TResult Function(SueldoInvalida<T> value) sueldoInvalido,
     required TResult Function(SueldoVacio<T> value) sueldoVacio,
-    required TResult Function(DuracionEstimadaValorInvalido<T> value)
-        duracionEstimadaValorInvalido,
-    required TResult Function(DuracionEstimadaValorVacio<T> value)
-        duracionEstimadaValorVacio,
-    required TResult Function(DuractionEstimadaEscalaInvalida<T> value)
-        duractionEstimadaEscalaInvalida,
-    required TResult Function(DuracionEstimadaEscalaVacia<T> value)
-        duracionEstimadaEscalaVacia,
     required TResult Function(FechaNula<T> value) fechaNula,
     required TResult Function(NumVacantesInvalido<T> value) numVacantesInvalido,
     required TResult Function(NumVacantesNoVacia<T> value) numVacantesNoVacia,
     required TResult Function(TurnoInvalido<T> value) turnoInvalido,
-    required TResult Function(TurnoVacio<T> value) turnoVacio,
     required TResult Function(GeneroInvalido<T> value) generoInvalido,
     required TResult Function(FechaNacimientoMenorEdad<T> value)
         fechaNacimientoMenorEdad,
@@ -2703,6 +1500,8 @@ class _$FechaNula<T> implements FechaNula<T> {
         numeroTelefonicoInvalido,
     required TResult Function(NumeroTelefonicoVacio<T> value)
         numeroTelefonicoVacio,
+    required TResult Function(EstadoOfertaInvalido<T> value)
+        estadoOfertaInvalido,
   }) {
     return fechaNula(this);
   }
@@ -2716,25 +1515,17 @@ class _$FechaNula<T> implements FechaNula<T> {
     TResult Function(LongitudInvalida<T> value)? longitudInvalida,
     TResult Function(SueldoInvalida<T> value)? sueldoInvalido,
     TResult Function(SueldoVacio<T> value)? sueldoVacio,
-    TResult Function(DuracionEstimadaValorInvalido<T> value)?
-        duracionEstimadaValorInvalido,
-    TResult Function(DuracionEstimadaValorVacio<T> value)?
-        duracionEstimadaValorVacio,
-    TResult Function(DuractionEstimadaEscalaInvalida<T> value)?
-        duractionEstimadaEscalaInvalida,
-    TResult Function(DuracionEstimadaEscalaVacia<T> value)?
-        duracionEstimadaEscalaVacia,
     TResult Function(FechaNula<T> value)? fechaNula,
     TResult Function(NumVacantesInvalido<T> value)? numVacantesInvalido,
     TResult Function(NumVacantesNoVacia<T> value)? numVacantesNoVacia,
     TResult Function(TurnoInvalido<T> value)? turnoInvalido,
-    TResult Function(TurnoVacio<T> value)? turnoVacio,
     TResult Function(GeneroInvalido<T> value)? generoInvalido,
     TResult Function(FechaNacimientoMenorEdad<T> value)?
         fechaNacimientoMenorEdad,
     TResult Function(NumeroTelefonicoInvalido<T> value)?
         numeroTelefonicoInvalido,
     TResult Function(NumeroTelefonicoVacio<T> value)? numeroTelefonicoVacio,
+    TResult Function(EstadoOfertaInvalido<T> value)? estadoOfertaInvalido,
     required TResult orElse(),
   }) {
     if (fechaNula != null) {
@@ -2828,23 +1619,18 @@ class _$NumVacantesInvalido<T> implements NumVacantesInvalido<T> {
         longitudInvalida,
     required TResult Function(T valorErroneo, double max) sueldoInvalido,
     required TResult Function(T valorErroneo) sueldoVacio,
-    required TResult Function(T valorInvalido, int minValor, int maxValor)
-        duracionEstimadaValorInvalido,
-    required TResult Function(T valorInvalido) duracionEstimadaValorVacio,
-    required TResult Function(T escalaInvalida, List<String> escalasValidas)
-        duractionEstimadaEscalaInvalida,
-    required TResult Function(T valorInvalido) duracionEstimadaEscalaVacia,
     required TResult Function(T fechaErronea) fechaNula,
     required TResult Function(T numVacantesInvalido) numVacantesInvalido,
     required TResult Function(T valorErroneo) numVacantesNoVacia,
     required TResult Function(T valorErroneo, List<String> turnosValidos)
         turnoInvalido,
-    required TResult Function(T valorErroneo) turnoVacio,
     required TResult Function(T valorErroneo, List<String> generosValidos)
         generoInvalido,
     required TResult Function(T fechaErronea) fechaNacimientoMenorEdad,
     required TResult Function(T numeroErroneo) numeroTelefonicoInvalido,
     required TResult Function(T numeroErroneo) numeroTelefonicoVacio,
+    required TResult Function(T valorErroneo, List<String> turnosValidos)
+        estadoOfertaInvalido,
   }) {
     return numVacantesInvalido(this.numVacantesInvalido);
   }
@@ -2858,22 +1644,17 @@ class _$NumVacantesInvalido<T> implements NumVacantesInvalido<T> {
     TResult Function(T valorErroneo, int min, int max)? longitudInvalida,
     TResult Function(T valorErroneo, double max)? sueldoInvalido,
     TResult Function(T valorErroneo)? sueldoVacio,
-    TResult Function(T valorInvalido, int minValor, int maxValor)?
-        duracionEstimadaValorInvalido,
-    TResult Function(T valorInvalido)? duracionEstimadaValorVacio,
-    TResult Function(T escalaInvalida, List<String> escalasValidas)?
-        duractionEstimadaEscalaInvalida,
-    TResult Function(T valorInvalido)? duracionEstimadaEscalaVacia,
     TResult Function(T fechaErronea)? fechaNula,
     TResult Function(T numVacantesInvalido)? numVacantesInvalido,
     TResult Function(T valorErroneo)? numVacantesNoVacia,
     TResult Function(T valorErroneo, List<String> turnosValidos)? turnoInvalido,
-    TResult Function(T valorErroneo)? turnoVacio,
     TResult Function(T valorErroneo, List<String> generosValidos)?
         generoInvalido,
     TResult Function(T fechaErronea)? fechaNacimientoMenorEdad,
     TResult Function(T numeroErroneo)? numeroTelefonicoInvalido,
     TResult Function(T numeroErroneo)? numeroTelefonicoVacio,
+    TResult Function(T valorErroneo, List<String> turnosValidos)?
+        estadoOfertaInvalido,
     required TResult orElse(),
   }) {
     if (numVacantesInvalido != null) {
@@ -2891,19 +1672,10 @@ class _$NumVacantesInvalido<T> implements NumVacantesInvalido<T> {
     required TResult Function(LongitudInvalida<T> value) longitudInvalida,
     required TResult Function(SueldoInvalida<T> value) sueldoInvalido,
     required TResult Function(SueldoVacio<T> value) sueldoVacio,
-    required TResult Function(DuracionEstimadaValorInvalido<T> value)
-        duracionEstimadaValorInvalido,
-    required TResult Function(DuracionEstimadaValorVacio<T> value)
-        duracionEstimadaValorVacio,
-    required TResult Function(DuractionEstimadaEscalaInvalida<T> value)
-        duractionEstimadaEscalaInvalida,
-    required TResult Function(DuracionEstimadaEscalaVacia<T> value)
-        duracionEstimadaEscalaVacia,
     required TResult Function(FechaNula<T> value) fechaNula,
     required TResult Function(NumVacantesInvalido<T> value) numVacantesInvalido,
     required TResult Function(NumVacantesNoVacia<T> value) numVacantesNoVacia,
     required TResult Function(TurnoInvalido<T> value) turnoInvalido,
-    required TResult Function(TurnoVacio<T> value) turnoVacio,
     required TResult Function(GeneroInvalido<T> value) generoInvalido,
     required TResult Function(FechaNacimientoMenorEdad<T> value)
         fechaNacimientoMenorEdad,
@@ -2911,6 +1683,8 @@ class _$NumVacantesInvalido<T> implements NumVacantesInvalido<T> {
         numeroTelefonicoInvalido,
     required TResult Function(NumeroTelefonicoVacio<T> value)
         numeroTelefonicoVacio,
+    required TResult Function(EstadoOfertaInvalido<T> value)
+        estadoOfertaInvalido,
   }) {
     return numVacantesInvalido(this);
   }
@@ -2924,25 +1698,17 @@ class _$NumVacantesInvalido<T> implements NumVacantesInvalido<T> {
     TResult Function(LongitudInvalida<T> value)? longitudInvalida,
     TResult Function(SueldoInvalida<T> value)? sueldoInvalido,
     TResult Function(SueldoVacio<T> value)? sueldoVacio,
-    TResult Function(DuracionEstimadaValorInvalido<T> value)?
-        duracionEstimadaValorInvalido,
-    TResult Function(DuracionEstimadaValorVacio<T> value)?
-        duracionEstimadaValorVacio,
-    TResult Function(DuractionEstimadaEscalaInvalida<T> value)?
-        duractionEstimadaEscalaInvalida,
-    TResult Function(DuracionEstimadaEscalaVacia<T> value)?
-        duracionEstimadaEscalaVacia,
     TResult Function(FechaNula<T> value)? fechaNula,
     TResult Function(NumVacantesInvalido<T> value)? numVacantesInvalido,
     TResult Function(NumVacantesNoVacia<T> value)? numVacantesNoVacia,
     TResult Function(TurnoInvalido<T> value)? turnoInvalido,
-    TResult Function(TurnoVacio<T> value)? turnoVacio,
     TResult Function(GeneroInvalido<T> value)? generoInvalido,
     TResult Function(FechaNacimientoMenorEdad<T> value)?
         fechaNacimientoMenorEdad,
     TResult Function(NumeroTelefonicoInvalido<T> value)?
         numeroTelefonicoInvalido,
     TResult Function(NumeroTelefonicoVacio<T> value)? numeroTelefonicoVacio,
+    TResult Function(EstadoOfertaInvalido<T> value)? estadoOfertaInvalido,
     required TResult orElse(),
   }) {
     if (numVacantesInvalido != null) {
@@ -3036,23 +1802,18 @@ class _$NumVacantesNoVacia<T> implements NumVacantesNoVacia<T> {
         longitudInvalida,
     required TResult Function(T valorErroneo, double max) sueldoInvalido,
     required TResult Function(T valorErroneo) sueldoVacio,
-    required TResult Function(T valorInvalido, int minValor, int maxValor)
-        duracionEstimadaValorInvalido,
-    required TResult Function(T valorInvalido) duracionEstimadaValorVacio,
-    required TResult Function(T escalaInvalida, List<String> escalasValidas)
-        duractionEstimadaEscalaInvalida,
-    required TResult Function(T valorInvalido) duracionEstimadaEscalaVacia,
     required TResult Function(T fechaErronea) fechaNula,
     required TResult Function(T numVacantesInvalido) numVacantesInvalido,
     required TResult Function(T valorErroneo) numVacantesNoVacia,
     required TResult Function(T valorErroneo, List<String> turnosValidos)
         turnoInvalido,
-    required TResult Function(T valorErroneo) turnoVacio,
     required TResult Function(T valorErroneo, List<String> generosValidos)
         generoInvalido,
     required TResult Function(T fechaErronea) fechaNacimientoMenorEdad,
     required TResult Function(T numeroErroneo) numeroTelefonicoInvalido,
     required TResult Function(T numeroErroneo) numeroTelefonicoVacio,
+    required TResult Function(T valorErroneo, List<String> turnosValidos)
+        estadoOfertaInvalido,
   }) {
     return numVacantesNoVacia(valorErroneo);
   }
@@ -3066,22 +1827,17 @@ class _$NumVacantesNoVacia<T> implements NumVacantesNoVacia<T> {
     TResult Function(T valorErroneo, int min, int max)? longitudInvalida,
     TResult Function(T valorErroneo, double max)? sueldoInvalido,
     TResult Function(T valorErroneo)? sueldoVacio,
-    TResult Function(T valorInvalido, int minValor, int maxValor)?
-        duracionEstimadaValorInvalido,
-    TResult Function(T valorInvalido)? duracionEstimadaValorVacio,
-    TResult Function(T escalaInvalida, List<String> escalasValidas)?
-        duractionEstimadaEscalaInvalida,
-    TResult Function(T valorInvalido)? duracionEstimadaEscalaVacia,
     TResult Function(T fechaErronea)? fechaNula,
     TResult Function(T numVacantesInvalido)? numVacantesInvalido,
     TResult Function(T valorErroneo)? numVacantesNoVacia,
     TResult Function(T valorErroneo, List<String> turnosValidos)? turnoInvalido,
-    TResult Function(T valorErroneo)? turnoVacio,
     TResult Function(T valorErroneo, List<String> generosValidos)?
         generoInvalido,
     TResult Function(T fechaErronea)? fechaNacimientoMenorEdad,
     TResult Function(T numeroErroneo)? numeroTelefonicoInvalido,
     TResult Function(T numeroErroneo)? numeroTelefonicoVacio,
+    TResult Function(T valorErroneo, List<String> turnosValidos)?
+        estadoOfertaInvalido,
     required TResult orElse(),
   }) {
     if (numVacantesNoVacia != null) {
@@ -3099,19 +1855,10 @@ class _$NumVacantesNoVacia<T> implements NumVacantesNoVacia<T> {
     required TResult Function(LongitudInvalida<T> value) longitudInvalida,
     required TResult Function(SueldoInvalida<T> value) sueldoInvalido,
     required TResult Function(SueldoVacio<T> value) sueldoVacio,
-    required TResult Function(DuracionEstimadaValorInvalido<T> value)
-        duracionEstimadaValorInvalido,
-    required TResult Function(DuracionEstimadaValorVacio<T> value)
-        duracionEstimadaValorVacio,
-    required TResult Function(DuractionEstimadaEscalaInvalida<T> value)
-        duractionEstimadaEscalaInvalida,
-    required TResult Function(DuracionEstimadaEscalaVacia<T> value)
-        duracionEstimadaEscalaVacia,
     required TResult Function(FechaNula<T> value) fechaNula,
     required TResult Function(NumVacantesInvalido<T> value) numVacantesInvalido,
     required TResult Function(NumVacantesNoVacia<T> value) numVacantesNoVacia,
     required TResult Function(TurnoInvalido<T> value) turnoInvalido,
-    required TResult Function(TurnoVacio<T> value) turnoVacio,
     required TResult Function(GeneroInvalido<T> value) generoInvalido,
     required TResult Function(FechaNacimientoMenorEdad<T> value)
         fechaNacimientoMenorEdad,
@@ -3119,6 +1866,8 @@ class _$NumVacantesNoVacia<T> implements NumVacantesNoVacia<T> {
         numeroTelefonicoInvalido,
     required TResult Function(NumeroTelefonicoVacio<T> value)
         numeroTelefonicoVacio,
+    required TResult Function(EstadoOfertaInvalido<T> value)
+        estadoOfertaInvalido,
   }) {
     return numVacantesNoVacia(this);
   }
@@ -3132,25 +1881,17 @@ class _$NumVacantesNoVacia<T> implements NumVacantesNoVacia<T> {
     TResult Function(LongitudInvalida<T> value)? longitudInvalida,
     TResult Function(SueldoInvalida<T> value)? sueldoInvalido,
     TResult Function(SueldoVacio<T> value)? sueldoVacio,
-    TResult Function(DuracionEstimadaValorInvalido<T> value)?
-        duracionEstimadaValorInvalido,
-    TResult Function(DuracionEstimadaValorVacio<T> value)?
-        duracionEstimadaValorVacio,
-    TResult Function(DuractionEstimadaEscalaInvalida<T> value)?
-        duractionEstimadaEscalaInvalida,
-    TResult Function(DuracionEstimadaEscalaVacia<T> value)?
-        duracionEstimadaEscalaVacia,
     TResult Function(FechaNula<T> value)? fechaNula,
     TResult Function(NumVacantesInvalido<T> value)? numVacantesInvalido,
     TResult Function(NumVacantesNoVacia<T> value)? numVacantesNoVacia,
     TResult Function(TurnoInvalido<T> value)? turnoInvalido,
-    TResult Function(TurnoVacio<T> value)? turnoVacio,
     TResult Function(GeneroInvalido<T> value)? generoInvalido,
     TResult Function(FechaNacimientoMenorEdad<T> value)?
         fechaNacimientoMenorEdad,
     TResult Function(NumeroTelefonicoInvalido<T> value)?
         numeroTelefonicoInvalido,
     TResult Function(NumeroTelefonicoVacio<T> value)? numeroTelefonicoVacio,
+    TResult Function(EstadoOfertaInvalido<T> value)? estadoOfertaInvalido,
     required TResult orElse(),
   }) {
     if (numVacantesNoVacia != null) {
@@ -3256,23 +1997,18 @@ class _$TurnoInvalido<T> implements TurnoInvalido<T> {
         longitudInvalida,
     required TResult Function(T valorErroneo, double max) sueldoInvalido,
     required TResult Function(T valorErroneo) sueldoVacio,
-    required TResult Function(T valorInvalido, int minValor, int maxValor)
-        duracionEstimadaValorInvalido,
-    required TResult Function(T valorInvalido) duracionEstimadaValorVacio,
-    required TResult Function(T escalaInvalida, List<String> escalasValidas)
-        duractionEstimadaEscalaInvalida,
-    required TResult Function(T valorInvalido) duracionEstimadaEscalaVacia,
     required TResult Function(T fechaErronea) fechaNula,
     required TResult Function(T numVacantesInvalido) numVacantesInvalido,
     required TResult Function(T valorErroneo) numVacantesNoVacia,
     required TResult Function(T valorErroneo, List<String> turnosValidos)
         turnoInvalido,
-    required TResult Function(T valorErroneo) turnoVacio,
     required TResult Function(T valorErroneo, List<String> generosValidos)
         generoInvalido,
     required TResult Function(T fechaErronea) fechaNacimientoMenorEdad,
     required TResult Function(T numeroErroneo) numeroTelefonicoInvalido,
     required TResult Function(T numeroErroneo) numeroTelefonicoVacio,
+    required TResult Function(T valorErroneo, List<String> turnosValidos)
+        estadoOfertaInvalido,
   }) {
     return turnoInvalido(valorErroneo, turnosValidos);
   }
@@ -3286,22 +2022,17 @@ class _$TurnoInvalido<T> implements TurnoInvalido<T> {
     TResult Function(T valorErroneo, int min, int max)? longitudInvalida,
     TResult Function(T valorErroneo, double max)? sueldoInvalido,
     TResult Function(T valorErroneo)? sueldoVacio,
-    TResult Function(T valorInvalido, int minValor, int maxValor)?
-        duracionEstimadaValorInvalido,
-    TResult Function(T valorInvalido)? duracionEstimadaValorVacio,
-    TResult Function(T escalaInvalida, List<String> escalasValidas)?
-        duractionEstimadaEscalaInvalida,
-    TResult Function(T valorInvalido)? duracionEstimadaEscalaVacia,
     TResult Function(T fechaErronea)? fechaNula,
     TResult Function(T numVacantesInvalido)? numVacantesInvalido,
     TResult Function(T valorErroneo)? numVacantesNoVacia,
     TResult Function(T valorErroneo, List<String> turnosValidos)? turnoInvalido,
-    TResult Function(T valorErroneo)? turnoVacio,
     TResult Function(T valorErroneo, List<String> generosValidos)?
         generoInvalido,
     TResult Function(T fechaErronea)? fechaNacimientoMenorEdad,
     TResult Function(T numeroErroneo)? numeroTelefonicoInvalido,
     TResult Function(T numeroErroneo)? numeroTelefonicoVacio,
+    TResult Function(T valorErroneo, List<String> turnosValidos)?
+        estadoOfertaInvalido,
     required TResult orElse(),
   }) {
     if (turnoInvalido != null) {
@@ -3319,19 +2050,10 @@ class _$TurnoInvalido<T> implements TurnoInvalido<T> {
     required TResult Function(LongitudInvalida<T> value) longitudInvalida,
     required TResult Function(SueldoInvalida<T> value) sueldoInvalido,
     required TResult Function(SueldoVacio<T> value) sueldoVacio,
-    required TResult Function(DuracionEstimadaValorInvalido<T> value)
-        duracionEstimadaValorInvalido,
-    required TResult Function(DuracionEstimadaValorVacio<T> value)
-        duracionEstimadaValorVacio,
-    required TResult Function(DuractionEstimadaEscalaInvalida<T> value)
-        duractionEstimadaEscalaInvalida,
-    required TResult Function(DuracionEstimadaEscalaVacia<T> value)
-        duracionEstimadaEscalaVacia,
     required TResult Function(FechaNula<T> value) fechaNula,
     required TResult Function(NumVacantesInvalido<T> value) numVacantesInvalido,
     required TResult Function(NumVacantesNoVacia<T> value) numVacantesNoVacia,
     required TResult Function(TurnoInvalido<T> value) turnoInvalido,
-    required TResult Function(TurnoVacio<T> value) turnoVacio,
     required TResult Function(GeneroInvalido<T> value) generoInvalido,
     required TResult Function(FechaNacimientoMenorEdad<T> value)
         fechaNacimientoMenorEdad,
@@ -3339,6 +2061,8 @@ class _$TurnoInvalido<T> implements TurnoInvalido<T> {
         numeroTelefonicoInvalido,
     required TResult Function(NumeroTelefonicoVacio<T> value)
         numeroTelefonicoVacio,
+    required TResult Function(EstadoOfertaInvalido<T> value)
+        estadoOfertaInvalido,
   }) {
     return turnoInvalido(this);
   }
@@ -3352,25 +2076,17 @@ class _$TurnoInvalido<T> implements TurnoInvalido<T> {
     TResult Function(LongitudInvalida<T> value)? longitudInvalida,
     TResult Function(SueldoInvalida<T> value)? sueldoInvalido,
     TResult Function(SueldoVacio<T> value)? sueldoVacio,
-    TResult Function(DuracionEstimadaValorInvalido<T> value)?
-        duracionEstimadaValorInvalido,
-    TResult Function(DuracionEstimadaValorVacio<T> value)?
-        duracionEstimadaValorVacio,
-    TResult Function(DuractionEstimadaEscalaInvalida<T> value)?
-        duractionEstimadaEscalaInvalida,
-    TResult Function(DuracionEstimadaEscalaVacia<T> value)?
-        duracionEstimadaEscalaVacia,
     TResult Function(FechaNula<T> value)? fechaNula,
     TResult Function(NumVacantesInvalido<T> value)? numVacantesInvalido,
     TResult Function(NumVacantesNoVacia<T> value)? numVacantesNoVacia,
     TResult Function(TurnoInvalido<T> value)? turnoInvalido,
-    TResult Function(TurnoVacio<T> value)? turnoVacio,
     TResult Function(GeneroInvalido<T> value)? generoInvalido,
     TResult Function(FechaNacimientoMenorEdad<T> value)?
         fechaNacimientoMenorEdad,
     TResult Function(NumeroTelefonicoInvalido<T> value)?
         numeroTelefonicoInvalido,
     TResult Function(NumeroTelefonicoVacio<T> value)? numeroTelefonicoVacio,
+    TResult Function(EstadoOfertaInvalido<T> value)? estadoOfertaInvalido,
     required TResult orElse(),
   }) {
     if (turnoInvalido != null) {
@@ -3389,212 +2105,6 @@ abstract class TurnoInvalido<T> implements ValorErroneo<T> {
   List<String> get turnosValidos => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $TurnoInvalidoCopyWith<T, TurnoInvalido<T>> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $TurnoVacioCopyWith<T, $Res> {
-  factory $TurnoVacioCopyWith(
-          TurnoVacio<T> value, $Res Function(TurnoVacio<T>) then) =
-      _$TurnoVacioCopyWithImpl<T, $Res>;
-  $Res call({T valorErroneo});
-}
-
-/// @nodoc
-class _$TurnoVacioCopyWithImpl<T, $Res>
-    extends _$ValorErroneoCopyWithImpl<T, $Res>
-    implements $TurnoVacioCopyWith<T, $Res> {
-  _$TurnoVacioCopyWithImpl(
-      TurnoVacio<T> _value, $Res Function(TurnoVacio<T>) _then)
-      : super(_value, (v) => _then(v as TurnoVacio<T>));
-
-  @override
-  TurnoVacio<T> get _value => super._value as TurnoVacio<T>;
-
-  @override
-  $Res call({
-    Object? valorErroneo = freezed,
-  }) {
-    return _then(TurnoVacio<T>(
-      valorErroneo: valorErroneo == freezed
-          ? _value.valorErroneo
-          : valorErroneo // ignore: cast_nullable_to_non_nullable
-              as T,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$TurnoVacio<T> implements TurnoVacio<T> {
-  const _$TurnoVacio({required this.valorErroneo});
-
-  @override
-  final T valorErroneo;
-
-  @override
-  String toString() {
-    return 'ValorErroneo<$T>.turnoVacio(valorErroneo: $valorErroneo)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other is TurnoVacio<T> &&
-            (identical(other.valorErroneo, valorErroneo) ||
-                const DeepCollectionEquality()
-                    .equals(other.valorErroneo, valorErroneo)));
-  }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(valorErroneo);
-
-  @JsonKey(ignore: true)
-  @override
-  $TurnoVacioCopyWith<T, TurnoVacio<T>> get copyWith =>
-      _$TurnoVacioCopyWithImpl<T, TurnoVacio<T>>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(T valorErroneo) emailInvalido,
-    required TResult Function(T valorErroneo) contrasenaCorta,
-    required TResult Function(T valorErroneo) stringVacio,
-    required TResult Function(T valorErroneo, int min, int max)
-        longitudInvalida,
-    required TResult Function(T valorErroneo, double max) sueldoInvalido,
-    required TResult Function(T valorErroneo) sueldoVacio,
-    required TResult Function(T valorInvalido, int minValor, int maxValor)
-        duracionEstimadaValorInvalido,
-    required TResult Function(T valorInvalido) duracionEstimadaValorVacio,
-    required TResult Function(T escalaInvalida, List<String> escalasValidas)
-        duractionEstimadaEscalaInvalida,
-    required TResult Function(T valorInvalido) duracionEstimadaEscalaVacia,
-    required TResult Function(T fechaErronea) fechaNula,
-    required TResult Function(T numVacantesInvalido) numVacantesInvalido,
-    required TResult Function(T valorErroneo) numVacantesNoVacia,
-    required TResult Function(T valorErroneo, List<String> turnosValidos)
-        turnoInvalido,
-    required TResult Function(T valorErroneo) turnoVacio,
-    required TResult Function(T valorErroneo, List<String> generosValidos)
-        generoInvalido,
-    required TResult Function(T fechaErronea) fechaNacimientoMenorEdad,
-    required TResult Function(T numeroErroneo) numeroTelefonicoInvalido,
-    required TResult Function(T numeroErroneo) numeroTelefonicoVacio,
-  }) {
-    return turnoVacio(valorErroneo);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(T valorErroneo)? emailInvalido,
-    TResult Function(T valorErroneo)? contrasenaCorta,
-    TResult Function(T valorErroneo)? stringVacio,
-    TResult Function(T valorErroneo, int min, int max)? longitudInvalida,
-    TResult Function(T valorErroneo, double max)? sueldoInvalido,
-    TResult Function(T valorErroneo)? sueldoVacio,
-    TResult Function(T valorInvalido, int minValor, int maxValor)?
-        duracionEstimadaValorInvalido,
-    TResult Function(T valorInvalido)? duracionEstimadaValorVacio,
-    TResult Function(T escalaInvalida, List<String> escalasValidas)?
-        duractionEstimadaEscalaInvalida,
-    TResult Function(T valorInvalido)? duracionEstimadaEscalaVacia,
-    TResult Function(T fechaErronea)? fechaNula,
-    TResult Function(T numVacantesInvalido)? numVacantesInvalido,
-    TResult Function(T valorErroneo)? numVacantesNoVacia,
-    TResult Function(T valorErroneo, List<String> turnosValidos)? turnoInvalido,
-    TResult Function(T valorErroneo)? turnoVacio,
-    TResult Function(T valorErroneo, List<String> generosValidos)?
-        generoInvalido,
-    TResult Function(T fechaErronea)? fechaNacimientoMenorEdad,
-    TResult Function(T numeroErroneo)? numeroTelefonicoInvalido,
-    TResult Function(T numeroErroneo)? numeroTelefonicoVacio,
-    required TResult orElse(),
-  }) {
-    if (turnoVacio != null) {
-      return turnoVacio(valorErroneo);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(EmailInvalido<T> value) emailInvalido,
-    required TResult Function(ContrasenaCorta<T> value) contrasenaCorta,
-    required TResult Function(StringVacio<T> value) stringVacio,
-    required TResult Function(LongitudInvalida<T> value) longitudInvalida,
-    required TResult Function(SueldoInvalida<T> value) sueldoInvalido,
-    required TResult Function(SueldoVacio<T> value) sueldoVacio,
-    required TResult Function(DuracionEstimadaValorInvalido<T> value)
-        duracionEstimadaValorInvalido,
-    required TResult Function(DuracionEstimadaValorVacio<T> value)
-        duracionEstimadaValorVacio,
-    required TResult Function(DuractionEstimadaEscalaInvalida<T> value)
-        duractionEstimadaEscalaInvalida,
-    required TResult Function(DuracionEstimadaEscalaVacia<T> value)
-        duracionEstimadaEscalaVacia,
-    required TResult Function(FechaNula<T> value) fechaNula,
-    required TResult Function(NumVacantesInvalido<T> value) numVacantesInvalido,
-    required TResult Function(NumVacantesNoVacia<T> value) numVacantesNoVacia,
-    required TResult Function(TurnoInvalido<T> value) turnoInvalido,
-    required TResult Function(TurnoVacio<T> value) turnoVacio,
-    required TResult Function(GeneroInvalido<T> value) generoInvalido,
-    required TResult Function(FechaNacimientoMenorEdad<T> value)
-        fechaNacimientoMenorEdad,
-    required TResult Function(NumeroTelefonicoInvalido<T> value)
-        numeroTelefonicoInvalido,
-    required TResult Function(NumeroTelefonicoVacio<T> value)
-        numeroTelefonicoVacio,
-  }) {
-    return turnoVacio(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(EmailInvalido<T> value)? emailInvalido,
-    TResult Function(ContrasenaCorta<T> value)? contrasenaCorta,
-    TResult Function(StringVacio<T> value)? stringVacio,
-    TResult Function(LongitudInvalida<T> value)? longitudInvalida,
-    TResult Function(SueldoInvalida<T> value)? sueldoInvalido,
-    TResult Function(SueldoVacio<T> value)? sueldoVacio,
-    TResult Function(DuracionEstimadaValorInvalido<T> value)?
-        duracionEstimadaValorInvalido,
-    TResult Function(DuracionEstimadaValorVacio<T> value)?
-        duracionEstimadaValorVacio,
-    TResult Function(DuractionEstimadaEscalaInvalida<T> value)?
-        duractionEstimadaEscalaInvalida,
-    TResult Function(DuracionEstimadaEscalaVacia<T> value)?
-        duracionEstimadaEscalaVacia,
-    TResult Function(FechaNula<T> value)? fechaNula,
-    TResult Function(NumVacantesInvalido<T> value)? numVacantesInvalido,
-    TResult Function(NumVacantesNoVacia<T> value)? numVacantesNoVacia,
-    TResult Function(TurnoInvalido<T> value)? turnoInvalido,
-    TResult Function(TurnoVacio<T> value)? turnoVacio,
-    TResult Function(GeneroInvalido<T> value)? generoInvalido,
-    TResult Function(FechaNacimientoMenorEdad<T> value)?
-        fechaNacimientoMenorEdad,
-    TResult Function(NumeroTelefonicoInvalido<T> value)?
-        numeroTelefonicoInvalido,
-    TResult Function(NumeroTelefonicoVacio<T> value)? numeroTelefonicoVacio,
-    required TResult orElse(),
-  }) {
-    if (turnoVacio != null) {
-      return turnoVacio(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class TurnoVacio<T> implements ValorErroneo<T> {
-  const factory TurnoVacio({required T valorErroneo}) = _$TurnoVacio<T>;
-
-  T get valorErroneo => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $TurnoVacioCopyWith<T, TurnoVacio<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -3684,18 +2194,11 @@ class _$GeneroInvalido<T> implements GeneroInvalido<T> {
         longitudInvalida,
     required TResult Function(T valorErroneo, double max) sueldoInvalido,
     required TResult Function(T valorErroneo) sueldoVacio,
-    required TResult Function(T valorInvalido, int minValor, int maxValor)
-        duracionEstimadaValorInvalido,
-    required TResult Function(T valorInvalido) duracionEstimadaValorVacio,
-    required TResult Function(T escalaInvalida, List<String> escalasValidas)
-        duractionEstimadaEscalaInvalida,
-    required TResult Function(T valorInvalido) duracionEstimadaEscalaVacia,
     required TResult Function(T fechaErronea) fechaNula,
     required TResult Function(T numVacantesInvalido) numVacantesInvalido,
     required TResult Function(T valorErroneo) numVacantesNoVacia,
     required TResult Function(T valorErroneo, List<String> turnosValidos)
         turnoInvalido,
-    required TResult Function(T valorErroneo) turnoVacio,
     required TResult Function(T valorErroneo, List<String> generosValidos)
         generoInvalido,
     required TResult Function(T fechaErronea) fechaNacimientoMenorEdad,
@@ -3716,17 +2219,10 @@ class _$GeneroInvalido<T> implements GeneroInvalido<T> {
     TResult Function(T valorErroneo, int min, int max)? longitudInvalida,
     TResult Function(T valorErroneo, double max)? sueldoInvalido,
     TResult Function(T valorErroneo)? sueldoVacio,
-    TResult Function(T valorInvalido, int minValor, int maxValor)?
-        duracionEstimadaValorInvalido,
-    TResult Function(T valorInvalido)? duracionEstimadaValorVacio,
-    TResult Function(T escalaInvalida, List<String> escalasValidas)?
-        duractionEstimadaEscalaInvalida,
-    TResult Function(T valorInvalido)? duracionEstimadaEscalaVacia,
     TResult Function(T fechaErronea)? fechaNula,
     TResult Function(T numVacantesInvalido)? numVacantesInvalido,
     TResult Function(T valorErroneo)? numVacantesNoVacia,
     TResult Function(T valorErroneo, List<String> turnosValidos)? turnoInvalido,
-    TResult Function(T valorErroneo)? turnoVacio,
     TResult Function(T valorErroneo, List<String> generosValidos)?
         generoInvalido,
     TResult Function(T fechaErronea)? fechaNacimientoMenorEdad,
@@ -3751,19 +2247,10 @@ class _$GeneroInvalido<T> implements GeneroInvalido<T> {
     required TResult Function(LongitudInvalida<T> value) longitudInvalida,
     required TResult Function(SueldoInvalida<T> value) sueldoInvalido,
     required TResult Function(SueldoVacio<T> value) sueldoVacio,
-    required TResult Function(DuracionEstimadaValorInvalido<T> value)
-        duracionEstimadaValorInvalido,
-    required TResult Function(DuracionEstimadaValorVacio<T> value)
-        duracionEstimadaValorVacio,
-    required TResult Function(DuractionEstimadaEscalaInvalida<T> value)
-        duractionEstimadaEscalaInvalida,
-    required TResult Function(DuracionEstimadaEscalaVacia<T> value)
-        duracionEstimadaEscalaVacia,
     required TResult Function(FechaNula<T> value) fechaNula,
     required TResult Function(NumVacantesInvalido<T> value) numVacantesInvalido,
     required TResult Function(NumVacantesNoVacia<T> value) numVacantesNoVacia,
     required TResult Function(TurnoInvalido<T> value) turnoInvalido,
-    required TResult Function(TurnoVacio<T> value) turnoVacio,
     required TResult Function(GeneroInvalido<T> value) generoInvalido,
     required TResult Function(FechaNacimientoMenorEdad<T> value)
         fechaNacimientoMenorEdad,
@@ -3786,19 +2273,10 @@ class _$GeneroInvalido<T> implements GeneroInvalido<T> {
     TResult Function(LongitudInvalida<T> value)? longitudInvalida,
     TResult Function(SueldoInvalida<T> value)? sueldoInvalido,
     TResult Function(SueldoVacio<T> value)? sueldoVacio,
-    TResult Function(DuracionEstimadaValorInvalido<T> value)?
-        duracionEstimadaValorInvalido,
-    TResult Function(DuracionEstimadaValorVacio<T> value)?
-        duracionEstimadaValorVacio,
-    TResult Function(DuractionEstimadaEscalaInvalida<T> value)?
-        duractionEstimadaEscalaInvalida,
-    TResult Function(DuracionEstimadaEscalaVacia<T> value)?
-        duracionEstimadaEscalaVacia,
     TResult Function(FechaNula<T> value)? fechaNula,
     TResult Function(NumVacantesInvalido<T> value)? numVacantesInvalido,
     TResult Function(NumVacantesNoVacia<T> value)? numVacantesNoVacia,
     TResult Function(TurnoInvalido<T> value)? turnoInvalido,
-    TResult Function(TurnoVacio<T> value)? turnoVacio,
     TResult Function(GeneroInvalido<T> value)? generoInvalido,
     TResult Function(FechaNacimientoMenorEdad<T> value)?
         fechaNacimientoMenorEdad,
@@ -3902,18 +2380,11 @@ class _$FechaNacimientoMenorEdad<T> implements FechaNacimientoMenorEdad<T> {
         longitudInvalida,
     required TResult Function(T valorErroneo, double max) sueldoInvalido,
     required TResult Function(T valorErroneo) sueldoVacio,
-    required TResult Function(T valorInvalido, int minValor, int maxValor)
-        duracionEstimadaValorInvalido,
-    required TResult Function(T valorInvalido) duracionEstimadaValorVacio,
-    required TResult Function(T escalaInvalida, List<String> escalasValidas)
-        duractionEstimadaEscalaInvalida,
-    required TResult Function(T valorInvalido) duracionEstimadaEscalaVacia,
     required TResult Function(T fechaErronea) fechaNula,
     required TResult Function(T numVacantesInvalido) numVacantesInvalido,
     required TResult Function(T valorErroneo) numVacantesNoVacia,
     required TResult Function(T valorErroneo, List<String> turnosValidos)
         turnoInvalido,
-    required TResult Function(T valorErroneo) turnoVacio,
     required TResult Function(T valorErroneo, List<String> generosValidos)
         generoInvalido,
     required TResult Function(T fechaErronea) fechaNacimientoMenorEdad,
@@ -3934,17 +2405,10 @@ class _$FechaNacimientoMenorEdad<T> implements FechaNacimientoMenorEdad<T> {
     TResult Function(T valorErroneo, int min, int max)? longitudInvalida,
     TResult Function(T valorErroneo, double max)? sueldoInvalido,
     TResult Function(T valorErroneo)? sueldoVacio,
-    TResult Function(T valorInvalido, int minValor, int maxValor)?
-        duracionEstimadaValorInvalido,
-    TResult Function(T valorInvalido)? duracionEstimadaValorVacio,
-    TResult Function(T escalaInvalida, List<String> escalasValidas)?
-        duractionEstimadaEscalaInvalida,
-    TResult Function(T valorInvalido)? duracionEstimadaEscalaVacia,
     TResult Function(T fechaErronea)? fechaNula,
     TResult Function(T numVacantesInvalido)? numVacantesInvalido,
     TResult Function(T valorErroneo)? numVacantesNoVacia,
     TResult Function(T valorErroneo, List<String> turnosValidos)? turnoInvalido,
-    TResult Function(T valorErroneo)? turnoVacio,
     TResult Function(T valorErroneo, List<String> generosValidos)?
         generoInvalido,
     TResult Function(T fechaErronea)? fechaNacimientoMenorEdad,
@@ -3969,19 +2433,10 @@ class _$FechaNacimientoMenorEdad<T> implements FechaNacimientoMenorEdad<T> {
     required TResult Function(LongitudInvalida<T> value) longitudInvalida,
     required TResult Function(SueldoInvalida<T> value) sueldoInvalido,
     required TResult Function(SueldoVacio<T> value) sueldoVacio,
-    required TResult Function(DuracionEstimadaValorInvalido<T> value)
-        duracionEstimadaValorInvalido,
-    required TResult Function(DuracionEstimadaValorVacio<T> value)
-        duracionEstimadaValorVacio,
-    required TResult Function(DuractionEstimadaEscalaInvalida<T> value)
-        duractionEstimadaEscalaInvalida,
-    required TResult Function(DuracionEstimadaEscalaVacia<T> value)
-        duracionEstimadaEscalaVacia,
     required TResult Function(FechaNula<T> value) fechaNula,
     required TResult Function(NumVacantesInvalido<T> value) numVacantesInvalido,
     required TResult Function(NumVacantesNoVacia<T> value) numVacantesNoVacia,
     required TResult Function(TurnoInvalido<T> value) turnoInvalido,
-    required TResult Function(TurnoVacio<T> value) turnoVacio,
     required TResult Function(GeneroInvalido<T> value) generoInvalido,
     required TResult Function(FechaNacimientoMenorEdad<T> value)
         fechaNacimientoMenorEdad,
@@ -4004,19 +2459,10 @@ class _$FechaNacimientoMenorEdad<T> implements FechaNacimientoMenorEdad<T> {
     TResult Function(LongitudInvalida<T> value)? longitudInvalida,
     TResult Function(SueldoInvalida<T> value)? sueldoInvalido,
     TResult Function(SueldoVacio<T> value)? sueldoVacio,
-    TResult Function(DuracionEstimadaValorInvalido<T> value)?
-        duracionEstimadaValorInvalido,
-    TResult Function(DuracionEstimadaValorVacio<T> value)?
-        duracionEstimadaValorVacio,
-    TResult Function(DuractionEstimadaEscalaInvalida<T> value)?
-        duractionEstimadaEscalaInvalida,
-    TResult Function(DuracionEstimadaEscalaVacia<T> value)?
-        duracionEstimadaEscalaVacia,
     TResult Function(FechaNula<T> value)? fechaNula,
     TResult Function(NumVacantesInvalido<T> value)? numVacantesInvalido,
     TResult Function(NumVacantesNoVacia<T> value)? numVacantesNoVacia,
     TResult Function(TurnoInvalido<T> value)? turnoInvalido,
-    TResult Function(TurnoVacio<T> value)? turnoVacio,
     TResult Function(GeneroInvalido<T> value)? generoInvalido,
     TResult Function(FechaNacimientoMenorEdad<T> value)?
         fechaNacimientoMenorEdad,
@@ -4118,18 +2564,11 @@ class _$NumeroTelefonicoInvalido<T> implements NumeroTelefonicoInvalido<T> {
         longitudInvalida,
     required TResult Function(T valorErroneo, double max) sueldoInvalido,
     required TResult Function(T valorErroneo) sueldoVacio,
-    required TResult Function(T valorInvalido, int minValor, int maxValor)
-        duracionEstimadaValorInvalido,
-    required TResult Function(T valorInvalido) duracionEstimadaValorVacio,
-    required TResult Function(T escalaInvalida, List<String> escalasValidas)
-        duractionEstimadaEscalaInvalida,
-    required TResult Function(T valorInvalido) duracionEstimadaEscalaVacia,
     required TResult Function(T fechaErronea) fechaNula,
     required TResult Function(T numVacantesInvalido) numVacantesInvalido,
     required TResult Function(T valorErroneo) numVacantesNoVacia,
     required TResult Function(T valorErroneo, List<String> turnosValidos)
         turnoInvalido,
-    required TResult Function(T valorErroneo) turnoVacio,
     required TResult Function(T valorErroneo, List<String> generosValidos)
         generoInvalido,
     required TResult Function(T fechaErronea) fechaNacimientoMenorEdad,
@@ -4150,17 +2589,10 @@ class _$NumeroTelefonicoInvalido<T> implements NumeroTelefonicoInvalido<T> {
     TResult Function(T valorErroneo, int min, int max)? longitudInvalida,
     TResult Function(T valorErroneo, double max)? sueldoInvalido,
     TResult Function(T valorErroneo)? sueldoVacio,
-    TResult Function(T valorInvalido, int minValor, int maxValor)?
-        duracionEstimadaValorInvalido,
-    TResult Function(T valorInvalido)? duracionEstimadaValorVacio,
-    TResult Function(T escalaInvalida, List<String> escalasValidas)?
-        duractionEstimadaEscalaInvalida,
-    TResult Function(T valorInvalido)? duracionEstimadaEscalaVacia,
     TResult Function(T fechaErronea)? fechaNula,
     TResult Function(T numVacantesInvalido)? numVacantesInvalido,
     TResult Function(T valorErroneo)? numVacantesNoVacia,
     TResult Function(T valorErroneo, List<String> turnosValidos)? turnoInvalido,
-    TResult Function(T valorErroneo)? turnoVacio,
     TResult Function(T valorErroneo, List<String> generosValidos)?
         generoInvalido,
     TResult Function(T fechaErronea)? fechaNacimientoMenorEdad,
@@ -4185,19 +2617,10 @@ class _$NumeroTelefonicoInvalido<T> implements NumeroTelefonicoInvalido<T> {
     required TResult Function(LongitudInvalida<T> value) longitudInvalida,
     required TResult Function(SueldoInvalida<T> value) sueldoInvalido,
     required TResult Function(SueldoVacio<T> value) sueldoVacio,
-    required TResult Function(DuracionEstimadaValorInvalido<T> value)
-        duracionEstimadaValorInvalido,
-    required TResult Function(DuracionEstimadaValorVacio<T> value)
-        duracionEstimadaValorVacio,
-    required TResult Function(DuractionEstimadaEscalaInvalida<T> value)
-        duractionEstimadaEscalaInvalida,
-    required TResult Function(DuracionEstimadaEscalaVacia<T> value)
-        duracionEstimadaEscalaVacia,
     required TResult Function(FechaNula<T> value) fechaNula,
     required TResult Function(NumVacantesInvalido<T> value) numVacantesInvalido,
     required TResult Function(NumVacantesNoVacia<T> value) numVacantesNoVacia,
     required TResult Function(TurnoInvalido<T> value) turnoInvalido,
-    required TResult Function(TurnoVacio<T> value) turnoVacio,
     required TResult Function(GeneroInvalido<T> value) generoInvalido,
     required TResult Function(FechaNacimientoMenorEdad<T> value)
         fechaNacimientoMenorEdad,
@@ -4220,19 +2643,10 @@ class _$NumeroTelefonicoInvalido<T> implements NumeroTelefonicoInvalido<T> {
     TResult Function(LongitudInvalida<T> value)? longitudInvalida,
     TResult Function(SueldoInvalida<T> value)? sueldoInvalido,
     TResult Function(SueldoVacio<T> value)? sueldoVacio,
-    TResult Function(DuracionEstimadaValorInvalido<T> value)?
-        duracionEstimadaValorInvalido,
-    TResult Function(DuracionEstimadaValorVacio<T> value)?
-        duracionEstimadaValorVacio,
-    TResult Function(DuractionEstimadaEscalaInvalida<T> value)?
-        duractionEstimadaEscalaInvalida,
-    TResult Function(DuracionEstimadaEscalaVacia<T> value)?
-        duracionEstimadaEscalaVacia,
     TResult Function(FechaNula<T> value)? fechaNula,
     TResult Function(NumVacantesInvalido<T> value)? numVacantesInvalido,
     TResult Function(NumVacantesNoVacia<T> value)? numVacantesNoVacia,
     TResult Function(TurnoInvalido<T> value)? turnoInvalido,
-    TResult Function(TurnoVacio<T> value)? turnoVacio,
     TResult Function(GeneroInvalido<T> value)? generoInvalido,
     TResult Function(FechaNacimientoMenorEdad<T> value)?
         fechaNacimientoMenorEdad,
@@ -4334,18 +2748,11 @@ class _$NumeroTelefonicoVacio<T> implements NumeroTelefonicoVacio<T> {
         longitudInvalida,
     required TResult Function(T valorErroneo, double max) sueldoInvalido,
     required TResult Function(T valorErroneo) sueldoVacio,
-    required TResult Function(T valorInvalido, int minValor, int maxValor)
-        duracionEstimadaValorInvalido,
-    required TResult Function(T valorInvalido) duracionEstimadaValorVacio,
-    required TResult Function(T escalaInvalida, List<String> escalasValidas)
-        duractionEstimadaEscalaInvalida,
-    required TResult Function(T valorInvalido) duracionEstimadaEscalaVacia,
     required TResult Function(T fechaErronea) fechaNula,
     required TResult Function(T numVacantesInvalido) numVacantesInvalido,
     required TResult Function(T valorErroneo) numVacantesNoVacia,
     required TResult Function(T valorErroneo, List<String> turnosValidos)
         turnoInvalido,
-    required TResult Function(T valorErroneo) turnoVacio,
     required TResult Function(T valorErroneo, List<String> generosValidos)
         generoInvalido,
     required TResult Function(T fechaErronea) fechaNacimientoMenorEdad,
@@ -4366,17 +2773,10 @@ class _$NumeroTelefonicoVacio<T> implements NumeroTelefonicoVacio<T> {
     TResult Function(T valorErroneo, int min, int max)? longitudInvalida,
     TResult Function(T valorErroneo, double max)? sueldoInvalido,
     TResult Function(T valorErroneo)? sueldoVacio,
-    TResult Function(T valorInvalido, int minValor, int maxValor)?
-        duracionEstimadaValorInvalido,
-    TResult Function(T valorInvalido)? duracionEstimadaValorVacio,
-    TResult Function(T escalaInvalida, List<String> escalasValidas)?
-        duractionEstimadaEscalaInvalida,
-    TResult Function(T valorInvalido)? duracionEstimadaEscalaVacia,
     TResult Function(T fechaErronea)? fechaNula,
     TResult Function(T numVacantesInvalido)? numVacantesInvalido,
     TResult Function(T valorErroneo)? numVacantesNoVacia,
     TResult Function(T valorErroneo, List<String> turnosValidos)? turnoInvalido,
-    TResult Function(T valorErroneo)? turnoVacio,
     TResult Function(T valorErroneo, List<String> generosValidos)?
         generoInvalido,
     TResult Function(T fechaErronea)? fechaNacimientoMenorEdad,
@@ -4401,19 +2801,10 @@ class _$NumeroTelefonicoVacio<T> implements NumeroTelefonicoVacio<T> {
     required TResult Function(LongitudInvalida<T> value) longitudInvalida,
     required TResult Function(SueldoInvalida<T> value) sueldoInvalido,
     required TResult Function(SueldoVacio<T> value) sueldoVacio,
-    required TResult Function(DuracionEstimadaValorInvalido<T> value)
-        duracionEstimadaValorInvalido,
-    required TResult Function(DuracionEstimadaValorVacio<T> value)
-        duracionEstimadaValorVacio,
-    required TResult Function(DuractionEstimadaEscalaInvalida<T> value)
-        duractionEstimadaEscalaInvalida,
-    required TResult Function(DuracionEstimadaEscalaVacia<T> value)
-        duracionEstimadaEscalaVacia,
     required TResult Function(FechaNula<T> value) fechaNula,
     required TResult Function(NumVacantesInvalido<T> value) numVacantesInvalido,
     required TResult Function(NumVacantesNoVacia<T> value) numVacantesNoVacia,
     required TResult Function(TurnoInvalido<T> value) turnoInvalido,
-    required TResult Function(TurnoVacio<T> value) turnoVacio,
     required TResult Function(GeneroInvalido<T> value) generoInvalido,
     required TResult Function(FechaNacimientoMenorEdad<T> value)
         fechaNacimientoMenorEdad,
@@ -4436,19 +2827,10 @@ class _$NumeroTelefonicoVacio<T> implements NumeroTelefonicoVacio<T> {
     TResult Function(LongitudInvalida<T> value)? longitudInvalida,
     TResult Function(SueldoInvalida<T> value)? sueldoInvalido,
     TResult Function(SueldoVacio<T> value)? sueldoVacio,
-    TResult Function(DuracionEstimadaValorInvalido<T> value)?
-        duracionEstimadaValorInvalido,
-    TResult Function(DuracionEstimadaValorVacio<T> value)?
-        duracionEstimadaValorVacio,
-    TResult Function(DuractionEstimadaEscalaInvalida<T> value)?
-        duractionEstimadaEscalaInvalida,
-    TResult Function(DuracionEstimadaEscalaVacia<T> value)?
-        duracionEstimadaEscalaVacia,
     TResult Function(FechaNula<T> value)? fechaNula,
     TResult Function(NumVacantesInvalido<T> value)? numVacantesInvalido,
     TResult Function(NumVacantesNoVacia<T> value)? numVacantesNoVacia,
     TResult Function(TurnoInvalido<T> value)? turnoInvalido,
-    TResult Function(TurnoVacio<T> value)? turnoVacio,
     TResult Function(GeneroInvalido<T> value)? generoInvalido,
     TResult Function(FechaNacimientoMenorEdad<T> value)?
         fechaNacimientoMenorEdad,
