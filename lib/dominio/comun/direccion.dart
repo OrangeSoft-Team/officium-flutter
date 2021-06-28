@@ -1,3 +1,5 @@
+import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'entidad.dart';
 import 'value_objects/identificador.dart';
 import 'ciudad.dart';
@@ -6,13 +8,10 @@ import 'estado.dart';
 
 //FALTA!!
 
-class Direccion extends IEntitidad {
-  Identificador uuid;
+part 'direccion.freezed.dart';
 
-  Direccion({
-    required this.uuid,
-  });
-
-  @override
-  Identificador get id => uuid;
+@freezed
+abstract class Direccion with _$Direccion {
+  @Implements(IEntitidad)
+  const factory Direccion({required Identificador uuid}) = _Direccion;
 }
