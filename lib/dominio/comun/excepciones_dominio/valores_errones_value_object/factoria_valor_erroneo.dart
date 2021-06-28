@@ -61,4 +61,23 @@ abstract class ValorErroneo<T> with _$ValorErroneo<T> {
   const factory ValorErroneo.estadoOfertaInvalido(
       {required T valorErroneo,
       required List<String> turnosValidos}) = EstadoOfertaInvalido<T>;
+
+  const factory ValorErroneo.duracionEstimadaValorInvalido({
+    required T valorInvalido,
+    required int minValor,
+    required int maxValor,
+  }) = DuracionEstimadaValorInvalido<T>;
+
+  const factory ValorErroneo.duracionEstimadaValorVacio({
+    required T valorInvalido,
+  }) = DuracionEstimadaValorVacio<T>;
+
+  const factory ValorErroneo.duractionEstimadaEscalaInvalida({
+    required T escalaInvalida,
+    required List<String> escalasValidas,
+  }) = DuractionEstimadaEscalaInvalida<T>;
+
+  const factory ValorErroneo.duracionEstimadaEscalaVacia({
+    required T valorInvalido,
+  }) = DuracionEstimadaEscalaVacia<T>;
 }
