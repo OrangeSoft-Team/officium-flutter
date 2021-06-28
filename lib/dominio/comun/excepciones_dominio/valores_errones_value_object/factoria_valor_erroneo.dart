@@ -46,4 +46,14 @@ abstract class ValorErroneo<T> with _$ValorErroneo<T> {
   const factory ValorErroneo.generoInvalido(
       {required T valorErroneo,
       required List<String> generosValidos}) = GeneroInvalido<T>;
+  const factory ValorErroneo.fechaNacimientoMenorEdad({
+    required T fechaErronea,
+  }) = FechaNacimientoMenorEdad<T>;
+
+  const factory ValorErroneo.numeroTelefonicoInvalido({
+    required T numeroErroneo,
+  }) = NumeroTelefonicoInvalido<T>;
+  const factory ValorErroneo.numeroTelefonicoVacio({
+    required T numeroErroneo,
+  }) = NumeroTelefonicoVacio<T>;
 }
