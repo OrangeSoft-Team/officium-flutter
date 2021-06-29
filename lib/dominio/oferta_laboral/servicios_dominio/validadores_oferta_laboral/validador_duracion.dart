@@ -4,7 +4,7 @@ import 'package:officium_flutter/dominio/oferta_laboral/servicios_dominio/valida
 import 'package:officium_flutter/dominio/oferta_laboral/servicios_dominio/validadores_oferta_laboral/validador_duracion_escala_vacio.dart';
 import 'package:officium_flutter/dominio/oferta_laboral/servicios_dominio/validadores_oferta_laboral/validador_duracion_estimada_vacia.dart';
 import 'package:officium_flutter/dominio/oferta_laboral/servicios_dominio/validadores_oferta_laboral/validador_duracion_estimada_valor_valido.dart';
-import 'package:officium_flutter/dominio/oferta_laboral/value%20objects/Duracion_Oferta/duracion_escalas.dart';
+import 'package:officium_flutter/dominio/oferta_laboral/value_objects/oferta_laboral/Duracion_Oferta/duracion_escalas.dart';
 
 Either<ValorErroneo<DuracionEscala>, DuracionEscala>
     validadorDuracionOfertaValida(
