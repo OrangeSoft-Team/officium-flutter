@@ -28,6 +28,45 @@ class _$ValorErroneoTearOff {
     );
   }
 
+  ContrasenaVacia<T> contrasenaVacia<T>({required T valorErroneo}) {
+    return ContrasenaVacia<T>(
+      valorErroneo: valorErroneo,
+    );
+  }
+
+  ContrasenaLarga<T> contrasenaLarga<T>({required T valorErroneo}) {
+    return ContrasenaLarga<T>(
+      valorErroneo: valorErroneo,
+    );
+  }
+
+  ContrasenaCaracterEspecial<T> contrasenaSinCaracterEspecial<T>(
+      {required T valorErroneo}) {
+    return ContrasenaCaracterEspecial<T>(
+      valorErroneo: valorErroneo,
+    );
+  }
+
+  ContrasenaSinMayuscula<T> contrasenaSinMayuscula<T>(
+      {required T valorErroneo}) {
+    return ContrasenaSinMayuscula<T>(
+      valorErroneo: valorErroneo,
+    );
+  }
+
+  ContrasenaSinMinuscula<T> contrasenaSinMinuscula<T>(
+      {required T valorErroneo}) {
+    return ContrasenaSinMinuscula<T>(
+      valorErroneo: valorErroneo,
+    );
+  }
+
+  ContrasenaSinNumero<T> contrasenaSinNumero<T>({required T valorErroneo}) {
+    return ContrasenaSinNumero<T>(
+      valorErroneo: valorErroneo,
+    );
+  }
+
   StringVacio<T> stringVacio<T>({required T valorErroneo}) {
     return StringVacio<T>(
       valorErroneo: valorErroneo,
@@ -164,6 +203,12 @@ mixin _$ValorErroneo<T> {
   TResult when<TResult extends Object?>({
     required TResult Function(T valorErroneo) emailInvalido,
     required TResult Function(T valorErroneo) contrasenaCorta,
+    required TResult Function(T valorErroneo) contrasenaVacia,
+    required TResult Function(T valorErroneo) contrasenaLarga,
+    required TResult Function(T valorErroneo) contrasenaSinCaracterEspecial,
+    required TResult Function(T valorErroneo) contrasenaSinMayuscula,
+    required TResult Function(T valorErroneo) contrasenaSinMinuscula,
+    required TResult Function(T valorErroneo) contrasenaSinNumero,
     required TResult Function(T valorErroneo) stringVacio,
     required TResult Function(T valorErroneo, int min, int max)
         longitudInvalida,
@@ -193,6 +238,12 @@ mixin _$ValorErroneo<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(T valorErroneo)? emailInvalido,
     TResult Function(T valorErroneo)? contrasenaCorta,
+    TResult Function(T valorErroneo)? contrasenaVacia,
+    TResult Function(T valorErroneo)? contrasenaLarga,
+    TResult Function(T valorErroneo)? contrasenaSinCaracterEspecial,
+    TResult Function(T valorErroneo)? contrasenaSinMayuscula,
+    TResult Function(T valorErroneo)? contrasenaSinMinuscula,
+    TResult Function(T valorErroneo)? contrasenaSinNumero,
     TResult Function(T valorErroneo)? stringVacio,
     TResult Function(T valorErroneo, int min, int max)? longitudInvalida,
     TResult Function(T valorErroneo, double max)? sueldoInvalido,
@@ -221,6 +272,15 @@ mixin _$ValorErroneo<T> {
   TResult map<TResult extends Object?>({
     required TResult Function(EmailInvalido<T> value) emailInvalido,
     required TResult Function(ContrasenaCorta<T> value) contrasenaCorta,
+    required TResult Function(ContrasenaVacia<T> value) contrasenaVacia,
+    required TResult Function(ContrasenaLarga<T> value) contrasenaLarga,
+    required TResult Function(ContrasenaCaracterEspecial<T> value)
+        contrasenaSinCaracterEspecial,
+    required TResult Function(ContrasenaSinMayuscula<T> value)
+        contrasenaSinMayuscula,
+    required TResult Function(ContrasenaSinMinuscula<T> value)
+        contrasenaSinMinuscula,
+    required TResult Function(ContrasenaSinNumero<T> value) contrasenaSinNumero,
     required TResult Function(StringVacio<T> value) stringVacio,
     required TResult Function(LongitudInvalida<T> value) longitudInvalida,
     required TResult Function(SueldoInvalida<T> value) sueldoInvalido,
@@ -252,6 +312,13 @@ mixin _$ValorErroneo<T> {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(EmailInvalido<T> value)? emailInvalido,
     TResult Function(ContrasenaCorta<T> value)? contrasenaCorta,
+    TResult Function(ContrasenaVacia<T> value)? contrasenaVacia,
+    TResult Function(ContrasenaLarga<T> value)? contrasenaLarga,
+    TResult Function(ContrasenaCaracterEspecial<T> value)?
+        contrasenaSinCaracterEspecial,
+    TResult Function(ContrasenaSinMayuscula<T> value)? contrasenaSinMayuscula,
+    TResult Function(ContrasenaSinMinuscula<T> value)? contrasenaSinMinuscula,
+    TResult Function(ContrasenaSinNumero<T> value)? contrasenaSinNumero,
     TResult Function(StringVacio<T> value)? stringVacio,
     TResult Function(LongitudInvalida<T> value)? longitudInvalida,
     TResult Function(SueldoInvalida<T> value)? sueldoInvalido,
@@ -365,6 +432,12 @@ class _$EmailInvalido<T> implements EmailInvalido<T> {
   TResult when<TResult extends Object?>({
     required TResult Function(T valorErroneo) emailInvalido,
     required TResult Function(T valorErroneo) contrasenaCorta,
+    required TResult Function(T valorErroneo) contrasenaVacia,
+    required TResult Function(T valorErroneo) contrasenaLarga,
+    required TResult Function(T valorErroneo) contrasenaSinCaracterEspecial,
+    required TResult Function(T valorErroneo) contrasenaSinMayuscula,
+    required TResult Function(T valorErroneo) contrasenaSinMinuscula,
+    required TResult Function(T valorErroneo) contrasenaSinNumero,
     required TResult Function(T valorErroneo) stringVacio,
     required TResult Function(T valorErroneo, int min, int max)
         longitudInvalida,
@@ -397,6 +470,12 @@ class _$EmailInvalido<T> implements EmailInvalido<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(T valorErroneo)? emailInvalido,
     TResult Function(T valorErroneo)? contrasenaCorta,
+    TResult Function(T valorErroneo)? contrasenaVacia,
+    TResult Function(T valorErroneo)? contrasenaLarga,
+    TResult Function(T valorErroneo)? contrasenaSinCaracterEspecial,
+    TResult Function(T valorErroneo)? contrasenaSinMayuscula,
+    TResult Function(T valorErroneo)? contrasenaSinMinuscula,
+    TResult Function(T valorErroneo)? contrasenaSinNumero,
     TResult Function(T valorErroneo)? stringVacio,
     TResult Function(T valorErroneo, int min, int max)? longitudInvalida,
     TResult Function(T valorErroneo, double max)? sueldoInvalido,
@@ -431,6 +510,15 @@ class _$EmailInvalido<T> implements EmailInvalido<T> {
   TResult map<TResult extends Object?>({
     required TResult Function(EmailInvalido<T> value) emailInvalido,
     required TResult Function(ContrasenaCorta<T> value) contrasenaCorta,
+    required TResult Function(ContrasenaVacia<T> value) contrasenaVacia,
+    required TResult Function(ContrasenaLarga<T> value) contrasenaLarga,
+    required TResult Function(ContrasenaCaracterEspecial<T> value)
+        contrasenaSinCaracterEspecial,
+    required TResult Function(ContrasenaSinMayuscula<T> value)
+        contrasenaSinMayuscula,
+    required TResult Function(ContrasenaSinMinuscula<T> value)
+        contrasenaSinMinuscula,
+    required TResult Function(ContrasenaSinNumero<T> value) contrasenaSinNumero,
     required TResult Function(StringVacio<T> value) stringVacio,
     required TResult Function(LongitudInvalida<T> value) longitudInvalida,
     required TResult Function(SueldoInvalida<T> value) sueldoInvalido,
@@ -465,6 +553,13 @@ class _$EmailInvalido<T> implements EmailInvalido<T> {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(EmailInvalido<T> value)? emailInvalido,
     TResult Function(ContrasenaCorta<T> value)? contrasenaCorta,
+    TResult Function(ContrasenaVacia<T> value)? contrasenaVacia,
+    TResult Function(ContrasenaLarga<T> value)? contrasenaLarga,
+    TResult Function(ContrasenaCaracterEspecial<T> value)?
+        contrasenaSinCaracterEspecial,
+    TResult Function(ContrasenaSinMayuscula<T> value)? contrasenaSinMayuscula,
+    TResult Function(ContrasenaSinMinuscula<T> value)? contrasenaSinMinuscula,
+    TResult Function(ContrasenaSinNumero<T> value)? contrasenaSinNumero,
     TResult Function(StringVacio<T> value)? stringVacio,
     TResult Function(LongitudInvalida<T> value)? longitudInvalida,
     TResult Function(SueldoInvalida<T> value)? sueldoInvalido,
@@ -574,6 +669,12 @@ class _$ContrasenaCorta<T> implements ContrasenaCorta<T> {
   TResult when<TResult extends Object?>({
     required TResult Function(T valorErroneo) emailInvalido,
     required TResult Function(T valorErroneo) contrasenaCorta,
+    required TResult Function(T valorErroneo) contrasenaVacia,
+    required TResult Function(T valorErroneo) contrasenaLarga,
+    required TResult Function(T valorErroneo) contrasenaSinCaracterEspecial,
+    required TResult Function(T valorErroneo) contrasenaSinMayuscula,
+    required TResult Function(T valorErroneo) contrasenaSinMinuscula,
+    required TResult Function(T valorErroneo) contrasenaSinNumero,
     required TResult Function(T valorErroneo) stringVacio,
     required TResult Function(T valorErroneo, int min, int max)
         longitudInvalida,
@@ -606,6 +707,12 @@ class _$ContrasenaCorta<T> implements ContrasenaCorta<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(T valorErroneo)? emailInvalido,
     TResult Function(T valorErroneo)? contrasenaCorta,
+    TResult Function(T valorErroneo)? contrasenaVacia,
+    TResult Function(T valorErroneo)? contrasenaLarga,
+    TResult Function(T valorErroneo)? contrasenaSinCaracterEspecial,
+    TResult Function(T valorErroneo)? contrasenaSinMayuscula,
+    TResult Function(T valorErroneo)? contrasenaSinMinuscula,
+    TResult Function(T valorErroneo)? contrasenaSinNumero,
     TResult Function(T valorErroneo)? stringVacio,
     TResult Function(T valorErroneo, int min, int max)? longitudInvalida,
     TResult Function(T valorErroneo, double max)? sueldoInvalido,
@@ -640,6 +747,15 @@ class _$ContrasenaCorta<T> implements ContrasenaCorta<T> {
   TResult map<TResult extends Object?>({
     required TResult Function(EmailInvalido<T> value) emailInvalido,
     required TResult Function(ContrasenaCorta<T> value) contrasenaCorta,
+    required TResult Function(ContrasenaVacia<T> value) contrasenaVacia,
+    required TResult Function(ContrasenaLarga<T> value) contrasenaLarga,
+    required TResult Function(ContrasenaCaracterEspecial<T> value)
+        contrasenaSinCaracterEspecial,
+    required TResult Function(ContrasenaSinMayuscula<T> value)
+        contrasenaSinMayuscula,
+    required TResult Function(ContrasenaSinMinuscula<T> value)
+        contrasenaSinMinuscula,
+    required TResult Function(ContrasenaSinNumero<T> value) contrasenaSinNumero,
     required TResult Function(StringVacio<T> value) stringVacio,
     required TResult Function(LongitudInvalida<T> value) longitudInvalida,
     required TResult Function(SueldoInvalida<T> value) sueldoInvalido,
@@ -674,6 +790,13 @@ class _$ContrasenaCorta<T> implements ContrasenaCorta<T> {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(EmailInvalido<T> value)? emailInvalido,
     TResult Function(ContrasenaCorta<T> value)? contrasenaCorta,
+    TResult Function(ContrasenaVacia<T> value)? contrasenaVacia,
+    TResult Function(ContrasenaLarga<T> value)? contrasenaLarga,
+    TResult Function(ContrasenaCaracterEspecial<T> value)?
+        contrasenaSinCaracterEspecial,
+    TResult Function(ContrasenaSinMayuscula<T> value)? contrasenaSinMayuscula,
+    TResult Function(ContrasenaSinMinuscula<T> value)? contrasenaSinMinuscula,
+    TResult Function(ContrasenaSinNumero<T> value)? contrasenaSinNumero,
     TResult Function(StringVacio<T> value)? stringVacio,
     TResult Function(LongitudInvalida<T> value)? longitudInvalida,
     TResult Function(SueldoInvalida<T> value)? sueldoInvalido,
@@ -713,6 +836,1442 @@ abstract class ContrasenaCorta<T> implements ValorErroneo<T> {
   T get valorErroneo => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $ContrasenaCortaCopyWith<T, ContrasenaCorta<T>> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ContrasenaVaciaCopyWith<T, $Res> {
+  factory $ContrasenaVaciaCopyWith(
+          ContrasenaVacia<T> value, $Res Function(ContrasenaVacia<T>) then) =
+      _$ContrasenaVaciaCopyWithImpl<T, $Res>;
+  $Res call({T valorErroneo});
+}
+
+/// @nodoc
+class _$ContrasenaVaciaCopyWithImpl<T, $Res>
+    extends _$ValorErroneoCopyWithImpl<T, $Res>
+    implements $ContrasenaVaciaCopyWith<T, $Res> {
+  _$ContrasenaVaciaCopyWithImpl(
+      ContrasenaVacia<T> _value, $Res Function(ContrasenaVacia<T>) _then)
+      : super(_value, (v) => _then(v as ContrasenaVacia<T>));
+
+  @override
+  ContrasenaVacia<T> get _value => super._value as ContrasenaVacia<T>;
+
+  @override
+  $Res call({
+    Object? valorErroneo = freezed,
+  }) {
+    return _then(ContrasenaVacia<T>(
+      valorErroneo: valorErroneo == freezed
+          ? _value.valorErroneo
+          : valorErroneo // ignore: cast_nullable_to_non_nullable
+              as T,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ContrasenaVacia<T> implements ContrasenaVacia<T> {
+  const _$ContrasenaVacia({required this.valorErroneo});
+
+  @override
+  final T valorErroneo;
+
+  @override
+  String toString() {
+    return 'ValorErroneo<$T>.contrasenaVacia(valorErroneo: $valorErroneo)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is ContrasenaVacia<T> &&
+            (identical(other.valorErroneo, valorErroneo) ||
+                const DeepCollectionEquality()
+                    .equals(other.valorErroneo, valorErroneo)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(valorErroneo);
+
+  @JsonKey(ignore: true)
+  @override
+  $ContrasenaVaciaCopyWith<T, ContrasenaVacia<T>> get copyWith =>
+      _$ContrasenaVaciaCopyWithImpl<T, ContrasenaVacia<T>>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(T valorErroneo) emailInvalido,
+    required TResult Function(T valorErroneo) contrasenaCorta,
+    required TResult Function(T valorErroneo) contrasenaVacia,
+    required TResult Function(T valorErroneo) contrasenaLarga,
+    required TResult Function(T valorErroneo) contrasenaSinCaracterEspecial,
+    required TResult Function(T valorErroneo) contrasenaSinMayuscula,
+    required TResult Function(T valorErroneo) contrasenaSinMinuscula,
+    required TResult Function(T valorErroneo) contrasenaSinNumero,
+    required TResult Function(T valorErroneo) stringVacio,
+    required TResult Function(T valorErroneo, int min, int max)
+        longitudInvalida,
+    required TResult Function(T valorErroneo, double max) sueldoInvalido,
+    required TResult Function(T valorErroneo) sueldoVacio,
+    required TResult Function(T fechaErronea) fechaNula,
+    required TResult Function(T numVacantesInvalido) numVacantesInvalido,
+    required TResult Function(T valorErroneo) numVacantesNoVacia,
+    required TResult Function(T valorErroneo, List<String> turnosValidos)
+        turnoInvalido,
+    required TResult Function(T valorErroneo, List<String> generosValidos)
+        generoInvalido,
+    required TResult Function(T fechaErronea) fechaNacimientoMenorEdad,
+    required TResult Function(T numeroErroneo) numeroTelefonicoInvalido,
+    required TResult Function(T numeroErroneo) numeroTelefonicoVacio,
+    required TResult Function(T valorErroneo, List<String> turnosValidos)
+        estadoOfertaInvalido,
+    required TResult Function(T valorInvalido, int minValor, int maxValor)
+        duracionEstimadaValorInvalido,
+    required TResult Function(T valorInvalido) duracionEstimadaValorVacio,
+    required TResult Function(T escalaInvalida, List<String> escalasValidas)
+        duractionEstimadaEscalaInvalida,
+    required TResult Function(T valorInvalido) duracionEstimadaEscalaVacia,
+  }) {
+    return contrasenaVacia(valorErroneo);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(T valorErroneo)? emailInvalido,
+    TResult Function(T valorErroneo)? contrasenaCorta,
+    TResult Function(T valorErroneo)? contrasenaVacia,
+    TResult Function(T valorErroneo)? contrasenaLarga,
+    TResult Function(T valorErroneo)? contrasenaSinCaracterEspecial,
+    TResult Function(T valorErroneo)? contrasenaSinMayuscula,
+    TResult Function(T valorErroneo)? contrasenaSinMinuscula,
+    TResult Function(T valorErroneo)? contrasenaSinNumero,
+    TResult Function(T valorErroneo)? stringVacio,
+    TResult Function(T valorErroneo, int min, int max)? longitudInvalida,
+    TResult Function(T valorErroneo, double max)? sueldoInvalido,
+    TResult Function(T valorErroneo)? sueldoVacio,
+    TResult Function(T fechaErronea)? fechaNula,
+    TResult Function(T numVacantesInvalido)? numVacantesInvalido,
+    TResult Function(T valorErroneo)? numVacantesNoVacia,
+    TResult Function(T valorErroneo, List<String> turnosValidos)? turnoInvalido,
+    TResult Function(T valorErroneo, List<String> generosValidos)?
+        generoInvalido,
+    TResult Function(T fechaErronea)? fechaNacimientoMenorEdad,
+    TResult Function(T numeroErroneo)? numeroTelefonicoInvalido,
+    TResult Function(T numeroErroneo)? numeroTelefonicoVacio,
+    TResult Function(T valorErroneo, List<String> turnosValidos)?
+        estadoOfertaInvalido,
+    TResult Function(T valorInvalido, int minValor, int maxValor)?
+        duracionEstimadaValorInvalido,
+    TResult Function(T valorInvalido)? duracionEstimadaValorVacio,
+    TResult Function(T escalaInvalida, List<String> escalasValidas)?
+        duractionEstimadaEscalaInvalida,
+    TResult Function(T valorInvalido)? duracionEstimadaEscalaVacia,
+    required TResult orElse(),
+  }) {
+    if (contrasenaVacia != null) {
+      return contrasenaVacia(valorErroneo);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(EmailInvalido<T> value) emailInvalido,
+    required TResult Function(ContrasenaCorta<T> value) contrasenaCorta,
+    required TResult Function(ContrasenaVacia<T> value) contrasenaVacia,
+    required TResult Function(ContrasenaLarga<T> value) contrasenaLarga,
+    required TResult Function(ContrasenaCaracterEspecial<T> value)
+        contrasenaSinCaracterEspecial,
+    required TResult Function(ContrasenaSinMayuscula<T> value)
+        contrasenaSinMayuscula,
+    required TResult Function(ContrasenaSinMinuscula<T> value)
+        contrasenaSinMinuscula,
+    required TResult Function(ContrasenaSinNumero<T> value) contrasenaSinNumero,
+    required TResult Function(StringVacio<T> value) stringVacio,
+    required TResult Function(LongitudInvalida<T> value) longitudInvalida,
+    required TResult Function(SueldoInvalida<T> value) sueldoInvalido,
+    required TResult Function(SueldoVacio<T> value) sueldoVacio,
+    required TResult Function(FechaNula<T> value) fechaNula,
+    required TResult Function(NumVacantesInvalido<T> value) numVacantesInvalido,
+    required TResult Function(NumVacantesNoVacia<T> value) numVacantesNoVacia,
+    required TResult Function(TurnoInvalido<T> value) turnoInvalido,
+    required TResult Function(GeneroInvalido<T> value) generoInvalido,
+    required TResult Function(FechaNacimientoMenorEdad<T> value)
+        fechaNacimientoMenorEdad,
+    required TResult Function(NumeroTelefonicoInvalido<T> value)
+        numeroTelefonicoInvalido,
+    required TResult Function(NumeroTelefonicoVacio<T> value)
+        numeroTelefonicoVacio,
+    required TResult Function(EstadoOfertaInvalido<T> value)
+        estadoOfertaInvalido,
+    required TResult Function(DuracionEstimadaValorInvalido<T> value)
+        duracionEstimadaValorInvalido,
+    required TResult Function(DuracionEstimadaValorVacio<T> value)
+        duracionEstimadaValorVacio,
+    required TResult Function(DuractionEstimadaEscalaInvalida<T> value)
+        duractionEstimadaEscalaInvalida,
+    required TResult Function(DuracionEstimadaEscalaVacia<T> value)
+        duracionEstimadaEscalaVacia,
+  }) {
+    return contrasenaVacia(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(EmailInvalido<T> value)? emailInvalido,
+    TResult Function(ContrasenaCorta<T> value)? contrasenaCorta,
+    TResult Function(ContrasenaVacia<T> value)? contrasenaVacia,
+    TResult Function(ContrasenaLarga<T> value)? contrasenaLarga,
+    TResult Function(ContrasenaCaracterEspecial<T> value)?
+        contrasenaSinCaracterEspecial,
+    TResult Function(ContrasenaSinMayuscula<T> value)? contrasenaSinMayuscula,
+    TResult Function(ContrasenaSinMinuscula<T> value)? contrasenaSinMinuscula,
+    TResult Function(ContrasenaSinNumero<T> value)? contrasenaSinNumero,
+    TResult Function(StringVacio<T> value)? stringVacio,
+    TResult Function(LongitudInvalida<T> value)? longitudInvalida,
+    TResult Function(SueldoInvalida<T> value)? sueldoInvalido,
+    TResult Function(SueldoVacio<T> value)? sueldoVacio,
+    TResult Function(FechaNula<T> value)? fechaNula,
+    TResult Function(NumVacantesInvalido<T> value)? numVacantesInvalido,
+    TResult Function(NumVacantesNoVacia<T> value)? numVacantesNoVacia,
+    TResult Function(TurnoInvalido<T> value)? turnoInvalido,
+    TResult Function(GeneroInvalido<T> value)? generoInvalido,
+    TResult Function(FechaNacimientoMenorEdad<T> value)?
+        fechaNacimientoMenorEdad,
+    TResult Function(NumeroTelefonicoInvalido<T> value)?
+        numeroTelefonicoInvalido,
+    TResult Function(NumeroTelefonicoVacio<T> value)? numeroTelefonicoVacio,
+    TResult Function(EstadoOfertaInvalido<T> value)? estadoOfertaInvalido,
+    TResult Function(DuracionEstimadaValorInvalido<T> value)?
+        duracionEstimadaValorInvalido,
+    TResult Function(DuracionEstimadaValorVacio<T> value)?
+        duracionEstimadaValorVacio,
+    TResult Function(DuractionEstimadaEscalaInvalida<T> value)?
+        duractionEstimadaEscalaInvalida,
+    TResult Function(DuracionEstimadaEscalaVacia<T> value)?
+        duracionEstimadaEscalaVacia,
+    required TResult orElse(),
+  }) {
+    if (contrasenaVacia != null) {
+      return contrasenaVacia(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ContrasenaVacia<T> implements ValorErroneo<T> {
+  const factory ContrasenaVacia({required T valorErroneo}) =
+      _$ContrasenaVacia<T>;
+
+  T get valorErroneo => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ContrasenaVaciaCopyWith<T, ContrasenaVacia<T>> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ContrasenaLargaCopyWith<T, $Res> {
+  factory $ContrasenaLargaCopyWith(
+          ContrasenaLarga<T> value, $Res Function(ContrasenaLarga<T>) then) =
+      _$ContrasenaLargaCopyWithImpl<T, $Res>;
+  $Res call({T valorErroneo});
+}
+
+/// @nodoc
+class _$ContrasenaLargaCopyWithImpl<T, $Res>
+    extends _$ValorErroneoCopyWithImpl<T, $Res>
+    implements $ContrasenaLargaCopyWith<T, $Res> {
+  _$ContrasenaLargaCopyWithImpl(
+      ContrasenaLarga<T> _value, $Res Function(ContrasenaLarga<T>) _then)
+      : super(_value, (v) => _then(v as ContrasenaLarga<T>));
+
+  @override
+  ContrasenaLarga<T> get _value => super._value as ContrasenaLarga<T>;
+
+  @override
+  $Res call({
+    Object? valorErroneo = freezed,
+  }) {
+    return _then(ContrasenaLarga<T>(
+      valorErroneo: valorErroneo == freezed
+          ? _value.valorErroneo
+          : valorErroneo // ignore: cast_nullable_to_non_nullable
+              as T,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ContrasenaLarga<T> implements ContrasenaLarga<T> {
+  const _$ContrasenaLarga({required this.valorErroneo});
+
+  @override
+  final T valorErroneo;
+
+  @override
+  String toString() {
+    return 'ValorErroneo<$T>.contrasenaLarga(valorErroneo: $valorErroneo)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is ContrasenaLarga<T> &&
+            (identical(other.valorErroneo, valorErroneo) ||
+                const DeepCollectionEquality()
+                    .equals(other.valorErroneo, valorErroneo)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(valorErroneo);
+
+  @JsonKey(ignore: true)
+  @override
+  $ContrasenaLargaCopyWith<T, ContrasenaLarga<T>> get copyWith =>
+      _$ContrasenaLargaCopyWithImpl<T, ContrasenaLarga<T>>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(T valorErroneo) emailInvalido,
+    required TResult Function(T valorErroneo) contrasenaCorta,
+    required TResult Function(T valorErroneo) contrasenaVacia,
+    required TResult Function(T valorErroneo) contrasenaLarga,
+    required TResult Function(T valorErroneo) contrasenaSinCaracterEspecial,
+    required TResult Function(T valorErroneo) contrasenaSinMayuscula,
+    required TResult Function(T valorErroneo) contrasenaSinMinuscula,
+    required TResult Function(T valorErroneo) contrasenaSinNumero,
+    required TResult Function(T valorErroneo) stringVacio,
+    required TResult Function(T valorErroneo, int min, int max)
+        longitudInvalida,
+    required TResult Function(T valorErroneo, double max) sueldoInvalido,
+    required TResult Function(T valorErroneo) sueldoVacio,
+    required TResult Function(T fechaErronea) fechaNula,
+    required TResult Function(T numVacantesInvalido) numVacantesInvalido,
+    required TResult Function(T valorErroneo) numVacantesNoVacia,
+    required TResult Function(T valorErroneo, List<String> turnosValidos)
+        turnoInvalido,
+    required TResult Function(T valorErroneo, List<String> generosValidos)
+        generoInvalido,
+    required TResult Function(T fechaErronea) fechaNacimientoMenorEdad,
+    required TResult Function(T numeroErroneo) numeroTelefonicoInvalido,
+    required TResult Function(T numeroErroneo) numeroTelefonicoVacio,
+    required TResult Function(T valorErroneo, List<String> turnosValidos)
+        estadoOfertaInvalido,
+    required TResult Function(T valorInvalido, int minValor, int maxValor)
+        duracionEstimadaValorInvalido,
+    required TResult Function(T valorInvalido) duracionEstimadaValorVacio,
+    required TResult Function(T escalaInvalida, List<String> escalasValidas)
+        duractionEstimadaEscalaInvalida,
+    required TResult Function(T valorInvalido) duracionEstimadaEscalaVacia,
+  }) {
+    return contrasenaLarga(valorErroneo);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(T valorErroneo)? emailInvalido,
+    TResult Function(T valorErroneo)? contrasenaCorta,
+    TResult Function(T valorErroneo)? contrasenaVacia,
+    TResult Function(T valorErroneo)? contrasenaLarga,
+    TResult Function(T valorErroneo)? contrasenaSinCaracterEspecial,
+    TResult Function(T valorErroneo)? contrasenaSinMayuscula,
+    TResult Function(T valorErroneo)? contrasenaSinMinuscula,
+    TResult Function(T valorErroneo)? contrasenaSinNumero,
+    TResult Function(T valorErroneo)? stringVacio,
+    TResult Function(T valorErroneo, int min, int max)? longitudInvalida,
+    TResult Function(T valorErroneo, double max)? sueldoInvalido,
+    TResult Function(T valorErroneo)? sueldoVacio,
+    TResult Function(T fechaErronea)? fechaNula,
+    TResult Function(T numVacantesInvalido)? numVacantesInvalido,
+    TResult Function(T valorErroneo)? numVacantesNoVacia,
+    TResult Function(T valorErroneo, List<String> turnosValidos)? turnoInvalido,
+    TResult Function(T valorErroneo, List<String> generosValidos)?
+        generoInvalido,
+    TResult Function(T fechaErronea)? fechaNacimientoMenorEdad,
+    TResult Function(T numeroErroneo)? numeroTelefonicoInvalido,
+    TResult Function(T numeroErroneo)? numeroTelefonicoVacio,
+    TResult Function(T valorErroneo, List<String> turnosValidos)?
+        estadoOfertaInvalido,
+    TResult Function(T valorInvalido, int minValor, int maxValor)?
+        duracionEstimadaValorInvalido,
+    TResult Function(T valorInvalido)? duracionEstimadaValorVacio,
+    TResult Function(T escalaInvalida, List<String> escalasValidas)?
+        duractionEstimadaEscalaInvalida,
+    TResult Function(T valorInvalido)? duracionEstimadaEscalaVacia,
+    required TResult orElse(),
+  }) {
+    if (contrasenaLarga != null) {
+      return contrasenaLarga(valorErroneo);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(EmailInvalido<T> value) emailInvalido,
+    required TResult Function(ContrasenaCorta<T> value) contrasenaCorta,
+    required TResult Function(ContrasenaVacia<T> value) contrasenaVacia,
+    required TResult Function(ContrasenaLarga<T> value) contrasenaLarga,
+    required TResult Function(ContrasenaCaracterEspecial<T> value)
+        contrasenaSinCaracterEspecial,
+    required TResult Function(ContrasenaSinMayuscula<T> value)
+        contrasenaSinMayuscula,
+    required TResult Function(ContrasenaSinMinuscula<T> value)
+        contrasenaSinMinuscula,
+    required TResult Function(ContrasenaSinNumero<T> value) contrasenaSinNumero,
+    required TResult Function(StringVacio<T> value) stringVacio,
+    required TResult Function(LongitudInvalida<T> value) longitudInvalida,
+    required TResult Function(SueldoInvalida<T> value) sueldoInvalido,
+    required TResult Function(SueldoVacio<T> value) sueldoVacio,
+    required TResult Function(FechaNula<T> value) fechaNula,
+    required TResult Function(NumVacantesInvalido<T> value) numVacantesInvalido,
+    required TResult Function(NumVacantesNoVacia<T> value) numVacantesNoVacia,
+    required TResult Function(TurnoInvalido<T> value) turnoInvalido,
+    required TResult Function(GeneroInvalido<T> value) generoInvalido,
+    required TResult Function(FechaNacimientoMenorEdad<T> value)
+        fechaNacimientoMenorEdad,
+    required TResult Function(NumeroTelefonicoInvalido<T> value)
+        numeroTelefonicoInvalido,
+    required TResult Function(NumeroTelefonicoVacio<T> value)
+        numeroTelefonicoVacio,
+    required TResult Function(EstadoOfertaInvalido<T> value)
+        estadoOfertaInvalido,
+    required TResult Function(DuracionEstimadaValorInvalido<T> value)
+        duracionEstimadaValorInvalido,
+    required TResult Function(DuracionEstimadaValorVacio<T> value)
+        duracionEstimadaValorVacio,
+    required TResult Function(DuractionEstimadaEscalaInvalida<T> value)
+        duractionEstimadaEscalaInvalida,
+    required TResult Function(DuracionEstimadaEscalaVacia<T> value)
+        duracionEstimadaEscalaVacia,
+  }) {
+    return contrasenaLarga(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(EmailInvalido<T> value)? emailInvalido,
+    TResult Function(ContrasenaCorta<T> value)? contrasenaCorta,
+    TResult Function(ContrasenaVacia<T> value)? contrasenaVacia,
+    TResult Function(ContrasenaLarga<T> value)? contrasenaLarga,
+    TResult Function(ContrasenaCaracterEspecial<T> value)?
+        contrasenaSinCaracterEspecial,
+    TResult Function(ContrasenaSinMayuscula<T> value)? contrasenaSinMayuscula,
+    TResult Function(ContrasenaSinMinuscula<T> value)? contrasenaSinMinuscula,
+    TResult Function(ContrasenaSinNumero<T> value)? contrasenaSinNumero,
+    TResult Function(StringVacio<T> value)? stringVacio,
+    TResult Function(LongitudInvalida<T> value)? longitudInvalida,
+    TResult Function(SueldoInvalida<T> value)? sueldoInvalido,
+    TResult Function(SueldoVacio<T> value)? sueldoVacio,
+    TResult Function(FechaNula<T> value)? fechaNula,
+    TResult Function(NumVacantesInvalido<T> value)? numVacantesInvalido,
+    TResult Function(NumVacantesNoVacia<T> value)? numVacantesNoVacia,
+    TResult Function(TurnoInvalido<T> value)? turnoInvalido,
+    TResult Function(GeneroInvalido<T> value)? generoInvalido,
+    TResult Function(FechaNacimientoMenorEdad<T> value)?
+        fechaNacimientoMenorEdad,
+    TResult Function(NumeroTelefonicoInvalido<T> value)?
+        numeroTelefonicoInvalido,
+    TResult Function(NumeroTelefonicoVacio<T> value)? numeroTelefonicoVacio,
+    TResult Function(EstadoOfertaInvalido<T> value)? estadoOfertaInvalido,
+    TResult Function(DuracionEstimadaValorInvalido<T> value)?
+        duracionEstimadaValorInvalido,
+    TResult Function(DuracionEstimadaValorVacio<T> value)?
+        duracionEstimadaValorVacio,
+    TResult Function(DuractionEstimadaEscalaInvalida<T> value)?
+        duractionEstimadaEscalaInvalida,
+    TResult Function(DuracionEstimadaEscalaVacia<T> value)?
+        duracionEstimadaEscalaVacia,
+    required TResult orElse(),
+  }) {
+    if (contrasenaLarga != null) {
+      return contrasenaLarga(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ContrasenaLarga<T> implements ValorErroneo<T> {
+  const factory ContrasenaLarga({required T valorErroneo}) =
+      _$ContrasenaLarga<T>;
+
+  T get valorErroneo => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ContrasenaLargaCopyWith<T, ContrasenaLarga<T>> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ContrasenaCaracterEspecialCopyWith<T, $Res> {
+  factory $ContrasenaCaracterEspecialCopyWith(
+          ContrasenaCaracterEspecial<T> value,
+          $Res Function(ContrasenaCaracterEspecial<T>) then) =
+      _$ContrasenaCaracterEspecialCopyWithImpl<T, $Res>;
+  $Res call({T valorErroneo});
+}
+
+/// @nodoc
+class _$ContrasenaCaracterEspecialCopyWithImpl<T, $Res>
+    extends _$ValorErroneoCopyWithImpl<T, $Res>
+    implements $ContrasenaCaracterEspecialCopyWith<T, $Res> {
+  _$ContrasenaCaracterEspecialCopyWithImpl(ContrasenaCaracterEspecial<T> _value,
+      $Res Function(ContrasenaCaracterEspecial<T>) _then)
+      : super(_value, (v) => _then(v as ContrasenaCaracterEspecial<T>));
+
+  @override
+  ContrasenaCaracterEspecial<T> get _value =>
+      super._value as ContrasenaCaracterEspecial<T>;
+
+  @override
+  $Res call({
+    Object? valorErroneo = freezed,
+  }) {
+    return _then(ContrasenaCaracterEspecial<T>(
+      valorErroneo: valorErroneo == freezed
+          ? _value.valorErroneo
+          : valorErroneo // ignore: cast_nullable_to_non_nullable
+              as T,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ContrasenaCaracterEspecial<T> implements ContrasenaCaracterEspecial<T> {
+  const _$ContrasenaCaracterEspecial({required this.valorErroneo});
+
+  @override
+  final T valorErroneo;
+
+  @override
+  String toString() {
+    return 'ValorErroneo<$T>.contrasenaSinCaracterEspecial(valorErroneo: $valorErroneo)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is ContrasenaCaracterEspecial<T> &&
+            (identical(other.valorErroneo, valorErroneo) ||
+                const DeepCollectionEquality()
+                    .equals(other.valorErroneo, valorErroneo)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(valorErroneo);
+
+  @JsonKey(ignore: true)
+  @override
+  $ContrasenaCaracterEspecialCopyWith<T, ContrasenaCaracterEspecial<T>>
+      get copyWith => _$ContrasenaCaracterEspecialCopyWithImpl<T,
+          ContrasenaCaracterEspecial<T>>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(T valorErroneo) emailInvalido,
+    required TResult Function(T valorErroneo) contrasenaCorta,
+    required TResult Function(T valorErroneo) contrasenaVacia,
+    required TResult Function(T valorErroneo) contrasenaLarga,
+    required TResult Function(T valorErroneo) contrasenaSinCaracterEspecial,
+    required TResult Function(T valorErroneo) contrasenaSinMayuscula,
+    required TResult Function(T valorErroneo) contrasenaSinMinuscula,
+    required TResult Function(T valorErroneo) contrasenaSinNumero,
+    required TResult Function(T valorErroneo) stringVacio,
+    required TResult Function(T valorErroneo, int min, int max)
+        longitudInvalida,
+    required TResult Function(T valorErroneo, double max) sueldoInvalido,
+    required TResult Function(T valorErroneo) sueldoVacio,
+    required TResult Function(T fechaErronea) fechaNula,
+    required TResult Function(T numVacantesInvalido) numVacantesInvalido,
+    required TResult Function(T valorErroneo) numVacantesNoVacia,
+    required TResult Function(T valorErroneo, List<String> turnosValidos)
+        turnoInvalido,
+    required TResult Function(T valorErroneo, List<String> generosValidos)
+        generoInvalido,
+    required TResult Function(T fechaErronea) fechaNacimientoMenorEdad,
+    required TResult Function(T numeroErroneo) numeroTelefonicoInvalido,
+    required TResult Function(T numeroErroneo) numeroTelefonicoVacio,
+    required TResult Function(T valorErroneo, List<String> turnosValidos)
+        estadoOfertaInvalido,
+    required TResult Function(T valorInvalido, int minValor, int maxValor)
+        duracionEstimadaValorInvalido,
+    required TResult Function(T valorInvalido) duracionEstimadaValorVacio,
+    required TResult Function(T escalaInvalida, List<String> escalasValidas)
+        duractionEstimadaEscalaInvalida,
+    required TResult Function(T valorInvalido) duracionEstimadaEscalaVacia,
+  }) {
+    return contrasenaSinCaracterEspecial(valorErroneo);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(T valorErroneo)? emailInvalido,
+    TResult Function(T valorErroneo)? contrasenaCorta,
+    TResult Function(T valorErroneo)? contrasenaVacia,
+    TResult Function(T valorErroneo)? contrasenaLarga,
+    TResult Function(T valorErroneo)? contrasenaSinCaracterEspecial,
+    TResult Function(T valorErroneo)? contrasenaSinMayuscula,
+    TResult Function(T valorErroneo)? contrasenaSinMinuscula,
+    TResult Function(T valorErroneo)? contrasenaSinNumero,
+    TResult Function(T valorErroneo)? stringVacio,
+    TResult Function(T valorErroneo, int min, int max)? longitudInvalida,
+    TResult Function(T valorErroneo, double max)? sueldoInvalido,
+    TResult Function(T valorErroneo)? sueldoVacio,
+    TResult Function(T fechaErronea)? fechaNula,
+    TResult Function(T numVacantesInvalido)? numVacantesInvalido,
+    TResult Function(T valorErroneo)? numVacantesNoVacia,
+    TResult Function(T valorErroneo, List<String> turnosValidos)? turnoInvalido,
+    TResult Function(T valorErroneo, List<String> generosValidos)?
+        generoInvalido,
+    TResult Function(T fechaErronea)? fechaNacimientoMenorEdad,
+    TResult Function(T numeroErroneo)? numeroTelefonicoInvalido,
+    TResult Function(T numeroErroneo)? numeroTelefonicoVacio,
+    TResult Function(T valorErroneo, List<String> turnosValidos)?
+        estadoOfertaInvalido,
+    TResult Function(T valorInvalido, int minValor, int maxValor)?
+        duracionEstimadaValorInvalido,
+    TResult Function(T valorInvalido)? duracionEstimadaValorVacio,
+    TResult Function(T escalaInvalida, List<String> escalasValidas)?
+        duractionEstimadaEscalaInvalida,
+    TResult Function(T valorInvalido)? duracionEstimadaEscalaVacia,
+    required TResult orElse(),
+  }) {
+    if (contrasenaSinCaracterEspecial != null) {
+      return contrasenaSinCaracterEspecial(valorErroneo);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(EmailInvalido<T> value) emailInvalido,
+    required TResult Function(ContrasenaCorta<T> value) contrasenaCorta,
+    required TResult Function(ContrasenaVacia<T> value) contrasenaVacia,
+    required TResult Function(ContrasenaLarga<T> value) contrasenaLarga,
+    required TResult Function(ContrasenaCaracterEspecial<T> value)
+        contrasenaSinCaracterEspecial,
+    required TResult Function(ContrasenaSinMayuscula<T> value)
+        contrasenaSinMayuscula,
+    required TResult Function(ContrasenaSinMinuscula<T> value)
+        contrasenaSinMinuscula,
+    required TResult Function(ContrasenaSinNumero<T> value) contrasenaSinNumero,
+    required TResult Function(StringVacio<T> value) stringVacio,
+    required TResult Function(LongitudInvalida<T> value) longitudInvalida,
+    required TResult Function(SueldoInvalida<T> value) sueldoInvalido,
+    required TResult Function(SueldoVacio<T> value) sueldoVacio,
+    required TResult Function(FechaNula<T> value) fechaNula,
+    required TResult Function(NumVacantesInvalido<T> value) numVacantesInvalido,
+    required TResult Function(NumVacantesNoVacia<T> value) numVacantesNoVacia,
+    required TResult Function(TurnoInvalido<T> value) turnoInvalido,
+    required TResult Function(GeneroInvalido<T> value) generoInvalido,
+    required TResult Function(FechaNacimientoMenorEdad<T> value)
+        fechaNacimientoMenorEdad,
+    required TResult Function(NumeroTelefonicoInvalido<T> value)
+        numeroTelefonicoInvalido,
+    required TResult Function(NumeroTelefonicoVacio<T> value)
+        numeroTelefonicoVacio,
+    required TResult Function(EstadoOfertaInvalido<T> value)
+        estadoOfertaInvalido,
+    required TResult Function(DuracionEstimadaValorInvalido<T> value)
+        duracionEstimadaValorInvalido,
+    required TResult Function(DuracionEstimadaValorVacio<T> value)
+        duracionEstimadaValorVacio,
+    required TResult Function(DuractionEstimadaEscalaInvalida<T> value)
+        duractionEstimadaEscalaInvalida,
+    required TResult Function(DuracionEstimadaEscalaVacia<T> value)
+        duracionEstimadaEscalaVacia,
+  }) {
+    return contrasenaSinCaracterEspecial(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(EmailInvalido<T> value)? emailInvalido,
+    TResult Function(ContrasenaCorta<T> value)? contrasenaCorta,
+    TResult Function(ContrasenaVacia<T> value)? contrasenaVacia,
+    TResult Function(ContrasenaLarga<T> value)? contrasenaLarga,
+    TResult Function(ContrasenaCaracterEspecial<T> value)?
+        contrasenaSinCaracterEspecial,
+    TResult Function(ContrasenaSinMayuscula<T> value)? contrasenaSinMayuscula,
+    TResult Function(ContrasenaSinMinuscula<T> value)? contrasenaSinMinuscula,
+    TResult Function(ContrasenaSinNumero<T> value)? contrasenaSinNumero,
+    TResult Function(StringVacio<T> value)? stringVacio,
+    TResult Function(LongitudInvalida<T> value)? longitudInvalida,
+    TResult Function(SueldoInvalida<T> value)? sueldoInvalido,
+    TResult Function(SueldoVacio<T> value)? sueldoVacio,
+    TResult Function(FechaNula<T> value)? fechaNula,
+    TResult Function(NumVacantesInvalido<T> value)? numVacantesInvalido,
+    TResult Function(NumVacantesNoVacia<T> value)? numVacantesNoVacia,
+    TResult Function(TurnoInvalido<T> value)? turnoInvalido,
+    TResult Function(GeneroInvalido<T> value)? generoInvalido,
+    TResult Function(FechaNacimientoMenorEdad<T> value)?
+        fechaNacimientoMenorEdad,
+    TResult Function(NumeroTelefonicoInvalido<T> value)?
+        numeroTelefonicoInvalido,
+    TResult Function(NumeroTelefonicoVacio<T> value)? numeroTelefonicoVacio,
+    TResult Function(EstadoOfertaInvalido<T> value)? estadoOfertaInvalido,
+    TResult Function(DuracionEstimadaValorInvalido<T> value)?
+        duracionEstimadaValorInvalido,
+    TResult Function(DuracionEstimadaValorVacio<T> value)?
+        duracionEstimadaValorVacio,
+    TResult Function(DuractionEstimadaEscalaInvalida<T> value)?
+        duractionEstimadaEscalaInvalida,
+    TResult Function(DuracionEstimadaEscalaVacia<T> value)?
+        duracionEstimadaEscalaVacia,
+    required TResult orElse(),
+  }) {
+    if (contrasenaSinCaracterEspecial != null) {
+      return contrasenaSinCaracterEspecial(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ContrasenaCaracterEspecial<T> implements ValorErroneo<T> {
+  const factory ContrasenaCaracterEspecial({required T valorErroneo}) =
+      _$ContrasenaCaracterEspecial<T>;
+
+  T get valorErroneo => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ContrasenaCaracterEspecialCopyWith<T, ContrasenaCaracterEspecial<T>>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ContrasenaSinMayusculaCopyWith<T, $Res> {
+  factory $ContrasenaSinMayusculaCopyWith(ContrasenaSinMayuscula<T> value,
+          $Res Function(ContrasenaSinMayuscula<T>) then) =
+      _$ContrasenaSinMayusculaCopyWithImpl<T, $Res>;
+  $Res call({T valorErroneo});
+}
+
+/// @nodoc
+class _$ContrasenaSinMayusculaCopyWithImpl<T, $Res>
+    extends _$ValorErroneoCopyWithImpl<T, $Res>
+    implements $ContrasenaSinMayusculaCopyWith<T, $Res> {
+  _$ContrasenaSinMayusculaCopyWithImpl(ContrasenaSinMayuscula<T> _value,
+      $Res Function(ContrasenaSinMayuscula<T>) _then)
+      : super(_value, (v) => _then(v as ContrasenaSinMayuscula<T>));
+
+  @override
+  ContrasenaSinMayuscula<T> get _value =>
+      super._value as ContrasenaSinMayuscula<T>;
+
+  @override
+  $Res call({
+    Object? valorErroneo = freezed,
+  }) {
+    return _then(ContrasenaSinMayuscula<T>(
+      valorErroneo: valorErroneo == freezed
+          ? _value.valorErroneo
+          : valorErroneo // ignore: cast_nullable_to_non_nullable
+              as T,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ContrasenaSinMayuscula<T> implements ContrasenaSinMayuscula<T> {
+  const _$ContrasenaSinMayuscula({required this.valorErroneo});
+
+  @override
+  final T valorErroneo;
+
+  @override
+  String toString() {
+    return 'ValorErroneo<$T>.contrasenaSinMayuscula(valorErroneo: $valorErroneo)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is ContrasenaSinMayuscula<T> &&
+            (identical(other.valorErroneo, valorErroneo) ||
+                const DeepCollectionEquality()
+                    .equals(other.valorErroneo, valorErroneo)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(valorErroneo);
+
+  @JsonKey(ignore: true)
+  @override
+  $ContrasenaSinMayusculaCopyWith<T, ContrasenaSinMayuscula<T>> get copyWith =>
+      _$ContrasenaSinMayusculaCopyWithImpl<T, ContrasenaSinMayuscula<T>>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(T valorErroneo) emailInvalido,
+    required TResult Function(T valorErroneo) contrasenaCorta,
+    required TResult Function(T valorErroneo) contrasenaVacia,
+    required TResult Function(T valorErroneo) contrasenaLarga,
+    required TResult Function(T valorErroneo) contrasenaSinCaracterEspecial,
+    required TResult Function(T valorErroneo) contrasenaSinMayuscula,
+    required TResult Function(T valorErroneo) contrasenaSinMinuscula,
+    required TResult Function(T valorErroneo) contrasenaSinNumero,
+    required TResult Function(T valorErroneo) stringVacio,
+    required TResult Function(T valorErroneo, int min, int max)
+        longitudInvalida,
+    required TResult Function(T valorErroneo, double max) sueldoInvalido,
+    required TResult Function(T valorErroneo) sueldoVacio,
+    required TResult Function(T fechaErronea) fechaNula,
+    required TResult Function(T numVacantesInvalido) numVacantesInvalido,
+    required TResult Function(T valorErroneo) numVacantesNoVacia,
+    required TResult Function(T valorErroneo, List<String> turnosValidos)
+        turnoInvalido,
+    required TResult Function(T valorErroneo, List<String> generosValidos)
+        generoInvalido,
+    required TResult Function(T fechaErronea) fechaNacimientoMenorEdad,
+    required TResult Function(T numeroErroneo) numeroTelefonicoInvalido,
+    required TResult Function(T numeroErroneo) numeroTelefonicoVacio,
+    required TResult Function(T valorErroneo, List<String> turnosValidos)
+        estadoOfertaInvalido,
+    required TResult Function(T valorInvalido, int minValor, int maxValor)
+        duracionEstimadaValorInvalido,
+    required TResult Function(T valorInvalido) duracionEstimadaValorVacio,
+    required TResult Function(T escalaInvalida, List<String> escalasValidas)
+        duractionEstimadaEscalaInvalida,
+    required TResult Function(T valorInvalido) duracionEstimadaEscalaVacia,
+  }) {
+    return contrasenaSinMayuscula(valorErroneo);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(T valorErroneo)? emailInvalido,
+    TResult Function(T valorErroneo)? contrasenaCorta,
+    TResult Function(T valorErroneo)? contrasenaVacia,
+    TResult Function(T valorErroneo)? contrasenaLarga,
+    TResult Function(T valorErroneo)? contrasenaSinCaracterEspecial,
+    TResult Function(T valorErroneo)? contrasenaSinMayuscula,
+    TResult Function(T valorErroneo)? contrasenaSinMinuscula,
+    TResult Function(T valorErroneo)? contrasenaSinNumero,
+    TResult Function(T valorErroneo)? stringVacio,
+    TResult Function(T valorErroneo, int min, int max)? longitudInvalida,
+    TResult Function(T valorErroneo, double max)? sueldoInvalido,
+    TResult Function(T valorErroneo)? sueldoVacio,
+    TResult Function(T fechaErronea)? fechaNula,
+    TResult Function(T numVacantesInvalido)? numVacantesInvalido,
+    TResult Function(T valorErroneo)? numVacantesNoVacia,
+    TResult Function(T valorErroneo, List<String> turnosValidos)? turnoInvalido,
+    TResult Function(T valorErroneo, List<String> generosValidos)?
+        generoInvalido,
+    TResult Function(T fechaErronea)? fechaNacimientoMenorEdad,
+    TResult Function(T numeroErroneo)? numeroTelefonicoInvalido,
+    TResult Function(T numeroErroneo)? numeroTelefonicoVacio,
+    TResult Function(T valorErroneo, List<String> turnosValidos)?
+        estadoOfertaInvalido,
+    TResult Function(T valorInvalido, int minValor, int maxValor)?
+        duracionEstimadaValorInvalido,
+    TResult Function(T valorInvalido)? duracionEstimadaValorVacio,
+    TResult Function(T escalaInvalida, List<String> escalasValidas)?
+        duractionEstimadaEscalaInvalida,
+    TResult Function(T valorInvalido)? duracionEstimadaEscalaVacia,
+    required TResult orElse(),
+  }) {
+    if (contrasenaSinMayuscula != null) {
+      return contrasenaSinMayuscula(valorErroneo);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(EmailInvalido<T> value) emailInvalido,
+    required TResult Function(ContrasenaCorta<T> value) contrasenaCorta,
+    required TResult Function(ContrasenaVacia<T> value) contrasenaVacia,
+    required TResult Function(ContrasenaLarga<T> value) contrasenaLarga,
+    required TResult Function(ContrasenaCaracterEspecial<T> value)
+        contrasenaSinCaracterEspecial,
+    required TResult Function(ContrasenaSinMayuscula<T> value)
+        contrasenaSinMayuscula,
+    required TResult Function(ContrasenaSinMinuscula<T> value)
+        contrasenaSinMinuscula,
+    required TResult Function(ContrasenaSinNumero<T> value) contrasenaSinNumero,
+    required TResult Function(StringVacio<T> value) stringVacio,
+    required TResult Function(LongitudInvalida<T> value) longitudInvalida,
+    required TResult Function(SueldoInvalida<T> value) sueldoInvalido,
+    required TResult Function(SueldoVacio<T> value) sueldoVacio,
+    required TResult Function(FechaNula<T> value) fechaNula,
+    required TResult Function(NumVacantesInvalido<T> value) numVacantesInvalido,
+    required TResult Function(NumVacantesNoVacia<T> value) numVacantesNoVacia,
+    required TResult Function(TurnoInvalido<T> value) turnoInvalido,
+    required TResult Function(GeneroInvalido<T> value) generoInvalido,
+    required TResult Function(FechaNacimientoMenorEdad<T> value)
+        fechaNacimientoMenorEdad,
+    required TResult Function(NumeroTelefonicoInvalido<T> value)
+        numeroTelefonicoInvalido,
+    required TResult Function(NumeroTelefonicoVacio<T> value)
+        numeroTelefonicoVacio,
+    required TResult Function(EstadoOfertaInvalido<T> value)
+        estadoOfertaInvalido,
+    required TResult Function(DuracionEstimadaValorInvalido<T> value)
+        duracionEstimadaValorInvalido,
+    required TResult Function(DuracionEstimadaValorVacio<T> value)
+        duracionEstimadaValorVacio,
+    required TResult Function(DuractionEstimadaEscalaInvalida<T> value)
+        duractionEstimadaEscalaInvalida,
+    required TResult Function(DuracionEstimadaEscalaVacia<T> value)
+        duracionEstimadaEscalaVacia,
+  }) {
+    return contrasenaSinMayuscula(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(EmailInvalido<T> value)? emailInvalido,
+    TResult Function(ContrasenaCorta<T> value)? contrasenaCorta,
+    TResult Function(ContrasenaVacia<T> value)? contrasenaVacia,
+    TResult Function(ContrasenaLarga<T> value)? contrasenaLarga,
+    TResult Function(ContrasenaCaracterEspecial<T> value)?
+        contrasenaSinCaracterEspecial,
+    TResult Function(ContrasenaSinMayuscula<T> value)? contrasenaSinMayuscula,
+    TResult Function(ContrasenaSinMinuscula<T> value)? contrasenaSinMinuscula,
+    TResult Function(ContrasenaSinNumero<T> value)? contrasenaSinNumero,
+    TResult Function(StringVacio<T> value)? stringVacio,
+    TResult Function(LongitudInvalida<T> value)? longitudInvalida,
+    TResult Function(SueldoInvalida<T> value)? sueldoInvalido,
+    TResult Function(SueldoVacio<T> value)? sueldoVacio,
+    TResult Function(FechaNula<T> value)? fechaNula,
+    TResult Function(NumVacantesInvalido<T> value)? numVacantesInvalido,
+    TResult Function(NumVacantesNoVacia<T> value)? numVacantesNoVacia,
+    TResult Function(TurnoInvalido<T> value)? turnoInvalido,
+    TResult Function(GeneroInvalido<T> value)? generoInvalido,
+    TResult Function(FechaNacimientoMenorEdad<T> value)?
+        fechaNacimientoMenorEdad,
+    TResult Function(NumeroTelefonicoInvalido<T> value)?
+        numeroTelefonicoInvalido,
+    TResult Function(NumeroTelefonicoVacio<T> value)? numeroTelefonicoVacio,
+    TResult Function(EstadoOfertaInvalido<T> value)? estadoOfertaInvalido,
+    TResult Function(DuracionEstimadaValorInvalido<T> value)?
+        duracionEstimadaValorInvalido,
+    TResult Function(DuracionEstimadaValorVacio<T> value)?
+        duracionEstimadaValorVacio,
+    TResult Function(DuractionEstimadaEscalaInvalida<T> value)?
+        duractionEstimadaEscalaInvalida,
+    TResult Function(DuracionEstimadaEscalaVacia<T> value)?
+        duracionEstimadaEscalaVacia,
+    required TResult orElse(),
+  }) {
+    if (contrasenaSinMayuscula != null) {
+      return contrasenaSinMayuscula(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ContrasenaSinMayuscula<T> implements ValorErroneo<T> {
+  const factory ContrasenaSinMayuscula({required T valorErroneo}) =
+      _$ContrasenaSinMayuscula<T>;
+
+  T get valorErroneo => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ContrasenaSinMayusculaCopyWith<T, ContrasenaSinMayuscula<T>> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ContrasenaSinMinusculaCopyWith<T, $Res> {
+  factory $ContrasenaSinMinusculaCopyWith(ContrasenaSinMinuscula<T> value,
+          $Res Function(ContrasenaSinMinuscula<T>) then) =
+      _$ContrasenaSinMinusculaCopyWithImpl<T, $Res>;
+  $Res call({T valorErroneo});
+}
+
+/// @nodoc
+class _$ContrasenaSinMinusculaCopyWithImpl<T, $Res>
+    extends _$ValorErroneoCopyWithImpl<T, $Res>
+    implements $ContrasenaSinMinusculaCopyWith<T, $Res> {
+  _$ContrasenaSinMinusculaCopyWithImpl(ContrasenaSinMinuscula<T> _value,
+      $Res Function(ContrasenaSinMinuscula<T>) _then)
+      : super(_value, (v) => _then(v as ContrasenaSinMinuscula<T>));
+
+  @override
+  ContrasenaSinMinuscula<T> get _value =>
+      super._value as ContrasenaSinMinuscula<T>;
+
+  @override
+  $Res call({
+    Object? valorErroneo = freezed,
+  }) {
+    return _then(ContrasenaSinMinuscula<T>(
+      valorErroneo: valorErroneo == freezed
+          ? _value.valorErroneo
+          : valorErroneo // ignore: cast_nullable_to_non_nullable
+              as T,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ContrasenaSinMinuscula<T> implements ContrasenaSinMinuscula<T> {
+  const _$ContrasenaSinMinuscula({required this.valorErroneo});
+
+  @override
+  final T valorErroneo;
+
+  @override
+  String toString() {
+    return 'ValorErroneo<$T>.contrasenaSinMinuscula(valorErroneo: $valorErroneo)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is ContrasenaSinMinuscula<T> &&
+            (identical(other.valorErroneo, valorErroneo) ||
+                const DeepCollectionEquality()
+                    .equals(other.valorErroneo, valorErroneo)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(valorErroneo);
+
+  @JsonKey(ignore: true)
+  @override
+  $ContrasenaSinMinusculaCopyWith<T, ContrasenaSinMinuscula<T>> get copyWith =>
+      _$ContrasenaSinMinusculaCopyWithImpl<T, ContrasenaSinMinuscula<T>>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(T valorErroneo) emailInvalido,
+    required TResult Function(T valorErroneo) contrasenaCorta,
+    required TResult Function(T valorErroneo) contrasenaVacia,
+    required TResult Function(T valorErroneo) contrasenaLarga,
+    required TResult Function(T valorErroneo) contrasenaSinCaracterEspecial,
+    required TResult Function(T valorErroneo) contrasenaSinMayuscula,
+    required TResult Function(T valorErroneo) contrasenaSinMinuscula,
+    required TResult Function(T valorErroneo) contrasenaSinNumero,
+    required TResult Function(T valorErroneo) stringVacio,
+    required TResult Function(T valorErroneo, int min, int max)
+        longitudInvalida,
+    required TResult Function(T valorErroneo, double max) sueldoInvalido,
+    required TResult Function(T valorErroneo) sueldoVacio,
+    required TResult Function(T fechaErronea) fechaNula,
+    required TResult Function(T numVacantesInvalido) numVacantesInvalido,
+    required TResult Function(T valorErroneo) numVacantesNoVacia,
+    required TResult Function(T valorErroneo, List<String> turnosValidos)
+        turnoInvalido,
+    required TResult Function(T valorErroneo, List<String> generosValidos)
+        generoInvalido,
+    required TResult Function(T fechaErronea) fechaNacimientoMenorEdad,
+    required TResult Function(T numeroErroneo) numeroTelefonicoInvalido,
+    required TResult Function(T numeroErroneo) numeroTelefonicoVacio,
+    required TResult Function(T valorErroneo, List<String> turnosValidos)
+        estadoOfertaInvalido,
+    required TResult Function(T valorInvalido, int minValor, int maxValor)
+        duracionEstimadaValorInvalido,
+    required TResult Function(T valorInvalido) duracionEstimadaValorVacio,
+    required TResult Function(T escalaInvalida, List<String> escalasValidas)
+        duractionEstimadaEscalaInvalida,
+    required TResult Function(T valorInvalido) duracionEstimadaEscalaVacia,
+  }) {
+    return contrasenaSinMinuscula(valorErroneo);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(T valorErroneo)? emailInvalido,
+    TResult Function(T valorErroneo)? contrasenaCorta,
+    TResult Function(T valorErroneo)? contrasenaVacia,
+    TResult Function(T valorErroneo)? contrasenaLarga,
+    TResult Function(T valorErroneo)? contrasenaSinCaracterEspecial,
+    TResult Function(T valorErroneo)? contrasenaSinMayuscula,
+    TResult Function(T valorErroneo)? contrasenaSinMinuscula,
+    TResult Function(T valorErroneo)? contrasenaSinNumero,
+    TResult Function(T valorErroneo)? stringVacio,
+    TResult Function(T valorErroneo, int min, int max)? longitudInvalida,
+    TResult Function(T valorErroneo, double max)? sueldoInvalido,
+    TResult Function(T valorErroneo)? sueldoVacio,
+    TResult Function(T fechaErronea)? fechaNula,
+    TResult Function(T numVacantesInvalido)? numVacantesInvalido,
+    TResult Function(T valorErroneo)? numVacantesNoVacia,
+    TResult Function(T valorErroneo, List<String> turnosValidos)? turnoInvalido,
+    TResult Function(T valorErroneo, List<String> generosValidos)?
+        generoInvalido,
+    TResult Function(T fechaErronea)? fechaNacimientoMenorEdad,
+    TResult Function(T numeroErroneo)? numeroTelefonicoInvalido,
+    TResult Function(T numeroErroneo)? numeroTelefonicoVacio,
+    TResult Function(T valorErroneo, List<String> turnosValidos)?
+        estadoOfertaInvalido,
+    TResult Function(T valorInvalido, int minValor, int maxValor)?
+        duracionEstimadaValorInvalido,
+    TResult Function(T valorInvalido)? duracionEstimadaValorVacio,
+    TResult Function(T escalaInvalida, List<String> escalasValidas)?
+        duractionEstimadaEscalaInvalida,
+    TResult Function(T valorInvalido)? duracionEstimadaEscalaVacia,
+    required TResult orElse(),
+  }) {
+    if (contrasenaSinMinuscula != null) {
+      return contrasenaSinMinuscula(valorErroneo);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(EmailInvalido<T> value) emailInvalido,
+    required TResult Function(ContrasenaCorta<T> value) contrasenaCorta,
+    required TResult Function(ContrasenaVacia<T> value) contrasenaVacia,
+    required TResult Function(ContrasenaLarga<T> value) contrasenaLarga,
+    required TResult Function(ContrasenaCaracterEspecial<T> value)
+        contrasenaSinCaracterEspecial,
+    required TResult Function(ContrasenaSinMayuscula<T> value)
+        contrasenaSinMayuscula,
+    required TResult Function(ContrasenaSinMinuscula<T> value)
+        contrasenaSinMinuscula,
+    required TResult Function(ContrasenaSinNumero<T> value) contrasenaSinNumero,
+    required TResult Function(StringVacio<T> value) stringVacio,
+    required TResult Function(LongitudInvalida<T> value) longitudInvalida,
+    required TResult Function(SueldoInvalida<T> value) sueldoInvalido,
+    required TResult Function(SueldoVacio<T> value) sueldoVacio,
+    required TResult Function(FechaNula<T> value) fechaNula,
+    required TResult Function(NumVacantesInvalido<T> value) numVacantesInvalido,
+    required TResult Function(NumVacantesNoVacia<T> value) numVacantesNoVacia,
+    required TResult Function(TurnoInvalido<T> value) turnoInvalido,
+    required TResult Function(GeneroInvalido<T> value) generoInvalido,
+    required TResult Function(FechaNacimientoMenorEdad<T> value)
+        fechaNacimientoMenorEdad,
+    required TResult Function(NumeroTelefonicoInvalido<T> value)
+        numeroTelefonicoInvalido,
+    required TResult Function(NumeroTelefonicoVacio<T> value)
+        numeroTelefonicoVacio,
+    required TResult Function(EstadoOfertaInvalido<T> value)
+        estadoOfertaInvalido,
+    required TResult Function(DuracionEstimadaValorInvalido<T> value)
+        duracionEstimadaValorInvalido,
+    required TResult Function(DuracionEstimadaValorVacio<T> value)
+        duracionEstimadaValorVacio,
+    required TResult Function(DuractionEstimadaEscalaInvalida<T> value)
+        duractionEstimadaEscalaInvalida,
+    required TResult Function(DuracionEstimadaEscalaVacia<T> value)
+        duracionEstimadaEscalaVacia,
+  }) {
+    return contrasenaSinMinuscula(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(EmailInvalido<T> value)? emailInvalido,
+    TResult Function(ContrasenaCorta<T> value)? contrasenaCorta,
+    TResult Function(ContrasenaVacia<T> value)? contrasenaVacia,
+    TResult Function(ContrasenaLarga<T> value)? contrasenaLarga,
+    TResult Function(ContrasenaCaracterEspecial<T> value)?
+        contrasenaSinCaracterEspecial,
+    TResult Function(ContrasenaSinMayuscula<T> value)? contrasenaSinMayuscula,
+    TResult Function(ContrasenaSinMinuscula<T> value)? contrasenaSinMinuscula,
+    TResult Function(ContrasenaSinNumero<T> value)? contrasenaSinNumero,
+    TResult Function(StringVacio<T> value)? stringVacio,
+    TResult Function(LongitudInvalida<T> value)? longitudInvalida,
+    TResult Function(SueldoInvalida<T> value)? sueldoInvalido,
+    TResult Function(SueldoVacio<T> value)? sueldoVacio,
+    TResult Function(FechaNula<T> value)? fechaNula,
+    TResult Function(NumVacantesInvalido<T> value)? numVacantesInvalido,
+    TResult Function(NumVacantesNoVacia<T> value)? numVacantesNoVacia,
+    TResult Function(TurnoInvalido<T> value)? turnoInvalido,
+    TResult Function(GeneroInvalido<T> value)? generoInvalido,
+    TResult Function(FechaNacimientoMenorEdad<T> value)?
+        fechaNacimientoMenorEdad,
+    TResult Function(NumeroTelefonicoInvalido<T> value)?
+        numeroTelefonicoInvalido,
+    TResult Function(NumeroTelefonicoVacio<T> value)? numeroTelefonicoVacio,
+    TResult Function(EstadoOfertaInvalido<T> value)? estadoOfertaInvalido,
+    TResult Function(DuracionEstimadaValorInvalido<T> value)?
+        duracionEstimadaValorInvalido,
+    TResult Function(DuracionEstimadaValorVacio<T> value)?
+        duracionEstimadaValorVacio,
+    TResult Function(DuractionEstimadaEscalaInvalida<T> value)?
+        duractionEstimadaEscalaInvalida,
+    TResult Function(DuracionEstimadaEscalaVacia<T> value)?
+        duracionEstimadaEscalaVacia,
+    required TResult orElse(),
+  }) {
+    if (contrasenaSinMinuscula != null) {
+      return contrasenaSinMinuscula(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ContrasenaSinMinuscula<T> implements ValorErroneo<T> {
+  const factory ContrasenaSinMinuscula({required T valorErroneo}) =
+      _$ContrasenaSinMinuscula<T>;
+
+  T get valorErroneo => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ContrasenaSinMinusculaCopyWith<T, ContrasenaSinMinuscula<T>> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ContrasenaSinNumeroCopyWith<T, $Res> {
+  factory $ContrasenaSinNumeroCopyWith(ContrasenaSinNumero<T> value,
+          $Res Function(ContrasenaSinNumero<T>) then) =
+      _$ContrasenaSinNumeroCopyWithImpl<T, $Res>;
+  $Res call({T valorErroneo});
+}
+
+/// @nodoc
+class _$ContrasenaSinNumeroCopyWithImpl<T, $Res>
+    extends _$ValorErroneoCopyWithImpl<T, $Res>
+    implements $ContrasenaSinNumeroCopyWith<T, $Res> {
+  _$ContrasenaSinNumeroCopyWithImpl(ContrasenaSinNumero<T> _value,
+      $Res Function(ContrasenaSinNumero<T>) _then)
+      : super(_value, (v) => _then(v as ContrasenaSinNumero<T>));
+
+  @override
+  ContrasenaSinNumero<T> get _value => super._value as ContrasenaSinNumero<T>;
+
+  @override
+  $Res call({
+    Object? valorErroneo = freezed,
+  }) {
+    return _then(ContrasenaSinNumero<T>(
+      valorErroneo: valorErroneo == freezed
+          ? _value.valorErroneo
+          : valorErroneo // ignore: cast_nullable_to_non_nullable
+              as T,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ContrasenaSinNumero<T> implements ContrasenaSinNumero<T> {
+  const _$ContrasenaSinNumero({required this.valorErroneo});
+
+  @override
+  final T valorErroneo;
+
+  @override
+  String toString() {
+    return 'ValorErroneo<$T>.contrasenaSinNumero(valorErroneo: $valorErroneo)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is ContrasenaSinNumero<T> &&
+            (identical(other.valorErroneo, valorErroneo) ||
+                const DeepCollectionEquality()
+                    .equals(other.valorErroneo, valorErroneo)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(valorErroneo);
+
+  @JsonKey(ignore: true)
+  @override
+  $ContrasenaSinNumeroCopyWith<T, ContrasenaSinNumero<T>> get copyWith =>
+      _$ContrasenaSinNumeroCopyWithImpl<T, ContrasenaSinNumero<T>>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(T valorErroneo) emailInvalido,
+    required TResult Function(T valorErroneo) contrasenaCorta,
+    required TResult Function(T valorErroneo) contrasenaVacia,
+    required TResult Function(T valorErroneo) contrasenaLarga,
+    required TResult Function(T valorErroneo) contrasenaSinCaracterEspecial,
+    required TResult Function(T valorErroneo) contrasenaSinMayuscula,
+    required TResult Function(T valorErroneo) contrasenaSinMinuscula,
+    required TResult Function(T valorErroneo) contrasenaSinNumero,
+    required TResult Function(T valorErroneo) stringVacio,
+    required TResult Function(T valorErroneo, int min, int max)
+        longitudInvalida,
+    required TResult Function(T valorErroneo, double max) sueldoInvalido,
+    required TResult Function(T valorErroneo) sueldoVacio,
+    required TResult Function(T fechaErronea) fechaNula,
+    required TResult Function(T numVacantesInvalido) numVacantesInvalido,
+    required TResult Function(T valorErroneo) numVacantesNoVacia,
+    required TResult Function(T valorErroneo, List<String> turnosValidos)
+        turnoInvalido,
+    required TResult Function(T valorErroneo, List<String> generosValidos)
+        generoInvalido,
+    required TResult Function(T fechaErronea) fechaNacimientoMenorEdad,
+    required TResult Function(T numeroErroneo) numeroTelefonicoInvalido,
+    required TResult Function(T numeroErroneo) numeroTelefonicoVacio,
+    required TResult Function(T valorErroneo, List<String> turnosValidos)
+        estadoOfertaInvalido,
+    required TResult Function(T valorInvalido, int minValor, int maxValor)
+        duracionEstimadaValorInvalido,
+    required TResult Function(T valorInvalido) duracionEstimadaValorVacio,
+    required TResult Function(T escalaInvalida, List<String> escalasValidas)
+        duractionEstimadaEscalaInvalida,
+    required TResult Function(T valorInvalido) duracionEstimadaEscalaVacia,
+  }) {
+    return contrasenaSinNumero(valorErroneo);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(T valorErroneo)? emailInvalido,
+    TResult Function(T valorErroneo)? contrasenaCorta,
+    TResult Function(T valorErroneo)? contrasenaVacia,
+    TResult Function(T valorErroneo)? contrasenaLarga,
+    TResult Function(T valorErroneo)? contrasenaSinCaracterEspecial,
+    TResult Function(T valorErroneo)? contrasenaSinMayuscula,
+    TResult Function(T valorErroneo)? contrasenaSinMinuscula,
+    TResult Function(T valorErroneo)? contrasenaSinNumero,
+    TResult Function(T valorErroneo)? stringVacio,
+    TResult Function(T valorErroneo, int min, int max)? longitudInvalida,
+    TResult Function(T valorErroneo, double max)? sueldoInvalido,
+    TResult Function(T valorErroneo)? sueldoVacio,
+    TResult Function(T fechaErronea)? fechaNula,
+    TResult Function(T numVacantesInvalido)? numVacantesInvalido,
+    TResult Function(T valorErroneo)? numVacantesNoVacia,
+    TResult Function(T valorErroneo, List<String> turnosValidos)? turnoInvalido,
+    TResult Function(T valorErroneo, List<String> generosValidos)?
+        generoInvalido,
+    TResult Function(T fechaErronea)? fechaNacimientoMenorEdad,
+    TResult Function(T numeroErroneo)? numeroTelefonicoInvalido,
+    TResult Function(T numeroErroneo)? numeroTelefonicoVacio,
+    TResult Function(T valorErroneo, List<String> turnosValidos)?
+        estadoOfertaInvalido,
+    TResult Function(T valorInvalido, int minValor, int maxValor)?
+        duracionEstimadaValorInvalido,
+    TResult Function(T valorInvalido)? duracionEstimadaValorVacio,
+    TResult Function(T escalaInvalida, List<String> escalasValidas)?
+        duractionEstimadaEscalaInvalida,
+    TResult Function(T valorInvalido)? duracionEstimadaEscalaVacia,
+    required TResult orElse(),
+  }) {
+    if (contrasenaSinNumero != null) {
+      return contrasenaSinNumero(valorErroneo);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(EmailInvalido<T> value) emailInvalido,
+    required TResult Function(ContrasenaCorta<T> value) contrasenaCorta,
+    required TResult Function(ContrasenaVacia<T> value) contrasenaVacia,
+    required TResult Function(ContrasenaLarga<T> value) contrasenaLarga,
+    required TResult Function(ContrasenaCaracterEspecial<T> value)
+        contrasenaSinCaracterEspecial,
+    required TResult Function(ContrasenaSinMayuscula<T> value)
+        contrasenaSinMayuscula,
+    required TResult Function(ContrasenaSinMinuscula<T> value)
+        contrasenaSinMinuscula,
+    required TResult Function(ContrasenaSinNumero<T> value) contrasenaSinNumero,
+    required TResult Function(StringVacio<T> value) stringVacio,
+    required TResult Function(LongitudInvalida<T> value) longitudInvalida,
+    required TResult Function(SueldoInvalida<T> value) sueldoInvalido,
+    required TResult Function(SueldoVacio<T> value) sueldoVacio,
+    required TResult Function(FechaNula<T> value) fechaNula,
+    required TResult Function(NumVacantesInvalido<T> value) numVacantesInvalido,
+    required TResult Function(NumVacantesNoVacia<T> value) numVacantesNoVacia,
+    required TResult Function(TurnoInvalido<T> value) turnoInvalido,
+    required TResult Function(GeneroInvalido<T> value) generoInvalido,
+    required TResult Function(FechaNacimientoMenorEdad<T> value)
+        fechaNacimientoMenorEdad,
+    required TResult Function(NumeroTelefonicoInvalido<T> value)
+        numeroTelefonicoInvalido,
+    required TResult Function(NumeroTelefonicoVacio<T> value)
+        numeroTelefonicoVacio,
+    required TResult Function(EstadoOfertaInvalido<T> value)
+        estadoOfertaInvalido,
+    required TResult Function(DuracionEstimadaValorInvalido<T> value)
+        duracionEstimadaValorInvalido,
+    required TResult Function(DuracionEstimadaValorVacio<T> value)
+        duracionEstimadaValorVacio,
+    required TResult Function(DuractionEstimadaEscalaInvalida<T> value)
+        duractionEstimadaEscalaInvalida,
+    required TResult Function(DuracionEstimadaEscalaVacia<T> value)
+        duracionEstimadaEscalaVacia,
+  }) {
+    return contrasenaSinNumero(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(EmailInvalido<T> value)? emailInvalido,
+    TResult Function(ContrasenaCorta<T> value)? contrasenaCorta,
+    TResult Function(ContrasenaVacia<T> value)? contrasenaVacia,
+    TResult Function(ContrasenaLarga<T> value)? contrasenaLarga,
+    TResult Function(ContrasenaCaracterEspecial<T> value)?
+        contrasenaSinCaracterEspecial,
+    TResult Function(ContrasenaSinMayuscula<T> value)? contrasenaSinMayuscula,
+    TResult Function(ContrasenaSinMinuscula<T> value)? contrasenaSinMinuscula,
+    TResult Function(ContrasenaSinNumero<T> value)? contrasenaSinNumero,
+    TResult Function(StringVacio<T> value)? stringVacio,
+    TResult Function(LongitudInvalida<T> value)? longitudInvalida,
+    TResult Function(SueldoInvalida<T> value)? sueldoInvalido,
+    TResult Function(SueldoVacio<T> value)? sueldoVacio,
+    TResult Function(FechaNula<T> value)? fechaNula,
+    TResult Function(NumVacantesInvalido<T> value)? numVacantesInvalido,
+    TResult Function(NumVacantesNoVacia<T> value)? numVacantesNoVacia,
+    TResult Function(TurnoInvalido<T> value)? turnoInvalido,
+    TResult Function(GeneroInvalido<T> value)? generoInvalido,
+    TResult Function(FechaNacimientoMenorEdad<T> value)?
+        fechaNacimientoMenorEdad,
+    TResult Function(NumeroTelefonicoInvalido<T> value)?
+        numeroTelefonicoInvalido,
+    TResult Function(NumeroTelefonicoVacio<T> value)? numeroTelefonicoVacio,
+    TResult Function(EstadoOfertaInvalido<T> value)? estadoOfertaInvalido,
+    TResult Function(DuracionEstimadaValorInvalido<T> value)?
+        duracionEstimadaValorInvalido,
+    TResult Function(DuracionEstimadaValorVacio<T> value)?
+        duracionEstimadaValorVacio,
+    TResult Function(DuractionEstimadaEscalaInvalida<T> value)?
+        duractionEstimadaEscalaInvalida,
+    TResult Function(DuracionEstimadaEscalaVacia<T> value)?
+        duracionEstimadaEscalaVacia,
+    required TResult orElse(),
+  }) {
+    if (contrasenaSinNumero != null) {
+      return contrasenaSinNumero(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ContrasenaSinNumero<T> implements ValorErroneo<T> {
+  const factory ContrasenaSinNumero({required T valorErroneo}) =
+      _$ContrasenaSinNumero<T>;
+
+  T get valorErroneo => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ContrasenaSinNumeroCopyWith<T, ContrasenaSinNumero<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -784,6 +2343,12 @@ class _$StringVacio<T> implements StringVacio<T> {
   TResult when<TResult extends Object?>({
     required TResult Function(T valorErroneo) emailInvalido,
     required TResult Function(T valorErroneo) contrasenaCorta,
+    required TResult Function(T valorErroneo) contrasenaVacia,
+    required TResult Function(T valorErroneo) contrasenaLarga,
+    required TResult Function(T valorErroneo) contrasenaSinCaracterEspecial,
+    required TResult Function(T valorErroneo) contrasenaSinMayuscula,
+    required TResult Function(T valorErroneo) contrasenaSinMinuscula,
+    required TResult Function(T valorErroneo) contrasenaSinNumero,
     required TResult Function(T valorErroneo) stringVacio,
     required TResult Function(T valorErroneo, int min, int max)
         longitudInvalida,
@@ -816,6 +2381,12 @@ class _$StringVacio<T> implements StringVacio<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(T valorErroneo)? emailInvalido,
     TResult Function(T valorErroneo)? contrasenaCorta,
+    TResult Function(T valorErroneo)? contrasenaVacia,
+    TResult Function(T valorErroneo)? contrasenaLarga,
+    TResult Function(T valorErroneo)? contrasenaSinCaracterEspecial,
+    TResult Function(T valorErroneo)? contrasenaSinMayuscula,
+    TResult Function(T valorErroneo)? contrasenaSinMinuscula,
+    TResult Function(T valorErroneo)? contrasenaSinNumero,
     TResult Function(T valorErroneo)? stringVacio,
     TResult Function(T valorErroneo, int min, int max)? longitudInvalida,
     TResult Function(T valorErroneo, double max)? sueldoInvalido,
@@ -850,6 +2421,15 @@ class _$StringVacio<T> implements StringVacio<T> {
   TResult map<TResult extends Object?>({
     required TResult Function(EmailInvalido<T> value) emailInvalido,
     required TResult Function(ContrasenaCorta<T> value) contrasenaCorta,
+    required TResult Function(ContrasenaVacia<T> value) contrasenaVacia,
+    required TResult Function(ContrasenaLarga<T> value) contrasenaLarga,
+    required TResult Function(ContrasenaCaracterEspecial<T> value)
+        contrasenaSinCaracterEspecial,
+    required TResult Function(ContrasenaSinMayuscula<T> value)
+        contrasenaSinMayuscula,
+    required TResult Function(ContrasenaSinMinuscula<T> value)
+        contrasenaSinMinuscula,
+    required TResult Function(ContrasenaSinNumero<T> value) contrasenaSinNumero,
     required TResult Function(StringVacio<T> value) stringVacio,
     required TResult Function(LongitudInvalida<T> value) longitudInvalida,
     required TResult Function(SueldoInvalida<T> value) sueldoInvalido,
@@ -884,6 +2464,13 @@ class _$StringVacio<T> implements StringVacio<T> {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(EmailInvalido<T> value)? emailInvalido,
     TResult Function(ContrasenaCorta<T> value)? contrasenaCorta,
+    TResult Function(ContrasenaVacia<T> value)? contrasenaVacia,
+    TResult Function(ContrasenaLarga<T> value)? contrasenaLarga,
+    TResult Function(ContrasenaCaracterEspecial<T> value)?
+        contrasenaSinCaracterEspecial,
+    TResult Function(ContrasenaSinMayuscula<T> value)? contrasenaSinMayuscula,
+    TResult Function(ContrasenaSinMinuscula<T> value)? contrasenaSinMinuscula,
+    TResult Function(ContrasenaSinNumero<T> value)? contrasenaSinNumero,
     TResult Function(StringVacio<T> value)? stringVacio,
     TResult Function(LongitudInvalida<T> value)? longitudInvalida,
     TResult Function(SueldoInvalida<T> value)? sueldoInvalido,
@@ -1015,6 +2602,12 @@ class _$LongitudInvalida<T> implements LongitudInvalida<T> {
   TResult when<TResult extends Object?>({
     required TResult Function(T valorErroneo) emailInvalido,
     required TResult Function(T valorErroneo) contrasenaCorta,
+    required TResult Function(T valorErroneo) contrasenaVacia,
+    required TResult Function(T valorErroneo) contrasenaLarga,
+    required TResult Function(T valorErroneo) contrasenaSinCaracterEspecial,
+    required TResult Function(T valorErroneo) contrasenaSinMayuscula,
+    required TResult Function(T valorErroneo) contrasenaSinMinuscula,
+    required TResult Function(T valorErroneo) contrasenaSinNumero,
     required TResult Function(T valorErroneo) stringVacio,
     required TResult Function(T valorErroneo, int min, int max)
         longitudInvalida,
@@ -1047,6 +2640,12 @@ class _$LongitudInvalida<T> implements LongitudInvalida<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(T valorErroneo)? emailInvalido,
     TResult Function(T valorErroneo)? contrasenaCorta,
+    TResult Function(T valorErroneo)? contrasenaVacia,
+    TResult Function(T valorErroneo)? contrasenaLarga,
+    TResult Function(T valorErroneo)? contrasenaSinCaracterEspecial,
+    TResult Function(T valorErroneo)? contrasenaSinMayuscula,
+    TResult Function(T valorErroneo)? contrasenaSinMinuscula,
+    TResult Function(T valorErroneo)? contrasenaSinNumero,
     TResult Function(T valorErroneo)? stringVacio,
     TResult Function(T valorErroneo, int min, int max)? longitudInvalida,
     TResult Function(T valorErroneo, double max)? sueldoInvalido,
@@ -1081,6 +2680,15 @@ class _$LongitudInvalida<T> implements LongitudInvalida<T> {
   TResult map<TResult extends Object?>({
     required TResult Function(EmailInvalido<T> value) emailInvalido,
     required TResult Function(ContrasenaCorta<T> value) contrasenaCorta,
+    required TResult Function(ContrasenaVacia<T> value) contrasenaVacia,
+    required TResult Function(ContrasenaLarga<T> value) contrasenaLarga,
+    required TResult Function(ContrasenaCaracterEspecial<T> value)
+        contrasenaSinCaracterEspecial,
+    required TResult Function(ContrasenaSinMayuscula<T> value)
+        contrasenaSinMayuscula,
+    required TResult Function(ContrasenaSinMinuscula<T> value)
+        contrasenaSinMinuscula,
+    required TResult Function(ContrasenaSinNumero<T> value) contrasenaSinNumero,
     required TResult Function(StringVacio<T> value) stringVacio,
     required TResult Function(LongitudInvalida<T> value) longitudInvalida,
     required TResult Function(SueldoInvalida<T> value) sueldoInvalido,
@@ -1115,6 +2723,13 @@ class _$LongitudInvalida<T> implements LongitudInvalida<T> {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(EmailInvalido<T> value)? emailInvalido,
     TResult Function(ContrasenaCorta<T> value)? contrasenaCorta,
+    TResult Function(ContrasenaVacia<T> value)? contrasenaVacia,
+    TResult Function(ContrasenaLarga<T> value)? contrasenaLarga,
+    TResult Function(ContrasenaCaracterEspecial<T> value)?
+        contrasenaSinCaracterEspecial,
+    TResult Function(ContrasenaSinMayuscula<T> value)? contrasenaSinMayuscula,
+    TResult Function(ContrasenaSinMinuscula<T> value)? contrasenaSinMinuscula,
+    TResult Function(ContrasenaSinNumero<T> value)? contrasenaSinNumero,
     TResult Function(StringVacio<T> value)? stringVacio,
     TResult Function(LongitudInvalida<T> value)? longitudInvalida,
     TResult Function(SueldoInvalida<T> value)? sueldoInvalido,
@@ -1240,6 +2855,12 @@ class _$SueldoInvalida<T> implements SueldoInvalida<T> {
   TResult when<TResult extends Object?>({
     required TResult Function(T valorErroneo) emailInvalido,
     required TResult Function(T valorErroneo) contrasenaCorta,
+    required TResult Function(T valorErroneo) contrasenaVacia,
+    required TResult Function(T valorErroneo) contrasenaLarga,
+    required TResult Function(T valorErroneo) contrasenaSinCaracterEspecial,
+    required TResult Function(T valorErroneo) contrasenaSinMayuscula,
+    required TResult Function(T valorErroneo) contrasenaSinMinuscula,
+    required TResult Function(T valorErroneo) contrasenaSinNumero,
     required TResult Function(T valorErroneo) stringVacio,
     required TResult Function(T valorErroneo, int min, int max)
         longitudInvalida,
@@ -1272,6 +2893,12 @@ class _$SueldoInvalida<T> implements SueldoInvalida<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(T valorErroneo)? emailInvalido,
     TResult Function(T valorErroneo)? contrasenaCorta,
+    TResult Function(T valorErroneo)? contrasenaVacia,
+    TResult Function(T valorErroneo)? contrasenaLarga,
+    TResult Function(T valorErroneo)? contrasenaSinCaracterEspecial,
+    TResult Function(T valorErroneo)? contrasenaSinMayuscula,
+    TResult Function(T valorErroneo)? contrasenaSinMinuscula,
+    TResult Function(T valorErroneo)? contrasenaSinNumero,
     TResult Function(T valorErroneo)? stringVacio,
     TResult Function(T valorErroneo, int min, int max)? longitudInvalida,
     TResult Function(T valorErroneo, double max)? sueldoInvalido,
@@ -1306,6 +2933,15 @@ class _$SueldoInvalida<T> implements SueldoInvalida<T> {
   TResult map<TResult extends Object?>({
     required TResult Function(EmailInvalido<T> value) emailInvalido,
     required TResult Function(ContrasenaCorta<T> value) contrasenaCorta,
+    required TResult Function(ContrasenaVacia<T> value) contrasenaVacia,
+    required TResult Function(ContrasenaLarga<T> value) contrasenaLarga,
+    required TResult Function(ContrasenaCaracterEspecial<T> value)
+        contrasenaSinCaracterEspecial,
+    required TResult Function(ContrasenaSinMayuscula<T> value)
+        contrasenaSinMayuscula,
+    required TResult Function(ContrasenaSinMinuscula<T> value)
+        contrasenaSinMinuscula,
+    required TResult Function(ContrasenaSinNumero<T> value) contrasenaSinNumero,
     required TResult Function(StringVacio<T> value) stringVacio,
     required TResult Function(LongitudInvalida<T> value) longitudInvalida,
     required TResult Function(SueldoInvalida<T> value) sueldoInvalido,
@@ -1340,6 +2976,13 @@ class _$SueldoInvalida<T> implements SueldoInvalida<T> {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(EmailInvalido<T> value)? emailInvalido,
     TResult Function(ContrasenaCorta<T> value)? contrasenaCorta,
+    TResult Function(ContrasenaVacia<T> value)? contrasenaVacia,
+    TResult Function(ContrasenaLarga<T> value)? contrasenaLarga,
+    TResult Function(ContrasenaCaracterEspecial<T> value)?
+        contrasenaSinCaracterEspecial,
+    TResult Function(ContrasenaSinMayuscula<T> value)? contrasenaSinMayuscula,
+    TResult Function(ContrasenaSinMinuscula<T> value)? contrasenaSinMinuscula,
+    TResult Function(ContrasenaSinNumero<T> value)? contrasenaSinNumero,
     TResult Function(StringVacio<T> value)? stringVacio,
     TResult Function(LongitudInvalida<T> value)? longitudInvalida,
     TResult Function(SueldoInvalida<T> value)? sueldoInvalido,
@@ -1451,6 +3094,12 @@ class _$SueldoVacio<T> implements SueldoVacio<T> {
   TResult when<TResult extends Object?>({
     required TResult Function(T valorErroneo) emailInvalido,
     required TResult Function(T valorErroneo) contrasenaCorta,
+    required TResult Function(T valorErroneo) contrasenaVacia,
+    required TResult Function(T valorErroneo) contrasenaLarga,
+    required TResult Function(T valorErroneo) contrasenaSinCaracterEspecial,
+    required TResult Function(T valorErroneo) contrasenaSinMayuscula,
+    required TResult Function(T valorErroneo) contrasenaSinMinuscula,
+    required TResult Function(T valorErroneo) contrasenaSinNumero,
     required TResult Function(T valorErroneo) stringVacio,
     required TResult Function(T valorErroneo, int min, int max)
         longitudInvalida,
@@ -1483,6 +3132,12 @@ class _$SueldoVacio<T> implements SueldoVacio<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(T valorErroneo)? emailInvalido,
     TResult Function(T valorErroneo)? contrasenaCorta,
+    TResult Function(T valorErroneo)? contrasenaVacia,
+    TResult Function(T valorErroneo)? contrasenaLarga,
+    TResult Function(T valorErroneo)? contrasenaSinCaracterEspecial,
+    TResult Function(T valorErroneo)? contrasenaSinMayuscula,
+    TResult Function(T valorErroneo)? contrasenaSinMinuscula,
+    TResult Function(T valorErroneo)? contrasenaSinNumero,
     TResult Function(T valorErroneo)? stringVacio,
     TResult Function(T valorErroneo, int min, int max)? longitudInvalida,
     TResult Function(T valorErroneo, double max)? sueldoInvalido,
@@ -1517,6 +3172,15 @@ class _$SueldoVacio<T> implements SueldoVacio<T> {
   TResult map<TResult extends Object?>({
     required TResult Function(EmailInvalido<T> value) emailInvalido,
     required TResult Function(ContrasenaCorta<T> value) contrasenaCorta,
+    required TResult Function(ContrasenaVacia<T> value) contrasenaVacia,
+    required TResult Function(ContrasenaLarga<T> value) contrasenaLarga,
+    required TResult Function(ContrasenaCaracterEspecial<T> value)
+        contrasenaSinCaracterEspecial,
+    required TResult Function(ContrasenaSinMayuscula<T> value)
+        contrasenaSinMayuscula,
+    required TResult Function(ContrasenaSinMinuscula<T> value)
+        contrasenaSinMinuscula,
+    required TResult Function(ContrasenaSinNumero<T> value) contrasenaSinNumero,
     required TResult Function(StringVacio<T> value) stringVacio,
     required TResult Function(LongitudInvalida<T> value) longitudInvalida,
     required TResult Function(SueldoInvalida<T> value) sueldoInvalido,
@@ -1551,6 +3215,13 @@ class _$SueldoVacio<T> implements SueldoVacio<T> {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(EmailInvalido<T> value)? emailInvalido,
     TResult Function(ContrasenaCorta<T> value)? contrasenaCorta,
+    TResult Function(ContrasenaVacia<T> value)? contrasenaVacia,
+    TResult Function(ContrasenaLarga<T> value)? contrasenaLarga,
+    TResult Function(ContrasenaCaracterEspecial<T> value)?
+        contrasenaSinCaracterEspecial,
+    TResult Function(ContrasenaSinMayuscula<T> value)? contrasenaSinMayuscula,
+    TResult Function(ContrasenaSinMinuscula<T> value)? contrasenaSinMinuscula,
+    TResult Function(ContrasenaSinNumero<T> value)? contrasenaSinNumero,
     TResult Function(StringVacio<T> value)? stringVacio,
     TResult Function(LongitudInvalida<T> value)? longitudInvalida,
     TResult Function(SueldoInvalida<T> value)? sueldoInvalido,
@@ -1660,6 +3331,12 @@ class _$FechaNula<T> implements FechaNula<T> {
   TResult when<TResult extends Object?>({
     required TResult Function(T valorErroneo) emailInvalido,
     required TResult Function(T valorErroneo) contrasenaCorta,
+    required TResult Function(T valorErroneo) contrasenaVacia,
+    required TResult Function(T valorErroneo) contrasenaLarga,
+    required TResult Function(T valorErroneo) contrasenaSinCaracterEspecial,
+    required TResult Function(T valorErroneo) contrasenaSinMayuscula,
+    required TResult Function(T valorErroneo) contrasenaSinMinuscula,
+    required TResult Function(T valorErroneo) contrasenaSinNumero,
     required TResult Function(T valorErroneo) stringVacio,
     required TResult Function(T valorErroneo, int min, int max)
         longitudInvalida,
@@ -1692,6 +3369,12 @@ class _$FechaNula<T> implements FechaNula<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(T valorErroneo)? emailInvalido,
     TResult Function(T valorErroneo)? contrasenaCorta,
+    TResult Function(T valorErroneo)? contrasenaVacia,
+    TResult Function(T valorErroneo)? contrasenaLarga,
+    TResult Function(T valorErroneo)? contrasenaSinCaracterEspecial,
+    TResult Function(T valorErroneo)? contrasenaSinMayuscula,
+    TResult Function(T valorErroneo)? contrasenaSinMinuscula,
+    TResult Function(T valorErroneo)? contrasenaSinNumero,
     TResult Function(T valorErroneo)? stringVacio,
     TResult Function(T valorErroneo, int min, int max)? longitudInvalida,
     TResult Function(T valorErroneo, double max)? sueldoInvalido,
@@ -1726,6 +3409,15 @@ class _$FechaNula<T> implements FechaNula<T> {
   TResult map<TResult extends Object?>({
     required TResult Function(EmailInvalido<T> value) emailInvalido,
     required TResult Function(ContrasenaCorta<T> value) contrasenaCorta,
+    required TResult Function(ContrasenaVacia<T> value) contrasenaVacia,
+    required TResult Function(ContrasenaLarga<T> value) contrasenaLarga,
+    required TResult Function(ContrasenaCaracterEspecial<T> value)
+        contrasenaSinCaracterEspecial,
+    required TResult Function(ContrasenaSinMayuscula<T> value)
+        contrasenaSinMayuscula,
+    required TResult Function(ContrasenaSinMinuscula<T> value)
+        contrasenaSinMinuscula,
+    required TResult Function(ContrasenaSinNumero<T> value) contrasenaSinNumero,
     required TResult Function(StringVacio<T> value) stringVacio,
     required TResult Function(LongitudInvalida<T> value) longitudInvalida,
     required TResult Function(SueldoInvalida<T> value) sueldoInvalido,
@@ -1760,6 +3452,13 @@ class _$FechaNula<T> implements FechaNula<T> {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(EmailInvalido<T> value)? emailInvalido,
     TResult Function(ContrasenaCorta<T> value)? contrasenaCorta,
+    TResult Function(ContrasenaVacia<T> value)? contrasenaVacia,
+    TResult Function(ContrasenaLarga<T> value)? contrasenaLarga,
+    TResult Function(ContrasenaCaracterEspecial<T> value)?
+        contrasenaSinCaracterEspecial,
+    TResult Function(ContrasenaSinMayuscula<T> value)? contrasenaSinMayuscula,
+    TResult Function(ContrasenaSinMinuscula<T> value)? contrasenaSinMinuscula,
+    TResult Function(ContrasenaSinNumero<T> value)? contrasenaSinNumero,
     TResult Function(StringVacio<T> value)? stringVacio,
     TResult Function(LongitudInvalida<T> value)? longitudInvalida,
     TResult Function(SueldoInvalida<T> value)? sueldoInvalido,
@@ -1871,6 +3570,12 @@ class _$NumVacantesInvalido<T> implements NumVacantesInvalido<T> {
   TResult when<TResult extends Object?>({
     required TResult Function(T valorErroneo) emailInvalido,
     required TResult Function(T valorErroneo) contrasenaCorta,
+    required TResult Function(T valorErroneo) contrasenaVacia,
+    required TResult Function(T valorErroneo) contrasenaLarga,
+    required TResult Function(T valorErroneo) contrasenaSinCaracterEspecial,
+    required TResult Function(T valorErroneo) contrasenaSinMayuscula,
+    required TResult Function(T valorErroneo) contrasenaSinMinuscula,
+    required TResult Function(T valorErroneo) contrasenaSinNumero,
     required TResult Function(T valorErroneo) stringVacio,
     required TResult Function(T valorErroneo, int min, int max)
         longitudInvalida,
@@ -1903,6 +3608,12 @@ class _$NumVacantesInvalido<T> implements NumVacantesInvalido<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(T valorErroneo)? emailInvalido,
     TResult Function(T valorErroneo)? contrasenaCorta,
+    TResult Function(T valorErroneo)? contrasenaVacia,
+    TResult Function(T valorErroneo)? contrasenaLarga,
+    TResult Function(T valorErroneo)? contrasenaSinCaracterEspecial,
+    TResult Function(T valorErroneo)? contrasenaSinMayuscula,
+    TResult Function(T valorErroneo)? contrasenaSinMinuscula,
+    TResult Function(T valorErroneo)? contrasenaSinNumero,
     TResult Function(T valorErroneo)? stringVacio,
     TResult Function(T valorErroneo, int min, int max)? longitudInvalida,
     TResult Function(T valorErroneo, double max)? sueldoInvalido,
@@ -1937,6 +3648,15 @@ class _$NumVacantesInvalido<T> implements NumVacantesInvalido<T> {
   TResult map<TResult extends Object?>({
     required TResult Function(EmailInvalido<T> value) emailInvalido,
     required TResult Function(ContrasenaCorta<T> value) contrasenaCorta,
+    required TResult Function(ContrasenaVacia<T> value) contrasenaVacia,
+    required TResult Function(ContrasenaLarga<T> value) contrasenaLarga,
+    required TResult Function(ContrasenaCaracterEspecial<T> value)
+        contrasenaSinCaracterEspecial,
+    required TResult Function(ContrasenaSinMayuscula<T> value)
+        contrasenaSinMayuscula,
+    required TResult Function(ContrasenaSinMinuscula<T> value)
+        contrasenaSinMinuscula,
+    required TResult Function(ContrasenaSinNumero<T> value) contrasenaSinNumero,
     required TResult Function(StringVacio<T> value) stringVacio,
     required TResult Function(LongitudInvalida<T> value) longitudInvalida,
     required TResult Function(SueldoInvalida<T> value) sueldoInvalido,
@@ -1971,6 +3691,13 @@ class _$NumVacantesInvalido<T> implements NumVacantesInvalido<T> {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(EmailInvalido<T> value)? emailInvalido,
     TResult Function(ContrasenaCorta<T> value)? contrasenaCorta,
+    TResult Function(ContrasenaVacia<T> value)? contrasenaVacia,
+    TResult Function(ContrasenaLarga<T> value)? contrasenaLarga,
+    TResult Function(ContrasenaCaracterEspecial<T> value)?
+        contrasenaSinCaracterEspecial,
+    TResult Function(ContrasenaSinMayuscula<T> value)? contrasenaSinMayuscula,
+    TResult Function(ContrasenaSinMinuscula<T> value)? contrasenaSinMinuscula,
+    TResult Function(ContrasenaSinNumero<T> value)? contrasenaSinNumero,
     TResult Function(StringVacio<T> value)? stringVacio,
     TResult Function(LongitudInvalida<T> value)? longitudInvalida,
     TResult Function(SueldoInvalida<T> value)? sueldoInvalido,
@@ -2082,6 +3809,12 @@ class _$NumVacantesNoVacia<T> implements NumVacantesNoVacia<T> {
   TResult when<TResult extends Object?>({
     required TResult Function(T valorErroneo) emailInvalido,
     required TResult Function(T valorErroneo) contrasenaCorta,
+    required TResult Function(T valorErroneo) contrasenaVacia,
+    required TResult Function(T valorErroneo) contrasenaLarga,
+    required TResult Function(T valorErroneo) contrasenaSinCaracterEspecial,
+    required TResult Function(T valorErroneo) contrasenaSinMayuscula,
+    required TResult Function(T valorErroneo) contrasenaSinMinuscula,
+    required TResult Function(T valorErroneo) contrasenaSinNumero,
     required TResult Function(T valorErroneo) stringVacio,
     required TResult Function(T valorErroneo, int min, int max)
         longitudInvalida,
@@ -2114,6 +3847,12 @@ class _$NumVacantesNoVacia<T> implements NumVacantesNoVacia<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(T valorErroneo)? emailInvalido,
     TResult Function(T valorErroneo)? contrasenaCorta,
+    TResult Function(T valorErroneo)? contrasenaVacia,
+    TResult Function(T valorErroneo)? contrasenaLarga,
+    TResult Function(T valorErroneo)? contrasenaSinCaracterEspecial,
+    TResult Function(T valorErroneo)? contrasenaSinMayuscula,
+    TResult Function(T valorErroneo)? contrasenaSinMinuscula,
+    TResult Function(T valorErroneo)? contrasenaSinNumero,
     TResult Function(T valorErroneo)? stringVacio,
     TResult Function(T valorErroneo, int min, int max)? longitudInvalida,
     TResult Function(T valorErroneo, double max)? sueldoInvalido,
@@ -2148,6 +3887,15 @@ class _$NumVacantesNoVacia<T> implements NumVacantesNoVacia<T> {
   TResult map<TResult extends Object?>({
     required TResult Function(EmailInvalido<T> value) emailInvalido,
     required TResult Function(ContrasenaCorta<T> value) contrasenaCorta,
+    required TResult Function(ContrasenaVacia<T> value) contrasenaVacia,
+    required TResult Function(ContrasenaLarga<T> value) contrasenaLarga,
+    required TResult Function(ContrasenaCaracterEspecial<T> value)
+        contrasenaSinCaracterEspecial,
+    required TResult Function(ContrasenaSinMayuscula<T> value)
+        contrasenaSinMayuscula,
+    required TResult Function(ContrasenaSinMinuscula<T> value)
+        contrasenaSinMinuscula,
+    required TResult Function(ContrasenaSinNumero<T> value) contrasenaSinNumero,
     required TResult Function(StringVacio<T> value) stringVacio,
     required TResult Function(LongitudInvalida<T> value) longitudInvalida,
     required TResult Function(SueldoInvalida<T> value) sueldoInvalido,
@@ -2182,6 +3930,13 @@ class _$NumVacantesNoVacia<T> implements NumVacantesNoVacia<T> {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(EmailInvalido<T> value)? emailInvalido,
     TResult Function(ContrasenaCorta<T> value)? contrasenaCorta,
+    TResult Function(ContrasenaVacia<T> value)? contrasenaVacia,
+    TResult Function(ContrasenaLarga<T> value)? contrasenaLarga,
+    TResult Function(ContrasenaCaracterEspecial<T> value)?
+        contrasenaSinCaracterEspecial,
+    TResult Function(ContrasenaSinMayuscula<T> value)? contrasenaSinMayuscula,
+    TResult Function(ContrasenaSinMinuscula<T> value)? contrasenaSinMinuscula,
+    TResult Function(ContrasenaSinNumero<T> value)? contrasenaSinNumero,
     TResult Function(StringVacio<T> value)? stringVacio,
     TResult Function(LongitudInvalida<T> value)? longitudInvalida,
     TResult Function(SueldoInvalida<T> value)? sueldoInvalido,
@@ -2305,6 +4060,12 @@ class _$TurnoInvalido<T> implements TurnoInvalido<T> {
   TResult when<TResult extends Object?>({
     required TResult Function(T valorErroneo) emailInvalido,
     required TResult Function(T valorErroneo) contrasenaCorta,
+    required TResult Function(T valorErroneo) contrasenaVacia,
+    required TResult Function(T valorErroneo) contrasenaLarga,
+    required TResult Function(T valorErroneo) contrasenaSinCaracterEspecial,
+    required TResult Function(T valorErroneo) contrasenaSinMayuscula,
+    required TResult Function(T valorErroneo) contrasenaSinMinuscula,
+    required TResult Function(T valorErroneo) contrasenaSinNumero,
     required TResult Function(T valorErroneo) stringVacio,
     required TResult Function(T valorErroneo, int min, int max)
         longitudInvalida,
@@ -2337,6 +4098,12 @@ class _$TurnoInvalido<T> implements TurnoInvalido<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(T valorErroneo)? emailInvalido,
     TResult Function(T valorErroneo)? contrasenaCorta,
+    TResult Function(T valorErroneo)? contrasenaVacia,
+    TResult Function(T valorErroneo)? contrasenaLarga,
+    TResult Function(T valorErroneo)? contrasenaSinCaracterEspecial,
+    TResult Function(T valorErroneo)? contrasenaSinMayuscula,
+    TResult Function(T valorErroneo)? contrasenaSinMinuscula,
+    TResult Function(T valorErroneo)? contrasenaSinNumero,
     TResult Function(T valorErroneo)? stringVacio,
     TResult Function(T valorErroneo, int min, int max)? longitudInvalida,
     TResult Function(T valorErroneo, double max)? sueldoInvalido,
@@ -2371,6 +4138,15 @@ class _$TurnoInvalido<T> implements TurnoInvalido<T> {
   TResult map<TResult extends Object?>({
     required TResult Function(EmailInvalido<T> value) emailInvalido,
     required TResult Function(ContrasenaCorta<T> value) contrasenaCorta,
+    required TResult Function(ContrasenaVacia<T> value) contrasenaVacia,
+    required TResult Function(ContrasenaLarga<T> value) contrasenaLarga,
+    required TResult Function(ContrasenaCaracterEspecial<T> value)
+        contrasenaSinCaracterEspecial,
+    required TResult Function(ContrasenaSinMayuscula<T> value)
+        contrasenaSinMayuscula,
+    required TResult Function(ContrasenaSinMinuscula<T> value)
+        contrasenaSinMinuscula,
+    required TResult Function(ContrasenaSinNumero<T> value) contrasenaSinNumero,
     required TResult Function(StringVacio<T> value) stringVacio,
     required TResult Function(LongitudInvalida<T> value) longitudInvalida,
     required TResult Function(SueldoInvalida<T> value) sueldoInvalido,
@@ -2405,6 +4181,13 @@ class _$TurnoInvalido<T> implements TurnoInvalido<T> {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(EmailInvalido<T> value)? emailInvalido,
     TResult Function(ContrasenaCorta<T> value)? contrasenaCorta,
+    TResult Function(ContrasenaVacia<T> value)? contrasenaVacia,
+    TResult Function(ContrasenaLarga<T> value)? contrasenaLarga,
+    TResult Function(ContrasenaCaracterEspecial<T> value)?
+        contrasenaSinCaracterEspecial,
+    TResult Function(ContrasenaSinMayuscula<T> value)? contrasenaSinMayuscula,
+    TResult Function(ContrasenaSinMinuscula<T> value)? contrasenaSinMinuscula,
+    TResult Function(ContrasenaSinNumero<T> value)? contrasenaSinNumero,
     TResult Function(StringVacio<T> value)? stringVacio,
     TResult Function(LongitudInvalida<T> value)? longitudInvalida,
     TResult Function(SueldoInvalida<T> value)? sueldoInvalido,
@@ -2530,6 +4313,12 @@ class _$GeneroInvalido<T> implements GeneroInvalido<T> {
   TResult when<TResult extends Object?>({
     required TResult Function(T valorErroneo) emailInvalido,
     required TResult Function(T valorErroneo) contrasenaCorta,
+    required TResult Function(T valorErroneo) contrasenaVacia,
+    required TResult Function(T valorErroneo) contrasenaLarga,
+    required TResult Function(T valorErroneo) contrasenaSinCaracterEspecial,
+    required TResult Function(T valorErroneo) contrasenaSinMayuscula,
+    required TResult Function(T valorErroneo) contrasenaSinMinuscula,
+    required TResult Function(T valorErroneo) contrasenaSinNumero,
     required TResult Function(T valorErroneo) stringVacio,
     required TResult Function(T valorErroneo, int min, int max)
         longitudInvalida,
@@ -2562,6 +4351,12 @@ class _$GeneroInvalido<T> implements GeneroInvalido<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(T valorErroneo)? emailInvalido,
     TResult Function(T valorErroneo)? contrasenaCorta,
+    TResult Function(T valorErroneo)? contrasenaVacia,
+    TResult Function(T valorErroneo)? contrasenaLarga,
+    TResult Function(T valorErroneo)? contrasenaSinCaracterEspecial,
+    TResult Function(T valorErroneo)? contrasenaSinMayuscula,
+    TResult Function(T valorErroneo)? contrasenaSinMinuscula,
+    TResult Function(T valorErroneo)? contrasenaSinNumero,
     TResult Function(T valorErroneo)? stringVacio,
     TResult Function(T valorErroneo, int min, int max)? longitudInvalida,
     TResult Function(T valorErroneo, double max)? sueldoInvalido,
@@ -2596,6 +4391,15 @@ class _$GeneroInvalido<T> implements GeneroInvalido<T> {
   TResult map<TResult extends Object?>({
     required TResult Function(EmailInvalido<T> value) emailInvalido,
     required TResult Function(ContrasenaCorta<T> value) contrasenaCorta,
+    required TResult Function(ContrasenaVacia<T> value) contrasenaVacia,
+    required TResult Function(ContrasenaLarga<T> value) contrasenaLarga,
+    required TResult Function(ContrasenaCaracterEspecial<T> value)
+        contrasenaSinCaracterEspecial,
+    required TResult Function(ContrasenaSinMayuscula<T> value)
+        contrasenaSinMayuscula,
+    required TResult Function(ContrasenaSinMinuscula<T> value)
+        contrasenaSinMinuscula,
+    required TResult Function(ContrasenaSinNumero<T> value) contrasenaSinNumero,
     required TResult Function(StringVacio<T> value) stringVacio,
     required TResult Function(LongitudInvalida<T> value) longitudInvalida,
     required TResult Function(SueldoInvalida<T> value) sueldoInvalido,
@@ -2630,6 +4434,13 @@ class _$GeneroInvalido<T> implements GeneroInvalido<T> {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(EmailInvalido<T> value)? emailInvalido,
     TResult Function(ContrasenaCorta<T> value)? contrasenaCorta,
+    TResult Function(ContrasenaVacia<T> value)? contrasenaVacia,
+    TResult Function(ContrasenaLarga<T> value)? contrasenaLarga,
+    TResult Function(ContrasenaCaracterEspecial<T> value)?
+        contrasenaSinCaracterEspecial,
+    TResult Function(ContrasenaSinMayuscula<T> value)? contrasenaSinMayuscula,
+    TResult Function(ContrasenaSinMinuscula<T> value)? contrasenaSinMinuscula,
+    TResult Function(ContrasenaSinNumero<T> value)? contrasenaSinNumero,
     TResult Function(StringVacio<T> value)? stringVacio,
     TResult Function(LongitudInvalida<T> value)? longitudInvalida,
     TResult Function(SueldoInvalida<T> value)? sueldoInvalido,
@@ -2744,6 +4555,12 @@ class _$FechaNacimientoMenorEdad<T> implements FechaNacimientoMenorEdad<T> {
   TResult when<TResult extends Object?>({
     required TResult Function(T valorErroneo) emailInvalido,
     required TResult Function(T valorErroneo) contrasenaCorta,
+    required TResult Function(T valorErroneo) contrasenaVacia,
+    required TResult Function(T valorErroneo) contrasenaLarga,
+    required TResult Function(T valorErroneo) contrasenaSinCaracterEspecial,
+    required TResult Function(T valorErroneo) contrasenaSinMayuscula,
+    required TResult Function(T valorErroneo) contrasenaSinMinuscula,
+    required TResult Function(T valorErroneo) contrasenaSinNumero,
     required TResult Function(T valorErroneo) stringVacio,
     required TResult Function(T valorErroneo, int min, int max)
         longitudInvalida,
@@ -2776,6 +4593,12 @@ class _$FechaNacimientoMenorEdad<T> implements FechaNacimientoMenorEdad<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(T valorErroneo)? emailInvalido,
     TResult Function(T valorErroneo)? contrasenaCorta,
+    TResult Function(T valorErroneo)? contrasenaVacia,
+    TResult Function(T valorErroneo)? contrasenaLarga,
+    TResult Function(T valorErroneo)? contrasenaSinCaracterEspecial,
+    TResult Function(T valorErroneo)? contrasenaSinMayuscula,
+    TResult Function(T valorErroneo)? contrasenaSinMinuscula,
+    TResult Function(T valorErroneo)? contrasenaSinNumero,
     TResult Function(T valorErroneo)? stringVacio,
     TResult Function(T valorErroneo, int min, int max)? longitudInvalida,
     TResult Function(T valorErroneo, double max)? sueldoInvalido,
@@ -2810,6 +4633,15 @@ class _$FechaNacimientoMenorEdad<T> implements FechaNacimientoMenorEdad<T> {
   TResult map<TResult extends Object?>({
     required TResult Function(EmailInvalido<T> value) emailInvalido,
     required TResult Function(ContrasenaCorta<T> value) contrasenaCorta,
+    required TResult Function(ContrasenaVacia<T> value) contrasenaVacia,
+    required TResult Function(ContrasenaLarga<T> value) contrasenaLarga,
+    required TResult Function(ContrasenaCaracterEspecial<T> value)
+        contrasenaSinCaracterEspecial,
+    required TResult Function(ContrasenaSinMayuscula<T> value)
+        contrasenaSinMayuscula,
+    required TResult Function(ContrasenaSinMinuscula<T> value)
+        contrasenaSinMinuscula,
+    required TResult Function(ContrasenaSinNumero<T> value) contrasenaSinNumero,
     required TResult Function(StringVacio<T> value) stringVacio,
     required TResult Function(LongitudInvalida<T> value) longitudInvalida,
     required TResult Function(SueldoInvalida<T> value) sueldoInvalido,
@@ -2844,6 +4676,13 @@ class _$FechaNacimientoMenorEdad<T> implements FechaNacimientoMenorEdad<T> {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(EmailInvalido<T> value)? emailInvalido,
     TResult Function(ContrasenaCorta<T> value)? contrasenaCorta,
+    TResult Function(ContrasenaVacia<T> value)? contrasenaVacia,
+    TResult Function(ContrasenaLarga<T> value)? contrasenaLarga,
+    TResult Function(ContrasenaCaracterEspecial<T> value)?
+        contrasenaSinCaracterEspecial,
+    TResult Function(ContrasenaSinMayuscula<T> value)? contrasenaSinMayuscula,
+    TResult Function(ContrasenaSinMinuscula<T> value)? contrasenaSinMinuscula,
+    TResult Function(ContrasenaSinNumero<T> value)? contrasenaSinNumero,
     TResult Function(StringVacio<T> value)? stringVacio,
     TResult Function(LongitudInvalida<T> value)? longitudInvalida,
     TResult Function(SueldoInvalida<T> value)? sueldoInvalido,
@@ -2956,6 +4795,12 @@ class _$NumeroTelefonicoInvalido<T> implements NumeroTelefonicoInvalido<T> {
   TResult when<TResult extends Object?>({
     required TResult Function(T valorErroneo) emailInvalido,
     required TResult Function(T valorErroneo) contrasenaCorta,
+    required TResult Function(T valorErroneo) contrasenaVacia,
+    required TResult Function(T valorErroneo) contrasenaLarga,
+    required TResult Function(T valorErroneo) contrasenaSinCaracterEspecial,
+    required TResult Function(T valorErroneo) contrasenaSinMayuscula,
+    required TResult Function(T valorErroneo) contrasenaSinMinuscula,
+    required TResult Function(T valorErroneo) contrasenaSinNumero,
     required TResult Function(T valorErroneo) stringVacio,
     required TResult Function(T valorErroneo, int min, int max)
         longitudInvalida,
@@ -2988,6 +4833,12 @@ class _$NumeroTelefonicoInvalido<T> implements NumeroTelefonicoInvalido<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(T valorErroneo)? emailInvalido,
     TResult Function(T valorErroneo)? contrasenaCorta,
+    TResult Function(T valorErroneo)? contrasenaVacia,
+    TResult Function(T valorErroneo)? contrasenaLarga,
+    TResult Function(T valorErroneo)? contrasenaSinCaracterEspecial,
+    TResult Function(T valorErroneo)? contrasenaSinMayuscula,
+    TResult Function(T valorErroneo)? contrasenaSinMinuscula,
+    TResult Function(T valorErroneo)? contrasenaSinNumero,
     TResult Function(T valorErroneo)? stringVacio,
     TResult Function(T valorErroneo, int min, int max)? longitudInvalida,
     TResult Function(T valorErroneo, double max)? sueldoInvalido,
@@ -3022,6 +4873,15 @@ class _$NumeroTelefonicoInvalido<T> implements NumeroTelefonicoInvalido<T> {
   TResult map<TResult extends Object?>({
     required TResult Function(EmailInvalido<T> value) emailInvalido,
     required TResult Function(ContrasenaCorta<T> value) contrasenaCorta,
+    required TResult Function(ContrasenaVacia<T> value) contrasenaVacia,
+    required TResult Function(ContrasenaLarga<T> value) contrasenaLarga,
+    required TResult Function(ContrasenaCaracterEspecial<T> value)
+        contrasenaSinCaracterEspecial,
+    required TResult Function(ContrasenaSinMayuscula<T> value)
+        contrasenaSinMayuscula,
+    required TResult Function(ContrasenaSinMinuscula<T> value)
+        contrasenaSinMinuscula,
+    required TResult Function(ContrasenaSinNumero<T> value) contrasenaSinNumero,
     required TResult Function(StringVacio<T> value) stringVacio,
     required TResult Function(LongitudInvalida<T> value) longitudInvalida,
     required TResult Function(SueldoInvalida<T> value) sueldoInvalido,
@@ -3056,6 +4916,13 @@ class _$NumeroTelefonicoInvalido<T> implements NumeroTelefonicoInvalido<T> {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(EmailInvalido<T> value)? emailInvalido,
     TResult Function(ContrasenaCorta<T> value)? contrasenaCorta,
+    TResult Function(ContrasenaVacia<T> value)? contrasenaVacia,
+    TResult Function(ContrasenaLarga<T> value)? contrasenaLarga,
+    TResult Function(ContrasenaCaracterEspecial<T> value)?
+        contrasenaSinCaracterEspecial,
+    TResult Function(ContrasenaSinMayuscula<T> value)? contrasenaSinMayuscula,
+    TResult Function(ContrasenaSinMinuscula<T> value)? contrasenaSinMinuscula,
+    TResult Function(ContrasenaSinNumero<T> value)? contrasenaSinNumero,
     TResult Function(StringVacio<T> value)? stringVacio,
     TResult Function(LongitudInvalida<T> value)? longitudInvalida,
     TResult Function(SueldoInvalida<T> value)? sueldoInvalido,
@@ -3168,6 +5035,12 @@ class _$NumeroTelefonicoVacio<T> implements NumeroTelefonicoVacio<T> {
   TResult when<TResult extends Object?>({
     required TResult Function(T valorErroneo) emailInvalido,
     required TResult Function(T valorErroneo) contrasenaCorta,
+    required TResult Function(T valorErroneo) contrasenaVacia,
+    required TResult Function(T valorErroneo) contrasenaLarga,
+    required TResult Function(T valorErroneo) contrasenaSinCaracterEspecial,
+    required TResult Function(T valorErroneo) contrasenaSinMayuscula,
+    required TResult Function(T valorErroneo) contrasenaSinMinuscula,
+    required TResult Function(T valorErroneo) contrasenaSinNumero,
     required TResult Function(T valorErroneo) stringVacio,
     required TResult Function(T valorErroneo, int min, int max)
         longitudInvalida,
@@ -3200,6 +5073,12 @@ class _$NumeroTelefonicoVacio<T> implements NumeroTelefonicoVacio<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(T valorErroneo)? emailInvalido,
     TResult Function(T valorErroneo)? contrasenaCorta,
+    TResult Function(T valorErroneo)? contrasenaVacia,
+    TResult Function(T valorErroneo)? contrasenaLarga,
+    TResult Function(T valorErroneo)? contrasenaSinCaracterEspecial,
+    TResult Function(T valorErroneo)? contrasenaSinMayuscula,
+    TResult Function(T valorErroneo)? contrasenaSinMinuscula,
+    TResult Function(T valorErroneo)? contrasenaSinNumero,
     TResult Function(T valorErroneo)? stringVacio,
     TResult Function(T valorErroneo, int min, int max)? longitudInvalida,
     TResult Function(T valorErroneo, double max)? sueldoInvalido,
@@ -3234,6 +5113,15 @@ class _$NumeroTelefonicoVacio<T> implements NumeroTelefonicoVacio<T> {
   TResult map<TResult extends Object?>({
     required TResult Function(EmailInvalido<T> value) emailInvalido,
     required TResult Function(ContrasenaCorta<T> value) contrasenaCorta,
+    required TResult Function(ContrasenaVacia<T> value) contrasenaVacia,
+    required TResult Function(ContrasenaLarga<T> value) contrasenaLarga,
+    required TResult Function(ContrasenaCaracterEspecial<T> value)
+        contrasenaSinCaracterEspecial,
+    required TResult Function(ContrasenaSinMayuscula<T> value)
+        contrasenaSinMayuscula,
+    required TResult Function(ContrasenaSinMinuscula<T> value)
+        contrasenaSinMinuscula,
+    required TResult Function(ContrasenaSinNumero<T> value) contrasenaSinNumero,
     required TResult Function(StringVacio<T> value) stringVacio,
     required TResult Function(LongitudInvalida<T> value) longitudInvalida,
     required TResult Function(SueldoInvalida<T> value) sueldoInvalido,
@@ -3268,6 +5156,13 @@ class _$NumeroTelefonicoVacio<T> implements NumeroTelefonicoVacio<T> {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(EmailInvalido<T> value)? emailInvalido,
     TResult Function(ContrasenaCorta<T> value)? contrasenaCorta,
+    TResult Function(ContrasenaVacia<T> value)? contrasenaVacia,
+    TResult Function(ContrasenaLarga<T> value)? contrasenaLarga,
+    TResult Function(ContrasenaCaracterEspecial<T> value)?
+        contrasenaSinCaracterEspecial,
+    TResult Function(ContrasenaSinMayuscula<T> value)? contrasenaSinMayuscula,
+    TResult Function(ContrasenaSinMinuscula<T> value)? contrasenaSinMinuscula,
+    TResult Function(ContrasenaSinNumero<T> value)? contrasenaSinNumero,
     TResult Function(StringVacio<T> value)? stringVacio,
     TResult Function(LongitudInvalida<T> value)? longitudInvalida,
     TResult Function(SueldoInvalida<T> value)? sueldoInvalido,
@@ -3392,6 +5287,12 @@ class _$EstadoOfertaInvalido<T> implements EstadoOfertaInvalido<T> {
   TResult when<TResult extends Object?>({
     required TResult Function(T valorErroneo) emailInvalido,
     required TResult Function(T valorErroneo) contrasenaCorta,
+    required TResult Function(T valorErroneo) contrasenaVacia,
+    required TResult Function(T valorErroneo) contrasenaLarga,
+    required TResult Function(T valorErroneo) contrasenaSinCaracterEspecial,
+    required TResult Function(T valorErroneo) contrasenaSinMayuscula,
+    required TResult Function(T valorErroneo) contrasenaSinMinuscula,
+    required TResult Function(T valorErroneo) contrasenaSinNumero,
     required TResult Function(T valorErroneo) stringVacio,
     required TResult Function(T valorErroneo, int min, int max)
         longitudInvalida,
@@ -3424,6 +5325,12 @@ class _$EstadoOfertaInvalido<T> implements EstadoOfertaInvalido<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(T valorErroneo)? emailInvalido,
     TResult Function(T valorErroneo)? contrasenaCorta,
+    TResult Function(T valorErroneo)? contrasenaVacia,
+    TResult Function(T valorErroneo)? contrasenaLarga,
+    TResult Function(T valorErroneo)? contrasenaSinCaracterEspecial,
+    TResult Function(T valorErroneo)? contrasenaSinMayuscula,
+    TResult Function(T valorErroneo)? contrasenaSinMinuscula,
+    TResult Function(T valorErroneo)? contrasenaSinNumero,
     TResult Function(T valorErroneo)? stringVacio,
     TResult Function(T valorErroneo, int min, int max)? longitudInvalida,
     TResult Function(T valorErroneo, double max)? sueldoInvalido,
@@ -3458,6 +5365,15 @@ class _$EstadoOfertaInvalido<T> implements EstadoOfertaInvalido<T> {
   TResult map<TResult extends Object?>({
     required TResult Function(EmailInvalido<T> value) emailInvalido,
     required TResult Function(ContrasenaCorta<T> value) contrasenaCorta,
+    required TResult Function(ContrasenaVacia<T> value) contrasenaVacia,
+    required TResult Function(ContrasenaLarga<T> value) contrasenaLarga,
+    required TResult Function(ContrasenaCaracterEspecial<T> value)
+        contrasenaSinCaracterEspecial,
+    required TResult Function(ContrasenaSinMayuscula<T> value)
+        contrasenaSinMayuscula,
+    required TResult Function(ContrasenaSinMinuscula<T> value)
+        contrasenaSinMinuscula,
+    required TResult Function(ContrasenaSinNumero<T> value) contrasenaSinNumero,
     required TResult Function(StringVacio<T> value) stringVacio,
     required TResult Function(LongitudInvalida<T> value) longitudInvalida,
     required TResult Function(SueldoInvalida<T> value) sueldoInvalido,
@@ -3492,6 +5408,13 @@ class _$EstadoOfertaInvalido<T> implements EstadoOfertaInvalido<T> {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(EmailInvalido<T> value)? emailInvalido,
     TResult Function(ContrasenaCorta<T> value)? contrasenaCorta,
+    TResult Function(ContrasenaVacia<T> value)? contrasenaVacia,
+    TResult Function(ContrasenaLarga<T> value)? contrasenaLarga,
+    TResult Function(ContrasenaCaracterEspecial<T> value)?
+        contrasenaSinCaracterEspecial,
+    TResult Function(ContrasenaSinMayuscula<T> value)? contrasenaSinMayuscula,
+    TResult Function(ContrasenaSinMinuscula<T> value)? contrasenaSinMinuscula,
+    TResult Function(ContrasenaSinNumero<T> value)? contrasenaSinNumero,
     TResult Function(StringVacio<T> value)? stringVacio,
     TResult Function(LongitudInvalida<T> value)? longitudInvalida,
     TResult Function(SueldoInvalida<T> value)? sueldoInvalido,
@@ -3635,6 +5558,12 @@ class _$DuracionEstimadaValorInvalido<T>
   TResult when<TResult extends Object?>({
     required TResult Function(T valorErroneo) emailInvalido,
     required TResult Function(T valorErroneo) contrasenaCorta,
+    required TResult Function(T valorErroneo) contrasenaVacia,
+    required TResult Function(T valorErroneo) contrasenaLarga,
+    required TResult Function(T valorErroneo) contrasenaSinCaracterEspecial,
+    required TResult Function(T valorErroneo) contrasenaSinMayuscula,
+    required TResult Function(T valorErroneo) contrasenaSinMinuscula,
+    required TResult Function(T valorErroneo) contrasenaSinNumero,
     required TResult Function(T valorErroneo) stringVacio,
     required TResult Function(T valorErroneo, int min, int max)
         longitudInvalida,
@@ -3667,6 +5596,12 @@ class _$DuracionEstimadaValorInvalido<T>
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(T valorErroneo)? emailInvalido,
     TResult Function(T valorErroneo)? contrasenaCorta,
+    TResult Function(T valorErroneo)? contrasenaVacia,
+    TResult Function(T valorErroneo)? contrasenaLarga,
+    TResult Function(T valorErroneo)? contrasenaSinCaracterEspecial,
+    TResult Function(T valorErroneo)? contrasenaSinMayuscula,
+    TResult Function(T valorErroneo)? contrasenaSinMinuscula,
+    TResult Function(T valorErroneo)? contrasenaSinNumero,
     TResult Function(T valorErroneo)? stringVacio,
     TResult Function(T valorErroneo, int min, int max)? longitudInvalida,
     TResult Function(T valorErroneo, double max)? sueldoInvalido,
@@ -3701,6 +5636,15 @@ class _$DuracionEstimadaValorInvalido<T>
   TResult map<TResult extends Object?>({
     required TResult Function(EmailInvalido<T> value) emailInvalido,
     required TResult Function(ContrasenaCorta<T> value) contrasenaCorta,
+    required TResult Function(ContrasenaVacia<T> value) contrasenaVacia,
+    required TResult Function(ContrasenaLarga<T> value) contrasenaLarga,
+    required TResult Function(ContrasenaCaracterEspecial<T> value)
+        contrasenaSinCaracterEspecial,
+    required TResult Function(ContrasenaSinMayuscula<T> value)
+        contrasenaSinMayuscula,
+    required TResult Function(ContrasenaSinMinuscula<T> value)
+        contrasenaSinMinuscula,
+    required TResult Function(ContrasenaSinNumero<T> value) contrasenaSinNumero,
     required TResult Function(StringVacio<T> value) stringVacio,
     required TResult Function(LongitudInvalida<T> value) longitudInvalida,
     required TResult Function(SueldoInvalida<T> value) sueldoInvalido,
@@ -3735,6 +5679,13 @@ class _$DuracionEstimadaValorInvalido<T>
   TResult maybeMap<TResult extends Object?>({
     TResult Function(EmailInvalido<T> value)? emailInvalido,
     TResult Function(ContrasenaCorta<T> value)? contrasenaCorta,
+    TResult Function(ContrasenaVacia<T> value)? contrasenaVacia,
+    TResult Function(ContrasenaLarga<T> value)? contrasenaLarga,
+    TResult Function(ContrasenaCaracterEspecial<T> value)?
+        contrasenaSinCaracterEspecial,
+    TResult Function(ContrasenaSinMayuscula<T> value)? contrasenaSinMayuscula,
+    TResult Function(ContrasenaSinMinuscula<T> value)? contrasenaSinMinuscula,
+    TResult Function(ContrasenaSinNumero<T> value)? contrasenaSinNumero,
     TResult Function(StringVacio<T> value)? stringVacio,
     TResult Function(LongitudInvalida<T> value)? longitudInvalida,
     TResult Function(SueldoInvalida<T> value)? sueldoInvalido,
@@ -3852,6 +5803,12 @@ class _$DuracionEstimadaValorVacio<T> implements DuracionEstimadaValorVacio<T> {
   TResult when<TResult extends Object?>({
     required TResult Function(T valorErroneo) emailInvalido,
     required TResult Function(T valorErroneo) contrasenaCorta,
+    required TResult Function(T valorErroneo) contrasenaVacia,
+    required TResult Function(T valorErroneo) contrasenaLarga,
+    required TResult Function(T valorErroneo) contrasenaSinCaracterEspecial,
+    required TResult Function(T valorErroneo) contrasenaSinMayuscula,
+    required TResult Function(T valorErroneo) contrasenaSinMinuscula,
+    required TResult Function(T valorErroneo) contrasenaSinNumero,
     required TResult Function(T valorErroneo) stringVacio,
     required TResult Function(T valorErroneo, int min, int max)
         longitudInvalida,
@@ -3884,6 +5841,12 @@ class _$DuracionEstimadaValorVacio<T> implements DuracionEstimadaValorVacio<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(T valorErroneo)? emailInvalido,
     TResult Function(T valorErroneo)? contrasenaCorta,
+    TResult Function(T valorErroneo)? contrasenaVacia,
+    TResult Function(T valorErroneo)? contrasenaLarga,
+    TResult Function(T valorErroneo)? contrasenaSinCaracterEspecial,
+    TResult Function(T valorErroneo)? contrasenaSinMayuscula,
+    TResult Function(T valorErroneo)? contrasenaSinMinuscula,
+    TResult Function(T valorErroneo)? contrasenaSinNumero,
     TResult Function(T valorErroneo)? stringVacio,
     TResult Function(T valorErroneo, int min, int max)? longitudInvalida,
     TResult Function(T valorErroneo, double max)? sueldoInvalido,
@@ -3918,6 +5881,15 @@ class _$DuracionEstimadaValorVacio<T> implements DuracionEstimadaValorVacio<T> {
   TResult map<TResult extends Object?>({
     required TResult Function(EmailInvalido<T> value) emailInvalido,
     required TResult Function(ContrasenaCorta<T> value) contrasenaCorta,
+    required TResult Function(ContrasenaVacia<T> value) contrasenaVacia,
+    required TResult Function(ContrasenaLarga<T> value) contrasenaLarga,
+    required TResult Function(ContrasenaCaracterEspecial<T> value)
+        contrasenaSinCaracterEspecial,
+    required TResult Function(ContrasenaSinMayuscula<T> value)
+        contrasenaSinMayuscula,
+    required TResult Function(ContrasenaSinMinuscula<T> value)
+        contrasenaSinMinuscula,
+    required TResult Function(ContrasenaSinNumero<T> value) contrasenaSinNumero,
     required TResult Function(StringVacio<T> value) stringVacio,
     required TResult Function(LongitudInvalida<T> value) longitudInvalida,
     required TResult Function(SueldoInvalida<T> value) sueldoInvalido,
@@ -3952,6 +5924,13 @@ class _$DuracionEstimadaValorVacio<T> implements DuracionEstimadaValorVacio<T> {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(EmailInvalido<T> value)? emailInvalido,
     TResult Function(ContrasenaCorta<T> value)? contrasenaCorta,
+    TResult Function(ContrasenaVacia<T> value)? contrasenaVacia,
+    TResult Function(ContrasenaLarga<T> value)? contrasenaLarga,
+    TResult Function(ContrasenaCaracterEspecial<T> value)?
+        contrasenaSinCaracterEspecial,
+    TResult Function(ContrasenaSinMayuscula<T> value)? contrasenaSinMayuscula,
+    TResult Function(ContrasenaSinMinuscula<T> value)? contrasenaSinMinuscula,
+    TResult Function(ContrasenaSinNumero<T> value)? contrasenaSinNumero,
     TResult Function(StringVacio<T> value)? stringVacio,
     TResult Function(LongitudInvalida<T> value)? longitudInvalida,
     TResult Function(SueldoInvalida<T> value)? sueldoInvalido,
@@ -4081,6 +6060,12 @@ class _$DuractionEstimadaEscalaInvalida<T>
   TResult when<TResult extends Object?>({
     required TResult Function(T valorErroneo) emailInvalido,
     required TResult Function(T valorErroneo) contrasenaCorta,
+    required TResult Function(T valorErroneo) contrasenaVacia,
+    required TResult Function(T valorErroneo) contrasenaLarga,
+    required TResult Function(T valorErroneo) contrasenaSinCaracterEspecial,
+    required TResult Function(T valorErroneo) contrasenaSinMayuscula,
+    required TResult Function(T valorErroneo) contrasenaSinMinuscula,
+    required TResult Function(T valorErroneo) contrasenaSinNumero,
     required TResult Function(T valorErroneo) stringVacio,
     required TResult Function(T valorErroneo, int min, int max)
         longitudInvalida,
@@ -4113,6 +6098,12 @@ class _$DuractionEstimadaEscalaInvalida<T>
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(T valorErroneo)? emailInvalido,
     TResult Function(T valorErroneo)? contrasenaCorta,
+    TResult Function(T valorErroneo)? contrasenaVacia,
+    TResult Function(T valorErroneo)? contrasenaLarga,
+    TResult Function(T valorErroneo)? contrasenaSinCaracterEspecial,
+    TResult Function(T valorErroneo)? contrasenaSinMayuscula,
+    TResult Function(T valorErroneo)? contrasenaSinMinuscula,
+    TResult Function(T valorErroneo)? contrasenaSinNumero,
     TResult Function(T valorErroneo)? stringVacio,
     TResult Function(T valorErroneo, int min, int max)? longitudInvalida,
     TResult Function(T valorErroneo, double max)? sueldoInvalido,
@@ -4147,6 +6138,15 @@ class _$DuractionEstimadaEscalaInvalida<T>
   TResult map<TResult extends Object?>({
     required TResult Function(EmailInvalido<T> value) emailInvalido,
     required TResult Function(ContrasenaCorta<T> value) contrasenaCorta,
+    required TResult Function(ContrasenaVacia<T> value) contrasenaVacia,
+    required TResult Function(ContrasenaLarga<T> value) contrasenaLarga,
+    required TResult Function(ContrasenaCaracterEspecial<T> value)
+        contrasenaSinCaracterEspecial,
+    required TResult Function(ContrasenaSinMayuscula<T> value)
+        contrasenaSinMayuscula,
+    required TResult Function(ContrasenaSinMinuscula<T> value)
+        contrasenaSinMinuscula,
+    required TResult Function(ContrasenaSinNumero<T> value) contrasenaSinNumero,
     required TResult Function(StringVacio<T> value) stringVacio,
     required TResult Function(LongitudInvalida<T> value) longitudInvalida,
     required TResult Function(SueldoInvalida<T> value) sueldoInvalido,
@@ -4181,6 +6181,13 @@ class _$DuractionEstimadaEscalaInvalida<T>
   TResult maybeMap<TResult extends Object?>({
     TResult Function(EmailInvalido<T> value)? emailInvalido,
     TResult Function(ContrasenaCorta<T> value)? contrasenaCorta,
+    TResult Function(ContrasenaVacia<T> value)? contrasenaVacia,
+    TResult Function(ContrasenaLarga<T> value)? contrasenaLarga,
+    TResult Function(ContrasenaCaracterEspecial<T> value)?
+        contrasenaSinCaracterEspecial,
+    TResult Function(ContrasenaSinMayuscula<T> value)? contrasenaSinMayuscula,
+    TResult Function(ContrasenaSinMinuscula<T> value)? contrasenaSinMinuscula,
+    TResult Function(ContrasenaSinNumero<T> value)? contrasenaSinNumero,
     TResult Function(StringVacio<T> value)? stringVacio,
     TResult Function(LongitudInvalida<T> value)? longitudInvalida,
     TResult Function(SueldoInvalida<T> value)? sueldoInvalido,
@@ -4299,6 +6306,12 @@ class _$DuracionEstimadaEscalaVacia<T>
   TResult when<TResult extends Object?>({
     required TResult Function(T valorErroneo) emailInvalido,
     required TResult Function(T valorErroneo) contrasenaCorta,
+    required TResult Function(T valorErroneo) contrasenaVacia,
+    required TResult Function(T valorErroneo) contrasenaLarga,
+    required TResult Function(T valorErroneo) contrasenaSinCaracterEspecial,
+    required TResult Function(T valorErroneo) contrasenaSinMayuscula,
+    required TResult Function(T valorErroneo) contrasenaSinMinuscula,
+    required TResult Function(T valorErroneo) contrasenaSinNumero,
     required TResult Function(T valorErroneo) stringVacio,
     required TResult Function(T valorErroneo, int min, int max)
         longitudInvalida,
@@ -4331,6 +6344,12 @@ class _$DuracionEstimadaEscalaVacia<T>
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(T valorErroneo)? emailInvalido,
     TResult Function(T valorErroneo)? contrasenaCorta,
+    TResult Function(T valorErroneo)? contrasenaVacia,
+    TResult Function(T valorErroneo)? contrasenaLarga,
+    TResult Function(T valorErroneo)? contrasenaSinCaracterEspecial,
+    TResult Function(T valorErroneo)? contrasenaSinMayuscula,
+    TResult Function(T valorErroneo)? contrasenaSinMinuscula,
+    TResult Function(T valorErroneo)? contrasenaSinNumero,
     TResult Function(T valorErroneo)? stringVacio,
     TResult Function(T valorErroneo, int min, int max)? longitudInvalida,
     TResult Function(T valorErroneo, double max)? sueldoInvalido,
@@ -4365,6 +6384,15 @@ class _$DuracionEstimadaEscalaVacia<T>
   TResult map<TResult extends Object?>({
     required TResult Function(EmailInvalido<T> value) emailInvalido,
     required TResult Function(ContrasenaCorta<T> value) contrasenaCorta,
+    required TResult Function(ContrasenaVacia<T> value) contrasenaVacia,
+    required TResult Function(ContrasenaLarga<T> value) contrasenaLarga,
+    required TResult Function(ContrasenaCaracterEspecial<T> value)
+        contrasenaSinCaracterEspecial,
+    required TResult Function(ContrasenaSinMayuscula<T> value)
+        contrasenaSinMayuscula,
+    required TResult Function(ContrasenaSinMinuscula<T> value)
+        contrasenaSinMinuscula,
+    required TResult Function(ContrasenaSinNumero<T> value) contrasenaSinNumero,
     required TResult Function(StringVacio<T> value) stringVacio,
     required TResult Function(LongitudInvalida<T> value) longitudInvalida,
     required TResult Function(SueldoInvalida<T> value) sueldoInvalido,
@@ -4399,6 +6427,13 @@ class _$DuracionEstimadaEscalaVacia<T>
   TResult maybeMap<TResult extends Object?>({
     TResult Function(EmailInvalido<T> value)? emailInvalido,
     TResult Function(ContrasenaCorta<T> value)? contrasenaCorta,
+    TResult Function(ContrasenaVacia<T> value)? contrasenaVacia,
+    TResult Function(ContrasenaLarga<T> value)? contrasenaLarga,
+    TResult Function(ContrasenaCaracterEspecial<T> value)?
+        contrasenaSinCaracterEspecial,
+    TResult Function(ContrasenaSinMayuscula<T> value)? contrasenaSinMayuscula,
+    TResult Function(ContrasenaSinMinuscula<T> value)? contrasenaSinMinuscula,
+    TResult Function(ContrasenaSinNumero<T> value)? contrasenaSinNumero,
     TResult Function(StringVacio<T> value)? stringVacio,
     TResult Function(LongitudInvalida<T> value)? longitudInvalida,
     TResult Function(SueldoInvalida<T> value)? sueldoInvalido,

@@ -16,6 +16,30 @@ abstract class ValorErroneo<T> with _$ValorErroneo<T> {
     required T valorErroneo,
   }) = ContrasenaCorta<T>;
 
+  const factory ValorErroneo.contrasenaVacia({
+    required T valorErroneo,
+  }) = ContrasenaVacia<T>;
+
+  const factory ValorErroneo.contrasenaLarga({
+    required T valorErroneo,
+  }) = ContrasenaLarga<T>;
+
+  const factory ValorErroneo.contrasenaSinCaracterEspecial({
+    required T valorErroneo,
+  }) = ContrasenaCaracterEspecial<T>;
+
+  const factory ValorErroneo.contrasenaSinMayuscula({
+    required T valorErroneo,
+  }) = ContrasenaSinMayuscula<T>;
+
+  const factory ValorErroneo.contrasenaSinMinuscula({
+    required T valorErroneo,
+  }) = ContrasenaSinMinuscula<T>;
+
+  const factory ValorErroneo.contrasenaSinNumero({
+    required T valorErroneo,
+  }) = ContrasenaSinNumero<T>;
+
   const factory ValorErroneo.stringVacio({
     required T valorErroneo,
   }) = StringVacio<T>;
