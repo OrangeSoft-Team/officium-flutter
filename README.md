@@ -36,7 +36,7 @@ Adicionalmente, se utilizan las siguientes plantillas para el repositorio:
 | -------------------- | ---------- | ----------------------------- |
 | Andrés De Armas      | AndresG75  | https://github.com/AndresG75  |
 | Leonardo Ruiz        | iSlidex    | https://github.com/iSlidex    |
-| Steven Dávil         | SDRADCodex | https://github.com/SDRADCodex |
+| Steven Dávila         | SDRADCodex | https://github.com/SDRADCodex |
 
 ### :computer: Stack de Tecnologías
 
@@ -48,7 +48,7 @@ Adicionalmente, se utilizan las siguientes plantillas para el repositorio:
 | <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Android_Studio_Icon_%282014-2019%29.svg" width="24">                          | Ambiente de ejecución      | Android Studio | https://developer.android.com/studio     | 4.2.1   |
 | <img src="https://plugins.jetbrains.com/files/12129/118174/icon/pluginIcon.svg" width="24">                                                 | Manejador de Estado        | BloC           | https://bloclibrary.dev/#/               | 7.0.0   |
 | <img src="https://logowik.com/content/uploads/images/flutter5786.jpg" width="24">                                                           | Framework                  | Flutter        | https://flutter.dev/                     | 2.2     |
-| <img src="https://avatars.githubusercontent.com/u/32196900?s=400&v=4" width="24">                                                           | Testing                    | Jest           | https://jestjs.io/docs/getting-started   | 26.6.3  |
+| <img src="https://cdn.worldvectorlogo.com/logos/dart.svg" width="24">                                                           | Testing                    | Mockito          | https://pub.dev/packages/mockito   | 4.1.1 |
 | <img src="https://cdn.worldvectorlogo.com/logos/dart.svg" width="24">                                                                       | Linter                     | Linter         | https://pub.dev/packages/linter          | 1.6.1   | 
 
 ### :wrench: Instalación de la Aplicación
