@@ -20,11 +20,13 @@ class _$PostulacionOfertaLaboralTearOff {
       {required Identificador uuidOfertaLaboral,
       required Identificador uuidEmpresa,
       required ComentarioPostulacionOfertaLaboral
-          comentarioPostulacionOfertaLaboral}) {
+          comentarioPostulacionOfertaLaboral,
+      required estadoOfertalaboral estado}) {
     return _PostulacionOfertaLaboral(
       uuidOfertaLaboral: uuidOfertaLaboral,
       uuidEmpresa: uuidEmpresa,
       comentarioPostulacionOfertaLaboral: comentarioPostulacionOfertaLaboral,
+      estado: estado,
     );
   }
 }
@@ -38,6 +40,7 @@ mixin _$PostulacionOfertaLaboral {
   Identificador get uuidEmpresa => throw _privateConstructorUsedError;
   ComentarioPostulacionOfertaLaboral get comentarioPostulacionOfertaLaboral =>
       throw _privateConstructorUsedError;
+  estadoOfertalaboral get estado => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $PostulacionOfertaLaboralCopyWith<PostulacionOfertaLaboral> get copyWith =>
@@ -52,7 +55,8 @@ abstract class $PostulacionOfertaLaboralCopyWith<$Res> {
   $Res call(
       {Identificador uuidOfertaLaboral,
       Identificador uuidEmpresa,
-      ComentarioPostulacionOfertaLaboral comentarioPostulacionOfertaLaboral});
+      ComentarioPostulacionOfertaLaboral comentarioPostulacionOfertaLaboral,
+      estadoOfertalaboral estado});
 }
 
 /// @nodoc
@@ -69,6 +73,7 @@ class _$PostulacionOfertaLaboralCopyWithImpl<$Res>
     Object? uuidOfertaLaboral = freezed,
     Object? uuidEmpresa = freezed,
     Object? comentarioPostulacionOfertaLaboral = freezed,
+    Object? estado = freezed,
   }) {
     return _then(_value.copyWith(
       uuidOfertaLaboral: uuidOfertaLaboral == freezed
@@ -84,6 +89,10 @@ class _$PostulacionOfertaLaboralCopyWithImpl<$Res>
           ? _value.comentarioPostulacionOfertaLaboral
           : comentarioPostulacionOfertaLaboral // ignore: cast_nullable_to_non_nullable
               as ComentarioPostulacionOfertaLaboral,
+      estado: estado == freezed
+          ? _value.estado
+          : estado // ignore: cast_nullable_to_non_nullable
+              as estadoOfertalaboral,
     ));
   }
 }
@@ -98,7 +107,8 @@ abstract class _$PostulacionOfertaLaboralCopyWith<$Res>
   $Res call(
       {Identificador uuidOfertaLaboral,
       Identificador uuidEmpresa,
-      ComentarioPostulacionOfertaLaboral comentarioPostulacionOfertaLaboral});
+      ComentarioPostulacionOfertaLaboral comentarioPostulacionOfertaLaboral,
+      estadoOfertalaboral estado});
 }
 
 /// @nodoc
@@ -118,6 +128,7 @@ class __$PostulacionOfertaLaboralCopyWithImpl<$Res>
     Object? uuidOfertaLaboral = freezed,
     Object? uuidEmpresa = freezed,
     Object? comentarioPostulacionOfertaLaboral = freezed,
+    Object? estado = freezed,
   }) {
     return _then(_PostulacionOfertaLaboral(
       uuidOfertaLaboral: uuidOfertaLaboral == freezed
@@ -133,6 +144,10 @@ class __$PostulacionOfertaLaboralCopyWithImpl<$Res>
           ? _value.comentarioPostulacionOfertaLaboral
           : comentarioPostulacionOfertaLaboral // ignore: cast_nullable_to_non_nullable
               as ComentarioPostulacionOfertaLaboral,
+      estado: estado == freezed
+          ? _value.estado
+          : estado // ignore: cast_nullable_to_non_nullable
+              as estadoOfertalaboral,
     ));
   }
 }
@@ -143,7 +158,8 @@ class _$_PostulacionOfertaLaboral implements _PostulacionOfertaLaboral {
   const _$_PostulacionOfertaLaboral(
       {required this.uuidOfertaLaboral,
       required this.uuidEmpresa,
-      required this.comentarioPostulacionOfertaLaboral});
+      required this.comentarioPostulacionOfertaLaboral,
+      required this.estado});
 
   @override
   final Identificador uuidOfertaLaboral;
@@ -151,10 +167,12 @@ class _$_PostulacionOfertaLaboral implements _PostulacionOfertaLaboral {
   final Identificador uuidEmpresa;
   @override
   final ComentarioPostulacionOfertaLaboral comentarioPostulacionOfertaLaboral;
+  @override
+  final estadoOfertalaboral estado;
 
   @override
   String toString() {
-    return 'PostulacionOfertaLaboral(uuidOfertaLaboral: $uuidOfertaLaboral, uuidEmpresa: $uuidEmpresa, comentarioPostulacionOfertaLaboral: $comentarioPostulacionOfertaLaboral)';
+    return 'PostulacionOfertaLaboral(uuidOfertaLaboral: $uuidOfertaLaboral, uuidEmpresa: $uuidEmpresa, comentarioPostulacionOfertaLaboral: $comentarioPostulacionOfertaLaboral, estado: $estado)';
   }
 
   @override
@@ -171,7 +189,9 @@ class _$_PostulacionOfertaLaboral implements _PostulacionOfertaLaboral {
                     comentarioPostulacionOfertaLaboral) ||
                 const DeepCollectionEquality().equals(
                     other.comentarioPostulacionOfertaLaboral,
-                    comentarioPostulacionOfertaLaboral)));
+                    comentarioPostulacionOfertaLaboral)) &&
+            (identical(other.estado, estado) ||
+                const DeepCollectionEquality().equals(other.estado, estado)));
   }
 
   @override
@@ -179,7 +199,8 @@ class _$_PostulacionOfertaLaboral implements _PostulacionOfertaLaboral {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(uuidOfertaLaboral) ^
       const DeepCollectionEquality().hash(uuidEmpresa) ^
-      const DeepCollectionEquality().hash(comentarioPostulacionOfertaLaboral);
+      const DeepCollectionEquality().hash(comentarioPostulacionOfertaLaboral) ^
+      const DeepCollectionEquality().hash(estado);
 
   @JsonKey(ignore: true)
   @override
@@ -193,7 +214,8 @@ abstract class _PostulacionOfertaLaboral implements PostulacionOfertaLaboral {
       {required Identificador uuidOfertaLaboral,
       required Identificador uuidEmpresa,
       required ComentarioPostulacionOfertaLaboral
-          comentarioPostulacionOfertaLaboral}) = _$_PostulacionOfertaLaboral;
+          comentarioPostulacionOfertaLaboral,
+      required estadoOfertalaboral estado}) = _$_PostulacionOfertaLaboral;
 
   @override
   Identificador get uuidOfertaLaboral => throw _privateConstructorUsedError;
@@ -202,6 +224,8 @@ abstract class _PostulacionOfertaLaboral implements PostulacionOfertaLaboral {
   @override
   ComentarioPostulacionOfertaLaboral get comentarioPostulacionOfertaLaboral =>
       throw _privateConstructorUsedError;
+  @override
+  estadoOfertalaboral get estado => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$PostulacionOfertaLaboralCopyWith<_PostulacionOfertaLaboral> get copyWith =>

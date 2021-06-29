@@ -11,8 +11,8 @@ class EstadoOferta extends ValueObject<String> {
   static const turnos = ["publicado", "cancelado"];
 
   factory EstadoOferta(String turno) {
-    return EstadoOferta._(
-        validadorEstadoOferta(turno, turnos).flatMap(validadorStringNoVacio));
+    return EstadoOferta._(validadorEstadoOfertaLaboral(turno, turnos)
+        .flatMap(validadorStringNoVacio));
   }
 
   const EstadoOferta._(this.value);

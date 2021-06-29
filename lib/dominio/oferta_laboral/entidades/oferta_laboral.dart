@@ -1,5 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:officium_flutter/dominio/comun/entidad.dart';
+import 'package:officium_flutter/dominio/comun/entidades/entidad.dart';
 import 'package:officium_flutter/dominio/comun/value_objects/fecha.dart';
 import 'package:officium_flutter/dominio/comun/value_objects/identificador.dart';
 import 'package:officium_flutter/dominio/empresa/value_objects/nombre_empresa.dart';

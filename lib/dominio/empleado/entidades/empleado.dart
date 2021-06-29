@@ -1,6 +1,6 @@
 import 'package:dartz/dartz.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:officium_flutter/dominio/comun/entidad.dart';
+import 'package:officium_flutter/dominio/comun/entidades/entidad.dart';
 import 'package:officium_flutter/dominio/comun/excepciones_dominio/valores_errones_value_object/factoria_valor_erroneo.dart';
 import 'package:officium_flutter/dominio/comun/value_objects/genero.dart';
 import 'package:officium_flutter/dominio/comun/value_objects/identificador.dart';
@@ -28,6 +28,7 @@ abstract class Empleado implements _$Empleado {
       required DireccionCalle direccionCalle,
       required CodigoPostal codigoPostal,
       required NumeroTelefonico numeroTelefonico,
+      required bool statusEmpleado,
       required FechaNacimiento fechaNacimiento}) = _Empleado;
 
   factory Empleado.vacio() => Empleado(
@@ -40,6 +41,7 @@ abstract class Empleado implements _$Empleado {
       direccionCalle: DireccionCalle(''),
       codigoPostal: CodigoPostal(''),
       numeroTelefonico: NumeroTelefonico(''),
+      statusEmpleado: true,
       fechaNacimiento: FechaNacimiento(DateTime.now()));
 
   Option<ValorErroneo<dynamic>> get opcionFallo {

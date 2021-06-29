@@ -26,6 +26,7 @@ class _$EmpleadoTearOff {
       required DireccionCalle direccionCalle,
       required CodigoPostal codigoPostal,
       required NumeroTelefonico numeroTelefonico,
+      required bool statusEmpleado,
       required FechaNacimiento fechaNacimiento}) {
     return _Empleado(
       uuid: uuid,
@@ -37,6 +38,7 @@ class _$EmpleadoTearOff {
       direccionCalle: direccionCalle,
       codigoPostal: codigoPostal,
       numeroTelefonico: numeroTelefonico,
+      statusEmpleado: statusEmpleado,
       fechaNacimiento: fechaNacimiento,
     );
   }
@@ -56,6 +58,7 @@ mixin _$Empleado {
   DireccionCalle get direccionCalle => throw _privateConstructorUsedError;
   CodigoPostal get codigoPostal => throw _privateConstructorUsedError;
   NumeroTelefonico get numeroTelefonico => throw _privateConstructorUsedError;
+  bool get statusEmpleado => throw _privateConstructorUsedError;
   FechaNacimiento get fechaNacimiento => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -77,6 +80,7 @@ abstract class $EmpleadoCopyWith<$Res> {
       DireccionCalle direccionCalle,
       CodigoPostal codigoPostal,
       NumeroTelefonico numeroTelefonico,
+      bool statusEmpleado,
       FechaNacimiento fechaNacimiento});
 }
 
@@ -99,6 +103,7 @@ class _$EmpleadoCopyWithImpl<$Res> implements $EmpleadoCopyWith<$Res> {
     Object? direccionCalle = freezed,
     Object? codigoPostal = freezed,
     Object? numeroTelefonico = freezed,
+    Object? statusEmpleado = freezed,
     Object? fechaNacimiento = freezed,
   }) {
     return _then(_value.copyWith(
@@ -138,6 +143,10 @@ class _$EmpleadoCopyWithImpl<$Res> implements $EmpleadoCopyWith<$Res> {
           ? _value.numeroTelefonico
           : numeroTelefonico // ignore: cast_nullable_to_non_nullable
               as NumeroTelefonico,
+      statusEmpleado: statusEmpleado == freezed
+          ? _value.statusEmpleado
+          : statusEmpleado // ignore: cast_nullable_to_non_nullable
+              as bool,
       fechaNacimiento: fechaNacimiento == freezed
           ? _value.fechaNacimiento
           : fechaNacimiento // ignore: cast_nullable_to_non_nullable
@@ -161,6 +170,7 @@ abstract class _$EmpleadoCopyWith<$Res> implements $EmpleadoCopyWith<$Res> {
       DireccionCalle direccionCalle,
       CodigoPostal codigoPostal,
       NumeroTelefonico numeroTelefonico,
+      bool statusEmpleado,
       FechaNacimiento fechaNacimiento});
 }
 
@@ -184,6 +194,7 @@ class __$EmpleadoCopyWithImpl<$Res> extends _$EmpleadoCopyWithImpl<$Res>
     Object? direccionCalle = freezed,
     Object? codigoPostal = freezed,
     Object? numeroTelefonico = freezed,
+    Object? statusEmpleado = freezed,
     Object? fechaNacimiento = freezed,
   }) {
     return _then(_Empleado(
@@ -223,6 +234,10 @@ class __$EmpleadoCopyWithImpl<$Res> extends _$EmpleadoCopyWithImpl<$Res>
           ? _value.numeroTelefonico
           : numeroTelefonico // ignore: cast_nullable_to_non_nullable
               as NumeroTelefonico,
+      statusEmpleado: statusEmpleado == freezed
+          ? _value.statusEmpleado
+          : statusEmpleado // ignore: cast_nullable_to_non_nullable
+              as bool,
       fechaNacimiento: fechaNacimiento == freezed
           ? _value.fechaNacimiento
           : fechaNacimiento // ignore: cast_nullable_to_non_nullable
@@ -245,6 +260,7 @@ class _$_Empleado extends _Empleado {
       required this.direccionCalle,
       required this.codigoPostal,
       required this.numeroTelefonico,
+      required this.statusEmpleado,
       required this.fechaNacimiento})
       : super._();
 
@@ -267,11 +283,13 @@ class _$_Empleado extends _Empleado {
   @override
   final NumeroTelefonico numeroTelefonico;
   @override
+  final bool statusEmpleado;
+  @override
   final FechaNacimiento fechaNacimiento;
 
   @override
   String toString() {
-    return 'Empleado(uuid: $uuid, primerNombre: $primerNombre, segundoNombre: $segundoNombre, primerApelido: $primerApelido, segundoApellido: $segundoApellido, genero: $genero, direccionCalle: $direccionCalle, codigoPostal: $codigoPostal, numeroTelefonico: $numeroTelefonico, fechaNacimiento: $fechaNacimiento)';
+    return 'Empleado(uuid: $uuid, primerNombre: $primerNombre, segundoNombre: $segundoNombre, primerApelido: $primerApelido, segundoApellido: $segundoApellido, genero: $genero, direccionCalle: $direccionCalle, codigoPostal: $codigoPostal, numeroTelefonico: $numeroTelefonico, statusEmpleado: $statusEmpleado, fechaNacimiento: $fechaNacimiento)';
   }
 
   @override
@@ -303,6 +321,9 @@ class _$_Empleado extends _Empleado {
             (identical(other.numeroTelefonico, numeroTelefonico) ||
                 const DeepCollectionEquality()
                     .equals(other.numeroTelefonico, numeroTelefonico)) &&
+            (identical(other.statusEmpleado, statusEmpleado) ||
+                const DeepCollectionEquality()
+                    .equals(other.statusEmpleado, statusEmpleado)) &&
             (identical(other.fechaNacimiento, fechaNacimiento) ||
                 const DeepCollectionEquality()
                     .equals(other.fechaNacimiento, fechaNacimiento)));
@@ -320,6 +341,7 @@ class _$_Empleado extends _Empleado {
       const DeepCollectionEquality().hash(direccionCalle) ^
       const DeepCollectionEquality().hash(codigoPostal) ^
       const DeepCollectionEquality().hash(numeroTelefonico) ^
+      const DeepCollectionEquality().hash(statusEmpleado) ^
       const DeepCollectionEquality().hash(fechaNacimiento);
 
   @JsonKey(ignore: true)
@@ -339,6 +361,7 @@ abstract class _Empleado extends Empleado implements IEntitidad {
       required DireccionCalle direccionCalle,
       required CodigoPostal codigoPostal,
       required NumeroTelefonico numeroTelefonico,
+      required bool statusEmpleado,
       required FechaNacimiento fechaNacimiento}) = _$_Empleado;
   const _Empleado._() : super._();
 
@@ -360,6 +383,8 @@ abstract class _Empleado extends Empleado implements IEntitidad {
   CodigoPostal get codigoPostal => throw _privateConstructorUsedError;
   @override
   NumeroTelefonico get numeroTelefonico => throw _privateConstructorUsedError;
+  @override
+  bool get statusEmpleado => throw _privateConstructorUsedError;
   @override
   FechaNacimiento get fechaNacimiento => throw _privateConstructorUsedError;
   @override

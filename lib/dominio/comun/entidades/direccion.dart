@@ -1,10 +1,10 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:officium_flutter/dominio/comun/value_objects/direccion/calle_direccion.dart';
+import 'package:officium_flutter/dominio/comun/value_objects/direccion/codigo_postal_direccion.dart';
+import 'package:officium_flutter/dominio/comun/value_objects/identificador.dart';
 
 import 'ciudad.dart';
 import 'entidad.dart';
-import 'value_objects/direccion/calle_direccion.dart';
-import 'value_objects/direccion/codigo_postal_direccion.dart';
-import 'value_objects/identificador.dart';
 
 part 'direccion.freezed.dart';
 
