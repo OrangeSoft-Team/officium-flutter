@@ -20,7 +20,7 @@ class _$EmpleadoTearOff {
       {required Identificador uuid,
       required PrimerNombre primerNombre,
       SegundoNombre? segundoNombre,
-      required PrimerApellido primerApelido,
+      required PrimerApellido primerApellido,
       SegundoApellido? segundoApellido,
       required Genero genero,
       required DireccionCalle direccionCalle,
@@ -32,7 +32,7 @@ class _$EmpleadoTearOff {
       uuid: uuid,
       primerNombre: primerNombre,
       segundoNombre: segundoNombre,
-      primerApelido: primerApelido,
+      primerApellido: primerApellido,
       segundoApellido: segundoApellido,
       genero: genero,
       direccionCalle: direccionCalle,
@@ -52,7 +52,7 @@ mixin _$Empleado {
   Identificador get uuid => throw _privateConstructorUsedError;
   PrimerNombre get primerNombre => throw _privateConstructorUsedError;
   SegundoNombre? get segundoNombre => throw _privateConstructorUsedError;
-  PrimerApellido get primerApelido => throw _privateConstructorUsedError;
+  PrimerApellido get primerApellido => throw _privateConstructorUsedError;
   SegundoApellido? get segundoApellido => throw _privateConstructorUsedError;
   Genero get genero => throw _privateConstructorUsedError;
   DireccionCalle get direccionCalle => throw _privateConstructorUsedError;
@@ -74,7 +74,7 @@ abstract class $EmpleadoCopyWith<$Res> {
       {Identificador uuid,
       PrimerNombre primerNombre,
       SegundoNombre? segundoNombre,
-      PrimerApellido primerApelido,
+      PrimerApellido primerApellido,
       SegundoApellido? segundoApellido,
       Genero genero,
       DireccionCalle direccionCalle,
@@ -97,7 +97,7 @@ class _$EmpleadoCopyWithImpl<$Res> implements $EmpleadoCopyWith<$Res> {
     Object? uuid = freezed,
     Object? primerNombre = freezed,
     Object? segundoNombre = freezed,
-    Object? primerApelido = freezed,
+    Object? primerApellido = freezed,
     Object? segundoApellido = freezed,
     Object? genero = freezed,
     Object? direccionCalle = freezed,
@@ -119,9 +119,9 @@ class _$EmpleadoCopyWithImpl<$Res> implements $EmpleadoCopyWith<$Res> {
           ? _value.segundoNombre
           : segundoNombre // ignore: cast_nullable_to_non_nullable
               as SegundoNombre?,
-      primerApelido: primerApelido == freezed
-          ? _value.primerApelido
-          : primerApelido // ignore: cast_nullable_to_non_nullable
+      primerApellido: primerApellido == freezed
+          ? _value.primerApellido
+          : primerApellido // ignore: cast_nullable_to_non_nullable
               as PrimerApellido,
       segundoApellido: segundoApellido == freezed
           ? _value.segundoApellido
@@ -164,7 +164,7 @@ abstract class _$EmpleadoCopyWith<$Res> implements $EmpleadoCopyWith<$Res> {
       {Identificador uuid,
       PrimerNombre primerNombre,
       SegundoNombre? segundoNombre,
-      PrimerApellido primerApelido,
+      PrimerApellido primerApellido,
       SegundoApellido? segundoApellido,
       Genero genero,
       DireccionCalle direccionCalle,
@@ -188,7 +188,7 @@ class __$EmpleadoCopyWithImpl<$Res> extends _$EmpleadoCopyWithImpl<$Res>
     Object? uuid = freezed,
     Object? primerNombre = freezed,
     Object? segundoNombre = freezed,
-    Object? primerApelido = freezed,
+    Object? primerApellido = freezed,
     Object? segundoApellido = freezed,
     Object? genero = freezed,
     Object? direccionCalle = freezed,
@@ -210,9 +210,9 @@ class __$EmpleadoCopyWithImpl<$Res> extends _$EmpleadoCopyWithImpl<$Res>
           ? _value.segundoNombre
           : segundoNombre // ignore: cast_nullable_to_non_nullable
               as SegundoNombre?,
-      primerApelido: primerApelido == freezed
-          ? _value.primerApelido
-          : primerApelido // ignore: cast_nullable_to_non_nullable
+      primerApellido: primerApellido == freezed
+          ? _value.primerApellido
+          : primerApellido // ignore: cast_nullable_to_non_nullable
               as PrimerApellido,
       segundoApellido: segundoApellido == freezed
           ? _value.segundoApellido
@@ -254,7 +254,7 @@ class _$_Empleado extends _Empleado {
       {required this.uuid,
       required this.primerNombre,
       this.segundoNombre,
-      required this.primerApelido,
+      required this.primerApellido,
       this.segundoApellido,
       required this.genero,
       required this.direccionCalle,
@@ -271,7 +271,7 @@ class _$_Empleado extends _Empleado {
   @override
   final SegundoNombre? segundoNombre;
   @override
-  final PrimerApellido primerApelido;
+  final PrimerApellido primerApellido;
   @override
   final SegundoApellido? segundoApellido;
   @override
@@ -289,7 +289,7 @@ class _$_Empleado extends _Empleado {
 
   @override
   String toString() {
-    return 'Empleado(uuid: $uuid, primerNombre: $primerNombre, segundoNombre: $segundoNombre, primerApelido: $primerApelido, segundoApellido: $segundoApellido, genero: $genero, direccionCalle: $direccionCalle, codigoPostal: $codigoPostal, numeroTelefonico: $numeroTelefonico, statusEmpleado: $statusEmpleado, fechaNacimiento: $fechaNacimiento)';
+    return 'Empleado(uuid: $uuid, primerNombre: $primerNombre, segundoNombre: $segundoNombre, primerApellido: $primerApellido, segundoApellido: $segundoApellido, genero: $genero, direccionCalle: $direccionCalle, codigoPostal: $codigoPostal, numeroTelefonico: $numeroTelefonico, statusEmpleado: $statusEmpleado, fechaNacimiento: $fechaNacimiento)';
   }
 
   @override
@@ -304,9 +304,9 @@ class _$_Empleado extends _Empleado {
             (identical(other.segundoNombre, segundoNombre) ||
                 const DeepCollectionEquality()
                     .equals(other.segundoNombre, segundoNombre)) &&
-            (identical(other.primerApelido, primerApelido) ||
+            (identical(other.primerApellido, primerApellido) ||
                 const DeepCollectionEquality()
-                    .equals(other.primerApelido, primerApelido)) &&
+                    .equals(other.primerApellido, primerApellido)) &&
             (identical(other.segundoApellido, segundoApellido) ||
                 const DeepCollectionEquality()
                     .equals(other.segundoApellido, segundoApellido)) &&
@@ -335,7 +335,7 @@ class _$_Empleado extends _Empleado {
       const DeepCollectionEquality().hash(uuid) ^
       const DeepCollectionEquality().hash(primerNombre) ^
       const DeepCollectionEquality().hash(segundoNombre) ^
-      const DeepCollectionEquality().hash(primerApelido) ^
+      const DeepCollectionEquality().hash(primerApellido) ^
       const DeepCollectionEquality().hash(segundoApellido) ^
       const DeepCollectionEquality().hash(genero) ^
       const DeepCollectionEquality().hash(direccionCalle) ^
@@ -355,7 +355,7 @@ abstract class _Empleado extends Empleado implements IEntitidad {
       {required Identificador uuid,
       required PrimerNombre primerNombre,
       SegundoNombre? segundoNombre,
-      required PrimerApellido primerApelido,
+      required PrimerApellido primerApellido,
       SegundoApellido? segundoApellido,
       required Genero genero,
       required DireccionCalle direccionCalle,
@@ -372,7 +372,7 @@ abstract class _Empleado extends Empleado implements IEntitidad {
   @override
   SegundoNombre? get segundoNombre => throw _privateConstructorUsedError;
   @override
-  PrimerApellido get primerApelido => throw _privateConstructorUsedError;
+  PrimerApellido get primerApellido => throw _privateConstructorUsedError;
   @override
   SegundoApellido? get segundoApellido => throw _privateConstructorUsedError;
   @override
