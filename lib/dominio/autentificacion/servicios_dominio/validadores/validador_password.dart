@@ -3,8 +3,12 @@ import 'package:officium_flutter/dominio/comun/excepciones_dominio/valores_erron
 
 Either<ValorErroneo<String>, String> validadorPassword(
     String password, int maxLongitud, int minLongitud) {
-  final bool tieneMayusculas = password.contains(RegExp(r'[A-Z]'));
+  // ignore: unnecessary_raw_strings
+  final contains = password.contains(RegExp(r'[A-Z]'));
+  final bool tieneMayusculas = contains;
+  // ignore: unnecessary_raw_strings
   final bool tieneDigitos = password.contains(RegExp(r'[0-9]'));
+  // ignore: unnecessary_raw_strings
   final bool tieneMinusculas = password.contains(RegExp(r'[a-z]'));
   final bool tieneCaracteresEspeciales =
       password.contains(RegExp(r'[!@#$%^&*(),.?":{}|<>]'));
