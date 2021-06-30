@@ -95,19 +95,19 @@ Esta aplicación consta de tres tipos de pruebas automatizables ejecutables, las
 
 - Todas las pruebas (unitarias, integración, aceptación):
 
-  `Por definir`
+  `flutter test`
 
 - Pruebas unitarias:
 
-  `Por definir`
+  `flutter test --tags "unit_test"`
 
 - Pruebas de integración:
 
-  `Por definir`
+  `flutter test --tags "integration"`
 
 - Pruebas de aceptación:
 
-  `Por definir`
+  `flutter test --tags "acceptance"`
 
 ### :mag_right: Referencias
 
