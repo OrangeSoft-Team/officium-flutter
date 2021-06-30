@@ -37,6 +37,7 @@ dev_dependencies:
   lint: ^1.5.3
   build_runner: ^2.0.5 
   mockito: ^5.0.10
+  bloc_test: ^8.0.2
    
   
 # For information on the generic Dart part of this file, see the
