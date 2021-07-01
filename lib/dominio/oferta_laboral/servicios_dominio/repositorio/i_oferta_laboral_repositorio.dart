@@ -7,6 +7,7 @@ import 'package:officium_flutter/dominio/oferta_laboral/excepciones_dominio/ofer
 import 'package:officium_flutter/dominio/oferta_laboral/value_objects/oferta_laboral/cargo.dart';
 import 'package:officium_flutter/dominio/oferta_laboral/value_objects/oferta_laboral/sueldo.dart';
 import 'package:officium_flutter/dominio/oferta_laboral/value_objects/oferta_laboral/titulo.dart';
+import 'package:officium_flutter/dominio/oferta_laboral/value_objects/postulacion_oferta_laboral/comentario_postulacion.dart';
 
 abstract class IOfertaLaboralRepositorio {
   Stream<Either<OfertaLaboralExcepcion, List<OfertaLaboral>>>
@@ -22,7 +23,10 @@ abstract class IOfertaLaboralRepositorio {
       Identificador uuidOferta);
 
   Future<Either<OfertaLaboralExcepcion, Unit>> aplicarOfertaLaboral(
-      Identificador uuidOferta);
+      Identificador uuidOferta,
+      Identificador uuidEmpleado,
+      Identificador uuidEmpresa,
+      ComentarioPostulacionOfertaLaboral? comentarioPostulacionOfertaLaboral);
 
   Stream<Either<OfertaLaboralExcepcion, List<OfertaLaboral>>>
       buscarOfertaLaboralTitulo(TituloOfertaLaboral titulo);
