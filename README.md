@@ -14,13 +14,14 @@ utilización de API's y servicios para obtener datos.
 
 Este README consiste de las siguientes partes, listadas a continuación:
 
-- [Colaboradores de Desarrollo](#man_technologist-colaboradores-de-desarrollo)
-- [Stack de Tecnologías](#computer-stack-de-tecnologías)
-- [Instalación de la Aplicación](#wrench-instalación-de-la-aplicación)
-- [Construcción de la Aplicación (build)](#hammer-construcción-de-la-aplicación-build)
-- [Ejecución de la Aplicación](#electric_plug-ejecución-de-la-aplicación)
-- [Ejecución de las Pruebas Automatizadas](#test_tube-ejecución-de-las-pruebas-automatizadas)
-- [Referencias](#mag_right-referencias)
+- [:page_facing_up: Tabla de Contenidos](#page_facing_up-tabla-de-contenidos)
+- [:man_technologist: Colaboradores de Desarrollo](#man_technologist-colaboradores-de-desarrollo)
+- [:computer: Stack de Tecnologías](#computer-stack-de-tecnologías)
+- [:wrench: Instalación de la Aplicación](#wrench-instalación-de-la-aplicación)
+- [:hammer: Construcción de la Aplicación (build)](#hammer-construcción-de-la-aplicación-build)
+- [:electric_plug: Ejecución de la Aplicación](#electric_plug-ejecución-de-la-aplicación)
+- [:test_tube: Ejecución de las Pruebas Automatizadas](#test_tube-ejecución-de-las-pruebas-automatizadas)
+- [:mag_right: Referencias](#mag_right-referencias)
 
 Adicionalmente, se utilizan las siguientes plantillas para el repositorio:
 

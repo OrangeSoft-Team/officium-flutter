@@ -22,7 +22,7 @@ abstract class Empleado implements _$Empleado {
       {required Identificador uuid,
       required PrimerNombre primerNombre,
       SegundoNombre? segundoNombre,
-      required PrimerApellido primerApelido,
+      required PrimerApellido primerApellido,
       SegundoApellido? segundoApellido,
       required Genero genero,
       required DireccionCalle direccionCalle,
@@ -35,7 +35,7 @@ abstract class Empleado implements _$Empleado {
       uuid: Identificador(),
       primerNombre: PrimerNombre(''),
       segundoNombre: SegundoNombre(''),
-      primerApelido: PrimerApellido(''),
+      primerApellido: PrimerApellido(''),
       segundoApellido: SegundoApellido(''),
       genero: Genero(''),
       direccionCalle: DireccionCalle(''),
@@ -46,7 +46,7 @@ abstract class Empleado implements _$Empleado {
 
   Option<ValorErroneo<dynamic>> get opcionFallo {
     return primerNombre.failureOrUnit
-        .andThen(primerApelido.failureOrUnit)
+        .andThen(primerApellido.failureOrUnit)
         .andThen(genero.failureOrUnit)
         .andThen(direccionCalle.failureOrUnit)
         .andThen(codigoPostal.failureOrUnit)
