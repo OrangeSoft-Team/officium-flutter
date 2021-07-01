@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:officium_flutter/aplicacion/autentificacion/iniciar_sesion/iniciar_sesion_bloc.dart';
-import 'package:officium_flutter/aplicacion/autentificacion/registro/registro_bloc.dart';
 
 class FormularioInicioSesion extends StatelessWidget {
   @override
@@ -14,6 +13,7 @@ class FormularioInicioSesion extends StatelessWidget {
               ? AutovalidateMode.always
               : AutovalidateMode.disabled,
           child: ListView(
+            padding: const EdgeInsets.all(8),
             // ignore: prefer_const_literals_to_create_immutables
             children: [
               const SizedBox(
@@ -27,11 +27,13 @@ class FormularioInicioSesion extends StatelessWidget {
               ),
               TextFormField(
                 decoration: const InputDecoration(
-                    prefixIcon: Icon(Icons.email), labelText: 'Email'),
+                  prefixIcon: Icon(Icons.email),
+                  labelText: 'Email',
+                ),
                 autocorrect: false,
-                onChanged: (value) => context
-                    .read<IniciarSesionBloc>()
-                    .add(IniciarSesionEvent.emailCambiado(value)),
+                onChanged: (value) => context.read<IniciarSesionBloc>().add(
+                      IniciarSesionEvent.emailCambiado(value),
+                    ),
                 validator: (_) =>
                     context.read<IniciarSesionBloc>().state.email.value.fold(
                           (f) => f.maybeMap(
@@ -62,6 +64,8 @@ class FormularioInicioSesion extends StatelessWidget {
                     .fold(
                       (f) => f.maybeMap(
                         contrasenaCorta: (_) => 'La contraseña es muy corta.',
+                        contrasenaLarga: (_) => 'La contraseña es muy larga.',
+                        contrasenaVacia: (_) => 'La contraseña está vacia.',
                         orElse: () => null,
                       ),
                       (_) => null,
@@ -94,6 +98,10 @@ class FormularioInicioSesion extends StatelessWidget {
                     ),
                   )),
                 ],
+              ),
+              TextButton(
+                onPressed: () {},
+                child: const Text('Saltar Login'),
               ),
             ],
           ),

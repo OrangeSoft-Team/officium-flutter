@@ -16,20 +16,20 @@ final _privateConstructorUsedError = UnsupportedError(
 class _$IniciarSesionEventTearOff {
   const _$IniciarSesionEventTearOff();
 
-  _EmailCambiado emailCambiado(String email) {
-    return _EmailCambiado(
+  EmailCambiado emailCambiado(String email) {
+    return EmailCambiado(
       email,
     );
   }
 
-  _PasswordCambiado passwordCambiado(String password) {
-    return _PasswordCambiado(
+  PasswordCambiado passwordCambiado(String password) {
+    return PasswordCambiado(
       password,
     );
   }
 
-  _LoginCorreoYClavePresionado loginCorreoYClavePresionado() {
-    return const _LoginCorreoYClavePresionado();
+  LoginCorreoYClavePresionado loginCorreoYClavePresionado() {
+    return const LoginCorreoYClavePresionado();
   }
 }
 
@@ -55,17 +55,17 @@ mixin _$IniciarSesionEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_EmailCambiado value) emailCambiado,
-    required TResult Function(_PasswordCambiado value) passwordCambiado,
-    required TResult Function(_LoginCorreoYClavePresionado value)
+    required TResult Function(EmailCambiado value) emailCambiado,
+    required TResult Function(PasswordCambiado value) passwordCambiado,
+    required TResult Function(LoginCorreoYClavePresionado value)
         loginCorreoYClavePresionado,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_EmailCambiado value)? emailCambiado,
-    TResult Function(_PasswordCambiado value)? passwordCambiado,
-    TResult Function(_LoginCorreoYClavePresionado value)?
+    TResult Function(EmailCambiado value)? emailCambiado,
+    TResult Function(PasswordCambiado value)? passwordCambiado,
+    TResult Function(LoginCorreoYClavePresionado value)?
         loginCorreoYClavePresionado,
     required TResult orElse(),
   }) =>
@@ -90,29 +90,29 @@ class _$IniciarSesionEventCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$EmailCambiadoCopyWith<$Res> {
-  factory _$EmailCambiadoCopyWith(
-          _EmailCambiado value, $Res Function(_EmailCambiado) then) =
-      __$EmailCambiadoCopyWithImpl<$Res>;
+abstract class $EmailCambiadoCopyWith<$Res> {
+  factory $EmailCambiadoCopyWith(
+          EmailCambiado value, $Res Function(EmailCambiado) then) =
+      _$EmailCambiadoCopyWithImpl<$Res>;
   $Res call({String email});
 }
 
 /// @nodoc
-class __$EmailCambiadoCopyWithImpl<$Res>
+class _$EmailCambiadoCopyWithImpl<$Res>
     extends _$IniciarSesionEventCopyWithImpl<$Res>
-    implements _$EmailCambiadoCopyWith<$Res> {
-  __$EmailCambiadoCopyWithImpl(
-      _EmailCambiado _value, $Res Function(_EmailCambiado) _then)
-      : super(_value, (v) => _then(v as _EmailCambiado));
+    implements $EmailCambiadoCopyWith<$Res> {
+  _$EmailCambiadoCopyWithImpl(
+      EmailCambiado _value, $Res Function(EmailCambiado) _then)
+      : super(_value, (v) => _then(v as EmailCambiado));
 
   @override
-  _EmailCambiado get _value => super._value as _EmailCambiado;
+  EmailCambiado get _value => super._value as EmailCambiado;
 
   @override
   $Res call({
     Object? email = freezed,
   }) {
-    return _then(_EmailCambiado(
+    return _then(EmailCambiado(
       email == freezed
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
@@ -123,8 +123,8 @@ class __$EmailCambiadoCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_EmailCambiado implements _EmailCambiado {
-  const _$_EmailCambiado(this.email);
+class _$EmailCambiado implements EmailCambiado {
+  const _$EmailCambiado(this.email);
 
   @override
   final String email;
@@ -137,7 +137,7 @@ class _$_EmailCambiado implements _EmailCambiado {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _EmailCambiado &&
+        (other is EmailCambiado &&
             (identical(other.email, email) ||
                 const DeepCollectionEquality().equals(other.email, email)));
   }
@@ -148,8 +148,8 @@ class _$_EmailCambiado implements _EmailCambiado {
 
   @JsonKey(ignore: true)
   @override
-  _$EmailCambiadoCopyWith<_EmailCambiado> get copyWith =>
-      __$EmailCambiadoCopyWithImpl<_EmailCambiado>(this, _$identity);
+  $EmailCambiadoCopyWith<EmailCambiado> get copyWith =>
+      _$EmailCambiadoCopyWithImpl<EmailCambiado>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -178,9 +178,9 @@ class _$_EmailCambiado implements _EmailCambiado {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_EmailCambiado value) emailCambiado,
-    required TResult Function(_PasswordCambiado value) passwordCambiado,
-    required TResult Function(_LoginCorreoYClavePresionado value)
+    required TResult Function(EmailCambiado value) emailCambiado,
+    required TResult Function(PasswordCambiado value) passwordCambiado,
+    required TResult Function(LoginCorreoYClavePresionado value)
         loginCorreoYClavePresionado,
   }) {
     return emailCambiado(this);
@@ -189,9 +189,9 @@ class _$_EmailCambiado implements _EmailCambiado {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_EmailCambiado value)? emailCambiado,
-    TResult Function(_PasswordCambiado value)? passwordCambiado,
-    TResult Function(_LoginCorreoYClavePresionado value)?
+    TResult Function(EmailCambiado value)? emailCambiado,
+    TResult Function(PasswordCambiado value)? passwordCambiado,
+    TResult Function(LoginCorreoYClavePresionado value)?
         loginCorreoYClavePresionado,
     required TResult orElse(),
   }) {
@@ -202,39 +202,39 @@ class _$_EmailCambiado implements _EmailCambiado {
   }
 }
 
-abstract class _EmailCambiado implements IniciarSesionEvent {
-  const factory _EmailCambiado(String email) = _$_EmailCambiado;
+abstract class EmailCambiado implements IniciarSesionEvent {
+  const factory EmailCambiado(String email) = _$EmailCambiado;
 
   String get email => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  _$EmailCambiadoCopyWith<_EmailCambiado> get copyWith =>
+  $EmailCambiadoCopyWith<EmailCambiado> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$PasswordCambiadoCopyWith<$Res> {
-  factory _$PasswordCambiadoCopyWith(
-          _PasswordCambiado value, $Res Function(_PasswordCambiado) then) =
-      __$PasswordCambiadoCopyWithImpl<$Res>;
+abstract class $PasswordCambiadoCopyWith<$Res> {
+  factory $PasswordCambiadoCopyWith(
+          PasswordCambiado value, $Res Function(PasswordCambiado) then) =
+      _$PasswordCambiadoCopyWithImpl<$Res>;
   $Res call({String password});
 }
 
 /// @nodoc
-class __$PasswordCambiadoCopyWithImpl<$Res>
+class _$PasswordCambiadoCopyWithImpl<$Res>
     extends _$IniciarSesionEventCopyWithImpl<$Res>
-    implements _$PasswordCambiadoCopyWith<$Res> {
-  __$PasswordCambiadoCopyWithImpl(
-      _PasswordCambiado _value, $Res Function(_PasswordCambiado) _then)
-      : super(_value, (v) => _then(v as _PasswordCambiado));
+    implements $PasswordCambiadoCopyWith<$Res> {
+  _$PasswordCambiadoCopyWithImpl(
+      PasswordCambiado _value, $Res Function(PasswordCambiado) _then)
+      : super(_value, (v) => _then(v as PasswordCambiado));
 
   @override
-  _PasswordCambiado get _value => super._value as _PasswordCambiado;
+  PasswordCambiado get _value => super._value as PasswordCambiado;
 
   @override
   $Res call({
     Object? password = freezed,
   }) {
-    return _then(_PasswordCambiado(
+    return _then(PasswordCambiado(
       password == freezed
           ? _value.password
           : password // ignore: cast_nullable_to_non_nullable
@@ -245,8 +245,8 @@ class __$PasswordCambiadoCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_PasswordCambiado implements _PasswordCambiado {
-  const _$_PasswordCambiado(this.password);
+class _$PasswordCambiado implements PasswordCambiado {
+  const _$PasswordCambiado(this.password);
 
   @override
   final String password;
@@ -259,7 +259,7 @@ class _$_PasswordCambiado implements _PasswordCambiado {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _PasswordCambiado &&
+        (other is PasswordCambiado &&
             (identical(other.password, password) ||
                 const DeepCollectionEquality()
                     .equals(other.password, password)));
@@ -271,8 +271,8 @@ class _$_PasswordCambiado implements _PasswordCambiado {
 
   @JsonKey(ignore: true)
   @override
-  _$PasswordCambiadoCopyWith<_PasswordCambiado> get copyWith =>
-      __$PasswordCambiadoCopyWithImpl<_PasswordCambiado>(this, _$identity);
+  $PasswordCambiadoCopyWith<PasswordCambiado> get copyWith =>
+      _$PasswordCambiadoCopyWithImpl<PasswordCambiado>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -301,9 +301,9 @@ class _$_PasswordCambiado implements _PasswordCambiado {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_EmailCambiado value) emailCambiado,
-    required TResult Function(_PasswordCambiado value) passwordCambiado,
-    required TResult Function(_LoginCorreoYClavePresionado value)
+    required TResult Function(EmailCambiado value) emailCambiado,
+    required TResult Function(PasswordCambiado value) passwordCambiado,
+    required TResult Function(LoginCorreoYClavePresionado value)
         loginCorreoYClavePresionado,
   }) {
     return passwordCambiado(this);
@@ -312,9 +312,9 @@ class _$_PasswordCambiado implements _PasswordCambiado {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_EmailCambiado value)? emailCambiado,
-    TResult Function(_PasswordCambiado value)? passwordCambiado,
-    TResult Function(_LoginCorreoYClavePresionado value)?
+    TResult Function(EmailCambiado value)? emailCambiado,
+    TResult Function(PasswordCambiado value)? passwordCambiado,
+    TResult Function(LoginCorreoYClavePresionado value)?
         loginCorreoYClavePresionado,
     required TResult orElse(),
   }) {
@@ -325,41 +325,40 @@ class _$_PasswordCambiado implements _PasswordCambiado {
   }
 }
 
-abstract class _PasswordCambiado implements IniciarSesionEvent {
-  const factory _PasswordCambiado(String password) = _$_PasswordCambiado;
+abstract class PasswordCambiado implements IniciarSesionEvent {
+  const factory PasswordCambiado(String password) = _$PasswordCambiado;
 
   String get password => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  _$PasswordCambiadoCopyWith<_PasswordCambiado> get copyWith =>
+  $PasswordCambiadoCopyWith<PasswordCambiado> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$LoginCorreoYClavePresionadoCopyWith<$Res> {
-  factory _$LoginCorreoYClavePresionadoCopyWith(
-          _LoginCorreoYClavePresionado value,
-          $Res Function(_LoginCorreoYClavePresionado) then) =
-      __$LoginCorreoYClavePresionadoCopyWithImpl<$Res>;
+abstract class $LoginCorreoYClavePresionadoCopyWith<$Res> {
+  factory $LoginCorreoYClavePresionadoCopyWith(
+          LoginCorreoYClavePresionado value,
+          $Res Function(LoginCorreoYClavePresionado) then) =
+      _$LoginCorreoYClavePresionadoCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$LoginCorreoYClavePresionadoCopyWithImpl<$Res>
+class _$LoginCorreoYClavePresionadoCopyWithImpl<$Res>
     extends _$IniciarSesionEventCopyWithImpl<$Res>
-    implements _$LoginCorreoYClavePresionadoCopyWith<$Res> {
-  __$LoginCorreoYClavePresionadoCopyWithImpl(
-      _LoginCorreoYClavePresionado _value,
-      $Res Function(_LoginCorreoYClavePresionado) _then)
-      : super(_value, (v) => _then(v as _LoginCorreoYClavePresionado));
+    implements $LoginCorreoYClavePresionadoCopyWith<$Res> {
+  _$LoginCorreoYClavePresionadoCopyWithImpl(LoginCorreoYClavePresionado _value,
+      $Res Function(LoginCorreoYClavePresionado) _then)
+      : super(_value, (v) => _then(v as LoginCorreoYClavePresionado));
 
   @override
-  _LoginCorreoYClavePresionado get _value =>
-      super._value as _LoginCorreoYClavePresionado;
+  LoginCorreoYClavePresionado get _value =>
+      super._value as LoginCorreoYClavePresionado;
 }
 
 /// @nodoc
 
-class _$_LoginCorreoYClavePresionado implements _LoginCorreoYClavePresionado {
-  const _$_LoginCorreoYClavePresionado();
+class _$LoginCorreoYClavePresionado implements LoginCorreoYClavePresionado {
+  const _$LoginCorreoYClavePresionado();
 
   @override
   String toString() {
@@ -368,7 +367,7 @@ class _$_LoginCorreoYClavePresionado implements _LoginCorreoYClavePresionado {
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is _LoginCorreoYClavePresionado);
+    return identical(this, other) || (other is LoginCorreoYClavePresionado);
   }
 
   @override
@@ -401,9 +400,9 @@ class _$_LoginCorreoYClavePresionado implements _LoginCorreoYClavePresionado {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_EmailCambiado value) emailCambiado,
-    required TResult Function(_PasswordCambiado value) passwordCambiado,
-    required TResult Function(_LoginCorreoYClavePresionado value)
+    required TResult Function(EmailCambiado value) emailCambiado,
+    required TResult Function(PasswordCambiado value) passwordCambiado,
+    required TResult Function(LoginCorreoYClavePresionado value)
         loginCorreoYClavePresionado,
   }) {
     return loginCorreoYClavePresionado(this);
@@ -412,9 +411,9 @@ class _$_LoginCorreoYClavePresionado implements _LoginCorreoYClavePresionado {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_EmailCambiado value)? emailCambiado,
-    TResult Function(_PasswordCambiado value)? passwordCambiado,
-    TResult Function(_LoginCorreoYClavePresionado value)?
+    TResult Function(EmailCambiado value)? emailCambiado,
+    TResult Function(PasswordCambiado value)? passwordCambiado,
+    TResult Function(LoginCorreoYClavePresionado value)?
         loginCorreoYClavePresionado,
     required TResult orElse(),
   }) {
@@ -425,8 +424,8 @@ class _$_LoginCorreoYClavePresionado implements _LoginCorreoYClavePresionado {
   }
 }
 
-abstract class _LoginCorreoYClavePresionado implements IniciarSesionEvent {
-  const factory _LoginCorreoYClavePresionado() = _$_LoginCorreoYClavePresionado;
+abstract class LoginCorreoYClavePresionado implements IniciarSesionEvent {
+  const factory LoginCorreoYClavePresionado() = _$LoginCorreoYClavePresionado;
 }
 
 /// @nodoc

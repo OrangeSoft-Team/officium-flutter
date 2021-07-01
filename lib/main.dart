@@ -5,6 +5,7 @@ import 'package:officium_flutter/presentacion/comun/app_widget.dart';
 import 'inyeccion.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   configureInjection(Environment.prod);
   runApp(AppWidget());
 }

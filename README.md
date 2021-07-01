@@ -14,13 +14,14 @@ utilización de API's y servicios para obtener datos.
 
 Este README consiste de las siguientes partes, listadas a continuación:
 
-- [Colaboradores de Desarrollo](#man_technologist-colaboradores-de-desarrollo)
-- [Stack de Tecnologías](#computer-stack-de-tecnologías)
-- [Instalación de la Aplicación](#wrench-instalación-de-la-aplicación)
-- [Construcción de la Aplicación (build)](#hammer-construcción-de-la-aplicación-build)
-- [Ejecución de la Aplicación](#electric_plug-ejecución-de-la-aplicación)
-- [Ejecución de las Pruebas Automatizadas](#test_tube-ejecución-de-las-pruebas-automatizadas)
-- [Referencias](#mag_right-referencias)
+- [:page_facing_up: Tabla de Contenidos](#page_facing_up-tabla-de-contenidos)
+- [:man_technologist: Colaboradores de Desarrollo](#man_technologist-colaboradores-de-desarrollo)
+- [:computer: Stack de Tecnologías](#computer-stack-de-tecnologías)
+- [:wrench: Instalación de la Aplicación](#wrench-instalación-de-la-aplicación)
+- [:hammer: Construcción de la Aplicación (build)](#hammer-construcción-de-la-aplicación-build)
+- [:electric_plug: Ejecución de la Aplicación](#electric_plug-ejecución-de-la-aplicación)
+- [:test_tube: Ejecución de las Pruebas Automatizadas](#test_tube-ejecución-de-las-pruebas-automatizadas)
+- [:mag_right: Referencias](#mag_right-referencias)
 
 Adicionalmente, se utilizan las siguientes plantillas para el repositorio:
 
@@ -32,24 +33,24 @@ Adicionalmente, se utilizan las siguientes plantillas para el repositorio:
 
 ---
 
-| Nombre y Apellido    | Usuario    | Enlace                        |
-| -------------------- | ---------- | ----------------------------- |
-| Andrés De Armas      | AndresG75  | https://github.com/AndresG75  |
-| Leonardo Ruiz        | iSlidex    | https://github.com/iSlidex    |
-| Steven Dávil         | SDRADCodex | https://github.com/SDRADCodex |
+| Nombre y Apellido | Usuario    | Enlace                        |
+| ----------------- | ---------- | ----------------------------- |
+| Andrés De Armas   | AndresG75  | https://github.com/AndresG75  |
+| Leonardo Ruiz     | iSlidex    | https://github.com/iSlidex    |
+| Steven Dávila     | SDRADCodex | https://github.com/SDRADCodex |
 
 ### :computer: Stack de Tecnologías
 
 ---
 
-| Logo                                                                                                                                        | Tipo                       | Nombre         | Enlace de Descarga                       | Versión |
-| ------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------- | -------------- | ---------------------------------------- | ------- |
-| <img src="https://cdn.worldvectorlogo.com/logos/dart.svg" width="24">                                                                       | Lenguaje                   | Dart           | https://dart.dev/                        | 2.13    |
-| <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Android_Studio_Icon_%282014-2019%29.svg" width="24">                          | Ambiente de ejecución      | Android Studio | https://developer.android.com/studio     | 4.2.1   |
-| <img src="https://plugins.jetbrains.com/files/12129/118174/icon/pluginIcon.svg" width="24">                                                 | Manejador de Estado        | BloC           | https://bloclibrary.dev/#/               | 7.0.0   |
-| <img src="https://logowik.com/content/uploads/images/flutter5786.jpg" width="24">                                                           | Framework                  | Flutter        | https://flutter.dev/                     | 2.2     |
-| <img src="https://avatars.githubusercontent.com/u/32196900?s=400&v=4" width="24">                                                           | Testing                    | Jest           | https://jestjs.io/docs/getting-started   | 26.6.3  |
-| <img src="https://cdn.worldvectorlogo.com/logos/dart.svg" width="24">                                                                       | Linter                     | Linter         | https://pub.dev/packages/linter          | 1.6.1   | 
+| Logo                                                                                                               | Tipo                  | Nombre         | Enlace de Descarga                     | Versión |
+| ------------------------------------------------------------------------------------------------------------------ | --------------------- | -------------- | -------------------------------------- | ------- |
+| <img src="https://cdn.worldvectorlogo.com/logos/dart.svg" width="24">                                              | Lenguaje              | Dart           | https://dart.dev/                      | 2.13    |
+| <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Android_Studio_Icon_%282014-2019%29.svg" width="24"> | Ambiente de ejecución | Android Studio | https://developer.android.com/studio   | 4.2.1   |
+| <img src="https://plugins.jetbrains.com/files/12129/118174/icon/pluginIcon.svg" width="24">                        | Manejador de Estado   | BloC           | https://bloclibrary.dev/#/             | 7.0.0   |
+| <img src="https://logowik.com/content/uploads/images/flutter5786.jpg" width="24">                                  | Framework             | Flutter        | https://flutter.dev/                   | 2.2     |
+| <img src="https://raw.githubusercontent.com/mockito/mockito/main/src/javadoc/org/mockito/logo.png" width="24">     | Testing               | Mockito        | https://jestjs.io/docs/getting-started | 5.0     |
+| <img src="https://cdn.worldvectorlogo.com/logos/dart.svg" width="24">                                              | Linter                | Linter         | https://pub.dev/packages/linter        | 1.6.1   |
 
 ### :wrench: Instalación de la Aplicación
 

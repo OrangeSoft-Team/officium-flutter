@@ -23,42 +23,54 @@ class IniciarSesionBloc extends Bloc<IniciarSesionEvent, IniciarSesionState> {
   Stream<IniciarSesionState> mapEventToState(
     IniciarSesionEvent event,
   ) async* {
-    event.map(
+    yield* event.map(
       emailCambiado: (e) async* {
-        state.copyWith(
+        yield state.copyWith(
           email: EmailAddress(e.email),
           opcionDeErrorOExitoDeLogin: none(),
         );
       },
       passwordCambiado: (e) async* {
-        state.copyWith(
+        yield state.copyWith(
           password: Password(e.password),
           opcionDeErrorOExitoDeLogin: none(),
         );
       },
       loginCorreoYClavePresionado: (e) async* {
-        Either<ExcepcionAutentificacion, Unit> exitoOFallo =
-            const Right<ExcepcionAutentificacion, Unit>(unit);
-
-        final esEmailValido = state.email.isValid();
-        final esPasswordValido = state.password.isValid();
-
-        if (esEmailValido && esPasswordValido) {
-          yield state.copyWith(
-            estaLogueando: true,
-            opcionDeErrorOExitoDeLogin: none(),
-          );
-
-          exitoOFallo = await _iAutentificacionFachada.loginConEmailAndPassword(
-              emailAddress: state.email, password: state.password);
-        }
-
-        yield state.copyWith(
-          estaLogueando: false,
-          mostrarMensajesDeError: true,
-          opcionDeErrorOExitoDeLogin: optionOf(exitoOFallo),
-        );
+        yield* _realizaAccionFachadaAutentificacionConEmailYPassword(
+            _iAutentificacionFachada.loginConEmailAndPassword);
       },
+    );
+  }
+
+  Stream<IniciarSesionState>
+      _realizaAccionFachadaAutentificacionConEmailYPassword(
+    Future<Either<ExcepcionAutentificacion, Unit>> Function({
+      required EmailAddress emailAddress,
+      required Password password,
+    })
+        forwardedCall,
+  ) async* {
+    Either<ExcepcionAutentificacion, Unit> exitoOFallo =
+        const Right<ExcepcionAutentificacion, Unit>(unit);
+
+    final esEmailValido = state.email.isValid();
+    final esPasswordValido = state.password.isValid();
+
+    if (esEmailValido && esPasswordValido) {
+      yield state.copyWith(
+        estaLogueando: true,
+        opcionDeErrorOExitoDeLogin: none(),
+      );
+
+      exitoOFallo = await _iAutentificacionFachada.loginConEmailAndPassword(
+          emailAddress: state.email, password: state.password);
+    }
+
+    yield state.copyWith(
+      estaLogueando: false,
+      mostrarMensajesDeError: true,
+      opcionDeErrorOExitoDeLogin: optionOf(exitoOFallo),
     );
   }
 }

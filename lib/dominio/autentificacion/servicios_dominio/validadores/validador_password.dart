@@ -22,6 +22,12 @@ Either<ValorErroneo<String>, String> validadorPassword(
       tieneMinLength &&
       tieneMaxLength) {
     return right(password);
+  } else if (password.isEmpty) {
+    return left(ValorErroneo.contrasenaVacia(valorErroneo: password));
+  } else if (tieneMinLength == false) {
+    return left(ValorErroneo.contrasenaCorta(valorErroneo: password));
+  } else if (tieneMaxLength == false) {
+    return left(ValorErroneo.contrasenaLarga(valorErroneo: password));
   } else if (tieneUppercase == false) {
     return left(ValorErroneo.contrasenaSinMayuscula(valorErroneo: password));
   } else if (tieneDigits == false) {
@@ -31,8 +37,6 @@ Either<ValorErroneo<String>, String> validadorPassword(
   } else if (tieneSpecialCharacters == false) {
     return left(
         ValorErroneo.contrasenaSinCaracterEspecial(valorErroneo: password));
-  } else if (tieneMinLength == false) {
-    left(ValorErroneo.contrasenaCorta(valorErroneo: password));
   }
-  return left(ValorErroneo.contrasenaLarga(valorErroneo: password));
+  return left(ValorErroneo.contrasenaVacia(valorErroneo: password));
 }
