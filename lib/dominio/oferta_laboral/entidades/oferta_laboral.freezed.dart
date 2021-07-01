@@ -20,15 +20,15 @@ class _$OfertaLaboralTearOff {
       {required Identificador uuid,
       required TituloOfertaLaboral titulo,
       required Fecha fechaPublicacion,
-      required Fecha fechaModificacion,
+      Fecha? fechaModificacion,
       required Cargo cargo,
       required Sueldo sueldo,
-      required DescripcionOferta descripcionOferta,
+      DescripcionOferta? descripcionOferta,
       required Duration duration,
       required TurnoTrabajo turno,
       required NumeroVacantes numeroVacantes,
-      required Identificador uuidEmpresa,
-      required EstadoOferta estadoOferta,
+      Identificador? uuidEmpresa,
+      EstadoOferta? estadoOferta,
       required NombreEmpresa nombreEmpresa}) {
     return _OfertaLaboral(
       uuid: uuid,
@@ -56,15 +56,16 @@ mixin _$OfertaLaboral {
   Identificador get uuid => throw _privateConstructorUsedError;
   TituloOfertaLaboral get titulo => throw _privateConstructorUsedError;
   Fecha get fechaPublicacion => throw _privateConstructorUsedError;
-  Fecha get fechaModificacion => throw _privateConstructorUsedError;
+  Fecha? get fechaModificacion => throw _privateConstructorUsedError;
   Cargo get cargo => throw _privateConstructorUsedError;
   Sueldo get sueldo => throw _privateConstructorUsedError;
-  DescripcionOferta get descripcionOferta => throw _privateConstructorUsedError;
+  DescripcionOferta? get descripcionOferta =>
+      throw _privateConstructorUsedError;
   Duration get duration => throw _privateConstructorUsedError;
   TurnoTrabajo get turno => throw _privateConstructorUsedError;
   NumeroVacantes get numeroVacantes => throw _privateConstructorUsedError;
-  Identificador get uuidEmpresa => throw _privateConstructorUsedError;
-  EstadoOferta get estadoOferta => throw _privateConstructorUsedError;
+  Identificador? get uuidEmpresa => throw _privateConstructorUsedError;
+  EstadoOferta? get estadoOferta => throw _privateConstructorUsedError;
   NombreEmpresa get nombreEmpresa => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -81,15 +82,15 @@ abstract class $OfertaLaboralCopyWith<$Res> {
       {Identificador uuid,
       TituloOfertaLaboral titulo,
       Fecha fechaPublicacion,
-      Fecha fechaModificacion,
+      Fecha? fechaModificacion,
       Cargo cargo,
       Sueldo sueldo,
-      DescripcionOferta descripcionOferta,
+      DescripcionOferta? descripcionOferta,
       Duration duration,
       TurnoTrabajo turno,
       NumeroVacantes numeroVacantes,
-      Identificador uuidEmpresa,
-      EstadoOferta estadoOferta,
+      Identificador? uuidEmpresa,
+      EstadoOferta? estadoOferta,
       NombreEmpresa nombreEmpresa});
 }
 
@@ -134,7 +135,7 @@ class _$OfertaLaboralCopyWithImpl<$Res>
       fechaModificacion: fechaModificacion == freezed
           ? _value.fechaModificacion
           : fechaModificacion // ignore: cast_nullable_to_non_nullable
-              as Fecha,
+              as Fecha?,
       cargo: cargo == freezed
           ? _value.cargo
           : cargo // ignore: cast_nullable_to_non_nullable
@@ -146,7 +147,7 @@ class _$OfertaLaboralCopyWithImpl<$Res>
       descripcionOferta: descripcionOferta == freezed
           ? _value.descripcionOferta
           : descripcionOferta // ignore: cast_nullable_to_non_nullable
-              as DescripcionOferta,
+              as DescripcionOferta?,
       duration: duration == freezed
           ? _value.duration
           : duration // ignore: cast_nullable_to_non_nullable
@@ -162,11 +163,11 @@ class _$OfertaLaboralCopyWithImpl<$Res>
       uuidEmpresa: uuidEmpresa == freezed
           ? _value.uuidEmpresa
           : uuidEmpresa // ignore: cast_nullable_to_non_nullable
-              as Identificador,
+              as Identificador?,
       estadoOferta: estadoOferta == freezed
           ? _value.estadoOferta
           : estadoOferta // ignore: cast_nullable_to_non_nullable
-              as EstadoOferta,
+              as EstadoOferta?,
       nombreEmpresa: nombreEmpresa == freezed
           ? _value.nombreEmpresa
           : nombreEmpresa // ignore: cast_nullable_to_non_nullable
@@ -186,15 +187,15 @@ abstract class _$OfertaLaboralCopyWith<$Res>
       {Identificador uuid,
       TituloOfertaLaboral titulo,
       Fecha fechaPublicacion,
-      Fecha fechaModificacion,
+      Fecha? fechaModificacion,
       Cargo cargo,
       Sueldo sueldo,
-      DescripcionOferta descripcionOferta,
+      DescripcionOferta? descripcionOferta,
       Duration duration,
       TurnoTrabajo turno,
       NumeroVacantes numeroVacantes,
-      Identificador uuidEmpresa,
-      EstadoOferta estadoOferta,
+      Identificador? uuidEmpresa,
+      EstadoOferta? estadoOferta,
       NombreEmpresa nombreEmpresa});
 }
 
@@ -241,7 +242,7 @@ class __$OfertaLaboralCopyWithImpl<$Res>
       fechaModificacion: fechaModificacion == freezed
           ? _value.fechaModificacion
           : fechaModificacion // ignore: cast_nullable_to_non_nullable
-              as Fecha,
+              as Fecha?,
       cargo: cargo == freezed
           ? _value.cargo
           : cargo // ignore: cast_nullable_to_non_nullable
@@ -253,7 +254,7 @@ class __$OfertaLaboralCopyWithImpl<$Res>
       descripcionOferta: descripcionOferta == freezed
           ? _value.descripcionOferta
           : descripcionOferta // ignore: cast_nullable_to_non_nullable
-              as DescripcionOferta,
+              as DescripcionOferta?,
       duration: duration == freezed
           ? _value.duration
           : duration // ignore: cast_nullable_to_non_nullable
@@ -269,11 +270,11 @@ class __$OfertaLaboralCopyWithImpl<$Res>
       uuidEmpresa: uuidEmpresa == freezed
           ? _value.uuidEmpresa
           : uuidEmpresa // ignore: cast_nullable_to_non_nullable
-              as Identificador,
+              as Identificador?,
       estadoOferta: estadoOferta == freezed
           ? _value.estadoOferta
           : estadoOferta // ignore: cast_nullable_to_non_nullable
-              as EstadoOferta,
+              as EstadoOferta?,
       nombreEmpresa: nombreEmpresa == freezed
           ? _value.nombreEmpresa
           : nombreEmpresa // ignore: cast_nullable_to_non_nullable
@@ -290,15 +291,15 @@ class _$_OfertaLaboral implements _OfertaLaboral {
       {required this.uuid,
       required this.titulo,
       required this.fechaPublicacion,
-      required this.fechaModificacion,
+      this.fechaModificacion,
       required this.cargo,
       required this.sueldo,
-      required this.descripcionOferta,
+      this.descripcionOferta,
       required this.duration,
       required this.turno,
       required this.numeroVacantes,
-      required this.uuidEmpresa,
-      required this.estadoOferta,
+      this.uuidEmpresa,
+      this.estadoOferta,
       required this.nombreEmpresa});
 
   @override
@@ -308,13 +309,13 @@ class _$_OfertaLaboral implements _OfertaLaboral {
   @override
   final Fecha fechaPublicacion;
   @override
-  final Fecha fechaModificacion;
+  final Fecha? fechaModificacion;
   @override
   final Cargo cargo;
   @override
   final Sueldo sueldo;
   @override
-  final DescripcionOferta descripcionOferta;
+  final DescripcionOferta? descripcionOferta;
   @override
   final Duration duration;
   @override
@@ -322,9 +323,9 @@ class _$_OfertaLaboral implements _OfertaLaboral {
   @override
   final NumeroVacantes numeroVacantes;
   @override
-  final Identificador uuidEmpresa;
+  final Identificador? uuidEmpresa;
   @override
-  final EstadoOferta estadoOferta;
+  final EstadoOferta? estadoOferta;
   @override
   final NombreEmpresa nombreEmpresa;
 
@@ -401,15 +402,15 @@ abstract class _OfertaLaboral implements OfertaLaboral, IEntitidad {
       {required Identificador uuid,
       required TituloOfertaLaboral titulo,
       required Fecha fechaPublicacion,
-      required Fecha fechaModificacion,
+      Fecha? fechaModificacion,
       required Cargo cargo,
       required Sueldo sueldo,
-      required DescripcionOferta descripcionOferta,
+      DescripcionOferta? descripcionOferta,
       required Duration duration,
       required TurnoTrabajo turno,
       required NumeroVacantes numeroVacantes,
-      required Identificador uuidEmpresa,
-      required EstadoOferta estadoOferta,
+      Identificador? uuidEmpresa,
+      EstadoOferta? estadoOferta,
       required NombreEmpresa nombreEmpresa}) = _$_OfertaLaboral;
 
   @override
@@ -419,13 +420,14 @@ abstract class _OfertaLaboral implements OfertaLaboral, IEntitidad {
   @override
   Fecha get fechaPublicacion => throw _privateConstructorUsedError;
   @override
-  Fecha get fechaModificacion => throw _privateConstructorUsedError;
+  Fecha? get fechaModificacion => throw _privateConstructorUsedError;
   @override
   Cargo get cargo => throw _privateConstructorUsedError;
   @override
   Sueldo get sueldo => throw _privateConstructorUsedError;
   @override
-  DescripcionOferta get descripcionOferta => throw _privateConstructorUsedError;
+  DescripcionOferta? get descripcionOferta =>
+      throw _privateConstructorUsedError;
   @override
   Duration get duration => throw _privateConstructorUsedError;
   @override
@@ -433,9 +435,9 @@ abstract class _OfertaLaboral implements OfertaLaboral, IEntitidad {
   @override
   NumeroVacantes get numeroVacantes => throw _privateConstructorUsedError;
   @override
-  Identificador get uuidEmpresa => throw _privateConstructorUsedError;
+  Identificador? get uuidEmpresa => throw _privateConstructorUsedError;
   @override
-  EstadoOferta get estadoOferta => throw _privateConstructorUsedError;
+  EstadoOferta? get estadoOferta => throw _privateConstructorUsedError;
   @override
   NombreEmpresa get nombreEmpresa => throw _privateConstructorUsedError;
   @override
