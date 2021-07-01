@@ -3,11 +3,14 @@ import 'package:officium_flutter/dominio/comun/excepciones_dominio/valores_erron
 
 Either<ValorErroneo<String>, String> validadorPassword(
     String password, int maxLongitud, int minLongitud) {
-  final bool tieneUppercase = password.contains(new RegExp(r'[A-Z]'));
-  final bool tieneDigits = password.contains(new RegExp(r'[0-9]'));
-  final bool tieneLowercase = password.contains(new RegExp(r'[a-z]'));
+  // ignore: unnecessary_raw_strings
+  final bool tieneUppercase = password.contains(RegExp(r'[A-Z]'));
+  // ignore: unnecessary_raw_strings
+  final bool tieneDigits = password.contains(RegExp(r'[0-9]'));
+  // ignore: unnecessary_raw_strings
+  final bool tieneLowercase = password.contains(RegExp(r'[a-z]'));
   final bool tieneSpecialCharacters =
-      password.contains(new RegExp(r'[!@#$%^&*(),.?":{}|<>]'));
+      password.contains(RegExp(r'[!@#$%^&*(),.?":{}|<>]'));
   final bool tieneMinLength = password.length >= minLongitud;
   final bool tieneMaxLength = password.length <= maxLongitud;
 
@@ -19,6 +22,12 @@ Either<ValorErroneo<String>, String> validadorPassword(
       tieneMinLength &&
       tieneMaxLength) {
     return right(password);
+  } else if (password.isEmpty) {
+    return left(ValorErroneo.contrasenaVacia(valorErroneo: password));
+  } else if (tieneMinLength == false) {
+    return left(ValorErroneo.contrasenaCorta(valorErroneo: password));
+  } else if (tieneMaxLength == false) {
+    return left(ValorErroneo.contrasenaLarga(valorErroneo: password));
   } else if (tieneUppercase == false) {
     return left(ValorErroneo.contrasenaSinMayuscula(valorErroneo: password));
   } else if (tieneDigits == false) {
@@ -28,8 +37,6 @@ Either<ValorErroneo<String>, String> validadorPassword(
   } else if (tieneSpecialCharacters == false) {
     return left(
         ValorErroneo.contrasenaSinCaracterEspecial(valorErroneo: password));
-  } else if (tieneMinLength == false) {
-    left(ValorErroneo.contrasenaCorta(valorErroneo: password));
   }
-  return left(ValorErroneo.contrasenaLarga(valorErroneo: password));
+  return left(ValorErroneo.contrasenaVacia(valorErroneo: password));
 }

@@ -16,5 +16,12 @@
             "request": "launch",
             "type": "dart"
         },
+                {
+            "name": "officium-flutter (profile mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        }
     ]
 }
+{
