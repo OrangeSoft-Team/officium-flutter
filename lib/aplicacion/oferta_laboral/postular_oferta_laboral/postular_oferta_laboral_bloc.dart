@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:bloc/bloc.dart';
 import 'package:dartz/dartz.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:injectable/injectable.dart';
 import 'package:officium_flutter/dominio/comun/value_objects/identificador.dart';
 import 'package:officium_flutter/dominio/oferta_laboral/excepciones_dominio/oferta_laboral_excepciones.dart';
 import 'package:officium_flutter/dominio/oferta_laboral/servicios_dominio/repositorio/i_oferta_laboral_repositorio.dart';
@@ -12,6 +13,7 @@ part 'postular_oferta_laboral_event.dart';
 part 'postular_oferta_laboral_state.dart';
 part 'postular_oferta_laboral_bloc.freezed.dart';
 
+@injectable
 class PostularOfertaLaboralBloc
     extends Bloc<PostularOfertaLaboralEvent, PostularOfertaLaboralState> {
   final IOfertaLaboralRepositorio _iOfertaLaboralRepositorio;

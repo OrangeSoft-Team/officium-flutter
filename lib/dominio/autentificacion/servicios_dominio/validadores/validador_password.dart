@@ -4,15 +4,15 @@ import 'package:officium_flutter/dominio/comun/excepciones_dominio/valores_erron
 Either<ValorErroneo<String>, String> validadorPassword(
     String password, int maxLongitud, int minLongitud) {
   // ignore: unnecessary_raw_strings
-  final bool tieneUppercase = password.contains(RegExp(r'[A-Z]'));
+  final bool tieneMayusculas = password.contains(RegExp(r'[A-Z]'));
   // ignore: unnecessary_raw_strings
-  final bool tieneDigits = password.contains(RegExp(r'[0-9]'));
+  final bool tieneDigitos = password.contains(RegExp(r'[0-9]'));
   // ignore: unnecessary_raw_strings
-  final bool tieneLowercase = password.contains(RegExp(r'[a-z]'));
-  final bool tieneSpecialCharacters =
+  final bool tieneMinusculas = password.contains(RegExp(r'[a-z]'));
+  final bool tieneCaracteresEspeciales =
       password.contains(RegExp(r'[!@#$%^&*(),.?":{}|<>]'));
-  final bool tieneMinLength = password.length >= minLongitud;
-  final bool tieneMaxLength = password.length <= maxLongitud;
+  final bool tieneLongitudMinima = password.length >= minLongitud;
+  final bool tieneLongitudMaxima = password.length <= maxLongitud;
 
   if (password.isNotEmpty &&
       tieneMayusculas &&
@@ -24,11 +24,11 @@ Either<ValorErroneo<String>, String> validadorPassword(
     return right(password);
   } else if (password.isEmpty) {
     return left(ValorErroneo.contrasenaVacia(valorErroneo: password));
-  } else if (tieneMinLength == false) {
+  } else if (tieneLongitudMinima == false) {
     return left(ValorErroneo.contrasenaCorta(valorErroneo: password));
-  } else if (tieneMaxLength == false) {
+  } else if (tieneLongitudMaxima == false) {
     return left(ValorErroneo.contrasenaLarga(valorErroneo: password));
-  } else if (tieneUppercase == false) {
+  } else if (tieneMayusculas == false) {
     return left(ValorErroneo.contrasenaSinMayuscula(valorErroneo: password));
   } else if (tieneDigitos == false) {
     return left(ValorErroneo.contrasenaSinNumero(valorErroneo: password));
