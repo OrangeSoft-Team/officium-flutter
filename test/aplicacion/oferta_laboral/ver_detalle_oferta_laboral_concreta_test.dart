@@ -1,36 +1,36 @@
 @Tags(['unit_test'])
-import 'package:dartz/dartz.dart';
-import 'package:mockito/mockito.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-void main () {
+void main() {
   //DEPS
-  //MOCK CASO DE USO 
-    //REPOSITORIOS
-      //  OFERTAS
+  //MOCK CASO DE USO
+  //REPOSITORIOS
+  //  OFERTAS
 
   setUp(() {
     //DEPS INIT
   });
 
   //TEST OR GROUP
- group('Ver detalle de oferta concreta', () {
-    //ENTIDADES Y MODELOS
-    
-    
-    //TEST SUCCESS
-    
-    //TEST FALLO
-    test(
-      'Base test for tags',
-      () {
-       // arrange
-        const tNumber = 1;
-        // act
-     
-        // assert
-        expect(tNumber,equals(2));
-      },
-    );  
-  },);
+  group(
+    'Ver detalle de oferta concreta',
+    () {
+      //ENTIDADES Y MODELOS
+
+      //TEST SUCCESS
+
+      //TEST FALLO
+      test(
+        'Base test for tags',
+        () {
+          // arrange
+          const tNumber = 1;
+          // act
+
+          // assert
+          expect(tNumber, equals(2));
+        },
+      );
+    },
+  );
 }

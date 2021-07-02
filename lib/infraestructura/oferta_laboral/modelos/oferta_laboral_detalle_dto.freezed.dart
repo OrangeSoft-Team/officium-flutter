@@ -310,7 +310,7 @@ class __$OfertaLaboralDetalleDTOCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_OfertaLaboralDetalleDTO implements _OfertaLaboralDetalleDTO {
+class _$_OfertaLaboralDetalleDTO extends _OfertaLaboralDetalleDTO {
   const _$_OfertaLaboralDetalleDTO(
       {required this.uuid,
       required this.titulo,
@@ -325,7 +325,8 @@ class _$_OfertaLaboralDetalleDTO implements _OfertaLaboralDetalleDTO {
       required this.numeroVacantes,
       required this.uuidEmpresa,
       required this.empresaNombre,
-      required this.direccionEmpresa});
+      required this.direccionEmpresa})
+      : super._();
 
   factory _$_OfertaLaboralDetalleDTO.fromJson(Map<String, dynamic> json) =>
       _$_$_OfertaLaboralDetalleDTOFromJson(json);
@@ -438,7 +439,7 @@ class _$_OfertaLaboralDetalleDTO implements _OfertaLaboralDetalleDTO {
   }
 }
 
-abstract class _OfertaLaboralDetalleDTO implements OfertaLaboralDetalleDTO {
+abstract class _OfertaLaboralDetalleDTO extends OfertaLaboralDetalleDTO {
   const factory _OfertaLaboralDetalleDTO(
       {required String uuid,
       required String titulo,
@@ -454,6 +455,7 @@ abstract class _OfertaLaboralDetalleDTO implements OfertaLaboralDetalleDTO {
       required String uuidEmpresa,
       required String empresaNombre,
       required String direccionEmpresa}) = _$_OfertaLaboralDetalleDTO;
+  const _OfertaLaboralDetalleDTO._() : super._();
 
   factory _OfertaLaboralDetalleDTO.fromJson(Map<String, dynamic> json) =
       _$_OfertaLaboralDetalleDTO.fromJson;

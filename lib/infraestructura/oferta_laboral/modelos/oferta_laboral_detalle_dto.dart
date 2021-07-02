@@ -15,8 +15,11 @@ import 'package:officium_flutter/dominio/oferta_laboral/value_objects/oferta_lab
 import 'package:officium_flutter/dominio/oferta_laboral/value_objects/postulacion_oferta_laboral/estado_postulacion.dart';
 part 'oferta_laboral_detalle_dto.freezed.dart';
 
+part 'oferta_laboral_detalle_dto.g.dart';
+
 @freezed
-abstract class OfertaLaboralDetalleDTO with _$OfertaLaboralDetalleDTO {
+abstract class OfertaLaboralDetalleDTO implements _$OfertaLaboralDetalleDTO {
+  const OfertaLaboralDetalleDTO._();
   const factory OfertaLaboralDetalleDTO({
     required String uuid,
     required String titulo,
@@ -36,9 +39,7 @@ abstract class OfertaLaboralDetalleDTO with _$OfertaLaboralDetalleDTO {
 
   factory OfertaLaboralDetalleDTO.fromJson(Map<String, dynamic> json) =>
       _$OfertaLaboralDetalleDTOFromJson(json);
-}
 
-extension OfertaLaboralDetalleDTOX on OfertaLaboralDetalleDTO {
   OfertaLaboral toDomain() {
     return OfertaLaboral(
       uuid: Identificador.fromUniqueString(uuid),
@@ -46,14 +47,14 @@ extension OfertaLaboralDetalleDTOX on OfertaLaboralDetalleDTO {
       fechaPublicacion: Fecha(DateTime.parse(fechaPublicacion)),
       fechaModificacion: Fecha(DateTime.parse(fechaModificacion)),
       cargo: Cargo(cargo),
-      sueldo: Sueldo(sueldo, sueldo),
+      sueldo: Sueldo(sueldo),
       descripcionOferta: DescripcionOferta(descripcion),
       duracion: Duracion(
           DuracionEscala(duracionEstimadaValor, duracionEstimadaEscala)),
-      turno: TurnoTrabajo(turnoTrabajo), //!
-      numeroVacantes: NumeroVacantes(numeroVacantes, numeroVacantes, 1), //!
-      uuidEmpresa: Identificador.fromUniqueString(uuidEmpresa), //!
-      estadoOferta: EstadoOferta(estadoOfertalaboral.aprobada.toString()), //!
+      turno: TurnoTrabajo(turnoTrabajo),
+      numeroVacantes: NumeroVacantes(numeroVacantes),
+      uuidEmpresa: Identificador.fromUniqueString(uuidEmpresa),
+      estadoOferta: EstadoOferta(estadoOfertalaboral.aprobada.toString()),
       nombreEmpresa: NombreEmpresa(empresaNombre),
     );
   }

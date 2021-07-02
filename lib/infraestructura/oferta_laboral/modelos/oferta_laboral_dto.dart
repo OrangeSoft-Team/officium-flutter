@@ -6,17 +6,16 @@ import 'package:officium_flutter/dominio/oferta_laboral/entidades/oferta_laboral
 import 'package:officium_flutter/dominio/oferta_laboral/value_objects/oferta_laboral/Duracion_Oferta/duracion_escalas.dart';
 import 'package:officium_flutter/dominio/oferta_laboral/value_objects/oferta_laboral/Duracion_Oferta/duracion_estimada.dart';
 import 'package:officium_flutter/dominio/oferta_laboral/value_objects/oferta_laboral/cargo.dart';
-import 'package:officium_flutter/dominio/oferta_laboral/value_objects/oferta_laboral/descripcion_oferta.dart';
-import 'package:officium_flutter/dominio/oferta_laboral/value_objects/oferta_laboral/estado_oferta.dart';
 import 'package:officium_flutter/dominio/oferta_laboral/value_objects/oferta_laboral/numero_vacantes.dart';
 import 'package:officium_flutter/dominio/oferta_laboral/value_objects/oferta_laboral/sueldo.dart';
 import 'package:officium_flutter/dominio/oferta_laboral/value_objects/oferta_laboral/titulo.dart';
 import 'package:officium_flutter/dominio/oferta_laboral/value_objects/oferta_laboral/turno_trabajo.dart';
-import 'package:officium_flutter/dominio/oferta_laboral/value_objects/postulacion_oferta_laboral/estado_postulacion.dart';
 part 'oferta_laboral_dto.freezed.dart';
+part 'oferta_laboral_dto.g.dart';
 
 @freezed
-abstract class OfertaLaboralDTO with _$OfertaLaboralDTO {
+abstract class OfertaLaboralDTO implements _$OfertaLaboralDTO {
+  const OfertaLaboralDTO._();
   factory OfertaLaboralDTO({
     required String uuid,
     required String titulo,
@@ -40,32 +39,24 @@ abstract class OfertaLaboralDTO with _$OfertaLaboralDTO {
       fechaPublicacion: ofertaLaboral.fechaPublicacion.getOrCrash().toString(),
       cargo: ofertaLaboral.cargo.toString(),
       sueldo: ofertaLaboral.sueldo.getOrCrash(),
-      duracionEstimadaValor: ofertaLaboral.duracion.getOrCrash().duracion, //!
-      duracionEstimadaEscala: ofertaLaboral.duracion.getOrCrash().escala, //!
+      duracionEstimadaValor: ofertaLaboral.duracion.getOrCrash().duracion,
+      duracionEstimadaEscala: ofertaLaboral.duracion.getOrCrash().escala,
       turnoTrabajo: ofertaLaboral.turno.getOrCrash(),
       numeroVacantes: ofertaLaboral.numeroVacantes.getOrCrash(),
       empresaNombre: ofertaLaboral.nombreEmpresa.getOrCrash(),
     );
   }
-}
-
-extension OfertaLaboralDTOX on OfertaLaboralDTO {
   OfertaLaboral toDomain() {
     return OfertaLaboral(
-      uuid: Identificador.fromUniqueString(uuid),
-      titulo: TituloOfertaLaboral(titulo),
-      fechaPublicacion: Fecha(DateTime.parse(fechaPublicacion)),
-      fechaModificacion: Fecha(DateTime.now()), //!
-      cargo: Cargo(cargo),
-      sueldo: Sueldo(sueldo, sueldo), //!
-      descripcionOferta: DescripcionOferta('Test Descripción'), //!
-      duracion: Duracion(
-          DuracionEscala(duracionEstimadaValor, duracionEstimadaEscala)), //!
-      turno: TurnoTrabajo(turnoTrabajo), //!
-      numeroVacantes: NumeroVacantes(numeroVacantes, numeroVacantes, 1), //!
-      uuidEmpresa: Identificador(), //!
-      estadoOferta: EstadoOferta(estadoOfertalaboral.aprobada.toString()), //!
-      nombreEmpresa: NombreEmpresa(empresaNombre),
-    );
+        uuid: Identificador.fromUniqueString(uuid),
+        titulo: TituloOfertaLaboral(titulo),
+        fechaPublicacion: Fecha(DateTime.parse(fechaPublicacion)),
+        cargo: Cargo(cargo),
+        sueldo: Sueldo(sueldo),
+        duracion: Duracion(
+            DuracionEscala(duracionEstimadaValor, duracionEstimadaEscala)),
+        turno: TurnoTrabajo(turnoTrabajo),
+        numeroVacantes: NumeroVacantes(numeroVacantes),
+        nombreEmpresa: NombreEmpresa(empresaNombre));
   }
 }

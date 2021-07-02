@@ -9,9 +9,9 @@ class Sueldo extends ValueObject<double> {
   final Either<ValorErroneo<double>, double> value;
   static const double maxSueldo = 1000000.00;
 
-  factory Sueldo(double input, double maxSueldo) {
+  factory Sueldo(double sueldo) {
     return Sueldo._(
-      validadorSueldo(input, maxSueldo).flatMap(validadorSueldoNoVacio),
+      validadorSueldo(sueldo, maxSueldo).flatMap(validadorSueldoNoVacio),
     );
   }
 
