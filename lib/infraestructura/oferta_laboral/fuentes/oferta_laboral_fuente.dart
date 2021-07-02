@@ -1,6 +1,8 @@
   
 import 'dart:convert';
 
+import 'package:officium_flutter/dominio/oferta_laboral/entidades/postulacion_oferta.dart';
+import 'package:officium_flutter/dominio/oferta_laboral/value_objects/postulacion_oferta_laboral/comentario_postulacion.dart';
 import 'package:officium_flutter/infraestructura/comun/excepciones.dart';
 import 'package:officium_flutter/infraestructura/oferta_laboral/modelos/oferta_laboral_detalle_dto.dart';
 import 'package:officium_flutter/infraestructura/oferta_laboral/modelos/oferta_laboral_dto.dart';
@@ -10,6 +12,7 @@ import 'package:officium_flutter/dominio/comun/value_objects/identificador.dart'
 import 'package:dartz/dartz.dart';
 
 import 'package:http/http.dart' as http;
+import 'package:officium_flutter/infraestructura/oferta_laboral/modelos/postulacion_oferta_laboral_dto.dart';
 
 import 'i_oferta_laboral_fuente.dart';
 
@@ -24,9 +27,20 @@ class OfertaLaboralFuente implements IOfertaLaboralFuente {
   });
 
   @override
-  Future<Unit> aplicarOfertaLaboral(Identificador uuidEmpleado, Identificador uuidOfertaLaboral) {
-      // TODO: implement aplicarOfertaLaboral
-      throw UnimplementedError();
+  Future<Unit> aplicarOfertaLaboral(Identificador uuidOferta,PostulacionOfertaLaboralDTO postulacionOfertaLaboral) async {
+    final response = await cliente.post(
+      Uri.parse('$DIR_SPRING/ofertas_laborales/${uuidOferta.getOrCrash()}'),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: postulacionOfertaLaboral
+    );
+
+    if (response.statusCode == 200) {
+      return unit;
+    } else {
+      throw ServerException();
+    }
   }
   
   @override
