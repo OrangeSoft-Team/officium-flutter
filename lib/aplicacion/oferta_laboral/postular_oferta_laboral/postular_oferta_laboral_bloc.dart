@@ -14,7 +14,7 @@ part 'postular_oferta_laboral_bloc.freezed.dart';
 
 class PostularOfertaLaboralBloc
     extends Bloc<PostularOfertaLaboralEvent, PostularOfertaLaboralState> {
-  IOfertaLaboralRepositorio _iOfertaLaboralRepositorio;
+  final IOfertaLaboralRepositorio _iOfertaLaboralRepositorio;
   PostularOfertaLaboralBloc(this._iOfertaLaboralRepositorio)
       : super(PostularOfertaLaboralState.inicial());
 
@@ -22,8 +22,14 @@ class PostularOfertaLaboralBloc
   Stream<PostularOfertaLaboralState> mapEventToState(
     PostularOfertaLaboralEvent event,
   ) async* {
-    event.map(
-      comentarioCambiado: (e) async* {},
+    yield* event.map(
+      comentarioCambiado: (e) async* {
+        yield state.copyWith(
+          comentarioPostulacionOfertaLaboral:
+              ComentarioPostulacionOfertaLaboral(e.comentarioOfertaLaboral),
+          postularFalloOExitoOpcion: none(),
+        );
+      },
       postulacionRealizada: (e) async* {
         Either<OfertaLaboralExcepcion, Unit> exitoOFallo;
         yield state.copyWith(
