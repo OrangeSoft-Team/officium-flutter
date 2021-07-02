@@ -7,9 +7,11 @@
 import 'package:get_it/get_it.dart' as _i1;
 import 'package:injectable/injectable.dart' as _i2;
 
-import 'aplicacion/oferta_laboral/ver_ofertas_laborales/ver_ofertas_laborales_bloc.dart'
+import 'aplicacion/autentificacion/iniciar_sesion/iniciar_sesion_bloc.dart'
+    as _i5;
+import 'dominio/autentificacion/servicios_dominio/fachadas/i_fachada_autentificacion.dart'
     as _i3;
-import 'dominio/oferta_laboral/servicios_dominio/repositorio/i_oferta_laboral_repositorio.dart'
+import 'infraestructura/autentificacion/http_request_fachada.dart'
     as _i4; // ignore_for_file: unnecessary_lambdas
 
 // ignore_for_file: lines_longer_than_80_chars
@@ -17,7 +19,8 @@ import 'dominio/oferta_laboral/servicios_dominio/repositorio/i_oferta_laboral_re
 _i1.GetIt $initGetIt(_i1.GetIt get,
     {String? environment, _i2.EnvironmentFilter? environmentFilter}) {
   final gh = _i2.GetItHelper(get, environment, environmentFilter);
-  gh.factory<_i3.VerOfertasLaboralesBloc>(
-      () => _i3.VerOfertasLaboralesBloc(get<_i4.IOfertaLaboralRepositorio>()));
+  gh.lazySingleton<_i3.IAutentificacionFachada>(() => _i4.HttpRequestFachada());
+  gh.factory<_i5.IniciarSesionBloc>(
+      () => _i5.IniciarSesionBloc(get<_i3.IAutentificacionFachada>()));
   return get;
 }

@@ -6,7 +6,8 @@ import 'package:officium_flutter/dominio/empleado/entidades/empleado.dart';
 
 abstract class IAutentificacionFachada {
   Future<Option<Empleado>> getUsuarioLogueado();
-  Future<Either<ExcepcionAutentificacion, Unit>> registarConEmailAndPassword({
+  Future<Either<ExcepcionAutentificacion, Unit>> registarConDatosBasicos({
+    required Empleado empleado,
     required EmailAddress emailAddress,
     required Password password,
   });

@@ -1,27 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:injectable/injectable.dart';
+import 'package:officium_flutter/presentacion/comun/app_widget.dart';
 
-//Original main
-// void main() {
-//   runApp(MyApp());
-// }
+import 'inyeccion.dart';
+
 void main() {
-  runApp(
-    const Center(
-      child: Text(
-        'Hello, world!',
-        textDirection: TextDirection.ltr,
-      ),
-    ),
-  );
-}
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Inicio'),
-      ),
-    );
-  }
+  WidgetsFlutterBinding.ensureInitialized();
+  configureInjection(Environment.prod);
+  runApp(AppWidget());
 }

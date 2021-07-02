@@ -4,16 +4,15 @@ import 'package:officium_flutter/dominio/comun/excepciones_dominio/valores_erron
 Either<ValorErroneo<String>, String> validadorPassword(
     String password, int maxLongitud, int minLongitud) {
   // ignore: unnecessary_raw_strings
-  final contains = password.contains(RegExp(r'[A-Z]'));
-  final bool tieneMayusculas = contains;
+  final bool tieneUppercase = password.contains(RegExp(r'[A-Z]'));
   // ignore: unnecessary_raw_strings
-  final bool tieneDigitos = password.contains(RegExp(r'[0-9]'));
+  final bool tieneDigits = password.contains(RegExp(r'[0-9]'));
   // ignore: unnecessary_raw_strings
-  final bool tieneMinusculas = password.contains(RegExp(r'[a-z]'));
-  final bool tieneCaracteresEspeciales =
+  final bool tieneLowercase = password.contains(RegExp(r'[a-z]'));
+  final bool tieneSpecialCharacters =
       password.contains(RegExp(r'[!@#$%^&*(),.?":{}|<>]'));
-  final bool tieneLongitudMinima = password.length >= minLongitud;
-  final bool tieneLongitudMaxima = password.length <= maxLongitud;
+  final bool tieneMinLength = password.length >= minLongitud;
+  final bool tieneMaxLength = password.length <= maxLongitud;
 
   if (password.isNotEmpty &&
       tieneMayusculas &&
@@ -23,7 +22,13 @@ Either<ValorErroneo<String>, String> validadorPassword(
       tieneLongitudMinima &&
       tieneLongitudMaxima) {
     return right(password);
-  } else if (tieneMayusculas == false) {
+  } else if (password.isEmpty) {
+    return left(ValorErroneo.contrasenaVacia(valorErroneo: password));
+  } else if (tieneMinLength == false) {
+    return left(ValorErroneo.contrasenaCorta(valorErroneo: password));
+  } else if (tieneMaxLength == false) {
+    return left(ValorErroneo.contrasenaLarga(valorErroneo: password));
+  } else if (tieneUppercase == false) {
     return left(ValorErroneo.contrasenaSinMayuscula(valorErroneo: password));
   } else if (tieneDigitos == false) {
     return left(ValorErroneo.contrasenaSinNumero(valorErroneo: password));
@@ -32,8 +37,6 @@ Either<ValorErroneo<String>, String> validadorPassword(
   } else if (tieneCaracteresEspeciales == false) {
     return left(
         ValorErroneo.contrasenaSinCaracterEspecial(valorErroneo: password));
-  } else if (tieneLongitudMinima == false) {
-    left(ValorErroneo.contrasenaCorta(valorErroneo: password));
   }
-  return left(ValorErroneo.contrasenaLarga(valorErroneo: password));
+  return left(ValorErroneo.contrasenaVacia(valorErroneo: password));
 }
