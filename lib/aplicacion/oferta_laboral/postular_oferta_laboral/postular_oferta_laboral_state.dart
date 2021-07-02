@@ -10,8 +10,6 @@ class PostularOfertaLaboralState with _$PostularOfertaLaboralState {
   }) = _PostularOfertaLaboralState;
 
   factory PostularOfertaLaboralState.inicial() => _PostularOfertaLaboralState(
-        comentarioPostulacionOfertaLaboral:
-            ComentarioPostulacionOfertaLaboral(''),
         estaPostulando: false,
         postularFalloOExitoOpcion: none(),
       );
