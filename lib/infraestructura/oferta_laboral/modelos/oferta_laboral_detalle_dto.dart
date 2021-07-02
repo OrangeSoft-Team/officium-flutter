@@ -3,6 +3,8 @@ import 'package:officium_flutter/dominio/comun/value_objects/fecha.dart';
 import 'package:officium_flutter/dominio/comun/value_objects/identificador.dart';
 import 'package:officium_flutter/dominio/empresa/value_objects/nombre_empresa.dart';
 import 'package:officium_flutter/dominio/oferta_laboral/entidades/oferta_laboral.dart';
+import 'package:officium_flutter/dominio/oferta_laboral/value_objects/oferta_laboral/Duracion_Oferta/duracion_escalas.dart';
+import 'package:officium_flutter/dominio/oferta_laboral/value_objects/oferta_laboral/Duracion_Oferta/duracion_estimada.dart';
 import 'package:officium_flutter/dominio/oferta_laboral/value_objects/oferta_laboral/cargo.dart';
 import 'package:officium_flutter/dominio/oferta_laboral/value_objects/oferta_laboral/descripcion_oferta.dart';
 import 'package:officium_flutter/dominio/oferta_laboral/value_objects/oferta_laboral/estado_oferta.dart';
@@ -14,9 +16,9 @@ import 'package:officium_flutter/dominio/oferta_laboral/value_objects/postulacio
 part 'oferta_laboral_detalle_dto.freezed.dart';
 
 @freezed
-abstract class OfertaLaboralDetalleDTO with _$OfertaLaboralDetalleDTO{
+abstract class OfertaLaboralDetalleDTO with _$OfertaLaboralDetalleDTO {
   const factory OfertaLaboralDetalleDTO({
-    required String uuid, 
+    required String uuid,
     required String titulo,
     required String fechaPublicacion,
     required String fechaModificacion,
@@ -32,7 +34,8 @@ abstract class OfertaLaboralDetalleDTO with _$OfertaLaboralDetalleDTO{
     required String direccionEmpresa,
   }) = _OfertaLaboralDetalleDTO;
 
-  factory OfertaLaboralDetalleDTO.fromJson(Map<String, dynamic> json) => _$OfertaLaboralDetalleDTOFromJson(json);
+  factory OfertaLaboralDetalleDTO.fromJson(Map<String, dynamic> json) =>
+      _$OfertaLaboralDetalleDTOFromJson(json);
 }
 
 extension OfertaLaboralDetalleDTOX on OfertaLaboralDetalleDTO {
@@ -43,13 +46,14 @@ extension OfertaLaboralDetalleDTOX on OfertaLaboralDetalleDTO {
       fechaPublicacion: Fecha(DateTime.parse(fechaPublicacion)),
       fechaModificacion: Fecha(DateTime.parse(fechaModificacion)),
       cargo: Cargo(cargo),
-      sueldo: Sueldo(sueldo,sueldo),
+      sueldo: Sueldo(sueldo, sueldo),
       descripcionOferta: DescripcionOferta(descripcion),
-      duration: Duration(days:duracionEstimadaValor),
-      turno: TurnoTrabajo(turnoTrabajo),//!
-      numeroVacantes: NumeroVacantes(numeroVacantes,numeroVacantes,1),//!
-      uuidEmpresa: Identificador.fromUniqueString(uuidEmpresa),//!
-      estadoOferta: EstadoOferta(estadoOfertalaboral.aprobada.toString()),//!
+      duracion: Duracion(
+          DuracionEscala(duracionEstimadaValor, duracionEstimadaEscala)),
+      turno: TurnoTrabajo(turnoTrabajo), //!
+      numeroVacantes: NumeroVacantes(numeroVacantes, numeroVacantes, 1), //!
+      uuidEmpresa: Identificador.fromUniqueString(uuidEmpresa), //!
+      estadoOferta: EstadoOferta(estadoOfertalaboral.aprobada.toString()), //!
       nombreEmpresa: NombreEmpresa(empresaNombre),
     );
   }
