@@ -7,7 +7,8 @@ part 'postulacion_oferta.freezed.dart';
 @freezed
 abstract class PostulacionOfertaLaboral with _$PostulacionOfertaLaboral {
   const factory PostulacionOfertaLaboral({
-    required Identificador uuidOfertaLaboral,
+    //required Identificador uuidOfertaLaboral,
+    required Identificador uuidEmpleado,
     required Identificador uuidEmpresa,
     required ComentarioPostulacionOfertaLaboral
         comentarioPostulacionOfertaLaboral,

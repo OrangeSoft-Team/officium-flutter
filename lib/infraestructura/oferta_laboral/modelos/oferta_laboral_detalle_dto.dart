@@ -54,20 +54,3 @@ extension OfertaLaboralDetalleDTOX on OfertaLaboralDetalleDTO {
     );
   }
 }
-//DETALLE
-/**
-+ UUID: string 
-+ Titulo: string 
-+ FechaPublicacion: dateFormateada : string
-+ FechaModificacion: dateFormateada : string
-+ Cargo: string 
-+ Sueldo: float 
-+ Descripcion: string
-+ DuraciónEstimadaValor: int 
-+ DuraciónEstimadaEscala: string 
-+ TurnoTrabajo: string
-+ NumeroVacantes: int  
-+ UUIDEmpresa: string
-+ EmpresaNombre: string
-+ DireccionEmpresa: string
- */

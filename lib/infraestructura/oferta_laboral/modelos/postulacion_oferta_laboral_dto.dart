@@ -17,7 +17,7 @@ abstract class PostulacionOfertaLaboralDTO with _$PostulacionOfertaLaboralDTO{
 
   factory PostulacionOfertaLaboralDTO.fromDomain(PostulacionOfertaLaboral postulacionOfertaLaboral) {
     return PostulacionOfertaLaboralDTO(
-      uuidEmpleado: '1', //!
+      uuidEmpleado:postulacionOfertaLaboral.uuidEmpleado.getOrCrash(), 
       uuidEmpresa: postulacionOfertaLaboral.uuidEmpresa.getOrCrash(),
       comentario: postulacionOfertaLaboral.comentarioPostulacionOfertaLaboral.getOrCrash(),
     );
@@ -27,7 +27,8 @@ abstract class PostulacionOfertaLaboralDTO with _$PostulacionOfertaLaboralDTO{
 extension PostulacionOfertaLaboralDTOX on PostulacionOfertaLaboralDTO {
   PostulacionOfertaLaboral toDomain() {
     return PostulacionOfertaLaboral(
-    uuidOfertaLaboral: Identificador.fromUniqueString(uuidEmpleado),
+    uuidEmpleado: Identificador.fromUniqueString(uuidEmpleado),
+    //uuidOfertaLaboral: Identificador.fromUniqueString(uuidEmpleado),
     uuidEmpresa:Identificador.fromUniqueString(uuidEmpresa),
     comentarioPostulacionOfertaLaboral: ComentarioPostulacionOfertaLaboral(comentario ?? ''),
     estado:estadoOfertalaboral.aprobada,
