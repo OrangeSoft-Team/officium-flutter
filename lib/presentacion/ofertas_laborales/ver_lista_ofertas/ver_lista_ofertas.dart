@@ -4,6 +4,7 @@ import 'package:officium_flutter/aplicacion/autentificacion/estado_autentificaci
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:officium_flutter/aplicacion/oferta_laboral/ver_ofertas_laborales/ver_ofertas_laborales_bloc.dart';
 import 'package:officium_flutter/inyeccion.dart';
+import 'package:officium_flutter/presentacion/ofertas_laborales/ver_lista_ofertas/elementos/lista_ofertas.dart';
 import 'package:officium_flutter/presentacion/routes/router.gr.dart';
 
 class VerListaOfertas extends StatelessWidget {
@@ -46,6 +47,7 @@ class VerListaOfertas extends StatelessWidget {
               ),
             ],
           ),
+          body: ListaOfertas(),
           floatingActionButton: FloatingActionButton(
             onPressed: () {},
             child: IconButton(

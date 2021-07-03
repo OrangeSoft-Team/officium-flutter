@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:bloc/bloc.dart';
 import 'package:dartz/dartz.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:injectable/injectable.dart';
 import 'package:officium_flutter/dominio/comun/value_objects/identificador.dart';
 import 'package:officium_flutter/dominio/oferta_laboral/entidades/oferta_laboral.dart';
 import 'package:officium_flutter/dominio/oferta_laboral/excepciones_dominio/oferta_laboral_excepciones.dart';
@@ -12,6 +13,7 @@ part 'ver_detalle_oferta_laboral_event.dart';
 part 'ver_detalle_oferta_laboral_state.dart';
 part 'ver_detalle_oferta_laboral_bloc.freezed.dart';
 
+@injectable
 class VerDetalleOfertaLaboralBloc
     extends Bloc<VerDetalleOfertaLaboralEvent, VerDetalleOfertaLaboralState> {
   final IOfertaLaboralRepositorio _iOfertaLaboralRepositorio;
