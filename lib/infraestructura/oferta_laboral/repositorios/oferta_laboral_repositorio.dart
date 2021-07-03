@@ -5,13 +5,12 @@ import 'package:officium_flutter/dominio/comun/value_objects/identificador.dart'
 import 'package:dartz/dartz.dart';
 import 'package:officium_flutter/dominio/oferta_laboral/servicios_dominio/repositorio/i_oferta_laboral_repositorio.dart';
 import 'package:officium_flutter/dominio/oferta_laboral/value_objects/postulacion_oferta_laboral/comentario_postulacion.dart';
-import 'package:officium_flutter/infraestructura/oferta_laboral/fuentes/oferta_laboral_fuente.dart';
+import 'package:officium_flutter/infraestructura/oferta_laboral/fuentes/i_oferta_laboral_fuente.dart';
 import 'package:officium_flutter/infraestructura/oferta_laboral/modelos/oferta_laboral_detalle_dto.dart';
-import 'package:officium_flutter/infraestructura/oferta_laboral/modelos/oferta_laboral_dto.dart';
 import 'package:officium_flutter/infraestructura/oferta_laboral/modelos/postulacion_oferta_laboral_dto.dart';
 
 class OfertaLaboralRepositorio implements IOfertaLaboralRepositorio {
-    final OfertaLaboralFuente fuenteDeDatos;
+    final IOfertaLaboralFuente fuenteDeDatos;
 
     OfertaLaboralRepositorio({
       required this.fuenteDeDatos,
@@ -28,6 +27,7 @@ class OfertaLaboralRepositorio implements IOfertaLaboralRepositorio {
 
     try {
       nuevaPostulacionOfertaLaboral = PostulacionOfertaLaboralDTO(
+          uuidOfertaLaboral: uuidOferta.getOrCrash(),
           uuidEmpleado: uuidEmpleado.getOrCrash(),
           uuidEmpresa: uuidEmpresa.getOrCrash(),
           comentario: comentarioPostulacionOfertaLaboral?.getOrCrash());

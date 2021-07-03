@@ -54,7 +54,7 @@ abstract class OfertaLaboralDetalleDTO implements _$OfertaLaboralDetalleDTO {
       turno: TurnoTrabajo(turnoTrabajo),
       numeroVacantes: NumeroVacantes(numeroVacantes),
       uuidEmpresa: Identificador.fromUniqueString(uuidEmpresa),
-      estadoOferta: EstadoOferta(estadoOfertalaboral.aprobada.toString()),
+      estadoOferta: EstadoOferta("publicado"),
       nombreEmpresa: NombreEmpresa(empresaNombre),
     );
   }
