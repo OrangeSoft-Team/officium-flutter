@@ -22,10 +22,12 @@ class _$PostulacionOfertaLaboralDTOTearOff {
   const _$PostulacionOfertaLaboralDTOTearOff();
 
   _PostulacionOfertaLaboralDTO call(
-      {required String uuidEmpleado,
+      {required String uuidOfertaLaboral,
+      required String uuidEmpleado,
       required String uuidEmpresa,
       String? comentario}) {
     return _PostulacionOfertaLaboralDTO(
+      uuidOfertaLaboral: uuidOfertaLaboral,
       uuidEmpleado: uuidEmpleado,
       uuidEmpresa: uuidEmpresa,
       comentario: comentario,
@@ -42,6 +44,7 @@ const $PostulacionOfertaLaboralDTO = _$PostulacionOfertaLaboralDTOTearOff();
 
 /// @nodoc
 mixin _$PostulacionOfertaLaboralDTO {
+  String get uuidOfertaLaboral => throw _privateConstructorUsedError;
   String get uuidEmpleado => throw _privateConstructorUsedError;
   String get uuidEmpresa => throw _privateConstructorUsedError;
   String? get comentario => throw _privateConstructorUsedError;
@@ -58,7 +61,11 @@ abstract class $PostulacionOfertaLaboralDTOCopyWith<$Res> {
           PostulacionOfertaLaboralDTO value,
           $Res Function(PostulacionOfertaLaboralDTO) then) =
       _$PostulacionOfertaLaboralDTOCopyWithImpl<$Res>;
-  $Res call({String uuidEmpleado, String uuidEmpresa, String? comentario});
+  $Res call(
+      {String uuidOfertaLaboral,
+      String uuidEmpleado,
+      String uuidEmpresa,
+      String? comentario});
 }
 
 /// @nodoc
@@ -72,11 +79,16 @@ class _$PostulacionOfertaLaboralDTOCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object? uuidOfertaLaboral = freezed,
     Object? uuidEmpleado = freezed,
     Object? uuidEmpresa = freezed,
     Object? comentario = freezed,
   }) {
     return _then(_value.copyWith(
+      uuidOfertaLaboral: uuidOfertaLaboral == freezed
+          ? _value.uuidOfertaLaboral
+          : uuidOfertaLaboral // ignore: cast_nullable_to_non_nullable
+              as String,
       uuidEmpleado: uuidEmpleado == freezed
           ? _value.uuidEmpleado
           : uuidEmpleado // ignore: cast_nullable_to_non_nullable
@@ -101,7 +113,11 @@ abstract class _$PostulacionOfertaLaboralDTOCopyWith<$Res>
           $Res Function(_PostulacionOfertaLaboralDTO) then) =
       __$PostulacionOfertaLaboralDTOCopyWithImpl<$Res>;
   @override
-  $Res call({String uuidEmpleado, String uuidEmpresa, String? comentario});
+  $Res call(
+      {String uuidOfertaLaboral,
+      String uuidEmpleado,
+      String uuidEmpresa,
+      String? comentario});
 }
 
 /// @nodoc
@@ -119,11 +135,16 @@ class __$PostulacionOfertaLaboralDTOCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object? uuidOfertaLaboral = freezed,
     Object? uuidEmpleado = freezed,
     Object? uuidEmpresa = freezed,
     Object? comentario = freezed,
   }) {
     return _then(_PostulacionOfertaLaboralDTO(
+      uuidOfertaLaboral: uuidOfertaLaboral == freezed
+          ? _value.uuidOfertaLaboral
+          : uuidOfertaLaboral // ignore: cast_nullable_to_non_nullable
+              as String,
       uuidEmpleado: uuidEmpleado == freezed
           ? _value.uuidEmpleado
           : uuidEmpleado // ignore: cast_nullable_to_non_nullable
@@ -142,13 +163,19 @@ class __$PostulacionOfertaLaboralDTOCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_PostulacionOfertaLaboralDTO implements _PostulacionOfertaLaboralDTO {
-  _$_PostulacionOfertaLaboralDTO(
-      {required this.uuidEmpleado, required this.uuidEmpresa, this.comentario});
+class _$_PostulacionOfertaLaboralDTO extends _PostulacionOfertaLaboralDTO {
+  const _$_PostulacionOfertaLaboralDTO(
+      {required this.uuidOfertaLaboral,
+      required this.uuidEmpleado,
+      required this.uuidEmpresa,
+      this.comentario})
+      : super._();
 
   factory _$_PostulacionOfertaLaboralDTO.fromJson(Map<String, dynamic> json) =>
       _$_$_PostulacionOfertaLaboralDTOFromJson(json);
 
+  @override
+  final String uuidOfertaLaboral;
   @override
   final String uuidEmpleado;
   @override
@@ -158,13 +185,16 @@ class _$_PostulacionOfertaLaboralDTO implements _PostulacionOfertaLaboralDTO {
 
   @override
   String toString() {
-    return 'PostulacionOfertaLaboralDTO(uuidEmpleado: $uuidEmpleado, uuidEmpresa: $uuidEmpresa, comentario: $comentario)';
+    return 'PostulacionOfertaLaboralDTO(uuidOfertaLaboral: $uuidOfertaLaboral, uuidEmpleado: $uuidEmpleado, uuidEmpresa: $uuidEmpresa, comentario: $comentario)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _PostulacionOfertaLaboralDTO &&
+            (identical(other.uuidOfertaLaboral, uuidOfertaLaboral) ||
+                const DeepCollectionEquality()
+                    .equals(other.uuidOfertaLaboral, uuidOfertaLaboral)) &&
             (identical(other.uuidEmpleado, uuidEmpleado) ||
                 const DeepCollectionEquality()
                     .equals(other.uuidEmpleado, uuidEmpleado)) &&
@@ -179,6 +209,7 @@ class _$_PostulacionOfertaLaboralDTO implements _PostulacionOfertaLaboralDTO {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(uuidOfertaLaboral) ^
       const DeepCollectionEquality().hash(uuidEmpleado) ^
       const DeepCollectionEquality().hash(uuidEmpresa) ^
       const DeepCollectionEquality().hash(comentario);
@@ -196,15 +227,19 @@ class _$_PostulacionOfertaLaboralDTO implements _PostulacionOfertaLaboralDTO {
 }
 
 abstract class _PostulacionOfertaLaboralDTO
-    implements PostulacionOfertaLaboralDTO {
-  factory _PostulacionOfertaLaboralDTO(
-      {required String uuidEmpleado,
+    extends PostulacionOfertaLaboralDTO {
+  const factory _PostulacionOfertaLaboralDTO(
+      {required String uuidOfertaLaboral,
+      required String uuidEmpleado,
       required String uuidEmpresa,
       String? comentario}) = _$_PostulacionOfertaLaboralDTO;
+  const _PostulacionOfertaLaboralDTO._() : super._();
 
   factory _PostulacionOfertaLaboralDTO.fromJson(Map<String, dynamic> json) =
       _$_PostulacionOfertaLaboralDTO.fromJson;
 
+  @override
+  String get uuidOfertaLaboral => throw _privateConstructorUsedError;
   @override
   String get uuidEmpleado => throw _privateConstructorUsedError;
   @override

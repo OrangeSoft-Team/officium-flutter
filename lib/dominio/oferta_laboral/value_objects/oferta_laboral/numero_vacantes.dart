@@ -9,8 +9,7 @@ class NumeroVacantes extends ValueObject<int> {
   static const int maxNumeroVacantes = 99;
   static const int minNumeroVacantes = 1;
 
-  factory NumeroVacantes(
-      int value, int maxNumeroVacantes, int minNumeroVacantes) {
+  factory NumeroVacantes(int value) {
     return NumeroVacantes._(
         validadorNumeroVacantes(value, maxNumeroVacantes, minNumeroVacantes));
   }
