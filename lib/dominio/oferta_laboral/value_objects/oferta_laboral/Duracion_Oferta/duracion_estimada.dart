@@ -16,4 +16,8 @@ class Duracion extends ValueObject<DuracionEscala> {
         value, escalasValidas, minValorDuracion, maxValorDuracion));
   }
   const Duracion._(this.value);
+  @override
+  String toString() {
+    return '$value';
+  }
 }

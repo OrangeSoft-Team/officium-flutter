@@ -26,7 +26,7 @@ class TarjetaOfertaErronea extends StatelessWidget {
             ),
             const SizedBox(height: 2),
             Text(
-              'Details for nerds:',
+              'Detalles especificos:',
               style: Theme.of(context).primaryTextTheme.bodyText2,
             ),
             Text(
