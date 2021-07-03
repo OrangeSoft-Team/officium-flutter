@@ -5,11 +5,18 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "officium-flutter (debug mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "debug",
+            "program": "./test/"
+        },
+        {
             "name": "officium-flutter",
             "request": "launch",
             "type": "dart"
         },
-        {
+                {
             "name": "officium-flutter (profile mode)",
             "request": "launch",
             "type": "dart",
@@ -17,3 +24,4 @@
         }
     ]
 }
+{

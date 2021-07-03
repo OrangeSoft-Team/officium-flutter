@@ -1,0 +1,21 @@
+# This package's tests are very slow. Double the default timeout.
+timeout: 1x
+
+# This is a browser-only package, so test on chrome by default.
+platforms: []
+
+tags:
+  # Integration tests are even slower, so increase the timeout again.
+  integration: {
+
+  }
+
+  # Unit tests
+  unit_test: {
+
+  }
+
+  # Acceptance tests (E2E)
+  acceptance: {
+
+  } 
