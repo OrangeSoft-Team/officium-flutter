@@ -22,3 +22,36 @@ final OfertaLaboral ofertaLaboralMock = OfertaLaboral(
     turno: TurnoTrabajo('Mixto'),
     numeroVacantes: NumeroVacantes(10),
     nombreEmpresa: NombreEmpresa('OrangeSoft'));
+
+final List<OfertaLaboral> ofertaLaboralMock2 = [
+  OfertaLaboral(
+      uuid: Identificador(),
+      titulo: TituloOfertaLaboral('Se ofrece puesto en desarrollo'),
+      fechaPublicacion: Fecha(DateTime.now()),
+      cargo: Cargo('Desarrollador'),
+      sueldo: Sueldo(1000),
+      duracion: Duracion(const DuracionEscala(10, 'dia(s)')),
+      turno: TurnoTrabajo('Mixto'),
+      numeroVacantes: NumeroVacantes(10),
+      nombreEmpresa: NombreEmpresa('OrangeSoft')),
+  OfertaLaboral(
+      uuid: Identificador(),
+      titulo: TituloOfertaLaboral('Se ofrece puesto en desarrollo'),
+      fechaPublicacion: Fecha(DateTime.now()),
+      cargo: Cargo('Desarrollador'),
+      sueldo: Sueldo(1000),
+      duracion: Duracion(const DuracionEscala(10, 'dia(s)')),
+      turno: TurnoTrabajo('Mixto'),
+      numeroVacantes: NumeroVacantes(10),
+      nombreEmpresa: NombreEmpresa('OrangeSoft')),
+  OfertaLaboral(
+      uuid: Identificador(),
+      titulo: TituloOfertaLaboral('Se ofrece puesto en desarrollo'),
+      fechaPublicacion: Fecha(DateTime.now()),
+      cargo: Cargo('Desarrollador'),
+      sueldo: Sueldo(1000),
+      duracion: Duracion(const DuracionEscala(10, 'dia(s)')),
+      turno: TurnoTrabajo('Mixto'),
+      numeroVacantes: NumeroVacantes(10),
+      nombreEmpresa: NombreEmpresa('OrangeSoft'))
+];

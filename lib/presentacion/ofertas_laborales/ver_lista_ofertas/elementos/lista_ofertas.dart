@@ -20,14 +20,15 @@ class ListaOfertas extends StatelessWidget {
           return ListView.builder(
             itemBuilder: (context, index) {
               // final oferta = state.ofertasLaborales[index];
-              final oferta = ofertaLaboralMock;
+              final oferta = ofertaLaboralMock2[index];
+              // final oferta = ofertaLaboralMock;
               if (oferta.falloOpcion.isSome()) {
                 return TarjetaOfertaErronea(oferta: oferta);
               } else {
                 return TarjetaOferta(oferta: oferta);
               }
             },
-            itemCount: 1,
+            itemCount: ofertaLaboralMock2.length,
           );
         },
         cargaExitosa: (state) {

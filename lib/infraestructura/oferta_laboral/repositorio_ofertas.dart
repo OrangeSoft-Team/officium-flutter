@@ -12,7 +12,7 @@ import 'package:officium_flutter/presentacion/ofertas_laborales/ver_lista_oferta
 
 @LazySingleton(as: IOfertaLaboralRepositorio)
 class OfertaLaboralRepositorio implements IOfertaLaboralRepositorio {
-  late List<OfertaLaboral> listOfertas;
+  final List<OfertaLaboral> listOfertas = ofertaLaboralMock2;
   @override
   Future<Either<OfertaLaboralExcepcion, Unit>> aplicarOfertaLaboral(
       Identificador uuidOferta,
@@ -33,7 +33,6 @@ class OfertaLaboralRepositorio implements IOfertaLaboralRepositorio {
   @override
   Stream<Either<OfertaLaboralExcepcion, List<OfertaLaboral>>>
       verTodasLasOfertasLaborales() async* {
-    listOfertas.add(ofertaLaboralMock);
     yield right<OfertaLaboralExcepcion, List<OfertaLaboral>>(listOfertas);
   }
 

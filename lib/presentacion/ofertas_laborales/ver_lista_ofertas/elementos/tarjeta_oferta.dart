@@ -53,6 +53,16 @@ class TarjetaOferta extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 4),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Container(
+                  child: Text(
+                    'Sueldo: ${oferta.sueldo.getOrCrash()}\$',
+                    style: const TextStyle(fontSize: 18),
+                  ),
+                ),
+              ),
+              const SizedBox(height: 4),
               ButtonBar(
                 children: <Widget>[
                   ElevatedButton(
