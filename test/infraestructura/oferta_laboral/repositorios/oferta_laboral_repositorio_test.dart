@@ -63,7 +63,7 @@ void main () {
           final result = await ofertaLaboralRepositorio.buscarOfertaLaboralConcreta(tOfertaLaboralDetalle.uuid);
           // assert
           verify(mockFuenteDeDatos.obtenerDetalleOfertasLaboral(tOfertaLaboralDetalle.uuid));
-          expect(result, equals(Right(tOfertaLaboralDetalle)));
+          expect(result, equals(Right(tOfertaLaboralDetalle) as Right<OfertaLaboralExcepcion,OfertaLaboral>));
       });
     });
     /*
