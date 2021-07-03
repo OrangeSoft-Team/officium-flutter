@@ -7,5 +7,5 @@ class PostularOfertaLaboralEvent with _$PostularOfertaLaboralEvent {
   const factory PostularOfertaLaboralEvent.postulacionRealizada(
       Identificador uuidOfertaLaboral,
       Identificador uuidEmpleado,
-      Identificador uuidEmpresa) = _postulacionRealizada;
+      Identificador uuidEmpresa) = _PostulacionRealizada;
 }

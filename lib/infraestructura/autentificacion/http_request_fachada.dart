@@ -1,5 +1,4 @@
 import 'package:dartz/dartz.dart';
-import 'package:http/http.dart' as http;
 import 'package:injectable/injectable.dart';
 
 import 'package:officium_flutter/dominio/autentificacion/excepciones_dominio/autentificacion_excepciones.dart';

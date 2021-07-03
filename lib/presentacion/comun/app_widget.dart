@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:officium_flutter/aplicacion/autentificacion/estado_autentificacion/estado_autentificacion_bloc.dart';
-import 'package:officium_flutter/presentacion/iniciar_sesion/inicio_sesion.dart';
+import 'package:officium_flutter/inyeccion.dart';
 import 'package:officium_flutter/presentacion/routes/router.gr.dart'
     as app_router;
-
-import '../../inyeccion.dart';
 
 const themeColor = 0xFF5D60F5;
 const accentColor = 0xFF5D60F5;

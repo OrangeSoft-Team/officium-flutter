@@ -22,9 +22,9 @@ class _$PostularOfertaLaboralEventTearOff {
     );
   }
 
-  _postulacionRealizada postulacionRealizada(Identificador uuidOfertaLaboral,
+  _PostulacionRealizada postulacionRealizada(Identificador uuidOfertaLaboral,
       Identificador uuidEmpleado, Identificador uuidEmpresa) {
-    return _postulacionRealizada(
+    return _PostulacionRealizada(
       uuidOfertaLaboral,
       uuidEmpleado,
       uuidEmpresa,
@@ -58,13 +58,13 @@ mixin _$PostularOfertaLaboralEvent {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_ComentarioCambiado value) comentarioCambiado,
-    required TResult Function(_postulacionRealizada value) postulacionRealizada,
+    required TResult Function(_PostulacionRealizada value) postulacionRealizada,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_ComentarioCambiado value)? comentarioCambiado,
-    TResult Function(_postulacionRealizada value)? postulacionRealizada,
+    TResult Function(_PostulacionRealizada value)? postulacionRealizada,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -183,7 +183,7 @@ class _$_ComentarioCambiado implements _ComentarioCambiado {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_ComentarioCambiado value) comentarioCambiado,
-    required TResult Function(_postulacionRealizada value) postulacionRealizada,
+    required TResult Function(_PostulacionRealizada value) postulacionRealizada,
   }) {
     return comentarioCambiado(this);
   }
@@ -192,7 +192,7 @@ class _$_ComentarioCambiado implements _ComentarioCambiado {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_ComentarioCambiado value)? comentarioCambiado,
-    TResult Function(_postulacionRealizada value)? postulacionRealizada,
+    TResult Function(_PostulacionRealizada value)? postulacionRealizada,
     required TResult orElse(),
   }) {
     if (comentarioCambiado != null) {
@@ -213,10 +213,10 @@ abstract class _ComentarioCambiado implements PostularOfertaLaboralEvent {
 }
 
 /// @nodoc
-abstract class _$postulacionRealizadaCopyWith<$Res> {
-  factory _$postulacionRealizadaCopyWith(_postulacionRealizada value,
-          $Res Function(_postulacionRealizada) then) =
-      __$postulacionRealizadaCopyWithImpl<$Res>;
+abstract class _$PostulacionRealizadaCopyWith<$Res> {
+  factory _$PostulacionRealizadaCopyWith(_PostulacionRealizada value,
+          $Res Function(_PostulacionRealizada) then) =
+      __$PostulacionRealizadaCopyWithImpl<$Res>;
   $Res call(
       {Identificador uuidOfertaLaboral,
       Identificador uuidEmpleado,
@@ -224,15 +224,15 @@ abstract class _$postulacionRealizadaCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$postulacionRealizadaCopyWithImpl<$Res>
+class __$PostulacionRealizadaCopyWithImpl<$Res>
     extends _$PostularOfertaLaboralEventCopyWithImpl<$Res>
-    implements _$postulacionRealizadaCopyWith<$Res> {
-  __$postulacionRealizadaCopyWithImpl(
-      _postulacionRealizada _value, $Res Function(_postulacionRealizada) _then)
-      : super(_value, (v) => _then(v as _postulacionRealizada));
+    implements _$PostulacionRealizadaCopyWith<$Res> {
+  __$PostulacionRealizadaCopyWithImpl(
+      _PostulacionRealizada _value, $Res Function(_PostulacionRealizada) _then)
+      : super(_value, (v) => _then(v as _PostulacionRealizada));
 
   @override
-  _postulacionRealizada get _value => super._value as _postulacionRealizada;
+  _PostulacionRealizada get _value => super._value as _PostulacionRealizada;
 
   @override
   $Res call({
@@ -240,7 +240,7 @@ class __$postulacionRealizadaCopyWithImpl<$Res>
     Object? uuidEmpleado = freezed,
     Object? uuidEmpresa = freezed,
   }) {
-    return _then(_postulacionRealizada(
+    return _then(_PostulacionRealizada(
       uuidOfertaLaboral == freezed
           ? _value.uuidOfertaLaboral
           : uuidOfertaLaboral // ignore: cast_nullable_to_non_nullable
@@ -259,8 +259,8 @@ class __$postulacionRealizadaCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_postulacionRealizada implements _postulacionRealizada {
-  const _$_postulacionRealizada(
+class _$_PostulacionRealizada implements _PostulacionRealizada {
+  const _$_PostulacionRealizada(
       this.uuidOfertaLaboral, this.uuidEmpleado, this.uuidEmpresa);
 
   @override
@@ -278,7 +278,7 @@ class _$_postulacionRealizada implements _postulacionRealizada {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _postulacionRealizada &&
+        (other is _PostulacionRealizada &&
             (identical(other.uuidOfertaLaboral, uuidOfertaLaboral) ||
                 const DeepCollectionEquality()
                     .equals(other.uuidOfertaLaboral, uuidOfertaLaboral)) &&
@@ -299,8 +299,8 @@ class _$_postulacionRealizada implements _postulacionRealizada {
 
   @JsonKey(ignore: true)
   @override
-  _$postulacionRealizadaCopyWith<_postulacionRealizada> get copyWith =>
-      __$postulacionRealizadaCopyWithImpl<_postulacionRealizada>(
+  _$PostulacionRealizadaCopyWith<_PostulacionRealizada> get copyWith =>
+      __$PostulacionRealizadaCopyWithImpl<_PostulacionRealizada>(
           this, _$identity);
 
   @override
@@ -334,7 +334,7 @@ class _$_postulacionRealizada implements _postulacionRealizada {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_ComentarioCambiado value) comentarioCambiado,
-    required TResult Function(_postulacionRealizada value) postulacionRealizada,
+    required TResult Function(_PostulacionRealizada value) postulacionRealizada,
   }) {
     return postulacionRealizada(this);
   }
@@ -343,7 +343,7 @@ class _$_postulacionRealizada implements _postulacionRealizada {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_ComentarioCambiado value)? comentarioCambiado,
-    TResult Function(_postulacionRealizada value)? postulacionRealizada,
+    TResult Function(_PostulacionRealizada value)? postulacionRealizada,
     required TResult orElse(),
   }) {
     if (postulacionRealizada != null) {
@@ -353,17 +353,17 @@ class _$_postulacionRealizada implements _postulacionRealizada {
   }
 }
 
-abstract class _postulacionRealizada implements PostularOfertaLaboralEvent {
-  const factory _postulacionRealizada(
+abstract class _PostulacionRealizada implements PostularOfertaLaboralEvent {
+  const factory _PostulacionRealizada(
       Identificador uuidOfertaLaboral,
       Identificador uuidEmpleado,
-      Identificador uuidEmpresa) = _$_postulacionRealizada;
+      Identificador uuidEmpresa) = _$_PostulacionRealizada;
 
   Identificador get uuidOfertaLaboral => throw _privateConstructorUsedError;
   Identificador get uuidEmpleado => throw _privateConstructorUsedError;
   Identificador get uuidEmpresa => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  _$postulacionRealizadaCopyWith<_postulacionRealizada> get copyWith =>
+  _$PostulacionRealizadaCopyWith<_PostulacionRealizada> get copyWith =>
       throw _privateConstructorUsedError;
 }
 

@@ -1,13 +1,11 @@
 @Tags(['unit_test'])
-import 'package:dartz/dartz.dart';
-import 'package:mockito/mockito.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-void main () {
+void main() {
   //DEPS
-  //MOCK CASO DE USO 
-    //REPOSITORIOS
-      //  OFERTAS
+  //MOCK CASO DE USO
+  //REPOSITORIOS
+  //  OFERTAS
 
   setUp(() {
     //DEPS INIT
@@ -16,20 +14,19 @@ void main () {
   //TEST OR GROUP
   group('Ver ofertas laborales', () {
     //ENTIDADES Y MODELOS
-    
-    
+
     //TEST SUCCESS
-    
-    //TEST FALLO 
+
+    //TEST FALLO
     test(
       'Base test for tags',
       () {
         // arrange
         const tNumber = 1;
         // act
-     
+
         // assert
-        expect(tNumber,equals(2));
+        expect(tNumber, equals(2));
       },
     );
   });

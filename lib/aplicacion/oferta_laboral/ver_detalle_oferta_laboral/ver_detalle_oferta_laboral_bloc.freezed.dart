@@ -16,9 +16,9 @@ final _privateConstructorUsedError = UnsupportedError(
 class _$VerDetalleOfertaLaboralEventTearOff {
   const _$VerDetalleOfertaLaboralEventTearOff();
 
-  _verDetalleOfertaLaboralEmpezado verDetalleOfertaLaboralEmpezado(
+  _VerDetalleOfertaLaboralEmpezado verDetalleOfertaLaboralEmpezado(
       Identificador uuidOfertaLaboral) {
-    return _verDetalleOfertaLaboralEmpezado(
+    return _VerDetalleOfertaLaboralEmpezado(
       uuidOfertaLaboral,
     );
   }
@@ -46,13 +46,13 @@ mixin _$VerDetalleOfertaLaboralEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_verDetalleOfertaLaboralEmpezado value)
+    required TResult Function(_VerDetalleOfertaLaboralEmpezado value)
         verDetalleOfertaLaboralEmpezado,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_verDetalleOfertaLaboralEmpezado value)?
+    TResult Function(_VerDetalleOfertaLaboralEmpezado value)?
         verDetalleOfertaLaboralEmpezado,
     required TResult orElse(),
   }) =>
@@ -95,34 +95,34 @@ class _$VerDetalleOfertaLaboralEventCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$verDetalleOfertaLaboralEmpezadoCopyWith<$Res>
+abstract class _$VerDetalleOfertaLaboralEmpezadoCopyWith<$Res>
     implements $VerDetalleOfertaLaboralEventCopyWith<$Res> {
-  factory _$verDetalleOfertaLaboralEmpezadoCopyWith(
-          _verDetalleOfertaLaboralEmpezado value,
-          $Res Function(_verDetalleOfertaLaboralEmpezado) then) =
-      __$verDetalleOfertaLaboralEmpezadoCopyWithImpl<$Res>;
+  factory _$VerDetalleOfertaLaboralEmpezadoCopyWith(
+          _VerDetalleOfertaLaboralEmpezado value,
+          $Res Function(_VerDetalleOfertaLaboralEmpezado) then) =
+      __$VerDetalleOfertaLaboralEmpezadoCopyWithImpl<$Res>;
   @override
   $Res call({Identificador uuidOfertaLaboral});
 }
 
 /// @nodoc
-class __$verDetalleOfertaLaboralEmpezadoCopyWithImpl<$Res>
+class __$VerDetalleOfertaLaboralEmpezadoCopyWithImpl<$Res>
     extends _$VerDetalleOfertaLaboralEventCopyWithImpl<$Res>
-    implements _$verDetalleOfertaLaboralEmpezadoCopyWith<$Res> {
-  __$verDetalleOfertaLaboralEmpezadoCopyWithImpl(
-      _verDetalleOfertaLaboralEmpezado _value,
-      $Res Function(_verDetalleOfertaLaboralEmpezado) _then)
-      : super(_value, (v) => _then(v as _verDetalleOfertaLaboralEmpezado));
+    implements _$VerDetalleOfertaLaboralEmpezadoCopyWith<$Res> {
+  __$VerDetalleOfertaLaboralEmpezadoCopyWithImpl(
+      _VerDetalleOfertaLaboralEmpezado _value,
+      $Res Function(_VerDetalleOfertaLaboralEmpezado) _then)
+      : super(_value, (v) => _then(v as _VerDetalleOfertaLaboralEmpezado));
 
   @override
-  _verDetalleOfertaLaboralEmpezado get _value =>
-      super._value as _verDetalleOfertaLaboralEmpezado;
+  _VerDetalleOfertaLaboralEmpezado get _value =>
+      super._value as _VerDetalleOfertaLaboralEmpezado;
 
   @override
   $Res call({
     Object? uuidOfertaLaboral = freezed,
   }) {
-    return _then(_verDetalleOfertaLaboralEmpezado(
+    return _then(_VerDetalleOfertaLaboralEmpezado(
       uuidOfertaLaboral == freezed
           ? _value.uuidOfertaLaboral
           : uuidOfertaLaboral // ignore: cast_nullable_to_non_nullable
@@ -133,9 +133,9 @@ class __$verDetalleOfertaLaboralEmpezadoCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_verDetalleOfertaLaboralEmpezado
-    implements _verDetalleOfertaLaboralEmpezado {
-  const _$_verDetalleOfertaLaboralEmpezado(this.uuidOfertaLaboral);
+class _$_VerDetalleOfertaLaboralEmpezado
+    implements _VerDetalleOfertaLaboralEmpezado {
+  const _$_VerDetalleOfertaLaboralEmpezado(this.uuidOfertaLaboral);
 
   @override
   final Identificador uuidOfertaLaboral;
@@ -148,7 +148,7 @@ class _$_verDetalleOfertaLaboralEmpezado
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _verDetalleOfertaLaboralEmpezado &&
+        (other is _VerDetalleOfertaLaboralEmpezado &&
             (identical(other.uuidOfertaLaboral, uuidOfertaLaboral) ||
                 const DeepCollectionEquality()
                     .equals(other.uuidOfertaLaboral, uuidOfertaLaboral)));
@@ -161,9 +161,9 @@ class _$_verDetalleOfertaLaboralEmpezado
 
   @JsonKey(ignore: true)
   @override
-  _$verDetalleOfertaLaboralEmpezadoCopyWith<_verDetalleOfertaLaboralEmpezado>
-      get copyWith => __$verDetalleOfertaLaboralEmpezadoCopyWithImpl<
-          _verDetalleOfertaLaboralEmpezado>(this, _$identity);
+  _$VerDetalleOfertaLaboralEmpezadoCopyWith<_VerDetalleOfertaLaboralEmpezado>
+      get copyWith => __$VerDetalleOfertaLaboralEmpezadoCopyWithImpl<
+          _VerDetalleOfertaLaboralEmpezado>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -190,7 +190,7 @@ class _$_verDetalleOfertaLaboralEmpezado
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_verDetalleOfertaLaboralEmpezado value)
+    required TResult Function(_VerDetalleOfertaLaboralEmpezado value)
         verDetalleOfertaLaboralEmpezado,
   }) {
     return verDetalleOfertaLaboralEmpezado(this);
@@ -199,7 +199,7 @@ class _$_verDetalleOfertaLaboralEmpezado
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_verDetalleOfertaLaboralEmpezado value)?
+    TResult Function(_VerDetalleOfertaLaboralEmpezado value)?
         verDetalleOfertaLaboralEmpezado,
     required TResult orElse(),
   }) {
@@ -210,16 +210,16 @@ class _$_verDetalleOfertaLaboralEmpezado
   }
 }
 
-abstract class _verDetalleOfertaLaboralEmpezado
+abstract class _VerDetalleOfertaLaboralEmpezado
     implements VerDetalleOfertaLaboralEvent {
-  const factory _verDetalleOfertaLaboralEmpezado(
-      Identificador uuidOfertaLaboral) = _$_verDetalleOfertaLaboralEmpezado;
+  const factory _VerDetalleOfertaLaboralEmpezado(
+      Identificador uuidOfertaLaboral) = _$_VerDetalleOfertaLaboralEmpezado;
 
   @override
   Identificador get uuidOfertaLaboral => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$verDetalleOfertaLaboralEmpezadoCopyWith<_verDetalleOfertaLaboralEmpezado>
+  _$VerDetalleOfertaLaboralEmpezadoCopyWith<_VerDetalleOfertaLaboralEmpezado>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -235,16 +235,16 @@ class _$VerDetalleOfertaLaboralStateTearOff {
     return const _VerDetalleOfertaLaboralEnProgreso();
   }
 
-  _verDetalleOfertaLaboralCargada verDetalleOfertaLaboralCargada(
+  _VerDetalleOfertaLaboralCargada verDetalleOfertaLaboralCargada(
       OfertaLaboral ofertaLaboral) {
-    return _verDetalleOfertaLaboralCargada(
+    return _VerDetalleOfertaLaboralCargada(
       ofertaLaboral,
     );
   }
 
-  _verDetalleOfertaLaboralFallida verDetalleOfertaLaboralFallida(
+  _VerDetalleOfertaLaboralFallida verDetalleOfertaLaboralFallida(
       OfertaLaboralExcepcion ofertaLaboralExcepcion) {
-    return _verDetalleOfertaLaboralFallida(
+    return _VerDetalleOfertaLaboralFallida(
       ofertaLaboralExcepcion,
     );
   }
@@ -281,9 +281,9 @@ mixin _$VerDetalleOfertaLaboralState {
     required TResult Function(_Inicial value) inicial,
     required TResult Function(_VerDetalleOfertaLaboralEnProgreso value)
         verDetalleOfertaLaboralEnProgreso,
-    required TResult Function(_verDetalleOfertaLaboralCargada value)
+    required TResult Function(_VerDetalleOfertaLaboralCargada value)
         verDetalleOfertaLaboralCargada,
-    required TResult Function(_verDetalleOfertaLaboralFallida value)
+    required TResult Function(_VerDetalleOfertaLaboralFallida value)
         verDetalleOfertaLaboralFallida,
   }) =>
       throw _privateConstructorUsedError;
@@ -292,9 +292,9 @@ mixin _$VerDetalleOfertaLaboralState {
     TResult Function(_Inicial value)? inicial,
     TResult Function(_VerDetalleOfertaLaboralEnProgreso value)?
         verDetalleOfertaLaboralEnProgreso,
-    TResult Function(_verDetalleOfertaLaboralCargada value)?
+    TResult Function(_VerDetalleOfertaLaboralCargada value)?
         verDetalleOfertaLaboralCargada,
-    TResult Function(_verDetalleOfertaLaboralFallida value)?
+    TResult Function(_VerDetalleOfertaLaboralFallida value)?
         verDetalleOfertaLaboralFallida,
     required TResult orElse(),
   }) =>
@@ -390,9 +390,9 @@ class _$_Inicial implements _Inicial {
     required TResult Function(_Inicial value) inicial,
     required TResult Function(_VerDetalleOfertaLaboralEnProgreso value)
         verDetalleOfertaLaboralEnProgreso,
-    required TResult Function(_verDetalleOfertaLaboralCargada value)
+    required TResult Function(_VerDetalleOfertaLaboralCargada value)
         verDetalleOfertaLaboralCargada,
-    required TResult Function(_verDetalleOfertaLaboralFallida value)
+    required TResult Function(_VerDetalleOfertaLaboralFallida value)
         verDetalleOfertaLaboralFallida,
   }) {
     return inicial(this);
@@ -404,9 +404,9 @@ class _$_Inicial implements _Inicial {
     TResult Function(_Inicial value)? inicial,
     TResult Function(_VerDetalleOfertaLaboralEnProgreso value)?
         verDetalleOfertaLaboralEnProgreso,
-    TResult Function(_verDetalleOfertaLaboralCargada value)?
+    TResult Function(_VerDetalleOfertaLaboralCargada value)?
         verDetalleOfertaLaboralCargada,
-    TResult Function(_verDetalleOfertaLaboralFallida value)?
+    TResult Function(_VerDetalleOfertaLaboralFallida value)?
         verDetalleOfertaLaboralFallida,
     required TResult orElse(),
   }) {
@@ -499,9 +499,9 @@ class _$_VerDetalleOfertaLaboralEnProgreso
     required TResult Function(_Inicial value) inicial,
     required TResult Function(_VerDetalleOfertaLaboralEnProgreso value)
         verDetalleOfertaLaboralEnProgreso,
-    required TResult Function(_verDetalleOfertaLaboralCargada value)
+    required TResult Function(_VerDetalleOfertaLaboralCargada value)
         verDetalleOfertaLaboralCargada,
-    required TResult Function(_verDetalleOfertaLaboralFallida value)
+    required TResult Function(_VerDetalleOfertaLaboralFallida value)
         verDetalleOfertaLaboralFallida,
   }) {
     return verDetalleOfertaLaboralEnProgreso(this);
@@ -513,9 +513,9 @@ class _$_VerDetalleOfertaLaboralEnProgreso
     TResult Function(_Inicial value)? inicial,
     TResult Function(_VerDetalleOfertaLaboralEnProgreso value)?
         verDetalleOfertaLaboralEnProgreso,
-    TResult Function(_verDetalleOfertaLaboralCargada value)?
+    TResult Function(_VerDetalleOfertaLaboralCargada value)?
         verDetalleOfertaLaboralCargada,
-    TResult Function(_verDetalleOfertaLaboralFallida value)?
+    TResult Function(_VerDetalleOfertaLaboralFallida value)?
         verDetalleOfertaLaboralFallida,
     required TResult orElse(),
   }) {
@@ -533,34 +533,34 @@ abstract class _VerDetalleOfertaLaboralEnProgreso
 }
 
 /// @nodoc
-abstract class _$verDetalleOfertaLaboralCargadaCopyWith<$Res> {
-  factory _$verDetalleOfertaLaboralCargadaCopyWith(
-          _verDetalleOfertaLaboralCargada value,
-          $Res Function(_verDetalleOfertaLaboralCargada) then) =
-      __$verDetalleOfertaLaboralCargadaCopyWithImpl<$Res>;
+abstract class _$VerDetalleOfertaLaboralCargadaCopyWith<$Res> {
+  factory _$VerDetalleOfertaLaboralCargadaCopyWith(
+          _VerDetalleOfertaLaboralCargada value,
+          $Res Function(_VerDetalleOfertaLaboralCargada) then) =
+      __$VerDetalleOfertaLaboralCargadaCopyWithImpl<$Res>;
   $Res call({OfertaLaboral ofertaLaboral});
 
   $OfertaLaboralCopyWith<$Res> get ofertaLaboral;
 }
 
 /// @nodoc
-class __$verDetalleOfertaLaboralCargadaCopyWithImpl<$Res>
+class __$VerDetalleOfertaLaboralCargadaCopyWithImpl<$Res>
     extends _$VerDetalleOfertaLaboralStateCopyWithImpl<$Res>
-    implements _$verDetalleOfertaLaboralCargadaCopyWith<$Res> {
-  __$verDetalleOfertaLaboralCargadaCopyWithImpl(
-      _verDetalleOfertaLaboralCargada _value,
-      $Res Function(_verDetalleOfertaLaboralCargada) _then)
-      : super(_value, (v) => _then(v as _verDetalleOfertaLaboralCargada));
+    implements _$VerDetalleOfertaLaboralCargadaCopyWith<$Res> {
+  __$VerDetalleOfertaLaboralCargadaCopyWithImpl(
+      _VerDetalleOfertaLaboralCargada _value,
+      $Res Function(_VerDetalleOfertaLaboralCargada) _then)
+      : super(_value, (v) => _then(v as _VerDetalleOfertaLaboralCargada));
 
   @override
-  _verDetalleOfertaLaboralCargada get _value =>
-      super._value as _verDetalleOfertaLaboralCargada;
+  _VerDetalleOfertaLaboralCargada get _value =>
+      super._value as _VerDetalleOfertaLaboralCargada;
 
   @override
   $Res call({
     Object? ofertaLaboral = freezed,
   }) {
-    return _then(_verDetalleOfertaLaboralCargada(
+    return _then(_VerDetalleOfertaLaboralCargada(
       ofertaLaboral == freezed
           ? _value.ofertaLaboral
           : ofertaLaboral // ignore: cast_nullable_to_non_nullable
@@ -578,9 +578,9 @@ class __$verDetalleOfertaLaboralCargadaCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_verDetalleOfertaLaboralCargada
-    implements _verDetalleOfertaLaboralCargada {
-  const _$_verDetalleOfertaLaboralCargada(this.ofertaLaboral);
+class _$_VerDetalleOfertaLaboralCargada
+    implements _VerDetalleOfertaLaboralCargada {
+  const _$_VerDetalleOfertaLaboralCargada(this.ofertaLaboral);
 
   @override
   final OfertaLaboral ofertaLaboral;
@@ -593,7 +593,7 @@ class _$_verDetalleOfertaLaboralCargada
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _verDetalleOfertaLaboralCargada &&
+        (other is _VerDetalleOfertaLaboralCargada &&
             (identical(other.ofertaLaboral, ofertaLaboral) ||
                 const DeepCollectionEquality()
                     .equals(other.ofertaLaboral, ofertaLaboral)));
@@ -605,9 +605,9 @@ class _$_verDetalleOfertaLaboralCargada
 
   @JsonKey(ignore: true)
   @override
-  _$verDetalleOfertaLaboralCargadaCopyWith<_verDetalleOfertaLaboralCargada>
-      get copyWith => __$verDetalleOfertaLaboralCargadaCopyWithImpl<
-          _verDetalleOfertaLaboralCargada>(this, _$identity);
+  _$VerDetalleOfertaLaboralCargadaCopyWith<_VerDetalleOfertaLaboralCargada>
+      get copyWith => __$VerDetalleOfertaLaboralCargadaCopyWithImpl<
+          _VerDetalleOfertaLaboralCargada>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -645,9 +645,9 @@ class _$_verDetalleOfertaLaboralCargada
     required TResult Function(_Inicial value) inicial,
     required TResult Function(_VerDetalleOfertaLaboralEnProgreso value)
         verDetalleOfertaLaboralEnProgreso,
-    required TResult Function(_verDetalleOfertaLaboralCargada value)
+    required TResult Function(_VerDetalleOfertaLaboralCargada value)
         verDetalleOfertaLaboralCargada,
-    required TResult Function(_verDetalleOfertaLaboralFallida value)
+    required TResult Function(_VerDetalleOfertaLaboralFallida value)
         verDetalleOfertaLaboralFallida,
   }) {
     return verDetalleOfertaLaboralCargada(this);
@@ -659,9 +659,9 @@ class _$_verDetalleOfertaLaboralCargada
     TResult Function(_Inicial value)? inicial,
     TResult Function(_VerDetalleOfertaLaboralEnProgreso value)?
         verDetalleOfertaLaboralEnProgreso,
-    TResult Function(_verDetalleOfertaLaboralCargada value)?
+    TResult Function(_VerDetalleOfertaLaboralCargada value)?
         verDetalleOfertaLaboralCargada,
-    TResult Function(_verDetalleOfertaLaboralFallida value)?
+    TResult Function(_VerDetalleOfertaLaboralFallida value)?
         verDetalleOfertaLaboralFallida,
     required TResult orElse(),
   }) {
@@ -672,46 +672,46 @@ class _$_verDetalleOfertaLaboralCargada
   }
 }
 
-abstract class _verDetalleOfertaLaboralCargada
+abstract class _VerDetalleOfertaLaboralCargada
     implements VerDetalleOfertaLaboralState {
-  const factory _verDetalleOfertaLaboralCargada(OfertaLaboral ofertaLaboral) =
-      _$_verDetalleOfertaLaboralCargada;
+  const factory _VerDetalleOfertaLaboralCargada(OfertaLaboral ofertaLaboral) =
+      _$_VerDetalleOfertaLaboralCargada;
 
   OfertaLaboral get ofertaLaboral => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  _$verDetalleOfertaLaboralCargadaCopyWith<_verDetalleOfertaLaboralCargada>
+  _$VerDetalleOfertaLaboralCargadaCopyWith<_VerDetalleOfertaLaboralCargada>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$verDetalleOfertaLaboralFallidaCopyWith<$Res> {
-  factory _$verDetalleOfertaLaboralFallidaCopyWith(
-          _verDetalleOfertaLaboralFallida value,
-          $Res Function(_verDetalleOfertaLaboralFallida) then) =
-      __$verDetalleOfertaLaboralFallidaCopyWithImpl<$Res>;
+abstract class _$VerDetalleOfertaLaboralFallidaCopyWith<$Res> {
+  factory _$VerDetalleOfertaLaboralFallidaCopyWith(
+          _VerDetalleOfertaLaboralFallida value,
+          $Res Function(_VerDetalleOfertaLaboralFallida) then) =
+      __$VerDetalleOfertaLaboralFallidaCopyWithImpl<$Res>;
   $Res call({OfertaLaboralExcepcion ofertaLaboralExcepcion});
 
   $OfertaLaboralExcepcionCopyWith<$Res> get ofertaLaboralExcepcion;
 }
 
 /// @nodoc
-class __$verDetalleOfertaLaboralFallidaCopyWithImpl<$Res>
+class __$VerDetalleOfertaLaboralFallidaCopyWithImpl<$Res>
     extends _$VerDetalleOfertaLaboralStateCopyWithImpl<$Res>
-    implements _$verDetalleOfertaLaboralFallidaCopyWith<$Res> {
-  __$verDetalleOfertaLaboralFallidaCopyWithImpl(
-      _verDetalleOfertaLaboralFallida _value,
-      $Res Function(_verDetalleOfertaLaboralFallida) _then)
-      : super(_value, (v) => _then(v as _verDetalleOfertaLaboralFallida));
+    implements _$VerDetalleOfertaLaboralFallidaCopyWith<$Res> {
+  __$VerDetalleOfertaLaboralFallidaCopyWithImpl(
+      _VerDetalleOfertaLaboralFallida _value,
+      $Res Function(_VerDetalleOfertaLaboralFallida) _then)
+      : super(_value, (v) => _then(v as _VerDetalleOfertaLaboralFallida));
 
   @override
-  _verDetalleOfertaLaboralFallida get _value =>
-      super._value as _verDetalleOfertaLaboralFallida;
+  _VerDetalleOfertaLaboralFallida get _value =>
+      super._value as _VerDetalleOfertaLaboralFallida;
 
   @override
   $Res call({
     Object? ofertaLaboralExcepcion = freezed,
   }) {
-    return _then(_verDetalleOfertaLaboralFallida(
+    return _then(_VerDetalleOfertaLaboralFallida(
       ofertaLaboralExcepcion == freezed
           ? _value.ofertaLaboralExcepcion
           : ofertaLaboralExcepcion // ignore: cast_nullable_to_non_nullable
@@ -730,9 +730,9 @@ class __$verDetalleOfertaLaboralFallidaCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_verDetalleOfertaLaboralFallida
-    implements _verDetalleOfertaLaboralFallida {
-  const _$_verDetalleOfertaLaboralFallida(this.ofertaLaboralExcepcion);
+class _$_VerDetalleOfertaLaboralFallida
+    implements _VerDetalleOfertaLaboralFallida {
+  const _$_VerDetalleOfertaLaboralFallida(this.ofertaLaboralExcepcion);
 
   @override
   final OfertaLaboralExcepcion ofertaLaboralExcepcion;
@@ -745,7 +745,7 @@ class _$_verDetalleOfertaLaboralFallida
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _verDetalleOfertaLaboralFallida &&
+        (other is _VerDetalleOfertaLaboralFallida &&
             (identical(other.ofertaLaboralExcepcion, ofertaLaboralExcepcion) ||
                 const DeepCollectionEquality().equals(
                     other.ofertaLaboralExcepcion, ofertaLaboralExcepcion)));
@@ -758,9 +758,9 @@ class _$_verDetalleOfertaLaboralFallida
 
   @JsonKey(ignore: true)
   @override
-  _$verDetalleOfertaLaboralFallidaCopyWith<_verDetalleOfertaLaboralFallida>
-      get copyWith => __$verDetalleOfertaLaboralFallidaCopyWithImpl<
-          _verDetalleOfertaLaboralFallida>(this, _$identity);
+  _$VerDetalleOfertaLaboralFallidaCopyWith<_VerDetalleOfertaLaboralFallida>
+      get copyWith => __$VerDetalleOfertaLaboralFallidaCopyWithImpl<
+          _VerDetalleOfertaLaboralFallida>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -798,9 +798,9 @@ class _$_verDetalleOfertaLaboralFallida
     required TResult Function(_Inicial value) inicial,
     required TResult Function(_VerDetalleOfertaLaboralEnProgreso value)
         verDetalleOfertaLaboralEnProgreso,
-    required TResult Function(_verDetalleOfertaLaboralCargada value)
+    required TResult Function(_VerDetalleOfertaLaboralCargada value)
         verDetalleOfertaLaboralCargada,
-    required TResult Function(_verDetalleOfertaLaboralFallida value)
+    required TResult Function(_VerDetalleOfertaLaboralFallida value)
         verDetalleOfertaLaboralFallida,
   }) {
     return verDetalleOfertaLaboralFallida(this);
@@ -812,9 +812,9 @@ class _$_verDetalleOfertaLaboralFallida
     TResult Function(_Inicial value)? inicial,
     TResult Function(_VerDetalleOfertaLaboralEnProgreso value)?
         verDetalleOfertaLaboralEnProgreso,
-    TResult Function(_verDetalleOfertaLaboralCargada value)?
+    TResult Function(_VerDetalleOfertaLaboralCargada value)?
         verDetalleOfertaLaboralCargada,
-    TResult Function(_verDetalleOfertaLaboralFallida value)?
+    TResult Function(_VerDetalleOfertaLaboralFallida value)?
         verDetalleOfertaLaboralFallida,
     required TResult orElse(),
   }) {
@@ -825,15 +825,15 @@ class _$_verDetalleOfertaLaboralFallida
   }
 }
 
-abstract class _verDetalleOfertaLaboralFallida
+abstract class _VerDetalleOfertaLaboralFallida
     implements VerDetalleOfertaLaboralState {
-  const factory _verDetalleOfertaLaboralFallida(
+  const factory _VerDetalleOfertaLaboralFallida(
           OfertaLaboralExcepcion ofertaLaboralExcepcion) =
-      _$_verDetalleOfertaLaboralFallida;
+      _$_VerDetalleOfertaLaboralFallida;
 
   OfertaLaboralExcepcion get ofertaLaboralExcepcion =>
       throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  _$verDetalleOfertaLaboralFallidaCopyWith<_verDetalleOfertaLaboralFallida>
+  _$VerDetalleOfertaLaboralFallidaCopyWith<_VerDetalleOfertaLaboralFallida>
       get copyWith => throw _privateConstructorUsedError;
 }
