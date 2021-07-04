@@ -7,10 +7,11 @@
 import 'package:auto_route/auto_route.dart' as _i1;
 import 'package:flutter/material.dart' as _i2;
 
-import '../../dominio/oferta_laboral/entidades/oferta_laboral.dart' as _i7;
+import '../../dominio/oferta_laboral/entidades/oferta_laboral.dart' as _i8;
 import '../iniciar_sesion/inicio_sesion.dart' as _i4;
 import '../ofertas_laborales/ver_detalle_oferta/detalle_oferta_laboral.dart'
     as _i6;
+import '../ofertas_laborales/ver_detalle_oferta/postulacion.dart' as _i7;
 import '../ofertas_laborales/ver_lista_ofertas/ver_lista_ofertas.dart' as _i5;
 import '../splash/vista_splash.dart' as _i3;
 
@@ -40,6 +41,12 @@ class Router extends _i1.RootStackRouter {
         builder: (data) {
           final args = data.argsAs<DetalleOfertaRouteArgs>();
           return _i6.DetalleOferta(key: args.key, oferta: args.oferta);
+        }),
+    PostularRoute.name: (routeData) => _i1.MaterialPageX<dynamic>(
+        routeData: routeData,
+        builder: (data) {
+          final args = data.argsAs<PostularRouteArgs>();
+          return _i7.Postular(key: args.key, oferta: args.oferta);
         })
   };
 
@@ -49,7 +56,8 @@ class Router extends _i1.RootStackRouter {
         _i1.RouteConfig(InicioSesionVistaRoute.name,
             path: '/inicio-sesion-vista'),
         _i1.RouteConfig(VerListaOfertasRoute.name, path: '/ver-lista-ofertas'),
-        _i1.RouteConfig(DetalleOfertaRoute.name, path: '/detalle-oferta')
+        _i1.RouteConfig(DetalleOfertaRoute.name, path: '/detalle-oferta'),
+        _i1.RouteConfig(PostularRoute.name, path: '/Postular')
       ];
 }
 
@@ -72,7 +80,7 @@ class VerListaOfertasRoute extends _i1.PageRouteInfo {
 }
 
 class DetalleOfertaRoute extends _i1.PageRouteInfo<DetalleOfertaRouteArgs> {
-  DetalleOfertaRoute({_i2.Key? key, required _i7.OfertaLaboral oferta})
+  DetalleOfertaRoute({_i2.Key? key, required _i8.OfertaLaboral oferta})
       : super(name,
             path: '/detalle-oferta',
             args: DetalleOfertaRouteArgs(key: key, oferta: oferta));
@@ -85,5 +93,22 @@ class DetalleOfertaRouteArgs {
 
   final _i2.Key? key;
 
-  final _i7.OfertaLaboral oferta;
+  final _i8.OfertaLaboral oferta;
+}
+
+class PostularRoute extends _i1.PageRouteInfo<PostularRouteArgs> {
+  PostularRoute({_i2.Key? key, required _i8.OfertaLaboral oferta})
+      : super(name,
+            path: '/Postular',
+            args: PostularRouteArgs(key: key, oferta: oferta));
+
+  static const String name = 'PostularRoute';
+}
+
+class PostularRouteArgs {
+  const PostularRouteArgs({this.key, required this.oferta});
+
+  final _i2.Key? key;
+
+  final _i8.OfertaLaboral oferta;
 }
