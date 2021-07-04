@@ -109,7 +109,7 @@ class DetalleOferta extends StatelessWidget {
                   alignment: Alignment.centerLeft,
                   child: Container(
                     child: Text(
-                      'Publicado hace: ${DateTime.now().difference(oferta.fechaPublicacion.getOrCrash().toLocal())} dias',
+                      'Publicado el:  ${oferta.fechaPublicacion.getOrCrash().day.toString().padLeft(2, '0')}-${oferta.fechaPublicacion.getOrCrash().month.toString().padLeft(2, '0')}-${oferta.fechaPublicacion.getOrCrash().year.toString()}',
                       style: const TextStyle(fontSize: 18),
                     ),
                   ),
