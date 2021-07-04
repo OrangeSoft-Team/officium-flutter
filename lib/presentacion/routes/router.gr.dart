@@ -7,7 +7,10 @@
 import 'package:auto_route/auto_route.dart' as _i1;
 import 'package:flutter/material.dart' as _i2;
 
+import '../../dominio/oferta_laboral/entidades/oferta_laboral.dart' as _i7;
 import '../iniciar_sesion/inicio_sesion.dart' as _i4;
+import '../ofertas_laborales/ver_detalle_oferta/detalle_oferta_laboral.dart'
+    as _i6;
 import '../ofertas_laborales/ver_lista_ofertas/ver_lista_ofertas.dart' as _i5;
 import '../splash/vista_splash.dart' as _i3;
 
@@ -31,6 +34,12 @@ class Router extends _i1.RootStackRouter {
         routeData: routeData,
         builder: (_) {
           return _i5.VerListaOfertas();
+        }),
+    DetalleOfertaRoute.name: (routeData) => _i1.MaterialPageX<dynamic>(
+        routeData: routeData,
+        builder: (data) {
+          final args = data.argsAs<DetalleOfertaRouteArgs>();
+          return _i6.DetalleOferta(key: args.key, oferta: args.oferta);
         })
   };
 
@@ -39,7 +48,8 @@ class Router extends _i1.RootStackRouter {
         _i1.RouteConfig(VistaSplashRoute.name, path: '/'),
         _i1.RouteConfig(InicioSesionVistaRoute.name,
             path: '/inicio-sesion-vista'),
-        _i1.RouteConfig(VerListaOfertasRoute.name, path: '/ver-lista-ofertas')
+        _i1.RouteConfig(VerListaOfertasRoute.name, path: '/ver-lista-ofertas'),
+        _i1.RouteConfig(DetalleOfertaRoute.name, path: '/detalle-oferta')
       ];
 }
 
@@ -59,4 +69,21 @@ class VerListaOfertasRoute extends _i1.PageRouteInfo {
   const VerListaOfertasRoute() : super(name, path: '/ver-lista-ofertas');
 
   static const String name = 'VerListaOfertasRoute';
+}
+
+class DetalleOfertaRoute extends _i1.PageRouteInfo<DetalleOfertaRouteArgs> {
+  DetalleOfertaRoute({_i2.Key? key, required _i7.OfertaLaboral oferta})
+      : super(name,
+            path: '/detalle-oferta',
+            args: DetalleOfertaRouteArgs(key: key, oferta: oferta));
+
+  static const String name = 'DetalleOfertaRoute';
+}
+
+class DetalleOfertaRouteArgs {
+  const DetalleOfertaRouteArgs({this.key, required this.oferta});
+
+  final _i2.Key? key;
+
+  final _i7.OfertaLaboral oferta;
 }

@@ -23,6 +23,7 @@ class _$OfertaLaboralDTOTearOff {
   _OfertaLaboralDTO call(
       {required String uuid,
       required String titulo,
+      required String descripcion,
       required String fechaPublicacion,
       required String cargo,
       required double sueldo,
@@ -34,6 +35,7 @@ class _$OfertaLaboralDTOTearOff {
     return _OfertaLaboralDTO(
       uuid: uuid,
       titulo: titulo,
+      descripcion: descripcion,
       fechaPublicacion: fechaPublicacion,
       cargo: cargo,
       sueldo: sueldo,
@@ -57,6 +59,7 @@ const $OfertaLaboralDTO = _$OfertaLaboralDTOTearOff();
 mixin _$OfertaLaboralDTO {
   String get uuid => throw _privateConstructorUsedError;
   String get titulo => throw _privateConstructorUsedError;
+  String get descripcion => throw _privateConstructorUsedError;
   String get fechaPublicacion => throw _privateConstructorUsedError;
   String get cargo => throw _privateConstructorUsedError;
   double get sueldo => throw _privateConstructorUsedError;
@@ -80,6 +83,7 @@ abstract class $OfertaLaboralDTOCopyWith<$Res> {
   $Res call(
       {String uuid,
       String titulo,
+      String descripcion,
       String fechaPublicacion,
       String cargo,
       double sueldo,
@@ -103,6 +107,7 @@ class _$OfertaLaboralDTOCopyWithImpl<$Res>
   $Res call({
     Object? uuid = freezed,
     Object? titulo = freezed,
+    Object? descripcion = freezed,
     Object? fechaPublicacion = freezed,
     Object? cargo = freezed,
     Object? sueldo = freezed,
@@ -120,6 +125,10 @@ class _$OfertaLaboralDTOCopyWithImpl<$Res>
       titulo: titulo == freezed
           ? _value.titulo
           : titulo // ignore: cast_nullable_to_non_nullable
+              as String,
+      descripcion: descripcion == freezed
+          ? _value.descripcion
+          : descripcion // ignore: cast_nullable_to_non_nullable
               as String,
       fechaPublicacion: fechaPublicacion == freezed
           ? _value.fechaPublicacion
@@ -167,6 +176,7 @@ abstract class _$OfertaLaboralDTOCopyWith<$Res>
   $Res call(
       {String uuid,
       String titulo,
+      String descripcion,
       String fechaPublicacion,
       String cargo,
       double sueldo,
@@ -192,6 +202,7 @@ class __$OfertaLaboralDTOCopyWithImpl<$Res>
   $Res call({
     Object? uuid = freezed,
     Object? titulo = freezed,
+    Object? descripcion = freezed,
     Object? fechaPublicacion = freezed,
     Object? cargo = freezed,
     Object? sueldo = freezed,
@@ -209,6 +220,10 @@ class __$OfertaLaboralDTOCopyWithImpl<$Res>
       titulo: titulo == freezed
           ? _value.titulo
           : titulo // ignore: cast_nullable_to_non_nullable
+              as String,
+      descripcion: descripcion == freezed
+          ? _value.descripcion
+          : descripcion // ignore: cast_nullable_to_non_nullable
               as String,
       fechaPublicacion: fechaPublicacion == freezed
           ? _value.fechaPublicacion
@@ -252,6 +267,7 @@ class _$_OfertaLaboralDTO extends _OfertaLaboralDTO {
   _$_OfertaLaboralDTO(
       {required this.uuid,
       required this.titulo,
+      required this.descripcion,
       required this.fechaPublicacion,
       required this.cargo,
       required this.sueldo,
@@ -269,6 +285,8 @@ class _$_OfertaLaboralDTO extends _OfertaLaboralDTO {
   final String uuid;
   @override
   final String titulo;
+  @override
+  final String descripcion;
   @override
   final String fechaPublicacion;
   @override
@@ -288,7 +306,7 @@ class _$_OfertaLaboralDTO extends _OfertaLaboralDTO {
 
   @override
   String toString() {
-    return 'OfertaLaboralDTO(uuid: $uuid, titulo: $titulo, fechaPublicacion: $fechaPublicacion, cargo: $cargo, sueldo: $sueldo, duracionEstimadaValor: $duracionEstimadaValor, duracionEstimadaEscala: $duracionEstimadaEscala, turnoTrabajo: $turnoTrabajo, numeroVacantes: $numeroVacantes, empresaNombre: $empresaNombre)';
+    return 'OfertaLaboralDTO(uuid: $uuid, titulo: $titulo, descripcion: $descripcion, fechaPublicacion: $fechaPublicacion, cargo: $cargo, sueldo: $sueldo, duracionEstimadaValor: $duracionEstimadaValor, duracionEstimadaEscala: $duracionEstimadaEscala, turnoTrabajo: $turnoTrabajo, numeroVacantes: $numeroVacantes, empresaNombre: $empresaNombre)';
   }
 
   @override
@@ -299,6 +317,9 @@ class _$_OfertaLaboralDTO extends _OfertaLaboralDTO {
                 const DeepCollectionEquality().equals(other.uuid, uuid)) &&
             (identical(other.titulo, titulo) ||
                 const DeepCollectionEquality().equals(other.titulo, titulo)) &&
+            (identical(other.descripcion, descripcion) ||
+                const DeepCollectionEquality()
+                    .equals(other.descripcion, descripcion)) &&
             (identical(other.fechaPublicacion, fechaPublicacion) ||
                 const DeepCollectionEquality()
                     .equals(other.fechaPublicacion, fechaPublicacion)) &&
@@ -328,6 +349,7 @@ class _$_OfertaLaboralDTO extends _OfertaLaboralDTO {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(uuid) ^
       const DeepCollectionEquality().hash(titulo) ^
+      const DeepCollectionEquality().hash(descripcion) ^
       const DeepCollectionEquality().hash(fechaPublicacion) ^
       const DeepCollectionEquality().hash(cargo) ^
       const DeepCollectionEquality().hash(sueldo) ^
@@ -352,6 +374,7 @@ abstract class _OfertaLaboralDTO extends OfertaLaboralDTO {
   factory _OfertaLaboralDTO(
       {required String uuid,
       required String titulo,
+      required String descripcion,
       required String fechaPublicacion,
       required String cargo,
       required double sueldo,
@@ -369,6 +392,8 @@ abstract class _OfertaLaboralDTO extends OfertaLaboralDTO {
   String get uuid => throw _privateConstructorUsedError;
   @override
   String get titulo => throw _privateConstructorUsedError;
+  @override
+  String get descripcion => throw _privateConstructorUsedError;
   @override
   String get fechaPublicacion => throw _privateConstructorUsedError;
   @override

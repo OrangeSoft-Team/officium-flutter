@@ -6,6 +6,7 @@ import 'package:officium_flutter/dominio/oferta_laboral/entidades/oferta_laboral
 import 'package:officium_flutter/dominio/oferta_laboral/value_objects/oferta_laboral/Duracion_Oferta/duracion_escalas.dart';
 import 'package:officium_flutter/dominio/oferta_laboral/value_objects/oferta_laboral/Duracion_Oferta/duracion_estimada.dart';
 import 'package:officium_flutter/dominio/oferta_laboral/value_objects/oferta_laboral/cargo.dart';
+import 'package:officium_flutter/dominio/oferta_laboral/value_objects/oferta_laboral/descripcion_oferta.dart';
 import 'package:officium_flutter/dominio/oferta_laboral/value_objects/oferta_laboral/numero_vacantes.dart';
 import 'package:officium_flutter/dominio/oferta_laboral/value_objects/oferta_laboral/sueldo.dart';
 import 'package:officium_flutter/dominio/oferta_laboral/value_objects/oferta_laboral/titulo.dart';
@@ -19,6 +20,7 @@ abstract class OfertaLaboralDTO implements _$OfertaLaboralDTO {
   factory OfertaLaboralDTO({
     required String uuid,
     required String titulo,
+    required String descripcion,
     required String fechaPublicacion,
     required String cargo,
     required double sueldo,
@@ -36,6 +38,7 @@ abstract class OfertaLaboralDTO implements _$OfertaLaboralDTO {
     return OfertaLaboralDTO(
       uuid: ofertaLaboral.uuid.getOrCrash(),
       titulo: ofertaLaboral.titulo.getOrCrash(),
+      descripcion: ofertaLaboral.descripcionOferta.getOrCrash(),
       fechaPublicacion: ofertaLaboral.fechaPublicacion.getOrCrash().toString(),
       cargo: ofertaLaboral.cargo.toString(),
       sueldo: ofertaLaboral.sueldo.getOrCrash(),
@@ -50,6 +53,7 @@ abstract class OfertaLaboralDTO implements _$OfertaLaboralDTO {
     return OfertaLaboral(
         uuid: Identificador.fromUniqueString(uuid),
         titulo: TituloOfertaLaboral(titulo),
+        descripcionOferta: DescripcionOferta(descripcion),
         fechaPublicacion: Fecha(DateTime.parse(fechaPublicacion)),
         cargo: Cargo(cargo),
         sueldo: Sueldo(sueldo),

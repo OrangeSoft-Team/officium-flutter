@@ -9,14 +9,10 @@ import 'package:officium_flutter/dominio/oferta_laboral/value_objects/postulacio
 import 'package:officium_flutter/infraestructura/oferta_laboral/fuentes/i_oferta_laboral_fuente.dart';
 import 'package:officium_flutter/infraestructura/oferta_laboral/modelos/oferta_laboral_detalle_dto.dart';
 import 'package:officium_flutter/infraestructura/oferta_laboral/modelos/postulacion_oferta_laboral_dto.dart';
-import 'package:officium_flutter/presentacion/ofertas_laborales/ver_lista_ofertas/elementos/mock.dart';
 
 //Steven
 @LazySingleton(as: IOfertaLaboralRepositorio)
 class OfertaLaboralRepositorio implements IOfertaLaboralRepositorio {
-  final List<OfertaLaboral> listOfertas =
-      ofertaLaboralMock2; //mock pls don't kill me
-
   final IOfertaLaboralFuente fuenteDeDatos;
 
   OfertaLaboralRepositorio({
@@ -40,36 +36,36 @@ class OfertaLaboralRepositorio implements IOfertaLaboralRepositorio {
           comentario: comentarioPostulacionOfertaLaboral?.getOrCrash());
       await fuenteDeDatos.aplicarOfertaLaboral(
           uuidOferta, nuevaPostulacionOfertaLaboral);
-      return Right(unit);
+      return const Right(unit);
     } catch (e) {
-      return Left(OfertaLaboralExcepcion.errorServidor());
+      return const Left(OfertaLaboralExcepcion.errorServidor());
     }
   }
 
+  // @override
+  // Stream<Either<OfertaLaboralExcepcion, List<OfertaLaboral>>>
+  //     verTodasLasOfertasLaborales() async* {
+  //   final List<OfertaLaboral> ofertasLaborales = listOfertas;
+  //   try {
+  //     yield Right(ofertasLaborales);
+  //   } catch (e) {
+  //     yield const Left(OfertaLaboralExcepcion.errorServidor());
+  //   }
+  // }
   @override
   Stream<Either<OfertaLaboralExcepcion, List<OfertaLaboral>>>
       verTodasLasOfertasLaborales() async* {
-    final List<OfertaLaboral> ofertasLaborales = listOfertas;
+    final List<OfertaLaboral> ofertasLaborales = <OfertaLaboral>[];
     try {
+      for (final ofertaLaboralDto
+          in await fuenteDeDatos.obtenerOfertasLaborales()) {
+        ofertasLaborales.add(ofertaLaboralDto.toDomain());
+      }
       yield Right(ofertasLaborales);
     } catch (e) {
       yield Left(OfertaLaboralExcepcion.errorServidor());
     }
   }
-  // @override
-  // Stream<Either<OfertaLaboralExcepcion, List<OfertaLaboral>>>
-  //     verTodasLasOfertasLaborales() async* {
-  //   final List<OfertaLaboral> ofertasLaborales = <OfertaLaboral>[];
-  //   try {
-  //     for (final ofertaLaboralDto
-  //         in await fuenteDeDatos.obtenerOfertasLaborales()) {
-  //       ofertasLaborales.add(ofertaLaboralDto.toDomain());
-  //     }
-  //     yield Right(ofertasLaborales);
-  //   } catch (e) {
-  //     yield Left(OfertaLaboralExcepcion.errorServidor());
-  //   }
-  // }
 
   @override
   Stream<Either<OfertaLaboralExcepcion, List<PostulacionOfertaLaboral>>>
@@ -87,7 +83,7 @@ class OfertaLaboralRepositorio implements IOfertaLaboralRepositorio {
           await fuenteDeDatos.obtenerDetalleOfertasLaboral(uuidOferta);
       return Right(ofertasLaboralDetalle.toDomain());
     } catch (e) {
-      return Left(OfertaLaboralExcepcion.errorServidor());
+      return const Left(OfertaLaboralExcepcion.errorServidor());
     }
   }
 }

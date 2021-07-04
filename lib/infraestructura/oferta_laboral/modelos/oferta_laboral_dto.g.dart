@@ -10,6 +10,7 @@ _$_OfertaLaboralDTO _$_$_OfertaLaboralDTOFromJson(Map<String, dynamic> json) {
   return _$_OfertaLaboralDTO(
     uuid: json['uuid'] as String,
     titulo: json['titulo'] as String,
+    descripcion: json['descripcion'] as String,
     fechaPublicacion: json['fechaPublicacion'] as String,
     cargo: json['cargo'] as String,
     sueldo: (json['sueldo'] as num).toDouble(),
@@ -26,6 +27,7 @@ Map<String, dynamic> _$_$_OfertaLaboralDTOToJson(
     <String, dynamic>{
       'uuid': instance.uuid,
       'titulo': instance.titulo,
+      'descripcion': instance.descripcion,
       'fechaPublicacion': instance.fechaPublicacion,
       'cargo': instance.cargo,
       'sueldo': instance.sueldo,

@@ -16,7 +16,7 @@ import 'package:officium_flutter/infraestructura/oferta_laboral/modelos/postulac
 
 import 'i_oferta_laboral_fuente.dart';
 
-const DIR_SPRING = 'DIR_SPRING/api';
+const DIR_SPRING = 'orangesoft.ddns.net:3000';
 const DIR_NEST = 'DIR_NEST/api';
 
 @LazySingleton(as: IOfertaLaboralFuente)
@@ -66,15 +66,16 @@ class OfertaLaboralFuente implements IOfertaLaboralFuente {
     final List<OfertaLaboralDTO> listaDeOfertas = <OfertaLaboralDTO>[];
 
     final response = await cliente.get(
-      Uri.parse('$DIR_SPRING/ofertas_laborales'),
+      Uri.parse('http://$DIR_SPRING/ofertas_laborales'),
       headers: {
         'Content-Type': 'application/json',
       },
     );
 
     if (response.statusCode == 200) {
-      for (final dto
-          in json.decode(response.body) as List<Map<String, dynamic>>) {
+      final List<Map<String, dynamic>> ofertasJson =
+          List<Map<String, dynamic>>.from(jsonDecode(response.body) as List);
+      for (final dto in ofertasJson) {
         listaDeOfertas.add(OfertaLaboralDTO.fromJson(dto));
       }
       return listaDeOfertas;

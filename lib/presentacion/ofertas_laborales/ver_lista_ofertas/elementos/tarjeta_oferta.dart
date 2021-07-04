@@ -1,5 +1,8 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:officium_flutter/dominio/oferta_laboral/entidades/oferta_laboral.dart';
+import 'package:officium_flutter/presentacion/ofertas_laborales/ver_detalle_oferta/detalle_oferta_laboral.dart';
+import 'package:officium_flutter/presentacion/routes/router.gr.dart';
 
 class TarjetaOferta extends StatelessWidget {
   final OfertaLaboral oferta;
@@ -66,7 +69,10 @@ class TarjetaOferta extends StatelessWidget {
               ButtonBar(
                 children: <Widget>[
                   ElevatedButton(
-                    onPressed: () {/* ... */},
+                    onPressed: () {
+                      AutoRouter.of(context)
+                          .replace(DetalleOfertaRoute(oferta: oferta));
+                    },
                     child: const Text('Ver detalles'),
                   ),
                 ],

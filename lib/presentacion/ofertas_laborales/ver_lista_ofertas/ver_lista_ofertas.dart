@@ -38,6 +38,7 @@ class VerListaOfertas extends StatelessWidget {
                 context
                     .read<EstadoAutentificacionBloc>()
                     .add(const EstadoAutentificacionEvent.cerrarSesion());
+                AutoRouter.of(context).replace(const InicioSesionVistaRoute());
               },
             ),
             actions: <IconButton>[
