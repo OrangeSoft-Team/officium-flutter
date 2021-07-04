@@ -1,4 +1,5 @@
-import 'package:injectable/injectable.dart';
+import 'dart:developer' as developer;
+
 import 'package:officium_flutter/dominio/oferta_laboral/excepciones_dominio/oferta_laboral_excepciones.dart';
 import 'package:officium_flutter/dominio/oferta_laboral/entidades/postulacion_oferta.dart';
 import 'package:officium_flutter/dominio/oferta_laboral/entidades/oferta_laboral.dart';
@@ -34,9 +35,8 @@ class OfertaLaboralRepositorio implements IOfertaLaboralRepositorio {
           uuidEmpleado: uuidEmpleado.getOrCrash(),
           uuidEmpresa: uuidEmpresa.getOrCrash(),
           comentario: comentarioPostulacionOfertaLaboral?.getOrCrash());
-      await fuenteDeDatos.aplicarOfertaLaboral(
-          uuidOferta, nuevaPostulacionOfertaLaboral);
-      return const Right(unit);
+      final result = await fuenteDeDatos.aplicarOfertaLaboral(uuidOferta, nuevaPostulacionOfertaLaboral);
+      return Right(result);
     } catch (e) {
       return const Left(OfertaLaboralExcepcion.errorServidor());
     }

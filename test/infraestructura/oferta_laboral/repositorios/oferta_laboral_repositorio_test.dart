@@ -5,12 +5,13 @@ import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
-import 'package:officium_flutter/dominio/comun/value_objects/identificador.dart';
 import 'package:officium_flutter/dominio/oferta_laboral/entidades/oferta_laboral.dart';
+import 'package:officium_flutter/dominio/oferta_laboral/entidades/postulacion_oferta.dart';
 import 'package:officium_flutter/dominio/oferta_laboral/excepciones_dominio/oferta_laboral_excepciones.dart';
 import 'package:officium_flutter/infraestructura/oferta_laboral/fuentes/i_oferta_laboral_fuente.dart';
 import 'package:officium_flutter/infraestructura/oferta_laboral/modelos/oferta_laboral_detalle_dto.dart';
 import 'package:officium_flutter/infraestructura/oferta_laboral/modelos/oferta_laboral_dto.dart';
+import 'package:officium_flutter/infraestructura/oferta_laboral/modelos/postulacion_oferta_laboral_dto.dart';
 import 'package:officium_flutter/infraestructura/oferta_laboral/repositorios/oferta_laboral_repositorio.dart';
 
 import '../../data_pruebas/lector_json.dart';
@@ -22,13 +23,13 @@ void main() {
   final OfertaLaboralRepositorio ofertaLaboralRepositorio =
       OfertaLaboralRepositorio(fuenteDeDatos: mockFuenteDeDatos);
 
-  /*group('Obtener ofertas laborales', () {
+    group('Obtener ofertas laborales', () {
       final tOfertasLaboralesDto = <OfertaLaboralDTO>[
         OfertaLaboralDTO.fromJson(json.decode(fixture('ofertaLaboralDtoPrueba.json')) as Map<String,dynamic>)
       ];
-      final List<OfertaLaboral> tOfertaLaboral = <OfertaLaboral>[
+      final Either<OfertaLaboralExcepcion,List<OfertaLaboral>> aOfertaLaboralList = Right(<OfertaLaboral>[
         ...tOfertasLaboralesDto.map((e) => e.toDomain())
-      ];
+      ]);
 
       test(
         ': Debe retornar lista de ofertas ante éxito con la fuente remota',
@@ -36,50 +37,55 @@ void main() {
           // arrange 
           when(mockFuenteDeDatos.obtenerOfertasLaborales())
             .thenAnswer((_) async => tOfertasLaboralesDto);
-          var stream = ofertaLaboralRepositorio.verTodasLasOfertasLaborales();
-          var result = tOfertaLaboral;
+          final stream = ofertaLaboralRepositorio.verTodasLasOfertasLaborales();
           // act
           stream.listen((event) {
-              expect(event.getOrElse(() => null), equals(Right(tOfertaLaboral)));
+            // assert
+              expect(event.isRight(), equals(aOfertaLaboralList.isRight()));
           });
-          // assert
-          //verify(mockFuenteDeDatos.obtenerOfertasLaborales()).called(1);
-          //expect(stream, emits(Right(tOfertaLaboral)));
-          //stream.add(value);
         },
       );
-    });*/
-
-  group('Obtener detalle oferta laboral', () {
-    final OfertaLaboralDetalleDTO tOfertasLaboralesDetalleDto =
-        OfertaLaboralDetalleDTO.fromJson(
-            json.decode(fixture('ofertaLaboralDetalleDtoPrueba.json'))
-                as Map<String, dynamic>);
-    //final Either<OfertaLaboralExcepcion, OfertaLaboral> tOfertaLaboralDetalle = tOfertasLaboralesDetalleDto.toDomain();
-    final OfertaLaboral tOfertaLaboralDetalle =
-        tOfertasLaboralesDetalleDto.toDomain();
-    test(': Debe retornar detalle de oferta ante éxito con la fuente remota',
-        () async {
-      // arrange
-      when(mockFuenteDeDatos
-              .obtenerDetalleOfertasLaboral(tOfertaLaboralDetalle.uuid))
-          .thenAnswer((_) async => Future.value(tOfertasLaboralesDetalleDto));
-      // act
-      final result = await ofertaLaboralRepositorio
-          .buscarOfertaLaboralConcreta(tOfertaLaboralDetalle.uuid);
-      // assert
-      verify(mockFuenteDeDatos
-          .obtenerDetalleOfertasLaboral(tOfertaLaboralDetalle.uuid));
-      expect(
-          result,
-          equals(Right(tOfertaLaboralDetalle)
-              as Right<OfertaLaboralExcepcion, OfertaLaboral>));
     });
-  });
-  /*
+    
+    group('Obtener detalle oferta laboral', 
+      () {
+      final OfertaLaboralDetalleDTO tOfertasLaboralesDetalleDto = OfertaLaboralDetalleDTO.fromJson(json.decode(fixture('ofertaLaboralDetalleDtoPrueba.json')) as Map<String,dynamic>);
+      final Either<OfertaLaboralExcepcion,OfertaLaboral> tOfertaLaboralDetalle = Right(tOfertasLaboralesDetalleDto.toDomain());
+      final OfertaLaboral aOfertaLaboral = tOfertasLaboralesDetalleDto.toDomain();
+      test(': Debe retornar detalle de oferta ante éxito con la fuente remota', 
+      () async {
+          // arrange
+          when(mockFuenteDeDatos.obtenerDetalleOfertasLaboral(aOfertaLaboral.uuid))
+            .thenAnswer((_) async  => Future.value(tOfertasLaboralesDetalleDto));
+          // act
+          final result = await ofertaLaboralRepositorio.buscarOfertaLaboralConcreta(aOfertaLaboral.uuid);
+          // assert
+          verify(mockFuenteDeDatos.obtenerDetalleOfertasLaboral(aOfertaLaboral.uuid));
+          expect(result.isRight(), equals(tOfertaLaboralDetalle.isRight()));
+      });
+    });
+    
     group('Postular a oferta laboral', () {
-      //CHEQUEAR DISPONIBILIDAD API
-    });*/
+      test(': Debe retornar valor unit(NULL) ante éxito con la fuente remota', 
+      () async {
+          
+          final PostulacionOfertaLaboralDTO tPostulacionOfertaLaboralDto = PostulacionOfertaLaboralDTO.fromJson(json.decode(fixture('postulacionOfertaDtoPrueba.json')) as Map<String,dynamic>);
+          final PostulacionOfertaLaboral dPostulacionOfertaLaboral = tPostulacionOfertaLaboralDto.toDomain();
+          final Either<OfertaLaboralExcepcion,Unit> tPostulacionOfertaLaboral = Right(unit);
+          // arrange
+          when(mockFuenteDeDatos.aplicarOfertaLaboral(dPostulacionOfertaLaboral.uuidOfertaLaboral,tPostulacionOfertaLaboralDto))
+            .thenAnswer((_) async  => Future.value(unit));
+          // act
+          final result = await ofertaLaboralRepositorio.aplicarOfertaLaboral(
+            dPostulacionOfertaLaboral.uuidOfertaLaboral,
+            dPostulacionOfertaLaboral.uuidEmpleado,
+            dPostulacionOfertaLaboral.uuidEmpresa,
+            dPostulacionOfertaLaboral.comentarioPostulacionOfertaLaboral);
+          // assert
+          expect(result, equals(tPostulacionOfertaLaboral));
+      });
+    });
+    
 }
 
 
