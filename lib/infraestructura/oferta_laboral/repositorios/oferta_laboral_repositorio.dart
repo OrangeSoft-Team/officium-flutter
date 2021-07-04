@@ -46,30 +46,30 @@ class OfertaLaboralRepositorio implements IOfertaLaboralRepositorio {
     }
   }
 
-  @override
-  Stream<Either<OfertaLaboralExcepcion, List<OfertaLaboral>>>
-      verTodasLasOfertasLaborales() async* {
-    final List<OfertaLaboral> ofertasLaborales = listOfertas;
-    try {
-      yield Right(ofertasLaborales);
-    } catch (e) {
-      yield Left(OfertaLaboralExcepcion.errorServidor());
-    }
-  }
   // @override
   // Stream<Either<OfertaLaboralExcepcion, List<OfertaLaboral>>>
   //     verTodasLasOfertasLaborales() async* {
-  //   final List<OfertaLaboral> ofertasLaborales = <OfertaLaboral>[];
+  //   final List<OfertaLaboral> ofertasLaborales = listOfertas;
   //   try {
-  //     for (final ofertaLaboralDto
-  //         in await fuenteDeDatos.obtenerOfertasLaborales()) {
-  //       ofertasLaborales.add(ofertaLaboralDto.toDomain());
-  //     }
   //     yield Right(ofertasLaborales);
   //   } catch (e) {
   //     yield Left(OfertaLaboralExcepcion.errorServidor());
   //   }
   // }
+  @override
+  Stream<Either<OfertaLaboralExcepcion, List<OfertaLaboral>>>
+      verTodasLasOfertasLaborales() async* {
+    final List<OfertaLaboral> ofertasLaborales = <OfertaLaboral>[];
+    try {
+      for (final ofertaLaboralDto
+          in await fuenteDeDatos.obtenerOfertasLaborales()) {
+        ofertasLaborales.add(ofertaLaboralDto.toDomain());
+      }
+      yield Right(ofertasLaborales);
+    } catch (e) {
+      yield const Left(OfertaLaboralExcepcion.errorServidor());
+    }
+  }
 
   @override
   Stream<Either<OfertaLaboralExcepcion, List<PostulacionOfertaLaboral>>>

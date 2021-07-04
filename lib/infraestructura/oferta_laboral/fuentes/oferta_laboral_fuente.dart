@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:flutter/services.dart';
 import 'package:injectable/injectable.dart';
 import 'package:officium_flutter/dominio/oferta_laboral/entidades/postulacion_oferta.dart';
 import 'package:officium_flutter/dominio/oferta_laboral/value_objects/postulacion_oferta_laboral/comentario_postulacion.dart';
@@ -65,21 +66,15 @@ class OfertaLaboralFuente implements IOfertaLaboralFuente {
   Future<List<OfertaLaboralDTO>> obtenerOfertasLaborales() async {
     final List<OfertaLaboralDTO> listaDeOfertas = <OfertaLaboralDTO>[];
 
-    final response = await cliente.get(
-      Uri.parse('$DIR_SPRING/ofertas_laborales'),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    );
+    final String jsonString =
+        await rootBundle.loadString('assets/ofertaLaboralDtoPrueba.json');
 
-    if (response.statusCode == 200) {
-      for (final dto
-          in json.decode(response.body) as List<Map<String, dynamic>>) {
-        listaDeOfertas.add(OfertaLaboralDTO.fromJson(dto));
-      }
-      return listaDeOfertas;
-    } else {
-      throw ServerException();
+    final List<Map<String, dynamic>> ofertasJson =
+        List<Map<String, dynamic>>.from(jsonDecode(jsonString) as List);
+
+    for (final dto in ofertasJson) {
+      listaDeOfertas.add(OfertaLaboralDTO.fromJson(dto));
     }
+    return listaDeOfertas;
   }
 }
