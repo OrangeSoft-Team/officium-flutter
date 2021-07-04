@@ -54,6 +54,8 @@ dev_dependencies:
 flutter:
   assets:
     - assets/img/
+    - assets/ofertaLaboralDtoPrueba.json
+    - test/infraestructura/data_pruebas/ofertaLaboralDtoPrueba.json
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in

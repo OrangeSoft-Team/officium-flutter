@@ -17,7 +17,7 @@ class ErrorCriticoListaOfertas extends StatelessWidget {
         children: <Widget>[
           const Text(
             'Oh no... algo ha ocurrido.',
-            style: TextStyle(fontSize: 100),
+            style: TextStyle(fontSize: 30),
           ),
           Text(
             failure.maybeMap(

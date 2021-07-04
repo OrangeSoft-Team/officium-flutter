@@ -17,11 +17,12 @@ import '../../data_pruebas/lector_json.dart';
 import 'oferta_laboral_repositorio_test.mocks.dart';
 
 @GenerateMocks([IOfertaLaboralFuente])
-void main () {
+void main() {
   final mockFuenteDeDatos = MockIOfertaLaboralFuente();
-  final OfertaLaboralRepositorio ofertaLaboralRepositorio = OfertaLaboralRepositorio(fuenteDeDatos: mockFuenteDeDatos);
+  final OfertaLaboralRepositorio ofertaLaboralRepositorio =
+      OfertaLaboralRepositorio(fuenteDeDatos: mockFuenteDeDatos);
 
-    /*group('Obtener ofertas laborales', () {
+  /*group('Obtener ofertas laborales', () {
       final tOfertasLaboralesDto = <OfertaLaboralDTO>[
         OfertaLaboralDTO.fromJson(json.decode(fixture('ofertaLaboralDtoPrueba.json')) as Map<String,dynamic>)
       ];
@@ -48,25 +49,34 @@ void main () {
         },
       );
     });*/
-    
-    group('Obtener detalle oferta laboral', 
-      () {
-      final OfertaLaboralDetalleDTO tOfertasLaboralesDetalleDto = OfertaLaboralDetalleDTO.fromJson(json.decode(fixture('ofertaLaboralDetalleDtoPrueba.json')) as Map<String,dynamic>);
-      //final Either<OfertaLaboralExcepcion, OfertaLaboral> tOfertaLaboralDetalle = tOfertasLaboralesDetalleDto.toDomain();
-      final OfertaLaboral tOfertaLaboralDetalle = tOfertasLaboralesDetalleDto.toDomain();
-      test(': Debe retornar detalle de oferta ante éxito con la fuente remota', 
-      () async {
-          // arrange
-          when(mockFuenteDeDatos.obtenerDetalleOfertasLaboral(tOfertaLaboralDetalle.uuid))
-            .thenAnswer((_) async  => Future.value(tOfertasLaboralesDetalleDto));
-          // act
-          final result = await ofertaLaboralRepositorio.buscarOfertaLaboralConcreta(tOfertaLaboralDetalle.uuid);
-          // assert
-          verify(mockFuenteDeDatos.obtenerDetalleOfertasLaboral(tOfertaLaboralDetalle.uuid));
-          expect(result, equals(Right(tOfertaLaboralDetalle) as Right<OfertaLaboralExcepcion,OfertaLaboral>));
-      });
+
+  group('Obtener detalle oferta laboral', () {
+    final OfertaLaboralDetalleDTO tOfertasLaboralesDetalleDto =
+        OfertaLaboralDetalleDTO.fromJson(
+            json.decode(fixture('ofertaLaboralDetalleDtoPrueba.json'))
+                as Map<String, dynamic>);
+    //final Either<OfertaLaboralExcepcion, OfertaLaboral> tOfertaLaboralDetalle = tOfertasLaboralesDetalleDto.toDomain();
+    final OfertaLaboral tOfertaLaboralDetalle =
+        tOfertasLaboralesDetalleDto.toDomain();
+    test(': Debe retornar detalle de oferta ante éxito con la fuente remota',
+        () async {
+      // arrange
+      when(mockFuenteDeDatos
+              .obtenerDetalleOfertasLaboral(tOfertaLaboralDetalle.uuid))
+          .thenAnswer((_) async => Future.value(tOfertasLaboralesDetalleDto));
+      // act
+      final result = await ofertaLaboralRepositorio
+          .buscarOfertaLaboralConcreta(tOfertaLaboralDetalle.uuid);
+      // assert
+      verify(mockFuenteDeDatos
+          .obtenerDetalleOfertasLaboral(tOfertaLaboralDetalle.uuid));
+      expect(
+          result,
+          equals(Right(tOfertaLaboralDetalle)
+              as Right<OfertaLaboralExcepcion, OfertaLaboral>));
     });
-    /*
+  });
+  /*
     group('Postular a oferta laboral', () {
       //CHEQUEAR DISPONIBILIDAD API
     });*/

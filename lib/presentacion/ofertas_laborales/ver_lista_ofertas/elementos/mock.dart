@@ -14,9 +14,9 @@ final DuracionEscala dura = DuracionEscala(10, 'dia(s)');
 
 final OfertaLaboral ofertaLaboralMock = OfertaLaboral(
     uuid: Identificador(),
-    titulo: TituloOfertaLaboral('Se ofrece puesto en desarrollo'),
+    titulo: TituloOfertaLaboral('Se ofrece puesto en mantenimiento'),
     fechaPublicacion: Fecha(DateTime.now()),
-    cargo: Cargo('Desarrollador'),
+    cargo: Cargo('Limpiador'),
     sueldo: Sueldo(1000),
     duracion: Duracion(const DuracionEscala(10, 'dia(s)')),
     turno: TurnoTrabajo('Mixto'),
@@ -24,6 +24,36 @@ final OfertaLaboral ofertaLaboralMock = OfertaLaboral(
     nombreEmpresa: NombreEmpresa('OrangeSoft'));
 
 final List<OfertaLaboral> ofertaLaboralMock2 = [
+  OfertaLaboral(
+      uuid: Identificador(),
+      titulo: TituloOfertaLaboral('Se busca suplente de vendedor'),
+      fechaPublicacion: Fecha(DateTime.now()),
+      cargo: Cargo('Asistente de ventas.'),
+      sueldo: Sueldo(2000),
+      duracion: Duracion(const DuracionEscala(1, 'mes(es)')),
+      turno: TurnoTrabajo('Nocturno'),
+      numeroVacantes: NumeroVacantes(2),
+      nombreEmpresa: NombreEmpresa('PedidosYa')),
+  OfertaLaboral(
+      uuid: Identificador(),
+      titulo: TituloOfertaLaboral('Repartidor de mensajeria'),
+      fechaPublicacion: Fecha(DateTime.now()),
+      cargo: Cargo('Repartidor motorizado'),
+      sueldo: Sueldo(500),
+      duracion: Duracion(const DuracionEscala(90, 'hora(s)')),
+      turno: TurnoTrabajo('Nocturno'),
+      numeroVacantes: NumeroVacantes(1),
+      nombreEmpresa: NombreEmpresa('OrangeSoft')),
+  OfertaLaboral(
+      uuid: Identificador(),
+      titulo: TituloOfertaLaboral('Se ofrece puesto en desarrollo'),
+      fechaPublicacion: Fecha(DateTime.now()),
+      cargo: Cargo('Desarrollador'),
+      sueldo: Sueldo(1000),
+      duracion: Duracion(const DuracionEscala(10, 'mes(es)')),
+      turno: TurnoTrabajo('Mixto'),
+      numeroVacantes: NumeroVacantes(10),
+      nombreEmpresa: NombreEmpresa('OrangeSoft')),
   OfertaLaboral(
       uuid: Identificador(),
       titulo: TituloOfertaLaboral('Se ofrece puesto en desarrollo'),

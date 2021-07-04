@@ -10,7 +10,7 @@ import 'package:officium_flutter/infraestructura/oferta_laboral/modelos/oferta_l
 import 'package:officium_flutter/presentacion/ofertas_laborales/ver_lista_ofertas/elementos/lista_ofertas.dart';
 import 'package:officium_flutter/presentacion/ofertas_laborales/ver_lista_ofertas/elementos/mock.dart';
 
-@LazySingleton(as: IOfertaLaboralRepositorio)
+//Leo
 class OfertaLaboralRepositorio implements IOfertaLaboralRepositorio {
   final List<OfertaLaboral> listOfertas = ofertaLaboralMock2;
   @override
