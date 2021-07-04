@@ -30,7 +30,8 @@ class OfertaLaboralFuente implements IOfertaLaboralFuente {
   Future<Unit> aplicarOfertaLaboral(Identificador uuidOferta,
       PostulacionOfertaLaboralDTO postulacionOfertaLaboral) async {
     final response = await cliente.post(
-        Uri.parse('$DIR_SPRING/ofertas_laborales/${uuidOferta.getOrCrash()}'),
+        Uri.parse('http://$DIR_SPRING/postulaciones'),
+        // Uri.parse('$DIR_SPRING/ofertas_laborales/${uuidOferta.getOrCrash()}'),
         headers: {
           'Content-Type': 'application/json',
         },

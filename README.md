@@ -33,24 +33,24 @@ Adicionalmente, se utilizan las siguientes plantillas para el repositorio:
 
 ---
 
-| Nombre y Apellido    | Usuario    | Enlace                        |
-| -------------------- | ---------- | ----------------------------- |
-| Andrés De Armas      | AndresG75  | https://github.com/AndresG75  |
-| Leonardo Ruiz        | iSlidex    | https://github.com/iSlidex    |
-| Steven Dávila         | SDRADCodex | https://github.com/SDRADCodex |
+| Nombre y Apellido | Usuario    | Enlace                        |
+| ----------------- | ---------- | ----------------------------- |
+| Andrés De Armas   | AndresG75  | https://github.com/AndresG75  |
+| Leonardo Ruiz     | iSlidex    | https://github.com/iSlidex    |
+| Steven Dávila     | SDRADCodex | https://github.com/SDRADCodex |
 
 ### :computer: Stack de Tecnologías
 
 ---
 
-| Logo                                                                                                                                        | Tipo                       | Nombre         | Enlace de Descarga                       | Versión |
-| ------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------- | -------------- | ---------------------------------------- | ------- |
-| <img src="https://cdn.worldvectorlogo.com/logos/dart.svg" width="24">                                                                       | Lenguaje                   | Dart           | https://dart.dev/                        | 2.13    |
-| <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Android_Studio_Icon_%282014-2019%29.svg" width="24">                          | Ambiente de ejecución      | Android Studio | https://developer.android.com/studio     | 4.2.1   |
-| <img src="https://plugins.jetbrains.com/files/12129/118174/icon/pluginIcon.svg" width="24">                                                 | Manejador de Estado        | BloC           | https://bloclibrary.dev/#/               | 7.0.0   |
-| <img src="https://logowik.com/content/uploads/images/flutter5786.jpg" width="24">                                                           | Framework                  | Flutter        | https://flutter.dev/                     | 2.2     |
-| <img src="https://cdn.worldvectorlogo.com/logos/dart.svg" width="24">                                                           | Testing                    | Mockito          | https://pub.dev/packages/mockito   | 4.1.1 |
-| <img src="https://cdn.worldvectorlogo.com/logos/dart.svg" width="24">                                                                       | Linter                     | Linter         | https://pub.dev/packages/linter          | 1.6.1   | 
+| Logo                                                                                                               | Tipo                  | Nombre         | Enlace de Descarga                   | Versión |
+| ------------------------------------------------------------------------------------------------------------------ | --------------------- | -------------- | ------------------------------------ | ------- |
+| <img src="https://cdn.worldvectorlogo.com/logos/dart.svg" width="24">                                              | Lenguaje              | Dart           | https://dart.dev/                    | 2.13    |
+| <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Android_Studio_Icon_%282014-2019%29.svg" width="24"> | Ambiente de ejecución | Android Studio | https://developer.android.com/studio | 4.2.1   |
+| <img src="https://plugins.jetbrains.com/files/12129/118174/icon/pluginIcon.svg" width="24">                        | Manejador de Estado   | BloC           | https://bloclibrary.dev/#/           | 7.0.0   |
+| <img src="https://logowik.com/content/uploads/images/flutter5786.jpg" width="24">                                  | Framework             | Flutter        | https://flutter.dev/                 | 2.2     |
+| <img src="https://cdn.worldvectorlogo.com/logos/dart.svg" width="24">                                              | Testing               | Mockito        | https://pub.dev/packages/mockito     | 4.1.1   |
+| <img src="https://cdn.worldvectorlogo.com/logos/dart.svg" width="24">                                              | Linter                | Linter         | https://pub.dev/packages/linter      | 1.6.1   |
 
 ### :wrench: Instalación de la Aplicación
 
@@ -122,3 +122,8 @@ Esta aplicación consta de tres tipos de pruebas automatizables ejecutables, las
 - [Implementación ejemplo de "Arquitectura Hexagonal" del libro "Get Your Hands Dirty On Clean Arquitecture" y estructura de carpetas recomendada](https://github.com/thombergs/buckpal)
 - [Explicación de principios SOLID con ejemplos de código](https://www.baeldung.com/solid-principles)
 - [Implementación de "Arquitectura Hexagonal" y explicación de conceptos utilizando código Dart](https://pub.dev/packages/flutter_clean_architecture)
+- [Patron BloC en Flutter](
+https://resocoder.com/2019/10/26/flutter-bloc-library-tutorial-1-0-0-stable-reactive-state-management/)
+- [Flutter and Clean architecture](https://astar-digital.org/flutter-and-clean-architecture)
+- [Mock dependencies using Mockito](https://flutter.dev/docs/cookbook/testing/unit/mocking)
+- [Flutter - Reactive programming - streams- BloC](https://www.didierboelens.com/2018/08/reactive-programming-streams-bloc/)
