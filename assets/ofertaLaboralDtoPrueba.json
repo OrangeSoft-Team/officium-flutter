@@ -1,0 +1,26 @@
+[
+    {
+        "uuid": "3",
+        "titulo": "titulo",
+        "fechaPublicacion": "2021-03-27T19:00:00Z",
+        "cargo": "cargo",
+        "sueldo": 1000.0,
+        "duracionEstimadaValor": 30,
+        "duracionEstimadaEscala": "dia(s)",
+        "turnoTrabajo": "Diurno",
+        "numeroVacantes": 5,
+        "empresaNombre": "empresaNombre"
+    },
+    {
+        "uuid": "1",
+        "titulo": "titulo",
+        "fechaPublicacion": "2021-03-27T19:00:00Z",
+        "cargo": "cargo",
+        "sueldo": 1000.0,
+        "duracionEstimadaValor": 30,
+        "duracionEstimadaEscala": "dia(s)",
+        "turnoTrabajo": "Diurno",
+        "numeroVacantes": 5,
+        "empresaNombre": "empresaNombre"
+    }
+]

@@ -7,7 +7,7 @@ import 'package:officium_flutter/dominio/oferta_laboral/value_objects/oferta_lab
 class Duracion extends ValueObject<DuracionEscala> {
   @override
   final Either<ValorErroneo<DuracionEscala>, DuracionEscala> value;
-  static const escalasValidas = ["hora", "dia", "semana", "mes"];
+  static const escalasValidas = ["hora(s)", "dia(s)", "semana(s)", "mes(es)"];
   static int minValorDuracion = 0;
   static int maxValorDuracion = 99;
 
@@ -16,4 +16,8 @@ class Duracion extends ValueObject<DuracionEscala> {
         value, escalasValidas, minValorDuracion, maxValorDuracion));
   }
   const Duracion._(this.value);
+  @override
+  String toString() {
+    return '$value';
+  }
 }

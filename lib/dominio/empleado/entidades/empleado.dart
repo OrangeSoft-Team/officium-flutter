@@ -44,6 +44,8 @@ abstract class Empleado implements _$Empleado {
       statusEmpleado: true,
       fechaNacimiento: FechaNacimiento(DateTime.now()));
 
+//Devuelve un Valor Erroneo si la entidad Empleado tiene por lo menos 1 de sus campos invalidos.
+
   Option<ValorErroneo<dynamic>> get opcionFallo {
     return primerNombre.failureOrUnit
         .andThen(primerApellido.failureOrUnit)

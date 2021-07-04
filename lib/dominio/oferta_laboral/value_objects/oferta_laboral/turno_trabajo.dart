@@ -8,7 +8,7 @@ class TurnoTrabajo extends ValueObject<String> {
   @override
   final Either<ValorErroneo<String>, String> value;
 
-  static const turnos = ["diurno", "nocturno", "mixto"];
+  static const turnos = ["Diurno", "Nocturno", "Mixto"];
 
   factory TurnoTrabajo(String titulo) {
     return TurnoTrabajo._(

@@ -2,6 +2,7 @@ import 'dart:async';
 import 'package:bloc/bloc.dart';
 import 'package:dartz/dartz.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:injectable/injectable.dart';
 import 'package:officium_flutter/dominio/autentificacion/excepciones_dominio/autentificacion_excepciones.dart';
 import 'package:officium_flutter/dominio/autentificacion/servicios_dominio/fachadas/i_fachada_autentificacion.dart';
 import 'package:officium_flutter/dominio/autentificacion/vaue_objecs/email.dart';
@@ -21,6 +22,7 @@ part 'registro_event.dart';
 part 'registro_state.dart';
 part 'registro_bloc.freezed.dart';
 
+@injectable
 class RegistroBloc extends Bloc<RegistroEvent, RegistroState> {
   final IAutentificacionFachada _iAutentificacionFachada;
   RegistroBloc(this._iAutentificacionFachada) : super(RegistroState.inicial());

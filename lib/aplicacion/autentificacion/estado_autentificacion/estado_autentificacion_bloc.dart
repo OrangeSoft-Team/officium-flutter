@@ -2,12 +2,14 @@ import 'dart:async';
 
 import 'package:bloc/bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:injectable/injectable.dart';
 import 'package:officium_flutter/dominio/autentificacion/servicios_dominio/fachadas/i_fachada_autentificacion.dart';
 
 part 'estado_autentificacion_event.dart';
 part 'estado_autentificacion_state.dart';
 part 'estado_autentificacion_bloc.freezed.dart';
 
+@injectable
 class EstadoAutentificacionBloc
     extends Bloc<EstadoAutentificacionEvent, EstadoAutentificacionState> {
   final IAutentificacionFachada iAutentificacionFachada;
