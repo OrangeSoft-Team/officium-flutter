@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:flutter/services.dart';
 import 'package:injectable/injectable.dart';
 import 'package:officium_flutter/dominio/oferta_laboral/entidades/postulacion_oferta.dart';
 import 'package:officium_flutter/dominio/oferta_laboral/value_objects/postulacion_oferta_laboral/comentario_postulacion.dart';
@@ -82,5 +83,6 @@ class OfertaLaboralFuente implements IOfertaLaboralFuente {
     } else {
       throw ServerException();
     }
+    return listaDeOfertas;
   }
 }
