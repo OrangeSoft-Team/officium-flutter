@@ -11,6 +11,7 @@ abstract class PostulacionOfertaLaboralDTO
     implements _$PostulacionOfertaLaboralDTO {
   const PostulacionOfertaLaboralDTO._();
   const factory PostulacionOfertaLaboralDTO({
+    required String id,
     required String uuidOfertaLaboral,
     required String uuidEmpleado,
     required String uuidEmpresa,
@@ -23,6 +24,7 @@ abstract class PostulacionOfertaLaboralDTO
   factory PostulacionOfertaLaboralDTO.fromDomain(
       PostulacionOfertaLaboral postulacionOfertaLaboral) {
     return PostulacionOfertaLaboralDTO(
+        id: Identificador().getOrCrash(),
         uuidOfertaLaboral:
             postulacionOfertaLaboral.uuidOfertaLaboral.getOrCrash(),
         uuidEmpleado: postulacionOfertaLaboral.uuidEmpleado.getOrCrash(),

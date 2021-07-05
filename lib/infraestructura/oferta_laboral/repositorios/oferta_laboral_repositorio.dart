@@ -1,4 +1,5 @@
-import 'package:dartz/dartz.dart';
+import 'dart:developer' as developer;
+
 import 'package:injectable/injectable.dart';
 import 'package:officium_flutter/dominio/comun/value_objects/identificador.dart';
 import 'package:officium_flutter/dominio/oferta_laboral/entidades/oferta_laboral.dart';
@@ -30,13 +31,14 @@ class OfertaLaboralRepositorio implements IOfertaLaboralRepositorio {
 
     try {
       nuevaPostulacionOfertaLaboral = PostulacionOfertaLaboralDTO(
+          id:Identificador().getOrCrash(),
           uuidOfertaLaboral: uuidOferta.getOrCrash(),
           uuidEmpleado: uuidEmpleado.getOrCrash(),
           uuidEmpresa: uuidEmpresa.getOrCrash(),
           comentario: comentarioPostulacionOfertaLaboral?.getOrCrash());
-      await fuenteDeDatos.aplicarOfertaLaboral(
+      final result = await fuenteDeDatos.aplicarOfertaLaboral(
           uuidOferta, nuevaPostulacionOfertaLaboral);
-      return const Right(unit);
+      return Right(result);
     } catch (e) {
       return const Left(OfertaLaboralExcepcion.errorServidor());
     }
