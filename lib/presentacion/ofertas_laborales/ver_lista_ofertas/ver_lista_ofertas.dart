@@ -1,11 +1,9 @@
-import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:officium_flutter/aplicacion/autentificacion/estado_autentificacion/estado_autentificacion_bloc.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:officium_flutter/aplicacion/autentificacion/estado_autentificacion/estado_autentificacion_bloc.dart';
 import 'package:officium_flutter/aplicacion/oferta_laboral/ver_ofertas_laborales/ver_ofertas_laborales_bloc.dart';
 import 'package:officium_flutter/inyeccion.dart';
 import 'package:officium_flutter/presentacion/ofertas_laborales/ver_lista_ofertas/elementos/lista_ofertas.dart';
-import 'package:officium_flutter/presentacion/routes/router.gr.dart';
 
 class VerListaOfertas extends StatelessWidget {
   @override
@@ -22,8 +20,7 @@ class VerListaOfertas extends StatelessWidget {
           BlocListener<EstadoAutentificacionBloc, EstadoAutentificacionState>(
             listener: (context, state) {
               state.maybeMap(
-                noautenticado: (_) => AutoRouter.of(context)
-                    .replace(const InicioSesionVistaRoute()),
+                noautenticado: (_) => Navigator.pushNamed(context, '/'),
                 orElse: () {},
               );
             },
@@ -33,12 +30,9 @@ class VerListaOfertas extends StatelessWidget {
           appBar: AppBar(
             title: const Text('Lista de ofertas'),
             leading: IconButton(
-              icon: const Icon(Icons.exit_to_app),
+              icon: const Icon(Icons.arrow_back),
               onPressed: () {
-                context
-                    .read<EstadoAutentificacionBloc>()
-                    .add(const EstadoAutentificacionEvent.cerrarSesion());
-                AutoRouter.of(context).replace(const InicioSesionVistaRoute());
+                Navigator.pop(context);
               },
             ),
             actions: <IconButton>[

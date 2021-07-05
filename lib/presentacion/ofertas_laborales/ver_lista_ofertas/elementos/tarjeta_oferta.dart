@@ -1,8 +1,5 @@
-import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:officium_flutter/dominio/oferta_laboral/entidades/oferta_laboral.dart';
-import 'package:officium_flutter/presentacion/ofertas_laborales/ver_detalle_oferta/detalle_oferta_laboral.dart';
-import 'package:officium_flutter/presentacion/routes/router.gr.dart';
 
 class TarjetaOferta extends StatelessWidget {
   final OfertaLaboral oferta;
@@ -38,31 +35,25 @@ class TarjetaOferta extends StatelessWidget {
               const SizedBox(height: 4),
               Align(
                 alignment: Alignment.centerLeft,
-                child: Container(
-                  child: Text(
-                    'Duracion: ${oferta.duracion.getOrCrash()}',
-                    style: const TextStyle(fontSize: 18),
-                  ),
+                child: Text(
+                  'Duracion: ${oferta.duracion.getOrCrash()}',
+                  style: const TextStyle(fontSize: 18),
                 ),
               ),
               const SizedBox(height: 4),
               Align(
                 alignment: Alignment.centerLeft,
-                child: Container(
-                  child: Text(
-                    'Turno de trabajo: ${oferta.turno.getOrCrash()}',
-                    style: const TextStyle(fontSize: 18),
-                  ),
+                child: Text(
+                  'Turno de trabajo: ${oferta.turno.getOrCrash()}',
+                  style: const TextStyle(fontSize: 18),
                 ),
               ),
               const SizedBox(height: 4),
               Align(
                 alignment: Alignment.centerLeft,
-                child: Container(
-                  child: Text(
-                    'Sueldo: ${oferta.sueldo.getOrCrash()}\$',
-                    style: const TextStyle(fontSize: 18),
-                  ),
+                child: Text(
+                  'Sueldo: ${oferta.sueldo.getOrCrash()}\$',
+                  style: const TextStyle(fontSize: 18),
                 ),
               ),
               const SizedBox(height: 4),
@@ -70,8 +61,11 @@ class TarjetaOferta extends StatelessWidget {
                 children: <Widget>[
                   ElevatedButton(
                     onPressed: () {
-                      AutoRouter.of(context)
-                          .replace(DetalleOfertaRoute(oferta: oferta));
+                      Navigator.pushNamed(
+                        context,
+                        'ver_detalle_ofertas_laborales',
+                        arguments: oferta,
+                      );
                     },
                     child: const Text('Ver detalles'),
                   ),

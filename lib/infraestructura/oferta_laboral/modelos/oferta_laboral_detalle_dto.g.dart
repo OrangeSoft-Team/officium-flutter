@@ -6,6 +6,7 @@ part of 'oferta_laboral_detalle_dto.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
+// ignore: non_constant_identifier_names
 _$_OfertaLaboralDetalleDTO _$_$_OfertaLaboralDetalleDTOFromJson(
     Map<String, dynamic> json) {
   return _$_OfertaLaboralDetalleDTO(
@@ -26,6 +27,7 @@ _$_OfertaLaboralDetalleDTO _$_$_OfertaLaboralDetalleDTOFromJson(
   );
 }
 
+// ignore: non_constant_identifier_names
 Map<String, dynamic> _$_$_OfertaLaboralDetalleDTOToJson(
         _$_OfertaLaboralDetalleDTO instance) =>
     <String, dynamic>{

@@ -1,9 +1,7 @@
-import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:officium_flutter/aplicacion/autentificacion/estado_autentificacion/estado_autentificacion_bloc.dart';
 import 'package:officium_flutter/aplicacion/autentificacion/iniciar_sesion/iniciar_sesion_bloc.dart';
-import 'package:officium_flutter/presentacion/routes/router.gr.dart';
 
 class FormularioInicioSesion extends StatelessWidget {
   @override
@@ -34,7 +32,7 @@ class FormularioInicioSesion extends StatelessWidget {
               ScaffoldMessenger.of(context).showSnackBar(snackBar);
             },
             (_) {
-              AutoRouter.of(context).replace(const VerListaOfertasRoute());
+              Navigator.of(context).pushReplacementNamed('home');
               context.read<EstadoAutentificacionBloc>().add(
                   const EstadoAutentificacionEvent
                       .verificacionDeAutenticacionSolicitada());
@@ -135,12 +133,7 @@ class FormularioInicioSesion extends StatelessWidget {
                 ],
               ),
               TextButton(
-                onPressed: () => {
-                  AutoRouter.of(context).replace(const VerListaOfertasRoute()),
-                  context.read<EstadoAutentificacionBloc>().add(
-                      const EstadoAutentificacionEvent
-                          .verificacionDeAutenticacionSolicitada())
-                },
+                onPressed: () => Navigator.pushNamed(context, 'home'),
                 child: const Text('Saltar Login'),
               ),
             ],

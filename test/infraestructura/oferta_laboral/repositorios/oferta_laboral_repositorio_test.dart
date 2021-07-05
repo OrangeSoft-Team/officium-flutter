@@ -5,12 +5,10 @@ import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
-import 'package:officium_flutter/dominio/comun/value_objects/identificador.dart';
 import 'package:officium_flutter/dominio/oferta_laboral/entidades/oferta_laboral.dart';
 import 'package:officium_flutter/dominio/oferta_laboral/excepciones_dominio/oferta_laboral_excepciones.dart';
 import 'package:officium_flutter/infraestructura/oferta_laboral/fuentes/i_oferta_laboral_fuente.dart';
 import 'package:officium_flutter/infraestructura/oferta_laboral/modelos/oferta_laboral_detalle_dto.dart';
-import 'package:officium_flutter/infraestructura/oferta_laboral/modelos/oferta_laboral_dto.dart';
 import 'package:officium_flutter/infraestructura/oferta_laboral/repositorios/oferta_laboral_repositorio.dart';
 
 import '../../data_pruebas/lector_json.dart';

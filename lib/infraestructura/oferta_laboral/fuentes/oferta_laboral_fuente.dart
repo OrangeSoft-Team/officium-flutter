@@ -1,23 +1,19 @@
 import 'dart:convert';
 
-import 'package:flutter/services.dart';
+import 'package:dartz/dartz.dart';
+import 'package:http/http.dart' as http;
 import 'package:injectable/injectable.dart';
-import 'package:officium_flutter/dominio/oferta_laboral/entidades/postulacion_oferta.dart';
-import 'package:officium_flutter/dominio/oferta_laboral/value_objects/postulacion_oferta_laboral/comentario_postulacion.dart';
+import 'package:officium_flutter/dominio/comun/value_objects/identificador.dart';
 import 'package:officium_flutter/infraestructura/comun/excepciones.dart';
 import 'package:officium_flutter/infraestructura/oferta_laboral/modelos/oferta_laboral_detalle_dto.dart';
 import 'package:officium_flutter/infraestructura/oferta_laboral/modelos/oferta_laboral_dto.dart';
-
-import 'package:officium_flutter/dominio/comun/value_objects/identificador.dart';
-
-import 'package:dartz/dartz.dart';
-
-import 'package:http/http.dart' as http;
 import 'package:officium_flutter/infraestructura/oferta_laboral/modelos/postulacion_oferta_laboral_dto.dart';
 
 import 'i_oferta_laboral_fuente.dart';
 
+// ignore: constant_identifier_names
 const DIR_SPRING = 'orangesoft.ddns.net:3000';
+// ignore: constant_identifier_names
 const DIR_NEST = 'DIR_NEST/api';
 
 @LazySingleton(as: IOfertaLaboralFuente)
@@ -83,6 +79,5 @@ class OfertaLaboralFuente implements IOfertaLaboralFuente {
     } else {
       throw ServerException();
     }
-    return listaDeOfertas;
   }
 }

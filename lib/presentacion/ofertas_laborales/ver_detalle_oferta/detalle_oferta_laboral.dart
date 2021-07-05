@@ -1,25 +1,19 @@
-import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:officium_flutter/dominio/oferta_laboral/entidades/oferta_laboral.dart';
-import 'package:officium_flutter/presentacion/routes/router.gr.dart';
 
 class DetalleOferta extends StatelessWidget {
-  final OfertaLaboral oferta;
-
-  const DetalleOferta({
-    Key? key,
-    required this.oferta,
-  }) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
+    final OfertaLaboral oferta =
+        ModalRoute.of(context)?.settings.arguments as OfertaLaboral;
+
     return Scaffold(
       appBar: AppBar(
         title: const Text('Detallles de oferta laboral'),
         leading: IconButton(
-          icon: const Icon(Icons.exit_to_app),
+          icon: const Icon(Icons.arrow_back),
           onPressed: () {
-            AutoRouter.of(context).replace(const VerListaOfertasRoute());
+            Navigator.pop(context);
           },
         ),
       ),
@@ -48,70 +42,56 @@ class DetalleOferta extends StatelessWidget {
                 const SizedBox(height: 4),
                 Align(
                   alignment: Alignment.centerLeft,
-                  child: Container(
-                    child: Text(
-                      'Empresa: ${oferta.nombreEmpresa.getOrCrash()}',
-                      style: const TextStyle(
-                          fontSize: 20, fontWeight: FontWeight.bold),
-                    ),
+                  child: Text(
+                    'Empresa: ${oferta.nombreEmpresa.getOrCrash()}',
+                    style: const TextStyle(
+                        fontSize: 20, fontWeight: FontWeight.bold),
                   ),
                 ),
                 const SizedBox(height: 4),
                 Align(
                   alignment: Alignment.centerLeft,
-                  child: Container(
-                    child: Text(
-                      'Duracion: ${oferta.duracion.getOrCrash()}',
-                      style: const TextStyle(fontSize: 18),
-                    ),
+                  child: Text(
+                    'Duracion: ${oferta.duracion.getOrCrash()}',
+                    style: const TextStyle(fontSize: 18),
                   ),
                 ),
                 Align(
                   alignment: Alignment.centerLeft,
-                  child: Container(
-                    child: Text(
-                      'Descripción: ${oferta.descripcionOferta.getOrCrash()}',
-                      style: const TextStyle(fontSize: 18),
-                    ),
+                  child: Text(
+                    'Descripción: ${oferta.descripcionOferta.getOrCrash()}',
+                    style: const TextStyle(fontSize: 18),
                   ),
                 ),
                 const SizedBox(height: 4),
                 Align(
                   alignment: Alignment.centerLeft,
-                  child: Container(
-                    child: Text(
-                      'Turno de trabajo: ${oferta.turno.getOrCrash()}',
-                      style: const TextStyle(fontSize: 18),
-                    ),
+                  child: Text(
+                    'Turno de trabajo: ${oferta.turno.getOrCrash()}',
+                    style: const TextStyle(fontSize: 18),
                   ),
                 ),
                 const SizedBox(height: 4),
                 Align(
                   alignment: Alignment.centerLeft,
-                  child: Container(
-                    child: Text(
-                      'Sueldo: ${oferta.sueldo.getOrCrash()}\$',
-                      style: const TextStyle(fontSize: 18),
-                    ),
+                  child: Text(
+                    'Sueldo: ${oferta.sueldo.getOrCrash()}\$',
+                    style: const TextStyle(fontSize: 18),
                   ),
                 ),
                 Align(
                   alignment: Alignment.centerLeft,
-                  child: Container(
-                    child: Text(
-                      'Vacantes: ${oferta.numeroVacantes.getOrCrash()}',
-                      style: const TextStyle(fontSize: 18),
-                    ),
+                  child: Text(
+                    'Vacantes: ${oferta.numeroVacantes.getOrCrash()}',
+                    style: const TextStyle(fontSize: 18),
                   ),
                 ),
                 const SizedBox(height: 4),
                 Align(
                   alignment: Alignment.centerLeft,
-                  child: Container(
-                    child: Text(
-                      'Publicado el:  ${oferta.fechaPublicacion.getOrCrash().day.toString().padLeft(2, '0')}-${oferta.fechaPublicacion.getOrCrash().month.toString().padLeft(2, '0')}-${oferta.fechaPublicacion.getOrCrash().year.toString()}',
-                      style: const TextStyle(fontSize: 18),
-                    ),
+                  child: Text(
+                    'Publicado el:  ${oferta.fechaPublicacion.getOrCrash().day.toString().padLeft(2, '0')}-${oferta.fechaPublicacion.getOrCrash().month.toString().padLeft(2, '0')}-${oferta.fechaPublicacion.getOrCrash().year.toString()}',
+                    style: const TextStyle(fontSize: 18),
                   ),
                 ),
                 const SizedBox(height: 4),

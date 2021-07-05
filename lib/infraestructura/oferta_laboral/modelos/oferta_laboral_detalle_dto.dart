@@ -12,7 +12,6 @@ import 'package:officium_flutter/dominio/oferta_laboral/value_objects/oferta_lab
 import 'package:officium_flutter/dominio/oferta_laboral/value_objects/oferta_laboral/sueldo.dart';
 import 'package:officium_flutter/dominio/oferta_laboral/value_objects/oferta_laboral/titulo.dart';
 import 'package:officium_flutter/dominio/oferta_laboral/value_objects/oferta_laboral/turno_trabajo.dart';
-import 'package:officium_flutter/dominio/oferta_laboral/value_objects/postulacion_oferta_laboral/estado_postulacion.dart';
 part 'oferta_laboral_detalle_dto.freezed.dart';
 
 part 'oferta_laboral_detalle_dto.g.dart';
