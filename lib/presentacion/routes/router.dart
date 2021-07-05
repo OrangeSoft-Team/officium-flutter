@@ -24,6 +24,7 @@ import 'package:officium_flutter/presentacion/comun/homepage.dart';
 import 'package:officium_flutter/presentacion/iniciar_sesion/inicio_sesion.dart';
 import 'package:officium_flutter/presentacion/ofertas_laborales/consultar_postulaciones/consultar_postulaciones.dart';
 import 'package:officium_flutter/presentacion/ofertas_laborales/ver_detalle_oferta/detalle_oferta_laboral.dart';
+import 'package:officium_flutter/presentacion/ofertas_laborales/ver_detalle_oferta/postulacion.dart';
 import 'package:officium_flutter/presentacion/ofertas_laborales/ver_lista_ofertas/ver_lista_ofertas.dart';
 
 Map<String, WidgetBuilder> getRutasAplicacion() {

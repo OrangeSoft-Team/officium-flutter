@@ -99,9 +99,8 @@ class DetalleOferta extends StatelessWidget {
                   children: <Widget>[
                     ElevatedButton(
                       onPressed: () => {
-                        const Center(
-                          child: CircularProgressIndicator(),
-                        )
+                        AutoRouter.of(context)
+                            .replace(PostularRoute(oferta: oferta)),
                       },
                       child: const Text('Aplicar a oferta'),
                     ),
