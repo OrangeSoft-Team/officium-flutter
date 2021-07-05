@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:io';
 
 import 'package:flutter/services.dart';
 import 'package:injectable/injectable.dart';
@@ -29,14 +30,21 @@ class OfertaLaboralFuente implements IOfertaLaboralFuente {
   @override
   Future<Unit> aplicarOfertaLaboral(Identificador uuidOferta,
       PostulacionOfertaLaboralDTO postulacionOfertaLaboral) async {
-    final response = await cliente.post(
-        Uri.parse('http://$DIR_SPRING/postulaciones'),
-        // Uri.parse('$DIR_SPRING/ofertas_laborales/${uuidOferta.getOrCrash()}'),
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: postulacionOfertaLaboral);
-
+    final client2 = HttpClient();
+    final bodyJson = jsonEncode(postulacionOfertaLaboral);
+    final request = await client2.postUrl(Uri.parse("http://orangesoft.ddns.net:3000/postulaciones"));
+    request.headers.set(HttpHeaders.contentTypeHeader, "application/json; charset=UTF-8");
+    request.write(bodyJson);
+    final response = await request.close();
+    // final response = await cliente.post(
+    //     Uri.parse('https://$DIR_SPRING/postulaciones'),
+    //     // Uri.parse('$DIR_SPRING/ofertas_laborales/${uuidOferta.getOrCrash()}'),
+    //     headers: {
+    //       'Content-Type': 'application/json',
+    //     },
+    //     body: postulacionOfertaLaboral);
+    // const varae = 10000;
+    // final avfe = response;
     if (response.statusCode == 200) {
       return unit;
     } else {

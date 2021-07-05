@@ -22,11 +22,13 @@ class _$PostulacionOfertaLaboralDTOTearOff {
   const _$PostulacionOfertaLaboralDTOTearOff();
 
   _PostulacionOfertaLaboralDTO call(
-      {required String uuidOfertaLaboral,
+      {required String id,
+      required String uuidOfertaLaboral,
       required String uuidEmpleado,
       required String uuidEmpresa,
       String? comentario}) {
     return _PostulacionOfertaLaboralDTO(
+      id: id,
       uuidOfertaLaboral: uuidOfertaLaboral,
       uuidEmpleado: uuidEmpleado,
       uuidEmpresa: uuidEmpresa,
@@ -44,6 +46,7 @@ const $PostulacionOfertaLaboralDTO = _$PostulacionOfertaLaboralDTOTearOff();
 
 /// @nodoc
 mixin _$PostulacionOfertaLaboralDTO {
+  String get id => throw _privateConstructorUsedError;
   String get uuidOfertaLaboral => throw _privateConstructorUsedError;
   String get uuidEmpleado => throw _privateConstructorUsedError;
   String get uuidEmpresa => throw _privateConstructorUsedError;
@@ -62,7 +65,8 @@ abstract class $PostulacionOfertaLaboralDTOCopyWith<$Res> {
           $Res Function(PostulacionOfertaLaboralDTO) then) =
       _$PostulacionOfertaLaboralDTOCopyWithImpl<$Res>;
   $Res call(
-      {String uuidOfertaLaboral,
+      {String id,
+      String uuidOfertaLaboral,
       String uuidEmpleado,
       String uuidEmpresa,
       String? comentario});
@@ -79,12 +83,17 @@ class _$PostulacionOfertaLaboralDTOCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object? id = freezed,
     Object? uuidOfertaLaboral = freezed,
     Object? uuidEmpleado = freezed,
     Object? uuidEmpresa = freezed,
     Object? comentario = freezed,
   }) {
     return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
       uuidOfertaLaboral: uuidOfertaLaboral == freezed
           ? _value.uuidOfertaLaboral
           : uuidOfertaLaboral // ignore: cast_nullable_to_non_nullable
@@ -114,7 +123,8 @@ abstract class _$PostulacionOfertaLaboralDTOCopyWith<$Res>
       __$PostulacionOfertaLaboralDTOCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String uuidOfertaLaboral,
+      {String id,
+      String uuidOfertaLaboral,
       String uuidEmpleado,
       String uuidEmpresa,
       String? comentario});
@@ -135,12 +145,17 @@ class __$PostulacionOfertaLaboralDTOCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object? id = freezed,
     Object? uuidOfertaLaboral = freezed,
     Object? uuidEmpleado = freezed,
     Object? uuidEmpresa = freezed,
     Object? comentario = freezed,
   }) {
     return _then(_PostulacionOfertaLaboralDTO(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
       uuidOfertaLaboral: uuidOfertaLaboral == freezed
           ? _value.uuidOfertaLaboral
           : uuidOfertaLaboral // ignore: cast_nullable_to_non_nullable
@@ -165,7 +180,8 @@ class __$PostulacionOfertaLaboralDTOCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_PostulacionOfertaLaboralDTO extends _PostulacionOfertaLaboralDTO {
   const _$_PostulacionOfertaLaboralDTO(
-      {required this.uuidOfertaLaboral,
+      {required this.id,
+      required this.uuidOfertaLaboral,
       required this.uuidEmpleado,
       required this.uuidEmpresa,
       this.comentario})
@@ -174,6 +190,8 @@ class _$_PostulacionOfertaLaboralDTO extends _PostulacionOfertaLaboralDTO {
   factory _$_PostulacionOfertaLaboralDTO.fromJson(Map<String, dynamic> json) =>
       _$_$_PostulacionOfertaLaboralDTOFromJson(json);
 
+  @override
+  final String id;
   @override
   final String uuidOfertaLaboral;
   @override
@@ -185,13 +203,15 @@ class _$_PostulacionOfertaLaboralDTO extends _PostulacionOfertaLaboralDTO {
 
   @override
   String toString() {
-    return 'PostulacionOfertaLaboralDTO(uuidOfertaLaboral: $uuidOfertaLaboral, uuidEmpleado: $uuidEmpleado, uuidEmpresa: $uuidEmpresa, comentario: $comentario)';
+    return 'PostulacionOfertaLaboralDTO(id: $id, uuidOfertaLaboral: $uuidOfertaLaboral, uuidEmpleado: $uuidEmpleado, uuidEmpresa: $uuidEmpresa, comentario: $comentario)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _PostulacionOfertaLaboralDTO &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
             (identical(other.uuidOfertaLaboral, uuidOfertaLaboral) ||
                 const DeepCollectionEquality()
                     .equals(other.uuidOfertaLaboral, uuidOfertaLaboral)) &&
@@ -209,6 +229,7 @@ class _$_PostulacionOfertaLaboralDTO extends _PostulacionOfertaLaboralDTO {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(uuidOfertaLaboral) ^
       const DeepCollectionEquality().hash(uuidEmpleado) ^
       const DeepCollectionEquality().hash(uuidEmpresa) ^
@@ -229,7 +250,8 @@ class _$_PostulacionOfertaLaboralDTO extends _PostulacionOfertaLaboralDTO {
 abstract class _PostulacionOfertaLaboralDTO
     extends PostulacionOfertaLaboralDTO {
   const factory _PostulacionOfertaLaboralDTO(
-      {required String uuidOfertaLaboral,
+      {required String id,
+      required String uuidOfertaLaboral,
       required String uuidEmpleado,
       required String uuidEmpresa,
       String? comentario}) = _$_PostulacionOfertaLaboralDTO;
@@ -238,6 +260,8 @@ abstract class _PostulacionOfertaLaboralDTO
   factory _PostulacionOfertaLaboralDTO.fromJson(Map<String, dynamic> json) =
       _$_PostulacionOfertaLaboralDTO.fromJson;
 
+  @override
+  String get id => throw _privateConstructorUsedError;
   @override
   String get uuidOfertaLaboral => throw _privateConstructorUsedError;
   @override
