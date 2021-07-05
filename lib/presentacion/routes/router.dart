@@ -47,5 +47,6 @@ Map<String, WidgetBuilder> getRutasAplicacion() {
         child: HomePage()),
     'consultar_postulaciones': (BuildContext context) =>
         ConsultarPostulaciones(),
+    'postular': (BuildContext context) => Postular(),
   };
 }

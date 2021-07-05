@@ -99,8 +99,11 @@ class DetalleOferta extends StatelessWidget {
                   children: <Widget>[
                     ElevatedButton(
                       onPressed: () => {
-                        AutoRouter.of(context)
-                            .replace(PostularRoute(oferta: oferta)),
+                        Navigator.pushNamed(
+                          context,
+                          'postular',
+                          arguments: oferta,
+                        ),
                       },
                       child: const Text('Aplicar a oferta'),
                     ),

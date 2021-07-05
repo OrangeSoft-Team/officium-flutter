@@ -1,4 +1,3 @@
-import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:officium_flutter/aplicacion/autentificacion/estado_autentificacion/estado_autentificacion_bloc.dart';
@@ -6,18 +5,12 @@ import 'package:officium_flutter/aplicacion/oferta_laboral/postular_oferta_labor
 import 'package:officium_flutter/dominio/comun/value_objects/identificador.dart';
 import 'package:officium_flutter/dominio/oferta_laboral/entidades/oferta_laboral.dart';
 import 'package:officium_flutter/inyeccion.dart';
-import 'package:officium_flutter/presentacion/routes/router.gr.dart';
 
 class Postular extends StatelessWidget {
-  final OfertaLaboral oferta;
-
-  const Postular({
-    Key? key,
-    required this.oferta,
-  }) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
+    final OfertaLaboral oferta =
+        ModalRoute.of(context)?.settings.arguments as OfertaLaboral;
     return BlocProvider(
       create: (context) => getIt<PostularOfertaLaboralBloc>(),
       child:
@@ -29,7 +22,8 @@ class Postular extends StatelessWidget {
             leading: IconButton(
               icon: const Icon(Icons.exit_to_app),
               onPressed: () {
-                AutoRouter.of(context).replace(const VerListaOfertasRoute());
+                Navigator.of(context)
+                    .pushReplacementNamed('ver_ofertas_laborales');
               },
             ),
           ),
@@ -83,8 +77,9 @@ class Postular extends StatelessWidget {
             (either) => either.fold(
                   (_) {},
                   (_) {
-                    AutoRouter.of(context)
-                        .replace(const VerListaOfertasRoute());
+                    Navigator.of(context)
+                        .pushReplacementNamed('ver_ofertas_laborales');
+
                     context.read<EstadoAutentificacionBloc>().add(
                         const EstadoAutentificacionEvent
                             .verificacionDeAutenticacionSolicitada());
