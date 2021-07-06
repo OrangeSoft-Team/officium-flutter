@@ -6,7 +6,15 @@ import 'package:officium_flutter/dominio/comun/value_objects/identificador.dart'
 import 'package:officium_flutter/dominio/oferta_laboral/entidades/oferta_laboral.dart';
 import 'package:officium_flutter/inyeccion.dart';
 
-class Postular extends StatelessWidget {
+class PostularPage extends StatefulWidget {
+  @override
+  State<PostularPage> createState() => _PostularPageState();
+}
+
+class _PostularPageState extends State<PostularPage> {
+  bool comentario = false;
+  TextEditingController comentarioController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     final OfertaLaboral oferta =
@@ -16,34 +24,67 @@ class Postular extends StatelessWidget {
       child:
           BlocConsumer<PostularOfertaLaboralBloc, PostularOfertaLaboralState>(
               builder: (context, state) {
-        return Scaffold(
-          appBar: AppBar(
-            title: const Text('Postulacion'),
-            leading: IconButton(
-              icon: const Icon(Icons.exit_to_app),
-              onPressed: () {
-                Navigator.of(context)
-                    .pushReplacementNamed('ver_ofertas_laborales');
-              },
-            ),
+        return _postulacionBody(context, oferta);
+      }, listener: (context, state) {
+        state.postularFalloOExitoOpcion.fold(
+            () {},
+            (either) => either.fold(
+                  (_) {},
+                  (_) {
+                    Navigator.of(context)
+                        .pushReplacementNamed('ver_ofertas_laborales');
+
+                    context.read<EstadoAutentificacionBloc>().add(
+                        const EstadoAutentificacionEvent
+                            .verificacionDeAutenticacionSolicitada());
+                  },
+                ));
+      }),
+    );
+  }
+
+  Scaffold _postulacionBody(BuildContext context, OfertaLaboral oferta) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Postulacion'),
+      ),
+      body: Column(
+        children: [
+          CheckboxListTile(
+              value: comentario,
+              title: const Text("¿Desea agregar un comentario?"),
+              onChanged: (comentarioActualizado) {
+                setState(() {
+                  comentario = comentarioActualizado!;
+                  comentarioController.clear();
+                });
+              }),
+          const SizedBox(
+            height: 10,
           ),
-          body: Form(
+          Form(
             child: ListView(
+              shrinkWrap: true,
               padding: const EdgeInsets.all(8),
               // ignore: prefer_const_literals_to_create_immutables
               children: [
-                TextFormField(
-                  minLines: 4,
-                  maxLines: 7,
-                  decoration: const InputDecoration(
-                    prefixIcon: Icon(Icons.comment),
-                    labelText: 'Comentario',
+                Visibility(
+                  visible: comentario,
+                  child: TextFormField(
+                    controller: comentarioController,
+                    enabled: comentario,
+                    minLines: 4,
+                    maxLines: 7,
+                    decoration: const InputDecoration(
+                      prefixIcon: Icon(Icons.comment),
+                      labelText: 'Comentario',
+                    ),
+                    onChanged: (value) => context
+                        .read<PostularOfertaLaboralBloc>()
+                        .add(
+                          PostularOfertaLaboralEvent.comentarioCambiado(value),
+                        ),
                   ),
-                  onChanged: (value) => context
-                      .read<PostularOfertaLaboralBloc>()
-                      .add(
-                        PostularOfertaLaboralEvent.comentarioCambiado(value),
-                      ),
                 ),
                 const SizedBox(
                   height: 8,
@@ -70,23 +111,15 @@ class Postular extends StatelessWidget {
               ],
             ),
           ),
-        );
-      }, listener: (context, state) {
-        state.postularFalloOExitoOpcion.fold(
-            () {},
-            (either) => either.fold(
-                  (_) {},
-                  (_) {
-                    Navigator.of(context)
-                        .pushReplacementNamed('ver_ofertas_laborales');
-
-                    context.read<EstadoAutentificacionBloc>().add(
-                        const EstadoAutentificacionEvent
-                            .verificacionDeAutenticacionSolicitada());
-                  },
-                ));
-      }),
+        ],
+      ),
     );
+  }
+
+  @override
+  void dispose() {
+    comentarioController.clear();
+    super.dispose();
   }
 }
 

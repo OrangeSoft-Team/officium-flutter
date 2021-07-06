@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class ConsultarPostulaciones extends StatelessWidget {
+class ConsultarPostulacionesPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container();

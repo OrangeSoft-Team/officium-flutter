@@ -3,9 +3,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:officium_flutter/aplicacion/autentificacion/estado_autentificacion/estado_autentificacion_bloc.dart';
 import 'package:officium_flutter/aplicacion/oferta_laboral/ver_ofertas_laborales/ver_ofertas_laborales_bloc.dart';
 import 'package:officium_flutter/inyeccion.dart';
-import 'package:officium_flutter/presentacion/ofertas_laborales/ver_lista_ofertas/elementos/lista_ofertas.dart';
+import 'package:officium_flutter/presentacion/ofertas_laborales/ver_lista_ofertas/widgets/lista_ofertas.dart';
 
-class VerListaOfertas extends StatelessWidget {
+class VerListaOfertasPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
@@ -37,8 +37,10 @@ class VerListaOfertas extends StatelessWidget {
             ),
             actions: <IconButton>[
               IconButton(
-                icon: const Icon(Icons.person),
-                onPressed: () {},
+                icon: const Icon(Icons.home),
+                onPressed: () {
+                  Navigator.pushNamed(context, 'home');
+                },
               ),
             ],
           ),

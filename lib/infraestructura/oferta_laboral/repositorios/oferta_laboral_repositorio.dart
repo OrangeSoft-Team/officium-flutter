@@ -1,5 +1,4 @@
-import 'dart:developer' as developer;
-
+import 'package:dartz/dartz.dart';
 import 'package:injectable/injectable.dart';
 import 'package:officium_flutter/dominio/comun/value_objects/identificador.dart';
 import 'package:officium_flutter/dominio/oferta_laboral/entidades/oferta_laboral.dart';
@@ -31,7 +30,7 @@ class OfertaLaboralRepositorio implements IOfertaLaboralRepositorio {
 
     try {
       nuevaPostulacionOfertaLaboral = PostulacionOfertaLaboralDTO(
-          id:Identificador().getOrCrash(),
+          id: Identificador().getOrCrash(),
           uuidOfertaLaboral: uuidOferta.getOrCrash(),
           uuidEmpleado: uuidEmpleado.getOrCrash(),
           uuidEmpresa: uuidEmpresa.getOrCrash(),

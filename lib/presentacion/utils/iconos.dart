@@ -6,5 +6,8 @@ final _icons = <String, IconData>{
 };
 
 Icon getIcon(String nombreIcono) {
-  return Icon(_icons[nombreIcono]);
+  return Icon(
+    _icons[nombreIcono],
+    color: const Color.fromRGBO(93, 96, 245, 1),
+  );
 }

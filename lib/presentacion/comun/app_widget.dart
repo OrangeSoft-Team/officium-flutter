@@ -25,7 +25,9 @@ class AppState extends StatelessWidget {
           title: 'Officcium',
           debugShowCheckedModeBanner: false,
           theme: ThemeData(
-            iconTheme: const IconThemeData(color: Colors.pink, size: 50),
+            iconTheme: Theme.of(context).iconTheme.copyWith(
+                  color: const Color.fromRGBO(93, 96, 245, 1),
+                ),
             colorScheme: ThemeData().colorScheme.copyWith(
                   primary: const Color(themeColor),
                   secondary: const Color(accentColor),

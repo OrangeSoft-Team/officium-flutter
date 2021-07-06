@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:officium_flutter/dominio/oferta_laboral/entidades/oferta_laboral.dart';
 
-class DetalleOferta extends StatelessWidget {
+class DetalleOfertaPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final OfertaLaboral oferta =

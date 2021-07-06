@@ -13,36 +13,38 @@ import 'package:officium_flutter/infraestructura/oferta_laboral/modelos/postulac
 import '../../infraestructura/data_pruebas/lector_json.dart';
 import 'postular_oferta_laboral_bloc_test.mocks.dart';
 
-
 @GenerateMocks([IOfertaLaboralRepositorio])
 void main() {
-  MockIOfertaLaboralRepositorio mockOfertaLaboralRepositorio = MockIOfertaLaboralRepositorio();
-  
-    test(
-        'Debe emitir en orden [inicial]',
-        () {
+  final MockIOfertaLaboralRepositorio mockOfertaLaboralRepositorio =
+      MockIOfertaLaboralRepositorio();
 
-      final PostulacionOfertaLaboralDTO tPostulacionOfertaLaboralDto = PostulacionOfertaLaboralDTO.fromJson(json.decode(fixture('postulacionOfertaDtoPrueba.json')) as Map<String,dynamic>);
-      final PostulacionOfertaLaboral dPostulacionOfertaLaboral = tPostulacionOfertaLaboralDto.toDomain();
-      final Either<OfertaLaboralExcepcion,Unit> tPostulacionOfertaLaboral = Right(unit);
+  test('Debe emitir en orden [inicial]', () {
+    final PostulacionOfertaLaboralDTO tPostulacionOfertaLaboralDto =
+        PostulacionOfertaLaboralDTO.fromJson(
+            json.decode(fixture('postulacionOfertaDtoPrueba.json'))
+                as Map<String, dynamic>);
+    final PostulacionOfertaLaboral dPostulacionOfertaLaboral =
+        tPostulacionOfertaLaboralDto.toDomain();
+    const Either<OfertaLaboralExcepcion, Unit> tPostulacionOfertaLaboral =
+        Right(unit);
 
-      when(mockOfertaLaboralRepositorio.aplicarOfertaLaboral(
+    when(mockOfertaLaboralRepositorio.aplicarOfertaLaboral(
+            dPostulacionOfertaLaboral.uuidOfertaLaboral,
+            dPostulacionOfertaLaboral.uuidEmpleado,
+            dPostulacionOfertaLaboral.uuidEmpresa,
+            dPostulacionOfertaLaboral.comentarioPostulacionOfertaLaboral))
+        .thenAnswer((_) async => tPostulacionOfertaLaboral);
+
+    final verOfertasLaboralesBloc =
+        PostularOfertaLaboralBloc(mockOfertaLaboralRepositorio);
+
+    verOfertasLaboralesBloc.add(PostularOfertaLaboralEvent.postulacionRealizada(
         dPostulacionOfertaLaboral.uuidOfertaLaboral,
         dPostulacionOfertaLaboral.uuidEmpleado,
-        dPostulacionOfertaLaboral.uuidEmpresa,
-        dPostulacionOfertaLaboral.comentarioPostulacionOfertaLaboral
-      )).thenAnswer((_) async =>  tPostulacionOfertaLaboral);
+        dPostulacionOfertaLaboral.uuidEmpresa));
 
-      final verOfertasLaboralesBloc = PostularOfertaLaboralBloc(mockOfertaLaboralRepositorio);
-
-      verOfertasLaboralesBloc.add(PostularOfertaLaboralEvent.postulacionRealizada(
-        dPostulacionOfertaLaboral.uuidOfertaLaboral,
-        dPostulacionOfertaLaboral.uuidEmpleado,
-        dPostulacionOfertaLaboral.uuidEmpresa
-      ));
-      
-      emitsInOrder([
-        PostularOfertaLaboralState.inicial(),
-      ]);
-    });
+    emitsInOrder([
+      PostularOfertaLaboralState.inicial(),
+    ]);
+  });
 }

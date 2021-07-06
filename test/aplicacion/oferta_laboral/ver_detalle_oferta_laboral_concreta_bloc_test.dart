@@ -16,27 +16,36 @@ import 'ver_ofertas_laborales_bloc_test.mocks.dart';
 
 @GenerateMocks([IOfertaLaboralRepositorio])
 void main() {
-  final MockIOfertaLaboralRepositorio mockOfertaLaboralRepositorio = MockIOfertaLaboralRepositorio();
+  final MockIOfertaLaboralRepositorio mockOfertaLaboralRepositorio =
+      MockIOfertaLaboralRepositorio();
 
   test(
-        'Debe emitir en orden [inicial,verDetalleOfertaLaboralEnProgreso,verDetalleOfertaLaboralCargada(OfertaLaboralDetalle)]',
-        () {
-      final tOfertasLaboralDetalleDto = OfertaLaboralDetalleDTO.fromJson(json.decode(fixture('ofertaLaboralDetalleDtoPrueba.json')) as Map<String,dynamic>);
-      final OfertaLaboral dOfertaLaboralDetalle = tOfertasLaboralDetalleDto.toDomain();
-      final Either<OfertaLaboralExcepcion,OfertaLaboral> tOfertaLaboralDetalle = Right(dOfertaLaboralDetalle);    
+      'Debe emitir en orden [inicial,verDetalleOfertaLaboralEnProgreso,verDetalleOfertaLaboralCargada(OfertaLaboralDetalle)]',
+      () {
+    final tOfertasLaboralDetalleDto = OfertaLaboralDetalleDTO.fromJson(
+        json.decode(fixture('ofertaLaboralDetalleDtoPrueba.json'))
+            as Map<String, dynamic>);
+    final OfertaLaboral dOfertaLaboralDetalle =
+        tOfertasLaboralDetalleDto.toDomain();
+    final Either<OfertaLaboralExcepcion, OfertaLaboral> tOfertaLaboralDetalle =
+        Right(dOfertaLaboralDetalle);
 
+    when(mockOfertaLaboralRepositorio
+            .buscarOfertaLaboralConcreta(dOfertaLaboralDetalle.uuid))
+        .thenAnswer((_) => Future.value(tOfertaLaboralDetalle));
 
-      when(mockOfertaLaboralRepositorio.buscarOfertaLaboralConcreta(dOfertaLaboralDetalle.uuid))
-          .thenAnswer((_)  =>  Future.value(tOfertaLaboralDetalle));
+    final verOfertasLaboralesBloc =
+        VerDetalleOfertaLaboralBloc(mockOfertaLaboralRepositorio);
 
-      final verOfertasLaboralesBloc = VerDetalleOfertaLaboralBloc(mockOfertaLaboralRepositorio);
+    verOfertasLaboralesBloc.add(
+        VerDetalleOfertaLaboralEvent.verDetalleOfertaLaboralEmpezado(
+            dOfertaLaboralDetalle.uuid));
 
-      verOfertasLaboralesBloc.add(VerDetalleOfertaLaboralEvent.verDetalleOfertaLaboralEmpezado(dOfertaLaboralDetalle.uuid));
-
-      emitsInOrder([
-        VerDetalleOfertaLaboralState.inicial(),
-        VerDetalleOfertaLaboralState.verDetalleOfertaLaboralEnProgreso(),
-        VerDetalleOfertaLaboralState.verDetalleOfertaLaboralCargada(dOfertaLaboralDetalle)
-      ]);
-    });
+    emitsInOrder([
+      const VerDetalleOfertaLaboralState.inicial(),
+      const VerDetalleOfertaLaboralState.verDetalleOfertaLaboralEnProgreso(),
+      VerDetalleOfertaLaboralState.verDetalleOfertaLaboralCargada(
+          dOfertaLaboralDetalle)
+    ]);
+  });
 }

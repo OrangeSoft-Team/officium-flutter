@@ -28,8 +28,10 @@ class OfertaLaboralFuente implements IOfertaLaboralFuente {
       PostulacionOfertaLaboralDTO postulacionOfertaLaboral) async {
     final client2 = HttpClient();
     final bodyJson = jsonEncode(postulacionOfertaLaboral);
-    final request = await client2.postUrl(Uri.parse("http://orangesoft.ddns.net:3000/postulaciones"));
-    request.headers.set(HttpHeaders.contentTypeHeader, "application/json; charset=UTF-8");
+    final request = await client2
+        .postUrl(Uri.parse("http://orangesoft.ddns.net:3000/postulaciones"));
+    request.headers
+        .set(HttpHeaders.contentTypeHeader, "application/json; charset=UTF-8");
     request.write(bodyJson);
     final response = await request.close();
     // final response = await cliente.post(
@@ -41,7 +43,7 @@ class OfertaLaboralFuente implements IOfertaLaboralFuente {
     //     body: postulacionOfertaLaboral);
     // const varae = 10000;
     // final avfe = response;
-    if (response.statusCode == 200) {
+    if (response.statusCode == 201) {
       return unit;
     } else {
       throw ServerException();

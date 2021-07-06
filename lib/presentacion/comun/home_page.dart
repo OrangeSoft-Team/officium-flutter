@@ -1,31 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:officium_flutter/aplicacion/autentificacion/estado_autentificacion/estado_autentificacion_bloc.dart';
-import 'package:officium_flutter/presentacion/comun/proveedor.dart';
+import 'package:officium_flutter/presentacion/comun/proveedor_rutas.dart';
+import 'package:officium_flutter/presentacion/comun/widgets/drawer.dart';
 import 'package:officium_flutter/presentacion/utils/iconos.dart';
 // ignore: implementation_imports
-import 'package:provider/src/provider.dart';
 
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: DrawerUsuario(),
       appBar: AppBar(
-          title: const Text('Flutter Officium'),
-          leading: IconButton(
-            icon: const Icon(Icons.exit_to_app),
-            onPressed: () {
-              context
-                  .read<EstadoAutentificacionBloc>()
-                  .add(const EstadoAutentificacionEvent.cerrarSesion());
-              Navigator.pushNamed(context, '/');
-            },
-          ),
-          actions: <IconButton>[
-            IconButton(
-              icon: const Icon(Icons.person),
-              onPressed: () {},
-            ),
-          ]),
+        title: const Text(
+          'Flutter Officium',
+        ),
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(Icons.notifications),
+          )
+        ],
+      ),
       body: _lista(),
     );
   }
@@ -56,6 +50,7 @@ class HomePage extends StatelessWidget {
         leading: getIcon(opt['icon'] as String),
         trailing: const Icon(
           Icons.keyboard_arrow_right,
+          color: Color.fromRGBO(93, 96, 245, 1),
         ),
         onTap: () {
           Navigator.pushNamed(context, opt['ruta'] as String);
