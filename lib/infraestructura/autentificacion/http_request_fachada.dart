@@ -17,9 +17,20 @@ class HttpRequestFachada implements IAutentificacionFachada {
 
   @override
   Future<Either<ExcepcionAutentificacion, Unit>> loginConEmailAndPassword(
-      {required EmailAddress emailAddress, required Password password}) {
-    // TODO: implement loginConEmailAndPassword
-    throw UnimplementedError();
+      {required EmailAddress emailAddress, required Password password}) async {
+    try {
+      await Future.delayed(const Duration(seconds: 2));
+      return left(const ExcepcionAutentificacion.emailYPasswordInvalidas());
+    } catch (e) {
+      if (e == 'ERROR_WRONG_PASSWORD' || e == 'ERROR_USER_NOT_FOUND') {
+        return left(const ExcepcionAutentificacion.serverError());
+      } else {
+        return left(const ExcepcionAutentificacion.emailYPasswordInvalidas());
+      }
+
+      // TODO: implement loginConEmailAndPassword
+      // throw UnimplementedError();
+    }
   }
 
   @override

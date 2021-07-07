@@ -31,6 +31,10 @@ class _$ExcepcionAutentificacionTearOff {
   EmailYPasswordInvalidas emailYPasswordInvalidas() {
     return const EmailYPasswordInvalidas();
   }
+
+  CuentaExistente cuentaExistente() {
+    return const CuentaExistente();
+  }
 }
 
 /// @nodoc
@@ -44,6 +48,7 @@ mixin _$ExcepcionAutentificacion {
     required TResult Function() serverError,
     required TResult Function() emailEnUso,
     required TResult Function() emailYPasswordInvalidas,
+    required TResult Function() cuentaExistente,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -52,6 +57,7 @@ mixin _$ExcepcionAutentificacion {
     TResult Function()? serverError,
     TResult Function()? emailEnUso,
     TResult Function()? emailYPasswordInvalidas,
+    TResult Function()? cuentaExistente,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -62,6 +68,7 @@ mixin _$ExcepcionAutentificacion {
     required TResult Function(EmailEnUso value) emailEnUso,
     required TResult Function(EmailYPasswordInvalidas value)
         emailYPasswordInvalidas,
+    required TResult Function(CuentaExistente value) cuentaExistente,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -70,6 +77,7 @@ mixin _$ExcepcionAutentificacion {
     TResult Function(ServerError value)? serverError,
     TResult Function(EmailEnUso value)? emailEnUso,
     TResult Function(EmailYPasswordInvalidas value)? emailYPasswordInvalidas,
+    TResult Function(CuentaExistente value)? cuentaExistente,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -136,6 +144,7 @@ class _$CanceladoPorUsuario implements CanceladoPorUsuario {
     required TResult Function() serverError,
     required TResult Function() emailEnUso,
     required TResult Function() emailYPasswordInvalidas,
+    required TResult Function() cuentaExistente,
   }) {
     return canceladoPorUsuario();
   }
@@ -147,6 +156,7 @@ class _$CanceladoPorUsuario implements CanceladoPorUsuario {
     TResult Function()? serverError,
     TResult Function()? emailEnUso,
     TResult Function()? emailYPasswordInvalidas,
+    TResult Function()? cuentaExistente,
     required TResult orElse(),
   }) {
     if (canceladoPorUsuario != null) {
@@ -163,6 +173,7 @@ class _$CanceladoPorUsuario implements CanceladoPorUsuario {
     required TResult Function(EmailEnUso value) emailEnUso,
     required TResult Function(EmailYPasswordInvalidas value)
         emailYPasswordInvalidas,
+    required TResult Function(CuentaExistente value) cuentaExistente,
   }) {
     return canceladoPorUsuario(this);
   }
@@ -174,6 +185,7 @@ class _$CanceladoPorUsuario implements CanceladoPorUsuario {
     TResult Function(ServerError value)? serverError,
     TResult Function(EmailEnUso value)? emailEnUso,
     TResult Function(EmailYPasswordInvalidas value)? emailYPasswordInvalidas,
+    TResult Function(CuentaExistente value)? cuentaExistente,
     required TResult orElse(),
   }) {
     if (canceladoPorUsuario != null) {
@@ -231,6 +243,7 @@ class _$ServerError implements ServerError {
     required TResult Function() serverError,
     required TResult Function() emailEnUso,
     required TResult Function() emailYPasswordInvalidas,
+    required TResult Function() cuentaExistente,
   }) {
     return serverError();
   }
@@ -242,6 +255,7 @@ class _$ServerError implements ServerError {
     TResult Function()? serverError,
     TResult Function()? emailEnUso,
     TResult Function()? emailYPasswordInvalidas,
+    TResult Function()? cuentaExistente,
     required TResult orElse(),
   }) {
     if (serverError != null) {
@@ -258,6 +272,7 @@ class _$ServerError implements ServerError {
     required TResult Function(EmailEnUso value) emailEnUso,
     required TResult Function(EmailYPasswordInvalidas value)
         emailYPasswordInvalidas,
+    required TResult Function(CuentaExistente value) cuentaExistente,
   }) {
     return serverError(this);
   }
@@ -269,6 +284,7 @@ class _$ServerError implements ServerError {
     TResult Function(ServerError value)? serverError,
     TResult Function(EmailEnUso value)? emailEnUso,
     TResult Function(EmailYPasswordInvalidas value)? emailYPasswordInvalidas,
+    TResult Function(CuentaExistente value)? cuentaExistente,
     required TResult orElse(),
   }) {
     if (serverError != null) {
@@ -325,6 +341,7 @@ class _$EmailEnUso implements EmailEnUso {
     required TResult Function() serverError,
     required TResult Function() emailEnUso,
     required TResult Function() emailYPasswordInvalidas,
+    required TResult Function() cuentaExistente,
   }) {
     return emailEnUso();
   }
@@ -336,6 +353,7 @@ class _$EmailEnUso implements EmailEnUso {
     TResult Function()? serverError,
     TResult Function()? emailEnUso,
     TResult Function()? emailYPasswordInvalidas,
+    TResult Function()? cuentaExistente,
     required TResult orElse(),
   }) {
     if (emailEnUso != null) {
@@ -352,6 +370,7 @@ class _$EmailEnUso implements EmailEnUso {
     required TResult Function(EmailEnUso value) emailEnUso,
     required TResult Function(EmailYPasswordInvalidas value)
         emailYPasswordInvalidas,
+    required TResult Function(CuentaExistente value) cuentaExistente,
   }) {
     return emailEnUso(this);
   }
@@ -363,6 +382,7 @@ class _$EmailEnUso implements EmailEnUso {
     TResult Function(ServerError value)? serverError,
     TResult Function(EmailEnUso value)? emailEnUso,
     TResult Function(EmailYPasswordInvalidas value)? emailYPasswordInvalidas,
+    TResult Function(CuentaExistente value)? cuentaExistente,
     required TResult orElse(),
   }) {
     if (emailEnUso != null) {
@@ -420,6 +440,7 @@ class _$EmailYPasswordInvalidas implements EmailYPasswordInvalidas {
     required TResult Function() serverError,
     required TResult Function() emailEnUso,
     required TResult Function() emailYPasswordInvalidas,
+    required TResult Function() cuentaExistente,
   }) {
     return emailYPasswordInvalidas();
   }
@@ -431,6 +452,7 @@ class _$EmailYPasswordInvalidas implements EmailYPasswordInvalidas {
     TResult Function()? serverError,
     TResult Function()? emailEnUso,
     TResult Function()? emailYPasswordInvalidas,
+    TResult Function()? cuentaExistente,
     required TResult orElse(),
   }) {
     if (emailYPasswordInvalidas != null) {
@@ -447,6 +469,7 @@ class _$EmailYPasswordInvalidas implements EmailYPasswordInvalidas {
     required TResult Function(EmailEnUso value) emailEnUso,
     required TResult Function(EmailYPasswordInvalidas value)
         emailYPasswordInvalidas,
+    required TResult Function(CuentaExistente value) cuentaExistente,
   }) {
     return emailYPasswordInvalidas(this);
   }
@@ -458,6 +481,7 @@ class _$EmailYPasswordInvalidas implements EmailYPasswordInvalidas {
     TResult Function(ServerError value)? serverError,
     TResult Function(EmailEnUso value)? emailEnUso,
     TResult Function(EmailYPasswordInvalidas value)? emailYPasswordInvalidas,
+    TResult Function(CuentaExistente value)? cuentaExistente,
     required TResult orElse(),
   }) {
     if (emailYPasswordInvalidas != null) {
@@ -469,4 +493,103 @@ class _$EmailYPasswordInvalidas implements EmailYPasswordInvalidas {
 
 abstract class EmailYPasswordInvalidas implements ExcepcionAutentificacion {
   const factory EmailYPasswordInvalidas() = _$EmailYPasswordInvalidas;
+}
+
+/// @nodoc
+abstract class $CuentaExistenteCopyWith<$Res> {
+  factory $CuentaExistenteCopyWith(
+          CuentaExistente value, $Res Function(CuentaExistente) then) =
+      _$CuentaExistenteCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class _$CuentaExistenteCopyWithImpl<$Res>
+    extends _$ExcepcionAutentificacionCopyWithImpl<$Res>
+    implements $CuentaExistenteCopyWith<$Res> {
+  _$CuentaExistenteCopyWithImpl(
+      CuentaExistente _value, $Res Function(CuentaExistente) _then)
+      : super(_value, (v) => _then(v as CuentaExistente));
+
+  @override
+  CuentaExistente get _value => super._value as CuentaExistente;
+}
+
+/// @nodoc
+
+class _$CuentaExistente implements CuentaExistente {
+  const _$CuentaExistente();
+
+  @override
+  String toString() {
+    return 'ExcepcionAutentificacion.cuentaExistente()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) || (other is CuentaExistente);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() canceladoPorUsuario,
+    required TResult Function() serverError,
+    required TResult Function() emailEnUso,
+    required TResult Function() emailYPasswordInvalidas,
+    required TResult Function() cuentaExistente,
+  }) {
+    return cuentaExistente();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? canceladoPorUsuario,
+    TResult Function()? serverError,
+    TResult Function()? emailEnUso,
+    TResult Function()? emailYPasswordInvalidas,
+    TResult Function()? cuentaExistente,
+    required TResult orElse(),
+  }) {
+    if (cuentaExistente != null) {
+      return cuentaExistente();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(CanceladoPorUsuario value) canceladoPorUsuario,
+    required TResult Function(ServerError value) serverError,
+    required TResult Function(EmailEnUso value) emailEnUso,
+    required TResult Function(EmailYPasswordInvalidas value)
+        emailYPasswordInvalidas,
+    required TResult Function(CuentaExistente value) cuentaExistente,
+  }) {
+    return cuentaExistente(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(CanceladoPorUsuario value)? canceladoPorUsuario,
+    TResult Function(ServerError value)? serverError,
+    TResult Function(EmailEnUso value)? emailEnUso,
+    TResult Function(EmailYPasswordInvalidas value)? emailYPasswordInvalidas,
+    TResult Function(CuentaExistente value)? cuentaExistente,
+    required TResult orElse(),
+  }) {
+    if (cuentaExistente != null) {
+      return cuentaExistente(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class CuentaExistente implements ExcepcionAutentificacion {
+  const factory CuentaExistente() = _$CuentaExistente;
 }

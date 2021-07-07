@@ -7,5 +7,5 @@ import 'inyeccion.dart';
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   configureInjection(Environment.prod);
-  runApp(AppWidget());
+  runApp(AppState());
 }

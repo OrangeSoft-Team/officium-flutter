@@ -4,5 +4,7 @@ analyzer:
   errors:
     missing_required_param: error
     missing_return: error
+    cast_nullable_to_non_nullable: false
+    avoid_print: false
     must_be_immutable: error
     sort_unnamed_constructors_first: ignore

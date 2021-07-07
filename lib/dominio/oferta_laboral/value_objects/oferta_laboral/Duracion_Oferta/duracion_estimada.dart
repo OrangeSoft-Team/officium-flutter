@@ -7,7 +7,16 @@ import 'package:officium_flutter/dominio/oferta_laboral/value_objects/oferta_lab
 class Duracion extends ValueObject<DuracionEscala> {
   @override
   final Either<ValorErroneo<DuracionEscala>, DuracionEscala> value;
-  static const escalasValidas = ["hora(s)", "dia(s)", "semana(s)", "mes(es)"];
+  static const escalasValidas = [
+    "hora(s)",
+    "dia(s)",
+    "semana(s)",
+    "mes(es)",
+    "hora",
+    "dia",
+    "semana",
+    "mes"
+  ];
   static int minValorDuracion = 0;
   static int maxValorDuracion = 99;
 

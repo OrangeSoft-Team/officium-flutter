@@ -23,7 +23,7 @@ class _$OfertaLaboralTearOff {
       Fecha? fechaModificacion,
       required Cargo cargo,
       required Sueldo sueldo,
-      required DescripcionOferta descripcionOferta,
+      DescripcionOferta? descripcionOferta,
       required Duracion duracion,
       required TurnoTrabajo turno,
       required NumeroVacantes numeroVacantes,
@@ -59,7 +59,8 @@ mixin _$OfertaLaboral {
   Fecha? get fechaModificacion => throw _privateConstructorUsedError;
   Cargo get cargo => throw _privateConstructorUsedError;
   Sueldo get sueldo => throw _privateConstructorUsedError;
-  DescripcionOferta get descripcionOferta => throw _privateConstructorUsedError;
+  DescripcionOferta? get descripcionOferta =>
+      throw _privateConstructorUsedError;
   Duracion get duracion => throw _privateConstructorUsedError;
   TurnoTrabajo get turno => throw _privateConstructorUsedError;
   NumeroVacantes get numeroVacantes => throw _privateConstructorUsedError;
@@ -84,7 +85,7 @@ abstract class $OfertaLaboralCopyWith<$Res> {
       Fecha? fechaModificacion,
       Cargo cargo,
       Sueldo sueldo,
-      DescripcionOferta descripcionOferta,
+      DescripcionOferta? descripcionOferta,
       Duracion duracion,
       TurnoTrabajo turno,
       NumeroVacantes numeroVacantes,
@@ -146,7 +147,7 @@ class _$OfertaLaboralCopyWithImpl<$Res>
       descripcionOferta: descripcionOferta == freezed
           ? _value.descripcionOferta
           : descripcionOferta // ignore: cast_nullable_to_non_nullable
-              as DescripcionOferta,
+              as DescripcionOferta?,
       duracion: duracion == freezed
           ? _value.duracion
           : duracion // ignore: cast_nullable_to_non_nullable
@@ -189,7 +190,7 @@ abstract class _$OfertaLaboralCopyWith<$Res>
       Fecha? fechaModificacion,
       Cargo cargo,
       Sueldo sueldo,
-      DescripcionOferta descripcionOferta,
+      DescripcionOferta? descripcionOferta,
       Duracion duracion,
       TurnoTrabajo turno,
       NumeroVacantes numeroVacantes,
@@ -253,7 +254,7 @@ class __$OfertaLaboralCopyWithImpl<$Res>
       descripcionOferta: descripcionOferta == freezed
           ? _value.descripcionOferta
           : descripcionOferta // ignore: cast_nullable_to_non_nullable
-              as DescripcionOferta,
+              as DescripcionOferta?,
       duracion: duracion == freezed
           ? _value.duracion
           : duracion // ignore: cast_nullable_to_non_nullable
@@ -293,7 +294,7 @@ class _$_OfertaLaboral extends _OfertaLaboral {
       this.fechaModificacion,
       required this.cargo,
       required this.sueldo,
-      required this.descripcionOferta,
+      this.descripcionOferta,
       required this.duracion,
       required this.turno,
       required this.numeroVacantes,
@@ -315,7 +316,7 @@ class _$_OfertaLaboral extends _OfertaLaboral {
   @override
   final Sueldo sueldo;
   @override
-  final DescripcionOferta descripcionOferta;
+  final DescripcionOferta? descripcionOferta;
   @override
   final Duracion duracion;
   @override
@@ -405,7 +406,7 @@ abstract class _OfertaLaboral extends OfertaLaboral implements IEntitidad {
       Fecha? fechaModificacion,
       required Cargo cargo,
       required Sueldo sueldo,
-      required DescripcionOferta descripcionOferta,
+      DescripcionOferta? descripcionOferta,
       required Duracion duracion,
       required TurnoTrabajo turno,
       required NumeroVacantes numeroVacantes,
@@ -427,7 +428,8 @@ abstract class _OfertaLaboral extends OfertaLaboral implements IEntitidad {
   @override
   Sueldo get sueldo => throw _privateConstructorUsedError;
   @override
-  DescripcionOferta get descripcionOferta => throw _privateConstructorUsedError;
+  DescripcionOferta? get descripcionOferta =>
+      throw _privateConstructorUsedError;
   @override
   Duracion get duracion => throw _privateConstructorUsedError;
   @override

@@ -1,11 +1,9 @@
-import 'dart:developer' as developer;
-
-import 'package:injectable/injectable.dart';
-import 'package:officium_flutter/dominio/oferta_laboral/excepciones_dominio/oferta_laboral_excepciones.dart';
-import 'package:officium_flutter/dominio/oferta_laboral/entidades/postulacion_oferta.dart';
-import 'package:officium_flutter/dominio/oferta_laboral/entidades/oferta_laboral.dart';
-import 'package:officium_flutter/dominio/comun/value_objects/identificador.dart';
 import 'package:dartz/dartz.dart';
+import 'package:injectable/injectable.dart';
+import 'package:officium_flutter/dominio/comun/value_objects/identificador.dart';
+import 'package:officium_flutter/dominio/oferta_laboral/entidades/oferta_laboral.dart';
+import 'package:officium_flutter/dominio/oferta_laboral/entidades/postulacion_oferta.dart';
+import 'package:officium_flutter/dominio/oferta_laboral/excepciones_dominio/oferta_laboral_excepciones.dart';
 import 'package:officium_flutter/dominio/oferta_laboral/servicios_dominio/repositorio/i_oferta_laboral_repositorio.dart';
 import 'package:officium_flutter/dominio/oferta_laboral/value_objects/postulacion_oferta_laboral/comentario_postulacion.dart';
 import 'package:officium_flutter/infraestructura/oferta_laboral/fuentes/i_oferta_laboral_fuente.dart';
@@ -65,7 +63,7 @@ class OfertaLaboralRepositorio implements IOfertaLaboralRepositorio {
       }
       yield Right(ofertasLaborales);
     } catch (e) {
-      yield Left(OfertaLaboralExcepcion.errorServidor());
+      yield const Left(OfertaLaboralExcepcion.errorServidor());
     }
   }
 

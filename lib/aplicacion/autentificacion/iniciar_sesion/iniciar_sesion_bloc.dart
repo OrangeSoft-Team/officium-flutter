@@ -51,8 +51,7 @@ class IniciarSesionBloc extends Bloc<IniciarSesionEvent, IniciarSesionState> {
     })
         forwardedCall,
   ) async* {
-    Either<ExcepcionAutentificacion, Unit> exitoOFallo =
-        const Right<ExcepcionAutentificacion, Unit>(unit);
+    Either<ExcepcionAutentificacion, Unit> exitoOFallo;
 
     final esEmailValido = state.email.isValid();
     final esPasswordValido = state.password.isValid();
@@ -63,14 +62,17 @@ class IniciarSesionBloc extends Bloc<IniciarSesionEvent, IniciarSesionState> {
         opcionDeErrorOExitoDeLogin: none(),
       );
 
-      exitoOFallo = await _iAutentificacionFachada.loginConEmailAndPassword(
+      exitoOFallo = await forwardedCall(
           emailAddress: state.email, password: state.password);
+
+      yield state.copyWith(
+          estaLogueando: false, opcionDeErrorOExitoDeLogin: some(exitoOFallo));
     }
 
     yield state.copyWith(
       estaLogueando: false,
       mostrarMensajesDeError: true,
-      opcionDeErrorOExitoDeLogin: optionOf(exitoOFallo),
+      opcionDeErrorOExitoDeLogin: none(),
     );
   }
 }

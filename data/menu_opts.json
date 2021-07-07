@@ -1,0 +1,15 @@
+{
+    "nombreApp" : "Componentes",
+    "rutas" : [
+        {
+            "ruta" : "ver_ofertas_laborales",
+            "icon" : "task_sharp",
+            "texto": "Ver Ofertas Laborales"
+        },
+        {
+            "ruta" : "consultar_postulaciones",
+            "icon" : "assessment_outlined",
+            "texto": "Consultar Postulaciones"
+        }
+    ]
+}
