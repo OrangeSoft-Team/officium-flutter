@@ -13,9 +13,9 @@ import 'package:officium_flutter/infraestructura/oferta_laboral/modelos/postulac
 import 'i_oferta_laboral_fuente.dart';
 
 // ignore: constant_identifier_names
-const DIR_SPRING = 'orangesoft.ddns.net:3000';
+const DIR_SPRING = 'http://orangesoft.ddns.net:3000';
 // ignore: constant_identifier_names
-const DIR_NEST = 'DIR_NEST/api';
+const DIR_NEST = 'http://officium-nest.ddns.net:2000';
 
 @LazySingleton(as: IOfertaLaboralFuente)
 class OfertaLaboralFuente implements IOfertaLaboralFuente {
@@ -28,21 +28,11 @@ class OfertaLaboralFuente implements IOfertaLaboralFuente {
       PostulacionOfertaLaboralDTO postulacionOfertaLaboral) async {
     final client2 = HttpClient();
     final bodyJson = jsonEncode(postulacionOfertaLaboral);
-    final request = await client2
-        .postUrl(Uri.parse("http://orangesoft.ddns.net:3000/postulaciones"));
+    final request = await client2.postUrl(Uri.parse("$DIR_NEST/postulaciones"));
     request.headers
         .set(HttpHeaders.contentTypeHeader, "application/json; charset=UTF-8");
     request.write(bodyJson);
     final response = await request.close();
-    // final response = await cliente.post(
-    //     Uri.parse('https://$DIR_SPRING/postulaciones'),
-    //     // Uri.parse('$DIR_SPRING/ofertas_laborales/${uuidOferta.getOrCrash()}'),
-    //     headers: {
-    //       'Content-Type': 'application/json',
-    //     },
-    //     body: postulacionOfertaLaboral);
-    // const varae = 10000;
-    // final avfe = response;
     if (response.statusCode == 201) {
       return unit;
     } else {
@@ -55,7 +45,7 @@ class OfertaLaboralFuente implements IOfertaLaboralFuente {
       Identificador uuidOfertaLaboral) async {
     final response = await cliente.get(
       Uri.parse(
-          '$DIR_SPRING/ofertas_laborales/${uuidOfertaLaboral.getOrCrash()}'),
+          '$DIR_NEST/api/ofertas_laborales/${uuidOfertaLaboral.getOrCrash()}'),
       headers: {
         'Content-Type': 'application/json',
       },
@@ -74,7 +64,7 @@ class OfertaLaboralFuente implements IOfertaLaboralFuente {
     final List<OfertaLaboralDTO> listaDeOfertas = <OfertaLaboralDTO>[];
 
     final response = await cliente.get(
-      Uri.parse('http://$DIR_SPRING/ofertas_laborales'),
+      Uri.parse('$DIR_NEST/api/empleado/ofertas_laborales'),
       headers: {
         'Content-Type': 'application/json',
       },

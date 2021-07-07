@@ -59,7 +59,7 @@ class DetalleOfertaPage extends StatelessWidget {
                 Align(
                   alignment: Alignment.centerLeft,
                   child: Text(
-                    'Descripción: ${oferta.descripcionOferta.getOrCrash()}',
+                    'Descripción: ${oferta.descripcionOferta?.getOrCrash()}',
                     style: const TextStyle(fontSize: 18),
                   ),
                 ),
