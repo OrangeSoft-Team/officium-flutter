@@ -6,6 +6,7 @@
     "sueldo": 1000.0, 
     "duracionEstimadaValor": 30, 
     "duracionEstimadaEscala": "dia(s)", 
+    "descripcion": "Test descripcion minimo 32 caracteres",
     "turnoTrabajo": "Diurno", 
     "numeroVacantes": 5, 
     "empresaNombre": "empresaNombre" 

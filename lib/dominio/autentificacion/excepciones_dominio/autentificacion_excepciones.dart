@@ -10,4 +10,5 @@ abstract class ExcepcionAutentificacion with _$ExcepcionAutentificacion {
   const factory ExcepcionAutentificacion.emailEnUso() = EmailEnUso;
   const factory ExcepcionAutentificacion.emailYPasswordInvalidas() =
       EmailYPasswordInvalidas;
+  const factory ExcepcionAutentificacion.cuentaExistente() = CuentaExistente;
 }
