@@ -2,13 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:officium_flutter/aplicacion/autentificacion/estado_autentificacion/estado_autentificacion_bloc.dart';
 import 'package:officium_flutter/aplicacion/autentificacion/iniciar_sesion/iniciar_sesion_bloc.dart';
+import 'package:officium_flutter/aplicacion/autentificacion/registro/registro_bloc.dart';
 
-class FormularioInicioSesion extends StatelessWidget {
+class FormularioRegistro extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return BlocConsumer<IniciarSesionBloc, IniciarSesionState>(
+    return BlocConsumer<RegistroBloc, RegistroState>(
       listener: (context, state) {
-        state.opcionDeErrorOExitoDeLogin.fold(
+        state.opcionDeErrorOExitoDeRegistro.fold(
           () {},
           (either) => either.fold(
             (failure) {
@@ -43,7 +44,7 @@ class FormularioInicioSesion extends StatelessWidget {
       },
       builder: (context, state) {
         return Form(
-          autovalidateMode: state.mostrarMensajesDeError
+          autovalidateMode: state.mostrarMensajesError
               ? AutovalidateMode.always
               : AutovalidateMode.disabled,
           child: ListView(

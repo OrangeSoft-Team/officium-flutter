@@ -30,7 +30,6 @@ class OfertaLaboralRepositorio implements IOfertaLaboralRepositorio {
 
     try {
       nuevaPostulacionOfertaLaboral = PostulacionOfertaLaboralDTO(
-          id: Identificador().getOrCrash(),
           uuidOfertaLaboral: uuidOferta.getOrCrash(),
           uuidEmpleado: uuidEmpleado.getOrCrash(),
           uuidEmpresa: uuidEmpresa.getOrCrash(),
