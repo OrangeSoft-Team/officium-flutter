@@ -85,40 +85,4 @@ void main() {
           expect(result, equals(tPostulacionOfertaLaboral));
       });
     });
-    
 }
-
-
-/**
- * Expected: Right<dynamic, OfertaLaboral>:
- * <Right(
- * OfertaLaboral(
- * uuid: Value(Right(1)), 
- * titulo: Value(Right(titulo)), 
- * fechaPublicacion: Value(Right(2021-03-27 19:00:00.000Z)), 
- * fechaModificacion: Value(Right(2021-04-27 19:00:00.000Z)), 
- * cargo: Value(Right(cargo)), 
- * sueldo: Value(Right(1000.0)), 
- * descripcionOferta: Value(Right(Test descripcion debe tener 32 caracteres minimoooooooooooooooo)), 
- * duracion: Value(Right(Instance of 'DuracionEscala')), 
- * turno: Value(Right(Diurno)), 
- * numeroVacantes: Value(Right(5)), 
- * uuidEmpresa: Value(Right(1)), 
- * estadoOferta: Value(Right(publicado)), nombreEmpresa: Value(Right(empresaNombre))))>
-   Actual: Right<OfertaLaboralExcepcion, 
-   OfertaLaboral>:<Right(
-   OfertaLaboral(
-   uuid: Value(Right(1)), 
-   titulo: Value(Right(titulo)), 
-   fechaPublicacion: Value(Right(2021-03-27 19:00:00.000Z)), 
-   fechaModificacion: Value(Right(2021-04-27 19:00:00.000Z)), 
-   cargo: Value(Right(cargo)), 
-   sueldo: Value(Right(1000.0)), 
-   descripcionOferta: 
-   Value(Right(Test descripcion debe tener 32 caracteres minimoooooooooooooooo)),
-   duracion: Value(Right(Instance of 'DuracionEscala')), 
-   turno: Value(Right(Diurno)), numeroVacantes: Value(Right(5)), 
-   uuidEmpresa: Value(Right(1)), 
-   estadoOferta: Value(Right(publicado)), 
-   nombreEmpresa: Value(Right(empresaNombre))))>
- */
