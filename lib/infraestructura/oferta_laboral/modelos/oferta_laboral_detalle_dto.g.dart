@@ -12,7 +12,7 @@ _$_OfertaLaboralDetalleDTO _$_$_OfertaLaboralDetalleDTOFromJson(
     uuid: json['uuid'] as String,
     titulo: json['titulo'] as String,
     fechaPublicacion: json['fechaPublicacion'] as String,
-    fechaModificacion: json['fechaModificacion'] as String,
+    fechaModificacion: json['fechaModificacion'] as String?,
     cargo: json['cargo'] as String,
     sueldo: (json['sueldo'] as num).toDouble(),
     descripcion: json['descripcion'] as String,

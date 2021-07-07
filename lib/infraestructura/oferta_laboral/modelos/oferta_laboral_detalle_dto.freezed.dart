@@ -25,7 +25,7 @@ class _$OfertaLaboralDetalleDTOTearOff {
       {required String uuid,
       required String titulo,
       required String fechaPublicacion,
-      required String fechaModificacion,
+      String? fechaModificacion,
       required String cargo,
       required double sueldo,
       required String descripcion,
@@ -67,7 +67,7 @@ mixin _$OfertaLaboralDetalleDTO {
   String get uuid => throw _privateConstructorUsedError;
   String get titulo => throw _privateConstructorUsedError;
   String get fechaPublicacion => throw _privateConstructorUsedError;
-  String get fechaModificacion => throw _privateConstructorUsedError;
+  String? get fechaModificacion => throw _privateConstructorUsedError;
   String get cargo => throw _privateConstructorUsedError;
   double get sueldo => throw _privateConstructorUsedError;
   String get descripcion => throw _privateConstructorUsedError;
@@ -94,7 +94,7 @@ abstract class $OfertaLaboralDetalleDTOCopyWith<$Res> {
       {String uuid,
       String titulo,
       String fechaPublicacion,
-      String fechaModificacion,
+      String? fechaModificacion,
       String cargo,
       double sueldo,
       String descripcion,
@@ -149,7 +149,7 @@ class _$OfertaLaboralDetalleDTOCopyWithImpl<$Res>
       fechaModificacion: fechaModificacion == freezed
           ? _value.fechaModificacion
           : fechaModificacion // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       cargo: cargo == freezed
           ? _value.cargo
           : cargo // ignore: cast_nullable_to_non_nullable
@@ -205,7 +205,7 @@ abstract class _$OfertaLaboralDetalleDTOCopyWith<$Res>
       {String uuid,
       String titulo,
       String fechaPublicacion,
-      String fechaModificacion,
+      String? fechaModificacion,
       String cargo,
       double sueldo,
       String descripcion,
@@ -263,7 +263,7 @@ class __$OfertaLaboralDetalleDTOCopyWithImpl<$Res>
       fechaModificacion: fechaModificacion == freezed
           ? _value.fechaModificacion
           : fechaModificacion // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       cargo: cargo == freezed
           ? _value.cargo
           : cargo // ignore: cast_nullable_to_non_nullable
@@ -315,7 +315,7 @@ class _$_OfertaLaboralDetalleDTO extends _OfertaLaboralDetalleDTO {
       {required this.uuid,
       required this.titulo,
       required this.fechaPublicacion,
-      required this.fechaModificacion,
+      this.fechaModificacion,
       required this.cargo,
       required this.sueldo,
       required this.descripcion,
@@ -338,7 +338,7 @@ class _$_OfertaLaboralDetalleDTO extends _OfertaLaboralDetalleDTO {
   @override
   final String fechaPublicacion;
   @override
-  final String fechaModificacion;
+  final String? fechaModificacion;
   @override
   final String cargo;
   @override
@@ -444,7 +444,7 @@ abstract class _OfertaLaboralDetalleDTO extends OfertaLaboralDetalleDTO {
       {required String uuid,
       required String titulo,
       required String fechaPublicacion,
-      required String fechaModificacion,
+      String? fechaModificacion,
       required String cargo,
       required double sueldo,
       required String descripcion,
@@ -467,7 +467,7 @@ abstract class _OfertaLaboralDetalleDTO extends OfertaLaboralDetalleDTO {
   @override
   String get fechaPublicacion => throw _privateConstructorUsedError;
   @override
-  String get fechaModificacion => throw _privateConstructorUsedError;
+  String? get fechaModificacion => throw _privateConstructorUsedError;
   @override
   String get cargo => throw _privateConstructorUsedError;
   @override

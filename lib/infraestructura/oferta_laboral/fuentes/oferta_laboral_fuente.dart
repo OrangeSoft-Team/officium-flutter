@@ -43,20 +43,29 @@ class OfertaLaboralFuente implements IOfertaLaboralFuente {
   @override
   Future<OfertaLaboralDetalleDTO> obtenerDetalleOfertasLaboral(
       Identificador uuidOfertaLaboral) async {
+    final OfertaLaboralDetalleDTO detalleOferta;
     final response = await cliente.get(
       Uri.parse(
-          '$DIR_NEST/api/ofertas_laborales/${uuidOfertaLaboral.getOrCrash()}'),
+          '$DIR_NEST/api/empleado/ofertas_laborales/${uuidOfertaLaboral.getOrCrash()}'),
       headers: {
         'Content-Type': 'application/json',
       },
     );
 
     if (response.statusCode == 200) {
-      return OfertaLaboralDetalleDTO.fromJson(
-          json.decode(response.body) as Map<String, dynamic>);
+      final Map<String, dynamic> ofertaLaboral =
+          Map<String, dynamic>.from(jsonDecode(response.body) as Map);
+      return OfertaLaboralDetalleDTO.fromJson(ofertaLaboral);
     } else {
       throw ServerException();
     }
+
+    // if (response.statusCode == 200) {
+    //   return OfertaLaboralDetalleDTO.fromJson(
+    //       json.decode(response.body) as Map<String, dynamic>);
+    // } else {
+    //   throw ServerException();
+    // }
   }
 
   @override

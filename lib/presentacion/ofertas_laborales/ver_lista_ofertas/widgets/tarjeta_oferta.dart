@@ -64,7 +64,7 @@ class TarjetaOferta extends StatelessWidget {
                       Navigator.pushNamed(
                         context,
                         'ver_detalle_ofertas_laborales',
-                        arguments: oferta,
+                        arguments: oferta.uuid,
                       );
                     },
                     child: const Text('Ver detalles'),
