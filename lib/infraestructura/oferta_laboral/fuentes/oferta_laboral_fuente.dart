@@ -28,9 +28,10 @@ class OfertaLaboralFuente implements IOfertaLaboralFuente {
       PostulacionOfertaLaboralDTO postulacionOfertaLaboral) async {
     final client2 = HttpClient();
     final bodyJson = jsonEncode(postulacionOfertaLaboral);
-    final request = await client2.postUrl(Uri.parse("$DIR_NEST/postulaciones"));
+    final request = await client2.postUrl(Uri.parse(
+        "$DIR_NEST/api/empleado/ofertas_laborales/${postulacionOfertaLaboral.uuidOfertaLaboral}"));
     request.headers
-        .set(HttpHeaders.contentTypeHeader, "application/json; charset=UTF-8");
+        .add(HttpHeaders.contentTypeHeader, "application/json; charset=UTF-8");
     request.write(bodyJson);
     final response = await request.close();
     if (response.statusCode == 201) {

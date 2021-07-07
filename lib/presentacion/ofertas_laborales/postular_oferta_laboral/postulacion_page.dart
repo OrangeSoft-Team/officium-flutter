@@ -99,8 +99,9 @@ class _PostularPageState extends State<PostularPage> {
                             context.read<PostularOfertaLaboralBloc>().add(
                                 PostularOfertaLaboralEvent.postulacionRealizada(
                                     oferta.uuid,
-                                    Identificador(),
-                                    Identificador()));
+                                    Identificador.fromUniqueString(
+                                        "33333333-3333-3333-3333-333333333333"),
+                                    oferta.uuidEmpresa!));
                           },
                           child: const Text('Enviar Postulacion'),
                         ),
