@@ -26,6 +26,7 @@ import 'package:officium_flutter/presentacion/ofertas_laborales/consultar_postul
 import 'package:officium_flutter/presentacion/ofertas_laborales/postular_oferta_laboral/postulacion_page.dart';
 import 'package:officium_flutter/presentacion/ofertas_laborales/ver_detalle_oferta/detalle_oferta_laboral_page.dart';
 import 'package:officium_flutter/presentacion/ofertas_laborales/ver_lista_ofertas/ver_lista_ofertas_page.dart';
+import 'package:officium_flutter/presentacion/registro/registro_page.dart';
 
 Map<String, WidgetBuilder> getRutasAplicacion() {
   return <String, WidgetBuilder>{
@@ -49,5 +50,6 @@ Map<String, WidgetBuilder> getRutasAplicacion() {
     'consultar_postulaciones': (BuildContext context) =>
         ConsultarPostulacionesPage(),
     'postular': (BuildContext context) => PostularPage(),
+    'registro': (BuildContext context) => RegistroPage(),
   };
 }

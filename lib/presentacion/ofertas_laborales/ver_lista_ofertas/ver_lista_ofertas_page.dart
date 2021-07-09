@@ -35,14 +35,6 @@ class VerListaOfertasPage extends StatelessWidget {
                 Navigator.pop(context);
               },
             ),
-            actions: <IconButton>[
-              IconButton(
-                icon: const Icon(Icons.home),
-                onPressed: () {
-                  Navigator.pushNamed(context, 'home');
-                },
-              ),
-            ],
           ),
           body: ListaOfertas(),
           floatingActionButton: FloatingActionButton(

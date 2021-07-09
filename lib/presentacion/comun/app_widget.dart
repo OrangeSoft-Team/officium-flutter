@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:officium_flutter/aplicacion/autentificacion/estado_autentificacion/estado_autentificacion_bloc.dart';
 import 'package:officium_flutter/inyeccion.dart';
 import 'package:officium_flutter/presentacion/routes/router.dart';
@@ -23,6 +24,14 @@ class AppState extends StatelessWidget {
           initialRoute: '/',
           routes: getRutasAplicacion(),
           title: 'Officcium',
+          localizationsDelegates: const [
+            GlobalMaterialLocalizations.delegate,
+            GlobalWidgetsLocalizations.delegate,
+          ],
+          supportedLocales: const [
+            Locale('en', 'US'), // English
+            Locale('es', 'ES'),
+          ],
           debugShowCheckedModeBanner: false,
           theme: ThemeData(
             iconTheme: Theme.of(context).iconTheme.copyWith(

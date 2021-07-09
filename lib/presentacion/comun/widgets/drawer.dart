@@ -31,12 +31,7 @@ class DrawerUsuario extends StatelessWidget {
           ListTile(
             title: const Text("Cerrar sesión"),
             trailing: const Icon(Icons.logout, color: Colors.red),
-            onTap: () {
-              context
-                  .read<EstadoAutentificacionBloc>()
-                  .add(const EstadoAutentificacionEvent.cerrarSesion());
-              Navigator.pushNamed(context, '/');
-            },
+            onTap: () => _mostrarAlerta(context),
           ),
         ],
       ),
@@ -62,5 +57,40 @@ class DrawerUsuario extends StatelessWidget {
     //     ),
     //   );
     // }
+  }
+
+  void _mostrarAlerta(BuildContext context) {
+    showDialog(
+        context: context,
+        barrierDismissible: true,
+        builder: (context) {
+          return AlertDialog(
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(20.0)),
+            title: Text('Cerrar sesión'),
+            content: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                const Text('¿Seguro que desea cerrar sesión en Officium?'),
+              ],
+            ),
+            actions: <Widget>[
+              TextButton(
+                child: const Text('Cancelar'),
+                onPressed: () => Navigator.of(context).pop(),
+              ),
+              TextButton(
+                child: Text('Cerrar sesión'),
+                onPressed: () {
+                  context
+                      .read<EstadoAutentificacionBloc>()
+                      .add(const EstadoAutentificacionEvent.cerrarSesion());
+                  Navigator.pushNamedAndRemoveUntil(
+                      context, '/', (route) => false);
+                },
+              ),
+            ],
+          );
+        });
   }
 }
