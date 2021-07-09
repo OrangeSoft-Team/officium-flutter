@@ -2,8 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:officium_flutter/aplicacion/autentificacion/estado_autentificacion/estado_autentificacion_bloc.dart';
 import 'package:officium_flutter/aplicacion/autentificacion/iniciar_sesion/iniciar_sesion_bloc.dart';
+import 'package:officium_flutter/presentacion/iniciar_sesion/widgets/password_widget.dart';
 
-class FormularioInicioSesion extends StatelessWidget {
+class FormularioInicioSesion extends StatefulWidget {
+  @override
+  State<FormularioInicioSesion> createState() => _FormularioInicioSesionState();
+}
+
+class _FormularioInicioSesionState extends State<FormularioInicioSesion> {
+  final TextEditingController _passwordController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<IniciarSesionBloc, IniciarSesionState>(
@@ -71,6 +78,7 @@ class FormularioInicioSesion extends StatelessWidget {
                 validator: (_) =>
                     context.read<IniciarSesionBloc>().state.email.value.fold(
                           (f) => f.maybeMap(
+                            stringVacio: (_) => 'Debe introducir un email',
                             emailInvalido: (_) => 'Email invalido',
                             orElse: () => null,
                           ),
@@ -80,30 +88,8 @@ class FormularioInicioSesion extends StatelessWidget {
               const SizedBox(
                 height: 8,
               ),
-              TextFormField(
-                decoration: const InputDecoration(
-                  prefixIcon: Icon(Icons.lock),
-                  labelText: 'Contraseña',
-                ),
-                autocorrect: false,
-                obscureText: true,
-                onChanged: (value) => context
-                    .read<IniciarSesionBloc>()
-                    .add(IniciarSesionEvent.passwordCambiado(value)),
-                validator: (value) => context
-                    .read<IniciarSesionBloc>()
-                    .state
-                    .password
-                    .value
-                    .fold(
-                      (f) => f.maybeMap(
-                        contrasenaCorta: (_) => 'La contraseña es muy corta.',
-                        contrasenaLarga: (_) => 'La contraseña es muy larga.',
-                        contrasenaVacia: (_) => 'La contraseña está vacia.',
-                        orElse: () => null,
-                      ),
-                      (_) => null,
-                    ),
+              PasswordWidget(
+                controller: _passwordController,
               ),
               const SizedBox(
                 height: 8,
@@ -127,14 +113,17 @@ class FormularioInicioSesion extends StatelessWidget {
                       child: Container(
                     margin: const EdgeInsets.all(5),
                     child: OutlinedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, 'registro');
+                      },
                       child: const Text('Registrarse'),
                     ),
                   )),
                 ],
               ),
               TextButton(
-                onPressed: () => Navigator.pushNamed(context, 'home'),
+                onPressed: () =>
+                    Navigator.pushReplacementNamed(context, 'home'),
                 child: const Text('Saltar Login'),
               ),
             ],
