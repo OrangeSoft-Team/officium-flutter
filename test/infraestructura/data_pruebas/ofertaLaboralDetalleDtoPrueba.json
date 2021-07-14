@@ -1,8 +1,8 @@
 {
     "uuid": "1", 
     "titulo": "titulo",
-    "fechaPublicacion":"2021-03-27T19:00:00Z", 
-    "fechaModificacion":"2021-04-27T19:00:00Z",
+    "fechaPublicacion":"27/03/2021", 
+    "fechaModificacion":"27/04/2021",
     "cargo": "cargo", 
     "sueldo": 1000.0, 
     "descripcion":"Test descripcion debe tener 32 caracteres minimoooooooooooooooo",
