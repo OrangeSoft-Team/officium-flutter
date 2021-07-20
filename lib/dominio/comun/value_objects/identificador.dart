@@ -1,7 +1,6 @@
 import 'package:dartz/dartz.dart' show Either, right;
-import 'package:uuid/uuid.dart';
-
 import 'package:officium_flutter/dominio/comun/excepciones_dominio/valores_errones_value_object/factoria_valor_erroneo.dart';
+import 'package:uuid/uuid.dart';
 
 import '../value_object.dart';
 

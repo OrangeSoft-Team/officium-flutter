@@ -1,24 +1,21 @@
 import 'dart:convert';
+import 'dart:io';
 
-import 'package:flutter/services.dart';
+import 'package:dartz/dartz.dart';
+import 'package:http/http.dart' as http;
 import 'package:injectable/injectable.dart';
-import 'package:officium_flutter/dominio/oferta_laboral/entidades/postulacion_oferta.dart';
-import 'package:officium_flutter/dominio/oferta_laboral/value_objects/postulacion_oferta_laboral/comentario_postulacion.dart';
+import 'package:officium_flutter/dominio/comun/value_objects/identificador.dart';
 import 'package:officium_flutter/infraestructura/comun/excepciones.dart';
 import 'package:officium_flutter/infraestructura/oferta_laboral/modelos/oferta_laboral_detalle_dto.dart';
 import 'package:officium_flutter/infraestructura/oferta_laboral/modelos/oferta_laboral_dto.dart';
-
-import 'package:officium_flutter/dominio/comun/value_objects/identificador.dart';
-
-import 'package:dartz/dartz.dart';
-
-import 'package:http/http.dart' as http;
 import 'package:officium_flutter/infraestructura/oferta_laboral/modelos/postulacion_oferta_laboral_dto.dart';
 
 import 'i_oferta_laboral_fuente.dart';
 
-const DIR_SPRING = 'orangesoft.ddns.net:3000';
-const DIR_NEST = 'DIR_NEST/api';
+// ignore: constant_identifier_names
+const DIR_SPRING = 'http://orangesoft.ddns.net:3000';
+// ignore: constant_identifier_names
+const DIR_NEST = 'http://officium-nest.ddns.net:2000';
 
 @LazySingleton(as: IOfertaLaboralFuente)
 class OfertaLaboralFuente implements IOfertaLaboralFuente {
@@ -29,15 +26,15 @@ class OfertaLaboralFuente implements IOfertaLaboralFuente {
   @override
   Future<Unit> aplicarOfertaLaboral(Identificador uuidOferta,
       PostulacionOfertaLaboralDTO postulacionOfertaLaboral) async {
-    final response = await cliente.post(
-        Uri.parse('http://$DIR_SPRING/postulaciones'),
-        // Uri.parse('$DIR_SPRING/ofertas_laborales/${uuidOferta.getOrCrash()}'),
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: postulacionOfertaLaboral);
-
-    if (response.statusCode == 200) {
+    final client2 = HttpClient();
+    final bodyJson = jsonEncode(postulacionOfertaLaboral);
+    final request = await client2.postUrl(Uri.parse(
+        "$DIR_NEST/api/empleado/ofertas_laborales/${postulacionOfertaLaboral.uuidOfertaLaboral}"));
+    request.headers
+        .add(HttpHeaders.contentTypeHeader, "application/json; charset=UTF-8");
+    request.write(bodyJson);
+    final response = await request.close();
+    if (response.statusCode == 201) {
       return unit;
     } else {
       throw ServerException();
@@ -49,15 +46,16 @@ class OfertaLaboralFuente implements IOfertaLaboralFuente {
       Identificador uuidOfertaLaboral) async {
     final response = await cliente.get(
       Uri.parse(
-          '$DIR_SPRING/ofertas_laborales/${uuidOfertaLaboral.getOrCrash()}'),
+          '$DIR_NEST/api/empleado/ofertas_laborales/${uuidOfertaLaboral.getOrCrash()}'),
       headers: {
         'Content-Type': 'application/json',
       },
     );
 
     if (response.statusCode == 200) {
-      return OfertaLaboralDetalleDTO.fromJson(
-          json.decode(response.body) as Map<String, dynamic>);
+      final Map<String, dynamic> ofertaLaboral =
+          Map<String, dynamic>.from(jsonDecode(response.body) as Map);
+      return OfertaLaboralDetalleDTO.fromJson(ofertaLaboral);
     } else {
       throw ServerException();
     }
@@ -68,7 +66,7 @@ class OfertaLaboralFuente implements IOfertaLaboralFuente {
     final List<OfertaLaboralDTO> listaDeOfertas = <OfertaLaboralDTO>[];
 
     final response = await cliente.get(
-      Uri.parse('http://$DIR_SPRING/ofertas_laborales'),
+      Uri.parse('$DIR_NEST/api/empleado/ofertas_laborales'),
       headers: {
         'Content-Type': 'application/json',
       },
@@ -84,6 +82,5 @@ class OfertaLaboralFuente implements IOfertaLaboralFuente {
     } else {
       throw ServerException();
     }
-    return listaDeOfertas;
   }
 }

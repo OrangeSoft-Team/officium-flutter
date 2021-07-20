@@ -14,7 +14,7 @@ class EstadoAutentificacionBloc
     extends Bloc<EstadoAutentificacionEvent, EstadoAutentificacionState> {
   final IAutentificacionFachada iAutentificacionFachada;
   EstadoAutentificacionBloc(this.iAutentificacionFachada)
-      : super(const _Inicial());
+      : super(const EstadoAutentificacionState.inicial());
 
   @override
   Stream<EstadoAutentificacionState> mapEventToState(

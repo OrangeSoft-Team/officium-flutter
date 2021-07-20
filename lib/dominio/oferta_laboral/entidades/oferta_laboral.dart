@@ -26,7 +26,7 @@ abstract class OfertaLaboral implements _$OfertaLaboral {
     Fecha? fechaModificacion,
     required Cargo cargo,
     required Sueldo sueldo,
-    required DescripcionOferta descripcionOferta,
+    DescripcionOferta? descripcionOferta,
     required Duracion duracion,
     required TurnoTrabajo turno,
     required NumeroVacantes numeroVacantes,

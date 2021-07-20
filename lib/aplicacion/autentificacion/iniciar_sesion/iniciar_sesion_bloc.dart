@@ -6,8 +6,8 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
 import 'package:officium_flutter/dominio/autentificacion/excepciones_dominio/autentificacion_excepciones.dart';
 import 'package:officium_flutter/dominio/autentificacion/servicios_dominio/fachadas/i_fachada_autentificacion.dart';
-import 'package:officium_flutter/dominio/autentificacion/vaue_objecs/email.dart';
-import 'package:officium_flutter/dominio/autentificacion/vaue_objecs/password.dart';
+import 'package:officium_flutter/dominio/autentificacion/value_objecs/email.dart';
+import 'package:officium_flutter/dominio/autentificacion/value_objecs/password.dart';
 
 part 'iniciar_sesion_event.dart';
 part 'iniciar_sesion_state.dart';
@@ -51,8 +51,7 @@ class IniciarSesionBloc extends Bloc<IniciarSesionEvent, IniciarSesionState> {
     })
         forwardedCall,
   ) async* {
-    Either<ExcepcionAutentificacion, Unit> exitoOFallo =
-        const Right<ExcepcionAutentificacion, Unit>(unit);
+    Either<ExcepcionAutentificacion, Unit> exitoOFallo;
 
     final esEmailValido = state.email.isValid();
     final esPasswordValido = state.password.isValid();
@@ -63,14 +62,17 @@ class IniciarSesionBloc extends Bloc<IniciarSesionEvent, IniciarSesionState> {
         opcionDeErrorOExitoDeLogin: none(),
       );
 
-      exitoOFallo = await _iAutentificacionFachada.loginConEmailAndPassword(
+      exitoOFallo = await forwardedCall(
           emailAddress: state.email, password: state.password);
+
+      yield state.copyWith(
+          estaLogueando: false, opcionDeErrorOExitoDeLogin: some(exitoOFallo));
     }
 
     yield state.copyWith(
       estaLogueando: false,
       mostrarMensajesDeError: true,
-      opcionDeErrorOExitoDeLogin: optionOf(exitoOFallo),
+      opcionDeErrorOExitoDeLogin: none(),
     );
   }
 }

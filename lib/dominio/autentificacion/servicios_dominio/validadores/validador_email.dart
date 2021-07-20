@@ -6,6 +6,8 @@ Either<ValorErroneo<String>, String> validadorEmailAddress(String email) {
       r"""^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+""";
   if (RegExp(emailRegex).hasMatch(email)) {
     return right(email);
+  } else if (email.isEmpty) {
+    return left(ValorErroneo.stringVacio(valorErroneo: email));
   } else {
     return left(ValorErroneo.emailInvalido(valorErroneo: email));
   }
