@@ -8,7 +8,6 @@ import 'package:officium_flutter/dominio/comun/value_objects/identificador.dart'
 import 'package:officium_flutter/dominio/oferta_laboral/entidades/oferta_laboral.dart';
 import 'package:officium_flutter/dominio/oferta_laboral/excepciones_dominio/oferta_laboral_excepciones.dart';
 import 'package:officium_flutter/dominio/oferta_laboral/servicios_dominio/repositorio/i_oferta_laboral_repositorio.dart';
-import 'package:officium_flutter/dominio/comun/value_objects/identificador.dart';
 
 part 'ver_detalle_oferta_laboral_event.dart';
 part 'ver_detalle_oferta_laboral_state.dart';

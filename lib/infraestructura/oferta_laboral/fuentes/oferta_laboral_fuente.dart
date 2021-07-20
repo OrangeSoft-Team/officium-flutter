@@ -44,7 +44,6 @@ class OfertaLaboralFuente implements IOfertaLaboralFuente {
   @override
   Future<OfertaLaboralDetalleDTO> obtenerDetalleOfertasLaboral(
       Identificador uuidOfertaLaboral) async {
-    final OfertaLaboralDetalleDTO detalleOferta;
     final response = await cliente.get(
       Uri.parse(
           '$DIR_NEST/api/empleado/ofertas_laborales/${uuidOfertaLaboral.getOrCrash()}'),
@@ -60,13 +59,6 @@ class OfertaLaboralFuente implements IOfertaLaboralFuente {
     } else {
       throw ServerException();
     }
-
-    // if (response.statusCode == 200) {
-    //   return OfertaLaboralDetalleDTO.fromJson(
-    //       json.decode(response.body) as Map<String, dynamic>);
-    // } else {
-    //   throw ServerException();
-    // }
   }
 
   @override

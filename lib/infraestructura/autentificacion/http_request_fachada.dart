@@ -3,8 +3,8 @@ import 'package:injectable/injectable.dart';
 
 import 'package:officium_flutter/dominio/autentificacion/excepciones_dominio/autentificacion_excepciones.dart';
 import 'package:officium_flutter/dominio/autentificacion/servicios_dominio/fachadas/i_fachada_autentificacion.dart';
-import 'package:officium_flutter/dominio/autentificacion/vaue_objecs/email.dart';
-import 'package:officium_flutter/dominio/autentificacion/vaue_objecs/password.dart';
+import 'package:officium_flutter/dominio/autentificacion/value_objecs/email.dart';
+import 'package:officium_flutter/dominio/autentificacion/value_objecs/password.dart';
 import 'package:officium_flutter/dominio/empleado/entidades/empleado.dart';
 
 @LazySingleton(as: IAutentificacionFachada)
