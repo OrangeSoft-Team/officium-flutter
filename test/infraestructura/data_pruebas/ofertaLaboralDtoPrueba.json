@@ -1,7 +1,7 @@
 {
     "uuid": "1", 
     "titulo": "titulo",
-    "fechaPublicacion":"2021-03-27T19:00:00Z", 
+    "fechaPublicacion":"27/03/2021", 
     "cargo": "cargo", 
     "sueldo": 1000.0, 
     "duracionEstimadaValor": 30, 
