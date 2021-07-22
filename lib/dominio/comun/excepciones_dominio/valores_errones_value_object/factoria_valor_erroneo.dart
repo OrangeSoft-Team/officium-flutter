@@ -102,4 +102,9 @@ abstract class ValorErroneo<T> with _$ValorErroneo<T> {
   const factory ValorErroneo.duracionEstimadaEscalaVacia({
     required T valorInvalido,
   }) = DuracionEstimadaEscalaVacia<T>;
+
+  const factory ValorErroneo.nivelEducativoInvalido(
+          {required T valorErroneo,
+          required List<String> nivelesEducativosValidos}) =
+      NivelEducativoInvalido<T>;
 }

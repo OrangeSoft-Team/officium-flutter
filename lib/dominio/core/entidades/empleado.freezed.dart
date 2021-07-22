@@ -23,11 +23,16 @@ class _$EmpleadoTearOff {
       required PrimerApellido primerApellido,
       SegundoApellido? segundoApellido,
       required Genero genero,
-      required DireccionCalle direccionCalle,
-      required CodigoPostal codigoPostal,
+      required NivelEducativo nivelEducativo,
       required NumeroTelefonico numeroTelefonico,
+      required FechaNacimiento fechaNacimiento,
+      required CodigoPostal codigoPostal,
+      required DireccionCalle direccionCalleUno,
+      DireccionCalle? direccionCalleDos,
       required bool statusEmpleado,
-      required FechaNacimiento fechaNacimiento}) {
+      required Identificador uuidPais,
+      required Identificador uuidEstado,
+      required Identificador uuidCiudad}) {
     return _Empleado(
       uuid: uuid,
       primerNombre: primerNombre,
@@ -35,11 +40,16 @@ class _$EmpleadoTearOff {
       primerApellido: primerApellido,
       segundoApellido: segundoApellido,
       genero: genero,
-      direccionCalle: direccionCalle,
-      codigoPostal: codigoPostal,
+      nivelEducativo: nivelEducativo,
       numeroTelefonico: numeroTelefonico,
-      statusEmpleado: statusEmpleado,
       fechaNacimiento: fechaNacimiento,
+      codigoPostal: codigoPostal,
+      direccionCalleUno: direccionCalleUno,
+      direccionCalleDos: direccionCalleDos,
+      statusEmpleado: statusEmpleado,
+      uuidPais: uuidPais,
+      uuidEstado: uuidEstado,
+      uuidCiudad: uuidCiudad,
     );
   }
 }
@@ -55,11 +65,16 @@ mixin _$Empleado {
   PrimerApellido get primerApellido => throw _privateConstructorUsedError;
   SegundoApellido? get segundoApellido => throw _privateConstructorUsedError;
   Genero get genero => throw _privateConstructorUsedError;
-  DireccionCalle get direccionCalle => throw _privateConstructorUsedError;
-  CodigoPostal get codigoPostal => throw _privateConstructorUsedError;
+  NivelEducativo get nivelEducativo => throw _privateConstructorUsedError;
   NumeroTelefonico get numeroTelefonico => throw _privateConstructorUsedError;
-  bool get statusEmpleado => throw _privateConstructorUsedError;
   FechaNacimiento get fechaNacimiento => throw _privateConstructorUsedError;
+  CodigoPostal get codigoPostal => throw _privateConstructorUsedError;
+  DireccionCalle get direccionCalleUno => throw _privateConstructorUsedError;
+  DireccionCalle? get direccionCalleDos => throw _privateConstructorUsedError;
+  bool get statusEmpleado => throw _privateConstructorUsedError;
+  Identificador get uuidPais => throw _privateConstructorUsedError;
+  Identificador get uuidEstado => throw _privateConstructorUsedError;
+  Identificador get uuidCiudad => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $EmpleadoCopyWith<Empleado> get copyWith =>
@@ -77,11 +92,16 @@ abstract class $EmpleadoCopyWith<$Res> {
       PrimerApellido primerApellido,
       SegundoApellido? segundoApellido,
       Genero genero,
-      DireccionCalle direccionCalle,
-      CodigoPostal codigoPostal,
+      NivelEducativo nivelEducativo,
       NumeroTelefonico numeroTelefonico,
+      FechaNacimiento fechaNacimiento,
+      CodigoPostal codigoPostal,
+      DireccionCalle direccionCalleUno,
+      DireccionCalle? direccionCalleDos,
       bool statusEmpleado,
-      FechaNacimiento fechaNacimiento});
+      Identificador uuidPais,
+      Identificador uuidEstado,
+      Identificador uuidCiudad});
 }
 
 /// @nodoc
@@ -100,11 +120,16 @@ class _$EmpleadoCopyWithImpl<$Res> implements $EmpleadoCopyWith<$Res> {
     Object? primerApellido = freezed,
     Object? segundoApellido = freezed,
     Object? genero = freezed,
-    Object? direccionCalle = freezed,
-    Object? codigoPostal = freezed,
+    Object? nivelEducativo = freezed,
     Object? numeroTelefonico = freezed,
-    Object? statusEmpleado = freezed,
     Object? fechaNacimiento = freezed,
+    Object? codigoPostal = freezed,
+    Object? direccionCalleUno = freezed,
+    Object? direccionCalleDos = freezed,
+    Object? statusEmpleado = freezed,
+    Object? uuidPais = freezed,
+    Object? uuidEstado = freezed,
+    Object? uuidCiudad = freezed,
   }) {
     return _then(_value.copyWith(
       uuid: uuid == freezed
@@ -131,26 +156,46 @@ class _$EmpleadoCopyWithImpl<$Res> implements $EmpleadoCopyWith<$Res> {
           ? _value.genero
           : genero // ignore: cast_nullable_to_non_nullable
               as Genero,
-      direccionCalle: direccionCalle == freezed
-          ? _value.direccionCalle
-          : direccionCalle // ignore: cast_nullable_to_non_nullable
-              as DireccionCalle,
-      codigoPostal: codigoPostal == freezed
-          ? _value.codigoPostal
-          : codigoPostal // ignore: cast_nullable_to_non_nullable
-              as CodigoPostal,
+      nivelEducativo: nivelEducativo == freezed
+          ? _value.nivelEducativo
+          : nivelEducativo // ignore: cast_nullable_to_non_nullable
+              as NivelEducativo,
       numeroTelefonico: numeroTelefonico == freezed
           ? _value.numeroTelefonico
           : numeroTelefonico // ignore: cast_nullable_to_non_nullable
               as NumeroTelefonico,
-      statusEmpleado: statusEmpleado == freezed
-          ? _value.statusEmpleado
-          : statusEmpleado // ignore: cast_nullable_to_non_nullable
-              as bool,
       fechaNacimiento: fechaNacimiento == freezed
           ? _value.fechaNacimiento
           : fechaNacimiento // ignore: cast_nullable_to_non_nullable
               as FechaNacimiento,
+      codigoPostal: codigoPostal == freezed
+          ? _value.codigoPostal
+          : codigoPostal // ignore: cast_nullable_to_non_nullable
+              as CodigoPostal,
+      direccionCalleUno: direccionCalleUno == freezed
+          ? _value.direccionCalleUno
+          : direccionCalleUno // ignore: cast_nullable_to_non_nullable
+              as DireccionCalle,
+      direccionCalleDos: direccionCalleDos == freezed
+          ? _value.direccionCalleDos
+          : direccionCalleDos // ignore: cast_nullable_to_non_nullable
+              as DireccionCalle?,
+      statusEmpleado: statusEmpleado == freezed
+          ? _value.statusEmpleado
+          : statusEmpleado // ignore: cast_nullable_to_non_nullable
+              as bool,
+      uuidPais: uuidPais == freezed
+          ? _value.uuidPais
+          : uuidPais // ignore: cast_nullable_to_non_nullable
+              as Identificador,
+      uuidEstado: uuidEstado == freezed
+          ? _value.uuidEstado
+          : uuidEstado // ignore: cast_nullable_to_non_nullable
+              as Identificador,
+      uuidCiudad: uuidCiudad == freezed
+          ? _value.uuidCiudad
+          : uuidCiudad // ignore: cast_nullable_to_non_nullable
+              as Identificador,
     ));
   }
 }
@@ -167,11 +212,16 @@ abstract class _$EmpleadoCopyWith<$Res> implements $EmpleadoCopyWith<$Res> {
       PrimerApellido primerApellido,
       SegundoApellido? segundoApellido,
       Genero genero,
-      DireccionCalle direccionCalle,
-      CodigoPostal codigoPostal,
+      NivelEducativo nivelEducativo,
       NumeroTelefonico numeroTelefonico,
+      FechaNacimiento fechaNacimiento,
+      CodigoPostal codigoPostal,
+      DireccionCalle direccionCalleUno,
+      DireccionCalle? direccionCalleDos,
       bool statusEmpleado,
-      FechaNacimiento fechaNacimiento});
+      Identificador uuidPais,
+      Identificador uuidEstado,
+      Identificador uuidCiudad});
 }
 
 /// @nodoc
@@ -191,11 +241,16 @@ class __$EmpleadoCopyWithImpl<$Res> extends _$EmpleadoCopyWithImpl<$Res>
     Object? primerApellido = freezed,
     Object? segundoApellido = freezed,
     Object? genero = freezed,
-    Object? direccionCalle = freezed,
-    Object? codigoPostal = freezed,
+    Object? nivelEducativo = freezed,
     Object? numeroTelefonico = freezed,
-    Object? statusEmpleado = freezed,
     Object? fechaNacimiento = freezed,
+    Object? codigoPostal = freezed,
+    Object? direccionCalleUno = freezed,
+    Object? direccionCalleDos = freezed,
+    Object? statusEmpleado = freezed,
+    Object? uuidPais = freezed,
+    Object? uuidEstado = freezed,
+    Object? uuidCiudad = freezed,
   }) {
     return _then(_Empleado(
       uuid: uuid == freezed
@@ -222,26 +277,46 @@ class __$EmpleadoCopyWithImpl<$Res> extends _$EmpleadoCopyWithImpl<$Res>
           ? _value.genero
           : genero // ignore: cast_nullable_to_non_nullable
               as Genero,
-      direccionCalle: direccionCalle == freezed
-          ? _value.direccionCalle
-          : direccionCalle // ignore: cast_nullable_to_non_nullable
-              as DireccionCalle,
-      codigoPostal: codigoPostal == freezed
-          ? _value.codigoPostal
-          : codigoPostal // ignore: cast_nullable_to_non_nullable
-              as CodigoPostal,
+      nivelEducativo: nivelEducativo == freezed
+          ? _value.nivelEducativo
+          : nivelEducativo // ignore: cast_nullable_to_non_nullable
+              as NivelEducativo,
       numeroTelefonico: numeroTelefonico == freezed
           ? _value.numeroTelefonico
           : numeroTelefonico // ignore: cast_nullable_to_non_nullable
               as NumeroTelefonico,
-      statusEmpleado: statusEmpleado == freezed
-          ? _value.statusEmpleado
-          : statusEmpleado // ignore: cast_nullable_to_non_nullable
-              as bool,
       fechaNacimiento: fechaNacimiento == freezed
           ? _value.fechaNacimiento
           : fechaNacimiento // ignore: cast_nullable_to_non_nullable
               as FechaNacimiento,
+      codigoPostal: codigoPostal == freezed
+          ? _value.codigoPostal
+          : codigoPostal // ignore: cast_nullable_to_non_nullable
+              as CodigoPostal,
+      direccionCalleUno: direccionCalleUno == freezed
+          ? _value.direccionCalleUno
+          : direccionCalleUno // ignore: cast_nullable_to_non_nullable
+              as DireccionCalle,
+      direccionCalleDos: direccionCalleDos == freezed
+          ? _value.direccionCalleDos
+          : direccionCalleDos // ignore: cast_nullable_to_non_nullable
+              as DireccionCalle?,
+      statusEmpleado: statusEmpleado == freezed
+          ? _value.statusEmpleado
+          : statusEmpleado // ignore: cast_nullable_to_non_nullable
+              as bool,
+      uuidPais: uuidPais == freezed
+          ? _value.uuidPais
+          : uuidPais // ignore: cast_nullable_to_non_nullable
+              as Identificador,
+      uuidEstado: uuidEstado == freezed
+          ? _value.uuidEstado
+          : uuidEstado // ignore: cast_nullable_to_non_nullable
+              as Identificador,
+      uuidCiudad: uuidCiudad == freezed
+          ? _value.uuidCiudad
+          : uuidCiudad // ignore: cast_nullable_to_non_nullable
+              as Identificador,
     ));
   }
 }
@@ -257,11 +332,16 @@ class _$_Empleado extends _Empleado {
       required this.primerApellido,
       this.segundoApellido,
       required this.genero,
-      required this.direccionCalle,
-      required this.codigoPostal,
+      required this.nivelEducativo,
       required this.numeroTelefonico,
+      required this.fechaNacimiento,
+      required this.codigoPostal,
+      required this.direccionCalleUno,
+      this.direccionCalleDos,
       required this.statusEmpleado,
-      required this.fechaNacimiento})
+      required this.uuidPais,
+      required this.uuidEstado,
+      required this.uuidCiudad})
       : super._();
 
   @override
@@ -277,19 +357,29 @@ class _$_Empleado extends _Empleado {
   @override
   final Genero genero;
   @override
-  final DireccionCalle direccionCalle;
-  @override
-  final CodigoPostal codigoPostal;
+  final NivelEducativo nivelEducativo;
   @override
   final NumeroTelefonico numeroTelefonico;
   @override
+  final FechaNacimiento fechaNacimiento;
+  @override
+  final CodigoPostal codigoPostal;
+  @override
+  final DireccionCalle direccionCalleUno;
+  @override
+  final DireccionCalle? direccionCalleDos;
+  @override
   final bool statusEmpleado;
   @override
-  final FechaNacimiento fechaNacimiento;
+  final Identificador uuidPais;
+  @override
+  final Identificador uuidEstado;
+  @override
+  final Identificador uuidCiudad;
 
   @override
   String toString() {
-    return 'Empleado(uuid: $uuid, primerNombre: $primerNombre, segundoNombre: $segundoNombre, primerApellido: $primerApellido, segundoApellido: $segundoApellido, genero: $genero, direccionCalle: $direccionCalle, codigoPostal: $codigoPostal, numeroTelefonico: $numeroTelefonico, statusEmpleado: $statusEmpleado, fechaNacimiento: $fechaNacimiento)';
+    return 'Empleado(uuid: $uuid, primerNombre: $primerNombre, segundoNombre: $segundoNombre, primerApellido: $primerApellido, segundoApellido: $segundoApellido, genero: $genero, nivelEducativo: $nivelEducativo, numeroTelefonico: $numeroTelefonico, fechaNacimiento: $fechaNacimiento, codigoPostal: $codigoPostal, direccionCalleUno: $direccionCalleUno, direccionCalleDos: $direccionCalleDos, statusEmpleado: $statusEmpleado, uuidPais: $uuidPais, uuidEstado: $uuidEstado, uuidCiudad: $uuidCiudad)';
   }
 
   @override
@@ -312,21 +402,36 @@ class _$_Empleado extends _Empleado {
                     .equals(other.segundoApellido, segundoApellido)) &&
             (identical(other.genero, genero) ||
                 const DeepCollectionEquality().equals(other.genero, genero)) &&
-            (identical(other.direccionCalle, direccionCalle) ||
+            (identical(other.nivelEducativo, nivelEducativo) ||
                 const DeepCollectionEquality()
-                    .equals(other.direccionCalle, direccionCalle)) &&
-            (identical(other.codigoPostal, codigoPostal) ||
-                const DeepCollectionEquality()
-                    .equals(other.codigoPostal, codigoPostal)) &&
+                    .equals(other.nivelEducativo, nivelEducativo)) &&
             (identical(other.numeroTelefonico, numeroTelefonico) ||
                 const DeepCollectionEquality()
                     .equals(other.numeroTelefonico, numeroTelefonico)) &&
+            (identical(other.fechaNacimiento, fechaNacimiento) ||
+                const DeepCollectionEquality()
+                    .equals(other.fechaNacimiento, fechaNacimiento)) &&
+            (identical(other.codigoPostal, codigoPostal) ||
+                const DeepCollectionEquality()
+                    .equals(other.codigoPostal, codigoPostal)) &&
+            (identical(other.direccionCalleUno, direccionCalleUno) ||
+                const DeepCollectionEquality()
+                    .equals(other.direccionCalleUno, direccionCalleUno)) &&
+            (identical(other.direccionCalleDos, direccionCalleDos) ||
+                const DeepCollectionEquality()
+                    .equals(other.direccionCalleDos, direccionCalleDos)) &&
             (identical(other.statusEmpleado, statusEmpleado) ||
                 const DeepCollectionEquality()
                     .equals(other.statusEmpleado, statusEmpleado)) &&
-            (identical(other.fechaNacimiento, fechaNacimiento) ||
+            (identical(other.uuidPais, uuidPais) ||
                 const DeepCollectionEquality()
-                    .equals(other.fechaNacimiento, fechaNacimiento)));
+                    .equals(other.uuidPais, uuidPais)) &&
+            (identical(other.uuidEstado, uuidEstado) ||
+                const DeepCollectionEquality()
+                    .equals(other.uuidEstado, uuidEstado)) &&
+            (identical(other.uuidCiudad, uuidCiudad) ||
+                const DeepCollectionEquality()
+                    .equals(other.uuidCiudad, uuidCiudad)));
   }
 
   @override
@@ -338,11 +443,16 @@ class _$_Empleado extends _Empleado {
       const DeepCollectionEquality().hash(primerApellido) ^
       const DeepCollectionEquality().hash(segundoApellido) ^
       const DeepCollectionEquality().hash(genero) ^
-      const DeepCollectionEquality().hash(direccionCalle) ^
-      const DeepCollectionEquality().hash(codigoPostal) ^
+      const DeepCollectionEquality().hash(nivelEducativo) ^
       const DeepCollectionEquality().hash(numeroTelefonico) ^
+      const DeepCollectionEquality().hash(fechaNacimiento) ^
+      const DeepCollectionEquality().hash(codigoPostal) ^
+      const DeepCollectionEquality().hash(direccionCalleUno) ^
+      const DeepCollectionEquality().hash(direccionCalleDos) ^
       const DeepCollectionEquality().hash(statusEmpleado) ^
-      const DeepCollectionEquality().hash(fechaNacimiento);
+      const DeepCollectionEquality().hash(uuidPais) ^
+      const DeepCollectionEquality().hash(uuidEstado) ^
+      const DeepCollectionEquality().hash(uuidCiudad);
 
   @JsonKey(ignore: true)
   @override
@@ -358,11 +468,16 @@ abstract class _Empleado extends Empleado implements IEntitidad {
       required PrimerApellido primerApellido,
       SegundoApellido? segundoApellido,
       required Genero genero,
-      required DireccionCalle direccionCalle,
-      required CodigoPostal codigoPostal,
+      required NivelEducativo nivelEducativo,
       required NumeroTelefonico numeroTelefonico,
+      required FechaNacimiento fechaNacimiento,
+      required CodigoPostal codigoPostal,
+      required DireccionCalle direccionCalleUno,
+      DireccionCalle? direccionCalleDos,
       required bool statusEmpleado,
-      required FechaNacimiento fechaNacimiento}) = _$_Empleado;
+      required Identificador uuidPais,
+      required Identificador uuidEstado,
+      required Identificador uuidCiudad}) = _$_Empleado;
   const _Empleado._() : super._();
 
   @override
@@ -378,15 +493,25 @@ abstract class _Empleado extends Empleado implements IEntitidad {
   @override
   Genero get genero => throw _privateConstructorUsedError;
   @override
-  DireccionCalle get direccionCalle => throw _privateConstructorUsedError;
-  @override
-  CodigoPostal get codigoPostal => throw _privateConstructorUsedError;
+  NivelEducativo get nivelEducativo => throw _privateConstructorUsedError;
   @override
   NumeroTelefonico get numeroTelefonico => throw _privateConstructorUsedError;
   @override
+  FechaNacimiento get fechaNacimiento => throw _privateConstructorUsedError;
+  @override
+  CodigoPostal get codigoPostal => throw _privateConstructorUsedError;
+  @override
+  DireccionCalle get direccionCalleUno => throw _privateConstructorUsedError;
+  @override
+  DireccionCalle? get direccionCalleDos => throw _privateConstructorUsedError;
+  @override
   bool get statusEmpleado => throw _privateConstructorUsedError;
   @override
-  FechaNacimiento get fechaNacimiento => throw _privateConstructorUsedError;
+  Identificador get uuidPais => throw _privateConstructorUsedError;
+  @override
+  Identificador get uuidEstado => throw _privateConstructorUsedError;
+  @override
+  Identificador get uuidCiudad => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$EmpleadoCopyWith<_Empleado> get copyWith =>
