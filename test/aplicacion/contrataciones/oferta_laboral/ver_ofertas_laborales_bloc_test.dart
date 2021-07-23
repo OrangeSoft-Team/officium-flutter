@@ -11,7 +11,7 @@ import 'package:officium_flutter/dominio/oferta_laboral/excepciones_dominio/ofer
 import 'package:officium_flutter/dominio/oferta_laboral/servicios_dominio/repositorio/i_oferta_laboral_repositorio.dart';
 import 'package:officium_flutter/infraestructura/contrataciones/oferta_laboral/modelos/oferta_laboral_dto.dart';
 
-import '../../infraestructura/data_pruebas/lector_json.dart';
+import '../../../infraestructura/data_pruebas/lector_json.dart';
 import 'ver_ofertas_laborales_bloc_test.mocks.dart';
 
 @GenerateMocks([IOfertaLaboralRepositorio])

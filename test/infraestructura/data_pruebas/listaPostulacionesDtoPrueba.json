@@ -1,0 +1,20 @@
+[
+    {
+        "uuid":"1",
+        "uuidOfertaLaboral":"2",
+        "tituloOferta":"Titulo prueba",
+        "cargoOferta":"cargo prueba",
+        "estatus":"ACTIVA",
+        "nombreEmpresa":"empresa prueba",
+        "comentario":"comentario prueba"
+    },
+    {
+        "uuid":"2",
+        "uuidOfertaLaboral":"3",
+        "tituloOferta":"Titulo prueba",
+        "cargoOferta":"cargo prueba",
+        "estatus":"ACTIVA",
+        "nombreEmpresa":"empresa prueba",
+        "comentario":"comentario prueba"
+    }
+]
