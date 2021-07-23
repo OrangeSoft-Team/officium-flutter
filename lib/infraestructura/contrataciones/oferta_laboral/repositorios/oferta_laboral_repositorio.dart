@@ -6,11 +6,10 @@ import 'package:officium_flutter/dominio/oferta_laboral/entidades/postulacion_of
 import 'package:officium_flutter/dominio/oferta_laboral/excepciones_dominio/oferta_laboral_excepciones.dart';
 import 'package:officium_flutter/dominio/oferta_laboral/servicios_dominio/repositorio/i_oferta_laboral_repositorio.dart';
 import 'package:officium_flutter/dominio/oferta_laboral/value_objects/postulacion_oferta_laboral/comentario_postulacion.dart';
-import 'package:officium_flutter/infraestructura/oferta_laboral/fuentes/i_oferta_laboral_fuente.dart';
-import 'package:officium_flutter/infraestructura/oferta_laboral/modelos/oferta_laboral_detalle_dto.dart';
-import 'package:officium_flutter/infraestructura/oferta_laboral/modelos/postulacion_oferta_laboral_dto.dart';
+import 'package:officium_flutter/infraestructura/contrataciones/oferta_laboral/fuentes/i_oferta_laboral_fuente.dart';
+import 'package:officium_flutter/infraestructura/contrataciones/oferta_laboral/modelos/oferta_laboral_detalle_dto.dart';
+import 'package:officium_flutter/infraestructura/contrataciones/oferta_laboral/modelos/postulacion_oferta_laboral_dto.dart';
 
-//Steven
 @LazySingleton(as: IOfertaLaboralRepositorio)
 class OfertaLaboralRepositorio implements IOfertaLaboralRepositorio {
   final IOfertaLaboralFuente fuenteDeDatos;
@@ -42,16 +41,6 @@ class OfertaLaboralRepositorio implements IOfertaLaboralRepositorio {
     }
   }
 
-  // @override
-  // Stream<Either<OfertaLaboralExcepcion, List<OfertaLaboral>>>
-  //     verTodasLasOfertasLaborales() async* {
-  //   final List<OfertaLaboral> ofertasLaborales = listOfertas;
-  //   try {
-  //     yield Right(ofertasLaborales);
-  //   } catch (e) {
-  //     yield const Left(OfertaLaboralExcepcion.errorServidor());
-  //   }
-  // }
   @override
   Stream<Either<OfertaLaboralExcepcion, List<OfertaLaboral>>>
       verTodasLasOfertasLaborales() async* {
