@@ -156,7 +156,7 @@ class __$DireccionCopyWithImpl<$Res> extends _$DireccionCopyWithImpl<$Res>
 
 /// @nodoc
 
-@Implements(IEntitidad)
+@Implements(IEntidad)
 class _$_Direccion implements _Direccion {
   const _$_Direccion(
       {required this.uuid,
@@ -207,7 +207,7 @@ class _$_Direccion implements _Direccion {
       __$DireccionCopyWithImpl<_Direccion>(this, _$identity);
 }
 
-abstract class _Direccion implements Direccion, IEntitidad {
+abstract class _Direccion implements Direccion, IEntidad {
   const factory _Direccion(
       {required Identificador uuid,
       required Ciudad ciudad,

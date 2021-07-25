@@ -164,7 +164,7 @@ class __$ExperienciaLaboralCopyWithImpl<$Res>
 
 /// @nodoc
 
-@Implements(IEntitidad)
+@Implements(IEntidad)
 class _$_ExperienciaLaboral implements _ExperienciaLaboral {
   const _$_ExperienciaLaboral(
       {required this.uuid,
@@ -223,7 +223,7 @@ class _$_ExperienciaLaboral implements _ExperienciaLaboral {
       __$ExperienciaLaboralCopyWithImpl<_ExperienciaLaboral>(this, _$identity);
 }
 
-abstract class _ExperienciaLaboral implements ExperienciaLaboral, IEntitidad {
+abstract class _ExperienciaLaboral implements ExperienciaLaboral, IEntidad {
   const factory _ExperienciaLaboral(
       {required Identificador uuid,
       required Cargo cargo,

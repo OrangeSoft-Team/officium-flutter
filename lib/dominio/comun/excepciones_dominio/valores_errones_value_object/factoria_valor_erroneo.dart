@@ -80,9 +80,16 @@ abstract class ValorErroneo<T> with _$ValorErroneo<T> {
   const factory ValorErroneo.numeroTelefonicoVacio({
     required T numeroErroneo,
   }) = NumeroTelefonicoVacio<T>;
-  const factory ValorErroneo.estadoOfertaInvalido(
-      {required T valorErroneo,
-      required List<String> turnosValidos}) = EstadoOfertaInvalido<T>;
+
+  const factory ValorErroneo.estadoOfertaInvalido({
+    required T valorErroneo,
+    required List<String> estadosValidos,
+  }) = EstadoOfertaInvalido<T>;
+
+  const factory ValorErroneo.estadoTrabajoInvalido({
+    required T valorErroneo,
+    required List<String> estadosValidos,
+  }) = EstadoTrabajoInvalido<T>;
 
   const factory ValorErroneo.duracionEstimadaValorInvalido({
     required T valorInvalido,

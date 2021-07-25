@@ -9,7 +9,7 @@ part 'experiencia_laboral.freezed.dart';
 
 @freezed
 abstract class ExperienciaLaboral with _$ExperienciaLaboral {
-  @Implements(IEntitidad)
+  @Implements(IEntidad)
   const factory ExperienciaLaboral({
     required Identificador uuid,
     required Cargo cargo,

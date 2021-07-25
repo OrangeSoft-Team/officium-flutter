@@ -9,7 +9,7 @@ part 'estado.freezed.dart';
 
 @freezed
 abstract class Estado with _$Estado {
-  @Implements(IEntitidad)
+  @Implements(IEntidad)
   const factory Estado({
     required Identificador uuid,
     required NombreCiudad nombre,

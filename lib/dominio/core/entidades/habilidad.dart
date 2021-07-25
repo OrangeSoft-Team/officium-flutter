@@ -8,7 +8,7 @@ part 'habilidad.freezed.dart';
 
 @freezed
 abstract class Habilidad with _$Habilidad {
-  @Implements(IEntitidad)
+  @Implements(IEntidad)
   const factory Habilidad({
     required Identificador uuid,
     required TituloHabilidad tituloHabilidad,

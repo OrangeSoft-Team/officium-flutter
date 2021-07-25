@@ -129,7 +129,7 @@ class __$HabilidadCopyWithImpl<$Res> extends _$HabilidadCopyWithImpl<$Res>
 
 /// @nodoc
 
-@Implements(IEntitidad)
+@Implements(IEntidad)
 class _$_Habilidad implements _Habilidad {
   const _$_Habilidad(
       {required this.uuid,
@@ -175,7 +175,7 @@ class _$_Habilidad implements _Habilidad {
       __$HabilidadCopyWithImpl<_Habilidad>(this, _$identity);
 }
 
-abstract class _Habilidad implements Habilidad, IEntitidad {
+abstract class _Habilidad implements Habilidad, IEntidad {
   const factory _Habilidad(
       {required Identificador uuid,
       required TituloHabilidad tituloHabilidad,

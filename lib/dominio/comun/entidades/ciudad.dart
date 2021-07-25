@@ -7,7 +7,7 @@ part 'ciudad.freezed.dart';
 
 @freezed
 abstract class Ciudad with _$Ciudad {
-  @Implements(IEntitidad)
+  @Implements(IEntidad)
   const factory Ciudad({
     required Identificador uuid,
     required NombreCiudad nombre,

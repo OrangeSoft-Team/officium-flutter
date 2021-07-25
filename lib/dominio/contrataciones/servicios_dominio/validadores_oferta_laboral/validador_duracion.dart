@@ -1,10 +1,10 @@
 import 'package:dartz/dartz.dart';
 import 'package:officium_flutter/dominio/comun/excepciones_dominio/valores_errones_value_object/factoria_valor_erroneo.dart';
-import 'package:officium_flutter/dominio/oferta_laboral/servicios_dominio/validadores_oferta_laboral/validador_duracion_escala_invalido.dart';
-import 'package:officium_flutter/dominio/oferta_laboral/servicios_dominio/validadores_oferta_laboral/validador_duracion_escala_vacio.dart';
-import 'package:officium_flutter/dominio/oferta_laboral/servicios_dominio/validadores_oferta_laboral/validador_duracion_estimada_vacia.dart';
-import 'package:officium_flutter/dominio/oferta_laboral/servicios_dominio/validadores_oferta_laboral/validador_duracion_estimada_valor_valido.dart';
-import 'package:officium_flutter/dominio/oferta_laboral/value_objects/oferta_laboral/Duracion_Oferta/duracion_escalas.dart';
+import 'package:officium_flutter/dominio/contrataciones/servicios_dominio/validadores_oferta_laboral/validador_duracion_escala_invalido.dart';
+import 'package:officium_flutter/dominio/contrataciones/servicios_dominio/validadores_oferta_laboral/validador_duracion_escala_vacio.dart';
+import 'package:officium_flutter/dominio/contrataciones/servicios_dominio/validadores_oferta_laboral/validador_duracion_estimada_vacia.dart';
+import 'package:officium_flutter/dominio/contrataciones/servicios_dominio/validadores_oferta_laboral/validador_duracion_estimada_valor_valido.dart';
+import 'package:officium_flutter/dominio/contrataciones/value_objects/oferta_laboral/Duracion_Oferta/duracion_escalas.dart';
 
 Either<ValorErroneo<DuracionEscala>, DuracionEscala>
     validadorDuracionOfertaValida(

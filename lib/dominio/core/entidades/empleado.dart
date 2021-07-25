@@ -18,7 +18,7 @@ part 'empleado.freezed.dart';
 @freezed
 abstract class Empleado implements _$Empleado {
   const Empleado._();
-  @Implements(IEntitidad)
+  @Implements(IEntidad)
   const factory Empleado({
     required Identificador uuid,
     required PrimerNombre primerNombre,

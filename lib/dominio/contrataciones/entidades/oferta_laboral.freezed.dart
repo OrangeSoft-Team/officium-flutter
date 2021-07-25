@@ -285,7 +285,7 @@ class __$OfertaLaboralCopyWithImpl<$Res>
 
 /// @nodoc
 
-@Implements(IEntitidad)
+@Implements(IEntidad)
 class _$_OfertaLaboral extends _OfertaLaboral {
   const _$_OfertaLaboral(
       {required this.uuid,
@@ -398,7 +398,7 @@ class _$_OfertaLaboral extends _OfertaLaboral {
       __$OfertaLaboralCopyWithImpl<_OfertaLaboral>(this, _$identity);
 }
 
-abstract class _OfertaLaboral extends OfertaLaboral implements IEntitidad {
+abstract class _OfertaLaboral extends OfertaLaboral implements IEntidad {
   const factory _OfertaLaboral(
       {required Identificador uuid,
       required TituloOfertaLaboral titulo,
