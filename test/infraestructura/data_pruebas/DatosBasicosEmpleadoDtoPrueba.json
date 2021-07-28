@@ -1,0 +1,19 @@
+{
+    "correoElectronico":"correotest@dominio.com",
+    "token":"1381037109",
+    "primerNombre":"Pedro",
+    "segundoNombre":"Elias",
+    "primerApellido":"Gonzalez",
+    "segundoApellido":"Alvarez",
+    "genero":"Masculino",
+    "nivelEducativo":"Universitario",
+    "numeroTelefonico":"139028319",
+    "fechaNacimiento":"24/08/1992",
+    "codigoPostal":"1313",
+    "calleUno":"Calle uno test",
+    "calleDos":"Calle dos test",
+    "uuidPais":"1",
+    "uuidEstado":"2",
+    "uuidCiudad":"3",
+    "habilidades":[] 
+}

@@ -7,4 +7,6 @@ abstract class IPostulacionFuente {
   Future<Unit> aplicarOfertaLaboral(PostulacionOfertaLaboralDTO postulacionOfertaLaboral);
   //OBTIENE POSTULACIONES ACTIVAS DE UN EMPLEADO ESPECIFICO
   Future<List<PostulacionEmpleadoDTO>> obtenerPostulacionesActivasEmpleado(String  uuidEmpleado); 
+  //CANCELA POSTULACION A LA OFERTA LABORAL
+  Future<Unit> cancelarPostulacion(String uuidPostulacion);
 }

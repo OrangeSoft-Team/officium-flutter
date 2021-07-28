@@ -105,4 +105,26 @@ void main () {
       expect(() async => call(tPostulacionOfertaLaboralDto),throwsA(const TypeMatcher<ServerException>()));
     });
   });
+
+  group('EndPoint  PUT mpleado/oferta_laboral/:uuid_postulacion/cancelar ', () {
+    final List<PostulacionEmpleadoDTO> tListaPostulacionesDto = [];
+    for (final dto
+        in jsonDecode(fixture(TestData().listaPostulacionesActivas)) as List) {
+      tListaPostulacionesDto
+          .add(PostulacionEmpleadoDTO.fromJson(dto as Map<String, dynamic>));
+    } 
+    test('Debe retornar UNIT(NULL) ante éxito con el servidor', () async {    
+      
+      when(mockHttpClient.putUrl(any))
+      .thenAnswer((_) async => mockHttpClientRequest);  
+      setUpMockHttpClientSuccess200(null,200);
+      
+      final result = await fuenteDeDatos.cancelarPostulacion(tListaPostulacionesDto[0].uuid);
+      verify(mockHttpClient.putUrl(
+        Uri.parse('$DIR_NEST/api/empleado/oferta_laboral/${tListaPostulacionesDto[0].uuid}/cancelar'),
+      ));
+
+      expect(result, equals(unit));
+    });
+  });
 }

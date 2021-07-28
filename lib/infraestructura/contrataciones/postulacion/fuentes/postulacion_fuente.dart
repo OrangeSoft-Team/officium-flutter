@@ -52,7 +52,6 @@ class PostulacionFuente implements IPostulacionFuente {
     final response = await request.close();
     if (response.statusCode == 200) {
       final responseData = response.transform(utf8.decoder);
-      String resp = ''; 
       final completer = Completer<String>();
       final contents = StringBuffer();
 
@@ -70,6 +69,22 @@ class PostulacionFuente implements IPostulacionFuente {
 
       return postulacionesActivas;
       
+    } else {
+      throw ServerException();
+    }
+  }
+
+  @override
+  Future<Unit> cancelarPostulacion(String uuidPostulacion) async {
+    final request = await cliente.putUrl(
+      Uri.parse('$DIR_NEST/api/empleado/oferta_laboral/$uuidPostulacion/cancelar')
+    );
+    request.headers
+    .add(HttpHeaders.contentTypeHeader, "application/json; charset=UTF-8");
+
+    final response = await request.close();
+    if (response.statusCode == 200) {
+      return unit;
     } else {
       throw ServerException();
     }

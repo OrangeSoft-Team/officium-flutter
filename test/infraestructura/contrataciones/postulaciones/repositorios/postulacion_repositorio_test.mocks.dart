@@ -49,4 +49,10 @@ class MockIPostulacionFuente extends _i1.Mock
                   returnValue: Future<List<_i6.PostulacionEmpleadoDTO>>.value(
                       <_i6.PostulacionEmpleadoDTO>[]))
               as _i4.Future<List<_i6.PostulacionEmpleadoDTO>>);
+  @override
+  _i4.Future<_i2.Unit> cancelarPostulacion(String? uuidPostulacion) =>
+      (super.noSuchMethod(
+              Invocation.method(#cancelarPostulacion, [uuidPostulacion]),
+              returnValue: Future<_i2.Unit>.value(_FakeUnit()))
+          as _i4.Future<_i2.Unit>);
 }
