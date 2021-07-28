@@ -11,7 +11,7 @@ part 'trabajo.freezed.dart';
 abstract class Trabajo with _$Trabajo {
   @Implements(IEntidad)
   const factory Trabajo({
-    required Identificador uuidTrabajo,
+    required Identificador uuid,
     required TituloTrabajo tituloOfertaLaboral,
     required Fecha fechaInicio,
     Fecha? fechaFin,

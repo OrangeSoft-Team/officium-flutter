@@ -17,13 +17,13 @@ class _$TrabajoTearOff {
   const _$TrabajoTearOff();
 
   _Trabajo call(
-      {required Identificador uuidTrabajo,
+      {required Identificador uuid,
       required TituloTrabajo tituloOfertaLaboral,
       required Fecha fechaInicio,
       Fecha? fechaFin,
       required EstadoTrabajo estadoTrabajo}) {
     return _Trabajo(
-      uuidTrabajo: uuidTrabajo,
+      uuid: uuid,
       tituloOfertaLaboral: tituloOfertaLaboral,
       fechaInicio: fechaInicio,
       fechaFin: fechaFin,
@@ -37,7 +37,7 @@ const $Trabajo = _$TrabajoTearOff();
 
 /// @nodoc
 mixin _$Trabajo {
-  Identificador get uuidTrabajo => throw _privateConstructorUsedError;
+  Identificador get uuid => throw _privateConstructorUsedError;
   TituloTrabajo get tituloOfertaLaboral => throw _privateConstructorUsedError;
   Fecha get fechaInicio => throw _privateConstructorUsedError;
   Fecha? get fechaFin => throw _privateConstructorUsedError;
@@ -52,7 +52,7 @@ abstract class $TrabajoCopyWith<$Res> {
   factory $TrabajoCopyWith(Trabajo value, $Res Function(Trabajo) then) =
       _$TrabajoCopyWithImpl<$Res>;
   $Res call(
-      {Identificador uuidTrabajo,
+      {Identificador uuid,
       TituloTrabajo tituloOfertaLaboral,
       Fecha fechaInicio,
       Fecha? fechaFin,
@@ -69,16 +69,16 @@ class _$TrabajoCopyWithImpl<$Res> implements $TrabajoCopyWith<$Res> {
 
   @override
   $Res call({
-    Object? uuidTrabajo = freezed,
+    Object? uuid = freezed,
     Object? tituloOfertaLaboral = freezed,
     Object? fechaInicio = freezed,
     Object? fechaFin = freezed,
     Object? estadoTrabajo = freezed,
   }) {
     return _then(_value.copyWith(
-      uuidTrabajo: uuidTrabajo == freezed
-          ? _value.uuidTrabajo
-          : uuidTrabajo // ignore: cast_nullable_to_non_nullable
+      uuid: uuid == freezed
+          ? _value.uuid
+          : uuid // ignore: cast_nullable_to_non_nullable
               as Identificador,
       tituloOfertaLaboral: tituloOfertaLaboral == freezed
           ? _value.tituloOfertaLaboral
@@ -106,7 +106,7 @@ abstract class _$TrabajoCopyWith<$Res> implements $TrabajoCopyWith<$Res> {
       __$TrabajoCopyWithImpl<$Res>;
   @override
   $Res call(
-      {Identificador uuidTrabajo,
+      {Identificador uuid,
       TituloTrabajo tituloOfertaLaboral,
       Fecha fechaInicio,
       Fecha? fechaFin,
@@ -124,16 +124,16 @@ class __$TrabajoCopyWithImpl<$Res> extends _$TrabajoCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? uuidTrabajo = freezed,
+    Object? uuid = freezed,
     Object? tituloOfertaLaboral = freezed,
     Object? fechaInicio = freezed,
     Object? fechaFin = freezed,
     Object? estadoTrabajo = freezed,
   }) {
     return _then(_Trabajo(
-      uuidTrabajo: uuidTrabajo == freezed
-          ? _value.uuidTrabajo
-          : uuidTrabajo // ignore: cast_nullable_to_non_nullable
+      uuid: uuid == freezed
+          ? _value.uuid
+          : uuid // ignore: cast_nullable_to_non_nullable
               as Identificador,
       tituloOfertaLaboral: tituloOfertaLaboral == freezed
           ? _value.tituloOfertaLaboral
@@ -160,14 +160,14 @@ class __$TrabajoCopyWithImpl<$Res> extends _$TrabajoCopyWithImpl<$Res>
 @Implements(IEntidad)
 class _$_Trabajo implements _Trabajo {
   const _$_Trabajo(
-      {required this.uuidTrabajo,
+      {required this.uuid,
       required this.tituloOfertaLaboral,
       required this.fechaInicio,
       this.fechaFin,
       required this.estadoTrabajo});
 
   @override
-  final Identificador uuidTrabajo;
+  final Identificador uuid;
   @override
   final TituloTrabajo tituloOfertaLaboral;
   @override
@@ -179,16 +179,15 @@ class _$_Trabajo implements _Trabajo {
 
   @override
   String toString() {
-    return 'Trabajo(uuidTrabajo: $uuidTrabajo, tituloOfertaLaboral: $tituloOfertaLaboral, fechaInicio: $fechaInicio, fechaFin: $fechaFin, estadoTrabajo: $estadoTrabajo)';
+    return 'Trabajo(uuid: $uuid, tituloOfertaLaboral: $tituloOfertaLaboral, fechaInicio: $fechaInicio, fechaFin: $fechaFin, estadoTrabajo: $estadoTrabajo)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _Trabajo &&
-            (identical(other.uuidTrabajo, uuidTrabajo) ||
-                const DeepCollectionEquality()
-                    .equals(other.uuidTrabajo, uuidTrabajo)) &&
+            (identical(other.uuid, uuid) ||
+                const DeepCollectionEquality().equals(other.uuid, uuid)) &&
             (identical(other.tituloOfertaLaboral, tituloOfertaLaboral) ||
                 const DeepCollectionEquality()
                     .equals(other.tituloOfertaLaboral, tituloOfertaLaboral)) &&
@@ -206,7 +205,7 @@ class _$_Trabajo implements _Trabajo {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(uuidTrabajo) ^
+      const DeepCollectionEquality().hash(uuid) ^
       const DeepCollectionEquality().hash(tituloOfertaLaboral) ^
       const DeepCollectionEquality().hash(fechaInicio) ^
       const DeepCollectionEquality().hash(fechaFin) ^
@@ -220,14 +219,14 @@ class _$_Trabajo implements _Trabajo {
 
 abstract class _Trabajo implements Trabajo, IEntidad {
   const factory _Trabajo(
-      {required Identificador uuidTrabajo,
+      {required Identificador uuid,
       required TituloTrabajo tituloOfertaLaboral,
       required Fecha fechaInicio,
       Fecha? fechaFin,
       required EstadoTrabajo estadoTrabajo}) = _$_Trabajo;
 
   @override
-  Identificador get uuidTrabajo => throw _privateConstructorUsedError;
+  Identificador get uuid => throw _privateConstructorUsedError;
   @override
   TituloTrabajo get tituloOfertaLaboral => throw _privateConstructorUsedError;
   @override

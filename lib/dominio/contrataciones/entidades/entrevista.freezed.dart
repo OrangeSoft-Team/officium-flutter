@@ -17,13 +17,13 @@ class _$EntrevistaTearOff {
   const _$EntrevistaTearOff();
 
   _Entrevista call(
-      {required Identificador uuidEntrevista,
+      {required Identificador uuid,
       required AsuntoEntrevista asuntoEntrevista,
       required Fecha fechaPautada,
       required EstadoEntrevista estadoEntrevista,
       required Identificador uuidPersonalAdministrativo}) {
     return _Entrevista(
-      uuidEntrevista: uuidEntrevista,
+      uuid: uuid,
       asuntoEntrevista: asuntoEntrevista,
       fechaPautada: fechaPautada,
       estadoEntrevista: estadoEntrevista,
@@ -37,7 +37,7 @@ const $Entrevista = _$EntrevistaTearOff();
 
 /// @nodoc
 mixin _$Entrevista {
-  Identificador get uuidEntrevista => throw _privateConstructorUsedError;
+  Identificador get uuid => throw _privateConstructorUsedError;
   AsuntoEntrevista get asuntoEntrevista => throw _privateConstructorUsedError;
   Fecha get fechaPautada => throw _privateConstructorUsedError;
   EstadoEntrevista get estadoEntrevista => throw _privateConstructorUsedError;
@@ -55,7 +55,7 @@ abstract class $EntrevistaCopyWith<$Res> {
           Entrevista value, $Res Function(Entrevista) then) =
       _$EntrevistaCopyWithImpl<$Res>;
   $Res call(
-      {Identificador uuidEntrevista,
+      {Identificador uuid,
       AsuntoEntrevista asuntoEntrevista,
       Fecha fechaPautada,
       EstadoEntrevista estadoEntrevista,
@@ -72,16 +72,16 @@ class _$EntrevistaCopyWithImpl<$Res> implements $EntrevistaCopyWith<$Res> {
 
   @override
   $Res call({
-    Object? uuidEntrevista = freezed,
+    Object? uuid = freezed,
     Object? asuntoEntrevista = freezed,
     Object? fechaPautada = freezed,
     Object? estadoEntrevista = freezed,
     Object? uuidPersonalAdministrativo = freezed,
   }) {
     return _then(_value.copyWith(
-      uuidEntrevista: uuidEntrevista == freezed
-          ? _value.uuidEntrevista
-          : uuidEntrevista // ignore: cast_nullable_to_non_nullable
+      uuid: uuid == freezed
+          ? _value.uuid
+          : uuid // ignore: cast_nullable_to_non_nullable
               as Identificador,
       asuntoEntrevista: asuntoEntrevista == freezed
           ? _value.asuntoEntrevista
@@ -110,7 +110,7 @@ abstract class _$EntrevistaCopyWith<$Res> implements $EntrevistaCopyWith<$Res> {
       __$EntrevistaCopyWithImpl<$Res>;
   @override
   $Res call(
-      {Identificador uuidEntrevista,
+      {Identificador uuid,
       AsuntoEntrevista asuntoEntrevista,
       Fecha fechaPautada,
       EstadoEntrevista estadoEntrevista,
@@ -129,16 +129,16 @@ class __$EntrevistaCopyWithImpl<$Res> extends _$EntrevistaCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? uuidEntrevista = freezed,
+    Object? uuid = freezed,
     Object? asuntoEntrevista = freezed,
     Object? fechaPautada = freezed,
     Object? estadoEntrevista = freezed,
     Object? uuidPersonalAdministrativo = freezed,
   }) {
     return _then(_Entrevista(
-      uuidEntrevista: uuidEntrevista == freezed
-          ? _value.uuidEntrevista
-          : uuidEntrevista // ignore: cast_nullable_to_non_nullable
+      uuid: uuid == freezed
+          ? _value.uuid
+          : uuid // ignore: cast_nullable_to_non_nullable
               as Identificador,
       asuntoEntrevista: asuntoEntrevista == freezed
           ? _value.asuntoEntrevista
@@ -165,14 +165,14 @@ class __$EntrevistaCopyWithImpl<$Res> extends _$EntrevistaCopyWithImpl<$Res>
 @Implements(IEntidad)
 class _$_Entrevista implements _Entrevista {
   const _$_Entrevista(
-      {required this.uuidEntrevista,
+      {required this.uuid,
       required this.asuntoEntrevista,
       required this.fechaPautada,
       required this.estadoEntrevista,
       required this.uuidPersonalAdministrativo});
 
   @override
-  final Identificador uuidEntrevista;
+  final Identificador uuid;
   @override
   final AsuntoEntrevista asuntoEntrevista;
   @override
@@ -184,16 +184,15 @@ class _$_Entrevista implements _Entrevista {
 
   @override
   String toString() {
-    return 'Entrevista(uuidEntrevista: $uuidEntrevista, asuntoEntrevista: $asuntoEntrevista, fechaPautada: $fechaPautada, estadoEntrevista: $estadoEntrevista, uuidPersonalAdministrativo: $uuidPersonalAdministrativo)';
+    return 'Entrevista(uuid: $uuid, asuntoEntrevista: $asuntoEntrevista, fechaPautada: $fechaPautada, estadoEntrevista: $estadoEntrevista, uuidPersonalAdministrativo: $uuidPersonalAdministrativo)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _Entrevista &&
-            (identical(other.uuidEntrevista, uuidEntrevista) ||
-                const DeepCollectionEquality()
-                    .equals(other.uuidEntrevista, uuidEntrevista)) &&
+            (identical(other.uuid, uuid) ||
+                const DeepCollectionEquality().equals(other.uuid, uuid)) &&
             (identical(other.asuntoEntrevista, asuntoEntrevista) ||
                 const DeepCollectionEquality()
                     .equals(other.asuntoEntrevista, asuntoEntrevista)) &&
@@ -213,7 +212,7 @@ class _$_Entrevista implements _Entrevista {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(uuidEntrevista) ^
+      const DeepCollectionEquality().hash(uuid) ^
       const DeepCollectionEquality().hash(asuntoEntrevista) ^
       const DeepCollectionEquality().hash(fechaPautada) ^
       const DeepCollectionEquality().hash(estadoEntrevista) ^
@@ -227,14 +226,14 @@ class _$_Entrevista implements _Entrevista {
 
 abstract class _Entrevista implements Entrevista, IEntidad {
   const factory _Entrevista(
-      {required Identificador uuidEntrevista,
+      {required Identificador uuid,
       required AsuntoEntrevista asuntoEntrevista,
       required Fecha fechaPautada,
       required EstadoEntrevista estadoEntrevista,
       required Identificador uuidPersonalAdministrativo}) = _$_Entrevista;
 
   @override
-  Identificador get uuidEntrevista => throw _privateConstructorUsedError;
+  Identificador get uuid => throw _privateConstructorUsedError;
   @override
   AsuntoEntrevista get asuntoEntrevista => throw _privateConstructorUsedError;
   @override

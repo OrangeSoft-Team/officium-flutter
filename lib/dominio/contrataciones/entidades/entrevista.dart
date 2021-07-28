@@ -11,7 +11,7 @@ part 'entrevista.freezed.dart';
 abstract class Entrevista with _$Entrevista {
   @Implements(IEntidad)
   const factory Entrevista({
-    required Identificador uuidEntrevista,
+    required Identificador uuid,
     required AsuntoEntrevista asuntoEntrevista,
     required Fecha fechaPautada,
     required EstadoEntrevista estadoEntrevista,

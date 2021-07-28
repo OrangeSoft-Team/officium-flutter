@@ -62,17 +62,22 @@ abstract class ValorErroneo<T> with _$ValorErroneo<T> {
 
   const factory ValorErroneo.numVacantesInvalido(
       {required T numVacantesInvalido}) = NumVacantesInvalido<T>;
+
   const factory ValorErroneo.numVacantesNoVacia({required T valorErroneo}) =
       NumVacantesNoVacia<T>;
+
   const factory ValorErroneo.turnoInvalido(
       {required T valorErroneo,
       required List<String> turnosValidos}) = TurnoInvalido<T>;
+
   const factory ValorErroneo.generoInvalido(
       {required T valorErroneo,
       required List<String> generosValidos}) = GeneroInvalido<T>;
+
   const factory ValorErroneo.fechaNacimientoMenorEdad({
     required T fechaErronea,
   }) = FechaNacimientoMenorEdad<T>;
+
   const factory ValorErroneo.numeroTelefonicoInvalido({
     required T numeroErroneo,
   }) = NumeroTelefonicoInvalido<T>;
@@ -85,6 +90,11 @@ abstract class ValorErroneo<T> with _$ValorErroneo<T> {
     required T valorErroneo,
     required List<String> estadosValidos,
   }) = EstadoOfertaInvalido<T>;
+
+  const factory ValorErroneo.estadoCursoInvalido({
+    required T valorErroneo,
+    required List<String> estadosValidos,
+  }) = EstadoCursoInvalido<T>;
 
   const factory ValorErroneo.estadoEntrevistaInvalido({
     required T valorErroneo,
@@ -119,4 +129,24 @@ abstract class ValorErroneo<T> with _$ValorErroneo<T> {
           {required T valorErroneo,
           required List<String> nivelesEducativosValidos}) =
       NivelEducativoInvalido<T>;
+
+  const factory ValorErroneo.escalaCalificacionCuestionarioInvalida({
+    required T valorErroneo,
+    required int maxEscala,
+  }) = EscalaCalificacionCuestionarioInvalida<T>;
+
+  const factory ValorErroneo.intentosPermitidosCuestionarioInvalido({
+    required T valorErroneo,
+    required int maxIntento,
+  }) = IntentosPermitidosCuestionarioInvalido<T>;
+
+  const factory ValorErroneo.tipoPreguntaInvalido({
+    required T valorErroneo,
+    required List<String> tiposValidos,
+  }) = tipoPreguntaInvalido<T>;
+
+  const factory ValorErroneo.ponderacionPreguntaInvalido({
+    required T valorErroneo,
+    required int maxPonderacion,
+  }) = PonderacionPreguntaInvalido<T>;
 }
