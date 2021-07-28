@@ -37,7 +37,6 @@ dependencies:
   json_annotation: ^4.0.1
   uuid: ^3.0.4
   firebase_auth: ^3.0.1
-  flutter_dotenv: ^5.0.0
   
 
 
@@ -63,7 +62,6 @@ flutter:
   - data/menu_opts.json
   - assets/ofertaLaboralDtoPrueba.json
   - test/infraestructura/data_pruebas/ofertaLaboralDtoPrueba.json
-  - .env
 
   fonts:
   - family: Raleway
