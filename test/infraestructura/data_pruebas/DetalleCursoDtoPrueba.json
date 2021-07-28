@@ -1,0 +1,20 @@
+{
+    "uuid":"1",
+    "titulo":"Test curso",
+    "estatus":"ACTIVO",
+    "valorDuracion":30,
+    "escalaDuracion":"DIAS",
+    "fechaCreacion":"03/07/2021",
+    "lecciones":[
+        {
+            "uuid":"1",
+            "titulo":"Lección test 1"
+        },
+        {
+            "uuid":"2",
+            "titulo":"Lección test 2"
+        }
+    ],
+    "habilidades":[],
+    "descripcion":"Test descripcion curso"
+}

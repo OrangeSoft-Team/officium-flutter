@@ -1,0 +1,7 @@
+{
+    "uuid":"1",
+    "valorDuracion":15,
+    "escalaDuracion":"MINUTOS",
+    "intentosPermitidos":1,
+    "preguntasCuestionario":[]
+}

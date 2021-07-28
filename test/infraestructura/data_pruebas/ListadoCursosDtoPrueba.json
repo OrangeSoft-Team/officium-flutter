@@ -1,0 +1,14 @@
+[
+    {
+    "uuid":"1",
+    "titulo":"Test curso 1",
+    "estatus":"ACTIVO",
+    "fechaCreacion":"03/07/2021"
+    },
+    {
+    "uuid":"2",
+    "titulo":"Test curso 2",
+    "estatus":"ACTIVO",
+    "fechaCreacion":"15/07/2021"
+    }
+]
