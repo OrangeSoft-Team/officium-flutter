@@ -160,6 +160,14 @@ class _$ValorErroneoTearOff {
     );
   }
 
+  EstadoEntrevistaInvalido<T> estadoEntrevistaInvalido<T>(
+      {required T valorErroneo, required List<String> estadosValidos}) {
+    return EstadoEntrevistaInvalido<T>(
+      valorErroneo: valorErroneo,
+      estadosValidos: estadosValidos,
+    );
+  }
+
   EstadoTrabajoInvalido<T> estadoTrabajoInvalido<T>(
       {required T valorErroneo, required List<String> estadosValidos}) {
     return EstadoTrabajoInvalido<T>(
@@ -244,6 +252,8 @@ mixin _$ValorErroneo<T> {
     required TResult Function(T valorErroneo, List<String> estadosValidos)
         estadoOfertaInvalido,
     required TResult Function(T valorErroneo, List<String> estadosValidos)
+        estadoEntrevistaInvalido,
+    required TResult Function(T valorErroneo, List<String> estadosValidos)
         estadoTrabajoInvalido,
     required TResult Function(T valorInvalido, int minValor, int maxValor)
         duracionEstimadaValorInvalido,
@@ -281,6 +291,8 @@ mixin _$ValorErroneo<T> {
     TResult Function(T numeroErroneo)? numeroTelefonicoVacio,
     TResult Function(T valorErroneo, List<String> estadosValidos)?
         estadoOfertaInvalido,
+    TResult Function(T valorErroneo, List<String> estadosValidos)?
+        estadoEntrevistaInvalido,
     TResult Function(T valorErroneo, List<String> estadosValidos)?
         estadoTrabajoInvalido,
     TResult Function(T valorInvalido, int minValor, int maxValor)?
@@ -324,6 +336,8 @@ mixin _$ValorErroneo<T> {
         numeroTelefonicoVacio,
     required TResult Function(EstadoOfertaInvalido<T> value)
         estadoOfertaInvalido,
+    required TResult Function(EstadoEntrevistaInvalido<T> value)
+        estadoEntrevistaInvalido,
     required TResult Function(EstadoTrabajoInvalido<T> value)
         estadoTrabajoInvalido,
     required TResult Function(DuracionEstimadaValorInvalido<T> value)
@@ -364,6 +378,8 @@ mixin _$ValorErroneo<T> {
         numeroTelefonicoInvalido,
     TResult Function(NumeroTelefonicoVacio<T> value)? numeroTelefonicoVacio,
     TResult Function(EstadoOfertaInvalido<T> value)? estadoOfertaInvalido,
+    TResult Function(EstadoEntrevistaInvalido<T> value)?
+        estadoEntrevistaInvalido,
     TResult Function(EstadoTrabajoInvalido<T> value)? estadoTrabajoInvalido,
     TResult Function(DuracionEstimadaValorInvalido<T> value)?
         duracionEstimadaValorInvalido,
@@ -488,6 +504,8 @@ class _$EmailInvalido<T> implements EmailInvalido<T> {
     required TResult Function(T valorErroneo, List<String> estadosValidos)
         estadoOfertaInvalido,
     required TResult Function(T valorErroneo, List<String> estadosValidos)
+        estadoEntrevistaInvalido,
+    required TResult Function(T valorErroneo, List<String> estadosValidos)
         estadoTrabajoInvalido,
     required TResult Function(T valorInvalido, int minValor, int maxValor)
         duracionEstimadaValorInvalido,
@@ -528,6 +546,8 @@ class _$EmailInvalido<T> implements EmailInvalido<T> {
     TResult Function(T numeroErroneo)? numeroTelefonicoVacio,
     TResult Function(T valorErroneo, List<String> estadosValidos)?
         estadoOfertaInvalido,
+    TResult Function(T valorErroneo, List<String> estadosValidos)?
+        estadoEntrevistaInvalido,
     TResult Function(T valorErroneo, List<String> estadosValidos)?
         estadoTrabajoInvalido,
     TResult Function(T valorInvalido, int minValor, int maxValor)?
@@ -577,6 +597,8 @@ class _$EmailInvalido<T> implements EmailInvalido<T> {
         numeroTelefonicoVacio,
     required TResult Function(EstadoOfertaInvalido<T> value)
         estadoOfertaInvalido,
+    required TResult Function(EstadoEntrevistaInvalido<T> value)
+        estadoEntrevistaInvalido,
     required TResult Function(EstadoTrabajoInvalido<T> value)
         estadoTrabajoInvalido,
     required TResult Function(DuracionEstimadaValorInvalido<T> value)
@@ -620,6 +642,8 @@ class _$EmailInvalido<T> implements EmailInvalido<T> {
         numeroTelefonicoInvalido,
     TResult Function(NumeroTelefonicoVacio<T> value)? numeroTelefonicoVacio,
     TResult Function(EstadoOfertaInvalido<T> value)? estadoOfertaInvalido,
+    TResult Function(EstadoEntrevistaInvalido<T> value)?
+        estadoEntrevistaInvalido,
     TResult Function(EstadoTrabajoInvalido<T> value)? estadoTrabajoInvalido,
     TResult Function(DuracionEstimadaValorInvalido<T> value)?
         duracionEstimadaValorInvalido,
@@ -740,6 +764,8 @@ class _$ContrasenaCorta<T> implements ContrasenaCorta<T> {
     required TResult Function(T valorErroneo, List<String> estadosValidos)
         estadoOfertaInvalido,
     required TResult Function(T valorErroneo, List<String> estadosValidos)
+        estadoEntrevistaInvalido,
+    required TResult Function(T valorErroneo, List<String> estadosValidos)
         estadoTrabajoInvalido,
     required TResult Function(T valorInvalido, int minValor, int maxValor)
         duracionEstimadaValorInvalido,
@@ -780,6 +806,8 @@ class _$ContrasenaCorta<T> implements ContrasenaCorta<T> {
     TResult Function(T numeroErroneo)? numeroTelefonicoVacio,
     TResult Function(T valorErroneo, List<String> estadosValidos)?
         estadoOfertaInvalido,
+    TResult Function(T valorErroneo, List<String> estadosValidos)?
+        estadoEntrevistaInvalido,
     TResult Function(T valorErroneo, List<String> estadosValidos)?
         estadoTrabajoInvalido,
     TResult Function(T valorInvalido, int minValor, int maxValor)?
@@ -829,6 +857,8 @@ class _$ContrasenaCorta<T> implements ContrasenaCorta<T> {
         numeroTelefonicoVacio,
     required TResult Function(EstadoOfertaInvalido<T> value)
         estadoOfertaInvalido,
+    required TResult Function(EstadoEntrevistaInvalido<T> value)
+        estadoEntrevistaInvalido,
     required TResult Function(EstadoTrabajoInvalido<T> value)
         estadoTrabajoInvalido,
     required TResult Function(DuracionEstimadaValorInvalido<T> value)
@@ -872,6 +902,8 @@ class _$ContrasenaCorta<T> implements ContrasenaCorta<T> {
         numeroTelefonicoInvalido,
     TResult Function(NumeroTelefonicoVacio<T> value)? numeroTelefonicoVacio,
     TResult Function(EstadoOfertaInvalido<T> value)? estadoOfertaInvalido,
+    TResult Function(EstadoEntrevistaInvalido<T> value)?
+        estadoEntrevistaInvalido,
     TResult Function(EstadoTrabajoInvalido<T> value)? estadoTrabajoInvalido,
     TResult Function(DuracionEstimadaValorInvalido<T> value)?
         duracionEstimadaValorInvalido,
@@ -993,6 +1025,8 @@ class _$ContrasenaVacia<T> implements ContrasenaVacia<T> {
     required TResult Function(T valorErroneo, List<String> estadosValidos)
         estadoOfertaInvalido,
     required TResult Function(T valorErroneo, List<String> estadosValidos)
+        estadoEntrevistaInvalido,
+    required TResult Function(T valorErroneo, List<String> estadosValidos)
         estadoTrabajoInvalido,
     required TResult Function(T valorInvalido, int minValor, int maxValor)
         duracionEstimadaValorInvalido,
@@ -1033,6 +1067,8 @@ class _$ContrasenaVacia<T> implements ContrasenaVacia<T> {
     TResult Function(T numeroErroneo)? numeroTelefonicoVacio,
     TResult Function(T valorErroneo, List<String> estadosValidos)?
         estadoOfertaInvalido,
+    TResult Function(T valorErroneo, List<String> estadosValidos)?
+        estadoEntrevistaInvalido,
     TResult Function(T valorErroneo, List<String> estadosValidos)?
         estadoTrabajoInvalido,
     TResult Function(T valorInvalido, int minValor, int maxValor)?
@@ -1082,6 +1118,8 @@ class _$ContrasenaVacia<T> implements ContrasenaVacia<T> {
         numeroTelefonicoVacio,
     required TResult Function(EstadoOfertaInvalido<T> value)
         estadoOfertaInvalido,
+    required TResult Function(EstadoEntrevistaInvalido<T> value)
+        estadoEntrevistaInvalido,
     required TResult Function(EstadoTrabajoInvalido<T> value)
         estadoTrabajoInvalido,
     required TResult Function(DuracionEstimadaValorInvalido<T> value)
@@ -1125,6 +1163,8 @@ class _$ContrasenaVacia<T> implements ContrasenaVacia<T> {
         numeroTelefonicoInvalido,
     TResult Function(NumeroTelefonicoVacio<T> value)? numeroTelefonicoVacio,
     TResult Function(EstadoOfertaInvalido<T> value)? estadoOfertaInvalido,
+    TResult Function(EstadoEntrevistaInvalido<T> value)?
+        estadoEntrevistaInvalido,
     TResult Function(EstadoTrabajoInvalido<T> value)? estadoTrabajoInvalido,
     TResult Function(DuracionEstimadaValorInvalido<T> value)?
         duracionEstimadaValorInvalido,
@@ -1246,6 +1286,8 @@ class _$ContrasenaLarga<T> implements ContrasenaLarga<T> {
     required TResult Function(T valorErroneo, List<String> estadosValidos)
         estadoOfertaInvalido,
     required TResult Function(T valorErroneo, List<String> estadosValidos)
+        estadoEntrevistaInvalido,
+    required TResult Function(T valorErroneo, List<String> estadosValidos)
         estadoTrabajoInvalido,
     required TResult Function(T valorInvalido, int minValor, int maxValor)
         duracionEstimadaValorInvalido,
@@ -1286,6 +1328,8 @@ class _$ContrasenaLarga<T> implements ContrasenaLarga<T> {
     TResult Function(T numeroErroneo)? numeroTelefonicoVacio,
     TResult Function(T valorErroneo, List<String> estadosValidos)?
         estadoOfertaInvalido,
+    TResult Function(T valorErroneo, List<String> estadosValidos)?
+        estadoEntrevistaInvalido,
     TResult Function(T valorErroneo, List<String> estadosValidos)?
         estadoTrabajoInvalido,
     TResult Function(T valorInvalido, int minValor, int maxValor)?
@@ -1335,6 +1379,8 @@ class _$ContrasenaLarga<T> implements ContrasenaLarga<T> {
         numeroTelefonicoVacio,
     required TResult Function(EstadoOfertaInvalido<T> value)
         estadoOfertaInvalido,
+    required TResult Function(EstadoEntrevistaInvalido<T> value)
+        estadoEntrevistaInvalido,
     required TResult Function(EstadoTrabajoInvalido<T> value)
         estadoTrabajoInvalido,
     required TResult Function(DuracionEstimadaValorInvalido<T> value)
@@ -1378,6 +1424,8 @@ class _$ContrasenaLarga<T> implements ContrasenaLarga<T> {
         numeroTelefonicoInvalido,
     TResult Function(NumeroTelefonicoVacio<T> value)? numeroTelefonicoVacio,
     TResult Function(EstadoOfertaInvalido<T> value)? estadoOfertaInvalido,
+    TResult Function(EstadoEntrevistaInvalido<T> value)?
+        estadoEntrevistaInvalido,
     TResult Function(EstadoTrabajoInvalido<T> value)? estadoTrabajoInvalido,
     TResult Function(DuracionEstimadaValorInvalido<T> value)?
         duracionEstimadaValorInvalido,
@@ -1502,6 +1550,8 @@ class _$ContrasenaCaracterEspecial<T> implements ContrasenaCaracterEspecial<T> {
     required TResult Function(T valorErroneo, List<String> estadosValidos)
         estadoOfertaInvalido,
     required TResult Function(T valorErroneo, List<String> estadosValidos)
+        estadoEntrevistaInvalido,
+    required TResult Function(T valorErroneo, List<String> estadosValidos)
         estadoTrabajoInvalido,
     required TResult Function(T valorInvalido, int minValor, int maxValor)
         duracionEstimadaValorInvalido,
@@ -1542,6 +1592,8 @@ class _$ContrasenaCaracterEspecial<T> implements ContrasenaCaracterEspecial<T> {
     TResult Function(T numeroErroneo)? numeroTelefonicoVacio,
     TResult Function(T valorErroneo, List<String> estadosValidos)?
         estadoOfertaInvalido,
+    TResult Function(T valorErroneo, List<String> estadosValidos)?
+        estadoEntrevistaInvalido,
     TResult Function(T valorErroneo, List<String> estadosValidos)?
         estadoTrabajoInvalido,
     TResult Function(T valorInvalido, int minValor, int maxValor)?
@@ -1591,6 +1643,8 @@ class _$ContrasenaCaracterEspecial<T> implements ContrasenaCaracterEspecial<T> {
         numeroTelefonicoVacio,
     required TResult Function(EstadoOfertaInvalido<T> value)
         estadoOfertaInvalido,
+    required TResult Function(EstadoEntrevistaInvalido<T> value)
+        estadoEntrevistaInvalido,
     required TResult Function(EstadoTrabajoInvalido<T> value)
         estadoTrabajoInvalido,
     required TResult Function(DuracionEstimadaValorInvalido<T> value)
@@ -1634,6 +1688,8 @@ class _$ContrasenaCaracterEspecial<T> implements ContrasenaCaracterEspecial<T> {
         numeroTelefonicoInvalido,
     TResult Function(NumeroTelefonicoVacio<T> value)? numeroTelefonicoVacio,
     TResult Function(EstadoOfertaInvalido<T> value)? estadoOfertaInvalido,
+    TResult Function(EstadoEntrevistaInvalido<T> value)?
+        estadoEntrevistaInvalido,
     TResult Function(EstadoTrabajoInvalido<T> value)? estadoTrabajoInvalido,
     TResult Function(DuracionEstimadaValorInvalido<T> value)?
         duracionEstimadaValorInvalido,
@@ -1757,6 +1813,8 @@ class _$ContrasenaSinMayuscula<T> implements ContrasenaSinMayuscula<T> {
     required TResult Function(T valorErroneo, List<String> estadosValidos)
         estadoOfertaInvalido,
     required TResult Function(T valorErroneo, List<String> estadosValidos)
+        estadoEntrevistaInvalido,
+    required TResult Function(T valorErroneo, List<String> estadosValidos)
         estadoTrabajoInvalido,
     required TResult Function(T valorInvalido, int minValor, int maxValor)
         duracionEstimadaValorInvalido,
@@ -1797,6 +1855,8 @@ class _$ContrasenaSinMayuscula<T> implements ContrasenaSinMayuscula<T> {
     TResult Function(T numeroErroneo)? numeroTelefonicoVacio,
     TResult Function(T valorErroneo, List<String> estadosValidos)?
         estadoOfertaInvalido,
+    TResult Function(T valorErroneo, List<String> estadosValidos)?
+        estadoEntrevistaInvalido,
     TResult Function(T valorErroneo, List<String> estadosValidos)?
         estadoTrabajoInvalido,
     TResult Function(T valorInvalido, int minValor, int maxValor)?
@@ -1846,6 +1906,8 @@ class _$ContrasenaSinMayuscula<T> implements ContrasenaSinMayuscula<T> {
         numeroTelefonicoVacio,
     required TResult Function(EstadoOfertaInvalido<T> value)
         estadoOfertaInvalido,
+    required TResult Function(EstadoEntrevistaInvalido<T> value)
+        estadoEntrevistaInvalido,
     required TResult Function(EstadoTrabajoInvalido<T> value)
         estadoTrabajoInvalido,
     required TResult Function(DuracionEstimadaValorInvalido<T> value)
@@ -1889,6 +1951,8 @@ class _$ContrasenaSinMayuscula<T> implements ContrasenaSinMayuscula<T> {
         numeroTelefonicoInvalido,
     TResult Function(NumeroTelefonicoVacio<T> value)? numeroTelefonicoVacio,
     TResult Function(EstadoOfertaInvalido<T> value)? estadoOfertaInvalido,
+    TResult Function(EstadoEntrevistaInvalido<T> value)?
+        estadoEntrevistaInvalido,
     TResult Function(EstadoTrabajoInvalido<T> value)? estadoTrabajoInvalido,
     TResult Function(DuracionEstimadaValorInvalido<T> value)?
         duracionEstimadaValorInvalido,
@@ -2012,6 +2076,8 @@ class _$ContrasenaSinMinuscula<T> implements ContrasenaSinMinuscula<T> {
     required TResult Function(T valorErroneo, List<String> estadosValidos)
         estadoOfertaInvalido,
     required TResult Function(T valorErroneo, List<String> estadosValidos)
+        estadoEntrevistaInvalido,
+    required TResult Function(T valorErroneo, List<String> estadosValidos)
         estadoTrabajoInvalido,
     required TResult Function(T valorInvalido, int minValor, int maxValor)
         duracionEstimadaValorInvalido,
@@ -2052,6 +2118,8 @@ class _$ContrasenaSinMinuscula<T> implements ContrasenaSinMinuscula<T> {
     TResult Function(T numeroErroneo)? numeroTelefonicoVacio,
     TResult Function(T valorErroneo, List<String> estadosValidos)?
         estadoOfertaInvalido,
+    TResult Function(T valorErroneo, List<String> estadosValidos)?
+        estadoEntrevistaInvalido,
     TResult Function(T valorErroneo, List<String> estadosValidos)?
         estadoTrabajoInvalido,
     TResult Function(T valorInvalido, int minValor, int maxValor)?
@@ -2101,6 +2169,8 @@ class _$ContrasenaSinMinuscula<T> implements ContrasenaSinMinuscula<T> {
         numeroTelefonicoVacio,
     required TResult Function(EstadoOfertaInvalido<T> value)
         estadoOfertaInvalido,
+    required TResult Function(EstadoEntrevistaInvalido<T> value)
+        estadoEntrevistaInvalido,
     required TResult Function(EstadoTrabajoInvalido<T> value)
         estadoTrabajoInvalido,
     required TResult Function(DuracionEstimadaValorInvalido<T> value)
@@ -2144,6 +2214,8 @@ class _$ContrasenaSinMinuscula<T> implements ContrasenaSinMinuscula<T> {
         numeroTelefonicoInvalido,
     TResult Function(NumeroTelefonicoVacio<T> value)? numeroTelefonicoVacio,
     TResult Function(EstadoOfertaInvalido<T> value)? estadoOfertaInvalido,
+    TResult Function(EstadoEntrevistaInvalido<T> value)?
+        estadoEntrevistaInvalido,
     TResult Function(EstadoTrabajoInvalido<T> value)? estadoTrabajoInvalido,
     TResult Function(DuracionEstimadaValorInvalido<T> value)?
         duracionEstimadaValorInvalido,
@@ -2266,6 +2338,8 @@ class _$ContrasenaSinNumero<T> implements ContrasenaSinNumero<T> {
     required TResult Function(T valorErroneo, List<String> estadosValidos)
         estadoOfertaInvalido,
     required TResult Function(T valorErroneo, List<String> estadosValidos)
+        estadoEntrevistaInvalido,
+    required TResult Function(T valorErroneo, List<String> estadosValidos)
         estadoTrabajoInvalido,
     required TResult Function(T valorInvalido, int minValor, int maxValor)
         duracionEstimadaValorInvalido,
@@ -2306,6 +2380,8 @@ class _$ContrasenaSinNumero<T> implements ContrasenaSinNumero<T> {
     TResult Function(T numeroErroneo)? numeroTelefonicoVacio,
     TResult Function(T valorErroneo, List<String> estadosValidos)?
         estadoOfertaInvalido,
+    TResult Function(T valorErroneo, List<String> estadosValidos)?
+        estadoEntrevistaInvalido,
     TResult Function(T valorErroneo, List<String> estadosValidos)?
         estadoTrabajoInvalido,
     TResult Function(T valorInvalido, int minValor, int maxValor)?
@@ -2355,6 +2431,8 @@ class _$ContrasenaSinNumero<T> implements ContrasenaSinNumero<T> {
         numeroTelefonicoVacio,
     required TResult Function(EstadoOfertaInvalido<T> value)
         estadoOfertaInvalido,
+    required TResult Function(EstadoEntrevistaInvalido<T> value)
+        estadoEntrevistaInvalido,
     required TResult Function(EstadoTrabajoInvalido<T> value)
         estadoTrabajoInvalido,
     required TResult Function(DuracionEstimadaValorInvalido<T> value)
@@ -2398,6 +2476,8 @@ class _$ContrasenaSinNumero<T> implements ContrasenaSinNumero<T> {
         numeroTelefonicoInvalido,
     TResult Function(NumeroTelefonicoVacio<T> value)? numeroTelefonicoVacio,
     TResult Function(EstadoOfertaInvalido<T> value)? estadoOfertaInvalido,
+    TResult Function(EstadoEntrevistaInvalido<T> value)?
+        estadoEntrevistaInvalido,
     TResult Function(EstadoTrabajoInvalido<T> value)? estadoTrabajoInvalido,
     TResult Function(DuracionEstimadaValorInvalido<T> value)?
         duracionEstimadaValorInvalido,
@@ -2519,6 +2599,8 @@ class _$StringVacio<T> implements StringVacio<T> {
     required TResult Function(T valorErroneo, List<String> estadosValidos)
         estadoOfertaInvalido,
     required TResult Function(T valorErroneo, List<String> estadosValidos)
+        estadoEntrevistaInvalido,
+    required TResult Function(T valorErroneo, List<String> estadosValidos)
         estadoTrabajoInvalido,
     required TResult Function(T valorInvalido, int minValor, int maxValor)
         duracionEstimadaValorInvalido,
@@ -2559,6 +2641,8 @@ class _$StringVacio<T> implements StringVacio<T> {
     TResult Function(T numeroErroneo)? numeroTelefonicoVacio,
     TResult Function(T valorErroneo, List<String> estadosValidos)?
         estadoOfertaInvalido,
+    TResult Function(T valorErroneo, List<String> estadosValidos)?
+        estadoEntrevistaInvalido,
     TResult Function(T valorErroneo, List<String> estadosValidos)?
         estadoTrabajoInvalido,
     TResult Function(T valorInvalido, int minValor, int maxValor)?
@@ -2608,6 +2692,8 @@ class _$StringVacio<T> implements StringVacio<T> {
         numeroTelefonicoVacio,
     required TResult Function(EstadoOfertaInvalido<T> value)
         estadoOfertaInvalido,
+    required TResult Function(EstadoEntrevistaInvalido<T> value)
+        estadoEntrevistaInvalido,
     required TResult Function(EstadoTrabajoInvalido<T> value)
         estadoTrabajoInvalido,
     required TResult Function(DuracionEstimadaValorInvalido<T> value)
@@ -2651,6 +2737,8 @@ class _$StringVacio<T> implements StringVacio<T> {
         numeroTelefonicoInvalido,
     TResult Function(NumeroTelefonicoVacio<T> value)? numeroTelefonicoVacio,
     TResult Function(EstadoOfertaInvalido<T> value)? estadoOfertaInvalido,
+    TResult Function(EstadoEntrevistaInvalido<T> value)?
+        estadoEntrevistaInvalido,
     TResult Function(EstadoTrabajoInvalido<T> value)? estadoTrabajoInvalido,
     TResult Function(DuracionEstimadaValorInvalido<T> value)?
         duracionEstimadaValorInvalido,
@@ -2793,6 +2881,8 @@ class _$LongitudInvalida<T> implements LongitudInvalida<T> {
     required TResult Function(T valorErroneo, List<String> estadosValidos)
         estadoOfertaInvalido,
     required TResult Function(T valorErroneo, List<String> estadosValidos)
+        estadoEntrevistaInvalido,
+    required TResult Function(T valorErroneo, List<String> estadosValidos)
         estadoTrabajoInvalido,
     required TResult Function(T valorInvalido, int minValor, int maxValor)
         duracionEstimadaValorInvalido,
@@ -2833,6 +2923,8 @@ class _$LongitudInvalida<T> implements LongitudInvalida<T> {
     TResult Function(T numeroErroneo)? numeroTelefonicoVacio,
     TResult Function(T valorErroneo, List<String> estadosValidos)?
         estadoOfertaInvalido,
+    TResult Function(T valorErroneo, List<String> estadosValidos)?
+        estadoEntrevistaInvalido,
     TResult Function(T valorErroneo, List<String> estadosValidos)?
         estadoTrabajoInvalido,
     TResult Function(T valorInvalido, int minValor, int maxValor)?
@@ -2882,6 +2974,8 @@ class _$LongitudInvalida<T> implements LongitudInvalida<T> {
         numeroTelefonicoVacio,
     required TResult Function(EstadoOfertaInvalido<T> value)
         estadoOfertaInvalido,
+    required TResult Function(EstadoEntrevistaInvalido<T> value)
+        estadoEntrevistaInvalido,
     required TResult Function(EstadoTrabajoInvalido<T> value)
         estadoTrabajoInvalido,
     required TResult Function(DuracionEstimadaValorInvalido<T> value)
@@ -2925,6 +3019,8 @@ class _$LongitudInvalida<T> implements LongitudInvalida<T> {
         numeroTelefonicoInvalido,
     TResult Function(NumeroTelefonicoVacio<T> value)? numeroTelefonicoVacio,
     TResult Function(EstadoOfertaInvalido<T> value)? estadoOfertaInvalido,
+    TResult Function(EstadoEntrevistaInvalido<T> value)?
+        estadoEntrevistaInvalido,
     TResult Function(EstadoTrabajoInvalido<T> value)? estadoTrabajoInvalido,
     TResult Function(DuracionEstimadaValorInvalido<T> value)?
         duracionEstimadaValorInvalido,
@@ -3061,6 +3157,8 @@ class _$SueldoInvalida<T> implements SueldoInvalida<T> {
     required TResult Function(T valorErroneo, List<String> estadosValidos)
         estadoOfertaInvalido,
     required TResult Function(T valorErroneo, List<String> estadosValidos)
+        estadoEntrevistaInvalido,
+    required TResult Function(T valorErroneo, List<String> estadosValidos)
         estadoTrabajoInvalido,
     required TResult Function(T valorInvalido, int minValor, int maxValor)
         duracionEstimadaValorInvalido,
@@ -3101,6 +3199,8 @@ class _$SueldoInvalida<T> implements SueldoInvalida<T> {
     TResult Function(T numeroErroneo)? numeroTelefonicoVacio,
     TResult Function(T valorErroneo, List<String> estadosValidos)?
         estadoOfertaInvalido,
+    TResult Function(T valorErroneo, List<String> estadosValidos)?
+        estadoEntrevistaInvalido,
     TResult Function(T valorErroneo, List<String> estadosValidos)?
         estadoTrabajoInvalido,
     TResult Function(T valorInvalido, int minValor, int maxValor)?
@@ -3150,6 +3250,8 @@ class _$SueldoInvalida<T> implements SueldoInvalida<T> {
         numeroTelefonicoVacio,
     required TResult Function(EstadoOfertaInvalido<T> value)
         estadoOfertaInvalido,
+    required TResult Function(EstadoEntrevistaInvalido<T> value)
+        estadoEntrevistaInvalido,
     required TResult Function(EstadoTrabajoInvalido<T> value)
         estadoTrabajoInvalido,
     required TResult Function(DuracionEstimadaValorInvalido<T> value)
@@ -3193,6 +3295,8 @@ class _$SueldoInvalida<T> implements SueldoInvalida<T> {
         numeroTelefonicoInvalido,
     TResult Function(NumeroTelefonicoVacio<T> value)? numeroTelefonicoVacio,
     TResult Function(EstadoOfertaInvalido<T> value)? estadoOfertaInvalido,
+    TResult Function(EstadoEntrevistaInvalido<T> value)?
+        estadoEntrevistaInvalido,
     TResult Function(EstadoTrabajoInvalido<T> value)? estadoTrabajoInvalido,
     TResult Function(DuracionEstimadaValorInvalido<T> value)?
         duracionEstimadaValorInvalido,
@@ -3315,6 +3419,8 @@ class _$SueldoVacio<T> implements SueldoVacio<T> {
     required TResult Function(T valorErroneo, List<String> estadosValidos)
         estadoOfertaInvalido,
     required TResult Function(T valorErroneo, List<String> estadosValidos)
+        estadoEntrevistaInvalido,
+    required TResult Function(T valorErroneo, List<String> estadosValidos)
         estadoTrabajoInvalido,
     required TResult Function(T valorInvalido, int minValor, int maxValor)
         duracionEstimadaValorInvalido,
@@ -3355,6 +3461,8 @@ class _$SueldoVacio<T> implements SueldoVacio<T> {
     TResult Function(T numeroErroneo)? numeroTelefonicoVacio,
     TResult Function(T valorErroneo, List<String> estadosValidos)?
         estadoOfertaInvalido,
+    TResult Function(T valorErroneo, List<String> estadosValidos)?
+        estadoEntrevistaInvalido,
     TResult Function(T valorErroneo, List<String> estadosValidos)?
         estadoTrabajoInvalido,
     TResult Function(T valorInvalido, int minValor, int maxValor)?
@@ -3404,6 +3512,8 @@ class _$SueldoVacio<T> implements SueldoVacio<T> {
         numeroTelefonicoVacio,
     required TResult Function(EstadoOfertaInvalido<T> value)
         estadoOfertaInvalido,
+    required TResult Function(EstadoEntrevistaInvalido<T> value)
+        estadoEntrevistaInvalido,
     required TResult Function(EstadoTrabajoInvalido<T> value)
         estadoTrabajoInvalido,
     required TResult Function(DuracionEstimadaValorInvalido<T> value)
@@ -3447,6 +3557,8 @@ class _$SueldoVacio<T> implements SueldoVacio<T> {
         numeroTelefonicoInvalido,
     TResult Function(NumeroTelefonicoVacio<T> value)? numeroTelefonicoVacio,
     TResult Function(EstadoOfertaInvalido<T> value)? estadoOfertaInvalido,
+    TResult Function(EstadoEntrevistaInvalido<T> value)?
+        estadoEntrevistaInvalido,
     TResult Function(EstadoTrabajoInvalido<T> value)? estadoTrabajoInvalido,
     TResult Function(DuracionEstimadaValorInvalido<T> value)?
         duracionEstimadaValorInvalido,
@@ -3567,6 +3679,8 @@ class _$FechaNula<T> implements FechaNula<T> {
     required TResult Function(T valorErroneo, List<String> estadosValidos)
         estadoOfertaInvalido,
     required TResult Function(T valorErroneo, List<String> estadosValidos)
+        estadoEntrevistaInvalido,
+    required TResult Function(T valorErroneo, List<String> estadosValidos)
         estadoTrabajoInvalido,
     required TResult Function(T valorInvalido, int minValor, int maxValor)
         duracionEstimadaValorInvalido,
@@ -3607,6 +3721,8 @@ class _$FechaNula<T> implements FechaNula<T> {
     TResult Function(T numeroErroneo)? numeroTelefonicoVacio,
     TResult Function(T valorErroneo, List<String> estadosValidos)?
         estadoOfertaInvalido,
+    TResult Function(T valorErroneo, List<String> estadosValidos)?
+        estadoEntrevistaInvalido,
     TResult Function(T valorErroneo, List<String> estadosValidos)?
         estadoTrabajoInvalido,
     TResult Function(T valorInvalido, int minValor, int maxValor)?
@@ -3656,6 +3772,8 @@ class _$FechaNula<T> implements FechaNula<T> {
         numeroTelefonicoVacio,
     required TResult Function(EstadoOfertaInvalido<T> value)
         estadoOfertaInvalido,
+    required TResult Function(EstadoEntrevistaInvalido<T> value)
+        estadoEntrevistaInvalido,
     required TResult Function(EstadoTrabajoInvalido<T> value)
         estadoTrabajoInvalido,
     required TResult Function(DuracionEstimadaValorInvalido<T> value)
@@ -3699,6 +3817,8 @@ class _$FechaNula<T> implements FechaNula<T> {
         numeroTelefonicoInvalido,
     TResult Function(NumeroTelefonicoVacio<T> value)? numeroTelefonicoVacio,
     TResult Function(EstadoOfertaInvalido<T> value)? estadoOfertaInvalido,
+    TResult Function(EstadoEntrevistaInvalido<T> value)?
+        estadoEntrevistaInvalido,
     TResult Function(EstadoTrabajoInvalido<T> value)? estadoTrabajoInvalido,
     TResult Function(DuracionEstimadaValorInvalido<T> value)?
         duracionEstimadaValorInvalido,
@@ -3821,6 +3941,8 @@ class _$NumVacantesInvalido<T> implements NumVacantesInvalido<T> {
     required TResult Function(T valorErroneo, List<String> estadosValidos)
         estadoOfertaInvalido,
     required TResult Function(T valorErroneo, List<String> estadosValidos)
+        estadoEntrevistaInvalido,
+    required TResult Function(T valorErroneo, List<String> estadosValidos)
         estadoTrabajoInvalido,
     required TResult Function(T valorInvalido, int minValor, int maxValor)
         duracionEstimadaValorInvalido,
@@ -3861,6 +3983,8 @@ class _$NumVacantesInvalido<T> implements NumVacantesInvalido<T> {
     TResult Function(T numeroErroneo)? numeroTelefonicoVacio,
     TResult Function(T valorErroneo, List<String> estadosValidos)?
         estadoOfertaInvalido,
+    TResult Function(T valorErroneo, List<String> estadosValidos)?
+        estadoEntrevistaInvalido,
     TResult Function(T valorErroneo, List<String> estadosValidos)?
         estadoTrabajoInvalido,
     TResult Function(T valorInvalido, int minValor, int maxValor)?
@@ -3910,6 +4034,8 @@ class _$NumVacantesInvalido<T> implements NumVacantesInvalido<T> {
         numeroTelefonicoVacio,
     required TResult Function(EstadoOfertaInvalido<T> value)
         estadoOfertaInvalido,
+    required TResult Function(EstadoEntrevistaInvalido<T> value)
+        estadoEntrevistaInvalido,
     required TResult Function(EstadoTrabajoInvalido<T> value)
         estadoTrabajoInvalido,
     required TResult Function(DuracionEstimadaValorInvalido<T> value)
@@ -3953,6 +4079,8 @@ class _$NumVacantesInvalido<T> implements NumVacantesInvalido<T> {
         numeroTelefonicoInvalido,
     TResult Function(NumeroTelefonicoVacio<T> value)? numeroTelefonicoVacio,
     TResult Function(EstadoOfertaInvalido<T> value)? estadoOfertaInvalido,
+    TResult Function(EstadoEntrevistaInvalido<T> value)?
+        estadoEntrevistaInvalido,
     TResult Function(EstadoTrabajoInvalido<T> value)? estadoTrabajoInvalido,
     TResult Function(DuracionEstimadaValorInvalido<T> value)?
         duracionEstimadaValorInvalido,
@@ -4075,6 +4203,8 @@ class _$NumVacantesNoVacia<T> implements NumVacantesNoVacia<T> {
     required TResult Function(T valorErroneo, List<String> estadosValidos)
         estadoOfertaInvalido,
     required TResult Function(T valorErroneo, List<String> estadosValidos)
+        estadoEntrevistaInvalido,
+    required TResult Function(T valorErroneo, List<String> estadosValidos)
         estadoTrabajoInvalido,
     required TResult Function(T valorInvalido, int minValor, int maxValor)
         duracionEstimadaValorInvalido,
@@ -4115,6 +4245,8 @@ class _$NumVacantesNoVacia<T> implements NumVacantesNoVacia<T> {
     TResult Function(T numeroErroneo)? numeroTelefonicoVacio,
     TResult Function(T valorErroneo, List<String> estadosValidos)?
         estadoOfertaInvalido,
+    TResult Function(T valorErroneo, List<String> estadosValidos)?
+        estadoEntrevistaInvalido,
     TResult Function(T valorErroneo, List<String> estadosValidos)?
         estadoTrabajoInvalido,
     TResult Function(T valorInvalido, int minValor, int maxValor)?
@@ -4164,6 +4296,8 @@ class _$NumVacantesNoVacia<T> implements NumVacantesNoVacia<T> {
         numeroTelefonicoVacio,
     required TResult Function(EstadoOfertaInvalido<T> value)
         estadoOfertaInvalido,
+    required TResult Function(EstadoEntrevistaInvalido<T> value)
+        estadoEntrevistaInvalido,
     required TResult Function(EstadoTrabajoInvalido<T> value)
         estadoTrabajoInvalido,
     required TResult Function(DuracionEstimadaValorInvalido<T> value)
@@ -4207,6 +4341,8 @@ class _$NumVacantesNoVacia<T> implements NumVacantesNoVacia<T> {
         numeroTelefonicoInvalido,
     TResult Function(NumeroTelefonicoVacio<T> value)? numeroTelefonicoVacio,
     TResult Function(EstadoOfertaInvalido<T> value)? estadoOfertaInvalido,
+    TResult Function(EstadoEntrevistaInvalido<T> value)?
+        estadoEntrevistaInvalido,
     TResult Function(EstadoTrabajoInvalido<T> value)? estadoTrabajoInvalido,
     TResult Function(DuracionEstimadaValorInvalido<T> value)?
         duracionEstimadaValorInvalido,
@@ -4341,6 +4477,8 @@ class _$TurnoInvalido<T> implements TurnoInvalido<T> {
     required TResult Function(T valorErroneo, List<String> estadosValidos)
         estadoOfertaInvalido,
     required TResult Function(T valorErroneo, List<String> estadosValidos)
+        estadoEntrevistaInvalido,
+    required TResult Function(T valorErroneo, List<String> estadosValidos)
         estadoTrabajoInvalido,
     required TResult Function(T valorInvalido, int minValor, int maxValor)
         duracionEstimadaValorInvalido,
@@ -4381,6 +4519,8 @@ class _$TurnoInvalido<T> implements TurnoInvalido<T> {
     TResult Function(T numeroErroneo)? numeroTelefonicoVacio,
     TResult Function(T valorErroneo, List<String> estadosValidos)?
         estadoOfertaInvalido,
+    TResult Function(T valorErroneo, List<String> estadosValidos)?
+        estadoEntrevistaInvalido,
     TResult Function(T valorErroneo, List<String> estadosValidos)?
         estadoTrabajoInvalido,
     TResult Function(T valorInvalido, int minValor, int maxValor)?
@@ -4430,6 +4570,8 @@ class _$TurnoInvalido<T> implements TurnoInvalido<T> {
         numeroTelefonicoVacio,
     required TResult Function(EstadoOfertaInvalido<T> value)
         estadoOfertaInvalido,
+    required TResult Function(EstadoEntrevistaInvalido<T> value)
+        estadoEntrevistaInvalido,
     required TResult Function(EstadoTrabajoInvalido<T> value)
         estadoTrabajoInvalido,
     required TResult Function(DuracionEstimadaValorInvalido<T> value)
@@ -4473,6 +4615,8 @@ class _$TurnoInvalido<T> implements TurnoInvalido<T> {
         numeroTelefonicoInvalido,
     TResult Function(NumeroTelefonicoVacio<T> value)? numeroTelefonicoVacio,
     TResult Function(EstadoOfertaInvalido<T> value)? estadoOfertaInvalido,
+    TResult Function(EstadoEntrevistaInvalido<T> value)?
+        estadoEntrevistaInvalido,
     TResult Function(EstadoTrabajoInvalido<T> value)? estadoTrabajoInvalido,
     TResult Function(DuracionEstimadaValorInvalido<T> value)?
         duracionEstimadaValorInvalido,
@@ -4609,6 +4753,8 @@ class _$GeneroInvalido<T> implements GeneroInvalido<T> {
     required TResult Function(T valorErroneo, List<String> estadosValidos)
         estadoOfertaInvalido,
     required TResult Function(T valorErroneo, List<String> estadosValidos)
+        estadoEntrevistaInvalido,
+    required TResult Function(T valorErroneo, List<String> estadosValidos)
         estadoTrabajoInvalido,
     required TResult Function(T valorInvalido, int minValor, int maxValor)
         duracionEstimadaValorInvalido,
@@ -4649,6 +4795,8 @@ class _$GeneroInvalido<T> implements GeneroInvalido<T> {
     TResult Function(T numeroErroneo)? numeroTelefonicoVacio,
     TResult Function(T valorErroneo, List<String> estadosValidos)?
         estadoOfertaInvalido,
+    TResult Function(T valorErroneo, List<String> estadosValidos)?
+        estadoEntrevistaInvalido,
     TResult Function(T valorErroneo, List<String> estadosValidos)?
         estadoTrabajoInvalido,
     TResult Function(T valorInvalido, int minValor, int maxValor)?
@@ -4698,6 +4846,8 @@ class _$GeneroInvalido<T> implements GeneroInvalido<T> {
         numeroTelefonicoVacio,
     required TResult Function(EstadoOfertaInvalido<T> value)
         estadoOfertaInvalido,
+    required TResult Function(EstadoEntrevistaInvalido<T> value)
+        estadoEntrevistaInvalido,
     required TResult Function(EstadoTrabajoInvalido<T> value)
         estadoTrabajoInvalido,
     required TResult Function(DuracionEstimadaValorInvalido<T> value)
@@ -4741,6 +4891,8 @@ class _$GeneroInvalido<T> implements GeneroInvalido<T> {
         numeroTelefonicoInvalido,
     TResult Function(NumeroTelefonicoVacio<T> value)? numeroTelefonicoVacio,
     TResult Function(EstadoOfertaInvalido<T> value)? estadoOfertaInvalido,
+    TResult Function(EstadoEntrevistaInvalido<T> value)?
+        estadoEntrevistaInvalido,
     TResult Function(EstadoTrabajoInvalido<T> value)? estadoTrabajoInvalido,
     TResult Function(DuracionEstimadaValorInvalido<T> value)?
         duracionEstimadaValorInvalido,
@@ -4866,6 +5018,8 @@ class _$FechaNacimientoMenorEdad<T> implements FechaNacimientoMenorEdad<T> {
     required TResult Function(T valorErroneo, List<String> estadosValidos)
         estadoOfertaInvalido,
     required TResult Function(T valorErroneo, List<String> estadosValidos)
+        estadoEntrevistaInvalido,
+    required TResult Function(T valorErroneo, List<String> estadosValidos)
         estadoTrabajoInvalido,
     required TResult Function(T valorInvalido, int minValor, int maxValor)
         duracionEstimadaValorInvalido,
@@ -4906,6 +5060,8 @@ class _$FechaNacimientoMenorEdad<T> implements FechaNacimientoMenorEdad<T> {
     TResult Function(T numeroErroneo)? numeroTelefonicoVacio,
     TResult Function(T valorErroneo, List<String> estadosValidos)?
         estadoOfertaInvalido,
+    TResult Function(T valorErroneo, List<String> estadosValidos)?
+        estadoEntrevistaInvalido,
     TResult Function(T valorErroneo, List<String> estadosValidos)?
         estadoTrabajoInvalido,
     TResult Function(T valorInvalido, int minValor, int maxValor)?
@@ -4955,6 +5111,8 @@ class _$FechaNacimientoMenorEdad<T> implements FechaNacimientoMenorEdad<T> {
         numeroTelefonicoVacio,
     required TResult Function(EstadoOfertaInvalido<T> value)
         estadoOfertaInvalido,
+    required TResult Function(EstadoEntrevistaInvalido<T> value)
+        estadoEntrevistaInvalido,
     required TResult Function(EstadoTrabajoInvalido<T> value)
         estadoTrabajoInvalido,
     required TResult Function(DuracionEstimadaValorInvalido<T> value)
@@ -4998,6 +5156,8 @@ class _$FechaNacimientoMenorEdad<T> implements FechaNacimientoMenorEdad<T> {
         numeroTelefonicoInvalido,
     TResult Function(NumeroTelefonicoVacio<T> value)? numeroTelefonicoVacio,
     TResult Function(EstadoOfertaInvalido<T> value)? estadoOfertaInvalido,
+    TResult Function(EstadoEntrevistaInvalido<T> value)?
+        estadoEntrevistaInvalido,
     TResult Function(EstadoTrabajoInvalido<T> value)? estadoTrabajoInvalido,
     TResult Function(DuracionEstimadaValorInvalido<T> value)?
         duracionEstimadaValorInvalido,
@@ -5121,6 +5281,8 @@ class _$NumeroTelefonicoInvalido<T> implements NumeroTelefonicoInvalido<T> {
     required TResult Function(T valorErroneo, List<String> estadosValidos)
         estadoOfertaInvalido,
     required TResult Function(T valorErroneo, List<String> estadosValidos)
+        estadoEntrevistaInvalido,
+    required TResult Function(T valorErroneo, List<String> estadosValidos)
         estadoTrabajoInvalido,
     required TResult Function(T valorInvalido, int minValor, int maxValor)
         duracionEstimadaValorInvalido,
@@ -5161,6 +5323,8 @@ class _$NumeroTelefonicoInvalido<T> implements NumeroTelefonicoInvalido<T> {
     TResult Function(T numeroErroneo)? numeroTelefonicoVacio,
     TResult Function(T valorErroneo, List<String> estadosValidos)?
         estadoOfertaInvalido,
+    TResult Function(T valorErroneo, List<String> estadosValidos)?
+        estadoEntrevistaInvalido,
     TResult Function(T valorErroneo, List<String> estadosValidos)?
         estadoTrabajoInvalido,
     TResult Function(T valorInvalido, int minValor, int maxValor)?
@@ -5210,6 +5374,8 @@ class _$NumeroTelefonicoInvalido<T> implements NumeroTelefonicoInvalido<T> {
         numeroTelefonicoVacio,
     required TResult Function(EstadoOfertaInvalido<T> value)
         estadoOfertaInvalido,
+    required TResult Function(EstadoEntrevistaInvalido<T> value)
+        estadoEntrevistaInvalido,
     required TResult Function(EstadoTrabajoInvalido<T> value)
         estadoTrabajoInvalido,
     required TResult Function(DuracionEstimadaValorInvalido<T> value)
@@ -5253,6 +5419,8 @@ class _$NumeroTelefonicoInvalido<T> implements NumeroTelefonicoInvalido<T> {
         numeroTelefonicoInvalido,
     TResult Function(NumeroTelefonicoVacio<T> value)? numeroTelefonicoVacio,
     TResult Function(EstadoOfertaInvalido<T> value)? estadoOfertaInvalido,
+    TResult Function(EstadoEntrevistaInvalido<T> value)?
+        estadoEntrevistaInvalido,
     TResult Function(EstadoTrabajoInvalido<T> value)? estadoTrabajoInvalido,
     TResult Function(DuracionEstimadaValorInvalido<T> value)?
         duracionEstimadaValorInvalido,
@@ -5376,6 +5544,8 @@ class _$NumeroTelefonicoVacio<T> implements NumeroTelefonicoVacio<T> {
     required TResult Function(T valorErroneo, List<String> estadosValidos)
         estadoOfertaInvalido,
     required TResult Function(T valorErroneo, List<String> estadosValidos)
+        estadoEntrevistaInvalido,
+    required TResult Function(T valorErroneo, List<String> estadosValidos)
         estadoTrabajoInvalido,
     required TResult Function(T valorInvalido, int minValor, int maxValor)
         duracionEstimadaValorInvalido,
@@ -5416,6 +5586,8 @@ class _$NumeroTelefonicoVacio<T> implements NumeroTelefonicoVacio<T> {
     TResult Function(T numeroErroneo)? numeroTelefonicoVacio,
     TResult Function(T valorErroneo, List<String> estadosValidos)?
         estadoOfertaInvalido,
+    TResult Function(T valorErroneo, List<String> estadosValidos)?
+        estadoEntrevistaInvalido,
     TResult Function(T valorErroneo, List<String> estadosValidos)?
         estadoTrabajoInvalido,
     TResult Function(T valorInvalido, int minValor, int maxValor)?
@@ -5465,6 +5637,8 @@ class _$NumeroTelefonicoVacio<T> implements NumeroTelefonicoVacio<T> {
         numeroTelefonicoVacio,
     required TResult Function(EstadoOfertaInvalido<T> value)
         estadoOfertaInvalido,
+    required TResult Function(EstadoEntrevistaInvalido<T> value)
+        estadoEntrevistaInvalido,
     required TResult Function(EstadoTrabajoInvalido<T> value)
         estadoTrabajoInvalido,
     required TResult Function(DuracionEstimadaValorInvalido<T> value)
@@ -5508,6 +5682,8 @@ class _$NumeroTelefonicoVacio<T> implements NumeroTelefonicoVacio<T> {
         numeroTelefonicoInvalido,
     TResult Function(NumeroTelefonicoVacio<T> value)? numeroTelefonicoVacio,
     TResult Function(EstadoOfertaInvalido<T> value)? estadoOfertaInvalido,
+    TResult Function(EstadoEntrevistaInvalido<T> value)?
+        estadoEntrevistaInvalido,
     TResult Function(EstadoTrabajoInvalido<T> value)? estadoTrabajoInvalido,
     TResult Function(DuracionEstimadaValorInvalido<T> value)?
         duracionEstimadaValorInvalido,
@@ -5643,6 +5819,8 @@ class _$EstadoOfertaInvalido<T> implements EstadoOfertaInvalido<T> {
     required TResult Function(T valorErroneo, List<String> estadosValidos)
         estadoOfertaInvalido,
     required TResult Function(T valorErroneo, List<String> estadosValidos)
+        estadoEntrevistaInvalido,
+    required TResult Function(T valorErroneo, List<String> estadosValidos)
         estadoTrabajoInvalido,
     required TResult Function(T valorInvalido, int minValor, int maxValor)
         duracionEstimadaValorInvalido,
@@ -5683,6 +5861,8 @@ class _$EstadoOfertaInvalido<T> implements EstadoOfertaInvalido<T> {
     TResult Function(T numeroErroneo)? numeroTelefonicoVacio,
     TResult Function(T valorErroneo, List<String> estadosValidos)?
         estadoOfertaInvalido,
+    TResult Function(T valorErroneo, List<String> estadosValidos)?
+        estadoEntrevistaInvalido,
     TResult Function(T valorErroneo, List<String> estadosValidos)?
         estadoTrabajoInvalido,
     TResult Function(T valorInvalido, int minValor, int maxValor)?
@@ -5732,6 +5912,8 @@ class _$EstadoOfertaInvalido<T> implements EstadoOfertaInvalido<T> {
         numeroTelefonicoVacio,
     required TResult Function(EstadoOfertaInvalido<T> value)
         estadoOfertaInvalido,
+    required TResult Function(EstadoEntrevistaInvalido<T> value)
+        estadoEntrevistaInvalido,
     required TResult Function(EstadoTrabajoInvalido<T> value)
         estadoTrabajoInvalido,
     required TResult Function(DuracionEstimadaValorInvalido<T> value)
@@ -5775,6 +5957,8 @@ class _$EstadoOfertaInvalido<T> implements EstadoOfertaInvalido<T> {
         numeroTelefonicoInvalido,
     TResult Function(NumeroTelefonicoVacio<T> value)? numeroTelefonicoVacio,
     TResult Function(EstadoOfertaInvalido<T> value)? estadoOfertaInvalido,
+    TResult Function(EstadoEntrevistaInvalido<T> value)?
+        estadoEntrevistaInvalido,
     TResult Function(EstadoTrabajoInvalido<T> value)? estadoTrabajoInvalido,
     TResult Function(DuracionEstimadaValorInvalido<T> value)?
         duracionEstimadaValorInvalido,
@@ -5804,6 +5988,284 @@ abstract class EstadoOfertaInvalido<T> implements ValorErroneo<T> {
   @JsonKey(ignore: true)
   $EstadoOfertaInvalidoCopyWith<T, EstadoOfertaInvalido<T>> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $EstadoEntrevistaInvalidoCopyWith<T, $Res> {
+  factory $EstadoEntrevistaInvalidoCopyWith(EstadoEntrevistaInvalido<T> value,
+          $Res Function(EstadoEntrevistaInvalido<T>) then) =
+      _$EstadoEntrevistaInvalidoCopyWithImpl<T, $Res>;
+  $Res call({T valorErroneo, List<String> estadosValidos});
+}
+
+/// @nodoc
+class _$EstadoEntrevistaInvalidoCopyWithImpl<T, $Res>
+    extends _$ValorErroneoCopyWithImpl<T, $Res>
+    implements $EstadoEntrevistaInvalidoCopyWith<T, $Res> {
+  _$EstadoEntrevistaInvalidoCopyWithImpl(EstadoEntrevistaInvalido<T> _value,
+      $Res Function(EstadoEntrevistaInvalido<T>) _then)
+      : super(_value, (v) => _then(v as EstadoEntrevistaInvalido<T>));
+
+  @override
+  EstadoEntrevistaInvalido<T> get _value =>
+      super._value as EstadoEntrevistaInvalido<T>;
+
+  @override
+  $Res call({
+    Object? valorErroneo = freezed,
+    Object? estadosValidos = freezed,
+  }) {
+    return _then(EstadoEntrevistaInvalido<T>(
+      valorErroneo: valorErroneo == freezed
+          ? _value.valorErroneo
+          : valorErroneo // ignore: cast_nullable_to_non_nullable
+              as T,
+      estadosValidos: estadosValidos == freezed
+          ? _value.estadosValidos
+          : estadosValidos // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$EstadoEntrevistaInvalido<T> implements EstadoEntrevistaInvalido<T> {
+  const _$EstadoEntrevistaInvalido(
+      {required this.valorErroneo, required this.estadosValidos});
+
+  @override
+  final T valorErroneo;
+  @override
+  final List<String> estadosValidos;
+
+  @override
+  String toString() {
+    return 'ValorErroneo<$T>.estadoEntrevistaInvalido(valorErroneo: $valorErroneo, estadosValidos: $estadosValidos)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is EstadoEntrevistaInvalido<T> &&
+            (identical(other.valorErroneo, valorErroneo) ||
+                const DeepCollectionEquality()
+                    .equals(other.valorErroneo, valorErroneo)) &&
+            (identical(other.estadosValidos, estadosValidos) ||
+                const DeepCollectionEquality()
+                    .equals(other.estadosValidos, estadosValidos)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(valorErroneo) ^
+      const DeepCollectionEquality().hash(estadosValidos);
+
+  @JsonKey(ignore: true)
+  @override
+  $EstadoEntrevistaInvalidoCopyWith<T, EstadoEntrevistaInvalido<T>>
+      get copyWith => _$EstadoEntrevistaInvalidoCopyWithImpl<T,
+          EstadoEntrevistaInvalido<T>>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(T valorErroneo) emailInvalido,
+    required TResult Function(T valorErroneo) contrasenaCorta,
+    required TResult Function(T valorErroneo) contrasenaVacia,
+    required TResult Function(T valorErroneo) contrasenaLarga,
+    required TResult Function(T valorErroneo) contrasenaSinCaracterEspecial,
+    required TResult Function(T valorErroneo) contrasenaSinMayuscula,
+    required TResult Function(T valorErroneo) contrasenaSinMinuscula,
+    required TResult Function(T valorErroneo) contrasenaSinNumero,
+    required TResult Function(T valorErroneo) stringVacio,
+    required TResult Function(T valorErroneo, int min, int max)
+        longitudInvalida,
+    required TResult Function(T valorErroneo, double max) sueldoInvalido,
+    required TResult Function(T valorErroneo) sueldoVacio,
+    required TResult Function(T fechaErronea) fechaNula,
+    required TResult Function(T numVacantesInvalido) numVacantesInvalido,
+    required TResult Function(T valorErroneo) numVacantesNoVacia,
+    required TResult Function(T valorErroneo, List<String> turnosValidos)
+        turnoInvalido,
+    required TResult Function(T valorErroneo, List<String> generosValidos)
+        generoInvalido,
+    required TResult Function(T fechaErronea) fechaNacimientoMenorEdad,
+    required TResult Function(T numeroErroneo) numeroTelefonicoInvalido,
+    required TResult Function(T numeroErroneo) numeroTelefonicoVacio,
+    required TResult Function(T valorErroneo, List<String> estadosValidos)
+        estadoOfertaInvalido,
+    required TResult Function(T valorErroneo, List<String> estadosValidos)
+        estadoEntrevistaInvalido,
+    required TResult Function(T valorErroneo, List<String> estadosValidos)
+        estadoTrabajoInvalido,
+    required TResult Function(T valorInvalido, int minValor, int maxValor)
+        duracionEstimadaValorInvalido,
+    required TResult Function(T valorInvalido) duracionEstimadaValorVacio,
+    required TResult Function(T escalaInvalida, List<String> escalasValidas)
+        duractionEstimadaEscalaInvalida,
+    required TResult Function(T valorInvalido) duracionEstimadaEscalaVacia,
+    required TResult Function(
+            T valorErroneo, List<String> nivelesEducativosValidos)
+        nivelEducativoInvalido,
+  }) {
+    return estadoEntrevistaInvalido(valorErroneo, estadosValidos);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(T valorErroneo)? emailInvalido,
+    TResult Function(T valorErroneo)? contrasenaCorta,
+    TResult Function(T valorErroneo)? contrasenaVacia,
+    TResult Function(T valorErroneo)? contrasenaLarga,
+    TResult Function(T valorErroneo)? contrasenaSinCaracterEspecial,
+    TResult Function(T valorErroneo)? contrasenaSinMayuscula,
+    TResult Function(T valorErroneo)? contrasenaSinMinuscula,
+    TResult Function(T valorErroneo)? contrasenaSinNumero,
+    TResult Function(T valorErroneo)? stringVacio,
+    TResult Function(T valorErroneo, int min, int max)? longitudInvalida,
+    TResult Function(T valorErroneo, double max)? sueldoInvalido,
+    TResult Function(T valorErroneo)? sueldoVacio,
+    TResult Function(T fechaErronea)? fechaNula,
+    TResult Function(T numVacantesInvalido)? numVacantesInvalido,
+    TResult Function(T valorErroneo)? numVacantesNoVacia,
+    TResult Function(T valorErroneo, List<String> turnosValidos)? turnoInvalido,
+    TResult Function(T valorErroneo, List<String> generosValidos)?
+        generoInvalido,
+    TResult Function(T fechaErronea)? fechaNacimientoMenorEdad,
+    TResult Function(T numeroErroneo)? numeroTelefonicoInvalido,
+    TResult Function(T numeroErroneo)? numeroTelefonicoVacio,
+    TResult Function(T valorErroneo, List<String> estadosValidos)?
+        estadoOfertaInvalido,
+    TResult Function(T valorErroneo, List<String> estadosValidos)?
+        estadoEntrevistaInvalido,
+    TResult Function(T valorErroneo, List<String> estadosValidos)?
+        estadoTrabajoInvalido,
+    TResult Function(T valorInvalido, int minValor, int maxValor)?
+        duracionEstimadaValorInvalido,
+    TResult Function(T valorInvalido)? duracionEstimadaValorVacio,
+    TResult Function(T escalaInvalida, List<String> escalasValidas)?
+        duractionEstimadaEscalaInvalida,
+    TResult Function(T valorInvalido)? duracionEstimadaEscalaVacia,
+    TResult Function(T valorErroneo, List<String> nivelesEducativosValidos)?
+        nivelEducativoInvalido,
+    required TResult orElse(),
+  }) {
+    if (estadoEntrevistaInvalido != null) {
+      return estadoEntrevistaInvalido(valorErroneo, estadosValidos);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(EmailInvalido<T> value) emailInvalido,
+    required TResult Function(ContrasenaCorta<T> value) contrasenaCorta,
+    required TResult Function(ContrasenaVacia<T> value) contrasenaVacia,
+    required TResult Function(ContrasenaLarga<T> value) contrasenaLarga,
+    required TResult Function(ContrasenaCaracterEspecial<T> value)
+        contrasenaSinCaracterEspecial,
+    required TResult Function(ContrasenaSinMayuscula<T> value)
+        contrasenaSinMayuscula,
+    required TResult Function(ContrasenaSinMinuscula<T> value)
+        contrasenaSinMinuscula,
+    required TResult Function(ContrasenaSinNumero<T> value) contrasenaSinNumero,
+    required TResult Function(StringVacio<T> value) stringVacio,
+    required TResult Function(LongitudInvalida<T> value) longitudInvalida,
+    required TResult Function(SueldoInvalida<T> value) sueldoInvalido,
+    required TResult Function(SueldoVacio<T> value) sueldoVacio,
+    required TResult Function(FechaNula<T> value) fechaNula,
+    required TResult Function(NumVacantesInvalido<T> value) numVacantesInvalido,
+    required TResult Function(NumVacantesNoVacia<T> value) numVacantesNoVacia,
+    required TResult Function(TurnoInvalido<T> value) turnoInvalido,
+    required TResult Function(GeneroInvalido<T> value) generoInvalido,
+    required TResult Function(FechaNacimientoMenorEdad<T> value)
+        fechaNacimientoMenorEdad,
+    required TResult Function(NumeroTelefonicoInvalido<T> value)
+        numeroTelefonicoInvalido,
+    required TResult Function(NumeroTelefonicoVacio<T> value)
+        numeroTelefonicoVacio,
+    required TResult Function(EstadoOfertaInvalido<T> value)
+        estadoOfertaInvalido,
+    required TResult Function(EstadoEntrevistaInvalido<T> value)
+        estadoEntrevistaInvalido,
+    required TResult Function(EstadoTrabajoInvalido<T> value)
+        estadoTrabajoInvalido,
+    required TResult Function(DuracionEstimadaValorInvalido<T> value)
+        duracionEstimadaValorInvalido,
+    required TResult Function(DuracionEstimadaValorVacio<T> value)
+        duracionEstimadaValorVacio,
+    required TResult Function(DuractionEstimadaEscalaInvalida<T> value)
+        duractionEstimadaEscalaInvalida,
+    required TResult Function(DuracionEstimadaEscalaVacia<T> value)
+        duracionEstimadaEscalaVacia,
+    required TResult Function(NivelEducativoInvalido<T> value)
+        nivelEducativoInvalido,
+  }) {
+    return estadoEntrevistaInvalido(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(EmailInvalido<T> value)? emailInvalido,
+    TResult Function(ContrasenaCorta<T> value)? contrasenaCorta,
+    TResult Function(ContrasenaVacia<T> value)? contrasenaVacia,
+    TResult Function(ContrasenaLarga<T> value)? contrasenaLarga,
+    TResult Function(ContrasenaCaracterEspecial<T> value)?
+        contrasenaSinCaracterEspecial,
+    TResult Function(ContrasenaSinMayuscula<T> value)? contrasenaSinMayuscula,
+    TResult Function(ContrasenaSinMinuscula<T> value)? contrasenaSinMinuscula,
+    TResult Function(ContrasenaSinNumero<T> value)? contrasenaSinNumero,
+    TResult Function(StringVacio<T> value)? stringVacio,
+    TResult Function(LongitudInvalida<T> value)? longitudInvalida,
+    TResult Function(SueldoInvalida<T> value)? sueldoInvalido,
+    TResult Function(SueldoVacio<T> value)? sueldoVacio,
+    TResult Function(FechaNula<T> value)? fechaNula,
+    TResult Function(NumVacantesInvalido<T> value)? numVacantesInvalido,
+    TResult Function(NumVacantesNoVacia<T> value)? numVacantesNoVacia,
+    TResult Function(TurnoInvalido<T> value)? turnoInvalido,
+    TResult Function(GeneroInvalido<T> value)? generoInvalido,
+    TResult Function(FechaNacimientoMenorEdad<T> value)?
+        fechaNacimientoMenorEdad,
+    TResult Function(NumeroTelefonicoInvalido<T> value)?
+        numeroTelefonicoInvalido,
+    TResult Function(NumeroTelefonicoVacio<T> value)? numeroTelefonicoVacio,
+    TResult Function(EstadoOfertaInvalido<T> value)? estadoOfertaInvalido,
+    TResult Function(EstadoEntrevistaInvalido<T> value)?
+        estadoEntrevistaInvalido,
+    TResult Function(EstadoTrabajoInvalido<T> value)? estadoTrabajoInvalido,
+    TResult Function(DuracionEstimadaValorInvalido<T> value)?
+        duracionEstimadaValorInvalido,
+    TResult Function(DuracionEstimadaValorVacio<T> value)?
+        duracionEstimadaValorVacio,
+    TResult Function(DuractionEstimadaEscalaInvalida<T> value)?
+        duractionEstimadaEscalaInvalida,
+    TResult Function(DuracionEstimadaEscalaVacia<T> value)?
+        duracionEstimadaEscalaVacia,
+    TResult Function(NivelEducativoInvalido<T> value)? nivelEducativoInvalido,
+    required TResult orElse(),
+  }) {
+    if (estadoEntrevistaInvalido != null) {
+      return estadoEntrevistaInvalido(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class EstadoEntrevistaInvalido<T> implements ValorErroneo<T> {
+  const factory EstadoEntrevistaInvalido(
+      {required T valorErroneo,
+      required List<String> estadosValidos}) = _$EstadoEntrevistaInvalido<T>;
+
+  T get valorErroneo => throw _privateConstructorUsedError;
+  List<String> get estadosValidos => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $EstadoEntrevistaInvalidoCopyWith<T, EstadoEntrevistaInvalido<T>>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -5913,6 +6375,8 @@ class _$EstadoTrabajoInvalido<T> implements EstadoTrabajoInvalido<T> {
     required TResult Function(T valorErroneo, List<String> estadosValidos)
         estadoOfertaInvalido,
     required TResult Function(T valorErroneo, List<String> estadosValidos)
+        estadoEntrevistaInvalido,
+    required TResult Function(T valorErroneo, List<String> estadosValidos)
         estadoTrabajoInvalido,
     required TResult Function(T valorInvalido, int minValor, int maxValor)
         duracionEstimadaValorInvalido,
@@ -5953,6 +6417,8 @@ class _$EstadoTrabajoInvalido<T> implements EstadoTrabajoInvalido<T> {
     TResult Function(T numeroErroneo)? numeroTelefonicoVacio,
     TResult Function(T valorErroneo, List<String> estadosValidos)?
         estadoOfertaInvalido,
+    TResult Function(T valorErroneo, List<String> estadosValidos)?
+        estadoEntrevistaInvalido,
     TResult Function(T valorErroneo, List<String> estadosValidos)?
         estadoTrabajoInvalido,
     TResult Function(T valorInvalido, int minValor, int maxValor)?
@@ -6002,6 +6468,8 @@ class _$EstadoTrabajoInvalido<T> implements EstadoTrabajoInvalido<T> {
         numeroTelefonicoVacio,
     required TResult Function(EstadoOfertaInvalido<T> value)
         estadoOfertaInvalido,
+    required TResult Function(EstadoEntrevistaInvalido<T> value)
+        estadoEntrevistaInvalido,
     required TResult Function(EstadoTrabajoInvalido<T> value)
         estadoTrabajoInvalido,
     required TResult Function(DuracionEstimadaValorInvalido<T> value)
@@ -6045,6 +6513,8 @@ class _$EstadoTrabajoInvalido<T> implements EstadoTrabajoInvalido<T> {
         numeroTelefonicoInvalido,
     TResult Function(NumeroTelefonicoVacio<T> value)? numeroTelefonicoVacio,
     TResult Function(EstadoOfertaInvalido<T> value)? estadoOfertaInvalido,
+    TResult Function(EstadoEntrevistaInvalido<T> value)?
+        estadoEntrevistaInvalido,
     TResult Function(EstadoTrabajoInvalido<T> value)? estadoTrabajoInvalido,
     TResult Function(DuracionEstimadaValorInvalido<T> value)?
         duracionEstimadaValorInvalido,
@@ -6199,6 +6669,8 @@ class _$DuracionEstimadaValorInvalido<T>
     required TResult Function(T valorErroneo, List<String> estadosValidos)
         estadoOfertaInvalido,
     required TResult Function(T valorErroneo, List<String> estadosValidos)
+        estadoEntrevistaInvalido,
+    required TResult Function(T valorErroneo, List<String> estadosValidos)
         estadoTrabajoInvalido,
     required TResult Function(T valorInvalido, int minValor, int maxValor)
         duracionEstimadaValorInvalido,
@@ -6239,6 +6711,8 @@ class _$DuracionEstimadaValorInvalido<T>
     TResult Function(T numeroErroneo)? numeroTelefonicoVacio,
     TResult Function(T valorErroneo, List<String> estadosValidos)?
         estadoOfertaInvalido,
+    TResult Function(T valorErroneo, List<String> estadosValidos)?
+        estadoEntrevistaInvalido,
     TResult Function(T valorErroneo, List<String> estadosValidos)?
         estadoTrabajoInvalido,
     TResult Function(T valorInvalido, int minValor, int maxValor)?
@@ -6288,6 +6762,8 @@ class _$DuracionEstimadaValorInvalido<T>
         numeroTelefonicoVacio,
     required TResult Function(EstadoOfertaInvalido<T> value)
         estadoOfertaInvalido,
+    required TResult Function(EstadoEntrevistaInvalido<T> value)
+        estadoEntrevistaInvalido,
     required TResult Function(EstadoTrabajoInvalido<T> value)
         estadoTrabajoInvalido,
     required TResult Function(DuracionEstimadaValorInvalido<T> value)
@@ -6331,6 +6807,8 @@ class _$DuracionEstimadaValorInvalido<T>
         numeroTelefonicoInvalido,
     TResult Function(NumeroTelefonicoVacio<T> value)? numeroTelefonicoVacio,
     TResult Function(EstadoOfertaInvalido<T> value)? estadoOfertaInvalido,
+    TResult Function(EstadoEntrevistaInvalido<T> value)?
+        estadoEntrevistaInvalido,
     TResult Function(EstadoTrabajoInvalido<T> value)? estadoTrabajoInvalido,
     TResult Function(DuracionEstimadaValorInvalido<T> value)?
         duracionEstimadaValorInvalido,
@@ -6459,6 +6937,8 @@ class _$DuracionEstimadaValorVacio<T> implements DuracionEstimadaValorVacio<T> {
     required TResult Function(T valorErroneo, List<String> estadosValidos)
         estadoOfertaInvalido,
     required TResult Function(T valorErroneo, List<String> estadosValidos)
+        estadoEntrevistaInvalido,
+    required TResult Function(T valorErroneo, List<String> estadosValidos)
         estadoTrabajoInvalido,
     required TResult Function(T valorInvalido, int minValor, int maxValor)
         duracionEstimadaValorInvalido,
@@ -6499,6 +6979,8 @@ class _$DuracionEstimadaValorVacio<T> implements DuracionEstimadaValorVacio<T> {
     TResult Function(T numeroErroneo)? numeroTelefonicoVacio,
     TResult Function(T valorErroneo, List<String> estadosValidos)?
         estadoOfertaInvalido,
+    TResult Function(T valorErroneo, List<String> estadosValidos)?
+        estadoEntrevistaInvalido,
     TResult Function(T valorErroneo, List<String> estadosValidos)?
         estadoTrabajoInvalido,
     TResult Function(T valorInvalido, int minValor, int maxValor)?
@@ -6548,6 +7030,8 @@ class _$DuracionEstimadaValorVacio<T> implements DuracionEstimadaValorVacio<T> {
         numeroTelefonicoVacio,
     required TResult Function(EstadoOfertaInvalido<T> value)
         estadoOfertaInvalido,
+    required TResult Function(EstadoEntrevistaInvalido<T> value)
+        estadoEntrevistaInvalido,
     required TResult Function(EstadoTrabajoInvalido<T> value)
         estadoTrabajoInvalido,
     required TResult Function(DuracionEstimadaValorInvalido<T> value)
@@ -6591,6 +7075,8 @@ class _$DuracionEstimadaValorVacio<T> implements DuracionEstimadaValorVacio<T> {
         numeroTelefonicoInvalido,
     TResult Function(NumeroTelefonicoVacio<T> value)? numeroTelefonicoVacio,
     TResult Function(EstadoOfertaInvalido<T> value)? estadoOfertaInvalido,
+    TResult Function(EstadoEntrevistaInvalido<T> value)?
+        estadoEntrevistaInvalido,
     TResult Function(EstadoTrabajoInvalido<T> value)? estadoTrabajoInvalido,
     TResult Function(DuracionEstimadaValorInvalido<T> value)?
         duracionEstimadaValorInvalido,
@@ -6731,6 +7217,8 @@ class _$DuractionEstimadaEscalaInvalida<T>
     required TResult Function(T valorErroneo, List<String> estadosValidos)
         estadoOfertaInvalido,
     required TResult Function(T valorErroneo, List<String> estadosValidos)
+        estadoEntrevistaInvalido,
+    required TResult Function(T valorErroneo, List<String> estadosValidos)
         estadoTrabajoInvalido,
     required TResult Function(T valorInvalido, int minValor, int maxValor)
         duracionEstimadaValorInvalido,
@@ -6771,6 +7259,8 @@ class _$DuractionEstimadaEscalaInvalida<T>
     TResult Function(T numeroErroneo)? numeroTelefonicoVacio,
     TResult Function(T valorErroneo, List<String> estadosValidos)?
         estadoOfertaInvalido,
+    TResult Function(T valorErroneo, List<String> estadosValidos)?
+        estadoEntrevistaInvalido,
     TResult Function(T valorErroneo, List<String> estadosValidos)?
         estadoTrabajoInvalido,
     TResult Function(T valorInvalido, int minValor, int maxValor)?
@@ -6820,6 +7310,8 @@ class _$DuractionEstimadaEscalaInvalida<T>
         numeroTelefonicoVacio,
     required TResult Function(EstadoOfertaInvalido<T> value)
         estadoOfertaInvalido,
+    required TResult Function(EstadoEntrevistaInvalido<T> value)
+        estadoEntrevistaInvalido,
     required TResult Function(EstadoTrabajoInvalido<T> value)
         estadoTrabajoInvalido,
     required TResult Function(DuracionEstimadaValorInvalido<T> value)
@@ -6863,6 +7355,8 @@ class _$DuractionEstimadaEscalaInvalida<T>
         numeroTelefonicoInvalido,
     TResult Function(NumeroTelefonicoVacio<T> value)? numeroTelefonicoVacio,
     TResult Function(EstadoOfertaInvalido<T> value)? estadoOfertaInvalido,
+    TResult Function(EstadoEntrevistaInvalido<T> value)?
+        estadoEntrevistaInvalido,
     TResult Function(EstadoTrabajoInvalido<T> value)? estadoTrabajoInvalido,
     TResult Function(DuracionEstimadaValorInvalido<T> value)?
         duracionEstimadaValorInvalido,
@@ -6992,6 +7486,8 @@ class _$DuracionEstimadaEscalaVacia<T>
     required TResult Function(T valorErroneo, List<String> estadosValidos)
         estadoOfertaInvalido,
     required TResult Function(T valorErroneo, List<String> estadosValidos)
+        estadoEntrevistaInvalido,
+    required TResult Function(T valorErroneo, List<String> estadosValidos)
         estadoTrabajoInvalido,
     required TResult Function(T valorInvalido, int minValor, int maxValor)
         duracionEstimadaValorInvalido,
@@ -7032,6 +7528,8 @@ class _$DuracionEstimadaEscalaVacia<T>
     TResult Function(T numeroErroneo)? numeroTelefonicoVacio,
     TResult Function(T valorErroneo, List<String> estadosValidos)?
         estadoOfertaInvalido,
+    TResult Function(T valorErroneo, List<String> estadosValidos)?
+        estadoEntrevistaInvalido,
     TResult Function(T valorErroneo, List<String> estadosValidos)?
         estadoTrabajoInvalido,
     TResult Function(T valorInvalido, int minValor, int maxValor)?
@@ -7081,6 +7579,8 @@ class _$DuracionEstimadaEscalaVacia<T>
         numeroTelefonicoVacio,
     required TResult Function(EstadoOfertaInvalido<T> value)
         estadoOfertaInvalido,
+    required TResult Function(EstadoEntrevistaInvalido<T> value)
+        estadoEntrevistaInvalido,
     required TResult Function(EstadoTrabajoInvalido<T> value)
         estadoTrabajoInvalido,
     required TResult Function(DuracionEstimadaValorInvalido<T> value)
@@ -7124,6 +7624,8 @@ class _$DuracionEstimadaEscalaVacia<T>
         numeroTelefonicoInvalido,
     TResult Function(NumeroTelefonicoVacio<T> value)? numeroTelefonicoVacio,
     TResult Function(EstadoOfertaInvalido<T> value)? estadoOfertaInvalido,
+    TResult Function(EstadoEntrevistaInvalido<T> value)?
+        estadoEntrevistaInvalido,
     TResult Function(EstadoTrabajoInvalido<T> value)? estadoTrabajoInvalido,
     TResult Function(DuracionEstimadaValorInvalido<T> value)?
         duracionEstimadaValorInvalido,
@@ -7261,6 +7763,8 @@ class _$NivelEducativoInvalido<T> implements NivelEducativoInvalido<T> {
     required TResult Function(T valorErroneo, List<String> estadosValidos)
         estadoOfertaInvalido,
     required TResult Function(T valorErroneo, List<String> estadosValidos)
+        estadoEntrevistaInvalido,
+    required TResult Function(T valorErroneo, List<String> estadosValidos)
         estadoTrabajoInvalido,
     required TResult Function(T valorInvalido, int minValor, int maxValor)
         duracionEstimadaValorInvalido,
@@ -7301,6 +7805,8 @@ class _$NivelEducativoInvalido<T> implements NivelEducativoInvalido<T> {
     TResult Function(T numeroErroneo)? numeroTelefonicoVacio,
     TResult Function(T valorErroneo, List<String> estadosValidos)?
         estadoOfertaInvalido,
+    TResult Function(T valorErroneo, List<String> estadosValidos)?
+        estadoEntrevistaInvalido,
     TResult Function(T valorErroneo, List<String> estadosValidos)?
         estadoTrabajoInvalido,
     TResult Function(T valorInvalido, int minValor, int maxValor)?
@@ -7350,6 +7856,8 @@ class _$NivelEducativoInvalido<T> implements NivelEducativoInvalido<T> {
         numeroTelefonicoVacio,
     required TResult Function(EstadoOfertaInvalido<T> value)
         estadoOfertaInvalido,
+    required TResult Function(EstadoEntrevistaInvalido<T> value)
+        estadoEntrevistaInvalido,
     required TResult Function(EstadoTrabajoInvalido<T> value)
         estadoTrabajoInvalido,
     required TResult Function(DuracionEstimadaValorInvalido<T> value)
@@ -7393,6 +7901,8 @@ class _$NivelEducativoInvalido<T> implements NivelEducativoInvalido<T> {
         numeroTelefonicoInvalido,
     TResult Function(NumeroTelefonicoVacio<T> value)? numeroTelefonicoVacio,
     TResult Function(EstadoOfertaInvalido<T> value)? estadoOfertaInvalido,
+    TResult Function(EstadoEntrevistaInvalido<T> value)?
+        estadoEntrevistaInvalido,
     TResult Function(EstadoTrabajoInvalido<T> value)? estadoTrabajoInvalido,
     TResult Function(DuracionEstimadaValorInvalido<T> value)?
         duracionEstimadaValorInvalido,

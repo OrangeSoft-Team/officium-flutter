@@ -86,6 +86,11 @@ abstract class ValorErroneo<T> with _$ValorErroneo<T> {
     required List<String> estadosValidos,
   }) = EstadoOfertaInvalido<T>;
 
+  const factory ValorErroneo.estadoEntrevistaInvalido({
+    required T valorErroneo,
+    required List<String> estadosValidos,
+  }) = EstadoEntrevistaInvalido<T>;
+
   const factory ValorErroneo.estadoTrabajoInvalido({
     required T valorErroneo,
     required List<String> estadosValidos,
