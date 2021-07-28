@@ -143,7 +143,7 @@ abstract class ValorErroneo<T> with _$ValorErroneo<T> {
   const factory ValorErroneo.tipoPreguntaInvalido({
     required T valorErroneo,
     required List<String> tiposValidos,
-  }) = tipoPreguntaInvalido<T>;
+  }) = TipoPreguntaInvalido<T>;
 
   const factory ValorErroneo.ponderacionPreguntaInvalido({
     required T valorErroneo,

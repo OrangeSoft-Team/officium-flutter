@@ -244,9 +244,9 @@ class _$ValorErroneoTearOff {
     );
   }
 
-  tipoPreguntaInvalido<T> tipoPreguntaInvalido<T>(
+  TipoPreguntaInvalido<T> tipoPreguntaInvalido<T>(
       {required T valorErroneo, required List<String> tiposValidos}) {
-    return tipoPreguntaInvalido<T>(
+    return TipoPreguntaInvalido<T>(
       valorErroneo: valorErroneo,
       tiposValidos: tiposValidos,
     );
@@ -417,7 +417,7 @@ mixin _$ValorErroneo<T> {
         escalaCalificacionCuestionarioInvalida,
     required TResult Function(IntentosPermitidosCuestionarioInvalido<T> value)
         intentosPermitidosCuestionarioInvalido,
-    required TResult Function(tipoPreguntaInvalido<T> value)
+    required TResult Function(TipoPreguntaInvalido<T> value)
         tipoPreguntaInvalido,
     required TResult Function(PonderacionPreguntaInvalido<T> value)
         ponderacionPreguntaInvalido,
@@ -466,7 +466,7 @@ mixin _$ValorErroneo<T> {
         escalaCalificacionCuestionarioInvalida,
     TResult Function(IntentosPermitidosCuestionarioInvalido<T> value)?
         intentosPermitidosCuestionarioInvalido,
-    TResult Function(tipoPreguntaInvalido<T> value)? tipoPreguntaInvalido,
+    TResult Function(TipoPreguntaInvalido<T> value)? tipoPreguntaInvalido,
     TResult Function(PonderacionPreguntaInvalido<T> value)?
         ponderacionPreguntaInvalido,
     required TResult orElse(),
@@ -715,7 +715,7 @@ class _$EmailInvalido<T> implements EmailInvalido<T> {
         escalaCalificacionCuestionarioInvalida,
     required TResult Function(IntentosPermitidosCuestionarioInvalido<T> value)
         intentosPermitidosCuestionarioInvalido,
-    required TResult Function(tipoPreguntaInvalido<T> value)
+    required TResult Function(TipoPreguntaInvalido<T> value)
         tipoPreguntaInvalido,
     required TResult Function(PonderacionPreguntaInvalido<T> value)
         ponderacionPreguntaInvalido,
@@ -767,7 +767,7 @@ class _$EmailInvalido<T> implements EmailInvalido<T> {
         escalaCalificacionCuestionarioInvalida,
     TResult Function(IntentosPermitidosCuestionarioInvalido<T> value)?
         intentosPermitidosCuestionarioInvalido,
-    TResult Function(tipoPreguntaInvalido<T> value)? tipoPreguntaInvalido,
+    TResult Function(TipoPreguntaInvalido<T> value)? tipoPreguntaInvalido,
     TResult Function(PonderacionPreguntaInvalido<T> value)?
         ponderacionPreguntaInvalido,
     required TResult orElse(),
@@ -1012,7 +1012,7 @@ class _$ContrasenaCorta<T> implements ContrasenaCorta<T> {
         escalaCalificacionCuestionarioInvalida,
     required TResult Function(IntentosPermitidosCuestionarioInvalido<T> value)
         intentosPermitidosCuestionarioInvalido,
-    required TResult Function(tipoPreguntaInvalido<T> value)
+    required TResult Function(TipoPreguntaInvalido<T> value)
         tipoPreguntaInvalido,
     required TResult Function(PonderacionPreguntaInvalido<T> value)
         ponderacionPreguntaInvalido,
@@ -1064,7 +1064,7 @@ class _$ContrasenaCorta<T> implements ContrasenaCorta<T> {
         escalaCalificacionCuestionarioInvalida,
     TResult Function(IntentosPermitidosCuestionarioInvalido<T> value)?
         intentosPermitidosCuestionarioInvalido,
-    TResult Function(tipoPreguntaInvalido<T> value)? tipoPreguntaInvalido,
+    TResult Function(TipoPreguntaInvalido<T> value)? tipoPreguntaInvalido,
     TResult Function(PonderacionPreguntaInvalido<T> value)?
         ponderacionPreguntaInvalido,
     required TResult orElse(),
@@ -1310,7 +1310,7 @@ class _$ContrasenaVacia<T> implements ContrasenaVacia<T> {
         escalaCalificacionCuestionarioInvalida,
     required TResult Function(IntentosPermitidosCuestionarioInvalido<T> value)
         intentosPermitidosCuestionarioInvalido,
-    required TResult Function(tipoPreguntaInvalido<T> value)
+    required TResult Function(TipoPreguntaInvalido<T> value)
         tipoPreguntaInvalido,
     required TResult Function(PonderacionPreguntaInvalido<T> value)
         ponderacionPreguntaInvalido,
@@ -1362,7 +1362,7 @@ class _$ContrasenaVacia<T> implements ContrasenaVacia<T> {
         escalaCalificacionCuestionarioInvalida,
     TResult Function(IntentosPermitidosCuestionarioInvalido<T> value)?
         intentosPermitidosCuestionarioInvalido,
-    TResult Function(tipoPreguntaInvalido<T> value)? tipoPreguntaInvalido,
+    TResult Function(TipoPreguntaInvalido<T> value)? tipoPreguntaInvalido,
     TResult Function(PonderacionPreguntaInvalido<T> value)?
         ponderacionPreguntaInvalido,
     required TResult orElse(),
@@ -1608,7 +1608,7 @@ class _$ContrasenaLarga<T> implements ContrasenaLarga<T> {
         escalaCalificacionCuestionarioInvalida,
     required TResult Function(IntentosPermitidosCuestionarioInvalido<T> value)
         intentosPermitidosCuestionarioInvalido,
-    required TResult Function(tipoPreguntaInvalido<T> value)
+    required TResult Function(TipoPreguntaInvalido<T> value)
         tipoPreguntaInvalido,
     required TResult Function(PonderacionPreguntaInvalido<T> value)
         ponderacionPreguntaInvalido,
@@ -1660,7 +1660,7 @@ class _$ContrasenaLarga<T> implements ContrasenaLarga<T> {
         escalaCalificacionCuestionarioInvalida,
     TResult Function(IntentosPermitidosCuestionarioInvalido<T> value)?
         intentosPermitidosCuestionarioInvalido,
-    TResult Function(tipoPreguntaInvalido<T> value)? tipoPreguntaInvalido,
+    TResult Function(TipoPreguntaInvalido<T> value)? tipoPreguntaInvalido,
     TResult Function(PonderacionPreguntaInvalido<T> value)?
         ponderacionPreguntaInvalido,
     required TResult orElse(),
@@ -1909,7 +1909,7 @@ class _$ContrasenaCaracterEspecial<T> implements ContrasenaCaracterEspecial<T> {
         escalaCalificacionCuestionarioInvalida,
     required TResult Function(IntentosPermitidosCuestionarioInvalido<T> value)
         intentosPermitidosCuestionarioInvalido,
-    required TResult Function(tipoPreguntaInvalido<T> value)
+    required TResult Function(TipoPreguntaInvalido<T> value)
         tipoPreguntaInvalido,
     required TResult Function(PonderacionPreguntaInvalido<T> value)
         ponderacionPreguntaInvalido,
@@ -1961,7 +1961,7 @@ class _$ContrasenaCaracterEspecial<T> implements ContrasenaCaracterEspecial<T> {
         escalaCalificacionCuestionarioInvalida,
     TResult Function(IntentosPermitidosCuestionarioInvalido<T> value)?
         intentosPermitidosCuestionarioInvalido,
-    TResult Function(tipoPreguntaInvalido<T> value)? tipoPreguntaInvalido,
+    TResult Function(TipoPreguntaInvalido<T> value)? tipoPreguntaInvalido,
     TResult Function(PonderacionPreguntaInvalido<T> value)?
         ponderacionPreguntaInvalido,
     required TResult orElse(),
@@ -2209,7 +2209,7 @@ class _$ContrasenaSinMayuscula<T> implements ContrasenaSinMayuscula<T> {
         escalaCalificacionCuestionarioInvalida,
     required TResult Function(IntentosPermitidosCuestionarioInvalido<T> value)
         intentosPermitidosCuestionarioInvalido,
-    required TResult Function(tipoPreguntaInvalido<T> value)
+    required TResult Function(TipoPreguntaInvalido<T> value)
         tipoPreguntaInvalido,
     required TResult Function(PonderacionPreguntaInvalido<T> value)
         ponderacionPreguntaInvalido,
@@ -2261,7 +2261,7 @@ class _$ContrasenaSinMayuscula<T> implements ContrasenaSinMayuscula<T> {
         escalaCalificacionCuestionarioInvalida,
     TResult Function(IntentosPermitidosCuestionarioInvalido<T> value)?
         intentosPermitidosCuestionarioInvalido,
-    TResult Function(tipoPreguntaInvalido<T> value)? tipoPreguntaInvalido,
+    TResult Function(TipoPreguntaInvalido<T> value)? tipoPreguntaInvalido,
     TResult Function(PonderacionPreguntaInvalido<T> value)?
         ponderacionPreguntaInvalido,
     required TResult orElse(),
@@ -2509,7 +2509,7 @@ class _$ContrasenaSinMinuscula<T> implements ContrasenaSinMinuscula<T> {
         escalaCalificacionCuestionarioInvalida,
     required TResult Function(IntentosPermitidosCuestionarioInvalido<T> value)
         intentosPermitidosCuestionarioInvalido,
-    required TResult Function(tipoPreguntaInvalido<T> value)
+    required TResult Function(TipoPreguntaInvalido<T> value)
         tipoPreguntaInvalido,
     required TResult Function(PonderacionPreguntaInvalido<T> value)
         ponderacionPreguntaInvalido,
@@ -2561,7 +2561,7 @@ class _$ContrasenaSinMinuscula<T> implements ContrasenaSinMinuscula<T> {
         escalaCalificacionCuestionarioInvalida,
     TResult Function(IntentosPermitidosCuestionarioInvalido<T> value)?
         intentosPermitidosCuestionarioInvalido,
-    TResult Function(tipoPreguntaInvalido<T> value)? tipoPreguntaInvalido,
+    TResult Function(TipoPreguntaInvalido<T> value)? tipoPreguntaInvalido,
     TResult Function(PonderacionPreguntaInvalido<T> value)?
         ponderacionPreguntaInvalido,
     required TResult orElse(),
@@ -2808,7 +2808,7 @@ class _$ContrasenaSinNumero<T> implements ContrasenaSinNumero<T> {
         escalaCalificacionCuestionarioInvalida,
     required TResult Function(IntentosPermitidosCuestionarioInvalido<T> value)
         intentosPermitidosCuestionarioInvalido,
-    required TResult Function(tipoPreguntaInvalido<T> value)
+    required TResult Function(TipoPreguntaInvalido<T> value)
         tipoPreguntaInvalido,
     required TResult Function(PonderacionPreguntaInvalido<T> value)
         ponderacionPreguntaInvalido,
@@ -2860,7 +2860,7 @@ class _$ContrasenaSinNumero<T> implements ContrasenaSinNumero<T> {
         escalaCalificacionCuestionarioInvalida,
     TResult Function(IntentosPermitidosCuestionarioInvalido<T> value)?
         intentosPermitidosCuestionarioInvalido,
-    TResult Function(tipoPreguntaInvalido<T> value)? tipoPreguntaInvalido,
+    TResult Function(TipoPreguntaInvalido<T> value)? tipoPreguntaInvalido,
     TResult Function(PonderacionPreguntaInvalido<T> value)?
         ponderacionPreguntaInvalido,
     required TResult orElse(),
@@ -3106,7 +3106,7 @@ class _$StringVacio<T> implements StringVacio<T> {
         escalaCalificacionCuestionarioInvalida,
     required TResult Function(IntentosPermitidosCuestionarioInvalido<T> value)
         intentosPermitidosCuestionarioInvalido,
-    required TResult Function(tipoPreguntaInvalido<T> value)
+    required TResult Function(TipoPreguntaInvalido<T> value)
         tipoPreguntaInvalido,
     required TResult Function(PonderacionPreguntaInvalido<T> value)
         ponderacionPreguntaInvalido,
@@ -3158,7 +3158,7 @@ class _$StringVacio<T> implements StringVacio<T> {
         escalaCalificacionCuestionarioInvalida,
     TResult Function(IntentosPermitidosCuestionarioInvalido<T> value)?
         intentosPermitidosCuestionarioInvalido,
-    TResult Function(tipoPreguntaInvalido<T> value)? tipoPreguntaInvalido,
+    TResult Function(TipoPreguntaInvalido<T> value)? tipoPreguntaInvalido,
     TResult Function(PonderacionPreguntaInvalido<T> value)?
         ponderacionPreguntaInvalido,
     required TResult orElse(),
@@ -3425,7 +3425,7 @@ class _$LongitudInvalida<T> implements LongitudInvalida<T> {
         escalaCalificacionCuestionarioInvalida,
     required TResult Function(IntentosPermitidosCuestionarioInvalido<T> value)
         intentosPermitidosCuestionarioInvalido,
-    required TResult Function(tipoPreguntaInvalido<T> value)
+    required TResult Function(TipoPreguntaInvalido<T> value)
         tipoPreguntaInvalido,
     required TResult Function(PonderacionPreguntaInvalido<T> value)
         ponderacionPreguntaInvalido,
@@ -3477,7 +3477,7 @@ class _$LongitudInvalida<T> implements LongitudInvalida<T> {
         escalaCalificacionCuestionarioInvalida,
     TResult Function(IntentosPermitidosCuestionarioInvalido<T> value)?
         intentosPermitidosCuestionarioInvalido,
-    TResult Function(tipoPreguntaInvalido<T> value)? tipoPreguntaInvalido,
+    TResult Function(TipoPreguntaInvalido<T> value)? tipoPreguntaInvalido,
     TResult Function(PonderacionPreguntaInvalido<T> value)?
         ponderacionPreguntaInvalido,
     required TResult orElse(),
@@ -3738,7 +3738,7 @@ class _$SueldoInvalida<T> implements SueldoInvalida<T> {
         escalaCalificacionCuestionarioInvalida,
     required TResult Function(IntentosPermitidosCuestionarioInvalido<T> value)
         intentosPermitidosCuestionarioInvalido,
-    required TResult Function(tipoPreguntaInvalido<T> value)
+    required TResult Function(TipoPreguntaInvalido<T> value)
         tipoPreguntaInvalido,
     required TResult Function(PonderacionPreguntaInvalido<T> value)
         ponderacionPreguntaInvalido,
@@ -3790,7 +3790,7 @@ class _$SueldoInvalida<T> implements SueldoInvalida<T> {
         escalaCalificacionCuestionarioInvalida,
     TResult Function(IntentosPermitidosCuestionarioInvalido<T> value)?
         intentosPermitidosCuestionarioInvalido,
-    TResult Function(tipoPreguntaInvalido<T> value)? tipoPreguntaInvalido,
+    TResult Function(TipoPreguntaInvalido<T> value)? tipoPreguntaInvalido,
     TResult Function(PonderacionPreguntaInvalido<T> value)?
         ponderacionPreguntaInvalido,
     required TResult orElse(),
@@ -4037,7 +4037,7 @@ class _$SueldoVacio<T> implements SueldoVacio<T> {
         escalaCalificacionCuestionarioInvalida,
     required TResult Function(IntentosPermitidosCuestionarioInvalido<T> value)
         intentosPermitidosCuestionarioInvalido,
-    required TResult Function(tipoPreguntaInvalido<T> value)
+    required TResult Function(TipoPreguntaInvalido<T> value)
         tipoPreguntaInvalido,
     required TResult Function(PonderacionPreguntaInvalido<T> value)
         ponderacionPreguntaInvalido,
@@ -4089,7 +4089,7 @@ class _$SueldoVacio<T> implements SueldoVacio<T> {
         escalaCalificacionCuestionarioInvalida,
     TResult Function(IntentosPermitidosCuestionarioInvalido<T> value)?
         intentosPermitidosCuestionarioInvalido,
-    TResult Function(tipoPreguntaInvalido<T> value)? tipoPreguntaInvalido,
+    TResult Function(TipoPreguntaInvalido<T> value)? tipoPreguntaInvalido,
     TResult Function(PonderacionPreguntaInvalido<T> value)?
         ponderacionPreguntaInvalido,
     required TResult orElse(),
@@ -4334,7 +4334,7 @@ class _$FechaNula<T> implements FechaNula<T> {
         escalaCalificacionCuestionarioInvalida,
     required TResult Function(IntentosPermitidosCuestionarioInvalido<T> value)
         intentosPermitidosCuestionarioInvalido,
-    required TResult Function(tipoPreguntaInvalido<T> value)
+    required TResult Function(TipoPreguntaInvalido<T> value)
         tipoPreguntaInvalido,
     required TResult Function(PonderacionPreguntaInvalido<T> value)
         ponderacionPreguntaInvalido,
@@ -4386,7 +4386,7 @@ class _$FechaNula<T> implements FechaNula<T> {
         escalaCalificacionCuestionarioInvalida,
     TResult Function(IntentosPermitidosCuestionarioInvalido<T> value)?
         intentosPermitidosCuestionarioInvalido,
-    TResult Function(tipoPreguntaInvalido<T> value)? tipoPreguntaInvalido,
+    TResult Function(TipoPreguntaInvalido<T> value)? tipoPreguntaInvalido,
     TResult Function(PonderacionPreguntaInvalido<T> value)?
         ponderacionPreguntaInvalido,
     required TResult orElse(),
@@ -4633,7 +4633,7 @@ class _$NumVacantesInvalido<T> implements NumVacantesInvalido<T> {
         escalaCalificacionCuestionarioInvalida,
     required TResult Function(IntentosPermitidosCuestionarioInvalido<T> value)
         intentosPermitidosCuestionarioInvalido,
-    required TResult Function(tipoPreguntaInvalido<T> value)
+    required TResult Function(TipoPreguntaInvalido<T> value)
         tipoPreguntaInvalido,
     required TResult Function(PonderacionPreguntaInvalido<T> value)
         ponderacionPreguntaInvalido,
@@ -4685,7 +4685,7 @@ class _$NumVacantesInvalido<T> implements NumVacantesInvalido<T> {
         escalaCalificacionCuestionarioInvalida,
     TResult Function(IntentosPermitidosCuestionarioInvalido<T> value)?
         intentosPermitidosCuestionarioInvalido,
-    TResult Function(tipoPreguntaInvalido<T> value)? tipoPreguntaInvalido,
+    TResult Function(TipoPreguntaInvalido<T> value)? tipoPreguntaInvalido,
     TResult Function(PonderacionPreguntaInvalido<T> value)?
         ponderacionPreguntaInvalido,
     required TResult orElse(),
@@ -4932,7 +4932,7 @@ class _$NumVacantesNoVacia<T> implements NumVacantesNoVacia<T> {
         escalaCalificacionCuestionarioInvalida,
     required TResult Function(IntentosPermitidosCuestionarioInvalido<T> value)
         intentosPermitidosCuestionarioInvalido,
-    required TResult Function(tipoPreguntaInvalido<T> value)
+    required TResult Function(TipoPreguntaInvalido<T> value)
         tipoPreguntaInvalido,
     required TResult Function(PonderacionPreguntaInvalido<T> value)
         ponderacionPreguntaInvalido,
@@ -4984,7 +4984,7 @@ class _$NumVacantesNoVacia<T> implements NumVacantesNoVacia<T> {
         escalaCalificacionCuestionarioInvalida,
     TResult Function(IntentosPermitidosCuestionarioInvalido<T> value)?
         intentosPermitidosCuestionarioInvalido,
-    TResult Function(tipoPreguntaInvalido<T> value)? tipoPreguntaInvalido,
+    TResult Function(TipoPreguntaInvalido<T> value)? tipoPreguntaInvalido,
     TResult Function(PonderacionPreguntaInvalido<T> value)?
         ponderacionPreguntaInvalido,
     required TResult orElse(),
@@ -5243,7 +5243,7 @@ class _$TurnoInvalido<T> implements TurnoInvalido<T> {
         escalaCalificacionCuestionarioInvalida,
     required TResult Function(IntentosPermitidosCuestionarioInvalido<T> value)
         intentosPermitidosCuestionarioInvalido,
-    required TResult Function(tipoPreguntaInvalido<T> value)
+    required TResult Function(TipoPreguntaInvalido<T> value)
         tipoPreguntaInvalido,
     required TResult Function(PonderacionPreguntaInvalido<T> value)
         ponderacionPreguntaInvalido,
@@ -5295,7 +5295,7 @@ class _$TurnoInvalido<T> implements TurnoInvalido<T> {
         escalaCalificacionCuestionarioInvalida,
     TResult Function(IntentosPermitidosCuestionarioInvalido<T> value)?
         intentosPermitidosCuestionarioInvalido,
-    TResult Function(tipoPreguntaInvalido<T> value)? tipoPreguntaInvalido,
+    TResult Function(TipoPreguntaInvalido<T> value)? tipoPreguntaInvalido,
     TResult Function(PonderacionPreguntaInvalido<T> value)?
         ponderacionPreguntaInvalido,
     required TResult orElse(),
@@ -5556,7 +5556,7 @@ class _$GeneroInvalido<T> implements GeneroInvalido<T> {
         escalaCalificacionCuestionarioInvalida,
     required TResult Function(IntentosPermitidosCuestionarioInvalido<T> value)
         intentosPermitidosCuestionarioInvalido,
-    required TResult Function(tipoPreguntaInvalido<T> value)
+    required TResult Function(TipoPreguntaInvalido<T> value)
         tipoPreguntaInvalido,
     required TResult Function(PonderacionPreguntaInvalido<T> value)
         ponderacionPreguntaInvalido,
@@ -5608,7 +5608,7 @@ class _$GeneroInvalido<T> implements GeneroInvalido<T> {
         escalaCalificacionCuestionarioInvalida,
     TResult Function(IntentosPermitidosCuestionarioInvalido<T> value)?
         intentosPermitidosCuestionarioInvalido,
-    TResult Function(tipoPreguntaInvalido<T> value)? tipoPreguntaInvalido,
+    TResult Function(TipoPreguntaInvalido<T> value)? tipoPreguntaInvalido,
     TResult Function(PonderacionPreguntaInvalido<T> value)?
         ponderacionPreguntaInvalido,
     required TResult orElse(),
@@ -5858,7 +5858,7 @@ class _$FechaNacimientoMenorEdad<T> implements FechaNacimientoMenorEdad<T> {
         escalaCalificacionCuestionarioInvalida,
     required TResult Function(IntentosPermitidosCuestionarioInvalido<T> value)
         intentosPermitidosCuestionarioInvalido,
-    required TResult Function(tipoPreguntaInvalido<T> value)
+    required TResult Function(TipoPreguntaInvalido<T> value)
         tipoPreguntaInvalido,
     required TResult Function(PonderacionPreguntaInvalido<T> value)
         ponderacionPreguntaInvalido,
@@ -5910,7 +5910,7 @@ class _$FechaNacimientoMenorEdad<T> implements FechaNacimientoMenorEdad<T> {
         escalaCalificacionCuestionarioInvalida,
     TResult Function(IntentosPermitidosCuestionarioInvalido<T> value)?
         intentosPermitidosCuestionarioInvalido,
-    TResult Function(tipoPreguntaInvalido<T> value)? tipoPreguntaInvalido,
+    TResult Function(TipoPreguntaInvalido<T> value)? tipoPreguntaInvalido,
     TResult Function(PonderacionPreguntaInvalido<T> value)?
         ponderacionPreguntaInvalido,
     required TResult orElse(),
@@ -6158,7 +6158,7 @@ class _$NumeroTelefonicoInvalido<T> implements NumeroTelefonicoInvalido<T> {
         escalaCalificacionCuestionarioInvalida,
     required TResult Function(IntentosPermitidosCuestionarioInvalido<T> value)
         intentosPermitidosCuestionarioInvalido,
-    required TResult Function(tipoPreguntaInvalido<T> value)
+    required TResult Function(TipoPreguntaInvalido<T> value)
         tipoPreguntaInvalido,
     required TResult Function(PonderacionPreguntaInvalido<T> value)
         ponderacionPreguntaInvalido,
@@ -6210,7 +6210,7 @@ class _$NumeroTelefonicoInvalido<T> implements NumeroTelefonicoInvalido<T> {
         escalaCalificacionCuestionarioInvalida,
     TResult Function(IntentosPermitidosCuestionarioInvalido<T> value)?
         intentosPermitidosCuestionarioInvalido,
-    TResult Function(tipoPreguntaInvalido<T> value)? tipoPreguntaInvalido,
+    TResult Function(TipoPreguntaInvalido<T> value)? tipoPreguntaInvalido,
     TResult Function(PonderacionPreguntaInvalido<T> value)?
         ponderacionPreguntaInvalido,
     required TResult orElse(),
@@ -6458,7 +6458,7 @@ class _$NumeroTelefonicoVacio<T> implements NumeroTelefonicoVacio<T> {
         escalaCalificacionCuestionarioInvalida,
     required TResult Function(IntentosPermitidosCuestionarioInvalido<T> value)
         intentosPermitidosCuestionarioInvalido,
-    required TResult Function(tipoPreguntaInvalido<T> value)
+    required TResult Function(TipoPreguntaInvalido<T> value)
         tipoPreguntaInvalido,
     required TResult Function(PonderacionPreguntaInvalido<T> value)
         ponderacionPreguntaInvalido,
@@ -6510,7 +6510,7 @@ class _$NumeroTelefonicoVacio<T> implements NumeroTelefonicoVacio<T> {
         escalaCalificacionCuestionarioInvalida,
     TResult Function(IntentosPermitidosCuestionarioInvalido<T> value)?
         intentosPermitidosCuestionarioInvalido,
-    TResult Function(tipoPreguntaInvalido<T> value)? tipoPreguntaInvalido,
+    TResult Function(TipoPreguntaInvalido<T> value)? tipoPreguntaInvalido,
     TResult Function(PonderacionPreguntaInvalido<T> value)?
         ponderacionPreguntaInvalido,
     required TResult orElse(),
@@ -6770,7 +6770,7 @@ class _$EstadoOfertaInvalido<T> implements EstadoOfertaInvalido<T> {
         escalaCalificacionCuestionarioInvalida,
     required TResult Function(IntentosPermitidosCuestionarioInvalido<T> value)
         intentosPermitidosCuestionarioInvalido,
-    required TResult Function(tipoPreguntaInvalido<T> value)
+    required TResult Function(TipoPreguntaInvalido<T> value)
         tipoPreguntaInvalido,
     required TResult Function(PonderacionPreguntaInvalido<T> value)
         ponderacionPreguntaInvalido,
@@ -6822,7 +6822,7 @@ class _$EstadoOfertaInvalido<T> implements EstadoOfertaInvalido<T> {
         escalaCalificacionCuestionarioInvalida,
     TResult Function(IntentosPermitidosCuestionarioInvalido<T> value)?
         intentosPermitidosCuestionarioInvalido,
-    TResult Function(tipoPreguntaInvalido<T> value)? tipoPreguntaInvalido,
+    TResult Function(TipoPreguntaInvalido<T> value)? tipoPreguntaInvalido,
     TResult Function(PonderacionPreguntaInvalido<T> value)?
         ponderacionPreguntaInvalido,
     required TResult orElse(),
@@ -7084,7 +7084,7 @@ class _$EstadoCursoInvalido<T> implements EstadoCursoInvalido<T> {
         escalaCalificacionCuestionarioInvalida,
     required TResult Function(IntentosPermitidosCuestionarioInvalido<T> value)
         intentosPermitidosCuestionarioInvalido,
-    required TResult Function(tipoPreguntaInvalido<T> value)
+    required TResult Function(TipoPreguntaInvalido<T> value)
         tipoPreguntaInvalido,
     required TResult Function(PonderacionPreguntaInvalido<T> value)
         ponderacionPreguntaInvalido,
@@ -7136,7 +7136,7 @@ class _$EstadoCursoInvalido<T> implements EstadoCursoInvalido<T> {
         escalaCalificacionCuestionarioInvalida,
     TResult Function(IntentosPermitidosCuestionarioInvalido<T> value)?
         intentosPermitidosCuestionarioInvalido,
-    TResult Function(tipoPreguntaInvalido<T> value)? tipoPreguntaInvalido,
+    TResult Function(TipoPreguntaInvalido<T> value)? tipoPreguntaInvalido,
     TResult Function(PonderacionPreguntaInvalido<T> value)?
         ponderacionPreguntaInvalido,
     required TResult orElse(),
@@ -7399,7 +7399,7 @@ class _$EstadoEntrevistaInvalido<T> implements EstadoEntrevistaInvalido<T> {
         escalaCalificacionCuestionarioInvalida,
     required TResult Function(IntentosPermitidosCuestionarioInvalido<T> value)
         intentosPermitidosCuestionarioInvalido,
-    required TResult Function(tipoPreguntaInvalido<T> value)
+    required TResult Function(TipoPreguntaInvalido<T> value)
         tipoPreguntaInvalido,
     required TResult Function(PonderacionPreguntaInvalido<T> value)
         ponderacionPreguntaInvalido,
@@ -7451,7 +7451,7 @@ class _$EstadoEntrevistaInvalido<T> implements EstadoEntrevistaInvalido<T> {
         escalaCalificacionCuestionarioInvalida,
     TResult Function(IntentosPermitidosCuestionarioInvalido<T> value)?
         intentosPermitidosCuestionarioInvalido,
-    TResult Function(tipoPreguntaInvalido<T> value)? tipoPreguntaInvalido,
+    TResult Function(TipoPreguntaInvalido<T> value)? tipoPreguntaInvalido,
     TResult Function(PonderacionPreguntaInvalido<T> value)?
         ponderacionPreguntaInvalido,
     required TResult orElse(),
@@ -7714,7 +7714,7 @@ class _$EstadoTrabajoInvalido<T> implements EstadoTrabajoInvalido<T> {
         escalaCalificacionCuestionarioInvalida,
     required TResult Function(IntentosPermitidosCuestionarioInvalido<T> value)
         intentosPermitidosCuestionarioInvalido,
-    required TResult Function(tipoPreguntaInvalido<T> value)
+    required TResult Function(TipoPreguntaInvalido<T> value)
         tipoPreguntaInvalido,
     required TResult Function(PonderacionPreguntaInvalido<T> value)
         ponderacionPreguntaInvalido,
@@ -7766,7 +7766,7 @@ class _$EstadoTrabajoInvalido<T> implements EstadoTrabajoInvalido<T> {
         escalaCalificacionCuestionarioInvalida,
     TResult Function(IntentosPermitidosCuestionarioInvalido<T> value)?
         intentosPermitidosCuestionarioInvalido,
-    TResult Function(tipoPreguntaInvalido<T> value)? tipoPreguntaInvalido,
+    TResult Function(TipoPreguntaInvalido<T> value)? tipoPreguntaInvalido,
     TResult Function(PonderacionPreguntaInvalido<T> value)?
         ponderacionPreguntaInvalido,
     required TResult orElse(),
@@ -8045,7 +8045,7 @@ class _$DuracionEstimadaValorInvalido<T>
         escalaCalificacionCuestionarioInvalida,
     required TResult Function(IntentosPermitidosCuestionarioInvalido<T> value)
         intentosPermitidosCuestionarioInvalido,
-    required TResult Function(tipoPreguntaInvalido<T> value)
+    required TResult Function(TipoPreguntaInvalido<T> value)
         tipoPreguntaInvalido,
     required TResult Function(PonderacionPreguntaInvalido<T> value)
         ponderacionPreguntaInvalido,
@@ -8097,7 +8097,7 @@ class _$DuracionEstimadaValorInvalido<T>
         escalaCalificacionCuestionarioInvalida,
     TResult Function(IntentosPermitidosCuestionarioInvalido<T> value)?
         intentosPermitidosCuestionarioInvalido,
-    TResult Function(tipoPreguntaInvalido<T> value)? tipoPreguntaInvalido,
+    TResult Function(TipoPreguntaInvalido<T> value)? tipoPreguntaInvalido,
     TResult Function(PonderacionPreguntaInvalido<T> value)?
         ponderacionPreguntaInvalido,
     required TResult orElse(),
@@ -8350,7 +8350,7 @@ class _$DuracionEstimadaValorVacio<T> implements DuracionEstimadaValorVacio<T> {
         escalaCalificacionCuestionarioInvalida,
     required TResult Function(IntentosPermitidosCuestionarioInvalido<T> value)
         intentosPermitidosCuestionarioInvalido,
-    required TResult Function(tipoPreguntaInvalido<T> value)
+    required TResult Function(TipoPreguntaInvalido<T> value)
         tipoPreguntaInvalido,
     required TResult Function(PonderacionPreguntaInvalido<T> value)
         ponderacionPreguntaInvalido,
@@ -8402,7 +8402,7 @@ class _$DuracionEstimadaValorVacio<T> implements DuracionEstimadaValorVacio<T> {
         escalaCalificacionCuestionarioInvalida,
     TResult Function(IntentosPermitidosCuestionarioInvalido<T> value)?
         intentosPermitidosCuestionarioInvalido,
-    TResult Function(tipoPreguntaInvalido<T> value)? tipoPreguntaInvalido,
+    TResult Function(TipoPreguntaInvalido<T> value)? tipoPreguntaInvalido,
     TResult Function(PonderacionPreguntaInvalido<T> value)?
         ponderacionPreguntaInvalido,
     required TResult orElse(),
@@ -8667,7 +8667,7 @@ class _$DuractionEstimadaEscalaInvalida<T>
         escalaCalificacionCuestionarioInvalida,
     required TResult Function(IntentosPermitidosCuestionarioInvalido<T> value)
         intentosPermitidosCuestionarioInvalido,
-    required TResult Function(tipoPreguntaInvalido<T> value)
+    required TResult Function(TipoPreguntaInvalido<T> value)
         tipoPreguntaInvalido,
     required TResult Function(PonderacionPreguntaInvalido<T> value)
         ponderacionPreguntaInvalido,
@@ -8719,7 +8719,7 @@ class _$DuractionEstimadaEscalaInvalida<T>
         escalaCalificacionCuestionarioInvalida,
     TResult Function(IntentosPermitidosCuestionarioInvalido<T> value)?
         intentosPermitidosCuestionarioInvalido,
-    TResult Function(tipoPreguntaInvalido<T> value)? tipoPreguntaInvalido,
+    TResult Function(TipoPreguntaInvalido<T> value)? tipoPreguntaInvalido,
     TResult Function(PonderacionPreguntaInvalido<T> value)?
         ponderacionPreguntaInvalido,
     required TResult orElse(),
@@ -8973,7 +8973,7 @@ class _$DuracionEstimadaEscalaVacia<T>
         escalaCalificacionCuestionarioInvalida,
     required TResult Function(IntentosPermitidosCuestionarioInvalido<T> value)
         intentosPermitidosCuestionarioInvalido,
-    required TResult Function(tipoPreguntaInvalido<T> value)
+    required TResult Function(TipoPreguntaInvalido<T> value)
         tipoPreguntaInvalido,
     required TResult Function(PonderacionPreguntaInvalido<T> value)
         ponderacionPreguntaInvalido,
@@ -9025,7 +9025,7 @@ class _$DuracionEstimadaEscalaVacia<T>
         escalaCalificacionCuestionarioInvalida,
     TResult Function(IntentosPermitidosCuestionarioInvalido<T> value)?
         intentosPermitidosCuestionarioInvalido,
-    TResult Function(tipoPreguntaInvalido<T> value)? tipoPreguntaInvalido,
+    TResult Function(TipoPreguntaInvalido<T> value)? tipoPreguntaInvalido,
     TResult Function(PonderacionPreguntaInvalido<T> value)?
         ponderacionPreguntaInvalido,
     required TResult orElse(),
@@ -9287,7 +9287,7 @@ class _$NivelEducativoInvalido<T> implements NivelEducativoInvalido<T> {
         escalaCalificacionCuestionarioInvalida,
     required TResult Function(IntentosPermitidosCuestionarioInvalido<T> value)
         intentosPermitidosCuestionarioInvalido,
-    required TResult Function(tipoPreguntaInvalido<T> value)
+    required TResult Function(TipoPreguntaInvalido<T> value)
         tipoPreguntaInvalido,
     required TResult Function(PonderacionPreguntaInvalido<T> value)
         ponderacionPreguntaInvalido,
@@ -9339,7 +9339,7 @@ class _$NivelEducativoInvalido<T> implements NivelEducativoInvalido<T> {
         escalaCalificacionCuestionarioInvalida,
     TResult Function(IntentosPermitidosCuestionarioInvalido<T> value)?
         intentosPermitidosCuestionarioInvalido,
-    TResult Function(tipoPreguntaInvalido<T> value)? tipoPreguntaInvalido,
+    TResult Function(TipoPreguntaInvalido<T> value)? tipoPreguntaInvalido,
     TResult Function(PonderacionPreguntaInvalido<T> value)?
         ponderacionPreguntaInvalido,
     required TResult orElse(),
@@ -9609,7 +9609,7 @@ class _$EscalaCalificacionCuestionarioInvalida<T>
         escalaCalificacionCuestionarioInvalida,
     required TResult Function(IntentosPermitidosCuestionarioInvalido<T> value)
         intentosPermitidosCuestionarioInvalido,
-    required TResult Function(tipoPreguntaInvalido<T> value)
+    required TResult Function(TipoPreguntaInvalido<T> value)
         tipoPreguntaInvalido,
     required TResult Function(PonderacionPreguntaInvalido<T> value)
         ponderacionPreguntaInvalido,
@@ -9661,7 +9661,7 @@ class _$EscalaCalificacionCuestionarioInvalida<T>
         escalaCalificacionCuestionarioInvalida,
     TResult Function(IntentosPermitidosCuestionarioInvalido<T> value)?
         intentosPermitidosCuestionarioInvalido,
-    TResult Function(tipoPreguntaInvalido<T> value)? tipoPreguntaInvalido,
+    TResult Function(TipoPreguntaInvalido<T> value)? tipoPreguntaInvalido,
     TResult Function(PonderacionPreguntaInvalido<T> value)?
         ponderacionPreguntaInvalido,
     required TResult orElse(),
@@ -9931,7 +9931,7 @@ class _$IntentosPermitidosCuestionarioInvalido<T>
         escalaCalificacionCuestionarioInvalida,
     required TResult Function(IntentosPermitidosCuestionarioInvalido<T> value)
         intentosPermitidosCuestionarioInvalido,
-    required TResult Function(tipoPreguntaInvalido<T> value)
+    required TResult Function(TipoPreguntaInvalido<T> value)
         tipoPreguntaInvalido,
     required TResult Function(PonderacionPreguntaInvalido<T> value)
         ponderacionPreguntaInvalido,
@@ -9983,7 +9983,7 @@ class _$IntentosPermitidosCuestionarioInvalido<T>
         escalaCalificacionCuestionarioInvalida,
     TResult Function(IntentosPermitidosCuestionarioInvalido<T> value)?
         intentosPermitidosCuestionarioInvalido,
-    TResult Function(tipoPreguntaInvalido<T> value)? tipoPreguntaInvalido,
+    TResult Function(TipoPreguntaInvalido<T> value)? tipoPreguntaInvalido,
     TResult Function(PonderacionPreguntaInvalido<T> value)?
         ponderacionPreguntaInvalido,
     required TResult orElse(),
@@ -10010,30 +10010,30 @@ abstract class IntentosPermitidosCuestionarioInvalido<T>
 }
 
 /// @nodoc
-abstract class $tipoPreguntaInvalidoCopyWith<T, $Res> {
-  factory $tipoPreguntaInvalidoCopyWith(tipoPreguntaInvalido<T> value,
-          $Res Function(tipoPreguntaInvalido<T>) then) =
-      _$tipoPreguntaInvalidoCopyWithImpl<T, $Res>;
+abstract class $TipoPreguntaInvalidoCopyWith<T, $Res> {
+  factory $TipoPreguntaInvalidoCopyWith(TipoPreguntaInvalido<T> value,
+          $Res Function(TipoPreguntaInvalido<T>) then) =
+      _$TipoPreguntaInvalidoCopyWithImpl<T, $Res>;
   $Res call({T valorErroneo, List<String> tiposValidos});
 }
 
 /// @nodoc
-class _$tipoPreguntaInvalidoCopyWithImpl<T, $Res>
+class _$TipoPreguntaInvalidoCopyWithImpl<T, $Res>
     extends _$ValorErroneoCopyWithImpl<T, $Res>
-    implements $tipoPreguntaInvalidoCopyWith<T, $Res> {
-  _$tipoPreguntaInvalidoCopyWithImpl(tipoPreguntaInvalido<T> _value,
-      $Res Function(tipoPreguntaInvalido<T>) _then)
-      : super(_value, (v) => _then(v as tipoPreguntaInvalido<T>));
+    implements $TipoPreguntaInvalidoCopyWith<T, $Res> {
+  _$TipoPreguntaInvalidoCopyWithImpl(TipoPreguntaInvalido<T> _value,
+      $Res Function(TipoPreguntaInvalido<T>) _then)
+      : super(_value, (v) => _then(v as TipoPreguntaInvalido<T>));
 
   @override
-  tipoPreguntaInvalido<T> get _value => super._value as tipoPreguntaInvalido<T>;
+  TipoPreguntaInvalido<T> get _value => super._value as TipoPreguntaInvalido<T>;
 
   @override
   $Res call({
     Object? valorErroneo = freezed,
     Object? tiposValidos = freezed,
   }) {
-    return _then(tipoPreguntaInvalido<T>(
+    return _then(TipoPreguntaInvalido<T>(
       valorErroneo: valorErroneo == freezed
           ? _value.valorErroneo
           : valorErroneo // ignore: cast_nullable_to_non_nullable
@@ -10048,8 +10048,8 @@ class _$tipoPreguntaInvalidoCopyWithImpl<T, $Res>
 
 /// @nodoc
 
-class _$tipoPreguntaInvalido<T> implements tipoPreguntaInvalido<T> {
-  const _$tipoPreguntaInvalido(
+class _$TipoPreguntaInvalido<T> implements TipoPreguntaInvalido<T> {
+  const _$TipoPreguntaInvalido(
       {required this.valorErroneo, required this.tiposValidos});
 
   @override
@@ -10065,7 +10065,7 @@ class _$tipoPreguntaInvalido<T> implements tipoPreguntaInvalido<T> {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is tipoPreguntaInvalido<T> &&
+        (other is TipoPreguntaInvalido<T> &&
             (identical(other.valorErroneo, valorErroneo) ||
                 const DeepCollectionEquality()
                     .equals(other.valorErroneo, valorErroneo)) &&
@@ -10082,8 +10082,8 @@ class _$tipoPreguntaInvalido<T> implements tipoPreguntaInvalido<T> {
 
   @JsonKey(ignore: true)
   @override
-  $tipoPreguntaInvalidoCopyWith<T, tipoPreguntaInvalido<T>> get copyWith =>
-      _$tipoPreguntaInvalidoCopyWithImpl<T, tipoPreguntaInvalido<T>>(
+  $TipoPreguntaInvalidoCopyWith<T, TipoPreguntaInvalido<T>> get copyWith =>
+      _$TipoPreguntaInvalidoCopyWithImpl<T, TipoPreguntaInvalido<T>>(
           this, _$identity);
 
   @override
@@ -10247,7 +10247,7 @@ class _$tipoPreguntaInvalido<T> implements tipoPreguntaInvalido<T> {
         escalaCalificacionCuestionarioInvalida,
     required TResult Function(IntentosPermitidosCuestionarioInvalido<T> value)
         intentosPermitidosCuestionarioInvalido,
-    required TResult Function(tipoPreguntaInvalido<T> value)
+    required TResult Function(TipoPreguntaInvalido<T> value)
         tipoPreguntaInvalido,
     required TResult Function(PonderacionPreguntaInvalido<T> value)
         ponderacionPreguntaInvalido,
@@ -10299,7 +10299,7 @@ class _$tipoPreguntaInvalido<T> implements tipoPreguntaInvalido<T> {
         escalaCalificacionCuestionarioInvalida,
     TResult Function(IntentosPermitidosCuestionarioInvalido<T> value)?
         intentosPermitidosCuestionarioInvalido,
-    TResult Function(tipoPreguntaInvalido<T> value)? tipoPreguntaInvalido,
+    TResult Function(TipoPreguntaInvalido<T> value)? tipoPreguntaInvalido,
     TResult Function(PonderacionPreguntaInvalido<T> value)?
         ponderacionPreguntaInvalido,
     required TResult orElse(),
@@ -10311,15 +10311,15 @@ class _$tipoPreguntaInvalido<T> implements tipoPreguntaInvalido<T> {
   }
 }
 
-abstract class tipoPreguntaInvalido<T> implements ValorErroneo<T> {
-  const factory tipoPreguntaInvalido(
+abstract class TipoPreguntaInvalido<T> implements ValorErroneo<T> {
+  const factory TipoPreguntaInvalido(
       {required T valorErroneo,
-      required List<String> tiposValidos}) = _$tipoPreguntaInvalido<T>;
+      required List<String> tiposValidos}) = _$TipoPreguntaInvalido<T>;
 
   T get valorErroneo => throw _privateConstructorUsedError;
   List<String> get tiposValidos => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $tipoPreguntaInvalidoCopyWith<T, tipoPreguntaInvalido<T>> get copyWith =>
+  $TipoPreguntaInvalidoCopyWith<T, TipoPreguntaInvalido<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -10565,7 +10565,7 @@ class _$PonderacionPreguntaInvalido<T>
         escalaCalificacionCuestionarioInvalida,
     required TResult Function(IntentosPermitidosCuestionarioInvalido<T> value)
         intentosPermitidosCuestionarioInvalido,
-    required TResult Function(tipoPreguntaInvalido<T> value)
+    required TResult Function(TipoPreguntaInvalido<T> value)
         tipoPreguntaInvalido,
     required TResult Function(PonderacionPreguntaInvalido<T> value)
         ponderacionPreguntaInvalido,
@@ -10617,7 +10617,7 @@ class _$PonderacionPreguntaInvalido<T>
         escalaCalificacionCuestionarioInvalida,
     TResult Function(IntentosPermitidosCuestionarioInvalido<T> value)?
         intentosPermitidosCuestionarioInvalido,
-    TResult Function(tipoPreguntaInvalido<T> value)? tipoPreguntaInvalido,
+    TResult Function(TipoPreguntaInvalido<T> value)? tipoPreguntaInvalido,
     TResult Function(PonderacionPreguntaInvalido<T> value)?
         ponderacionPreguntaInvalido,
     required TResult orElse(),
