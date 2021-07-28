@@ -1,0 +1,17 @@
+{
+   "uuid":"1",
+   "titulo":"Test Titulo",
+   "cargo":"Test Cargo",
+   "uuidEmpresa":"1",
+   "nombreEmpresa":"Test nombre empresa",
+   "direccionEmpresa":"Test direccion empresa",
+   "numeroTelefonicos":["1234","3356"],
+   "sueldo":100.0,
+   "descripcion":"Test Descripcion",
+   "valorDuracion":30,
+   "escalaDuracion":"dias",
+   "turnoTrabajo":"DIURNO",
+   "fechaInicioTrabajo":"02/04/2021",
+   "fechaCulminacionTrabajo":"01/10/2021",
+   "estatus":"ACTIVO"
+}

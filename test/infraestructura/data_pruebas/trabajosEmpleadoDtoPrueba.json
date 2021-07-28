@@ -1,0 +1,18 @@
+[
+    {
+    "uuid": "1",
+    "titulo": "Test Titulo",
+    "cargo": "Test Cargo",
+    "fechaInicioTrabajo":"02/04/2021",
+    "nombreEmpresa": "Test nombre empresa",
+    "estatus": "ACTIVO"
+    },
+    {
+    "uuid": "2",
+    "titulo": "Test Titulo",
+    "cargo": "Test Cargo",
+    "fechaInicioTrabajo": "01/09/2021",
+    "nombreEmpresa": "Test nombre empresa",
+    "estatus": "ACTIVO"
+    }
+]
