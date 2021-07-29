@@ -2425,6 +2425,8 @@ abstract class $RegistroStateCopyWith<$Res> {
       bool estaEnviando,
       Option<Either<ExcepcionAutentificacion, Unit>>
           opcionDeErrorOExitoDeRegistro});
+
+  $EmpleadoCopyWith<$Res> get empleado;
 }
 
 /// @nodoc
@@ -2472,6 +2474,13 @@ class _$RegistroStateCopyWithImpl<$Res>
               as Option<Either<ExcepcionAutentificacion, Unit>>,
     ));
   }
+
+  @override
+  $EmpleadoCopyWith<$Res> get empleado {
+    return $EmpleadoCopyWith<$Res>(_value.empleado, (value) {
+      return _then(_value.copyWith(empleado: value));
+    });
+  }
 }
 
 /// @nodoc
@@ -2489,6 +2498,9 @@ abstract class _$RegistroStateCopyWith<$Res>
       bool estaEnviando,
       Option<Either<ExcepcionAutentificacion, Unit>>
           opcionDeErrorOExitoDeRegistro});
+
+  @override
+  $EmpleadoCopyWith<$Res> get empleado;
 }
 
 /// @nodoc

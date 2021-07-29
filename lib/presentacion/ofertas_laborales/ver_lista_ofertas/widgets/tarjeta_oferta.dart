@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:officium_flutter/dominio/oferta_laboral/entidades/oferta_laboral.dart';
+import 'package:officium_flutter/dominio/contrataciones/entidades/oferta_laboral.dart';
 
 class TarjetaOferta extends StatelessWidget {
   final OfertaLaboral oferta;

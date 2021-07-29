@@ -539,6 +539,8 @@ abstract class _$VerDetalleOfertaLaboralCargadaCopyWith<$Res> {
           $Res Function(_VerDetalleOfertaLaboralCargada) then) =
       __$VerDetalleOfertaLaboralCargadaCopyWithImpl<$Res>;
   $Res call({OfertaLaboral ofertaLaboral});
+
+  $OfertaLaboralCopyWith<$Res> get ofertaLaboral;
 }
 
 /// @nodoc
@@ -564,6 +566,13 @@ class __$VerDetalleOfertaLaboralCargadaCopyWithImpl<$Res>
           : ofertaLaboral // ignore: cast_nullable_to_non_nullable
               as OfertaLaboral,
     ));
+  }
+
+  @override
+  $OfertaLaboralCopyWith<$Res> get ofertaLaboral {
+    return $OfertaLaboralCopyWith<$Res>(_value.ofertaLaboral, (value) {
+      return _then(_value.copyWith(ofertaLaboral: value));
+    });
   }
 }
 
@@ -681,6 +690,8 @@ abstract class _$VerDetalleOfertaLaboralFallidaCopyWith<$Res> {
           $Res Function(_VerDetalleOfertaLaboralFallida) then) =
       __$VerDetalleOfertaLaboralFallidaCopyWithImpl<$Res>;
   $Res call({OfertaLaboralExcepcion ofertaLaboralExcepcion});
+
+  $OfertaLaboralExcepcionCopyWith<$Res> get ofertaLaboralExcepcion;
 }
 
 /// @nodoc
@@ -706,6 +717,14 @@ class __$VerDetalleOfertaLaboralFallidaCopyWithImpl<$Res>
           : ofertaLaboralExcepcion // ignore: cast_nullable_to_non_nullable
               as OfertaLaboralExcepcion,
     ));
+  }
+
+  @override
+  $OfertaLaboralExcepcionCopyWith<$Res> get ofertaLaboralExcepcion {
+    return $OfertaLaboralExcepcionCopyWith<$Res>(_value.ofertaLaboralExcepcion,
+        (value) {
+      return _then(_value.copyWith(ofertaLaboralExcepcion: value));
+    });
   }
 }
 

@@ -4,14 +4,14 @@ import 'package:intl/intl.dart'; //for date format
 import 'package:officium_flutter/dominio/comun/value_objects/fecha.dart';
 import 'package:officium_flutter/dominio/comun/value_objects/identificador.dart';
 import 'package:officium_flutter/dominio/empresa/value_objects/nombre_empresa.dart';
-import 'package:officium_flutter/dominio/oferta_laboral/entidades/oferta_laboral.dart';
-import 'package:officium_flutter/dominio/oferta_laboral/value_objects/oferta_laboral/Duracion_Oferta/duracion_escalas.dart';
-import 'package:officium_flutter/dominio/oferta_laboral/value_objects/oferta_laboral/Duracion_Oferta/duracion_estimada.dart';
-import 'package:officium_flutter/dominio/oferta_laboral/value_objects/oferta_laboral/cargo.dart';
-import 'package:officium_flutter/dominio/oferta_laboral/value_objects/oferta_laboral/numero_vacantes.dart';
-import 'package:officium_flutter/dominio/oferta_laboral/value_objects/oferta_laboral/sueldo.dart';
-import 'package:officium_flutter/dominio/oferta_laboral/value_objects/oferta_laboral/titulo.dart';
-import 'package:officium_flutter/dominio/oferta_laboral/value_objects/oferta_laboral/turno_trabajo.dart';
+import 'package:officium_flutter/dominio/contrataciones/entidades/oferta_laboral.dart';
+import 'package:officium_flutter/dominio/contrataciones/value_objects/oferta_laboral/Duracion_Oferta/duracion_escalas.dart';
+import 'package:officium_flutter/dominio/contrataciones/value_objects/oferta_laboral/Duracion_Oferta/duracion_estimada.dart';
+import 'package:officium_flutter/dominio/contrataciones/value_objects/oferta_laboral/cargo.dart';
+import 'package:officium_flutter/dominio/contrataciones/value_objects/oferta_laboral/numero_vacantes.dart';
+import 'package:officium_flutter/dominio/contrataciones/value_objects/oferta_laboral/sueldo.dart';
+import 'package:officium_flutter/dominio/contrataciones/value_objects/oferta_laboral/titulo.dart';
+import 'package:officium_flutter/dominio/contrataciones/value_objects/oferta_laboral/turno_trabajo.dart';
 
 part 'oferta_laboral_dto.freezed.dart';
 part 'oferta_laboral_dto.g.dart';

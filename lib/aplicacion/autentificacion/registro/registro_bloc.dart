@@ -8,15 +8,15 @@ import 'package:officium_flutter/dominio/autentificacion/servicios_dominio/facha
 import 'package:officium_flutter/dominio/autentificacion/value_objecs/email.dart';
 import 'package:officium_flutter/dominio/autentificacion/value_objecs/password.dart';
 import 'package:officium_flutter/dominio/comun/value_objects/genero.dart';
-import 'package:officium_flutter/dominio/empleado/entidades/empleado.dart';
-import 'package:officium_flutter/dominio/empleado/value_objects/codigo_postal.dart';
-import 'package:officium_flutter/dominio/empleado/value_objects/direccion_calle.dart';
-import 'package:officium_flutter/dominio/empleado/value_objects/fecha_nacimiento.dart';
-import 'package:officium_flutter/dominio/empleado/value_objects/numero_telefonico.dart';
-import 'package:officium_flutter/dominio/empleado/value_objects/primer_apellido.dart';
-import 'package:officium_flutter/dominio/empleado/value_objects/primer_nombre.dart';
-import 'package:officium_flutter/dominio/empleado/value_objects/segundo_apellido.dart';
-import 'package:officium_flutter/dominio/empleado/value_objects/segundo_nombre.dart';
+import 'package:officium_flutter/dominio/core/entidades/empleado.dart';
+import 'package:officium_flutter/dominio/core/value_objects/empleado/codigo_postal.dart';
+import 'package:officium_flutter/dominio/core/value_objects/empleado/direccion_calle.dart';
+import 'package:officium_flutter/dominio/core/value_objects/empleado/fecha_nacimiento.dart';
+import 'package:officium_flutter/dominio/core/value_objects/empleado/numero_telefonico.dart';
+import 'package:officium_flutter/dominio/core/value_objects/empleado/primer_apellido.dart';
+import 'package:officium_flutter/dominio/core/value_objects/empleado/primer_nombre.dart';
+import 'package:officium_flutter/dominio/core/value_objects/empleado/segundo_apellido.dart';
+import 'package:officium_flutter/dominio/core/value_objects/empleado/segundo_nombre.dart';
 
 part 'registro_event.dart';
 part 'registro_state.dart';
@@ -87,7 +87,7 @@ class RegistroBloc extends Bloc<RegistroEvent, RegistroState> {
       direccionCalleCambiado: (e) async* {
         yield state.copyWith(
           empleado: state.empleado.copyWith(
-            direccionCalle: DireccionCalle(e.direccionCalle),
+            direccionCalleUno: DireccionCalle(e.direccionCalle),
           ),
           opcionDeErrorOExitoDeRegistro: none(),
         );

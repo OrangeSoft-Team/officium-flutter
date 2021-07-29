@@ -742,6 +742,8 @@ abstract class _$CargaFallidaCopyWith<$Res> {
           _CargaFallida value, $Res Function(_CargaFallida) then) =
       __$CargaFallidaCopyWithImpl<$Res>;
   $Res call({OfertaLaboralExcepcion ofertaLaboralExcepcion});
+
+  $OfertaLaboralExcepcionCopyWith<$Res> get ofertaLaboralExcepcion;
 }
 
 /// @nodoc
@@ -765,6 +767,14 @@ class __$CargaFallidaCopyWithImpl<$Res>
           : ofertaLaboralExcepcion // ignore: cast_nullable_to_non_nullable
               as OfertaLaboralExcepcion,
     ));
+  }
+
+  @override
+  $OfertaLaboralExcepcionCopyWith<$Res> get ofertaLaboralExcepcion {
+    return $OfertaLaboralExcepcionCopyWith<$Res>(_value.ofertaLaboralExcepcion,
+        (value) {
+      return _then(_value.copyWith(ofertaLaboralExcepcion: value));
+    });
   }
 }
 

@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:officium_flutter/dominio/comun/value_objects/identificador.dart';
-import 'package:officium_flutter/dominio/oferta_laboral/entidades/postulacion_oferta.dart';
-import 'package:officium_flutter/dominio/oferta_laboral/value_objects/postulacion_oferta_laboral/comentario_postulacion.dart';
+import 'package:officium_flutter/dominio/contrataciones/entidades/postulacion_oferta.dart';
+import 'package:officium_flutter/dominio/contrataciones/value_objects/postulacion_oferta_laboral/comentario_postulacion.dart';
 
 part 'postulacion_oferta_laboral_dto.freezed.dart';
 part 'postulacion_oferta_laboral_dto.g.dart';
