@@ -142,7 +142,7 @@ class __$EmpresaCopyWithImpl<$Res> extends _$EmpresaCopyWithImpl<$Res>
 
 /// @nodoc
 
-@Implements(IEntitidad)
+@Implements(IEntidad)
 class _$_Empresa implements _Empresa {
   const _$_Empresa(
       {required this.uuid,
@@ -195,7 +195,7 @@ class _$_Empresa implements _Empresa {
       __$EmpresaCopyWithImpl<_Empresa>(this, _$identity);
 }
 
-abstract class _Empresa implements Empresa, IEntitidad {
+abstract class _Empresa implements Empresa, IEntidad {
   const factory _Empresa(
       {required Identificador uuid,
       required NombreEmpresa nombreEmpresa,

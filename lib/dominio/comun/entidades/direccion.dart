@@ -10,7 +10,7 @@ part 'direccion.freezed.dart';
 
 @freezed
 abstract class Direccion with _$Direccion {
-  @Implements(IEntitidad)
+  @Implements(IEntidad)
   const factory Direccion({
     required Identificador uuid,
     required Ciudad ciudad,

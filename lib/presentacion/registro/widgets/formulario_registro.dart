@@ -337,16 +337,21 @@ class _FormularioRegistroState extends State<FormularioRegistro> {
       onChanged: (value) => context.read<RegistroBloc>().add(
             RegistroEvent.direccionCalleCambiado(value),
           ),
-      validator: (_) =>
-          context.read<RegistroBloc>().state.empleado.direccionCalle.value.fold(
-                (f) => f.maybeMap(
-                  stringVacio: (_) => 'La direccion es obligatoria',
-                  longitudInvalida: (_) => 'Longitud invalida',
-                  emailInvalido: (_) => 'Email invalido',
-                  orElse: () => null,
-                ),
-                (_) => null,
-              ),
+      validator: (_) => context
+          .read<RegistroBloc>()
+          .state
+          .empleado
+          .direccionCalleUno
+          .value
+          .fold(
+            (f) => f.maybeMap(
+              stringVacio: (_) => 'La direccion es obligatoria',
+              longitudInvalida: (_) => 'Longitud invalida',
+              emailInvalido: (_) => 'Email invalido',
+              orElse: () => null,
+            ),
+            (_) => null,
+          ),
     );
   }
 

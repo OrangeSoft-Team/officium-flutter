@@ -8,7 +8,7 @@ part 'pais.freezed.dart';
 
 @freezed
 abstract class Pais with _$Pais {
-  @Implements(IEntitidad)
+  @Implements(IEntidad)
   const factory Pais(
       {required Identificador uuid,
       required NombrePais nombre,
