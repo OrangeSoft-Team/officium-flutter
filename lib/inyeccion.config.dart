@@ -13,12 +13,12 @@ import 'aplicacion/autentificacion/estado_autentificacion/estado_autentificacion
 import 'aplicacion/autentificacion/iniciar_sesion/iniciar_sesion_bloc.dart'
     as _i8;
 import 'aplicacion/autentificacion/registro/registro_bloc.dart' as _i9;
-import 'aplicacion/oferta_laboral/postular_oferta_laboral/postular_oferta_laboral_bloc.dart'
-    as _i13;
-import 'aplicacion/oferta_laboral/ver_detalle_oferta_laboral/ver_detalle_oferta_laboral_bloc.dart'
+import 'aplicacion/core/oferta_laboral/ver_detalle_oferta_laboral/ver_detalle_oferta_laboral_bloc.dart'
     as _i14;
-import 'aplicacion/oferta_laboral/ver_ofertas_laborales/ver_ofertas_laborales_bloc.dart'
+import 'aplicacion/core/oferta_laboral/ver_ofertas_laborales/ver_ofertas_laborales_bloc.dart'
     as _i15;
+import 'aplicacion/core/postulacion/postular_oferta_laboral/postular_oferta_laboral_bloc.dart'
+    as _i13;
 import 'dominio/autentificacion/servicios_dominio/fachadas/i_fachada_autentificacion.dart'
     as _i4;
 import 'dominio/contrataciones/servicios_dominio/repositorio/i_oferta_laboral_repositorio.dart'

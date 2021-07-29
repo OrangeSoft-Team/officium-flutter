@@ -76,8 +76,8 @@ class OfertaLaboralRepositorio implements IContratacionesRepositorio {
   }
 
   @override
-  Future<Either<OfertaLaboralExcepcion, OfertaLaboral>>
-      buscarOfertaLaboralConcreta(Identificador uuidOferta) async {
+  Future<Either<OfertaLaboralExcepcion, OfertaLaboral>> verDetalleOfertaLaboral(
+      Identificador uuidOferta) async {
     final OfertaLaboralDetalleDTO ofertasLaboralDetalle;
     try {
       ofertasLaboralDetalle =

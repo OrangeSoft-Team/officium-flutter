@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:officium_flutter/aplicacion/oferta_laboral/ver_ofertas_laborales/ver_ofertas_laborales_bloc.dart';
+import 'package:officium_flutter/aplicacion/core/oferta_laboral/ver_ofertas_laborales/ver_ofertas_laborales_bloc.dart';
 import 'package:officium_flutter/presentacion/ofertas_laborales/ver_lista_ofertas/widgets/error_critico.dart';
 import 'package:officium_flutter/presentacion/ofertas_laborales/ver_lista_ofertas/widgets/error_oferta.dart';
 import 'package:officium_flutter/presentacion/ofertas_laborales/ver_lista_ofertas/widgets/tarjeta_oferta.dart';

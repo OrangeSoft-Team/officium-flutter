@@ -64,7 +64,7 @@ void main() {
           .thenAnswer((_) async => Future.value(tOfertasLaboralesDetalleDto));
       // act
       final result = await ofertaLaboralRepositorio
-          .buscarOfertaLaboralConcreta(aOfertaLaboral.uuid);
+          .verDetalleOfertaLaboral(aOfertaLaboral.uuid);
       // assert
       verify(
           mockFuenteDeDatos.obtenerDetalleOfertasLaboral(aOfertaLaboral.uuid));
