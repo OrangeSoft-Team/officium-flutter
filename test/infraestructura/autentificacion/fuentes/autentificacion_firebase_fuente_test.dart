@@ -1,5 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
+
+import 'package:dartz/dartz.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -10,23 +12,27 @@ import 'package:officium_flutter/infraestructura/autentificacion/fuentes/autenti
 import 'package:officium_flutter/infraestructura/autentificacion/modelos/datos_inicio_sesion_empleado_dto.dart';
 import 'package:officium_flutter/infraestructura/autentificacion/modelos/respuesta_inicio_sesion_empelado_dto.dart';
 import 'package:officium_flutter/infraestructura/comun/excepciones.dart';
-import '../../data_pruebas/test_data.dart';
+import 'package:officium_flutter/infraestructura/comun/local_storage/fuentes/fuente_local.dart';
+
 import '../../data_pruebas/lector_json.dart';
+import '../../data_pruebas/test_data.dart';
 import 'autentificacion_firebase_fuente_test.mocks.dart';
 
 const DIR_NEST = 'http://officium-nest.ddns.net:2000';
-@GenerateMocks([HttpClient,HttpClientRequest,HttpClientResponse, HttpHeaders, FirebaseAuth,UserCredential, AuthCredential,GoogleSignIn, GoogleSignInAccount, GoogleSignInAuthentication,User])
+@GenerateMocks([HttpClient,HttpClientRequest,HttpClientResponse, HttpHeaders, FirebaseAuth,UserCredential, AuthCredential,GoogleSignIn, GoogleSignInAccount, GoogleSignInAuthentication,User, FuenteLocal])
 void main () {
   final MockHttpClient mockHttpClient =  MockHttpClient();
   final MockHttpClientRequest mockHttpClientRequest =  MockHttpClientRequest();
   final MockHttpHeaders mockHttpHeaders =  MockHttpHeaders();
+  final MockHttpHeaders mockHttpHeadersResp =  MockHttpHeaders();
   final MockHttpClientResponse mockHttpClientResponse =  MockHttpClientResponse();
   final MockFirebaseAuth mockFirebaseAuth =  MockFirebaseAuth();
   final MockGoogleSignIn mockGoogleSignIn =  MockGoogleSignIn();
   final MockGoogleSignInAccount mockGoogleSignInAccount =  MockGoogleSignInAccount();
   final MockGoogleSignInAuthentication mockGoogleSignInAuthentication =  MockGoogleSignInAuthentication();
   final MockUser mockUser =  MockUser();
-  final FirebaseAuthFuente fuenteDeDatos = FirebaseAuthFuente(cliente: mockHttpClient,firebaseAuth:mockFirebaseAuth,googleSignIn: mockGoogleSignIn);
+  final MockFuenteLocal mockFuenteLocal =  MockFuenteLocal();
+  final FirebaseAuthFuente fuenteDeDatos = FirebaseAuthFuente(cliente: mockHttpClient,firebaseAuth:mockFirebaseAuth,googleSignIn: mockGoogleSignIn,fuenteLocal: mockFuenteLocal);
   final MockUserCredential mockUserCredential =  MockUserCredential();
   final MockAuthCredential mockAuthCredential =  MockAuthCredential();
   
@@ -34,6 +40,15 @@ void main () {
     
     when(mockHttpClientRequest.headers)
     .thenAnswer((_) => mockHttpHeaders);
+
+    when(mockHttpClientResponse.headers)
+    .thenAnswer((_) => mockHttpHeadersResp);
+
+    when(mockHttpClientResponse.cookies)
+    .thenAnswer((_) => [Cookie('token','1'),Cookie('token','2')]);
+
+    when(mockHttpHeadersResp['set-cookie'])
+    .thenAnswer((_) => ['token="1"']);
     
     when(mockHttpClientRequest.close())
     .thenAnswer((_) async => mockHttpClientResponse);
@@ -129,6 +144,10 @@ void main () {
         .thenAnswer((_) async => mockHttpClientRequest);
       when(mockFirebaseAuth.signInWithCredential(any))
         .thenAnswer((_) async => mockUserCredential);
+      when(mockFuenteLocal.asignarTokenLocal(any))
+        .thenAnswer((_) async => unit);
+      when(mockFuenteLocal.obtenerTokenLocal())
+        .thenAnswer((_) async => '1234');
       googleSignInSuccesfulSetup();
       setUpMockHttpClientSuccess200(TestData().repuestaInicioSesionEmpleado, 200);
       final result = await fuenteDeDatos.ingresarConGoogle();

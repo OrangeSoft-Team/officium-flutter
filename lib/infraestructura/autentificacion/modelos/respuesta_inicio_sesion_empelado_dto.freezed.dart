@@ -22,10 +22,10 @@ class _$RespuestaInicioSesionEmpleadoDTOTearOff {
   const _$RespuestaInicioSesionEmpleadoDTOTearOff();
 
   _RespuestaInicioSesionEmpleadoDTO call(
-      {required String tokenSesion, required String uuidEmpleado}) {
+      {required String primerNombre, required String primerApellido}) {
     return _RespuestaInicioSesionEmpleadoDTO(
-      tokenSesion: tokenSesion,
-      uuidEmpleado: uuidEmpleado,
+      primerNombre: primerNombre,
+      primerApellido: primerApellido,
     );
   }
 
@@ -40,8 +40,8 @@ const $RespuestaInicioSesionEmpleadoDTO =
 
 /// @nodoc
 mixin _$RespuestaInicioSesionEmpleadoDTO {
-  String get tokenSesion => throw _privateConstructorUsedError;
-  String get uuidEmpleado => throw _privateConstructorUsedError;
+  String get primerNombre => throw _privateConstructorUsedError;
+  String get primerApellido => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -55,7 +55,7 @@ abstract class $RespuestaInicioSesionEmpleadoDTOCopyWith<$Res> {
           RespuestaInicioSesionEmpleadoDTO value,
           $Res Function(RespuestaInicioSesionEmpleadoDTO) then) =
       _$RespuestaInicioSesionEmpleadoDTOCopyWithImpl<$Res>;
-  $Res call({String tokenSesion, String uuidEmpleado});
+  $Res call({String primerNombre, String primerApellido});
 }
 
 /// @nodoc
@@ -69,17 +69,17 @@ class _$RespuestaInicioSesionEmpleadoDTOCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? tokenSesion = freezed,
-    Object? uuidEmpleado = freezed,
+    Object? primerNombre = freezed,
+    Object? primerApellido = freezed,
   }) {
     return _then(_value.copyWith(
-      tokenSesion: tokenSesion == freezed
-          ? _value.tokenSesion
-          : tokenSesion // ignore: cast_nullable_to_non_nullable
+      primerNombre: primerNombre == freezed
+          ? _value.primerNombre
+          : primerNombre // ignore: cast_nullable_to_non_nullable
               as String,
-      uuidEmpleado: uuidEmpleado == freezed
-          ? _value.uuidEmpleado
-          : uuidEmpleado // ignore: cast_nullable_to_non_nullable
+      primerApellido: primerApellido == freezed
+          ? _value.primerApellido
+          : primerApellido // ignore: cast_nullable_to_non_nullable
               as String,
     ));
   }
@@ -93,7 +93,7 @@ abstract class _$RespuestaInicioSesionEmpleadoDTOCopyWith<$Res>
           $Res Function(_RespuestaInicioSesionEmpleadoDTO) then) =
       __$RespuestaInicioSesionEmpleadoDTOCopyWithImpl<$Res>;
   @override
-  $Res call({String tokenSesion, String uuidEmpleado});
+  $Res call({String primerNombre, String primerApellido});
 }
 
 /// @nodoc
@@ -111,17 +111,17 @@ class __$RespuestaInicioSesionEmpleadoDTOCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? tokenSesion = freezed,
-    Object? uuidEmpleado = freezed,
+    Object? primerNombre = freezed,
+    Object? primerApellido = freezed,
   }) {
     return _then(_RespuestaInicioSesionEmpleadoDTO(
-      tokenSesion: tokenSesion == freezed
-          ? _value.tokenSesion
-          : tokenSesion // ignore: cast_nullable_to_non_nullable
+      primerNombre: primerNombre == freezed
+          ? _value.primerNombre
+          : primerNombre // ignore: cast_nullable_to_non_nullable
               as String,
-      uuidEmpleado: uuidEmpleado == freezed
-          ? _value.uuidEmpleado
-          : uuidEmpleado // ignore: cast_nullable_to_non_nullable
+      primerApellido: primerApellido == freezed
+          ? _value.primerApellido
+          : primerApellido // ignore: cast_nullable_to_non_nullable
               as String,
     ));
   }
@@ -132,7 +132,7 @@ class __$RespuestaInicioSesionEmpleadoDTOCopyWithImpl<$Res>
 class _$_RespuestaInicioSesionEmpleadoDTO
     extends _RespuestaInicioSesionEmpleadoDTO {
   _$_RespuestaInicioSesionEmpleadoDTO(
-      {required this.tokenSesion, required this.uuidEmpleado})
+      {required this.primerNombre, required this.primerApellido})
       : super._();
 
   factory _$_RespuestaInicioSesionEmpleadoDTO.fromJson(
@@ -140,32 +140,32 @@ class _$_RespuestaInicioSesionEmpleadoDTO
       _$_$_RespuestaInicioSesionEmpleadoDTOFromJson(json);
 
   @override
-  final String tokenSesion;
+  final String primerNombre;
   @override
-  final String uuidEmpleado;
+  final String primerApellido;
 
   @override
   String toString() {
-    return 'RespuestaInicioSesionEmpleadoDTO(tokenSesion: $tokenSesion, uuidEmpleado: $uuidEmpleado)';
+    return 'RespuestaInicioSesionEmpleadoDTO(primerNombre: $primerNombre, primerApellido: $primerApellido)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _RespuestaInicioSesionEmpleadoDTO &&
-            (identical(other.tokenSesion, tokenSesion) ||
+            (identical(other.primerNombre, primerNombre) ||
                 const DeepCollectionEquality()
-                    .equals(other.tokenSesion, tokenSesion)) &&
-            (identical(other.uuidEmpleado, uuidEmpleado) ||
+                    .equals(other.primerNombre, primerNombre)) &&
+            (identical(other.primerApellido, primerApellido) ||
                 const DeepCollectionEquality()
-                    .equals(other.uuidEmpleado, uuidEmpleado)));
+                    .equals(other.primerApellido, primerApellido)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(tokenSesion) ^
-      const DeepCollectionEquality().hash(uuidEmpleado);
+      const DeepCollectionEquality().hash(primerNombre) ^
+      const DeepCollectionEquality().hash(primerApellido);
 
   @JsonKey(ignore: true)
   @override
@@ -182,17 +182,17 @@ class _$_RespuestaInicioSesionEmpleadoDTO
 abstract class _RespuestaInicioSesionEmpleadoDTO
     extends RespuestaInicioSesionEmpleadoDTO {
   factory _RespuestaInicioSesionEmpleadoDTO(
-      {required String tokenSesion,
-      required String uuidEmpleado}) = _$_RespuestaInicioSesionEmpleadoDTO;
+      {required String primerNombre,
+      required String primerApellido}) = _$_RespuestaInicioSesionEmpleadoDTO;
   _RespuestaInicioSesionEmpleadoDTO._() : super._();
 
   factory _RespuestaInicioSesionEmpleadoDTO.fromJson(
       Map<String, dynamic> json) = _$_RespuestaInicioSesionEmpleadoDTO.fromJson;
 
   @override
-  String get tokenSesion => throw _privateConstructorUsedError;
+  String get primerNombre => throw _privateConstructorUsedError;
   @override
-  String get uuidEmpleado => throw _privateConstructorUsedError;
+  String get primerApellido => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$RespuestaInicioSesionEmpleadoDTOCopyWith<_RespuestaInicioSesionEmpleadoDTO>

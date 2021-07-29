@@ -26,7 +26,7 @@ class _$ExperienciaLaboralEmpleadoDTOTearOff {
       required String cargo,
       required String nombreEmpresa,
       required String fechaInicio,
-      required String fechaFin}) {
+      String? fechaFin}) {
     return _ExperienciaLaboralEmpleadoDTO(
       uuid: uuid,
       cargo: cargo,
@@ -50,7 +50,7 @@ mixin _$ExperienciaLaboralEmpleadoDTO {
   String get cargo => throw _privateConstructorUsedError;
   String get nombreEmpresa => throw _privateConstructorUsedError;
   String get fechaInicio => throw _privateConstructorUsedError;
-  String get fechaFin => throw _privateConstructorUsedError;
+  String? get fechaFin => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -69,7 +69,7 @@ abstract class $ExperienciaLaboralEmpleadoDTOCopyWith<$Res> {
       String cargo,
       String nombreEmpresa,
       String fechaInicio,
-      String fechaFin});
+      String? fechaFin});
 }
 
 /// @nodoc
@@ -109,7 +109,7 @@ class _$ExperienciaLaboralEmpleadoDTOCopyWithImpl<$Res>
       fechaFin: fechaFin == freezed
           ? _value.fechaFin
           : fechaFin // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ));
   }
 }
@@ -127,7 +127,7 @@ abstract class _$ExperienciaLaboralEmpleadoDTOCopyWith<$Res>
       String cargo,
       String nombreEmpresa,
       String fechaInicio,
-      String fechaFin});
+      String? fechaFin});
 }
 
 /// @nodoc
@@ -171,7 +171,7 @@ class __$ExperienciaLaboralEmpleadoDTOCopyWithImpl<$Res>
       fechaFin: fechaFin == freezed
           ? _value.fechaFin
           : fechaFin // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ));
   }
 }
@@ -184,7 +184,7 @@ class _$_ExperienciaLaboralEmpleadoDTO extends _ExperienciaLaboralEmpleadoDTO {
       required this.cargo,
       required this.nombreEmpresa,
       required this.fechaInicio,
-      required this.fechaFin})
+      this.fechaFin})
       : super._();
 
   factory _$_ExperienciaLaboralEmpleadoDTO.fromJson(
@@ -200,7 +200,7 @@ class _$_ExperienciaLaboralEmpleadoDTO extends _ExperienciaLaboralEmpleadoDTO {
   @override
   final String fechaInicio;
   @override
-  final String fechaFin;
+  final String? fechaFin;
 
   @override
   String toString() {
@@ -254,7 +254,7 @@ abstract class _ExperienciaLaboralEmpleadoDTO
       required String cargo,
       required String nombreEmpresa,
       required String fechaInicio,
-      required String fechaFin}) = _$_ExperienciaLaboralEmpleadoDTO;
+      String? fechaFin}) = _$_ExperienciaLaboralEmpleadoDTO;
   _ExperienciaLaboralEmpleadoDTO._() : super._();
 
   factory _ExperienciaLaboralEmpleadoDTO.fromJson(Map<String, dynamic> json) =
@@ -269,7 +269,7 @@ abstract class _ExperienciaLaboralEmpleadoDTO
   @override
   String get fechaInicio => throw _privateConstructorUsedError;
   @override
-  String get fechaFin => throw _privateConstructorUsedError;
+  String? get fechaFin => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$ExperienciaLaboralEmpleadoDTOCopyWith<_ExperienciaLaboralEmpleadoDTO>

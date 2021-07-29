@@ -5,8 +5,8 @@ part 'respuesta_inicio_sesion_empelado_dto.g.dart';
 abstract class RespuestaInicioSesionEmpleadoDTO implements _$RespuestaInicioSesionEmpleadoDTO {
   const RespuestaInicioSesionEmpleadoDTO._();
   factory RespuestaInicioSesionEmpleadoDTO({
-    required String tokenSesion,
-    required String uuidEmpleado,
+    required String primerNombre,
+    required String primerApellido,
   }) = _RespuestaInicioSesionEmpleadoDTO;
 
   factory RespuestaInicioSesionEmpleadoDTO.fromJson(Map<String, dynamic> json) =>

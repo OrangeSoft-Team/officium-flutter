@@ -13,7 +13,7 @@ _$_ExperienciaLaboralEmpleadoDTO _$_$_ExperienciaLaboralEmpleadoDTOFromJson(
     cargo: json['cargo'] as String,
     nombreEmpresa: json['nombreEmpresa'] as String,
     fechaInicio: json['fechaInicio'] as String,
-    fechaFin: json['fechaFin'] as String,
+    fechaFin: json['fechaFin'] as String?,
   );
 }
 

@@ -5,12 +5,11 @@ import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
-import 'package:officium_flutter/dominio/oferta_laboral/entidades/postulacion_oferta.dart';
-import 'package:officium_flutter/dominio/oferta_laboral/excepciones_dominio/oferta_laboral_excepciones.dart';
+import 'package:officium_flutter/dominio/contrataciones/entidades/postulacion_oferta.dart';
+import 'package:officium_flutter/dominio/contrataciones/excepciones_dominio/oferta_laboral_excepciones.dart';
 import 'package:officium_flutter/infraestructura/contrataciones/oferta_laboral/modelos/postulacion_oferta_laboral_dto.dart';
 import 'package:officium_flutter/infraestructura/contrataciones/postulacion/fuentes/i_postulacion_fuente.dart';
 import 'package:officium_flutter/infraestructura/contrataciones/postulacion/repositorios/postulacion_repositorio.dart';
-
 import '../../../data_pruebas/lector_json.dart';
 import 'postulacion_repositorio_test.mocks.dart';
 

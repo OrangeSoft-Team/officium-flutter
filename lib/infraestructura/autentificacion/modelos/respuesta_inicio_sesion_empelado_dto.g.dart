@@ -9,14 +9,14 @@ part of 'respuesta_inicio_sesion_empelado_dto.dart';
 _$_RespuestaInicioSesionEmpleadoDTO
     _$_$_RespuestaInicioSesionEmpleadoDTOFromJson(Map<String, dynamic> json) {
   return _$_RespuestaInicioSesionEmpleadoDTO(
-    tokenSesion: json['tokenSesion'] as String,
-    uuidEmpleado: json['uuidEmpleado'] as String,
+    primerNombre: json['primerNombre'] as String,
+    primerApellido: json['primerApellido'] as String,
   );
 }
 
 Map<String, dynamic> _$_$_RespuestaInicioSesionEmpleadoDTOToJson(
         _$_RespuestaInicioSesionEmpleadoDTO instance) =>
     <String, dynamic>{
-      'tokenSesion': instance.tokenSesion,
-      'uuidEmpleado': instance.uuidEmpleado,
+      'primerNombre': instance.primerNombre,
+      'primerApellido': instance.primerApellido,
     };

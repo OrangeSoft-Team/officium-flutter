@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'dart:io';
+
 import 'package:dartz/dartz.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/services.dart';
@@ -9,6 +10,7 @@ import 'package:officium_flutter/infraestructura/autentificacion/fuentes/i_auten
 import 'package:officium_flutter/infraestructura/autentificacion/modelos/datos_inicio_sesion_empleado_dto.dart';
 import 'package:officium_flutter/infraestructura/autentificacion/modelos/respuesta_inicio_sesion_empelado_dto.dart';
 import 'package:officium_flutter/infraestructura/comun/excepciones.dart';
+import 'package:officium_flutter/infraestructura/comun/local_storage/fuentes/fuente_local.dart';
 import 'package:officium_flutter/infraestructura/comun/response_parser.dart';
 
 const DIR_NEST = 'http://officium-nest.ddns.net:2000';
@@ -17,12 +19,14 @@ const DIR_NEST = 'http://officium-nest.ddns.net:2000';
 class FirebaseAuthFuente implements IAuthFirebaseFuente {
   final FirebaseAuth firebaseAuth;
   final GoogleSignIn googleSignIn;
+  final FuenteLocal fuenteLocal;
   final HttpClient cliente;
   
   FirebaseAuthFuente({
     required this.cliente,
     required this.firebaseAuth,
-    required this.googleSignIn
+    required this.googleSignIn,
+    required this.fuenteLocal
   });
 
   @override
@@ -50,6 +54,9 @@ class FirebaseAuthFuente implements IAuthFirebaseFuente {
       //COOKIE CHECK ?
       if(apiResponse.statusCode == 200){
         final parsedData = await ResponseParser.parseResponse(apiResponse);
+        //final jwtCookie = apiResponse.headers['set-cookie'];
+        //Map cookies = {};
+        //Cookie.fromSetCookieValue(value)
         return RespuestaInicioSesionEmpleadoDTO.fromJson(jsonDecode(parsedData) as Map<String, dynamic>);
       }
       else {
@@ -85,6 +92,11 @@ class FirebaseAuthFuente implements IAuthFirebaseFuente {
         //COOKIE CHECK ?
         if (apiResponse.statusCode == 200) {
           final parsedData = await ResponseParser.parseResponse(apiResponse);
+          final responseCookies = apiResponse.cookies;
+          if(responseCookies.isEmpty){
+            throw ServerException();
+          }
+          await fuenteLocal.asignarTokenLocal(responseCookies[0]);
           return RespuestaInicioSesionEmpleadoDTO.fromJson(jsonDecode(parsedData) as Map<String, dynamic>);
         }
         else {
