@@ -6,7 +6,7 @@ import 'package:officium_flutter/dominio/mooc/entidades/curso.dart';
 import 'package:officium_flutter/dominio/mooc/entidades/leccion.dart';
 import 'package:officium_flutter/dominio/mooc/excepciones_dominio/mooc_excepciones.dart';
 
-abstract class IContratacionesRepositorio {
+abstract class IMoocRepositorio {
   //Cursos
   Stream<Either<MoocExcepcion, List<Curso>>> verTodosLosCursos();
 

@@ -17,7 +17,7 @@ abstract class IEmpleadoRepositorio {
   Future<Either<EmpleadoExcepcion, Unit>> actualizarListaHabilidadesEmpleado(
       List<Identificador> listaHabilidades);
 
-  Stream<Either<EmpleadoExcepcion, List<Habilidad>>>
+  Stream<Either<EmpleadoExcepcion, List<ExperienciaLaboral>>>
       verExperienciasLaboralesEmpleado(Identificador uuidEmpleado);
 
   Future<Either<EmpleadoExcepcion, Unit>> crearExperienciaLaboral(

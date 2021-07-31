@@ -21,12 +21,6 @@ abstract class ExperienciaLaboralEmpleadoDTO implements _$ExperienciaLaboralEmpl
 
   factory ExperienciaLaboralEmpleadoDTO.fromJson(Map<String, dynamic> json) =>
       _$ExperienciaLaboralEmpleadoDTOFromJson(json);
-  
-  /*factory ExperienciaLaboralEmpleadoDTO.fromDomain(ExperienciaLaboralEmpleado cuestionario) {
-    return ExperienciaLaboralEmpleadoDTO(
-     
-    );
-  }*/
 
   ExperienciaLaboral toDomain() {
     return ExperienciaLaboral(

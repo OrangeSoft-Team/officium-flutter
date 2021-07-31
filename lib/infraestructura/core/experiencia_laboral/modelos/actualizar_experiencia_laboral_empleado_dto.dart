@@ -1,4 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:officium_flutter/dominio/core/entidades/experiencia_laboral.dart';
 part 'actualizar_experiencia_laboral_empleado_dto.freezed.dart';
 part 'actualizar_experiencia_laboral_empleado_dto.g.dart';
 
@@ -15,15 +16,12 @@ abstract class ActualizarExperienciaLaboralEmpleadoDTO implements _$ActualizarEx
   factory ActualizarExperienciaLaboralEmpleadoDTO.fromJson(Map<String, dynamic> json) =>
       _$ActualizarExperienciaLaboralEmpleadoDTOFromJson(json);
   
-  /*factory ActualizarExperienciaLaboralEmpleadoDTO.fromDomain(ActualizarExperienciaLaboralEmpleado cuestionario) {
+  factory ActualizarExperienciaLaboralEmpleadoDTO.fromDomain(ExperienciaLaboral experienciaActualizada) {
     return ActualizarExperienciaLaboralEmpleadoDTO(
-     
+      cargo: experienciaActualizada.cargo.getOrCrash(),
+      nombreEmpresa: experienciaActualizada.nombreEmpresa.getOrCrash(),
+      fechaInicio: experienciaActualizada.fechaInicio.getOrCrash().toString(),
+      fechaFin: experienciaActualizada.fechaFin!.getOrCrash().toString(),
     );
-  }*/
-
-  /*ActualizarExperienciaLaboralEmpleado toDomain() {
-    return ActualizarExperienciaLaboralEmpleado(
-     
-    );
-  }*/
+  }
 }
