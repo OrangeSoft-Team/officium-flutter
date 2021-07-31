@@ -11,8 +11,8 @@ abstract class IContratacionesRepositorio {
   Stream<Either<OfertaLaboralExcepcion, List<OfertaLaboral>>>
       verTodasLasOfertasLaborales();
 
-  Future<Either<OfertaLaboralExcepcion, OfertaLaboral>>
-      buscarOfertaLaboralConcreta(Identificador uuidOferta);
+  Future<Either<OfertaLaboralExcepcion, OfertaLaboral>> verDetalleOfertaLaboral(
+      Identificador uuidOferta);
 
   //Trabajos
   Stream<Either<OfertaLaboralExcepcion, List<OfertaLaboral>>>

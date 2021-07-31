@@ -5,7 +5,7 @@ import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
-import 'package:officium_flutter/aplicacion/oferta_laboral/ver_detalle_oferta_laboral/ver_detalle_oferta_laboral_bloc.dart';
+import 'package:officium_flutter/aplicacion/core/oferta_laboral/ver_detalle_oferta_laboral/ver_detalle_oferta_laboral_bloc.dart';
 import 'package:officium_flutter/dominio/contrataciones/entidades/oferta_laboral.dart';
 import 'package:officium_flutter/dominio/contrataciones/excepciones_dominio/oferta_laboral_excepciones.dart';
 import 'package:officium_flutter/dominio/contrataciones/servicios_dominio/repositorio/i_oferta_laboral_repositorio.dart';
@@ -30,7 +30,7 @@ void main() {
         Right(dOfertaLaboralDetalle);
 
     when(mockOfertaLaboralRepositorio
-            .buscarOfertaLaboralConcreta(dOfertaLaboralDetalle.uuid))
+            .verDetalleOfertaLaboral(dOfertaLaboralDetalle.uuid))
         .thenAnswer((_) => Future.value(tOfertaLaboralDetalle));
 
     final verOfertasLaboralesBloc =

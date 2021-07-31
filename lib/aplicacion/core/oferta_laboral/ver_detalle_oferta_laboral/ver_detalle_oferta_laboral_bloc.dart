@@ -28,7 +28,7 @@ class VerDetalleOfertaLaboralBloc
         .verDetalleOfertaLaboralEnProgreso();
     final Either<OfertaLaboralExcepcion, OfertaLaboral> ofertaOExcepcion =
         await _iOfertaLaboralRepositorio
-            .buscarOfertaLaboralConcreta(event.uuidOfertaLaboral);
+            .verDetalleOfertaLaboral(event.uuidOfertaLaboral);
     yield ofertaOExcepcion.fold(
         (ofertaExcepcion) =>
             VerDetalleOfertaLaboralState.verDetalleOfertaLaboralFallida(

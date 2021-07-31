@@ -50,8 +50,8 @@ class MockIContratacionesRepositorio extends _i1.Mock
           _i2.Either<_i5.OfertaLaboralExcepcion, List<_i6.OfertaLaboral>>>);
   @override
   _i4.Future<_i2.Either<_i5.OfertaLaboralExcepcion, _i6.OfertaLaboral>>
-      buscarOfertaLaboralConcreta(_i7.Identificador? uuidOferta) => (super.noSuchMethod(
-              Invocation.method(#buscarOfertaLaboralConcreta, [uuidOferta]),
+      verDetalleOfertaLaboral(_i7.Identificador? uuidOferta) => (super.noSuchMethod(
+              Invocation.method(#verDetalleOfertaLaboral, [uuidOferta]),
               returnValue: Future<
                       _i2.Either<_i5.OfertaLaboralExcepcion, _i6.OfertaLaboral>>.value(
                   _FakeEither<_i5.OfertaLaboralExcepcion, _i6.OfertaLaboral>()))
