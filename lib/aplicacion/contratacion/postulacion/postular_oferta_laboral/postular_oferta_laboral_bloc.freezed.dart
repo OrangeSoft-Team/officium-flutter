@@ -374,7 +374,7 @@ class _$PostularOfertaLaboralStateTearOff {
   _PostularOfertaLaboralState call(
       {ComentarioPostulacionOfertaLaboral? comentarioPostulacionOfertaLaboral,
       required bool estaPostulando,
-      required Option<Either<OfertaLaboralExcepcion, Unit>>
+      required Option<Either<ContratacionExcepcion, Unit>>
           postularFalloOExitoOpcion}) {
     return _PostularOfertaLaboralState(
       comentarioPostulacionOfertaLaboral: comentarioPostulacionOfertaLaboral,
@@ -392,7 +392,7 @@ mixin _$PostularOfertaLaboralState {
   ComentarioPostulacionOfertaLaboral? get comentarioPostulacionOfertaLaboral =>
       throw _privateConstructorUsedError;
   bool get estaPostulando => throw _privateConstructorUsedError;
-  Option<Either<OfertaLaboralExcepcion, Unit>> get postularFalloOExitoOpcion =>
+  Option<Either<ContratacionExcepcion, Unit>> get postularFalloOExitoOpcion =>
       throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -408,7 +408,7 @@ abstract class $PostularOfertaLaboralStateCopyWith<$Res> {
   $Res call(
       {ComentarioPostulacionOfertaLaboral? comentarioPostulacionOfertaLaboral,
       bool estaPostulando,
-      Option<Either<OfertaLaboralExcepcion, Unit>> postularFalloOExitoOpcion});
+      Option<Either<ContratacionExcepcion, Unit>> postularFalloOExitoOpcion});
 }
 
 /// @nodoc
@@ -439,7 +439,7 @@ class _$PostularOfertaLaboralStateCopyWithImpl<$Res>
       postularFalloOExitoOpcion: postularFalloOExitoOpcion == freezed
           ? _value.postularFalloOExitoOpcion
           : postularFalloOExitoOpcion // ignore: cast_nullable_to_non_nullable
-              as Option<Either<OfertaLaboralExcepcion, Unit>>,
+              as Option<Either<ContratacionExcepcion, Unit>>,
     ));
   }
 }
@@ -455,7 +455,7 @@ abstract class _$PostularOfertaLaboralStateCopyWith<$Res>
   $Res call(
       {ComentarioPostulacionOfertaLaboral? comentarioPostulacionOfertaLaboral,
       bool estaPostulando,
-      Option<Either<OfertaLaboralExcepcion, Unit>> postularFalloOExitoOpcion});
+      Option<Either<ContratacionExcepcion, Unit>> postularFalloOExitoOpcion});
 }
 
 /// @nodoc
@@ -489,7 +489,7 @@ class __$PostularOfertaLaboralStateCopyWithImpl<$Res>
       postularFalloOExitoOpcion: postularFalloOExitoOpcion == freezed
           ? _value.postularFalloOExitoOpcion
           : postularFalloOExitoOpcion // ignore: cast_nullable_to_non_nullable
-              as Option<Either<OfertaLaboralExcepcion, Unit>>,
+              as Option<Either<ContratacionExcepcion, Unit>>,
     ));
   }
 }
@@ -507,7 +507,7 @@ class _$_PostularOfertaLaboralState implements _PostularOfertaLaboralState {
   @override
   final bool estaPostulando;
   @override
-  final Option<Either<OfertaLaboralExcepcion, Unit>> postularFalloOExitoOpcion;
+  final Option<Either<ContratacionExcepcion, Unit>> postularFalloOExitoOpcion;
 
   @override
   String toString() {
@@ -552,7 +552,7 @@ abstract class _PostularOfertaLaboralState
   const factory _PostularOfertaLaboralState(
       {ComentarioPostulacionOfertaLaboral? comentarioPostulacionOfertaLaboral,
       required bool estaPostulando,
-      required Option<Either<OfertaLaboralExcepcion, Unit>>
+      required Option<Either<ContratacionExcepcion, Unit>>
           postularFalloOExitoOpcion}) = _$_PostularOfertaLaboralState;
 
   @override
@@ -561,7 +561,7 @@ abstract class _PostularOfertaLaboralState
   @override
   bool get estaPostulando => throw _privateConstructorUsedError;
   @override
-  Option<Either<OfertaLaboralExcepcion, Unit>> get postularFalloOExitoOpcion =>
+  Option<Either<ContratacionExcepcion, Unit>> get postularFalloOExitoOpcion =>
       throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)

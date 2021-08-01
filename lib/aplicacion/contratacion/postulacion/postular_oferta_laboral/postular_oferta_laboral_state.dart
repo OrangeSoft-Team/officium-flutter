@@ -5,7 +5,7 @@ class PostularOfertaLaboralState with _$PostularOfertaLaboralState {
   const factory PostularOfertaLaboralState({
     ComentarioPostulacionOfertaLaboral? comentarioPostulacionOfertaLaboral,
     required bool estaPostulando,
-    required Option<Either<OfertaLaboralExcepcion, Unit>>
+    required Option<Either<ContratacionExcepcion, Unit>>
         postularFalloOExitoOpcion,
   }) = _PostularOfertaLaboralState;
 
