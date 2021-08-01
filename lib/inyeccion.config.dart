@@ -18,11 +18,11 @@ import 'aplicacion/autentificacion/estado_autentificacion/estado_autentificacion
 import 'aplicacion/autentificacion/iniciar_sesion/iniciar_sesion_bloc.dart'
     as _i31;
 import 'aplicacion/autentificacion/registro/registro_bloc.dart' as _i32;
-import 'aplicacion/core/oferta_laboral/ver_detalle_oferta_laboral/ver_detalle_oferta_laboral_bloc.dart'
+import 'aplicacion/contratacion/oferta_laboral/ver_detalle_oferta_laboral/ver_detalle_oferta_laboral_bloc.dart'
     as _i39;
-import 'aplicacion/core/oferta_laboral/ver_ofertas_laborales/ver_ofertas_laborales_bloc.dart'
+import 'aplicacion/contratacion/oferta_laboral/ver_ofertas_laborales/ver_ofertas_laborales_bloc.dart'
     as _i40;
-import 'aplicacion/core/postulacion/postular_oferta_laboral/postular_oferta_laboral_bloc.dart'
+import 'aplicacion/contratacion/postulacion/postular_oferta_laboral/postular_oferta_laboral_bloc.dart'
     as _i38;
 import 'dominio/autentificacion/servicios_dominio/fachadas/i_fachada_autentificacion.dart'
     as _i9;

@@ -5,7 +5,7 @@ import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
-import 'package:officium_flutter/aplicacion/core/oferta_laboral/ver_ofertas_laborales/ver_ofertas_laborales_bloc.dart';
+import 'package:officium_flutter/aplicacion/contratacion/oferta_laboral/ver_ofertas_laborales/ver_ofertas_laborales_bloc.dart';
 import 'package:officium_flutter/dominio/contrataciones/entidades/oferta_laboral.dart';
 import 'package:officium_flutter/dominio/contrataciones/excepciones_dominio/oferta_laboral_excepciones.dart';
 import 'package:officium_flutter/dominio/contrataciones/servicios_dominio/repositorio/i_oferta_laboral_repositorio.dart';
