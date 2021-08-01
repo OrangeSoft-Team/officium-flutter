@@ -7,5 +7,5 @@ class VerOfertasLaboralesState with _$VerOfertasLaboralesState {
   const factory VerOfertasLaboralesState.cargaExitosa(
       List<OfertaLaboral> ofertasLaborales) = _CargaExitosa;
   const factory VerOfertasLaboralesState.cargaFallida(
-      OfertaLaboralExcepcion ofertaLaboralExcepcion) = _CargaFallida;
+      ContratacionExcepcion ofertaLaboralExcepcion) = _CargaFallida;
 }

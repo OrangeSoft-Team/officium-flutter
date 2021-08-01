@@ -5,7 +5,7 @@ import 'package:dartz/dartz.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
 import 'package:officium_flutter/dominio/contrataciones/entidades/oferta_laboral.dart';
-import 'package:officium_flutter/dominio/contrataciones/excepciones_dominio/oferta_laboral_excepciones.dart';
+import 'package:officium_flutter/dominio/contrataciones/excepciones_dominio/contrataciones_excepciones.dart';
 import 'package:officium_flutter/dominio/contrataciones/servicios_dominio/repositorio/i_oferta_laboral_repositorio.dart';
 
 part 'ver_ofertas_laborales_event.dart';
@@ -21,7 +21,7 @@ class VerOfertasLaboralesBloc
     this._iOfertaLaboralRepositorio,
   ) : super(const VerOfertasLaboralesState.inicial());
 
-  StreamSubscription<Either<OfertaLaboralExcepcion, List<OfertaLaboral>>>?
+  StreamSubscription<Either<ContratacionExcepcion, List<OfertaLaboral>>>?
       _ofertaLaboralSuscripcion;
 
   @override

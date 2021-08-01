@@ -6,6 +6,6 @@ class VerOfertasLaboralesEvent with _$VerOfertasLaboralesEvent {
       _VerTodasLasOfertasLaboralesEmpezado;
 
   const factory VerOfertasLaboralesEvent.ofertarLaboralesRecibidas(
-      Either<OfertaLaboralExcepcion, List<OfertaLaboral>>
+      Either<ContratacionExcepcion, List<OfertaLaboral>>
           ofertasOExcepciones) = _OfertarLaboralesRecibidas;
 }

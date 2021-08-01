@@ -8,6 +8,6 @@ class VerDetalleOfertaLaboralState with _$VerDetalleOfertaLaboralState {
   const factory VerDetalleOfertaLaboralState.verDetalleOfertaLaboralCargada(
       OfertaLaboral ofertaLaboral) = _VerDetalleOfertaLaboralCargada;
   const factory VerDetalleOfertaLaboralState.verDetalleOfertaLaboralFallida(
-          OfertaLaboralExcepcion ofertaLaboralExcepcion) =
+          ContratacionExcepcion ofertaLaboralExcepcion) =
       _VerDetalleOfertaLaboralFallida;
 }

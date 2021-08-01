@@ -243,7 +243,7 @@ class _$VerDetalleOfertaLaboralStateTearOff {
   }
 
   _VerDetalleOfertaLaboralFallida verDetalleOfertaLaboralFallida(
-      OfertaLaboralExcepcion ofertaLaboralExcepcion) {
+      ContratacionExcepcion ofertaLaboralExcepcion) {
     return _VerDetalleOfertaLaboralFallida(
       ofertaLaboralExcepcion,
     );
@@ -261,7 +261,7 @@ mixin _$VerDetalleOfertaLaboralState {
     required TResult Function() verDetalleOfertaLaboralEnProgreso,
     required TResult Function(OfertaLaboral ofertaLaboral)
         verDetalleOfertaLaboralCargada,
-    required TResult Function(OfertaLaboralExcepcion ofertaLaboralExcepcion)
+    required TResult Function(ContratacionExcepcion ofertaLaboralExcepcion)
         verDetalleOfertaLaboralFallida,
   }) =>
       throw _privateConstructorUsedError;
@@ -271,7 +271,7 @@ mixin _$VerDetalleOfertaLaboralState {
     TResult Function()? verDetalleOfertaLaboralEnProgreso,
     TResult Function(OfertaLaboral ofertaLaboral)?
         verDetalleOfertaLaboralCargada,
-    TResult Function(OfertaLaboralExcepcion ofertaLaboralExcepcion)?
+    TResult Function(ContratacionExcepcion ofertaLaboralExcepcion)?
         verDetalleOfertaLaboralFallida,
     required TResult orElse(),
   }) =>
@@ -361,7 +361,7 @@ class _$_Inicial implements _Inicial {
     required TResult Function() verDetalleOfertaLaboralEnProgreso,
     required TResult Function(OfertaLaboral ofertaLaboral)
         verDetalleOfertaLaboralCargada,
-    required TResult Function(OfertaLaboralExcepcion ofertaLaboralExcepcion)
+    required TResult Function(ContratacionExcepcion ofertaLaboralExcepcion)
         verDetalleOfertaLaboralFallida,
   }) {
     return inicial();
@@ -374,7 +374,7 @@ class _$_Inicial implements _Inicial {
     TResult Function()? verDetalleOfertaLaboralEnProgreso,
     TResult Function(OfertaLaboral ofertaLaboral)?
         verDetalleOfertaLaboralCargada,
-    TResult Function(OfertaLaboralExcepcion ofertaLaboralExcepcion)?
+    TResult Function(ContratacionExcepcion ofertaLaboralExcepcion)?
         verDetalleOfertaLaboralFallida,
     required TResult orElse(),
   }) {
@@ -470,7 +470,7 @@ class _$_VerDetalleOfertaLaboralEnProgreso
     required TResult Function() verDetalleOfertaLaboralEnProgreso,
     required TResult Function(OfertaLaboral ofertaLaboral)
         verDetalleOfertaLaboralCargada,
-    required TResult Function(OfertaLaboralExcepcion ofertaLaboralExcepcion)
+    required TResult Function(ContratacionExcepcion ofertaLaboralExcepcion)
         verDetalleOfertaLaboralFallida,
   }) {
     return verDetalleOfertaLaboralEnProgreso();
@@ -483,7 +483,7 @@ class _$_VerDetalleOfertaLaboralEnProgreso
     TResult Function()? verDetalleOfertaLaboralEnProgreso,
     TResult Function(OfertaLaboral ofertaLaboral)?
         verDetalleOfertaLaboralCargada,
-    TResult Function(OfertaLaboralExcepcion ofertaLaboralExcepcion)?
+    TResult Function(ContratacionExcepcion ofertaLaboralExcepcion)?
         verDetalleOfertaLaboralFallida,
     required TResult orElse(),
   }) {
@@ -616,7 +616,7 @@ class _$_VerDetalleOfertaLaboralCargada
     required TResult Function() verDetalleOfertaLaboralEnProgreso,
     required TResult Function(OfertaLaboral ofertaLaboral)
         verDetalleOfertaLaboralCargada,
-    required TResult Function(OfertaLaboralExcepcion ofertaLaboralExcepcion)
+    required TResult Function(ContratacionExcepcion ofertaLaboralExcepcion)
         verDetalleOfertaLaboralFallida,
   }) {
     return verDetalleOfertaLaboralCargada(ofertaLaboral);
@@ -629,7 +629,7 @@ class _$_VerDetalleOfertaLaboralCargada
     TResult Function()? verDetalleOfertaLaboralEnProgreso,
     TResult Function(OfertaLaboral ofertaLaboral)?
         verDetalleOfertaLaboralCargada,
-    TResult Function(OfertaLaboralExcepcion ofertaLaboralExcepcion)?
+    TResult Function(ContratacionExcepcion ofertaLaboralExcepcion)?
         verDetalleOfertaLaboralFallida,
     required TResult orElse(),
   }) {
@@ -689,9 +689,9 @@ abstract class _$VerDetalleOfertaLaboralFallidaCopyWith<$Res> {
           _VerDetalleOfertaLaboralFallida value,
           $Res Function(_VerDetalleOfertaLaboralFallida) then) =
       __$VerDetalleOfertaLaboralFallidaCopyWithImpl<$Res>;
-  $Res call({OfertaLaboralExcepcion ofertaLaboralExcepcion});
+  $Res call({ContratacionExcepcion ofertaLaboralExcepcion});
 
-  $OfertaLaboralExcepcionCopyWith<$Res> get ofertaLaboralExcepcion;
+  $ContratacionExcepcionCopyWith<$Res> get ofertaLaboralExcepcion;
 }
 
 /// @nodoc
@@ -715,13 +715,13 @@ class __$VerDetalleOfertaLaboralFallidaCopyWithImpl<$Res>
       ofertaLaboralExcepcion == freezed
           ? _value.ofertaLaboralExcepcion
           : ofertaLaboralExcepcion // ignore: cast_nullable_to_non_nullable
-              as OfertaLaboralExcepcion,
+              as ContratacionExcepcion,
     ));
   }
 
   @override
-  $OfertaLaboralExcepcionCopyWith<$Res> get ofertaLaboralExcepcion {
-    return $OfertaLaboralExcepcionCopyWith<$Res>(_value.ofertaLaboralExcepcion,
+  $ContratacionExcepcionCopyWith<$Res> get ofertaLaboralExcepcion {
+    return $ContratacionExcepcionCopyWith<$Res>(_value.ofertaLaboralExcepcion,
         (value) {
       return _then(_value.copyWith(ofertaLaboralExcepcion: value));
     });
@@ -735,7 +735,7 @@ class _$_VerDetalleOfertaLaboralFallida
   const _$_VerDetalleOfertaLaboralFallida(this.ofertaLaboralExcepcion);
 
   @override
-  final OfertaLaboralExcepcion ofertaLaboralExcepcion;
+  final ContratacionExcepcion ofertaLaboralExcepcion;
 
   @override
   String toString() {
@@ -769,7 +769,7 @@ class _$_VerDetalleOfertaLaboralFallida
     required TResult Function() verDetalleOfertaLaboralEnProgreso,
     required TResult Function(OfertaLaboral ofertaLaboral)
         verDetalleOfertaLaboralCargada,
-    required TResult Function(OfertaLaboralExcepcion ofertaLaboralExcepcion)
+    required TResult Function(ContratacionExcepcion ofertaLaboralExcepcion)
         verDetalleOfertaLaboralFallida,
   }) {
     return verDetalleOfertaLaboralFallida(ofertaLaboralExcepcion);
@@ -782,7 +782,7 @@ class _$_VerDetalleOfertaLaboralFallida
     TResult Function()? verDetalleOfertaLaboralEnProgreso,
     TResult Function(OfertaLaboral ofertaLaboral)?
         verDetalleOfertaLaboralCargada,
-    TResult Function(OfertaLaboralExcepcion ofertaLaboralExcepcion)?
+    TResult Function(ContratacionExcepcion ofertaLaboralExcepcion)?
         verDetalleOfertaLaboralFallida,
     required TResult orElse(),
   }) {
@@ -828,10 +828,10 @@ class _$_VerDetalleOfertaLaboralFallida
 abstract class _VerDetalleOfertaLaboralFallida
     implements VerDetalleOfertaLaboralState {
   const factory _VerDetalleOfertaLaboralFallida(
-          OfertaLaboralExcepcion ofertaLaboralExcepcion) =
+          ContratacionExcepcion ofertaLaboralExcepcion) =
       _$_VerDetalleOfertaLaboralFallida;
 
-  OfertaLaboralExcepcion get ofertaLaboralExcepcion =>
+  ContratacionExcepcion get ofertaLaboralExcepcion =>
       throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   _$VerDetalleOfertaLaboralFallidaCopyWith<_VerDetalleOfertaLaboralFallida>

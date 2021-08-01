@@ -21,7 +21,7 @@ class _$VerOfertasLaboralesEventTearOff {
   }
 
   _OfertarLaboralesRecibidas ofertarLaboralesRecibidas(
-      Either<OfertaLaboralExcepcion, List<OfertaLaboral>> ofertasOExcepciones) {
+      Either<ContratacionExcepcion, List<OfertaLaboral>> ofertasOExcepciones) {
     return _OfertarLaboralesRecibidas(
       ofertasOExcepciones,
     );
@@ -37,7 +37,7 @@ mixin _$VerOfertasLaboralesEvent {
   TResult when<TResult extends Object?>({
     required TResult Function() verTodasLasOfertasLaboralesEmpezado,
     required TResult Function(
-            Either<OfertaLaboralExcepcion, List<OfertaLaboral>>
+            Either<ContratacionExcepcion, List<OfertaLaboral>>
                 ofertasOExcepciones)
         ofertarLaboralesRecibidas,
   }) =>
@@ -46,7 +46,7 @@ mixin _$VerOfertasLaboralesEvent {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? verTodasLasOfertasLaboralesEmpezado,
     TResult Function(
-            Either<OfertaLaboralExcepcion, List<OfertaLaboral>>
+            Either<ContratacionExcepcion, List<OfertaLaboral>>
                 ofertasOExcepciones)?
         ofertarLaboralesRecibidas,
     required TResult orElse(),
@@ -135,7 +135,7 @@ class _$_VerTodasLasOfertasLaboralesEmpezado
   TResult when<TResult extends Object?>({
     required TResult Function() verTodasLasOfertasLaboralesEmpezado,
     required TResult Function(
-            Either<OfertaLaboralExcepcion, List<OfertaLaboral>>
+            Either<ContratacionExcepcion, List<OfertaLaboral>>
                 ofertasOExcepciones)
         ofertarLaboralesRecibidas,
   }) {
@@ -147,7 +147,7 @@ class _$_VerTodasLasOfertasLaboralesEmpezado
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? verTodasLasOfertasLaboralesEmpezado,
     TResult Function(
-            Either<OfertaLaboralExcepcion, List<OfertaLaboral>>
+            Either<ContratacionExcepcion, List<OfertaLaboral>>
                 ofertasOExcepciones)?
         ofertarLaboralesRecibidas,
     required TResult orElse(),
@@ -197,8 +197,7 @@ abstract class _$OfertarLaboralesRecibidasCopyWith<$Res> {
           $Res Function(_OfertarLaboralesRecibidas) then) =
       __$OfertarLaboralesRecibidasCopyWithImpl<$Res>;
   $Res call(
-      {Either<OfertaLaboralExcepcion, List<OfertaLaboral>>
-          ofertasOExcepciones});
+      {Either<ContratacionExcepcion, List<OfertaLaboral>> ofertasOExcepciones});
 }
 
 /// @nodoc
@@ -221,7 +220,7 @@ class __$OfertarLaboralesRecibidasCopyWithImpl<$Res>
       ofertasOExcepciones == freezed
           ? _value.ofertasOExcepciones
           : ofertasOExcepciones // ignore: cast_nullable_to_non_nullable
-              as Either<OfertaLaboralExcepcion, List<OfertaLaboral>>,
+              as Either<ContratacionExcepcion, List<OfertaLaboral>>,
     ));
   }
 }
@@ -232,7 +231,7 @@ class _$_OfertarLaboralesRecibidas implements _OfertarLaboralesRecibidas {
   const _$_OfertarLaboralesRecibidas(this.ofertasOExcepciones);
 
   @override
-  final Either<OfertaLaboralExcepcion, List<OfertaLaboral>> ofertasOExcepciones;
+  final Either<ContratacionExcepcion, List<OfertaLaboral>> ofertasOExcepciones;
 
   @override
   String toString() {
@@ -265,7 +264,7 @@ class _$_OfertarLaboralesRecibidas implements _OfertarLaboralesRecibidas {
   TResult when<TResult extends Object?>({
     required TResult Function() verTodasLasOfertasLaboralesEmpezado,
     required TResult Function(
-            Either<OfertaLaboralExcepcion, List<OfertaLaboral>>
+            Either<ContratacionExcepcion, List<OfertaLaboral>>
                 ofertasOExcepciones)
         ofertarLaboralesRecibidas,
   }) {
@@ -277,7 +276,7 @@ class _$_OfertarLaboralesRecibidas implements _OfertarLaboralesRecibidas {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? verTodasLasOfertasLaboralesEmpezado,
     TResult Function(
-            Either<OfertaLaboralExcepcion, List<OfertaLaboral>>
+            Either<ContratacionExcepcion, List<OfertaLaboral>>
                 ofertasOExcepciones)?
         ofertarLaboralesRecibidas,
     required TResult orElse(),
@@ -317,10 +316,10 @@ class _$_OfertarLaboralesRecibidas implements _OfertarLaboralesRecibidas {
 
 abstract class _OfertarLaboralesRecibidas implements VerOfertasLaboralesEvent {
   const factory _OfertarLaboralesRecibidas(
-      Either<OfertaLaboralExcepcion, List<OfertaLaboral>>
+      Either<ContratacionExcepcion, List<OfertaLaboral>>
           ofertasOExcepciones) = _$_OfertarLaboralesRecibidas;
 
-  Either<OfertaLaboralExcepcion, List<OfertaLaboral>> get ofertasOExcepciones =>
+  Either<ContratacionExcepcion, List<OfertaLaboral>> get ofertasOExcepciones =>
       throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   _$OfertarLaboralesRecibidasCopyWith<_OfertarLaboralesRecibidas>
@@ -345,7 +344,7 @@ class _$VerOfertasLaboralesStateTearOff {
     );
   }
 
-  _CargaFallida cargaFallida(OfertaLaboralExcepcion ofertaLaboralExcepcion) {
+  _CargaFallida cargaFallida(ContratacionExcepcion ofertaLaboralExcepcion) {
     return _CargaFallida(
       ofertaLaboralExcepcion,
     );
@@ -363,7 +362,7 @@ mixin _$VerOfertasLaboralesState {
     required TResult Function() cargaEnProgreso,
     required TResult Function(List<OfertaLaboral> ofertasLaborales)
         cargaExitosa,
-    required TResult Function(OfertaLaboralExcepcion ofertaLaboralExcepcion)
+    required TResult Function(ContratacionExcepcion ofertaLaboralExcepcion)
         cargaFallida,
   }) =>
       throw _privateConstructorUsedError;
@@ -372,7 +371,7 @@ mixin _$VerOfertasLaboralesState {
     TResult Function()? inicial,
     TResult Function()? cargaEnProgreso,
     TResult Function(List<OfertaLaboral> ofertasLaborales)? cargaExitosa,
-    TResult Function(OfertaLaboralExcepcion ofertaLaboralExcepcion)?
+    TResult Function(ContratacionExcepcion ofertaLaboralExcepcion)?
         cargaFallida,
     required TResult orElse(),
   }) =>
@@ -455,7 +454,7 @@ class _$_Inicial implements _Inicial {
     required TResult Function() cargaEnProgreso,
     required TResult Function(List<OfertaLaboral> ofertasLaborales)
         cargaExitosa,
-    required TResult Function(OfertaLaboralExcepcion ofertaLaboralExcepcion)
+    required TResult Function(ContratacionExcepcion ofertaLaboralExcepcion)
         cargaFallida,
   }) {
     return inicial();
@@ -467,7 +466,7 @@ class _$_Inicial implements _Inicial {
     TResult Function()? inicial,
     TResult Function()? cargaEnProgreso,
     TResult Function(List<OfertaLaboral> ofertasLaborales)? cargaExitosa,
-    TResult Function(OfertaLaboralExcepcion ofertaLaboralExcepcion)?
+    TResult Function(ContratacionExcepcion ofertaLaboralExcepcion)?
         cargaFallida,
     required TResult orElse(),
   }) {
@@ -552,7 +551,7 @@ class _$_CargaEnProgreso implements _CargaEnProgreso {
     required TResult Function() cargaEnProgreso,
     required TResult Function(List<OfertaLaboral> ofertasLaborales)
         cargaExitosa,
-    required TResult Function(OfertaLaboralExcepcion ofertaLaboralExcepcion)
+    required TResult Function(ContratacionExcepcion ofertaLaboralExcepcion)
         cargaFallida,
   }) {
     return cargaEnProgreso();
@@ -564,7 +563,7 @@ class _$_CargaEnProgreso implements _CargaEnProgreso {
     TResult Function()? inicial,
     TResult Function()? cargaEnProgreso,
     TResult Function(List<OfertaLaboral> ofertasLaborales)? cargaExitosa,
-    TResult Function(OfertaLaboralExcepcion ofertaLaboralExcepcion)?
+    TResult Function(ContratacionExcepcion ofertaLaboralExcepcion)?
         cargaFallida,
     required TResult orElse(),
   }) {
@@ -676,7 +675,7 @@ class _$_CargaExitosa implements _CargaExitosa {
     required TResult Function() cargaEnProgreso,
     required TResult Function(List<OfertaLaboral> ofertasLaborales)
         cargaExitosa,
-    required TResult Function(OfertaLaboralExcepcion ofertaLaboralExcepcion)
+    required TResult Function(ContratacionExcepcion ofertaLaboralExcepcion)
         cargaFallida,
   }) {
     return cargaExitosa(ofertasLaborales);
@@ -688,7 +687,7 @@ class _$_CargaExitosa implements _CargaExitosa {
     TResult Function()? inicial,
     TResult Function()? cargaEnProgreso,
     TResult Function(List<OfertaLaboral> ofertasLaborales)? cargaExitosa,
-    TResult Function(OfertaLaboralExcepcion ofertaLaboralExcepcion)?
+    TResult Function(ContratacionExcepcion ofertaLaboralExcepcion)?
         cargaFallida,
     required TResult orElse(),
   }) {
@@ -741,9 +740,9 @@ abstract class _$CargaFallidaCopyWith<$Res> {
   factory _$CargaFallidaCopyWith(
           _CargaFallida value, $Res Function(_CargaFallida) then) =
       __$CargaFallidaCopyWithImpl<$Res>;
-  $Res call({OfertaLaboralExcepcion ofertaLaboralExcepcion});
+  $Res call({ContratacionExcepcion ofertaLaboralExcepcion});
 
-  $OfertaLaboralExcepcionCopyWith<$Res> get ofertaLaboralExcepcion;
+  $ContratacionExcepcionCopyWith<$Res> get ofertaLaboralExcepcion;
 }
 
 /// @nodoc
@@ -765,13 +764,13 @@ class __$CargaFallidaCopyWithImpl<$Res>
       ofertaLaboralExcepcion == freezed
           ? _value.ofertaLaboralExcepcion
           : ofertaLaboralExcepcion // ignore: cast_nullable_to_non_nullable
-              as OfertaLaboralExcepcion,
+              as ContratacionExcepcion,
     ));
   }
 
   @override
-  $OfertaLaboralExcepcionCopyWith<$Res> get ofertaLaboralExcepcion {
-    return $OfertaLaboralExcepcionCopyWith<$Res>(_value.ofertaLaboralExcepcion,
+  $ContratacionExcepcionCopyWith<$Res> get ofertaLaboralExcepcion {
+    return $ContratacionExcepcionCopyWith<$Res>(_value.ofertaLaboralExcepcion,
         (value) {
       return _then(_value.copyWith(ofertaLaboralExcepcion: value));
     });
@@ -784,7 +783,7 @@ class _$_CargaFallida implements _CargaFallida {
   const _$_CargaFallida(this.ofertaLaboralExcepcion);
 
   @override
-  final OfertaLaboralExcepcion ofertaLaboralExcepcion;
+  final ContratacionExcepcion ofertaLaboralExcepcion;
 
   @override
   String toString() {
@@ -817,7 +816,7 @@ class _$_CargaFallida implements _CargaFallida {
     required TResult Function() cargaEnProgreso,
     required TResult Function(List<OfertaLaboral> ofertasLaborales)
         cargaExitosa,
-    required TResult Function(OfertaLaboralExcepcion ofertaLaboralExcepcion)
+    required TResult Function(ContratacionExcepcion ofertaLaboralExcepcion)
         cargaFallida,
   }) {
     return cargaFallida(ofertaLaboralExcepcion);
@@ -829,7 +828,7 @@ class _$_CargaFallida implements _CargaFallida {
     TResult Function()? inicial,
     TResult Function()? cargaEnProgreso,
     TResult Function(List<OfertaLaboral> ofertasLaborales)? cargaExitosa,
-    TResult Function(OfertaLaboralExcepcion ofertaLaboralExcepcion)?
+    TResult Function(ContratacionExcepcion ofertaLaboralExcepcion)?
         cargaFallida,
     required TResult orElse(),
   }) {
@@ -867,10 +866,10 @@ class _$_CargaFallida implements _CargaFallida {
 }
 
 abstract class _CargaFallida implements VerOfertasLaboralesState {
-  const factory _CargaFallida(OfertaLaboralExcepcion ofertaLaboralExcepcion) =
+  const factory _CargaFallida(ContratacionExcepcion ofertaLaboralExcepcion) =
       _$_CargaFallida;
 
-  OfertaLaboralExcepcion get ofertaLaboralExcepcion =>
+  ContratacionExcepcion get ofertaLaboralExcepcion =>
       throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   _$CargaFallidaCopyWith<_CargaFallida> get copyWith =>
