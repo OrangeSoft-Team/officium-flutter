@@ -7,7 +7,7 @@ import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 import 'package:officium_flutter/aplicacion/contratacion/oferta_laboral/ver_detalle_oferta_laboral/ver_detalle_oferta_laboral_bloc.dart';
 import 'package:officium_flutter/dominio/contrataciones/entidades/oferta_laboral.dart';
-import 'package:officium_flutter/dominio/contrataciones/excepciones_dominio/oferta_laboral_excepciones.dart';
+import 'package:officium_flutter/dominio/contrataciones/excepciones_dominio/contrataciones_excepciones.dart';
 import 'package:officium_flutter/dominio/contrataciones/servicios_dominio/repositorio/i_oferta_laboral_repositorio.dart';
 import 'package:officium_flutter/infraestructura/contrataciones/oferta_laboral/modelos/oferta_laboral_detalle_dto.dart';
 import '../../../infraestructura/data_pruebas/lector_json.dart';
@@ -26,7 +26,7 @@ void main() {
             as Map<String, dynamic>);
     final OfertaLaboral dOfertaLaboralDetalle =
         tOfertasLaboralDetalleDto.toDomain();
-    final Either<OfertaLaboralExcepcion, OfertaLaboral> tOfertaLaboralDetalle =
+    final Either<ContratacionExcepcion, OfertaLaboral> tOfertaLaboralDetalle =
         Right(dOfertaLaboralDetalle);
 
     when(mockOfertaLaboralRepositorio

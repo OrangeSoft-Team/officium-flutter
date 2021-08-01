@@ -7,7 +7,7 @@ import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 import 'package:officium_flutter/dominio/contrataciones/entidades/oferta_laboral.dart';
 import 'package:officium_flutter/dominio/contrataciones/entidades/postulacion_oferta.dart';
-import 'package:officium_flutter/dominio/contrataciones/excepciones_dominio/oferta_laboral_excepciones.dart';
+import 'package:officium_flutter/dominio/contrataciones/excepciones_dominio/contrataciones_excepciones.dart';
 import 'package:officium_flutter/infraestructura/contrataciones/oferta_laboral/fuentes/i_oferta_laboral_fuente.dart';
 import 'package:officium_flutter/infraestructura/contrataciones/oferta_laboral/modelos/oferta_laboral_detalle_dto.dart';
 import 'package:officium_flutter/infraestructura/contrataciones/oferta_laboral/modelos/oferta_laboral_dto.dart';
@@ -28,7 +28,7 @@ void main() {
           json.decode(fixture('ofertaLaboralDtoPrueba.json'))
               as Map<String, dynamic>)
     ];
-    final Either<OfertaLaboralExcepcion, List<OfertaLaboral>>
+    final Either<ContratacionExcepcion, List<OfertaLaboral>>
         aOfertaLaboralList = Right(
             <OfertaLaboral>[...tOfertasLaboralesDto.map((e) => e.toDomain())]);
 
@@ -53,7 +53,7 @@ void main() {
         OfertaLaboralDetalleDTO.fromJson(
             json.decode(fixture('ofertaLaboralDetalleDtoPrueba.json'))
                 as Map<String, dynamic>);
-    final Either<OfertaLaboralExcepcion, OfertaLaboral> tOfertaLaboralDetalle =
+    final Either<ContratacionExcepcion, OfertaLaboral> tOfertaLaboralDetalle =
         Right(tOfertasLaboralesDetalleDto.toDomain());
     final OfertaLaboral aOfertaLaboral = tOfertasLaboralesDetalleDto.toDomain();
     test(': Debe retornar detalle de oferta ante éxito con la fuente remota',
@@ -80,7 +80,7 @@ void main() {
                   as Map<String, dynamic>);
       final PostulacionOfertaLaboral dPostulacionOfertaLaboral =
           tPostulacionOfertaLaboralDto.toDomain();
-      const Either<OfertaLaboralExcepcion, Unit> tPostulacionOfertaLaboral =
+      const Either<ContratacionExcepcion, Unit> tPostulacionOfertaLaboral =
           Right(unit);
       // arrange
       when(mockFuenteDeDatos.aplicarOfertaLaboral(

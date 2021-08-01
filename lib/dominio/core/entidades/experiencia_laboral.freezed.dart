@@ -165,13 +165,14 @@ class __$ExperienciaLaboralCopyWithImpl<$Res>
 /// @nodoc
 
 @Implements(IEntidad)
-class _$_ExperienciaLaboral implements _ExperienciaLaboral {
+class _$_ExperienciaLaboral extends _ExperienciaLaboral {
   const _$_ExperienciaLaboral(
       {required this.uuid,
       required this.cargo,
       required this.nombreEmpresa,
       required this.fechaInicio,
-      this.fechaFin});
+      this.fechaFin})
+      : super._();
 
   @override
   final Identificador uuid;
@@ -223,13 +224,15 @@ class _$_ExperienciaLaboral implements _ExperienciaLaboral {
       __$ExperienciaLaboralCopyWithImpl<_ExperienciaLaboral>(this, _$identity);
 }
 
-abstract class _ExperienciaLaboral implements ExperienciaLaboral, IEntidad {
+abstract class _ExperienciaLaboral extends ExperienciaLaboral
+    implements IEntidad {
   const factory _ExperienciaLaboral(
       {required Identificador uuid,
       required Cargo cargo,
       required NombreEmpresa nombreEmpresa,
       required Fecha fechaInicio,
       Fecha? fechaFin}) = _$_ExperienciaLaboral;
+  const _ExperienciaLaboral._() : super._();
 
   @override
   Identificador get uuid => throw _privateConstructorUsedError;

@@ -1,7 +1,7 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
-part of 'oferta_laboral_excepciones.dart';
+part of 'contrataciones_excepciones.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -13,8 +13,8 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
-class _$OfertaLaboralExcepcionTearOff {
-  const _$OfertaLaboralExcepcionTearOff();
+class _$ContratacionExcepcionTearOff {
+  const _$ContratacionExcepcionTearOff();
 
   _ErrorServidor errorServidor() {
     return const _ErrorServidor();
@@ -26,10 +26,10 @@ class _$OfertaLaboralExcepcionTearOff {
 }
 
 /// @nodoc
-const $OfertaLaboralExcepcion = _$OfertaLaboralExcepcionTearOff();
+const $ContratacionExcepcion = _$ContratacionExcepcionTearOff();
 
 /// @nodoc
-mixin _$OfertaLaboralExcepcion {
+mixin _$ContratacionExcepcion {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() errorServidor,
@@ -59,20 +59,20 @@ mixin _$OfertaLaboralExcepcion {
 }
 
 /// @nodoc
-abstract class $OfertaLaboralExcepcionCopyWith<$Res> {
-  factory $OfertaLaboralExcepcionCopyWith(OfertaLaboralExcepcion value,
-          $Res Function(OfertaLaboralExcepcion) then) =
-      _$OfertaLaboralExcepcionCopyWithImpl<$Res>;
+abstract class $ContratacionExcepcionCopyWith<$Res> {
+  factory $ContratacionExcepcionCopyWith(ContratacionExcepcion value,
+          $Res Function(ContratacionExcepcion) then) =
+      _$ContratacionExcepcionCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$OfertaLaboralExcepcionCopyWithImpl<$Res>
-    implements $OfertaLaboralExcepcionCopyWith<$Res> {
-  _$OfertaLaboralExcepcionCopyWithImpl(this._value, this._then);
+class _$ContratacionExcepcionCopyWithImpl<$Res>
+    implements $ContratacionExcepcionCopyWith<$Res> {
+  _$ContratacionExcepcionCopyWithImpl(this._value, this._then);
 
-  final OfertaLaboralExcepcion _value;
+  final ContratacionExcepcion _value;
   // ignore: unused_field
-  final $Res Function(OfertaLaboralExcepcion) _then;
+  final $Res Function(ContratacionExcepcion) _then;
 }
 
 /// @nodoc
@@ -84,7 +84,7 @@ abstract class _$ErrorServidorCopyWith<$Res> {
 
 /// @nodoc
 class __$ErrorServidorCopyWithImpl<$Res>
-    extends _$OfertaLaboralExcepcionCopyWithImpl<$Res>
+    extends _$ContratacionExcepcionCopyWithImpl<$Res>
     implements _$ErrorServidorCopyWith<$Res> {
   __$ErrorServidorCopyWithImpl(
       _ErrorServidor _value, $Res Function(_ErrorServidor) _then)
@@ -101,7 +101,7 @@ class _$_ErrorServidor implements _ErrorServidor {
 
   @override
   String toString() {
-    return 'OfertaLaboralExcepcion.errorServidor()';
+    return 'ContratacionExcepcion.errorServidor()';
   }
 
   @override
@@ -157,7 +157,7 @@ class _$_ErrorServidor implements _ErrorServidor {
   }
 }
 
-abstract class _ErrorServidor implements OfertaLaboralExcepcion {
+abstract class _ErrorServidor implements ContratacionExcepcion {
   const factory _ErrorServidor() = _$_ErrorServidor;
 }
 
@@ -170,7 +170,7 @@ abstract class _$ErrorPostularOfertaCopyWith<$Res> {
 
 /// @nodoc
 class __$ErrorPostularOfertaCopyWithImpl<$Res>
-    extends _$OfertaLaboralExcepcionCopyWithImpl<$Res>
+    extends _$ContratacionExcepcionCopyWithImpl<$Res>
     implements _$ErrorPostularOfertaCopyWith<$Res> {
   __$ErrorPostularOfertaCopyWithImpl(
       _ErrorPostularOferta _value, $Res Function(_ErrorPostularOferta) _then)
@@ -187,7 +187,7 @@ class _$_ErrorPostularOferta implements _ErrorPostularOferta {
 
   @override
   String toString() {
-    return 'OfertaLaboralExcepcion.errorPostularOferta()';
+    return 'ContratacionExcepcion.errorPostularOferta()';
   }
 
   @override
@@ -243,6 +243,6 @@ class _$_ErrorPostularOferta implements _ErrorPostularOferta {
   }
 }
 
-abstract class _ErrorPostularOferta implements OfertaLaboralExcepcion {
+abstract class _ErrorPostularOferta implements ContratacionExcepcion {
   const factory _ErrorPostularOferta() = _$_ErrorPostularOferta;
 }

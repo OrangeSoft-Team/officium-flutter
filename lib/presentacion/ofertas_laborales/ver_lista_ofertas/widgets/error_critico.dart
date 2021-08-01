@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:officium_flutter/dominio/contrataciones/excepciones_dominio/oferta_laboral_excepciones.dart';
+import 'package:officium_flutter/dominio/contrataciones/excepciones_dominio/contrataciones_excepciones.dart';
 
 class ErrorCriticoListaOfertas extends StatelessWidget {
-  final OfertaLaboralExcepcion failure;
+  final ContratacionExcepcion failure;
 
   const ErrorCriticoListaOfertas({
     Key? key,

@@ -90,6 +90,10 @@ abstract class ValorErroneo<T> with _$ValorErroneo<T> {
     required T valorErroneo,
     required List<String> estadosValidos,
   }) = EstadoOfertaInvalido<T>;
+  const factory ValorErroneo.estadoPostulacionInvalido({
+    required T valorErroneo,
+    required List<String> estadosValidos,
+  }) = EstadoPostulacionInvalido<T>;
 
   const factory ValorErroneo.estadoCursoInvalido({
     required T valorErroneo,

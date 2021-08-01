@@ -3,44 +3,44 @@ import 'package:officium_flutter/dominio/comun/value_objects/identificador.dart'
 import 'package:officium_flutter/dominio/contrataciones/entidades/entrevista.dart';
 import 'package:officium_flutter/dominio/contrataciones/entidades/oferta_laboral.dart';
 import 'package:officium_flutter/dominio/contrataciones/entidades/postulacion_oferta.dart';
-import 'package:officium_flutter/dominio/contrataciones/excepciones_dominio/oferta_laboral_excepciones.dart';
+import 'package:officium_flutter/dominio/contrataciones/excepciones_dominio/contrataciones_excepciones.dart';
 import 'package:officium_flutter/dominio/contrataciones/value_objects/postulacion_oferta_laboral/comentario_postulacion.dart';
 
 abstract class IContratacionesRepositorio {
   //Ofertas Laborales
-  Stream<Either<OfertaLaboralExcepcion, List<OfertaLaboral>>>
+  Stream<Either<ContratacionExcepcion, List<OfertaLaboral>>>
       verTodasLasOfertasLaborales();
 
-  Future<Either<OfertaLaboralExcepcion, OfertaLaboral>> verDetalleOfertaLaboral(
+  Future<Either<ContratacionExcepcion, OfertaLaboral>> verDetalleOfertaLaboral(
       Identificador uuidOferta);
 
   //Trabajos
-  Stream<Either<OfertaLaboralExcepcion, List<OfertaLaboral>>>
+  Stream<Either<ContratacionExcepcion, List<OfertaLaboral>>>
       verTodosLosTrabajosEmpleado(Identificador uuidEmpleado);
 
-  Future<Either<OfertaLaboralExcepcion, Unit>> renunciarTrabajo(
+  Future<Either<ContratacionExcepcion, Unit>> renunciarTrabajo(
       Identificador uuidTrabajo);
 
   //Postulaciones
-  Future<Either<OfertaLaboralExcepcion, Unit>> aplicarOfertaLaboral(
+  Future<Either<ContratacionExcepcion, Unit>> aplicarOfertaLaboral(
       Identificador uuidOferta,
       Identificador uuidEmpleado,
       Identificador uuidEmpresa,
       ComentarioPostulacionOfertaLaboral? comentarioPostulacionOfertaLaboral);
 
-  Future<Either<OfertaLaboralExcepcion, Unit>> cancelarPostulacionOfertaLaboral(
+  Future<Either<ContratacionExcepcion, Unit>> cancelarPostulacionOfertaLaboral(
       Identificador uuidPostulacion);
 
-  Stream<Either<OfertaLaboralExcepcion, List<PostulacionOfertaLaboral>>>
+  Stream<Either<ContratacionExcepcion, List<PostulacionOfertaLaboral>>>
       verTodasLasPostulacionesOfertaLaboral(Identificador uuidEmpleado);
 
   //Entrevista
-  Future<Either<OfertaLaboralExcepcion, Unit>> cancelarPropuestaEntrevista(
+  Future<Either<ContratacionExcepcion, Unit>> cancelarPropuestaEntrevista(
       Identificador uuidEntrevista);
 
-  Future<Either<OfertaLaboralExcepcion, Unit>> confirmarPropuestaEntrevista(
+  Future<Either<ContratacionExcepcion, Unit>> confirmarPropuestaEntrevista(
       Identificador uuidEntrevista);
 
-  Future<Either<OfertaLaboralExcepcion, Entrevista>> consultarDetalleEntrevista(
+  Future<Either<ContratacionExcepcion, Entrevista>> consultarDetalleEntrevista(
       Identificador uuidEntrevista);
 }

@@ -21,7 +21,7 @@ class _$PostulacionOfertaLaboralTearOff {
       required Identificador uuidEmpleado,
       required Identificador uuidEmpresa,
       ComentarioPostulacionOfertaLaboral? comentarioPostulacionOfertaLaboral,
-      estadoOfertalaboral? estado}) {
+      EstadoPostulacionOfertaLaboral? estado}) {
     return _PostulacionOfertaLaboral(
       uuidOfertaLaboral: uuidOfertaLaboral,
       uuidEmpleado: uuidEmpleado,
@@ -42,7 +42,8 @@ mixin _$PostulacionOfertaLaboral {
   Identificador get uuidEmpresa => throw _privateConstructorUsedError;
   ComentarioPostulacionOfertaLaboral? get comentarioPostulacionOfertaLaboral =>
       throw _privateConstructorUsedError;
-  estadoOfertalaboral? get estado => throw _privateConstructorUsedError;
+  EstadoPostulacionOfertaLaboral? get estado =>
+      throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $PostulacionOfertaLaboralCopyWith<PostulacionOfertaLaboral> get copyWith =>
@@ -59,7 +60,7 @@ abstract class $PostulacionOfertaLaboralCopyWith<$Res> {
       Identificador uuidEmpleado,
       Identificador uuidEmpresa,
       ComentarioPostulacionOfertaLaboral? comentarioPostulacionOfertaLaboral,
-      estadoOfertalaboral? estado});
+      EstadoPostulacionOfertaLaboral? estado});
 }
 
 /// @nodoc
@@ -100,7 +101,7 @@ class _$PostulacionOfertaLaboralCopyWithImpl<$Res>
       estado: estado == freezed
           ? _value.estado
           : estado // ignore: cast_nullable_to_non_nullable
-              as estadoOfertalaboral?,
+              as EstadoPostulacionOfertaLaboral?,
     ));
   }
 }
@@ -117,7 +118,7 @@ abstract class _$PostulacionOfertaLaboralCopyWith<$Res>
       Identificador uuidEmpleado,
       Identificador uuidEmpresa,
       ComentarioPostulacionOfertaLaboral? comentarioPostulacionOfertaLaboral,
-      estadoOfertalaboral? estado});
+      EstadoPostulacionOfertaLaboral? estado});
 }
 
 /// @nodoc
@@ -161,7 +162,7 @@ class __$PostulacionOfertaLaboralCopyWithImpl<$Res>
       estado: estado == freezed
           ? _value.estado
           : estado // ignore: cast_nullable_to_non_nullable
-              as estadoOfertalaboral?,
+              as EstadoPostulacionOfertaLaboral?,
     ));
   }
 }
@@ -185,7 +186,7 @@ class _$_PostulacionOfertaLaboral implements _PostulacionOfertaLaboral {
   @override
   final ComentarioPostulacionOfertaLaboral? comentarioPostulacionOfertaLaboral;
   @override
-  final estadoOfertalaboral? estado;
+  final EstadoPostulacionOfertaLaboral? estado;
 
   @override
   String toString() {
@@ -236,7 +237,7 @@ abstract class _PostulacionOfertaLaboral implements PostulacionOfertaLaboral {
       required Identificador uuidEmpleado,
       required Identificador uuidEmpresa,
       ComentarioPostulacionOfertaLaboral? comentarioPostulacionOfertaLaboral,
-      estadoOfertalaboral? estado}) = _$_PostulacionOfertaLaboral;
+      EstadoPostulacionOfertaLaboral? estado}) = _$_PostulacionOfertaLaboral;
 
   @override
   Identificador get uuidOfertaLaboral => throw _privateConstructorUsedError;
@@ -248,7 +249,8 @@ abstract class _PostulacionOfertaLaboral implements PostulacionOfertaLaboral {
   ComentarioPostulacionOfertaLaboral? get comentarioPostulacionOfertaLaboral =>
       throw _privateConstructorUsedError;
   @override
-  estadoOfertalaboral? get estado => throw _privateConstructorUsedError;
+  EstadoPostulacionOfertaLaboral? get estado =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$PostulacionOfertaLaboralCopyWith<_PostulacionOfertaLaboral> get copyWith =>

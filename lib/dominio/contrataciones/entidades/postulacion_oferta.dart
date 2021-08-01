@@ -11,6 +11,6 @@ abstract class PostulacionOfertaLaboral with _$PostulacionOfertaLaboral {
     required Identificador uuidEmpleado,
     required Identificador uuidEmpresa,
     ComentarioPostulacionOfertaLaboral? comentarioPostulacionOfertaLaboral,
-    estadoOfertalaboral? estado,
+    EstadoPostulacionOfertaLaboral? estado,
   }) = _PostulacionOfertaLaboral;
 }
