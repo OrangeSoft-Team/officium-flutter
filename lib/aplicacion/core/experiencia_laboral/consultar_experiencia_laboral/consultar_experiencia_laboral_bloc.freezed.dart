@@ -16,8 +16,19 @@ final _privateConstructorUsedError = UnsupportedError(
 class _$ConsultarExperienciaLaboralEventTearOff {
   const _$ConsultarExperienciaLaboralEventTearOff();
 
-  _Started started() {
-    return const _Started();
+  _VerTodasLasExperienciasLaboralesEmpezado
+      verTodasLasExperienciasLaboralesEmpezado(Identificador uuidEmpleado) {
+    return _VerTodasLasExperienciasLaboralesEmpezado(
+      uuidEmpleado,
+    );
+  }
+
+  _ExperienciasLaboralesRecibidas experienciasLaboralesRecibidas(
+      Either<EmpleadoExcepcion, List<ExperienciaLaboral>>
+          postulacionesOExcepcion) {
+    return _ExperienciasLaboralesRecibidas(
+      postulacionesOExcepcion,
+    );
   }
 }
 
@@ -29,23 +40,39 @@ const $ConsultarExperienciaLaboralEvent =
 mixin _$ConsultarExperienciaLaboralEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() started,
+    required TResult Function(Identificador uuidEmpleado)
+        verTodasLasExperienciasLaboralesEmpezado,
+    required TResult Function(
+            Either<EmpleadoExcepcion, List<ExperienciaLaboral>>
+                postulacionesOExcepcion)
+        experienciasLaboralesRecibidas,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
+    TResult Function(Identificador uuidEmpleado)?
+        verTodasLasExperienciasLaboralesEmpezado,
+    TResult Function(
+            Either<EmpleadoExcepcion, List<ExperienciaLaboral>>
+                postulacionesOExcepcion)?
+        experienciasLaboralesRecibidas,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
+    required TResult Function(_VerTodasLasExperienciasLaboralesEmpezado value)
+        verTodasLasExperienciasLaboralesEmpezado,
+    required TResult Function(_ExperienciasLaboralesRecibidas value)
+        experienciasLaboralesRecibidas,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
+    TResult Function(_VerTodasLasExperienciasLaboralesEmpezado value)?
+        verTodasLasExperienciasLaboralesEmpezado,
+    TResult Function(_ExperienciasLaboralesRecibidas value)?
+        experienciasLaboralesRecibidas,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -70,56 +97,101 @@ class _$ConsultarExperienciaLaboralEventCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$StartedCopyWith<$Res> {
-  factory _$StartedCopyWith(_Started value, $Res Function(_Started) then) =
-      __$StartedCopyWithImpl<$Res>;
+abstract class _$VerTodasLasExperienciasLaboralesEmpezadoCopyWith<$Res> {
+  factory _$VerTodasLasExperienciasLaboralesEmpezadoCopyWith(
+          _VerTodasLasExperienciasLaboralesEmpezado value,
+          $Res Function(_VerTodasLasExperienciasLaboralesEmpezado) then) =
+      __$VerTodasLasExperienciasLaboralesEmpezadoCopyWithImpl<$Res>;
+  $Res call({Identificador uuidEmpleado});
 }
 
 /// @nodoc
-class __$StartedCopyWithImpl<$Res>
+class __$VerTodasLasExperienciasLaboralesEmpezadoCopyWithImpl<$Res>
     extends _$ConsultarExperienciaLaboralEventCopyWithImpl<$Res>
-    implements _$StartedCopyWith<$Res> {
-  __$StartedCopyWithImpl(_Started _value, $Res Function(_Started) _then)
-      : super(_value, (v) => _then(v as _Started));
+    implements _$VerTodasLasExperienciasLaboralesEmpezadoCopyWith<$Res> {
+  __$VerTodasLasExperienciasLaboralesEmpezadoCopyWithImpl(
+      _VerTodasLasExperienciasLaboralesEmpezado _value,
+      $Res Function(_VerTodasLasExperienciasLaboralesEmpezado) _then)
+      : super(_value,
+            (v) => _then(v as _VerTodasLasExperienciasLaboralesEmpezado));
 
   @override
-  _Started get _value => super._value as _Started;
+  _VerTodasLasExperienciasLaboralesEmpezado get _value =>
+      super._value as _VerTodasLasExperienciasLaboralesEmpezado;
+
+  @override
+  $Res call({
+    Object? uuidEmpleado = freezed,
+  }) {
+    return _then(_VerTodasLasExperienciasLaboralesEmpezado(
+      uuidEmpleado == freezed
+          ? _value.uuidEmpleado
+          : uuidEmpleado // ignore: cast_nullable_to_non_nullable
+              as Identificador,
+    ));
+  }
 }
 
 /// @nodoc
 
-class _$_Started implements _Started {
-  const _$_Started();
+class _$_VerTodasLasExperienciasLaboralesEmpezado
+    implements _VerTodasLasExperienciasLaboralesEmpezado {
+  const _$_VerTodasLasExperienciasLaboralesEmpezado(this.uuidEmpleado);
+
+  @override
+  final Identificador uuidEmpleado;
 
   @override
   String toString() {
-    return 'ConsultarExperienciaLaboralEvent.started()';
+    return 'ConsultarExperienciaLaboralEvent.verTodasLasExperienciasLaboralesEmpezado(uuidEmpleado: $uuidEmpleado)';
   }
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is _Started);
+    return identical(this, other) ||
+        (other is _VerTodasLasExperienciasLaboralesEmpezado &&
+            (identical(other.uuidEmpleado, uuidEmpleado) ||
+                const DeepCollectionEquality()
+                    .equals(other.uuidEmpleado, uuidEmpleado)));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(uuidEmpleado);
+
+  @JsonKey(ignore: true)
+  @override
+  _$VerTodasLasExperienciasLaboralesEmpezadoCopyWith<
+          _VerTodasLasExperienciasLaboralesEmpezado>
+      get copyWith => __$VerTodasLasExperienciasLaboralesEmpezadoCopyWithImpl<
+          _VerTodasLasExperienciasLaboralesEmpezado>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() started,
+    required TResult Function(Identificador uuidEmpleado)
+        verTodasLasExperienciasLaboralesEmpezado,
+    required TResult Function(
+            Either<EmpleadoExcepcion, List<ExperienciaLaboral>>
+                postulacionesOExcepcion)
+        experienciasLaboralesRecibidas,
   }) {
-    return started();
+    return verTodasLasExperienciasLaboralesEmpezado(uuidEmpleado);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
+    TResult Function(Identificador uuidEmpleado)?
+        verTodasLasExperienciasLaboralesEmpezado,
+    TResult Function(
+            Either<EmpleadoExcepcion, List<ExperienciaLaboral>>
+                postulacionesOExcepcion)?
+        experienciasLaboralesRecibidas,
     required TResult orElse(),
   }) {
-    if (started != null) {
-      return started();
+    if (verTodasLasExperienciasLaboralesEmpezado != null) {
+      return verTodasLasExperienciasLaboralesEmpezado(uuidEmpleado);
     }
     return orElse();
   }
@@ -127,34 +199,207 @@ class _$_Started implements _Started {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
+    required TResult Function(_VerTodasLasExperienciasLaboralesEmpezado value)
+        verTodasLasExperienciasLaboralesEmpezado,
+    required TResult Function(_ExperienciasLaboralesRecibidas value)
+        experienciasLaboralesRecibidas,
   }) {
-    return started(this);
+    return verTodasLasExperienciasLaboralesEmpezado(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
+    TResult Function(_VerTodasLasExperienciasLaboralesEmpezado value)?
+        verTodasLasExperienciasLaboralesEmpezado,
+    TResult Function(_ExperienciasLaboralesRecibidas value)?
+        experienciasLaboralesRecibidas,
     required TResult orElse(),
   }) {
-    if (started != null) {
-      return started(this);
+    if (verTodasLasExperienciasLaboralesEmpezado != null) {
+      return verTodasLasExperienciasLaboralesEmpezado(this);
     }
     return orElse();
   }
 }
 
-abstract class _Started implements ConsultarExperienciaLaboralEvent {
-  const factory _Started() = _$_Started;
+abstract class _VerTodasLasExperienciasLaboralesEmpezado
+    implements ConsultarExperienciaLaboralEvent {
+  const factory _VerTodasLasExperienciasLaboralesEmpezado(
+      Identificador uuidEmpleado) = _$_VerTodasLasExperienciasLaboralesEmpezado;
+
+  Identificador get uuidEmpleado => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  _$VerTodasLasExperienciasLaboralesEmpezadoCopyWith<
+          _VerTodasLasExperienciasLaboralesEmpezado>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$ExperienciasLaboralesRecibidasCopyWith<$Res> {
+  factory _$ExperienciasLaboralesRecibidasCopyWith(
+          _ExperienciasLaboralesRecibidas value,
+          $Res Function(_ExperienciasLaboralesRecibidas) then) =
+      __$ExperienciasLaboralesRecibidasCopyWithImpl<$Res>;
+  $Res call(
+      {Either<EmpleadoExcepcion, List<ExperienciaLaboral>>
+          postulacionesOExcepcion});
+}
+
+/// @nodoc
+class __$ExperienciasLaboralesRecibidasCopyWithImpl<$Res>
+    extends _$ConsultarExperienciaLaboralEventCopyWithImpl<$Res>
+    implements _$ExperienciasLaboralesRecibidasCopyWith<$Res> {
+  __$ExperienciasLaboralesRecibidasCopyWithImpl(
+      _ExperienciasLaboralesRecibidas _value,
+      $Res Function(_ExperienciasLaboralesRecibidas) _then)
+      : super(_value, (v) => _then(v as _ExperienciasLaboralesRecibidas));
+
+  @override
+  _ExperienciasLaboralesRecibidas get _value =>
+      super._value as _ExperienciasLaboralesRecibidas;
+
+  @override
+  $Res call({
+    Object? postulacionesOExcepcion = freezed,
+  }) {
+    return _then(_ExperienciasLaboralesRecibidas(
+      postulacionesOExcepcion == freezed
+          ? _value.postulacionesOExcepcion
+          : postulacionesOExcepcion // ignore: cast_nullable_to_non_nullable
+              as Either<EmpleadoExcepcion, List<ExperienciaLaboral>>,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_ExperienciasLaboralesRecibidas
+    implements _ExperienciasLaboralesRecibidas {
+  const _$_ExperienciasLaboralesRecibidas(this.postulacionesOExcepcion);
+
+  @override
+  final Either<EmpleadoExcepcion, List<ExperienciaLaboral>>
+      postulacionesOExcepcion;
+
+  @override
+  String toString() {
+    return 'ConsultarExperienciaLaboralEvent.experienciasLaboralesRecibidas(postulacionesOExcepcion: $postulacionesOExcepcion)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _ExperienciasLaboralesRecibidas &&
+            (identical(
+                    other.postulacionesOExcepcion, postulacionesOExcepcion) ||
+                const DeepCollectionEquality().equals(
+                    other.postulacionesOExcepcion, postulacionesOExcepcion)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(postulacionesOExcepcion);
+
+  @JsonKey(ignore: true)
+  @override
+  _$ExperienciasLaboralesRecibidasCopyWith<_ExperienciasLaboralesRecibidas>
+      get copyWith => __$ExperienciasLaboralesRecibidasCopyWithImpl<
+          _ExperienciasLaboralesRecibidas>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(Identificador uuidEmpleado)
+        verTodasLasExperienciasLaboralesEmpezado,
+    required TResult Function(
+            Either<EmpleadoExcepcion, List<ExperienciaLaboral>>
+                postulacionesOExcepcion)
+        experienciasLaboralesRecibidas,
+  }) {
+    return experienciasLaboralesRecibidas(postulacionesOExcepcion);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(Identificador uuidEmpleado)?
+        verTodasLasExperienciasLaboralesEmpezado,
+    TResult Function(
+            Either<EmpleadoExcepcion, List<ExperienciaLaboral>>
+                postulacionesOExcepcion)?
+        experienciasLaboralesRecibidas,
+    required TResult orElse(),
+  }) {
+    if (experienciasLaboralesRecibidas != null) {
+      return experienciasLaboralesRecibidas(postulacionesOExcepcion);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_VerTodasLasExperienciasLaboralesEmpezado value)
+        verTodasLasExperienciasLaboralesEmpezado,
+    required TResult Function(_ExperienciasLaboralesRecibidas value)
+        experienciasLaboralesRecibidas,
+  }) {
+    return experienciasLaboralesRecibidas(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_VerTodasLasExperienciasLaboralesEmpezado value)?
+        verTodasLasExperienciasLaboralesEmpezado,
+    TResult Function(_ExperienciasLaboralesRecibidas value)?
+        experienciasLaboralesRecibidas,
+    required TResult orElse(),
+  }) {
+    if (experienciasLaboralesRecibidas != null) {
+      return experienciasLaboralesRecibidas(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _ExperienciasLaboralesRecibidas
+    implements ConsultarExperienciaLaboralEvent {
+  const factory _ExperienciasLaboralesRecibidas(
+      Either<EmpleadoExcepcion, List<ExperienciaLaboral>>
+          postulacionesOExcepcion) = _$_ExperienciasLaboralesRecibidas;
+
+  Either<EmpleadoExcepcion, List<ExperienciaLaboral>>
+      get postulacionesOExcepcion => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  _$ExperienciasLaboralesRecibidasCopyWith<_ExperienciasLaboralesRecibidas>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 class _$ConsultarExperienciaLaboralStateTearOff {
   const _$ConsultarExperienciaLaboralStateTearOff();
 
-  _Initial initial() {
-    return const _Initial();
+  _Inicial inicial() {
+    return const _Inicial();
+  }
+
+  _CargaEnProgreso cargaEnProgreso() {
+    return const _CargaEnProgreso();
+  }
+
+  _CargaExitosa cargaExitosa(List<ExperienciaLaboral> postulaciones) {
+    return _CargaExitosa(
+      postulaciones,
+    );
+  }
+
+  _CargaFallida cargaFallida(EmpleadoExcepcion postulacionFacilladaExcepcion) {
+    return _CargaFallida(
+      postulacionFacilladaExcepcion,
+    );
   }
 }
 
@@ -166,23 +411,38 @@ const $ConsultarExperienciaLaboralState =
 mixin _$ConsultarExperienciaLaboralState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() initial,
+    required TResult Function() inicial,
+    required TResult Function() cargaEnProgreso,
+    required TResult Function(List<ExperienciaLaboral> postulaciones)
+        cargaExitosa,
+    required TResult Function(EmpleadoExcepcion postulacionFacilladaExcepcion)
+        cargaFallida,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
+    TResult Function()? inicial,
+    TResult Function()? cargaEnProgreso,
+    TResult Function(List<ExperienciaLaboral> postulaciones)? cargaExitosa,
+    TResult Function(EmpleadoExcepcion postulacionFacilladaExcepcion)?
+        cargaFallida,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
+    required TResult Function(_Inicial value) inicial,
+    required TResult Function(_CargaEnProgreso value) cargaEnProgreso,
+    required TResult Function(_CargaExitosa value) cargaExitosa,
+    required TResult Function(_CargaFallida value) cargaFallida,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
+    TResult Function(_Inicial value)? inicial,
+    TResult Function(_CargaEnProgreso value)? cargaEnProgreso,
+    TResult Function(_CargaExitosa value)? cargaExitosa,
+    TResult Function(_CargaFallida value)? cargaFallida,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -207,35 +467,35 @@ class _$ConsultarExperienciaLaboralStateCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$InitialCopyWith<$Res> {
-  factory _$InitialCopyWith(_Initial value, $Res Function(_Initial) then) =
-      __$InitialCopyWithImpl<$Res>;
+abstract class _$InicialCopyWith<$Res> {
+  factory _$InicialCopyWith(_Inicial value, $Res Function(_Inicial) then) =
+      __$InicialCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$InitialCopyWithImpl<$Res>
+class __$InicialCopyWithImpl<$Res>
     extends _$ConsultarExperienciaLaboralStateCopyWithImpl<$Res>
-    implements _$InitialCopyWith<$Res> {
-  __$InitialCopyWithImpl(_Initial _value, $Res Function(_Initial) _then)
-      : super(_value, (v) => _then(v as _Initial));
+    implements _$InicialCopyWith<$Res> {
+  __$InicialCopyWithImpl(_Inicial _value, $Res Function(_Inicial) _then)
+      : super(_value, (v) => _then(v as _Inicial));
 
   @override
-  _Initial get _value => super._value as _Initial;
+  _Inicial get _value => super._value as _Inicial;
 }
 
 /// @nodoc
 
-class _$_Initial implements _Initial {
-  const _$_Initial();
+class _$_Inicial implements _Inicial {
+  const _$_Inicial();
 
   @override
   String toString() {
-    return 'ConsultarExperienciaLaboralState.initial()';
+    return 'ConsultarExperienciaLaboralState.inicial()';
   }
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is _Initial);
+    return identical(this, other) || (other is _Inicial);
   }
 
   @override
@@ -244,19 +504,28 @@ class _$_Initial implements _Initial {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() initial,
+    required TResult Function() inicial,
+    required TResult Function() cargaEnProgreso,
+    required TResult Function(List<ExperienciaLaboral> postulaciones)
+        cargaExitosa,
+    required TResult Function(EmpleadoExcepcion postulacionFacilladaExcepcion)
+        cargaFallida,
   }) {
-    return initial();
+    return inicial();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
+    TResult Function()? inicial,
+    TResult Function()? cargaEnProgreso,
+    TResult Function(List<ExperienciaLaboral> postulaciones)? cargaExitosa,
+    TResult Function(EmpleadoExcepcion postulacionFacilladaExcepcion)?
+        cargaFallida,
     required TResult orElse(),
   }) {
-    if (initial != null) {
-      return initial();
+    if (inicial != null) {
+      return inicial();
     }
     return orElse();
   }
@@ -264,24 +533,400 @@ class _$_Initial implements _Initial {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
+    required TResult Function(_Inicial value) inicial,
+    required TResult Function(_CargaEnProgreso value) cargaEnProgreso,
+    required TResult Function(_CargaExitosa value) cargaExitosa,
+    required TResult Function(_CargaFallida value) cargaFallida,
   }) {
-    return initial(this);
+    return inicial(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
+    TResult Function(_Inicial value)? inicial,
+    TResult Function(_CargaEnProgreso value)? cargaEnProgreso,
+    TResult Function(_CargaExitosa value)? cargaExitosa,
+    TResult Function(_CargaFallida value)? cargaFallida,
     required TResult orElse(),
   }) {
-    if (initial != null) {
-      return initial(this);
+    if (inicial != null) {
+      return inicial(this);
     }
     return orElse();
   }
 }
 
-abstract class _Initial implements ConsultarExperienciaLaboralState {
-  const factory _Initial() = _$_Initial;
+abstract class _Inicial implements ConsultarExperienciaLaboralState {
+  const factory _Inicial() = _$_Inicial;
+}
+
+/// @nodoc
+abstract class _$CargaEnProgresoCopyWith<$Res> {
+  factory _$CargaEnProgresoCopyWith(
+          _CargaEnProgreso value, $Res Function(_CargaEnProgreso) then) =
+      __$CargaEnProgresoCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$CargaEnProgresoCopyWithImpl<$Res>
+    extends _$ConsultarExperienciaLaboralStateCopyWithImpl<$Res>
+    implements _$CargaEnProgresoCopyWith<$Res> {
+  __$CargaEnProgresoCopyWithImpl(
+      _CargaEnProgreso _value, $Res Function(_CargaEnProgreso) _then)
+      : super(_value, (v) => _then(v as _CargaEnProgreso));
+
+  @override
+  _CargaEnProgreso get _value => super._value as _CargaEnProgreso;
+}
+
+/// @nodoc
+
+class _$_CargaEnProgreso implements _CargaEnProgreso {
+  const _$_CargaEnProgreso();
+
+  @override
+  String toString() {
+    return 'ConsultarExperienciaLaboralState.cargaEnProgreso()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) || (other is _CargaEnProgreso);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() inicial,
+    required TResult Function() cargaEnProgreso,
+    required TResult Function(List<ExperienciaLaboral> postulaciones)
+        cargaExitosa,
+    required TResult Function(EmpleadoExcepcion postulacionFacilladaExcepcion)
+        cargaFallida,
+  }) {
+    return cargaEnProgreso();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? inicial,
+    TResult Function()? cargaEnProgreso,
+    TResult Function(List<ExperienciaLaboral> postulaciones)? cargaExitosa,
+    TResult Function(EmpleadoExcepcion postulacionFacilladaExcepcion)?
+        cargaFallida,
+    required TResult orElse(),
+  }) {
+    if (cargaEnProgreso != null) {
+      return cargaEnProgreso();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Inicial value) inicial,
+    required TResult Function(_CargaEnProgreso value) cargaEnProgreso,
+    required TResult Function(_CargaExitosa value) cargaExitosa,
+    required TResult Function(_CargaFallida value) cargaFallida,
+  }) {
+    return cargaEnProgreso(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Inicial value)? inicial,
+    TResult Function(_CargaEnProgreso value)? cargaEnProgreso,
+    TResult Function(_CargaExitosa value)? cargaExitosa,
+    TResult Function(_CargaFallida value)? cargaFallida,
+    required TResult orElse(),
+  }) {
+    if (cargaEnProgreso != null) {
+      return cargaEnProgreso(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _CargaEnProgreso implements ConsultarExperienciaLaboralState {
+  const factory _CargaEnProgreso() = _$_CargaEnProgreso;
+}
+
+/// @nodoc
+abstract class _$CargaExitosaCopyWith<$Res> {
+  factory _$CargaExitosaCopyWith(
+          _CargaExitosa value, $Res Function(_CargaExitosa) then) =
+      __$CargaExitosaCopyWithImpl<$Res>;
+  $Res call({List<ExperienciaLaboral> postulaciones});
+}
+
+/// @nodoc
+class __$CargaExitosaCopyWithImpl<$Res>
+    extends _$ConsultarExperienciaLaboralStateCopyWithImpl<$Res>
+    implements _$CargaExitosaCopyWith<$Res> {
+  __$CargaExitosaCopyWithImpl(
+      _CargaExitosa _value, $Res Function(_CargaExitosa) _then)
+      : super(_value, (v) => _then(v as _CargaExitosa));
+
+  @override
+  _CargaExitosa get _value => super._value as _CargaExitosa;
+
+  @override
+  $Res call({
+    Object? postulaciones = freezed,
+  }) {
+    return _then(_CargaExitosa(
+      postulaciones == freezed
+          ? _value.postulaciones
+          : postulaciones // ignore: cast_nullable_to_non_nullable
+              as List<ExperienciaLaboral>,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_CargaExitosa implements _CargaExitosa {
+  const _$_CargaExitosa(this.postulaciones);
+
+  @override
+  final List<ExperienciaLaboral> postulaciones;
+
+  @override
+  String toString() {
+    return 'ConsultarExperienciaLaboralState.cargaExitosa(postulaciones: $postulaciones)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _CargaExitosa &&
+            (identical(other.postulaciones, postulaciones) ||
+                const DeepCollectionEquality()
+                    .equals(other.postulaciones, postulaciones)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(postulaciones);
+
+  @JsonKey(ignore: true)
+  @override
+  _$CargaExitosaCopyWith<_CargaExitosa> get copyWith =>
+      __$CargaExitosaCopyWithImpl<_CargaExitosa>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() inicial,
+    required TResult Function() cargaEnProgreso,
+    required TResult Function(List<ExperienciaLaboral> postulaciones)
+        cargaExitosa,
+    required TResult Function(EmpleadoExcepcion postulacionFacilladaExcepcion)
+        cargaFallida,
+  }) {
+    return cargaExitosa(postulaciones);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? inicial,
+    TResult Function()? cargaEnProgreso,
+    TResult Function(List<ExperienciaLaboral> postulaciones)? cargaExitosa,
+    TResult Function(EmpleadoExcepcion postulacionFacilladaExcepcion)?
+        cargaFallida,
+    required TResult orElse(),
+  }) {
+    if (cargaExitosa != null) {
+      return cargaExitosa(postulaciones);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Inicial value) inicial,
+    required TResult Function(_CargaEnProgreso value) cargaEnProgreso,
+    required TResult Function(_CargaExitosa value) cargaExitosa,
+    required TResult Function(_CargaFallida value) cargaFallida,
+  }) {
+    return cargaExitosa(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Inicial value)? inicial,
+    TResult Function(_CargaEnProgreso value)? cargaEnProgreso,
+    TResult Function(_CargaExitosa value)? cargaExitosa,
+    TResult Function(_CargaFallida value)? cargaFallida,
+    required TResult orElse(),
+  }) {
+    if (cargaExitosa != null) {
+      return cargaExitosa(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _CargaExitosa implements ConsultarExperienciaLaboralState {
+  const factory _CargaExitosa(List<ExperienciaLaboral> postulaciones) =
+      _$_CargaExitosa;
+
+  List<ExperienciaLaboral> get postulaciones =>
+      throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  _$CargaExitosaCopyWith<_CargaExitosa> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$CargaFallidaCopyWith<$Res> {
+  factory _$CargaFallidaCopyWith(
+          _CargaFallida value, $Res Function(_CargaFallida) then) =
+      __$CargaFallidaCopyWithImpl<$Res>;
+  $Res call({EmpleadoExcepcion postulacionFacilladaExcepcion});
+
+  $EmpleadoExcepcionCopyWith<$Res> get postulacionFacilladaExcepcion;
+}
+
+/// @nodoc
+class __$CargaFallidaCopyWithImpl<$Res>
+    extends _$ConsultarExperienciaLaboralStateCopyWithImpl<$Res>
+    implements _$CargaFallidaCopyWith<$Res> {
+  __$CargaFallidaCopyWithImpl(
+      _CargaFallida _value, $Res Function(_CargaFallida) _then)
+      : super(_value, (v) => _then(v as _CargaFallida));
+
+  @override
+  _CargaFallida get _value => super._value as _CargaFallida;
+
+  @override
+  $Res call({
+    Object? postulacionFacilladaExcepcion = freezed,
+  }) {
+    return _then(_CargaFallida(
+      postulacionFacilladaExcepcion == freezed
+          ? _value.postulacionFacilladaExcepcion
+          : postulacionFacilladaExcepcion // ignore: cast_nullable_to_non_nullable
+              as EmpleadoExcepcion,
+    ));
+  }
+
+  @override
+  $EmpleadoExcepcionCopyWith<$Res> get postulacionFacilladaExcepcion {
+    return $EmpleadoExcepcionCopyWith<$Res>(
+        _value.postulacionFacilladaExcepcion, (value) {
+      return _then(_value.copyWith(postulacionFacilladaExcepcion: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$_CargaFallida implements _CargaFallida {
+  const _$_CargaFallida(this.postulacionFacilladaExcepcion);
+
+  @override
+  final EmpleadoExcepcion postulacionFacilladaExcepcion;
+
+  @override
+  String toString() {
+    return 'ConsultarExperienciaLaboralState.cargaFallida(postulacionFacilladaExcepcion: $postulacionFacilladaExcepcion)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _CargaFallida &&
+            (identical(other.postulacionFacilladaExcepcion,
+                    postulacionFacilladaExcepcion) ||
+                const DeepCollectionEquality().equals(
+                    other.postulacionFacilladaExcepcion,
+                    postulacionFacilladaExcepcion)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(postulacionFacilladaExcepcion);
+
+  @JsonKey(ignore: true)
+  @override
+  _$CargaFallidaCopyWith<_CargaFallida> get copyWith =>
+      __$CargaFallidaCopyWithImpl<_CargaFallida>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() inicial,
+    required TResult Function() cargaEnProgreso,
+    required TResult Function(List<ExperienciaLaboral> postulaciones)
+        cargaExitosa,
+    required TResult Function(EmpleadoExcepcion postulacionFacilladaExcepcion)
+        cargaFallida,
+  }) {
+    return cargaFallida(postulacionFacilladaExcepcion);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? inicial,
+    TResult Function()? cargaEnProgreso,
+    TResult Function(List<ExperienciaLaboral> postulaciones)? cargaExitosa,
+    TResult Function(EmpleadoExcepcion postulacionFacilladaExcepcion)?
+        cargaFallida,
+    required TResult orElse(),
+  }) {
+    if (cargaFallida != null) {
+      return cargaFallida(postulacionFacilladaExcepcion);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Inicial value) inicial,
+    required TResult Function(_CargaEnProgreso value) cargaEnProgreso,
+    required TResult Function(_CargaExitosa value) cargaExitosa,
+    required TResult Function(_CargaFallida value) cargaFallida,
+  }) {
+    return cargaFallida(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Inicial value)? inicial,
+    TResult Function(_CargaEnProgreso value)? cargaEnProgreso,
+    TResult Function(_CargaExitosa value)? cargaExitosa,
+    TResult Function(_CargaFallida value)? cargaFallida,
+    required TResult orElse(),
+  }) {
+    if (cargaFallida != null) {
+      return cargaFallida(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _CargaFallida implements ConsultarExperienciaLaboralState {
+  const factory _CargaFallida(EmpleadoExcepcion postulacionFacilladaExcepcion) =
+      _$_CargaFallida;
+
+  EmpleadoExcepcion get postulacionFacilladaExcepcion =>
+      throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  _$CargaFallidaCopyWith<_CargaFallida> get copyWith =>
+      throw _privateConstructorUsedError;
 }
