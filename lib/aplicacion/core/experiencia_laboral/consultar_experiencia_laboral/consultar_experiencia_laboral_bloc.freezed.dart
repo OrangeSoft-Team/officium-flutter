@@ -390,15 +390,16 @@ class _$ConsultarExperienciaLaboralStateTearOff {
     return const _CargaEnProgreso();
   }
 
-  _CargaExitosa cargaExitosa(List<ExperienciaLaboral> postulaciones) {
+  _CargaExitosa cargaExitosa(List<ExperienciaLaboral> experienciasLaborales) {
     return _CargaExitosa(
-      postulaciones,
+      experienciasLaborales,
     );
   }
 
-  _CargaFallida cargaFallida(EmpleadoExcepcion postulacionFacilladaExcepcion) {
+  _CargaFallida cargaFallida(
+      EmpleadoExcepcion experianciasLaboralesFallidaExcepcion) {
     return _CargaFallida(
-      postulacionFacilladaExcepcion,
+      experianciasLaboralesFallidaExcepcion,
     );
   }
 }
@@ -413,9 +414,10 @@ mixin _$ConsultarExperienciaLaboralState {
   TResult when<TResult extends Object?>({
     required TResult Function() inicial,
     required TResult Function() cargaEnProgreso,
-    required TResult Function(List<ExperienciaLaboral> postulaciones)
+    required TResult Function(List<ExperienciaLaboral> experienciasLaborales)
         cargaExitosa,
-    required TResult Function(EmpleadoExcepcion postulacionFacilladaExcepcion)
+    required TResult Function(
+            EmpleadoExcepcion experianciasLaboralesFallidaExcepcion)
         cargaFallida,
   }) =>
       throw _privateConstructorUsedError;
@@ -423,8 +425,9 @@ mixin _$ConsultarExperienciaLaboralState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? inicial,
     TResult Function()? cargaEnProgreso,
-    TResult Function(List<ExperienciaLaboral> postulaciones)? cargaExitosa,
-    TResult Function(EmpleadoExcepcion postulacionFacilladaExcepcion)?
+    TResult Function(List<ExperienciaLaboral> experienciasLaborales)?
+        cargaExitosa,
+    TResult Function(EmpleadoExcepcion experianciasLaboralesFallidaExcepcion)?
         cargaFallida,
     required TResult orElse(),
   }) =>
@@ -506,9 +509,10 @@ class _$_Inicial implements _Inicial {
   TResult when<TResult extends Object?>({
     required TResult Function() inicial,
     required TResult Function() cargaEnProgreso,
-    required TResult Function(List<ExperienciaLaboral> postulaciones)
+    required TResult Function(List<ExperienciaLaboral> experienciasLaborales)
         cargaExitosa,
-    required TResult Function(EmpleadoExcepcion postulacionFacilladaExcepcion)
+    required TResult Function(
+            EmpleadoExcepcion experianciasLaboralesFallidaExcepcion)
         cargaFallida,
   }) {
     return inicial();
@@ -519,8 +523,9 @@ class _$_Inicial implements _Inicial {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? inicial,
     TResult Function()? cargaEnProgreso,
-    TResult Function(List<ExperienciaLaboral> postulaciones)? cargaExitosa,
-    TResult Function(EmpleadoExcepcion postulacionFacilladaExcepcion)?
+    TResult Function(List<ExperienciaLaboral> experienciasLaborales)?
+        cargaExitosa,
+    TResult Function(EmpleadoExcepcion experianciasLaboralesFallidaExcepcion)?
         cargaFallida,
     required TResult orElse(),
   }) {
@@ -603,9 +608,10 @@ class _$_CargaEnProgreso implements _CargaEnProgreso {
   TResult when<TResult extends Object?>({
     required TResult Function() inicial,
     required TResult Function() cargaEnProgreso,
-    required TResult Function(List<ExperienciaLaboral> postulaciones)
+    required TResult Function(List<ExperienciaLaboral> experienciasLaborales)
         cargaExitosa,
-    required TResult Function(EmpleadoExcepcion postulacionFacilladaExcepcion)
+    required TResult Function(
+            EmpleadoExcepcion experianciasLaboralesFallidaExcepcion)
         cargaFallida,
   }) {
     return cargaEnProgreso();
@@ -616,8 +622,9 @@ class _$_CargaEnProgreso implements _CargaEnProgreso {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? inicial,
     TResult Function()? cargaEnProgreso,
-    TResult Function(List<ExperienciaLaboral> postulaciones)? cargaExitosa,
-    TResult Function(EmpleadoExcepcion postulacionFacilladaExcepcion)?
+    TResult Function(List<ExperienciaLaboral> experienciasLaborales)?
+        cargaExitosa,
+    TResult Function(EmpleadoExcepcion experianciasLaboralesFallidaExcepcion)?
         cargaFallida,
     required TResult orElse(),
   }) {
@@ -663,7 +670,7 @@ abstract class _$CargaExitosaCopyWith<$Res> {
   factory _$CargaExitosaCopyWith(
           _CargaExitosa value, $Res Function(_CargaExitosa) then) =
       __$CargaExitosaCopyWithImpl<$Res>;
-  $Res call({List<ExperienciaLaboral> postulaciones});
+  $Res call({List<ExperienciaLaboral> experienciasLaborales});
 }
 
 /// @nodoc
@@ -679,12 +686,12 @@ class __$CargaExitosaCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? postulaciones = freezed,
+    Object? experienciasLaborales = freezed,
   }) {
     return _then(_CargaExitosa(
-      postulaciones == freezed
-          ? _value.postulaciones
-          : postulaciones // ignore: cast_nullable_to_non_nullable
+      experienciasLaborales == freezed
+          ? _value.experienciasLaborales
+          : experienciasLaborales // ignore: cast_nullable_to_non_nullable
               as List<ExperienciaLaboral>,
     ));
   }
@@ -693,28 +700,29 @@ class __$CargaExitosaCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_CargaExitosa implements _CargaExitosa {
-  const _$_CargaExitosa(this.postulaciones);
+  const _$_CargaExitosa(this.experienciasLaborales);
 
   @override
-  final List<ExperienciaLaboral> postulaciones;
+  final List<ExperienciaLaboral> experienciasLaborales;
 
   @override
   String toString() {
-    return 'ConsultarExperienciaLaboralState.cargaExitosa(postulaciones: $postulaciones)';
+    return 'ConsultarExperienciaLaboralState.cargaExitosa(experienciasLaborales: $experienciasLaborales)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _CargaExitosa &&
-            (identical(other.postulaciones, postulaciones) ||
-                const DeepCollectionEquality()
-                    .equals(other.postulaciones, postulaciones)));
+            (identical(other.experienciasLaborales, experienciasLaborales) ||
+                const DeepCollectionEquality().equals(
+                    other.experienciasLaborales, experienciasLaborales)));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(postulaciones);
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(experienciasLaborales);
 
   @JsonKey(ignore: true)
   @override
@@ -726,12 +734,13 @@ class _$_CargaExitosa implements _CargaExitosa {
   TResult when<TResult extends Object?>({
     required TResult Function() inicial,
     required TResult Function() cargaEnProgreso,
-    required TResult Function(List<ExperienciaLaboral> postulaciones)
+    required TResult Function(List<ExperienciaLaboral> experienciasLaborales)
         cargaExitosa,
-    required TResult Function(EmpleadoExcepcion postulacionFacilladaExcepcion)
+    required TResult Function(
+            EmpleadoExcepcion experianciasLaboralesFallidaExcepcion)
         cargaFallida,
   }) {
-    return cargaExitosa(postulaciones);
+    return cargaExitosa(experienciasLaborales);
   }
 
   @override
@@ -739,13 +748,14 @@ class _$_CargaExitosa implements _CargaExitosa {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? inicial,
     TResult Function()? cargaEnProgreso,
-    TResult Function(List<ExperienciaLaboral> postulaciones)? cargaExitosa,
-    TResult Function(EmpleadoExcepcion postulacionFacilladaExcepcion)?
+    TResult Function(List<ExperienciaLaboral> experienciasLaborales)?
+        cargaExitosa,
+    TResult Function(EmpleadoExcepcion experianciasLaboralesFallidaExcepcion)?
         cargaFallida,
     required TResult orElse(),
   }) {
     if (cargaExitosa != null) {
-      return cargaExitosa(postulaciones);
+      return cargaExitosa(experienciasLaborales);
     }
     return orElse();
   }
@@ -778,10 +788,10 @@ class _$_CargaExitosa implements _CargaExitosa {
 }
 
 abstract class _CargaExitosa implements ConsultarExperienciaLaboralState {
-  const factory _CargaExitosa(List<ExperienciaLaboral> postulaciones) =
+  const factory _CargaExitosa(List<ExperienciaLaboral> experienciasLaborales) =
       _$_CargaExitosa;
 
-  List<ExperienciaLaboral> get postulaciones =>
+  List<ExperienciaLaboral> get experienciasLaborales =>
       throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   _$CargaExitosaCopyWith<_CargaExitosa> get copyWith =>
@@ -793,9 +803,9 @@ abstract class _$CargaFallidaCopyWith<$Res> {
   factory _$CargaFallidaCopyWith(
           _CargaFallida value, $Res Function(_CargaFallida) then) =
       __$CargaFallidaCopyWithImpl<$Res>;
-  $Res call({EmpleadoExcepcion postulacionFacilladaExcepcion});
+  $Res call({EmpleadoExcepcion experianciasLaboralesFallidaExcepcion});
 
-  $EmpleadoExcepcionCopyWith<$Res> get postulacionFacilladaExcepcion;
+  $EmpleadoExcepcionCopyWith<$Res> get experianciasLaboralesFallidaExcepcion;
 }
 
 /// @nodoc
@@ -811,21 +821,22 @@ class __$CargaFallidaCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? postulacionFacilladaExcepcion = freezed,
+    Object? experianciasLaboralesFallidaExcepcion = freezed,
   }) {
     return _then(_CargaFallida(
-      postulacionFacilladaExcepcion == freezed
-          ? _value.postulacionFacilladaExcepcion
-          : postulacionFacilladaExcepcion // ignore: cast_nullable_to_non_nullable
+      experianciasLaboralesFallidaExcepcion == freezed
+          ? _value.experianciasLaboralesFallidaExcepcion
+          : experianciasLaboralesFallidaExcepcion // ignore: cast_nullable_to_non_nullable
               as EmpleadoExcepcion,
     ));
   }
 
   @override
-  $EmpleadoExcepcionCopyWith<$Res> get postulacionFacilladaExcepcion {
+  $EmpleadoExcepcionCopyWith<$Res> get experianciasLaboralesFallidaExcepcion {
     return $EmpleadoExcepcionCopyWith<$Res>(
-        _value.postulacionFacilladaExcepcion, (value) {
-      return _then(_value.copyWith(postulacionFacilladaExcepcion: value));
+        _value.experianciasLaboralesFallidaExcepcion, (value) {
+      return _then(
+          _value.copyWith(experianciasLaboralesFallidaExcepcion: value));
     });
   }
 }
@@ -833,31 +844,32 @@ class __$CargaFallidaCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_CargaFallida implements _CargaFallida {
-  const _$_CargaFallida(this.postulacionFacilladaExcepcion);
+  const _$_CargaFallida(this.experianciasLaboralesFallidaExcepcion);
 
   @override
-  final EmpleadoExcepcion postulacionFacilladaExcepcion;
+  final EmpleadoExcepcion experianciasLaboralesFallidaExcepcion;
 
   @override
   String toString() {
-    return 'ConsultarExperienciaLaboralState.cargaFallida(postulacionFacilladaExcepcion: $postulacionFacilladaExcepcion)';
+    return 'ConsultarExperienciaLaboralState.cargaFallida(experianciasLaboralesFallidaExcepcion: $experianciasLaboralesFallidaExcepcion)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _CargaFallida &&
-            (identical(other.postulacionFacilladaExcepcion,
-                    postulacionFacilladaExcepcion) ||
+            (identical(other.experianciasLaboralesFallidaExcepcion,
+                    experianciasLaboralesFallidaExcepcion) ||
                 const DeepCollectionEquality().equals(
-                    other.postulacionFacilladaExcepcion,
-                    postulacionFacilladaExcepcion)));
+                    other.experianciasLaboralesFallidaExcepcion,
+                    experianciasLaboralesFallidaExcepcion)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(postulacionFacilladaExcepcion);
+      const DeepCollectionEquality()
+          .hash(experianciasLaboralesFallidaExcepcion);
 
   @JsonKey(ignore: true)
   @override
@@ -869,12 +881,13 @@ class _$_CargaFallida implements _CargaFallida {
   TResult when<TResult extends Object?>({
     required TResult Function() inicial,
     required TResult Function() cargaEnProgreso,
-    required TResult Function(List<ExperienciaLaboral> postulaciones)
+    required TResult Function(List<ExperienciaLaboral> experienciasLaborales)
         cargaExitosa,
-    required TResult Function(EmpleadoExcepcion postulacionFacilladaExcepcion)
+    required TResult Function(
+            EmpleadoExcepcion experianciasLaboralesFallidaExcepcion)
         cargaFallida,
   }) {
-    return cargaFallida(postulacionFacilladaExcepcion);
+    return cargaFallida(experianciasLaboralesFallidaExcepcion);
   }
 
   @override
@@ -882,13 +895,14 @@ class _$_CargaFallida implements _CargaFallida {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? inicial,
     TResult Function()? cargaEnProgreso,
-    TResult Function(List<ExperienciaLaboral> postulaciones)? cargaExitosa,
-    TResult Function(EmpleadoExcepcion postulacionFacilladaExcepcion)?
+    TResult Function(List<ExperienciaLaboral> experienciasLaborales)?
+        cargaExitosa,
+    TResult Function(EmpleadoExcepcion experianciasLaboralesFallidaExcepcion)?
         cargaFallida,
     required TResult orElse(),
   }) {
     if (cargaFallida != null) {
-      return cargaFallida(postulacionFacilladaExcepcion);
+      return cargaFallida(experianciasLaboralesFallidaExcepcion);
     }
     return orElse();
   }
@@ -921,10 +935,11 @@ class _$_CargaFallida implements _CargaFallida {
 }
 
 abstract class _CargaFallida implements ConsultarExperienciaLaboralState {
-  const factory _CargaFallida(EmpleadoExcepcion postulacionFacilladaExcepcion) =
+  const factory _CargaFallida(
+          EmpleadoExcepcion experianciasLaboralesFallidaExcepcion) =
       _$_CargaFallida;
 
-  EmpleadoExcepcion get postulacionFacilladaExcepcion =>
+  EmpleadoExcepcion get experianciasLaboralesFallidaExcepcion =>
       throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   _$CargaFallidaCopyWith<_CargaFallida> get copyWith =>

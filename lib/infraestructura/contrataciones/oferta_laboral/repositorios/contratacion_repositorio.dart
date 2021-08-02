@@ -4,6 +4,7 @@ import 'package:officium_flutter/dominio/comun/value_objects/identificador.dart'
 import 'package:officium_flutter/dominio/contrataciones/entidades/entrevista.dart';
 import 'package:officium_flutter/dominio/contrataciones/entidades/oferta_laboral.dart';
 import 'package:officium_flutter/dominio/contrataciones/entidades/postulacion_oferta.dart';
+import 'package:officium_flutter/dominio/contrataciones/entidades/trabajo.dart';
 import 'package:officium_flutter/dominio/contrataciones/excepciones_dominio/contrataciones_excepciones.dart';
 import 'package:officium_flutter/dominio/contrataciones/servicios_dominio/repositorio/i_contratacion_repositorio.dart';
 import 'package:officium_flutter/dominio/contrataciones/value_objects/postulacion_oferta_laboral/comentario_postulacion.dart';
@@ -114,7 +115,7 @@ class ContratacionRepositorio implements IContratacionesRepositorio {
   }
 
   @override
-  Stream<Either<ContratacionExcepcion, List<OfertaLaboral>>>
+  Stream<Either<ContratacionExcepcion, List<Trabajo>>>
       verTodosLosTrabajosEmpleado(Identificador uuidEmpleado) {
     // TODO: implement verTodosLosTrabajosEmpleado
     throw UnimplementedError();

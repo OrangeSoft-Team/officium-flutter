@@ -6,7 +6,7 @@ class ConsultarExperienciaLaboralState with _$ConsultarExperienciaLaboralState {
   const factory ConsultarExperienciaLaboralState.cargaEnProgreso() =
       _CargaEnProgreso;
   const factory ConsultarExperienciaLaboralState.cargaExitosa(
-      List<ExperienciaLaboral> postulaciones) = _CargaExitosa;
+      List<ExperienciaLaboral> experienciasLaborales) = _CargaExitosa;
   const factory ConsultarExperienciaLaboralState.cargaFallida(
-      EmpleadoExcepcion postulacionFacilladaExcepcion) = _CargaFallida;
+      EmpleadoExcepcion experianciasLaboralesFallidaExcepcion) = _CargaFallida;
 }
