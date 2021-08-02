@@ -5,7 +5,7 @@ import 'package:officium_flutter/dominio/contrataciones/entidades/entrevista.dar
 import 'package:officium_flutter/dominio/contrataciones/entidades/oferta_laboral.dart';
 import 'package:officium_flutter/dominio/contrataciones/entidades/postulacion_oferta.dart';
 import 'package:officium_flutter/dominio/contrataciones/excepciones_dominio/contrataciones_excepciones.dart';
-import 'package:officium_flutter/dominio/contrataciones/servicios_dominio/repositorio/i_oferta_laboral_repositorio.dart';
+import 'package:officium_flutter/dominio/contrataciones/servicios_dominio/repositorio/i_contratacion_repositorio.dart';
 import 'package:officium_flutter/dominio/contrataciones/value_objects/postulacion_oferta_laboral/comentario_postulacion.dart';
 import 'package:officium_flutter/infraestructura/contrataciones/oferta_laboral/fuentes/i_contratacion_fuente.dart';
 import 'package:officium_flutter/infraestructura/contrataciones/oferta_laboral/modelos/oferta_laboral_detalle_dto.dart';

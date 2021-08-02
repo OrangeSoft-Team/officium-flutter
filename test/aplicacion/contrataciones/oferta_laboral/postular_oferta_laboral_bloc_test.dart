@@ -8,7 +8,7 @@ import 'package:mockito/mockito.dart';
 import 'package:officium_flutter/aplicacion/contratacion/postulacion/postular_oferta_laboral/postular_oferta_laboral_bloc.dart';
 import 'package:officium_flutter/dominio/contrataciones/entidades/postulacion_oferta.dart';
 import 'package:officium_flutter/dominio/contrataciones/excepciones_dominio/contrataciones_excepciones.dart';
-import 'package:officium_flutter/dominio/contrataciones/servicios_dominio/repositorio/i_oferta_laboral_repositorio.dart';
+import 'package:officium_flutter/dominio/contrataciones/servicios_dominio/repositorio/i_contratacion_repositorio.dart';
 import 'package:officium_flutter/infraestructura/contrataciones/oferta_laboral/modelos/postulacion_oferta_laboral_dto.dart';
 import '../../../infraestructura/data_pruebas/lector_json.dart';
 import 'postular_oferta_laboral_bloc_test.mocks.dart';
