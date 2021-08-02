@@ -8,7 +8,7 @@ import 'package:dartz/dartz.dart' as _i3;
 import 'package:mockito/mockito.dart' as _i1;
 import 'package:officium_flutter/dominio/comun/value_objects/identificador.dart'
     as _i7;
-import 'package:officium_flutter/infraestructura/contrataciones/oferta_laboral/fuentes/i_oferta_laboral_fuente.dart'
+import 'package:officium_flutter/infraestructura/contrataciones/oferta_laboral/fuentes/i_contratacion_fuente.dart'
     as _i4;
 import 'package:officium_flutter/infraestructura/contrataciones/oferta_laboral/modelos/oferta_laboral_detalle_dto.dart'
     as _i2;
@@ -30,12 +30,12 @@ class _FakeOfertaLaboralDetalleDTO extends _i1.Fake
 
 class _FakeUnit extends _i1.Fake implements _i3.Unit {}
 
-/// A class which mocks [IOfertaLaboralFuente].
+/// A class which mocks [IContratacionFuente].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockIOfertaLaboralFuente extends _i1.Mock
-    implements _i4.IOfertaLaboralFuente {
-  MockIOfertaLaboralFuente() {
+class MockIContratacionFuente extends _i1.Mock
+    implements _i4.IContratacionFuente {
+  MockIContratacionFuente() {
     _i1.throwOnMissingStub(this);
   }
 

@@ -14,22 +14,22 @@ import 'package:http/http.dart' as _i3;
 import 'package:injectable/injectable.dart' as _i2;
 
 import 'aplicacion/autentificacion/estado_autentificacion/estado_autentificacion_bloc.dart'
-    as _i33;
-import 'aplicacion/autentificacion/iniciar_sesion/iniciar_sesion_bloc.dart'
-    as _i31;
-import 'aplicacion/autentificacion/registro/registro_bloc.dart' as _i32;
-import 'aplicacion/contratacion/oferta_laboral/ver_detalle_oferta_laboral/ver_detalle_oferta_laboral_bloc.dart'
-    as _i39;
-import 'aplicacion/contratacion/oferta_laboral/ver_ofertas_laborales/ver_ofertas_laborales_bloc.dart'
-    as _i40;
-import 'aplicacion/contratacion/postulacion/postular_oferta_laboral/postular_oferta_laboral_bloc.dart'
     as _i38;
+import 'aplicacion/autentificacion/iniciar_sesion/iniciar_sesion_bloc.dart'
+    as _i33;
+import 'aplicacion/autentificacion/registro/registro_bloc.dart' as _i35;
+import 'aplicacion/contratacion/oferta_laboral/ver_detalle_oferta_laboral/ver_detalle_oferta_laboral_bloc.dart'
+    as _i36;
+import 'aplicacion/contratacion/oferta_laboral/ver_ofertas_laborales/ver_ofertas_laborales_bloc.dart'
+    as _i37;
+import 'aplicacion/contratacion/postulacion/postular_oferta_laboral/postular_oferta_laboral_bloc.dart'
+    as _i34;
 import 'dominio/autentificacion/servicios_dominio/fachadas/i_fachada_autentificacion.dart'
     as _i9;
 import 'dominio/contrataciones/servicios_dominio/repositorio/i_oferta_laboral_repositorio.dart'
-    as _i34;
+    as _i17;
 import 'dominio/core/servicios_dominio/repositorios/i_empleado_repositorio.dart'
-    as _i36;
+    as _i39;
 import 'infraestructura/autentificacion/fuentes/autentificacion_firebase_fuente.dart'
     as _i12;
 import 'infraestructura/autentificacion/fuentes/i_autentificacion_firebase_fuente.dart'
@@ -41,46 +41,46 @@ import 'infraestructura/autentificacion/fuentes/modulo_repo_google_sign_in.dart'
 import 'infraestructura/autentificacion/http_request_fachada.dart' as _i10;
 import 'infraestructura/comun/local_storage/fuentes/fuente_local.dart' as _i6;
 import 'infraestructura/comun/local_storage/fuentes/i_fuente_local.dart'
-    as _i23;
+    as _i27;
 import 'infraestructura/comun/local_storage/fuentes/modulo_repo_fuente_local.dart'
     as _i43;
 import 'infraestructura/contrataciones/entrevista/fuentes/entrevista_fuente.dart'
-    as _i20;
-import 'infraestructura/contrataciones/entrevista/fuentes/i_entrevista_fuente.dart'
-    as _i19;
-import 'infraestructura/contrataciones/oferta_laboral/fuentes/i_oferta_laboral_fuente.dart'
     as _i24;
+import 'infraestructura/contrataciones/entrevista/fuentes/i_entrevista_fuente.dart'
+    as _i23;
+import 'infraestructura/contrataciones/oferta_laboral/fuentes/i_contratacion_fuente.dart'
+    as _i15;
 import 'infraestructura/contrataciones/oferta_laboral/fuentes/modulo_repo_htttp.dart'
     as _i41;
-import 'infraestructura/contrataciones/oferta_laboral/fuentes/oferta_laboral_fuente.dart'
-    as _i25;
-import 'infraestructura/contrataciones/oferta_laboral/repositorios/oferta_laboral_repositorio.dart'
-    as _i35;
+import 'infraestructura/contrataciones/oferta_laboral/fuentes/contratacion_fuente.dart'
+    as _i16;
+import 'infraestructura/contrataciones/oferta_laboral/repositorios/contratacion_repositorio.dart'
+    as _i18;
 import 'infraestructura/contrataciones/postulacion/fuentes/i_postulacion_fuente.dart'
-    as _i26;
-import 'infraestructura/contrataciones/postulacion/fuentes/postulacion_fuente.dart'
-    as _i27;
-import 'infraestructura/contrataciones/postulacion/repositorios/postulacion_repositorio.dart'
     as _i28;
-import 'infraestructura/contrataciones/trabajo/fuentes/i_trabajo_fuente.dart'
+import 'infraestructura/contrataciones/postulacion/fuentes/postulacion_fuente.dart'
     as _i29;
-import 'infraestructura/contrataciones/trabajo/fuentes/trabajo_fuente.dart'
+import 'infraestructura/contrataciones/postulacion/repositorios/postulacion_repositorio.dart'
     as _i30;
-import 'infraestructura/core/empleado/fuentes/empleado_fuente.dart' as _i18;
-import 'infraestructura/core/empleado/fuentes/i_empleado_fuente.dart' as _i17;
+import 'infraestructura/contrataciones/trabajo/fuentes/i_trabajo_fuente.dart'
+    as _i31;
+import 'infraestructura/contrataciones/trabajo/fuentes/trabajo_fuente.dart'
+    as _i32;
+import 'infraestructura/core/empleado/fuentes/empleado_fuente.dart' as _i22;
+import 'infraestructura/core/empleado/fuentes/i_empleado_fuente.dart' as _i21;
 import 'infraestructura/core/empleado/repositorios/empleado_repositorio.dto.dart'
-    as _i37;
+    as _i40;
 import 'infraestructura/core/experiencia_laboral/fuentes/experiencia_laboral_fuente.dart'
-    as _i22;
+    as _i26;
 import 'infraestructura/core/experiencia_laboral/fuentes/i_experiencia_laboral_fuente.dart'
-    as _i21;
+    as _i25;
 import 'infraestructura/mooc/certificados/fuentes/certificado_fuente.dart'
     as _i14;
 import 'infraestructura/mooc/certificados/fuentes/i_certificado_fuente.dart'
     as _i13;
-import 'infraestructura/mooc/cursos/fuentes/curso_fuente.dart' as _i16;
+import 'infraestructura/mooc/cursos/fuentes/curso_fuente.dart' as _i20;
 import 'infraestructura/mooc/cursos/fuentes/i_curso_fuente.dart'
-    as _i15; // ignore_for_file: unnecessary_lambdas
+    as _i19; // ignore_for_file: unnecessary_lambdas
 
 // ignore_for_file: lines_longer_than_80_chars
 /// initializes the registration of provided dependencies inside of [GetIt]
@@ -111,44 +111,44 @@ _i1.GetIt $initGetIt(_i1.GetIt get,
       fuenteLocal: get<_i6.FuenteLocal>()));
   gh.lazySingleton<_i13.ICertificadoFuente>(
       () => _i14.CertificadoFuente(cliente: get<_i8.HttpClient>()));
-  gh.lazySingleton<_i15.ICursoFuente>(
-      () => _i16.CursoFuente(cliente: get<_i8.HttpClient>()));
-  gh.lazySingleton<_i17.IEmpleadoFuente>(
-      () => _i18.EmpleadoFuente(cliente: get<_i8.HttpClient>()));
-  gh.lazySingleton<_i19.IEntrevistaFuente>(
-      () => _i20.EntrevistaFuente(cliente: get<_i8.HttpClient>()));
-  gh.lazySingleton<_i21.IExperienciaLaboralFuente>(
-      () => _i22.ExperienciaLaboralFuente(cliente: get<_i8.HttpClient>()));
-  gh.lazySingleton<_i23.IFuenteLocal>(
+  gh.lazySingleton<_i15.IContratacionFuente>(
+      () => _i16.OfertaLaboralFuente(cliente: get<_i3.Client>()));
+  gh.lazySingleton<_i17.IContratacionesRepositorio>(() =>
+      _i18.ContratacionRepositorio(
+          fuenteDeDatos: get<_i15.IContratacionFuente>()));
+  gh.lazySingleton<_i19.ICursoFuente>(
+      () => _i20.CursoFuente(cliente: get<_i8.HttpClient>()));
+  gh.lazySingleton<_i21.IEmpleadoFuente>(
+      () => _i22.EmpleadoFuente(cliente: get<_i8.HttpClient>()));
+  gh.lazySingleton<_i23.IEntrevistaFuente>(
+      () => _i24.EntrevistaFuente(cliente: get<_i8.HttpClient>()));
+  gh.lazySingleton<_i25.IExperienciaLaboralFuente>(
+      () => _i26.ExperienciaLaboralFuente(cliente: get<_i8.HttpClient>()));
+  gh.lazySingleton<_i27.IFuenteLocal>(
       () => _i6.FuenteLocal(storage: get<_i5.FlutterSecureStorage>()));
-  gh.lazySingleton<_i24.IOfertaLaboralFuente>(
-      () => _i25.OfertaLaboralFuente(cliente: get<_i3.Client>()));
-  gh.lazySingleton<_i26.IPostulacionFuente>(
-      () => _i27.PostulacionFuente(cliente: get<_i8.HttpClient>()));
-  gh.lazySingleton<_i28.IPostulacionRepositorio>(() =>
-      _i28.PostulacionRepositorio(
-          fuenteDeDatos: get<_i26.IPostulacionFuente>()));
-  gh.lazySingleton<_i29.ITrabajoFuente>(
-      () => _i30.TrabajoFuente(cliente: get<_i8.HttpClient>()));
-  gh.factory<_i31.IniciarSesionBloc>(
-      () => _i31.IniciarSesionBloc(get<_i9.IAutentificacionFachada>()));
-  gh.factory<_i32.RegistroBloc>(
-      () => _i32.RegistroBloc(get<_i9.IAutentificacionFachada>()));
-  gh.factory<_i33.EstadoAutentificacionBloc>(
-      () => _i33.EstadoAutentificacionBloc(get<_i9.IAutentificacionFachada>()));
-  gh.lazySingleton<_i34.IContratacionesRepositorio>(() =>
-      _i35.OfertaLaboralRepositorio(
-          fuenteDeDatos: get<_i24.IOfertaLaboralFuente>()));
-  gh.lazySingleton<_i36.IEmpleadoRepositorio>(() => _i37.EmpleadoRepositorio(
-      fuenteDeDatosEmpleado: get<_i17.IEmpleadoFuente>(),
-      fuenteDeDatosExperienciaLaboral: get<_i21.IExperienciaLaboralFuente>(),
-      fuenteLocal: get<_i23.IFuenteLocal>()));
-  gh.factory<_i38.PostularOfertaLaboralBloc>(() =>
-      _i38.PostularOfertaLaboralBloc(get<_i34.IContratacionesRepositorio>()));
-  gh.factory<_i39.VerDetalleOfertaLaboralBloc>(() =>
-      _i39.VerDetalleOfertaLaboralBloc(get<_i34.IContratacionesRepositorio>()));
-  gh.factory<_i40.VerOfertasLaboralesBloc>(() =>
-      _i40.VerOfertasLaboralesBloc(get<_i34.IContratacionesRepositorio>()));
+  gh.lazySingleton<_i28.IPostulacionFuente>(
+      () => _i29.PostulacionFuente(cliente: get<_i8.HttpClient>()));
+  gh.lazySingleton<_i30.IPostulacionRepositorio>(() =>
+      _i30.PostulacionRepositorio(
+          fuenteDeDatos: get<_i28.IPostulacionFuente>()));
+  gh.lazySingleton<_i31.ITrabajoFuente>(
+      () => _i32.TrabajoFuente(cliente: get<_i8.HttpClient>()));
+  gh.factory<_i33.IniciarSesionBloc>(
+      () => _i33.IniciarSesionBloc(get<_i9.IAutentificacionFachada>()));
+  gh.factory<_i34.PostularOfertaLaboralBloc>(() =>
+      _i34.PostularOfertaLaboralBloc(get<_i17.IContratacionesRepositorio>()));
+  gh.factory<_i35.RegistroBloc>(
+      () => _i35.RegistroBloc(get<_i9.IAutentificacionFachada>()));
+  gh.factory<_i36.VerDetalleOfertaLaboralBloc>(() =>
+      _i36.VerDetalleOfertaLaboralBloc(get<_i17.IContratacionesRepositorio>()));
+  gh.factory<_i37.VerOfertasLaboralesBloc>(() =>
+      _i37.VerOfertasLaboralesBloc(get<_i17.IContratacionesRepositorio>()));
+  gh.factory<_i38.EstadoAutentificacionBloc>(
+      () => _i38.EstadoAutentificacionBloc(get<_i9.IAutentificacionFachada>()));
+  gh.lazySingleton<_i39.IEmpleadoRepositorio>(() => _i40.EmpleadoRepositorio(
+      fuenteDeDatosEmpleado: get<_i21.IEmpleadoFuente>(),
+      fuenteDeDatosExperienciaLaboral: get<_i25.IExperienciaLaboralFuente>(),
+      fuenteLocal: get<_i27.IFuenteLocal>()));
   return get;
 }
 

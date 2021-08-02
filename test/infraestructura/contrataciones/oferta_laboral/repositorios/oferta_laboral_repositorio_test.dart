@@ -8,19 +8,19 @@ import 'package:mockito/mockito.dart';
 import 'package:officium_flutter/dominio/contrataciones/entidades/oferta_laboral.dart';
 import 'package:officium_flutter/dominio/contrataciones/entidades/postulacion_oferta.dart';
 import 'package:officium_flutter/dominio/contrataciones/excepciones_dominio/contrataciones_excepciones.dart';
-import 'package:officium_flutter/infraestructura/contrataciones/oferta_laboral/fuentes/i_oferta_laboral_fuente.dart';
+import 'package:officium_flutter/infraestructura/contrataciones/oferta_laboral/fuentes/i_contratacion_fuente.dart';
 import 'package:officium_flutter/infraestructura/contrataciones/oferta_laboral/modelos/oferta_laboral_detalle_dto.dart';
 import 'package:officium_flutter/infraestructura/contrataciones/oferta_laboral/modelos/oferta_laboral_dto.dart';
 import 'package:officium_flutter/infraestructura/contrataciones/oferta_laboral/modelos/postulacion_oferta_laboral_dto.dart';
-import 'package:officium_flutter/infraestructura/contrataciones/oferta_laboral/repositorios/oferta_laboral_repositorio.dart';
+import 'package:officium_flutter/infraestructura/contrataciones/oferta_laboral/repositorios/contratacion_repositorio.dart';
 import '../../../data_pruebas/lector_json.dart';
 import 'oferta_laboral_repositorio_test.mocks.dart';
 
-@GenerateMocks([IOfertaLaboralFuente])
+@GenerateMocks([IContratacionFuente])
 void main() {
-  final mockFuenteDeDatos = MockIOfertaLaboralFuente();
-  final OfertaLaboralRepositorio ofertaLaboralRepositorio =
-      OfertaLaboralRepositorio(fuenteDeDatos: mockFuenteDeDatos);
+  final mockFuenteDeDatos = MockIContratacionFuente();
+  final ContratacionRepositorio ofertaLaboralRepositorio =
+      ContratacionRepositorio(fuenteDeDatos: mockFuenteDeDatos);
 
   group('Obtener ofertas laborales', () {
     final tOfertasLaboralesDto = <OfertaLaboralDTO>[

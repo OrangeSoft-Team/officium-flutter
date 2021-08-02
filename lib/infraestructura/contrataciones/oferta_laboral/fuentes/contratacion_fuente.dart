@@ -6,19 +6,18 @@ import 'package:http/http.dart' as http;
 import 'package:injectable/injectable.dart';
 import 'package:officium_flutter/dominio/comun/value_objects/identificador.dart';
 import 'package:officium_flutter/infraestructura/comun/excepciones.dart';
+import 'package:officium_flutter/infraestructura/contrataciones/oferta_laboral/fuentes/i_contratacion_fuente.dart';
 import 'package:officium_flutter/infraestructura/contrataciones/oferta_laboral/modelos/oferta_laboral_detalle_dto.dart';
 import 'package:officium_flutter/infraestructura/contrataciones/oferta_laboral/modelos/oferta_laboral_dto.dart';
 import 'package:officium_flutter/infraestructura/contrataciones/oferta_laboral/modelos/postulacion_oferta_laboral_dto.dart';
-
-import 'i_oferta_laboral_fuente.dart';
 
 // ignore: constant_identifier_names
 const DIR_SPRING = 'http://orangesoft.ddns.net:3000';
 // ignore: constant_identifier_names
 const DIR_NEST = 'http://officium-nest.ddns.net:2000';
 
-@LazySingleton(as: IOfertaLaboralFuente)
-class OfertaLaboralFuente implements IOfertaLaboralFuente {
+@LazySingleton(as: IContratacionFuente)
+class OfertaLaboralFuente implements IContratacionFuente {
   final http.Client cliente;
 
   OfertaLaboralFuente({required this.cliente});
