@@ -16,12 +16,17 @@
             "request": "launch",
             "type": "dart"
         },
-                {
+        {
             "name": "officium-flutter (profile mode)",
             "request": "launch",
             "type": "dart",
             "flutterMode": "profile"
+        },
+        {
+            "name": "officium-flutter (Debug 2 mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "debug"
         }
     ]
 }
-{
