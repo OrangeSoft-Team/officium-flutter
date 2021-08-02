@@ -43,4 +43,7 @@ abstract class IContratacionesRepositorio {
 
   Future<Either<ContratacionExcepcion, Entrevista>> consultarDetalleEntrevista(
       Identificador uuidEntrevista);
+
+  Stream<Either<ContratacionExcepcion, List<Entrevista>>>
+      verTodasLasEntrevistasEmpleado(Identificador uuidEmpleado);
 }

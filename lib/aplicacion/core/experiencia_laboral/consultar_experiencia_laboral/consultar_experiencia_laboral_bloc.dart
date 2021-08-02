@@ -26,8 +26,8 @@ class ConsultarExperienciaLaboralBloc extends Bloc<
   ) async* {
     yield* event.map(verTodasLasExperienciasLaboralesEmpezado: (e) async* {
       yield const ConsultarExperienciaLaboralState.cargaEnProgreso();
-      _experienciaLaboralSuscripcion?.cancel();
-      _experienciaLaboralSuscripcion = await iEmpleadoRepositorio
+      await _experienciaLaboralSuscripcion?.cancel();
+      _experienciaLaboralSuscripcion = iEmpleadoRepositorio
           .verExperienciasLaboralesEmpleado(e.uuidEmpleado)
           .listen((excepcionOExpecienciaLaboral) => add(
               ConsultarExperienciaLaboralEvent.experienciasLaboralesRecibidas(

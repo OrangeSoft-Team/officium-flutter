@@ -134,4 +134,14 @@ class MockIContratacionesRepositorio extends _i1.Mock
                   Future<_i2.Either<_i5.ContratacionExcepcion, _i10.Entrevista>>.value(
                       _FakeEither<_i5.ContratacionExcepcion, _i10.Entrevista>())) as _i4
               .Future<_i2.Either<_i5.ContratacionExcepcion, _i10.Entrevista>>);
+  @override
+  _i4.Stream<_i2.Either<_i5.ContratacionExcepcion, List<_i10.Entrevista>>>
+      verTodasLasEntrevistasEmpleado(_i7.Identificador? uuidEmpleado) => (super
+              .noSuchMethod(
+                  Invocation.method(
+                      #verTodasLasEntrevistasEmpleado, [uuidEmpleado]),
+                  returnValue:
+                      Stream<_i2.Either<_i5.ContratacionExcepcion, List<_i10.Entrevista>>>.empty())
+          as _i4.Stream<
+              _i2.Either<_i5.ContratacionExcepcion, List<_i10.Entrevista>>>);
 }

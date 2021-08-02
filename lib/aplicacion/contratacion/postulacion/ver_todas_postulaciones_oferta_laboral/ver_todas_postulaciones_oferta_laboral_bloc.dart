@@ -31,7 +31,7 @@ class VerTodasPostulacionesOfertaLaboralBloc extends Bloc<
     yield* event.map(
       verTodasLasPostulacionesEmpezado: (e) async* {
         yield const VerTodasPostulacionesOfertaLaboralState.cargaEnProgreso();
-        _postulacionOfertaLaboralSuscripcion?.cancel();
+        await _postulacionOfertaLaboralSuscripcion?.cancel();
         _postulacionOfertaLaboralSuscripcion = _iContratacionesRepositorio
             .verTodasLasPostulacionesOfertaLaboral(e.uuidEmpleado)
             .listen((postulacionesOExcepciones) => add(
