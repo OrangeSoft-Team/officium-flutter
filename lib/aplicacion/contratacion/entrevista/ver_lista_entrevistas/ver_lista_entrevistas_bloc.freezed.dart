@@ -370,16 +370,16 @@ class _$VerListaEntrevistasStateTearOff {
     return const _CargaEnProgreso();
   }
 
-  _CargaExitosa cargaExitosa(List<Entrevista> postulaciones) {
+  _CargaExitosa cargaExitosa(List<Entrevista> entrevistas) {
     return _CargaExitosa(
-      postulaciones,
+      entrevistas,
     );
   }
 
   _CargaFallida cargaFallida(
-      ContratacionExcepcion postulacionFacilladaExcepcion) {
+      ContratacionExcepcion entrevistaFacilladaExcepcion) {
     return _CargaFallida(
-      postulacionFacilladaExcepcion,
+      entrevistaFacilladaExcepcion,
     );
   }
 }
@@ -393,9 +393,9 @@ mixin _$VerListaEntrevistasState {
   TResult when<TResult extends Object?>({
     required TResult Function() inicial,
     required TResult Function() cargaEnProgreso,
-    required TResult Function(List<Entrevista> postulaciones) cargaExitosa,
+    required TResult Function(List<Entrevista> entrevistas) cargaExitosa,
     required TResult Function(
-            ContratacionExcepcion postulacionFacilladaExcepcion)
+            ContratacionExcepcion entrevistaFacilladaExcepcion)
         cargaFallida,
   }) =>
       throw _privateConstructorUsedError;
@@ -403,8 +403,8 @@ mixin _$VerListaEntrevistasState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? inicial,
     TResult Function()? cargaEnProgreso,
-    TResult Function(List<Entrevista> postulaciones)? cargaExitosa,
-    TResult Function(ContratacionExcepcion postulacionFacilladaExcepcion)?
+    TResult Function(List<Entrevista> entrevistas)? cargaExitosa,
+    TResult Function(ContratacionExcepcion entrevistaFacilladaExcepcion)?
         cargaFallida,
     required TResult orElse(),
   }) =>
@@ -485,9 +485,9 @@ class _$_Inicial implements _Inicial {
   TResult when<TResult extends Object?>({
     required TResult Function() inicial,
     required TResult Function() cargaEnProgreso,
-    required TResult Function(List<Entrevista> postulaciones) cargaExitosa,
+    required TResult Function(List<Entrevista> entrevistas) cargaExitosa,
     required TResult Function(
-            ContratacionExcepcion postulacionFacilladaExcepcion)
+            ContratacionExcepcion entrevistaFacilladaExcepcion)
         cargaFallida,
   }) {
     return inicial();
@@ -498,8 +498,8 @@ class _$_Inicial implements _Inicial {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? inicial,
     TResult Function()? cargaEnProgreso,
-    TResult Function(List<Entrevista> postulaciones)? cargaExitosa,
-    TResult Function(ContratacionExcepcion postulacionFacilladaExcepcion)?
+    TResult Function(List<Entrevista> entrevistas)? cargaExitosa,
+    TResult Function(ContratacionExcepcion entrevistaFacilladaExcepcion)?
         cargaFallida,
     required TResult orElse(),
   }) {
@@ -582,9 +582,9 @@ class _$_CargaEnProgreso implements _CargaEnProgreso {
   TResult when<TResult extends Object?>({
     required TResult Function() inicial,
     required TResult Function() cargaEnProgreso,
-    required TResult Function(List<Entrevista> postulaciones) cargaExitosa,
+    required TResult Function(List<Entrevista> entrevistas) cargaExitosa,
     required TResult Function(
-            ContratacionExcepcion postulacionFacilladaExcepcion)
+            ContratacionExcepcion entrevistaFacilladaExcepcion)
         cargaFallida,
   }) {
     return cargaEnProgreso();
@@ -595,8 +595,8 @@ class _$_CargaEnProgreso implements _CargaEnProgreso {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? inicial,
     TResult Function()? cargaEnProgreso,
-    TResult Function(List<Entrevista> postulaciones)? cargaExitosa,
-    TResult Function(ContratacionExcepcion postulacionFacilladaExcepcion)?
+    TResult Function(List<Entrevista> entrevistas)? cargaExitosa,
+    TResult Function(ContratacionExcepcion entrevistaFacilladaExcepcion)?
         cargaFallida,
     required TResult orElse(),
   }) {
@@ -642,7 +642,7 @@ abstract class _$CargaExitosaCopyWith<$Res> {
   factory _$CargaExitosaCopyWith(
           _CargaExitosa value, $Res Function(_CargaExitosa) then) =
       __$CargaExitosaCopyWithImpl<$Res>;
-  $Res call({List<Entrevista> postulaciones});
+  $Res call({List<Entrevista> entrevistas});
 }
 
 /// @nodoc
@@ -658,12 +658,12 @@ class __$CargaExitosaCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? postulaciones = freezed,
+    Object? entrevistas = freezed,
   }) {
     return _then(_CargaExitosa(
-      postulaciones == freezed
-          ? _value.postulaciones
-          : postulaciones // ignore: cast_nullable_to_non_nullable
+      entrevistas == freezed
+          ? _value.entrevistas
+          : entrevistas // ignore: cast_nullable_to_non_nullable
               as List<Entrevista>,
     ));
   }
@@ -672,28 +672,28 @@ class __$CargaExitosaCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_CargaExitosa implements _CargaExitosa {
-  const _$_CargaExitosa(this.postulaciones);
+  const _$_CargaExitosa(this.entrevistas);
 
   @override
-  final List<Entrevista> postulaciones;
+  final List<Entrevista> entrevistas;
 
   @override
   String toString() {
-    return 'VerListaEntrevistasState.cargaExitosa(postulaciones: $postulaciones)';
+    return 'VerListaEntrevistasState.cargaExitosa(entrevistas: $entrevistas)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _CargaExitosa &&
-            (identical(other.postulaciones, postulaciones) ||
+            (identical(other.entrevistas, entrevistas) ||
                 const DeepCollectionEquality()
-                    .equals(other.postulaciones, postulaciones)));
+                    .equals(other.entrevistas, entrevistas)));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(postulaciones);
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(entrevistas);
 
   @JsonKey(ignore: true)
   @override
@@ -705,12 +705,12 @@ class _$_CargaExitosa implements _CargaExitosa {
   TResult when<TResult extends Object?>({
     required TResult Function() inicial,
     required TResult Function() cargaEnProgreso,
-    required TResult Function(List<Entrevista> postulaciones) cargaExitosa,
+    required TResult Function(List<Entrevista> entrevistas) cargaExitosa,
     required TResult Function(
-            ContratacionExcepcion postulacionFacilladaExcepcion)
+            ContratacionExcepcion entrevistaFacilladaExcepcion)
         cargaFallida,
   }) {
-    return cargaExitosa(postulaciones);
+    return cargaExitosa(entrevistas);
   }
 
   @override
@@ -718,13 +718,13 @@ class _$_CargaExitosa implements _CargaExitosa {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? inicial,
     TResult Function()? cargaEnProgreso,
-    TResult Function(List<Entrevista> postulaciones)? cargaExitosa,
-    TResult Function(ContratacionExcepcion postulacionFacilladaExcepcion)?
+    TResult Function(List<Entrevista> entrevistas)? cargaExitosa,
+    TResult Function(ContratacionExcepcion entrevistaFacilladaExcepcion)?
         cargaFallida,
     required TResult orElse(),
   }) {
     if (cargaExitosa != null) {
-      return cargaExitosa(postulaciones);
+      return cargaExitosa(entrevistas);
     }
     return orElse();
   }
@@ -757,9 +757,9 @@ class _$_CargaExitosa implements _CargaExitosa {
 }
 
 abstract class _CargaExitosa implements VerListaEntrevistasState {
-  const factory _CargaExitosa(List<Entrevista> postulaciones) = _$_CargaExitosa;
+  const factory _CargaExitosa(List<Entrevista> entrevistas) = _$_CargaExitosa;
 
-  List<Entrevista> get postulaciones => throw _privateConstructorUsedError;
+  List<Entrevista> get entrevistas => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   _$CargaExitosaCopyWith<_CargaExitosa> get copyWith =>
       throw _privateConstructorUsedError;
@@ -770,9 +770,9 @@ abstract class _$CargaFallidaCopyWith<$Res> {
   factory _$CargaFallidaCopyWith(
           _CargaFallida value, $Res Function(_CargaFallida) then) =
       __$CargaFallidaCopyWithImpl<$Res>;
-  $Res call({ContratacionExcepcion postulacionFacilladaExcepcion});
+  $Res call({ContratacionExcepcion entrevistaFacilladaExcepcion});
 
-  $ContratacionExcepcionCopyWith<$Res> get postulacionFacilladaExcepcion;
+  $ContratacionExcepcionCopyWith<$Res> get entrevistaFacilladaExcepcion;
 }
 
 /// @nodoc
@@ -788,21 +788,21 @@ class __$CargaFallidaCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? postulacionFacilladaExcepcion = freezed,
+    Object? entrevistaFacilladaExcepcion = freezed,
   }) {
     return _then(_CargaFallida(
-      postulacionFacilladaExcepcion == freezed
-          ? _value.postulacionFacilladaExcepcion
-          : postulacionFacilladaExcepcion // ignore: cast_nullable_to_non_nullable
+      entrevistaFacilladaExcepcion == freezed
+          ? _value.entrevistaFacilladaExcepcion
+          : entrevistaFacilladaExcepcion // ignore: cast_nullable_to_non_nullable
               as ContratacionExcepcion,
     ));
   }
 
   @override
-  $ContratacionExcepcionCopyWith<$Res> get postulacionFacilladaExcepcion {
+  $ContratacionExcepcionCopyWith<$Res> get entrevistaFacilladaExcepcion {
     return $ContratacionExcepcionCopyWith<$Res>(
-        _value.postulacionFacilladaExcepcion, (value) {
-      return _then(_value.copyWith(postulacionFacilladaExcepcion: value));
+        _value.entrevistaFacilladaExcepcion, (value) {
+      return _then(_value.copyWith(entrevistaFacilladaExcepcion: value));
     });
   }
 }
@@ -810,31 +810,31 @@ class __$CargaFallidaCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_CargaFallida implements _CargaFallida {
-  const _$_CargaFallida(this.postulacionFacilladaExcepcion);
+  const _$_CargaFallida(this.entrevistaFacilladaExcepcion);
 
   @override
-  final ContratacionExcepcion postulacionFacilladaExcepcion;
+  final ContratacionExcepcion entrevistaFacilladaExcepcion;
 
   @override
   String toString() {
-    return 'VerListaEntrevistasState.cargaFallida(postulacionFacilladaExcepcion: $postulacionFacilladaExcepcion)';
+    return 'VerListaEntrevistasState.cargaFallida(entrevistaFacilladaExcepcion: $entrevistaFacilladaExcepcion)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _CargaFallida &&
-            (identical(other.postulacionFacilladaExcepcion,
-                    postulacionFacilladaExcepcion) ||
+            (identical(other.entrevistaFacilladaExcepcion,
+                    entrevistaFacilladaExcepcion) ||
                 const DeepCollectionEquality().equals(
-                    other.postulacionFacilladaExcepcion,
-                    postulacionFacilladaExcepcion)));
+                    other.entrevistaFacilladaExcepcion,
+                    entrevistaFacilladaExcepcion)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(postulacionFacilladaExcepcion);
+      const DeepCollectionEquality().hash(entrevistaFacilladaExcepcion);
 
   @JsonKey(ignore: true)
   @override
@@ -846,12 +846,12 @@ class _$_CargaFallida implements _CargaFallida {
   TResult when<TResult extends Object?>({
     required TResult Function() inicial,
     required TResult Function() cargaEnProgreso,
-    required TResult Function(List<Entrevista> postulaciones) cargaExitosa,
+    required TResult Function(List<Entrevista> entrevistas) cargaExitosa,
     required TResult Function(
-            ContratacionExcepcion postulacionFacilladaExcepcion)
+            ContratacionExcepcion entrevistaFacilladaExcepcion)
         cargaFallida,
   }) {
-    return cargaFallida(postulacionFacilladaExcepcion);
+    return cargaFallida(entrevistaFacilladaExcepcion);
   }
 
   @override
@@ -859,13 +859,13 @@ class _$_CargaFallida implements _CargaFallida {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? inicial,
     TResult Function()? cargaEnProgreso,
-    TResult Function(List<Entrevista> postulaciones)? cargaExitosa,
-    TResult Function(ContratacionExcepcion postulacionFacilladaExcepcion)?
+    TResult Function(List<Entrevista> entrevistas)? cargaExitosa,
+    TResult Function(ContratacionExcepcion entrevistaFacilladaExcepcion)?
         cargaFallida,
     required TResult orElse(),
   }) {
     if (cargaFallida != null) {
-      return cargaFallida(postulacionFacilladaExcepcion);
+      return cargaFallida(entrevistaFacilladaExcepcion);
     }
     return orElse();
   }
@@ -899,9 +899,9 @@ class _$_CargaFallida implements _CargaFallida {
 
 abstract class _CargaFallida implements VerListaEntrevistasState {
   const factory _CargaFallida(
-      ContratacionExcepcion postulacionFacilladaExcepcion) = _$_CargaFallida;
+      ContratacionExcepcion entrevistaFacilladaExcepcion) = _$_CargaFallida;
 
-  ContratacionExcepcion get postulacionFacilladaExcepcion =>
+  ContratacionExcepcion get entrevistaFacilladaExcepcion =>
       throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   _$CargaFallidaCopyWith<_CargaFallida> get copyWith =>
