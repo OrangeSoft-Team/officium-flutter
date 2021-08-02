@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "636839173634",
+    "project_id": "autentificacion-officium",
+    "storage_bucket": "autentificacion-officium.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:636839173634:android:0b90cae55e93457d65511b",
+        "android_client_info": {
+          "package_name": "com.example.officium_flutter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "636839173634-g87filfc211f9mp6u9gm5ngruqp58l0q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.officium_flutter",
+            "certificate_hash": "0efb8f7514509caa0636ab7a2bc73b2650d4a6b9"
+          }
+        },
+        {
+          "client_id": "636839173634-dbuteuvhm3gebok4a4fe3hh70n0p8fu9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDs9li88rkz8zLOUfoB7qTHzccxg0GXFzA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "636839173634-dbuteuvhm3gebok4a4fe3hh70n0p8fu9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
