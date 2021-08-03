@@ -54,9 +54,11 @@ class FirebaseAuthFuente implements IAuthFirebaseFuente {
       //COOKIE CHECK ?
       if(apiResponse.statusCode == 200){
         final parsedData = await ResponseParser.parseResponse(apiResponse);
-        //final jwtCookie = apiResponse.headers['set-cookie'];
-        //Map cookies = {};
-        //Cookie.fromSetCookieValue(value)
+        final responseCookies = apiResponse.cookies;
+        if (responseCookies.isEmpty) {
+          throw ServerException();
+        }
+        await fuenteLocal.asignarTokenLocal(responseCookies[0]);
         return RespuestaInicioSesionEmpleadoDTO.fromJson(jsonDecode(parsedData) as Map<String, dynamic>);
       }
       else {

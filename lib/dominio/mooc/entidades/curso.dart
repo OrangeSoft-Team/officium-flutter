@@ -21,6 +21,6 @@ abstract class Curso with _$Curso {
     Fecha? fechaUltimaModificacion,
     required List<Habilidad> habilidades,
     required List<Leccion> lecciones,
-    required Certificado certificado,
+    Certificado? certificado,
   }) = _Curso;
 }

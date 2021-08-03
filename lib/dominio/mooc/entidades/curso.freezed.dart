@@ -24,7 +24,7 @@ class _$CursoTearOff {
       Fecha? fechaUltimaModificacion,
       required List<Habilidad> habilidades,
       required List<Leccion> lecciones,
-      required Certificado certificado}) {
+      Certificado? certificado}) {
     return _Curso(
       uuid: uuid,
       tituloCurso: tituloCurso,
@@ -50,7 +50,7 @@ mixin _$Curso {
   Fecha? get fechaUltimaModificacion => throw _privateConstructorUsedError;
   List<Habilidad> get habilidades => throw _privateConstructorUsedError;
   List<Leccion> get lecciones => throw _privateConstructorUsedError;
-  Certificado get certificado => throw _privateConstructorUsedError;
+  Certificado? get certificado => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $CursoCopyWith<Curso> get copyWith => throw _privateConstructorUsedError;
@@ -68,9 +68,9 @@ abstract class $CursoCopyWith<$Res> {
       Fecha? fechaUltimaModificacion,
       List<Habilidad> habilidades,
       List<Leccion> lecciones,
-      Certificado certificado});
+      Certificado? certificado});
 
-  $CertificadoCopyWith<$Res> get certificado;
+  $CertificadoCopyWith<$Res>? get certificado;
 }
 
 /// @nodoc
@@ -124,13 +124,17 @@ class _$CursoCopyWithImpl<$Res> implements $CursoCopyWith<$Res> {
       certificado: certificado == freezed
           ? _value.certificado
           : certificado // ignore: cast_nullable_to_non_nullable
-              as Certificado,
+              as Certificado?,
     ));
   }
 
   @override
-  $CertificadoCopyWith<$Res> get certificado {
-    return $CertificadoCopyWith<$Res>(_value.certificado, (value) {
+  $CertificadoCopyWith<$Res>? get certificado {
+    if (_value.certificado == null) {
+      return null;
+    }
+
+    return $CertificadoCopyWith<$Res>(_value.certificado!, (value) {
       return _then(_value.copyWith(certificado: value));
     });
   }
@@ -149,10 +153,10 @@ abstract class _$CursoCopyWith<$Res> implements $CursoCopyWith<$Res> {
       Fecha? fechaUltimaModificacion,
       List<Habilidad> habilidades,
       List<Leccion> lecciones,
-      Certificado certificado});
+      Certificado? certificado});
 
   @override
-  $CertificadoCopyWith<$Res> get certificado;
+  $CertificadoCopyWith<$Res>? get certificado;
 }
 
 /// @nodoc
@@ -207,7 +211,7 @@ class __$CursoCopyWithImpl<$Res> extends _$CursoCopyWithImpl<$Res>
       certificado: certificado == freezed
           ? _value.certificado
           : certificado // ignore: cast_nullable_to_non_nullable
-              as Certificado,
+              as Certificado?,
     ));
   }
 }
@@ -224,7 +228,7 @@ class _$_Curso implements _Curso {
       this.fechaUltimaModificacion,
       required this.habilidades,
       required this.lecciones,
-      required this.certificado});
+      this.certificado});
 
   @override
   final Identificador uuid;
@@ -241,7 +245,7 @@ class _$_Curso implements _Curso {
   @override
   final List<Leccion> lecciones;
   @override
-  final Certificado certificado;
+  final Certificado? certificado;
 
   @override
   String toString() {
@@ -305,7 +309,7 @@ abstract class _Curso implements Curso, IEntidad {
       Fecha? fechaUltimaModificacion,
       required List<Habilidad> habilidades,
       required List<Leccion> lecciones,
-      required Certificado certificado}) = _$_Curso;
+      Certificado? certificado}) = _$_Curso;
 
   @override
   Identificador get uuid => throw _privateConstructorUsedError;
@@ -322,7 +326,7 @@ abstract class _Curso implements Curso, IEntidad {
   @override
   List<Leccion> get lecciones => throw _privateConstructorUsedError;
   @override
-  Certificado get certificado => throw _privateConstructorUsedError;
+  Certificado? get certificado => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$CursoCopyWith<_Curso> get copyWith => throw _privateConstructorUsedError;

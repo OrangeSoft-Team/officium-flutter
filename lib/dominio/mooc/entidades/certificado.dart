@@ -12,6 +12,6 @@ abstract class Certificado with _$Certificado {
   const factory Certificado({
     required Identificador uuid,
     required Fecha fechaExpedicion,
-    required DescripcionCertificado descripcionCertificado,
+    DescripcionCertificado? descripcionCertificado,
   }) = _Certificado;
 }

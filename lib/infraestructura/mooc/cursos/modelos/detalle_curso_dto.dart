@@ -5,10 +5,8 @@ import 'package:officium_flutter/dominio/comun/value_objects/identificador.dart'
 import 'package:officium_flutter/dominio/contrataciones/value_objects/oferta_laboral/Duracion_Oferta/duracion_escalas.dart';
 import 'package:officium_flutter/dominio/contrataciones/value_objects/oferta_laboral/Duracion_Oferta/duracion_estimada.dart';
 import 'package:officium_flutter/dominio/core/entidades/habilidad.dart';
-import 'package:officium_flutter/dominio/mooc/entidades/certificado.dart';
 import 'package:officium_flutter/dominio/mooc/entidades/curso.dart';
 import 'package:officium_flutter/dominio/mooc/entidades/leccion.dart';
-import 'package:officium_flutter/dominio/mooc/value_objects/certificado/descripcion_certificado.dart';
 import 'package:officium_flutter/dominio/mooc/value_objects/curso/titulo_curso.dart';
 import 'leccion_lista_dto.dart';
 part 'detalle_curso_dto.freezed.dart';
@@ -34,17 +32,10 @@ abstract class DetalleCursoDTO implements _$DetalleCursoDTO {
 
   factory DetalleCursoDTO.fromJson(Map<String, dynamic> json) =>
       _$DetalleCursoDTOFromJson(json);
-  
-  /*factory DetalleCursoDTO.fromDomain(DetalleCurso DetalleCurso) {
-    return DetalleCursoDTO(
-     
-    );
-  }*/
 
   Curso toDomain() {
     final List<Leccion> lecciones = [];
     final List<Habilidad> habilidades = [];
-
     return Curso(
      uuid: Identificador.fromUniqueString(uuid),
      tituloCurso: TituloCurso(titulo),
@@ -53,11 +44,6 @@ abstract class DetalleCursoDTO implements _$DetalleCursoDTO {
      fechaUltimaModificacion: Fecha(formatoFecha.parse(fechaUltimaModificacion!)),
      lecciones: lecciones,
      habilidades: habilidades,
-     certificado: Certificado(
-       uuid: Identificador(), //!
-       fechaExpedicion: Fecha(formatoFecha.parse('02/05/2021')), //!
-       descripcionCertificado: DescripcionCertificado('TEST DESCRIPCION CERTIFICADO') //!
-      ),
     );
   }
 }

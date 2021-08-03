@@ -19,7 +19,7 @@ class _$CertificadoTearOff {
   _Certificado call(
       {required Identificador uuid,
       required Fecha fechaExpedicion,
-      required DescripcionCertificado descripcionCertificado}) {
+      DescripcionCertificado? descripcionCertificado}) {
     return _Certificado(
       uuid: uuid,
       fechaExpedicion: fechaExpedicion,
@@ -35,7 +35,7 @@ const $Certificado = _$CertificadoTearOff();
 mixin _$Certificado {
   Identificador get uuid => throw _privateConstructorUsedError;
   Fecha get fechaExpedicion => throw _privateConstructorUsedError;
-  DescripcionCertificado get descripcionCertificado =>
+  DescripcionCertificado? get descripcionCertificado =>
       throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -51,7 +51,7 @@ abstract class $CertificadoCopyWith<$Res> {
   $Res call(
       {Identificador uuid,
       Fecha fechaExpedicion,
-      DescripcionCertificado descripcionCertificado});
+      DescripcionCertificado? descripcionCertificado});
 }
 
 /// @nodoc
@@ -80,7 +80,7 @@ class _$CertificadoCopyWithImpl<$Res> implements $CertificadoCopyWith<$Res> {
       descripcionCertificado: descripcionCertificado == freezed
           ? _value.descripcionCertificado
           : descripcionCertificado // ignore: cast_nullable_to_non_nullable
-              as DescripcionCertificado,
+              as DescripcionCertificado?,
     ));
   }
 }
@@ -95,7 +95,7 @@ abstract class _$CertificadoCopyWith<$Res>
   $Res call(
       {Identificador uuid,
       Fecha fechaExpedicion,
-      DescripcionCertificado descripcionCertificado});
+      DescripcionCertificado? descripcionCertificado});
 }
 
 /// @nodoc
@@ -126,7 +126,7 @@ class __$CertificadoCopyWithImpl<$Res> extends _$CertificadoCopyWithImpl<$Res>
       descripcionCertificado: descripcionCertificado == freezed
           ? _value.descripcionCertificado
           : descripcionCertificado // ignore: cast_nullable_to_non_nullable
-              as DescripcionCertificado,
+              as DescripcionCertificado?,
     ));
   }
 }
@@ -138,14 +138,14 @@ class _$_Certificado implements _Certificado {
   const _$_Certificado(
       {required this.uuid,
       required this.fechaExpedicion,
-      required this.descripcionCertificado});
+      this.descripcionCertificado});
 
   @override
   final Identificador uuid;
   @override
   final Fecha fechaExpedicion;
   @override
-  final DescripcionCertificado descripcionCertificado;
+  final DescripcionCertificado? descripcionCertificado;
 
   @override
   String toString() {
@@ -183,14 +183,14 @@ abstract class _Certificado implements Certificado, IEntidad {
   const factory _Certificado(
       {required Identificador uuid,
       required Fecha fechaExpedicion,
-      required DescripcionCertificado descripcionCertificado}) = _$_Certificado;
+      DescripcionCertificado? descripcionCertificado}) = _$_Certificado;
 
   @override
   Identificador get uuid => throw _privateConstructorUsedError;
   @override
   Fecha get fechaExpedicion => throw _privateConstructorUsedError;
   @override
-  DescripcionCertificado get descripcionCertificado =>
+  DescripcionCertificado? get descripcionCertificado =>
       throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
