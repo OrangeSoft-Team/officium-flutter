@@ -5,7 +5,7 @@ class VerListaEntrevistasState with _$VerListaEntrevistasState {
   const factory VerListaEntrevistasState.inicial() = _Inicial;
   const factory VerListaEntrevistasState.cargaEnProgreso() = _CargaEnProgreso;
   const factory VerListaEntrevistasState.cargaExitosa(
-      List<Entrevista> postulaciones) = _CargaExitosa;
+      List<Entrevista> entrevistas) = _CargaExitosa;
   const factory VerListaEntrevistasState.cargaFallida(
-      ContratacionExcepcion postulacionFacilladaExcepcion) = _CargaFallida;
+      ContratacionExcepcion entrevistaFacilladaExcepcion) = _CargaFallida;
 }
