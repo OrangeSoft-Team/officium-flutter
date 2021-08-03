@@ -28,7 +28,7 @@ class OfertaLaboralFuente implements IContratacionFuente {
     final client2 = HttpClient();
     final bodyJson = jsonEncode(postulacionOfertaLaboral);
     final request = await client2.postUrl(Uri.parse(
-        "$DIR_NEST/api/empleado/ofertas_laborales/${postulacionOfertaLaboral.uuidOfertaLaboral}"));
+        "$DIR_SPRING/api/empleado/ofertas_laborales/${postulacionOfertaLaboral.uuidOfertaLaboral}"));
     request.headers
         .add(HttpHeaders.contentTypeHeader, "application/json; charset=UTF-8");
     request.write(bodyJson);
@@ -45,7 +45,7 @@ class OfertaLaboralFuente implements IContratacionFuente {
       Identificador uuidOfertaLaboral) async {
     final response = await cliente.get(
       Uri.parse(
-          '$DIR_NEST/api/empleado/ofertas_laborales/${uuidOfertaLaboral.getOrCrash()}'),
+          '$DIR_SPRING/api/empleado/ofertas_laborales/${uuidOfertaLaboral.getOrCrash()}'),
       headers: {
         'Content-Type': 'application/json',
       },
@@ -65,7 +65,7 @@ class OfertaLaboralFuente implements IContratacionFuente {
     final List<OfertaLaboralDTO> listaDeOfertas = <OfertaLaboralDTO>[];
 
     final response = await cliente.get(
-      Uri.parse('$DIR_NEST/api/empleado/ofertas_laborales'),
+      Uri.parse('$DIR_SPRING/api/empleado/ofertas_laborales'),
       headers: {
         'Content-Type': 'application/json',
       },

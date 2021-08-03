@@ -20,16 +20,16 @@ class PostulacionFuente implements IPostulacionFuente {
   PostulacionFuente({required this.cliente});
 
   @override
-  Future<Unit> aplicarOfertaLaboral(PostulacionOfertaLaboralDTO postulacionOfertaLaboral) async {
-    
+  Future<Unit> aplicarOfertaLaboral(
+      PostulacionOfertaLaboralDTO postulacionOfertaLaboral) async {
     final bodyJson = jsonEncode(postulacionOfertaLaboral);
-    
-    final request = await cliente.postUrl(Uri.parse("$DIR_NEST/api/empleado/ofertas_laborales/${postulacionOfertaLaboral.uuidOfertaLaboral}"));
-    
+
+    final request = await cliente.postUrl(Uri.parse(
+        "$DIR_SPRING/api/empleado/ofertas_laborales/${postulacionOfertaLaboral.uuidOfertaLaboral}"));
+
     request.headers
-      .add(HttpHeaders.contentTypeHeader, "application/json; charset=UTF-8");
-    request
-      .write(bodyJson);
+        .add(HttpHeaders.contentTypeHeader, "application/json; charset=UTF-8");
+    request.write(bodyJson);
 
     final response = await request.close();
 
@@ -41,14 +41,15 @@ class PostulacionFuente implements IPostulacionFuente {
   }
 
   @override
-  Future<List<PostulacionEmpleadoDTO>> obtenerPostulacionesActivasEmpleado(String uuidEmpleado) async {
-    final List<PostulacionEmpleadoDTO> postulacionesActivas = <PostulacionEmpleadoDTO>[];
+  Future<List<PostulacionEmpleadoDTO>> obtenerPostulacionesActivasEmpleado(
+      String uuidEmpleado) async {
+    final List<PostulacionEmpleadoDTO> postulacionesActivas =
+        <PostulacionEmpleadoDTO>[];
 
-    final request = await cliente.getUrl(
-      Uri.parse('$DIR_NEST/api/empleado/postulaciones')
-    );
+    final request = await cliente
+        .getUrl(Uri.parse('$DIR_SPRING/api/empleado/postulaciones'));
     request.headers
-    .add(HttpHeaders.contentTypeHeader, "application/json; charset=UTF-8");
+        .add(HttpHeaders.contentTypeHeader, "application/json; charset=UTF-8");
     final response = await request.close();
     if (response.statusCode == 200) {
       final responseData = response.transform(utf8.decoder);
@@ -57,18 +58,17 @@ class PostulacionFuente implements IPostulacionFuente {
 
       responseData.listen((data) {
         contents.write(data);
-      }, 
-      onDone: () => completer.complete(contents.toString()));
+      }, onDone: () => completer.complete(contents.toString()));
 
       final List<Map<String, dynamic>> ofertasJson =
-          List<Map<String, dynamic>>.from(jsonDecode(await completer.future) as List);
+          List<Map<String, dynamic>>.from(
+              jsonDecode(await completer.future) as List);
 
       for (final dto in ofertasJson) {
         postulacionesActivas.add(PostulacionEmpleadoDTO.fromJson(dto));
       }
 
       return postulacionesActivas;
-      
     } else {
       throw ServerException();
     }
@@ -76,11 +76,10 @@ class PostulacionFuente implements IPostulacionFuente {
 
   @override
   Future<Unit> cancelarPostulacion(String uuidPostulacion) async {
-    final request = await cliente.putUrl(
-      Uri.parse('$DIR_NEST/api/empleado/oferta_laboral/$uuidPostulacion/cancelar')
-    );
+    final request = await cliente.putUrl(Uri.parse(
+        '$DIR_SPRING/api/empleado/oferta_laboral/$uuidPostulacion/cancelar'));
     request.headers
-    .add(HttpHeaders.contentTypeHeader, "application/json; charset=UTF-8");
+        .add(HttpHeaders.contentTypeHeader, "application/json; charset=UTF-8");
 
     final response = await request.close();
     if (response.statusCode == 200) {

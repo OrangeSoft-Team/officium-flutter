@@ -7,7 +7,7 @@ import 'package:officium_flutter/dominio/autentificacion/value_objecs/email.dart
 import 'package:officium_flutter/dominio/autentificacion/value_objecs/password.dart';
 import 'package:officium_flutter/dominio/core/entidades/empleado.dart';
 
-@LazySingleton(as: IAutentificacionFachada)
+// @LazySingleton(as: IAutentificacionFachada)
 class HttpRequestFachada implements IAutentificacionFachada {
   @override
   Future<Option<Empleado>> getUsuarioLogueado() {
