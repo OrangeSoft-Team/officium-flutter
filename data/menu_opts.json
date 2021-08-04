@@ -10,6 +10,26 @@
             "ruta" : "consultar_postulaciones",
             "icon" : "assessment_outlined",
             "texto": "Consultar Postulaciones"
+        },
+        {
+            "ruta" : "consultar_entrevistas",
+            "icon" : "call_outlined",
+            "texto": "Consultar Entrevistas"
+        },
+        {
+            "ruta" : "consultar_trabajos",
+            "icon" : "work",
+            "texto": "Consultar Trabajos"
+        },
+        {
+            "ruta" : "mooc",
+            "icon" : "lightbulb",
+            "texto": "Cursos y Especializaciones"
+        },
+        {
+            "ruta" : "core",
+            "icon" : "star",
+            "texto": "Mi Perfil"
         }
     ]
 }
