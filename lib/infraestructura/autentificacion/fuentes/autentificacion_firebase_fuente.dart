@@ -6,19 +6,24 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/services.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:injectable/injectable.dart';
+import 'package:intl/intl.dart';
 import 'package:officium_flutter/dominio/autentificacion/excepciones_dominio/autentificacion_excepciones.dart';
 import 'package:officium_flutter/dominio/autentificacion/servicios_dominio/fachadas/i_fachada_autentificacion.dart';
 import 'package:officium_flutter/dominio/autentificacion/value_objecs/email.dart';
 import 'package:officium_flutter/dominio/autentificacion/value_objecs/password.dart';
+import 'package:officium_flutter/dominio/comun/value_objects/identificador.dart';
 import 'package:officium_flutter/dominio/core/entidades/empleado.dart';
+import 'package:officium_flutter/dominio/core/value_objects/empleado/primer_apellido.dart';
 import 'package:officium_flutter/infraestructura/autentificacion/fuentes/i_autentificacion_firebase_fuente.dart';
 import 'package:officium_flutter/infraestructura/autentificacion/modelos/datos_inicio_sesion_empleado_dto.dart';
+import 'package:officium_flutter/infraestructura/autentificacion/modelos/datos_registro_empleado_dto.dart';
 import 'package:officium_flutter/infraestructura/autentificacion/modelos/respuesta_inicio_sesion_empelado_dto.dart';
 import 'package:officium_flutter/infraestructura/comun/excepciones.dart';
 import 'package:officium_flutter/infraestructura/comun/local_storage/fuentes/fuente_local.dart';
 import 'package:officium_flutter/infraestructura/comun/response_parser.dart';
 
 const DIR_NEST = 'https://officium-nest.herokuapp.com';
+final formatoFecha = DateFormat("dd/MM/yyyy");
 
 @LazySingleton(as: IAutentificacionFachada)
 class FirebaseAuthFuente implements IAutentificacionFachada {
@@ -52,9 +57,39 @@ class FirebaseAuthFuente implements IAutentificacionFachada {
     final String emailString = emailAddress.getOrCrash();
     final String passwordString = password.getOrCrash();
     try {
-      await firebaseAuth.createUserWithEmailAndPassword(
+      final response = await firebaseAuth.createUserWithEmailAndPassword(
           email: emailString, password: passwordString);
-      return right(unit);
+      final datosRegistro = DatosRegistroEmpleadoDTO(
+          correoElectronico: emailString,
+          token: response.user!.uid,
+          primerNombre: empleado.primerNombre.getOrCrash(),
+          primerApellido: empleado.primerApellido.getOrCrash(),
+          segundoNombre: empleado.segundoNombre?.getOrCrash(),
+          segundoApellido: empleado.segundoApellido?.getOrCrash(),
+          genero: empleado.genero.getOrCrash().toUpperCase(),
+          nivelEducativo: empleado.nivelEducativo.getOrCrash(),
+          numeroTelefonico: empleado.numeroTelefonico.getOrCrash(),
+          fechaNacimiento:
+              formatoFecha.format(empleado.fechaNacimiento.getOrCrash()),
+          // fechaNacimiento: formatoFecha
+          //     .parse(empleado.fechaNacimiento.getOrCrash().toString())
+          //     .toString(),
+          codigoPostal: empleado.codigoPostal.getOrCrash(),
+          calleUno: empleado.direccionCalleUno.getOrCrash(),
+          uuidPais: "9d661655-4526-4f57-afc6-4464e5a71e75",
+          uuidEstado: "dcf3d05b-a4b6-44a9-811a-103c078495a8",
+          uuidCiudad: "a02cdc9b-8632-4540-aa96-d95d3ef53dba");
+      final command =
+          await cliente.postUrl(Uri.parse('$DIR_NEST/api/empleado/registrar'));
+      command.headers.add(
+          HttpHeaders.contentTypeHeader, "application/json; charset=UTF-8");
+      command.write(jsonEncode(datosRegistro));
+      final apiResponse = await command.close();
+      if (apiResponse.statusCode == 201) {
+        return right(unit);
+      } else {
+        return left(const ExcepcionAutentificacion.serverError());
+      }
     } on FirebaseAuthException catch (e) {
       if (e.code == 'ERROR_EMAIL_ALREADY_IN_USE') {
         return left(const ExcepcionAutentificacion.emailEnUso());
@@ -76,7 +111,6 @@ class FirebaseAuthFuente implements IAutentificacionFachada {
           correoElectronico: emailAddress.getOrCrash(),
           // token: userCredential?.token.toString() ?? ''
           token: userUid ?? '');
-
       //  (userCredential!.token != null)
       //     ? userCredential.token.toString()
       //     : '');
@@ -89,10 +123,18 @@ class FirebaseAuthFuente implements IAutentificacionFachada {
       //COOKIE CHECK ?
       if (apiResponse.statusCode == 200) {
         final parsedData = await ResponseParser.parseResponse(apiResponse);
+
+        final jsonResponse = jsonDecode(parsedData);
         // final body = apiResponse.body.toString();
         // final jwtCookie = apiResponse.headers['set-cookie'];
         //Map cookies = {};
         //Cookie.fromSetCookieValue(value)
+        final responseCookies = apiResponse.cookies;
+        if (responseCookies.isEmpty) {
+          throw ServerException();
+        }
+        await fuenteLocal.asignarTokenLocal(responseCookies[0]);
+        // final body = apiResponse.();
         return right(unit);
       } else {
         return left(const ExcepcionAutentificacion.serverError());

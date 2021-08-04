@@ -58,6 +58,12 @@ class _$RegistroEventTearOff {
     );
   }
 
+  _NivelEducativoCambiado nivelEducativoCambiado(String nivelEducativo) {
+    return _NivelEducativoCambiado(
+      nivelEducativo,
+    );
+  }
+
   _DireccionCalleCambiado direccionCalleCambiado(String direccionCalle) {
     return _DireccionCalleCambiado(
       direccionCalle,
@@ -105,6 +111,7 @@ mixin _$RegistroEvent {
     required TResult Function(String primerApellido) primerApellidoCambiado,
     required TResult Function(String segundoApellido) segundoApellidoCambiado,
     required TResult Function(String genero) generoCambiado,
+    required TResult Function(String nivelEducativo) nivelEducativoCambiado,
     required TResult Function(String direccionCalle) direccionCalleCambiado,
     required TResult Function(String telefono) telefonoCambiado,
     required TResult Function(String codigoPostal) codigoPostalCambiado,
@@ -122,6 +129,7 @@ mixin _$RegistroEvent {
     TResult Function(String primerApellido)? primerApellidoCambiado,
     TResult Function(String segundoApellido)? segundoApellidoCambiado,
     TResult Function(String genero)? generoCambiado,
+    TResult Function(String nivelEducativo)? nivelEducativoCambiado,
     TResult Function(String direccionCalle)? direccionCalleCambiado,
     TResult Function(String telefono)? telefonoCambiado,
     TResult Function(String codigoPostal)? codigoPostalCambiado,
@@ -143,6 +151,8 @@ mixin _$RegistroEvent {
     required TResult Function(_SegundoApellidoCambiado value)
         segundoApellidoCambiado,
     required TResult Function(_GeneroCambiado value) generoCambiado,
+    required TResult Function(_NivelEducativoCambiado value)
+        nivelEducativoCambiado,
     required TResult Function(_DireccionCalleCambiado value)
         direccionCalleCambiado,
     required TResult Function(_TelefonoCambiado value) telefonoCambiado,
@@ -164,6 +174,7 @@ mixin _$RegistroEvent {
     TResult Function(_PrimerApellidoCambiado value)? primerApellidoCambiado,
     TResult Function(_SegundoApellidoCambiado value)? segundoApellidoCambiado,
     TResult Function(_GeneroCambiado value)? generoCambiado,
+    TResult Function(_NivelEducativoCambiado value)? nivelEducativoCambiado,
     TResult Function(_DireccionCalleCambiado value)? direccionCalleCambiado,
     TResult Function(_TelefonoCambiado value)? telefonoCambiado,
     TResult Function(_CodigoPostalCambiado value)? codigoPostalCambiado,
@@ -266,6 +277,7 @@ class _$_EmailCambiado implements _EmailCambiado {
     required TResult Function(String primerApellido) primerApellidoCambiado,
     required TResult Function(String segundoApellido) segundoApellidoCambiado,
     required TResult Function(String genero) generoCambiado,
+    required TResult Function(String nivelEducativo) nivelEducativoCambiado,
     required TResult Function(String direccionCalle) direccionCalleCambiado,
     required TResult Function(String telefono) telefonoCambiado,
     required TResult Function(String codigoPostal) codigoPostalCambiado,
@@ -286,6 +298,7 @@ class _$_EmailCambiado implements _EmailCambiado {
     TResult Function(String primerApellido)? primerApellidoCambiado,
     TResult Function(String segundoApellido)? segundoApellidoCambiado,
     TResult Function(String genero)? generoCambiado,
+    TResult Function(String nivelEducativo)? nivelEducativoCambiado,
     TResult Function(String direccionCalle)? direccionCalleCambiado,
     TResult Function(String telefono)? telefonoCambiado,
     TResult Function(String codigoPostal)? codigoPostalCambiado,
@@ -313,6 +326,8 @@ class _$_EmailCambiado implements _EmailCambiado {
     required TResult Function(_SegundoApellidoCambiado value)
         segundoApellidoCambiado,
     required TResult Function(_GeneroCambiado value) generoCambiado,
+    required TResult Function(_NivelEducativoCambiado value)
+        nivelEducativoCambiado,
     required TResult Function(_DireccionCalleCambiado value)
         direccionCalleCambiado,
     required TResult Function(_TelefonoCambiado value) telefonoCambiado,
@@ -337,6 +352,7 @@ class _$_EmailCambiado implements _EmailCambiado {
     TResult Function(_PrimerApellidoCambiado value)? primerApellidoCambiado,
     TResult Function(_SegundoApellidoCambiado value)? segundoApellidoCambiado,
     TResult Function(_GeneroCambiado value)? generoCambiado,
+    TResult Function(_NivelEducativoCambiado value)? nivelEducativoCambiado,
     TResult Function(_DireccionCalleCambiado value)? direccionCalleCambiado,
     TResult Function(_TelefonoCambiado value)? telefonoCambiado,
     TResult Function(_CodigoPostalCambiado value)? codigoPostalCambiado,
@@ -436,6 +452,7 @@ class _$_PasswordCambiado implements _PasswordCambiado {
     required TResult Function(String primerApellido) primerApellidoCambiado,
     required TResult Function(String segundoApellido) segundoApellidoCambiado,
     required TResult Function(String genero) generoCambiado,
+    required TResult Function(String nivelEducativo) nivelEducativoCambiado,
     required TResult Function(String direccionCalle) direccionCalleCambiado,
     required TResult Function(String telefono) telefonoCambiado,
     required TResult Function(String codigoPostal) codigoPostalCambiado,
@@ -456,6 +473,7 @@ class _$_PasswordCambiado implements _PasswordCambiado {
     TResult Function(String primerApellido)? primerApellidoCambiado,
     TResult Function(String segundoApellido)? segundoApellidoCambiado,
     TResult Function(String genero)? generoCambiado,
+    TResult Function(String nivelEducativo)? nivelEducativoCambiado,
     TResult Function(String direccionCalle)? direccionCalleCambiado,
     TResult Function(String telefono)? telefonoCambiado,
     TResult Function(String codigoPostal)? codigoPostalCambiado,
@@ -483,6 +501,8 @@ class _$_PasswordCambiado implements _PasswordCambiado {
     required TResult Function(_SegundoApellidoCambiado value)
         segundoApellidoCambiado,
     required TResult Function(_GeneroCambiado value) generoCambiado,
+    required TResult Function(_NivelEducativoCambiado value)
+        nivelEducativoCambiado,
     required TResult Function(_DireccionCalleCambiado value)
         direccionCalleCambiado,
     required TResult Function(_TelefonoCambiado value) telefonoCambiado,
@@ -507,6 +527,7 @@ class _$_PasswordCambiado implements _PasswordCambiado {
     TResult Function(_PrimerApellidoCambiado value)? primerApellidoCambiado,
     TResult Function(_SegundoApellidoCambiado value)? segundoApellidoCambiado,
     TResult Function(_GeneroCambiado value)? generoCambiado,
+    TResult Function(_NivelEducativoCambiado value)? nivelEducativoCambiado,
     TResult Function(_DireccionCalleCambiado value)? direccionCalleCambiado,
     TResult Function(_TelefonoCambiado value)? telefonoCambiado,
     TResult Function(_CodigoPostalCambiado value)? codigoPostalCambiado,
@@ -607,6 +628,7 @@ class _$_PrimerNombreCambiado implements _PrimerNombreCambiado {
     required TResult Function(String primerApellido) primerApellidoCambiado,
     required TResult Function(String segundoApellido) segundoApellidoCambiado,
     required TResult Function(String genero) generoCambiado,
+    required TResult Function(String nivelEducativo) nivelEducativoCambiado,
     required TResult Function(String direccionCalle) direccionCalleCambiado,
     required TResult Function(String telefono) telefonoCambiado,
     required TResult Function(String codigoPostal) codigoPostalCambiado,
@@ -627,6 +649,7 @@ class _$_PrimerNombreCambiado implements _PrimerNombreCambiado {
     TResult Function(String primerApellido)? primerApellidoCambiado,
     TResult Function(String segundoApellido)? segundoApellidoCambiado,
     TResult Function(String genero)? generoCambiado,
+    TResult Function(String nivelEducativo)? nivelEducativoCambiado,
     TResult Function(String direccionCalle)? direccionCalleCambiado,
     TResult Function(String telefono)? telefonoCambiado,
     TResult Function(String codigoPostal)? codigoPostalCambiado,
@@ -654,6 +677,8 @@ class _$_PrimerNombreCambiado implements _PrimerNombreCambiado {
     required TResult Function(_SegundoApellidoCambiado value)
         segundoApellidoCambiado,
     required TResult Function(_GeneroCambiado value) generoCambiado,
+    required TResult Function(_NivelEducativoCambiado value)
+        nivelEducativoCambiado,
     required TResult Function(_DireccionCalleCambiado value)
         direccionCalleCambiado,
     required TResult Function(_TelefonoCambiado value) telefonoCambiado,
@@ -678,6 +703,7 @@ class _$_PrimerNombreCambiado implements _PrimerNombreCambiado {
     TResult Function(_PrimerApellidoCambiado value)? primerApellidoCambiado,
     TResult Function(_SegundoApellidoCambiado value)? segundoApellidoCambiado,
     TResult Function(_GeneroCambiado value)? generoCambiado,
+    TResult Function(_NivelEducativoCambiado value)? nivelEducativoCambiado,
     TResult Function(_DireccionCalleCambiado value)? direccionCalleCambiado,
     TResult Function(_TelefonoCambiado value)? telefonoCambiado,
     TResult Function(_CodigoPostalCambiado value)? codigoPostalCambiado,
@@ -779,6 +805,7 @@ class _$_SegundoNombreCambiado implements _SegundoNombreCambiado {
     required TResult Function(String primerApellido) primerApellidoCambiado,
     required TResult Function(String segundoApellido) segundoApellidoCambiado,
     required TResult Function(String genero) generoCambiado,
+    required TResult Function(String nivelEducativo) nivelEducativoCambiado,
     required TResult Function(String direccionCalle) direccionCalleCambiado,
     required TResult Function(String telefono) telefonoCambiado,
     required TResult Function(String codigoPostal) codigoPostalCambiado,
@@ -799,6 +826,7 @@ class _$_SegundoNombreCambiado implements _SegundoNombreCambiado {
     TResult Function(String primerApellido)? primerApellidoCambiado,
     TResult Function(String segundoApellido)? segundoApellidoCambiado,
     TResult Function(String genero)? generoCambiado,
+    TResult Function(String nivelEducativo)? nivelEducativoCambiado,
     TResult Function(String direccionCalle)? direccionCalleCambiado,
     TResult Function(String telefono)? telefonoCambiado,
     TResult Function(String codigoPostal)? codigoPostalCambiado,
@@ -826,6 +854,8 @@ class _$_SegundoNombreCambiado implements _SegundoNombreCambiado {
     required TResult Function(_SegundoApellidoCambiado value)
         segundoApellidoCambiado,
     required TResult Function(_GeneroCambiado value) generoCambiado,
+    required TResult Function(_NivelEducativoCambiado value)
+        nivelEducativoCambiado,
     required TResult Function(_DireccionCalleCambiado value)
         direccionCalleCambiado,
     required TResult Function(_TelefonoCambiado value) telefonoCambiado,
@@ -850,6 +880,7 @@ class _$_SegundoNombreCambiado implements _SegundoNombreCambiado {
     TResult Function(_PrimerApellidoCambiado value)? primerApellidoCambiado,
     TResult Function(_SegundoApellidoCambiado value)? segundoApellidoCambiado,
     TResult Function(_GeneroCambiado value)? generoCambiado,
+    TResult Function(_NivelEducativoCambiado value)? nivelEducativoCambiado,
     TResult Function(_DireccionCalleCambiado value)? direccionCalleCambiado,
     TResult Function(_TelefonoCambiado value)? telefonoCambiado,
     TResult Function(_CodigoPostalCambiado value)? codigoPostalCambiado,
@@ -952,6 +983,7 @@ class _$_PrimerApellidoCambiado implements _PrimerApellidoCambiado {
     required TResult Function(String primerApellido) primerApellidoCambiado,
     required TResult Function(String segundoApellido) segundoApellidoCambiado,
     required TResult Function(String genero) generoCambiado,
+    required TResult Function(String nivelEducativo) nivelEducativoCambiado,
     required TResult Function(String direccionCalle) direccionCalleCambiado,
     required TResult Function(String telefono) telefonoCambiado,
     required TResult Function(String codigoPostal) codigoPostalCambiado,
@@ -972,6 +1004,7 @@ class _$_PrimerApellidoCambiado implements _PrimerApellidoCambiado {
     TResult Function(String primerApellido)? primerApellidoCambiado,
     TResult Function(String segundoApellido)? segundoApellidoCambiado,
     TResult Function(String genero)? generoCambiado,
+    TResult Function(String nivelEducativo)? nivelEducativoCambiado,
     TResult Function(String direccionCalle)? direccionCalleCambiado,
     TResult Function(String telefono)? telefonoCambiado,
     TResult Function(String codigoPostal)? codigoPostalCambiado,
@@ -999,6 +1032,8 @@ class _$_PrimerApellidoCambiado implements _PrimerApellidoCambiado {
     required TResult Function(_SegundoApellidoCambiado value)
         segundoApellidoCambiado,
     required TResult Function(_GeneroCambiado value) generoCambiado,
+    required TResult Function(_NivelEducativoCambiado value)
+        nivelEducativoCambiado,
     required TResult Function(_DireccionCalleCambiado value)
         direccionCalleCambiado,
     required TResult Function(_TelefonoCambiado value) telefonoCambiado,
@@ -1023,6 +1058,7 @@ class _$_PrimerApellidoCambiado implements _PrimerApellidoCambiado {
     TResult Function(_PrimerApellidoCambiado value)? primerApellidoCambiado,
     TResult Function(_SegundoApellidoCambiado value)? segundoApellidoCambiado,
     TResult Function(_GeneroCambiado value)? generoCambiado,
+    TResult Function(_NivelEducativoCambiado value)? nivelEducativoCambiado,
     TResult Function(_DireccionCalleCambiado value)? direccionCalleCambiado,
     TResult Function(_TelefonoCambiado value)? telefonoCambiado,
     TResult Function(_CodigoPostalCambiado value)? codigoPostalCambiado,
@@ -1126,6 +1162,7 @@ class _$_SegundoApellidoCambiado implements _SegundoApellidoCambiado {
     required TResult Function(String primerApellido) primerApellidoCambiado,
     required TResult Function(String segundoApellido) segundoApellidoCambiado,
     required TResult Function(String genero) generoCambiado,
+    required TResult Function(String nivelEducativo) nivelEducativoCambiado,
     required TResult Function(String direccionCalle) direccionCalleCambiado,
     required TResult Function(String telefono) telefonoCambiado,
     required TResult Function(String codigoPostal) codigoPostalCambiado,
@@ -1146,6 +1183,7 @@ class _$_SegundoApellidoCambiado implements _SegundoApellidoCambiado {
     TResult Function(String primerApellido)? primerApellidoCambiado,
     TResult Function(String segundoApellido)? segundoApellidoCambiado,
     TResult Function(String genero)? generoCambiado,
+    TResult Function(String nivelEducativo)? nivelEducativoCambiado,
     TResult Function(String direccionCalle)? direccionCalleCambiado,
     TResult Function(String telefono)? telefonoCambiado,
     TResult Function(String codigoPostal)? codigoPostalCambiado,
@@ -1173,6 +1211,8 @@ class _$_SegundoApellidoCambiado implements _SegundoApellidoCambiado {
     required TResult Function(_SegundoApellidoCambiado value)
         segundoApellidoCambiado,
     required TResult Function(_GeneroCambiado value) generoCambiado,
+    required TResult Function(_NivelEducativoCambiado value)
+        nivelEducativoCambiado,
     required TResult Function(_DireccionCalleCambiado value)
         direccionCalleCambiado,
     required TResult Function(_TelefonoCambiado value) telefonoCambiado,
@@ -1197,6 +1237,7 @@ class _$_SegundoApellidoCambiado implements _SegundoApellidoCambiado {
     TResult Function(_PrimerApellidoCambiado value)? primerApellidoCambiado,
     TResult Function(_SegundoApellidoCambiado value)? segundoApellidoCambiado,
     TResult Function(_GeneroCambiado value)? generoCambiado,
+    TResult Function(_NivelEducativoCambiado value)? nivelEducativoCambiado,
     TResult Function(_DireccionCalleCambiado value)? direccionCalleCambiado,
     TResult Function(_TelefonoCambiado value)? telefonoCambiado,
     TResult Function(_CodigoPostalCambiado value)? codigoPostalCambiado,
@@ -1296,6 +1337,7 @@ class _$_GeneroCambiado implements _GeneroCambiado {
     required TResult Function(String primerApellido) primerApellidoCambiado,
     required TResult Function(String segundoApellido) segundoApellidoCambiado,
     required TResult Function(String genero) generoCambiado,
+    required TResult Function(String nivelEducativo) nivelEducativoCambiado,
     required TResult Function(String direccionCalle) direccionCalleCambiado,
     required TResult Function(String telefono) telefonoCambiado,
     required TResult Function(String codigoPostal) codigoPostalCambiado,
@@ -1316,6 +1358,7 @@ class _$_GeneroCambiado implements _GeneroCambiado {
     TResult Function(String primerApellido)? primerApellidoCambiado,
     TResult Function(String segundoApellido)? segundoApellidoCambiado,
     TResult Function(String genero)? generoCambiado,
+    TResult Function(String nivelEducativo)? nivelEducativoCambiado,
     TResult Function(String direccionCalle)? direccionCalleCambiado,
     TResult Function(String telefono)? telefonoCambiado,
     TResult Function(String codigoPostal)? codigoPostalCambiado,
@@ -1343,6 +1386,8 @@ class _$_GeneroCambiado implements _GeneroCambiado {
     required TResult Function(_SegundoApellidoCambiado value)
         segundoApellidoCambiado,
     required TResult Function(_GeneroCambiado value) generoCambiado,
+    required TResult Function(_NivelEducativoCambiado value)
+        nivelEducativoCambiado,
     required TResult Function(_DireccionCalleCambiado value)
         direccionCalleCambiado,
     required TResult Function(_TelefonoCambiado value) telefonoCambiado,
@@ -1367,6 +1412,7 @@ class _$_GeneroCambiado implements _GeneroCambiado {
     TResult Function(_PrimerApellidoCambiado value)? primerApellidoCambiado,
     TResult Function(_SegundoApellidoCambiado value)? segundoApellidoCambiado,
     TResult Function(_GeneroCambiado value)? generoCambiado,
+    TResult Function(_NivelEducativoCambiado value)? nivelEducativoCambiado,
     TResult Function(_DireccionCalleCambiado value)? direccionCalleCambiado,
     TResult Function(_TelefonoCambiado value)? telefonoCambiado,
     TResult Function(_CodigoPostalCambiado value)? codigoPostalCambiado,
@@ -1390,6 +1436,184 @@ abstract class _GeneroCambiado implements RegistroEvent {
   String get genero => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   _$GeneroCambiadoCopyWith<_GeneroCambiado> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$NivelEducativoCambiadoCopyWith<$Res> {
+  factory _$NivelEducativoCambiadoCopyWith(_NivelEducativoCambiado value,
+          $Res Function(_NivelEducativoCambiado) then) =
+      __$NivelEducativoCambiadoCopyWithImpl<$Res>;
+  $Res call({String nivelEducativo});
+}
+
+/// @nodoc
+class __$NivelEducativoCambiadoCopyWithImpl<$Res>
+    extends _$RegistroEventCopyWithImpl<$Res>
+    implements _$NivelEducativoCambiadoCopyWith<$Res> {
+  __$NivelEducativoCambiadoCopyWithImpl(_NivelEducativoCambiado _value,
+      $Res Function(_NivelEducativoCambiado) _then)
+      : super(_value, (v) => _then(v as _NivelEducativoCambiado));
+
+  @override
+  _NivelEducativoCambiado get _value => super._value as _NivelEducativoCambiado;
+
+  @override
+  $Res call({
+    Object? nivelEducativo = freezed,
+  }) {
+    return _then(_NivelEducativoCambiado(
+      nivelEducativo == freezed
+          ? _value.nivelEducativo
+          : nivelEducativo // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_NivelEducativoCambiado implements _NivelEducativoCambiado {
+  const _$_NivelEducativoCambiado(this.nivelEducativo);
+
+  @override
+  final String nivelEducativo;
+
+  @override
+  String toString() {
+    return 'RegistroEvent.nivelEducativoCambiado(nivelEducativo: $nivelEducativo)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _NivelEducativoCambiado &&
+            (identical(other.nivelEducativo, nivelEducativo) ||
+                const DeepCollectionEquality()
+                    .equals(other.nivelEducativo, nivelEducativo)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(nivelEducativo);
+
+  @JsonKey(ignore: true)
+  @override
+  _$NivelEducativoCambiadoCopyWith<_NivelEducativoCambiado> get copyWith =>
+      __$NivelEducativoCambiadoCopyWithImpl<_NivelEducativoCambiado>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String email) emailCambiado,
+    required TResult Function(String password) passwordCambiado,
+    required TResult Function(String primerNombre) primerNombreCambiado,
+    required TResult Function(String segundoNombre) segundoNombreCambiado,
+    required TResult Function(String primerApellido) primerApellidoCambiado,
+    required TResult Function(String segundoApellido) segundoApellidoCambiado,
+    required TResult Function(String genero) generoCambiado,
+    required TResult Function(String nivelEducativo) nivelEducativoCambiado,
+    required TResult Function(String direccionCalle) direccionCalleCambiado,
+    required TResult Function(String telefono) telefonoCambiado,
+    required TResult Function(String codigoPostal) codigoPostalCambiado,
+    required TResult Function(DateTime fechaNacimiento) fechaNacimientoCambiado,
+    required TResult Function() registrarConDatosBasicosPresionado,
+    required TResult Function() registrarConGooglePresionado,
+  }) {
+    return nivelEducativoCambiado(nivelEducativo);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String email)? emailCambiado,
+    TResult Function(String password)? passwordCambiado,
+    TResult Function(String primerNombre)? primerNombreCambiado,
+    TResult Function(String segundoNombre)? segundoNombreCambiado,
+    TResult Function(String primerApellido)? primerApellidoCambiado,
+    TResult Function(String segundoApellido)? segundoApellidoCambiado,
+    TResult Function(String genero)? generoCambiado,
+    TResult Function(String nivelEducativo)? nivelEducativoCambiado,
+    TResult Function(String direccionCalle)? direccionCalleCambiado,
+    TResult Function(String telefono)? telefonoCambiado,
+    TResult Function(String codigoPostal)? codigoPostalCambiado,
+    TResult Function(DateTime fechaNacimiento)? fechaNacimientoCambiado,
+    TResult Function()? registrarConDatosBasicosPresionado,
+    TResult Function()? registrarConGooglePresionado,
+    required TResult orElse(),
+  }) {
+    if (nivelEducativoCambiado != null) {
+      return nivelEducativoCambiado(nivelEducativo);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_EmailCambiado value) emailCambiado,
+    required TResult Function(_PasswordCambiado value) passwordCambiado,
+    required TResult Function(_PrimerNombreCambiado value) primerNombreCambiado,
+    required TResult Function(_SegundoNombreCambiado value)
+        segundoNombreCambiado,
+    required TResult Function(_PrimerApellidoCambiado value)
+        primerApellidoCambiado,
+    required TResult Function(_SegundoApellidoCambiado value)
+        segundoApellidoCambiado,
+    required TResult Function(_GeneroCambiado value) generoCambiado,
+    required TResult Function(_NivelEducativoCambiado value)
+        nivelEducativoCambiado,
+    required TResult Function(_DireccionCalleCambiado value)
+        direccionCalleCambiado,
+    required TResult Function(_TelefonoCambiado value) telefonoCambiado,
+    required TResult Function(_CodigoPostalCambiado value) codigoPostalCambiado,
+    required TResult Function(_FechaNacimientoCambiado value)
+        fechaNacimientoCambiado,
+    required TResult Function(_RegistrarConEmailYPasswortdPresionado value)
+        registrarConDatosBasicosPresionado,
+    required TResult Function(_RegistrarConGooglePresionado value)
+        registrarConGooglePresionado,
+  }) {
+    return nivelEducativoCambiado(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_EmailCambiado value)? emailCambiado,
+    TResult Function(_PasswordCambiado value)? passwordCambiado,
+    TResult Function(_PrimerNombreCambiado value)? primerNombreCambiado,
+    TResult Function(_SegundoNombreCambiado value)? segundoNombreCambiado,
+    TResult Function(_PrimerApellidoCambiado value)? primerApellidoCambiado,
+    TResult Function(_SegundoApellidoCambiado value)? segundoApellidoCambiado,
+    TResult Function(_GeneroCambiado value)? generoCambiado,
+    TResult Function(_NivelEducativoCambiado value)? nivelEducativoCambiado,
+    TResult Function(_DireccionCalleCambiado value)? direccionCalleCambiado,
+    TResult Function(_TelefonoCambiado value)? telefonoCambiado,
+    TResult Function(_CodigoPostalCambiado value)? codigoPostalCambiado,
+    TResult Function(_FechaNacimientoCambiado value)? fechaNacimientoCambiado,
+    TResult Function(_RegistrarConEmailYPasswortdPresionado value)?
+        registrarConDatosBasicosPresionado,
+    TResult Function(_RegistrarConGooglePresionado value)?
+        registrarConGooglePresionado,
+    required TResult orElse(),
+  }) {
+    if (nivelEducativoCambiado != null) {
+      return nivelEducativoCambiado(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _NivelEducativoCambiado implements RegistroEvent {
+  const factory _NivelEducativoCambiado(String nivelEducativo) =
+      _$_NivelEducativoCambiado;
+
+  String get nivelEducativo => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  _$NivelEducativoCambiadoCopyWith<_NivelEducativoCambiado> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1468,6 +1692,7 @@ class _$_DireccionCalleCambiado implements _DireccionCalleCambiado {
     required TResult Function(String primerApellido) primerApellidoCambiado,
     required TResult Function(String segundoApellido) segundoApellidoCambiado,
     required TResult Function(String genero) generoCambiado,
+    required TResult Function(String nivelEducativo) nivelEducativoCambiado,
     required TResult Function(String direccionCalle) direccionCalleCambiado,
     required TResult Function(String telefono) telefonoCambiado,
     required TResult Function(String codigoPostal) codigoPostalCambiado,
@@ -1488,6 +1713,7 @@ class _$_DireccionCalleCambiado implements _DireccionCalleCambiado {
     TResult Function(String primerApellido)? primerApellidoCambiado,
     TResult Function(String segundoApellido)? segundoApellidoCambiado,
     TResult Function(String genero)? generoCambiado,
+    TResult Function(String nivelEducativo)? nivelEducativoCambiado,
     TResult Function(String direccionCalle)? direccionCalleCambiado,
     TResult Function(String telefono)? telefonoCambiado,
     TResult Function(String codigoPostal)? codigoPostalCambiado,
@@ -1515,6 +1741,8 @@ class _$_DireccionCalleCambiado implements _DireccionCalleCambiado {
     required TResult Function(_SegundoApellidoCambiado value)
         segundoApellidoCambiado,
     required TResult Function(_GeneroCambiado value) generoCambiado,
+    required TResult Function(_NivelEducativoCambiado value)
+        nivelEducativoCambiado,
     required TResult Function(_DireccionCalleCambiado value)
         direccionCalleCambiado,
     required TResult Function(_TelefonoCambiado value) telefonoCambiado,
@@ -1539,6 +1767,7 @@ class _$_DireccionCalleCambiado implements _DireccionCalleCambiado {
     TResult Function(_PrimerApellidoCambiado value)? primerApellidoCambiado,
     TResult Function(_SegundoApellidoCambiado value)? segundoApellidoCambiado,
     TResult Function(_GeneroCambiado value)? generoCambiado,
+    TResult Function(_NivelEducativoCambiado value)? nivelEducativoCambiado,
     TResult Function(_DireccionCalleCambiado value)? direccionCalleCambiado,
     TResult Function(_TelefonoCambiado value)? telefonoCambiado,
     TResult Function(_CodigoPostalCambiado value)? codigoPostalCambiado,
@@ -1639,6 +1868,7 @@ class _$_TelefonoCambiado implements _TelefonoCambiado {
     required TResult Function(String primerApellido) primerApellidoCambiado,
     required TResult Function(String segundoApellido) segundoApellidoCambiado,
     required TResult Function(String genero) generoCambiado,
+    required TResult Function(String nivelEducativo) nivelEducativoCambiado,
     required TResult Function(String direccionCalle) direccionCalleCambiado,
     required TResult Function(String telefono) telefonoCambiado,
     required TResult Function(String codigoPostal) codigoPostalCambiado,
@@ -1659,6 +1889,7 @@ class _$_TelefonoCambiado implements _TelefonoCambiado {
     TResult Function(String primerApellido)? primerApellidoCambiado,
     TResult Function(String segundoApellido)? segundoApellidoCambiado,
     TResult Function(String genero)? generoCambiado,
+    TResult Function(String nivelEducativo)? nivelEducativoCambiado,
     TResult Function(String direccionCalle)? direccionCalleCambiado,
     TResult Function(String telefono)? telefonoCambiado,
     TResult Function(String codigoPostal)? codigoPostalCambiado,
@@ -1686,6 +1917,8 @@ class _$_TelefonoCambiado implements _TelefonoCambiado {
     required TResult Function(_SegundoApellidoCambiado value)
         segundoApellidoCambiado,
     required TResult Function(_GeneroCambiado value) generoCambiado,
+    required TResult Function(_NivelEducativoCambiado value)
+        nivelEducativoCambiado,
     required TResult Function(_DireccionCalleCambiado value)
         direccionCalleCambiado,
     required TResult Function(_TelefonoCambiado value) telefonoCambiado,
@@ -1710,6 +1943,7 @@ class _$_TelefonoCambiado implements _TelefonoCambiado {
     TResult Function(_PrimerApellidoCambiado value)? primerApellidoCambiado,
     TResult Function(_SegundoApellidoCambiado value)? segundoApellidoCambiado,
     TResult Function(_GeneroCambiado value)? generoCambiado,
+    TResult Function(_NivelEducativoCambiado value)? nivelEducativoCambiado,
     TResult Function(_DireccionCalleCambiado value)? direccionCalleCambiado,
     TResult Function(_TelefonoCambiado value)? telefonoCambiado,
     TResult Function(_CodigoPostalCambiado value)? codigoPostalCambiado,
@@ -1810,6 +2044,7 @@ class _$_CodigoPostalCambiado implements _CodigoPostalCambiado {
     required TResult Function(String primerApellido) primerApellidoCambiado,
     required TResult Function(String segundoApellido) segundoApellidoCambiado,
     required TResult Function(String genero) generoCambiado,
+    required TResult Function(String nivelEducativo) nivelEducativoCambiado,
     required TResult Function(String direccionCalle) direccionCalleCambiado,
     required TResult Function(String telefono) telefonoCambiado,
     required TResult Function(String codigoPostal) codigoPostalCambiado,
@@ -1830,6 +2065,7 @@ class _$_CodigoPostalCambiado implements _CodigoPostalCambiado {
     TResult Function(String primerApellido)? primerApellidoCambiado,
     TResult Function(String segundoApellido)? segundoApellidoCambiado,
     TResult Function(String genero)? generoCambiado,
+    TResult Function(String nivelEducativo)? nivelEducativoCambiado,
     TResult Function(String direccionCalle)? direccionCalleCambiado,
     TResult Function(String telefono)? telefonoCambiado,
     TResult Function(String codigoPostal)? codigoPostalCambiado,
@@ -1857,6 +2093,8 @@ class _$_CodigoPostalCambiado implements _CodigoPostalCambiado {
     required TResult Function(_SegundoApellidoCambiado value)
         segundoApellidoCambiado,
     required TResult Function(_GeneroCambiado value) generoCambiado,
+    required TResult Function(_NivelEducativoCambiado value)
+        nivelEducativoCambiado,
     required TResult Function(_DireccionCalleCambiado value)
         direccionCalleCambiado,
     required TResult Function(_TelefonoCambiado value) telefonoCambiado,
@@ -1881,6 +2119,7 @@ class _$_CodigoPostalCambiado implements _CodigoPostalCambiado {
     TResult Function(_PrimerApellidoCambiado value)? primerApellidoCambiado,
     TResult Function(_SegundoApellidoCambiado value)? segundoApellidoCambiado,
     TResult Function(_GeneroCambiado value)? generoCambiado,
+    TResult Function(_NivelEducativoCambiado value)? nivelEducativoCambiado,
     TResult Function(_DireccionCalleCambiado value)? direccionCalleCambiado,
     TResult Function(_TelefonoCambiado value)? telefonoCambiado,
     TResult Function(_CodigoPostalCambiado value)? codigoPostalCambiado,
@@ -1984,6 +2223,7 @@ class _$_FechaNacimientoCambiado implements _FechaNacimientoCambiado {
     required TResult Function(String primerApellido) primerApellidoCambiado,
     required TResult Function(String segundoApellido) segundoApellidoCambiado,
     required TResult Function(String genero) generoCambiado,
+    required TResult Function(String nivelEducativo) nivelEducativoCambiado,
     required TResult Function(String direccionCalle) direccionCalleCambiado,
     required TResult Function(String telefono) telefonoCambiado,
     required TResult Function(String codigoPostal) codigoPostalCambiado,
@@ -2004,6 +2244,7 @@ class _$_FechaNacimientoCambiado implements _FechaNacimientoCambiado {
     TResult Function(String primerApellido)? primerApellidoCambiado,
     TResult Function(String segundoApellido)? segundoApellidoCambiado,
     TResult Function(String genero)? generoCambiado,
+    TResult Function(String nivelEducativo)? nivelEducativoCambiado,
     TResult Function(String direccionCalle)? direccionCalleCambiado,
     TResult Function(String telefono)? telefonoCambiado,
     TResult Function(String codigoPostal)? codigoPostalCambiado,
@@ -2031,6 +2272,8 @@ class _$_FechaNacimientoCambiado implements _FechaNacimientoCambiado {
     required TResult Function(_SegundoApellidoCambiado value)
         segundoApellidoCambiado,
     required TResult Function(_GeneroCambiado value) generoCambiado,
+    required TResult Function(_NivelEducativoCambiado value)
+        nivelEducativoCambiado,
     required TResult Function(_DireccionCalleCambiado value)
         direccionCalleCambiado,
     required TResult Function(_TelefonoCambiado value) telefonoCambiado,
@@ -2055,6 +2298,7 @@ class _$_FechaNacimientoCambiado implements _FechaNacimientoCambiado {
     TResult Function(_PrimerApellidoCambiado value)? primerApellidoCambiado,
     TResult Function(_SegundoApellidoCambiado value)? segundoApellidoCambiado,
     TResult Function(_GeneroCambiado value)? generoCambiado,
+    TResult Function(_NivelEducativoCambiado value)? nivelEducativoCambiado,
     TResult Function(_DireccionCalleCambiado value)? direccionCalleCambiado,
     TResult Function(_TelefonoCambiado value)? telefonoCambiado,
     TResult Function(_CodigoPostalCambiado value)? codigoPostalCambiado,
@@ -2135,6 +2379,7 @@ class _$_RegistrarConEmailYPasswortdPresionado
     required TResult Function(String primerApellido) primerApellidoCambiado,
     required TResult Function(String segundoApellido) segundoApellidoCambiado,
     required TResult Function(String genero) generoCambiado,
+    required TResult Function(String nivelEducativo) nivelEducativoCambiado,
     required TResult Function(String direccionCalle) direccionCalleCambiado,
     required TResult Function(String telefono) telefonoCambiado,
     required TResult Function(String codigoPostal) codigoPostalCambiado,
@@ -2155,6 +2400,7 @@ class _$_RegistrarConEmailYPasswortdPresionado
     TResult Function(String primerApellido)? primerApellidoCambiado,
     TResult Function(String segundoApellido)? segundoApellidoCambiado,
     TResult Function(String genero)? generoCambiado,
+    TResult Function(String nivelEducativo)? nivelEducativoCambiado,
     TResult Function(String direccionCalle)? direccionCalleCambiado,
     TResult Function(String telefono)? telefonoCambiado,
     TResult Function(String codigoPostal)? codigoPostalCambiado,
@@ -2182,6 +2428,8 @@ class _$_RegistrarConEmailYPasswortdPresionado
     required TResult Function(_SegundoApellidoCambiado value)
         segundoApellidoCambiado,
     required TResult Function(_GeneroCambiado value) generoCambiado,
+    required TResult Function(_NivelEducativoCambiado value)
+        nivelEducativoCambiado,
     required TResult Function(_DireccionCalleCambiado value)
         direccionCalleCambiado,
     required TResult Function(_TelefonoCambiado value) telefonoCambiado,
@@ -2206,6 +2454,7 @@ class _$_RegistrarConEmailYPasswortdPresionado
     TResult Function(_PrimerApellidoCambiado value)? primerApellidoCambiado,
     TResult Function(_SegundoApellidoCambiado value)? segundoApellidoCambiado,
     TResult Function(_GeneroCambiado value)? generoCambiado,
+    TResult Function(_NivelEducativoCambiado value)? nivelEducativoCambiado,
     TResult Function(_DireccionCalleCambiado value)? direccionCalleCambiado,
     TResult Function(_TelefonoCambiado value)? telefonoCambiado,
     TResult Function(_CodigoPostalCambiado value)? codigoPostalCambiado,
@@ -2278,6 +2527,7 @@ class _$_RegistrarConGooglePresionado implements _RegistrarConGooglePresionado {
     required TResult Function(String primerApellido) primerApellidoCambiado,
     required TResult Function(String segundoApellido) segundoApellidoCambiado,
     required TResult Function(String genero) generoCambiado,
+    required TResult Function(String nivelEducativo) nivelEducativoCambiado,
     required TResult Function(String direccionCalle) direccionCalleCambiado,
     required TResult Function(String telefono) telefonoCambiado,
     required TResult Function(String codigoPostal) codigoPostalCambiado,
@@ -2298,6 +2548,7 @@ class _$_RegistrarConGooglePresionado implements _RegistrarConGooglePresionado {
     TResult Function(String primerApellido)? primerApellidoCambiado,
     TResult Function(String segundoApellido)? segundoApellidoCambiado,
     TResult Function(String genero)? generoCambiado,
+    TResult Function(String nivelEducativo)? nivelEducativoCambiado,
     TResult Function(String direccionCalle)? direccionCalleCambiado,
     TResult Function(String telefono)? telefonoCambiado,
     TResult Function(String codigoPostal)? codigoPostalCambiado,
@@ -2325,6 +2576,8 @@ class _$_RegistrarConGooglePresionado implements _RegistrarConGooglePresionado {
     required TResult Function(_SegundoApellidoCambiado value)
         segundoApellidoCambiado,
     required TResult Function(_GeneroCambiado value) generoCambiado,
+    required TResult Function(_NivelEducativoCambiado value)
+        nivelEducativoCambiado,
     required TResult Function(_DireccionCalleCambiado value)
         direccionCalleCambiado,
     required TResult Function(_TelefonoCambiado value) telefonoCambiado,
@@ -2349,6 +2602,7 @@ class _$_RegistrarConGooglePresionado implements _RegistrarConGooglePresionado {
     TResult Function(_PrimerApellidoCambiado value)? primerApellidoCambiado,
     TResult Function(_SegundoApellidoCambiado value)? segundoApellidoCambiado,
     TResult Function(_GeneroCambiado value)? generoCambiado,
+    TResult Function(_NivelEducativoCambiado value)? nivelEducativoCambiado,
     TResult Function(_DireccionCalleCambiado value)? direccionCalleCambiado,
     TResult Function(_TelefonoCambiado value)? telefonoCambiado,
     TResult Function(_CodigoPostalCambiado value)? codigoPostalCambiado,

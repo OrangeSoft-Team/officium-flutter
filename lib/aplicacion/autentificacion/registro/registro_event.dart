@@ -21,6 +21,9 @@ class RegistroEvent with _$RegistroEvent {
 
   const factory RegistroEvent.generoCambiado(String genero) = _GeneroCambiado;
 
+  const factory RegistroEvent.nivelEducativoCambiado(String nivelEducativo) =
+      _NivelEducativoCambiado;
+
   const factory RegistroEvent.direccionCalleCambiado(String direccionCalle) =
       _DireccionCalleCambiado;
 

@@ -12,6 +12,7 @@ import 'package:officium_flutter/dominio/core/entidades/empleado.dart';
 import 'package:officium_flutter/dominio/core/value_objects/empleado/codigo_postal.dart';
 import 'package:officium_flutter/dominio/core/value_objects/empleado/direccion_calle.dart';
 import 'package:officium_flutter/dominio/core/value_objects/empleado/fecha_nacimiento.dart';
+import 'package:officium_flutter/dominio/core/value_objects/empleado/nivel_educativo.dart';
 import 'package:officium_flutter/dominio/core/value_objects/empleado/numero_telefonico.dart';
 import 'package:officium_flutter/dominio/core/value_objects/empleado/primer_apellido.dart';
 import 'package:officium_flutter/dominio/core/value_objects/empleado/primer_nombre.dart';
@@ -72,6 +73,14 @@ class RegistroBloc extends Bloc<RegistroEvent, RegistroState> {
         yield state.copyWith(
           empleado: state.empleado.copyWith(
             segundoApellido: SegundoApellido(e.segundoApellido),
+          ),
+          opcionDeErrorOExitoDeRegistro: none(),
+        );
+      },
+      nivelEducativoCambiado: (e) async* {
+        yield state.copyWith(
+          empleado: state.empleado.copyWith(
+            nivelEducativo: NivelEducativo(e.nivelEducativo),
           ),
           opcionDeErrorOExitoDeRegistro: none(),
         );

@@ -11,6 +11,7 @@ _$_RespuestaInicioSesionEmpleadoDTO
   return _$_RespuestaInicioSesionEmpleadoDTO(
     primerNombre: json['primerNombre'] as String,
     primerApellido: json['primerApellido'] as String,
+    uid: json['uid'] as String,
   );
 }
 
@@ -19,4 +20,5 @@ Map<String, dynamic> _$_$_RespuestaInicioSesionEmpleadoDTOToJson(
     <String, dynamic>{
       'primerNombre': instance.primerNombre,
       'primerApellido': instance.primerApellido,
+      'uid': instance.uid,
     };

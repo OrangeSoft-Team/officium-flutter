@@ -13,6 +13,7 @@ class FormularioRegistro extends StatefulWidget {
 
 class _FormularioRegistroState extends State<FormularioRegistro> {
   String _generoSeleccionado = 'masculino';
+  String _nivelEducativoSeleccionado = 'ninguno';
   final TextEditingController _inputFieldDateController =
       TextEditingController();
   DateTime _fecha = DateTime.now();
@@ -20,7 +21,17 @@ class _FormularioRegistroState extends State<FormularioRegistro> {
   final TextEditingController _confirmPass = TextEditingController();
   ScrollController scrollController = new ScrollController();
 
-  final List<String> _generos = ['masculino', 'femenino'];
+  final List<String> _generos = ['masculino', 'femenino', 'otro'];
+  final List<String> _nivelEducativo = [
+    'ninguno',
+    'primaria',
+    'secundaria',
+    'tecnico',
+    'pregrado',
+    'postgrado',
+    'doctorado',
+    'master'
+  ];
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<RegistroBloc, RegistroState>(
@@ -83,6 +94,8 @@ class _FormularioRegistroState extends State<FormularioRegistro> {
               _segundoApellidoCampo(context),
               const Divider(),
               _generoCampo(context),
+              const Divider(),
+              _nivelEducativoCampo(context),
               const Divider(),
               _direccionCampo(context),
               const Divider(),
@@ -299,7 +312,7 @@ class _FormularioRegistroState extends State<FormularioRegistro> {
         Icon(_generoSeleccionado == 'masculino' ? Icons.male : Icons.female),
         // SizedBox(width: 30.0),
         DropdownButton(
-          items: _getOpcionesDropdown(),
+          items: _getOpcionesDropdown(_generos),
           value: _generoSeleccionado,
           onChanged: (opt) {
             context
@@ -314,13 +327,39 @@ class _FormularioRegistroState extends State<FormularioRegistro> {
     );
   }
 
-  List<DropdownMenuItem<String>> _getOpcionesDropdown() {
-    final List<DropdownMenuItem<String>> lista = [];
+  Widget _nivelEducativoCampo(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+        Text(
+          'Seleccione su nivel educativo',
+          style:
+              TextStyle(fontSize: 16, color: Theme.of(context).iconTheme.color),
+        ),
+        const SizedBox(width: 10),
+        // SizedBox(width: 30.0),
+        DropdownButton(
+          items: _getOpcionesDropdown(_nivelEducativo),
+          value: _nivelEducativoSeleccionado,
+          onChanged: (opt) {
+            context.read<RegistroBloc>().add(
+                RegistroEvent.nivelEducativoCambiado(
+                    (opt as String).toUpperCase()));
+            setState(() {
+              _nivelEducativoSeleccionado = opt;
+            });
+          },
+        )
+      ],
+    );
+  }
 
-    for (final genero in _generos) {
+  List<DropdownMenuItem<String>> _getOpcionesDropdown(List<String> opciones) {
+    final List<DropdownMenuItem<String>> lista = [];
+    for (final opcion in opciones) {
       lista.add(DropdownMenuItem(
-        value: genero.toLowerCase(),
-        child: Text(genero.toUpperCase()),
+        value: opcion.toLowerCase(),
+        child: Text(opcion.toUpperCase()),
       ));
     }
 

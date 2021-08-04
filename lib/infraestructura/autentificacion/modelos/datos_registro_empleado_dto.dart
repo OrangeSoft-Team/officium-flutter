@@ -3,7 +3,7 @@ import 'package:intl/intl.dart';
 part 'datos_registro_empleado_dto.freezed.dart';
 part 'datos_registro_empleado_dto.g.dart';
 
-final formatoFecha = DateFormat("dd/MM/yyyy");//OPTIM
+final formatoFecha = DateFormat("dd/MM/yyyy"); //OPTIM
 
 @freezed
 abstract class DatosRegistroEmpleadoDTO implements _$DatosRegistroEmpleadoDTO {
@@ -14,11 +14,11 @@ abstract class DatosRegistroEmpleadoDTO implements _$DatosRegistroEmpleadoDTO {
     required String token,
     required String primerNombre,
     String? segundoNombre,
-    required  String primerApellido,
+    required String primerApellido,
     String? segundoApellido,
     required String genero,
     required String nivelEducativo,
-    required  String numeroTelefonico,
+    required String numeroTelefonico,
     required String fechaNacimiento,
     required String codigoPostal,
     required String calleUno,
