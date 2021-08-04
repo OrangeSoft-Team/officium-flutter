@@ -16,10 +16,9 @@ final _privateConstructorUsedError = UnsupportedError(
 class _$ConfirmarPropuestaEntrevistaEventTearOff {
   const _$ConfirmarPropuestaEntrevistaEventTearOff();
 
-  _EntrevistaConfirmada entrevistaConfirmada(
-      Identificador uuidPostulacionOfertaLabioral) {
+  _EntrevistaConfirmada entrevistaConfirmada(Identificador uuidEntrevista) {
     return _EntrevistaConfirmada(
-      uuidPostulacionOfertaLabioral,
+      uuidEntrevista,
     );
   }
 }
@@ -30,19 +29,17 @@ const $ConfirmarPropuestaEntrevistaEvent =
 
 /// @nodoc
 mixin _$ConfirmarPropuestaEntrevistaEvent {
-  Identificador get uuidPostulacionOfertaLabioral =>
-      throw _privateConstructorUsedError;
+  Identificador get uuidEntrevista => throw _privateConstructorUsedError;
 
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(Identificador uuidPostulacionOfertaLabioral)
+    required TResult Function(Identificador uuidEntrevista)
         entrevistaConfirmada,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(Identificador uuidPostulacionOfertaLabioral)?
-        entrevistaConfirmada,
+    TResult Function(Identificador uuidEntrevista)? entrevistaConfirmada,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -69,7 +66,7 @@ abstract class $ConfirmarPropuestaEntrevistaEventCopyWith<$Res> {
           ConfirmarPropuestaEntrevistaEvent value,
           $Res Function(ConfirmarPropuestaEntrevistaEvent) then) =
       _$ConfirmarPropuestaEntrevistaEventCopyWithImpl<$Res>;
-  $Res call({Identificador uuidPostulacionOfertaLabioral});
+  $Res call({Identificador uuidEntrevista});
 }
 
 /// @nodoc
@@ -83,12 +80,12 @@ class _$ConfirmarPropuestaEntrevistaEventCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? uuidPostulacionOfertaLabioral = freezed,
+    Object? uuidEntrevista = freezed,
   }) {
     return _then(_value.copyWith(
-      uuidPostulacionOfertaLabioral: uuidPostulacionOfertaLabioral == freezed
-          ? _value.uuidPostulacionOfertaLabioral
-          : uuidPostulacionOfertaLabioral // ignore: cast_nullable_to_non_nullable
+      uuidEntrevista: uuidEntrevista == freezed
+          ? _value.uuidEntrevista
+          : uuidEntrevista // ignore: cast_nullable_to_non_nullable
               as Identificador,
     ));
   }
@@ -101,7 +98,7 @@ abstract class _$EntrevistaConfirmadaCopyWith<$Res>
           $Res Function(_EntrevistaConfirmada) then) =
       __$EntrevistaConfirmadaCopyWithImpl<$Res>;
   @override
-  $Res call({Identificador uuidPostulacionOfertaLabioral});
+  $Res call({Identificador uuidEntrevista});
 }
 
 /// @nodoc
@@ -117,12 +114,12 @@ class __$EntrevistaConfirmadaCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? uuidPostulacionOfertaLabioral = freezed,
+    Object? uuidEntrevista = freezed,
   }) {
     return _then(_EntrevistaConfirmada(
-      uuidPostulacionOfertaLabioral == freezed
-          ? _value.uuidPostulacionOfertaLabioral
-          : uuidPostulacionOfertaLabioral // ignore: cast_nullable_to_non_nullable
+      uuidEntrevista == freezed
+          ? _value.uuidEntrevista
+          : uuidEntrevista // ignore: cast_nullable_to_non_nullable
               as Identificador,
     ));
   }
@@ -131,31 +128,29 @@ class __$EntrevistaConfirmadaCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_EntrevistaConfirmada implements _EntrevistaConfirmada {
-  const _$_EntrevistaConfirmada(this.uuidPostulacionOfertaLabioral);
+  const _$_EntrevistaConfirmada(this.uuidEntrevista);
 
   @override
-  final Identificador uuidPostulacionOfertaLabioral;
+  final Identificador uuidEntrevista;
 
   @override
   String toString() {
-    return 'ConfirmarPropuestaEntrevistaEvent.entrevistaConfirmada(uuidPostulacionOfertaLabioral: $uuidPostulacionOfertaLabioral)';
+    return 'ConfirmarPropuestaEntrevistaEvent.entrevistaConfirmada(uuidEntrevista: $uuidEntrevista)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _EntrevistaConfirmada &&
-            (identical(other.uuidPostulacionOfertaLabioral,
-                    uuidPostulacionOfertaLabioral) ||
-                const DeepCollectionEquality().equals(
-                    other.uuidPostulacionOfertaLabioral,
-                    uuidPostulacionOfertaLabioral)));
+            (identical(other.uuidEntrevista, uuidEntrevista) ||
+                const DeepCollectionEquality()
+                    .equals(other.uuidEntrevista, uuidEntrevista)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(uuidPostulacionOfertaLabioral);
+      const DeepCollectionEquality().hash(uuidEntrevista);
 
   @JsonKey(ignore: true)
   @override
@@ -166,21 +161,20 @@ class _$_EntrevistaConfirmada implements _EntrevistaConfirmada {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(Identificador uuidPostulacionOfertaLabioral)
+    required TResult Function(Identificador uuidEntrevista)
         entrevistaConfirmada,
   }) {
-    return entrevistaConfirmada(uuidPostulacionOfertaLabioral);
+    return entrevistaConfirmada(uuidEntrevista);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(Identificador uuidPostulacionOfertaLabioral)?
-        entrevistaConfirmada,
+    TResult Function(Identificador uuidEntrevista)? entrevistaConfirmada,
     required TResult orElse(),
   }) {
     if (entrevistaConfirmada != null) {
-      return entrevistaConfirmada(uuidPostulacionOfertaLabioral);
+      return entrevistaConfirmada(uuidEntrevista);
     }
     return orElse();
   }
@@ -208,12 +202,11 @@ class _$_EntrevistaConfirmada implements _EntrevistaConfirmada {
 
 abstract class _EntrevistaConfirmada
     implements ConfirmarPropuestaEntrevistaEvent {
-  const factory _EntrevistaConfirmada(
-      Identificador uuidPostulacionOfertaLabioral) = _$_EntrevistaConfirmada;
+  const factory _EntrevistaConfirmada(Identificador uuidEntrevista) =
+      _$_EntrevistaConfirmada;
 
   @override
-  Identificador get uuidPostulacionOfertaLabioral =>
-      throw _privateConstructorUsedError;
+  Identificador get uuidEntrevista => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$EntrevistaConfirmadaCopyWith<_EntrevistaConfirmada> get copyWith =>

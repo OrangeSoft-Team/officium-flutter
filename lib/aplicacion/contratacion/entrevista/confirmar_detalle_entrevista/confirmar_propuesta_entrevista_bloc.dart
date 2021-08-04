@@ -24,7 +24,7 @@ class ConfirmarPropuestaEntrevistaBloc extends Bloc<
     yield const ConfirmarPropuestaEntrevistaState.accionEnProgreso();
     final Either<ContratacionExcepcion, Unit> posibleError =
         await iContratacionesRepositorio
-            .confirmarPropuestaEntrevista(event.uuidPostulacionOfertaLabioral);
+            .confirmarPropuestaEntrevista(event.uuidEntrevista);
     posibleError.fold(
         (excepcion) =>
             ConfirmarPropuestaEntrevistaState.falloConfirmarPropuestaEntrevista(

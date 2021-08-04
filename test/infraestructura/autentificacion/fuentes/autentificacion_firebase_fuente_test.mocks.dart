@@ -106,7 +106,7 @@ class MockHttpClient extends _i1.Mock implements _i2.HttpClient {
       super.noSuchMethod(Invocation.setter(#userAgent, _userAgent),
           returnValueForMissingStub: null);
   @override
-  set authenticate(_i4.Future<bool> Function(Uri, String, String)? f) =>
+  set authenticate(_i4.Future<bool> Function(Uri, String, String?)? f) =>
       super.noSuchMethod(Invocation.setter(#authenticate, f),
           returnValueForMissingStub: null);
   @override
@@ -115,7 +115,7 @@ class MockHttpClient extends _i1.Mock implements _i2.HttpClient {
           returnValueForMissingStub: null);
   @override
   set authenticateProxy(
-          _i4.Future<bool> Function(String, int, String, String)? f) =>
+          _i4.Future<bool> Function(String, int, String, String?)? f) =>
       super.noSuchMethod(Invocation.setter(#authenticateProxy, f),
           returnValueForMissingStub: null);
   @override

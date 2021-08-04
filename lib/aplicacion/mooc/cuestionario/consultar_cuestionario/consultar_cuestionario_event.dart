@@ -2,5 +2,6 @@ part of 'consultar_cuestionario_bloc.dart';
 
 @freezed
 class ConsultarCuestionarioEvent with _$ConsultarCuestionarioEvent {
-  const factory ConsultarCuestionarioEvent.started() = _Started;
+  const factory ConsultarCuestionarioEvent.consultarCuestionario(
+      Identificador uuidCurso) = _ConsultarCuestionario;
 }
