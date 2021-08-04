@@ -23,12 +23,6 @@ abstract class CuestionarioCursoDTO implements _$CuestionarioCursoDTO {
 
   factory CuestionarioCursoDTO.fromJson(Map<String, dynamic> json) =>
       _$CuestionarioCursoDTOFromJson(json);
-  
-  /*factory CuestionarioCursoDTO.fromDomain(CuestionarioCurso cuestionario) {
-    return CuestionarioCursoDTO(
-     
-    );
-  }*/
 
   Cuestionario toDomain() {
     final List<Pregunta> parsedPreguntas = [];

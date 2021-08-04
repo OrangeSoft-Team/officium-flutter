@@ -18,12 +18,10 @@ abstract class LeccionListaDTO implements _$LeccionListaDTO {
   factory LeccionListaDTO.fromJson(Map<String, dynamic> json) =>
       _$LeccionListaDTOFromJson(json);
   
-  /*Leccion toDomain() {
+  Leccion toDomain() {
     return Leccion(
      uuid: Identificador.fromUniqueString(uuid),
      tituloLeccion: TituloLeccion(titulo),
-     contenidoLeccion: ContenidoLeccion(),
-     descripcionLeccion: DescripcionLeccion()
     );
-  }*/
+  }
 }

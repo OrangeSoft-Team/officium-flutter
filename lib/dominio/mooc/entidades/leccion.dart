@@ -13,7 +13,7 @@ abstract class Leccion with _$Leccion {
   const factory Leccion({
     required Identificador uuid,
     required TituloLeccion tituloLeccion,
-    required DescripcionLeccion descripcionLeccion,
-    required ContenidoLeccion contenidoLeccion,
+    DescripcionLeccion? descripcionLeccion,
+    ContenidoLeccion? contenidoLeccion,
   }) = _Leccion;
 }

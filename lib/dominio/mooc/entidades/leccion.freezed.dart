@@ -19,8 +19,8 @@ class _$LeccionTearOff {
   _Leccion call(
       {required Identificador uuid,
       required TituloLeccion tituloLeccion,
-      required DescripcionLeccion descripcionLeccion,
-      required ContenidoLeccion contenidoLeccion}) {
+      DescripcionLeccion? descripcionLeccion,
+      ContenidoLeccion? contenidoLeccion}) {
     return _Leccion(
       uuid: uuid,
       tituloLeccion: tituloLeccion,
@@ -37,9 +37,9 @@ const $Leccion = _$LeccionTearOff();
 mixin _$Leccion {
   Identificador get uuid => throw _privateConstructorUsedError;
   TituloLeccion get tituloLeccion => throw _privateConstructorUsedError;
-  DescripcionLeccion get descripcionLeccion =>
+  DescripcionLeccion? get descripcionLeccion =>
       throw _privateConstructorUsedError;
-  ContenidoLeccion get contenidoLeccion => throw _privateConstructorUsedError;
+  ContenidoLeccion? get contenidoLeccion => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $LeccionCopyWith<Leccion> get copyWith => throw _privateConstructorUsedError;
@@ -52,8 +52,8 @@ abstract class $LeccionCopyWith<$Res> {
   $Res call(
       {Identificador uuid,
       TituloLeccion tituloLeccion,
-      DescripcionLeccion descripcionLeccion,
-      ContenidoLeccion contenidoLeccion});
+      DescripcionLeccion? descripcionLeccion,
+      ContenidoLeccion? contenidoLeccion});
 }
 
 /// @nodoc
@@ -83,11 +83,11 @@ class _$LeccionCopyWithImpl<$Res> implements $LeccionCopyWith<$Res> {
       descripcionLeccion: descripcionLeccion == freezed
           ? _value.descripcionLeccion
           : descripcionLeccion // ignore: cast_nullable_to_non_nullable
-              as DescripcionLeccion,
+              as DescripcionLeccion?,
       contenidoLeccion: contenidoLeccion == freezed
           ? _value.contenidoLeccion
           : contenidoLeccion // ignore: cast_nullable_to_non_nullable
-              as ContenidoLeccion,
+              as ContenidoLeccion?,
     ));
   }
 }
@@ -100,8 +100,8 @@ abstract class _$LeccionCopyWith<$Res> implements $LeccionCopyWith<$Res> {
   $Res call(
       {Identificador uuid,
       TituloLeccion tituloLeccion,
-      DescripcionLeccion descripcionLeccion,
-      ContenidoLeccion contenidoLeccion});
+      DescripcionLeccion? descripcionLeccion,
+      ContenidoLeccion? contenidoLeccion});
 }
 
 /// @nodoc
@@ -132,11 +132,11 @@ class __$LeccionCopyWithImpl<$Res> extends _$LeccionCopyWithImpl<$Res>
       descripcionLeccion: descripcionLeccion == freezed
           ? _value.descripcionLeccion
           : descripcionLeccion // ignore: cast_nullable_to_non_nullable
-              as DescripcionLeccion,
+              as DescripcionLeccion?,
       contenidoLeccion: contenidoLeccion == freezed
           ? _value.contenidoLeccion
           : contenidoLeccion // ignore: cast_nullable_to_non_nullable
-              as ContenidoLeccion,
+              as ContenidoLeccion?,
     ));
   }
 }
@@ -148,17 +148,17 @@ class _$_Leccion implements _Leccion {
   const _$_Leccion(
       {required this.uuid,
       required this.tituloLeccion,
-      required this.descripcionLeccion,
-      required this.contenidoLeccion});
+      this.descripcionLeccion,
+      this.contenidoLeccion});
 
   @override
   final Identificador uuid;
   @override
   final TituloLeccion tituloLeccion;
   @override
-  final DescripcionLeccion descripcionLeccion;
+  final DescripcionLeccion? descripcionLeccion;
   @override
-  final ContenidoLeccion contenidoLeccion;
+  final ContenidoLeccion? contenidoLeccion;
 
   @override
   String toString() {
@@ -200,18 +200,18 @@ abstract class _Leccion implements Leccion, IEntidad {
   const factory _Leccion(
       {required Identificador uuid,
       required TituloLeccion tituloLeccion,
-      required DescripcionLeccion descripcionLeccion,
-      required ContenidoLeccion contenidoLeccion}) = _$_Leccion;
+      DescripcionLeccion? descripcionLeccion,
+      ContenidoLeccion? contenidoLeccion}) = _$_Leccion;
 
   @override
   Identificador get uuid => throw _privateConstructorUsedError;
   @override
   TituloLeccion get tituloLeccion => throw _privateConstructorUsedError;
   @override
-  DescripcionLeccion get descripcionLeccion =>
+  DescripcionLeccion? get descripcionLeccion =>
       throw _privateConstructorUsedError;
   @override
-  ContenidoLeccion get contenidoLeccion => throw _privateConstructorUsedError;
+  ContenidoLeccion? get contenidoLeccion => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$LeccionCopyWith<_Leccion> get copyWith =>
