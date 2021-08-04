@@ -31,8 +31,10 @@ abstract class PostulacionOfertaLaboralDTO
             .getOrCrash());
   }
 
+//Candidata a eliminar? Porque obliga a poner atributos en opcional en la entidad de dominio
   PostulacionOfertaLaboral toDomain() {
     return PostulacionOfertaLaboral(
+        uuid: Identificador(),
         uuidOfertaLaboral: Identificador.fromUniqueString(uuidOfertaLaboral),
         uuidEmpleado: Identificador.fromUniqueString(uuidEmpleado),
         uuidEmpresa: Identificador.fromUniqueString(uuidEmpresa),

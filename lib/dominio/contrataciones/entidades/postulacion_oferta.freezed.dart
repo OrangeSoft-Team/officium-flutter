@@ -17,15 +17,23 @@ class _$PostulacionOfertaLaboralTearOff {
   const _$PostulacionOfertaLaboralTearOff();
 
   _PostulacionOfertaLaboral call(
-      {required Identificador uuidOfertaLaboral,
+      {required Identificador uuid,
+      required Identificador uuidOfertaLaboral,
       required Identificador uuidEmpleado,
       required Identificador uuidEmpresa,
+      TituloOfertaLaboral? tituloOferta,
+      Cargo? cargoOferta,
+      NombreEmpresa? nombreEmpresa,
       ComentarioPostulacionOfertaLaboral? comentarioPostulacionOfertaLaboral,
       EstadoPostulacionOfertaLaboral? estado}) {
     return _PostulacionOfertaLaboral(
+      uuid: uuid,
       uuidOfertaLaboral: uuidOfertaLaboral,
       uuidEmpleado: uuidEmpleado,
       uuidEmpresa: uuidEmpresa,
+      tituloOferta: tituloOferta,
+      cargoOferta: cargoOferta,
+      nombreEmpresa: nombreEmpresa,
       comentarioPostulacionOfertaLaboral: comentarioPostulacionOfertaLaboral,
       estado: estado,
     );
@@ -37,9 +45,13 @@ const $PostulacionOfertaLaboral = _$PostulacionOfertaLaboralTearOff();
 
 /// @nodoc
 mixin _$PostulacionOfertaLaboral {
+  Identificador get uuid => throw _privateConstructorUsedError;
   Identificador get uuidOfertaLaboral => throw _privateConstructorUsedError;
   Identificador get uuidEmpleado => throw _privateConstructorUsedError;
   Identificador get uuidEmpresa => throw _privateConstructorUsedError;
+  TituloOfertaLaboral? get tituloOferta => throw _privateConstructorUsedError;
+  Cargo? get cargoOferta => throw _privateConstructorUsedError;
+  NombreEmpresa? get nombreEmpresa => throw _privateConstructorUsedError;
   ComentarioPostulacionOfertaLaboral? get comentarioPostulacionOfertaLaboral =>
       throw _privateConstructorUsedError;
   EstadoPostulacionOfertaLaboral? get estado =>
@@ -56,9 +68,13 @@ abstract class $PostulacionOfertaLaboralCopyWith<$Res> {
           $Res Function(PostulacionOfertaLaboral) then) =
       _$PostulacionOfertaLaboralCopyWithImpl<$Res>;
   $Res call(
-      {Identificador uuidOfertaLaboral,
+      {Identificador uuid,
+      Identificador uuidOfertaLaboral,
       Identificador uuidEmpleado,
       Identificador uuidEmpresa,
+      TituloOfertaLaboral? tituloOferta,
+      Cargo? cargoOferta,
+      NombreEmpresa? nombreEmpresa,
       ComentarioPostulacionOfertaLaboral? comentarioPostulacionOfertaLaboral,
       EstadoPostulacionOfertaLaboral? estado});
 }
@@ -74,13 +90,21 @@ class _$PostulacionOfertaLaboralCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object? uuid = freezed,
     Object? uuidOfertaLaboral = freezed,
     Object? uuidEmpleado = freezed,
     Object? uuidEmpresa = freezed,
+    Object? tituloOferta = freezed,
+    Object? cargoOferta = freezed,
+    Object? nombreEmpresa = freezed,
     Object? comentarioPostulacionOfertaLaboral = freezed,
     Object? estado = freezed,
   }) {
     return _then(_value.copyWith(
+      uuid: uuid == freezed
+          ? _value.uuid
+          : uuid // ignore: cast_nullable_to_non_nullable
+              as Identificador,
       uuidOfertaLaboral: uuidOfertaLaboral == freezed
           ? _value.uuidOfertaLaboral
           : uuidOfertaLaboral // ignore: cast_nullable_to_non_nullable
@@ -93,6 +117,18 @@ class _$PostulacionOfertaLaboralCopyWithImpl<$Res>
           ? _value.uuidEmpresa
           : uuidEmpresa // ignore: cast_nullable_to_non_nullable
               as Identificador,
+      tituloOferta: tituloOferta == freezed
+          ? _value.tituloOferta
+          : tituloOferta // ignore: cast_nullable_to_non_nullable
+              as TituloOfertaLaboral?,
+      cargoOferta: cargoOferta == freezed
+          ? _value.cargoOferta
+          : cargoOferta // ignore: cast_nullable_to_non_nullable
+              as Cargo?,
+      nombreEmpresa: nombreEmpresa == freezed
+          ? _value.nombreEmpresa
+          : nombreEmpresa // ignore: cast_nullable_to_non_nullable
+              as NombreEmpresa?,
       comentarioPostulacionOfertaLaboral: comentarioPostulacionOfertaLaboral ==
               freezed
           ? _value.comentarioPostulacionOfertaLaboral
@@ -114,9 +150,13 @@ abstract class _$PostulacionOfertaLaboralCopyWith<$Res>
       __$PostulacionOfertaLaboralCopyWithImpl<$Res>;
   @override
   $Res call(
-      {Identificador uuidOfertaLaboral,
+      {Identificador uuid,
+      Identificador uuidOfertaLaboral,
       Identificador uuidEmpleado,
       Identificador uuidEmpresa,
+      TituloOfertaLaboral? tituloOferta,
+      Cargo? cargoOferta,
+      NombreEmpresa? nombreEmpresa,
       ComentarioPostulacionOfertaLaboral? comentarioPostulacionOfertaLaboral,
       EstadoPostulacionOfertaLaboral? estado});
 }
@@ -135,13 +175,21 @@ class __$PostulacionOfertaLaboralCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object? uuid = freezed,
     Object? uuidOfertaLaboral = freezed,
     Object? uuidEmpleado = freezed,
     Object? uuidEmpresa = freezed,
+    Object? tituloOferta = freezed,
+    Object? cargoOferta = freezed,
+    Object? nombreEmpresa = freezed,
     Object? comentarioPostulacionOfertaLaboral = freezed,
     Object? estado = freezed,
   }) {
     return _then(_PostulacionOfertaLaboral(
+      uuid: uuid == freezed
+          ? _value.uuid
+          : uuid // ignore: cast_nullable_to_non_nullable
+              as Identificador,
       uuidOfertaLaboral: uuidOfertaLaboral == freezed
           ? _value.uuidOfertaLaboral
           : uuidOfertaLaboral // ignore: cast_nullable_to_non_nullable
@@ -154,6 +202,18 @@ class __$PostulacionOfertaLaboralCopyWithImpl<$Res>
           ? _value.uuidEmpresa
           : uuidEmpresa // ignore: cast_nullable_to_non_nullable
               as Identificador,
+      tituloOferta: tituloOferta == freezed
+          ? _value.tituloOferta
+          : tituloOferta // ignore: cast_nullable_to_non_nullable
+              as TituloOfertaLaboral?,
+      cargoOferta: cargoOferta == freezed
+          ? _value.cargoOferta
+          : cargoOferta // ignore: cast_nullable_to_non_nullable
+              as Cargo?,
+      nombreEmpresa: nombreEmpresa == freezed
+          ? _value.nombreEmpresa
+          : nombreEmpresa // ignore: cast_nullable_to_non_nullable
+              as NombreEmpresa?,
       comentarioPostulacionOfertaLaboral: comentarioPostulacionOfertaLaboral ==
               freezed
           ? _value.comentarioPostulacionOfertaLaboral
@@ -169,14 +229,22 @@ class __$PostulacionOfertaLaboralCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_PostulacionOfertaLaboral implements _PostulacionOfertaLaboral {
+@Implements(IEntidad)
+class _$_PostulacionOfertaLaboral extends _PostulacionOfertaLaboral {
   const _$_PostulacionOfertaLaboral(
-      {required this.uuidOfertaLaboral,
+      {required this.uuid,
+      required this.uuidOfertaLaboral,
       required this.uuidEmpleado,
       required this.uuidEmpresa,
+      this.tituloOferta,
+      this.cargoOferta,
+      this.nombreEmpresa,
       this.comentarioPostulacionOfertaLaboral,
-      this.estado});
+      this.estado})
+      : super._();
 
+  @override
+  final Identificador uuid;
   @override
   final Identificador uuidOfertaLaboral;
   @override
@@ -184,19 +252,27 @@ class _$_PostulacionOfertaLaboral implements _PostulacionOfertaLaboral {
   @override
   final Identificador uuidEmpresa;
   @override
+  final TituloOfertaLaboral? tituloOferta;
+  @override
+  final Cargo? cargoOferta;
+  @override
+  final NombreEmpresa? nombreEmpresa;
+  @override
   final ComentarioPostulacionOfertaLaboral? comentarioPostulacionOfertaLaboral;
   @override
   final EstadoPostulacionOfertaLaboral? estado;
 
   @override
   String toString() {
-    return 'PostulacionOfertaLaboral(uuidOfertaLaboral: $uuidOfertaLaboral, uuidEmpleado: $uuidEmpleado, uuidEmpresa: $uuidEmpresa, comentarioPostulacionOfertaLaboral: $comentarioPostulacionOfertaLaboral, estado: $estado)';
+    return 'PostulacionOfertaLaboral(uuid: $uuid, uuidOfertaLaboral: $uuidOfertaLaboral, uuidEmpleado: $uuidEmpleado, uuidEmpresa: $uuidEmpresa, tituloOferta: $tituloOferta, cargoOferta: $cargoOferta, nombreEmpresa: $nombreEmpresa, comentarioPostulacionOfertaLaboral: $comentarioPostulacionOfertaLaboral, estado: $estado)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _PostulacionOfertaLaboral &&
+            (identical(other.uuid, uuid) ||
+                const DeepCollectionEquality().equals(other.uuid, uuid)) &&
             (identical(other.uuidOfertaLaboral, uuidOfertaLaboral) ||
                 const DeepCollectionEquality()
                     .equals(other.uuidOfertaLaboral, uuidOfertaLaboral)) &&
@@ -206,6 +282,15 @@ class _$_PostulacionOfertaLaboral implements _PostulacionOfertaLaboral {
             (identical(other.uuidEmpresa, uuidEmpresa) ||
                 const DeepCollectionEquality()
                     .equals(other.uuidEmpresa, uuidEmpresa)) &&
+            (identical(other.tituloOferta, tituloOferta) ||
+                const DeepCollectionEquality()
+                    .equals(other.tituloOferta, tituloOferta)) &&
+            (identical(other.cargoOferta, cargoOferta) ||
+                const DeepCollectionEquality()
+                    .equals(other.cargoOferta, cargoOferta)) &&
+            (identical(other.nombreEmpresa, nombreEmpresa) ||
+                const DeepCollectionEquality()
+                    .equals(other.nombreEmpresa, nombreEmpresa)) &&
             (identical(other.comentarioPostulacionOfertaLaboral,
                     comentarioPostulacionOfertaLaboral) ||
                 const DeepCollectionEquality().equals(
@@ -218,9 +303,13 @@ class _$_PostulacionOfertaLaboral implements _PostulacionOfertaLaboral {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(uuid) ^
       const DeepCollectionEquality().hash(uuidOfertaLaboral) ^
       const DeepCollectionEquality().hash(uuidEmpleado) ^
       const DeepCollectionEquality().hash(uuidEmpresa) ^
+      const DeepCollectionEquality().hash(tituloOferta) ^
+      const DeepCollectionEquality().hash(cargoOferta) ^
+      const DeepCollectionEquality().hash(nombreEmpresa) ^
       const DeepCollectionEquality().hash(comentarioPostulacionOfertaLaboral) ^
       const DeepCollectionEquality().hash(estado);
 
@@ -231,20 +320,34 @@ class _$_PostulacionOfertaLaboral implements _PostulacionOfertaLaboral {
           this, _$identity);
 }
 
-abstract class _PostulacionOfertaLaboral implements PostulacionOfertaLaboral {
+abstract class _PostulacionOfertaLaboral extends PostulacionOfertaLaboral
+    implements IEntidad {
   const factory _PostulacionOfertaLaboral(
-      {required Identificador uuidOfertaLaboral,
+      {required Identificador uuid,
+      required Identificador uuidOfertaLaboral,
       required Identificador uuidEmpleado,
       required Identificador uuidEmpresa,
+      TituloOfertaLaboral? tituloOferta,
+      Cargo? cargoOferta,
+      NombreEmpresa? nombreEmpresa,
       ComentarioPostulacionOfertaLaboral? comentarioPostulacionOfertaLaboral,
       EstadoPostulacionOfertaLaboral? estado}) = _$_PostulacionOfertaLaboral;
+  const _PostulacionOfertaLaboral._() : super._();
 
+  @override
+  Identificador get uuid => throw _privateConstructorUsedError;
   @override
   Identificador get uuidOfertaLaboral => throw _privateConstructorUsedError;
   @override
   Identificador get uuidEmpleado => throw _privateConstructorUsedError;
   @override
   Identificador get uuidEmpresa => throw _privateConstructorUsedError;
+  @override
+  TituloOfertaLaboral? get tituloOferta => throw _privateConstructorUsedError;
+  @override
+  Cargo? get cargoOferta => throw _privateConstructorUsedError;
+  @override
+  NombreEmpresa? get nombreEmpresa => throw _privateConstructorUsedError;
   @override
   ComentarioPostulacionOfertaLaboral? get comentarioPostulacionOfertaLaboral =>
       throw _privateConstructorUsedError;
