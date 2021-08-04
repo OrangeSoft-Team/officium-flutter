@@ -16,11 +16,6 @@ abstract class PaisDTO implements _$PaisDTO {
   factory PaisDTO.fromJson(Map<String, dynamic> json) =>
       _$PaisDTOFromJson(json);
 
-  /*factory PaisDTO.fromDomain(Pais pais) {
-    return PaisDTO(
-     
-    );
-  }*/
   Pais toDomain() {
     return Pais(
       uuid:Identificador.fromUniqueString(uuidPais),

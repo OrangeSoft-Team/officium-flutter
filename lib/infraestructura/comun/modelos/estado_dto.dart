@@ -16,12 +16,6 @@ abstract class EstadoDTO implements _$EstadoDTO {
 
   factory EstadoDTO.fromJson(Map<String, dynamic> json) =>
       _$EstadoDTOFromJson(json);
-  
-  /*factory EstadoDTO.fromDomain(Estado estado) {
-    return EstadoDTO(
-     
-    );
-  }*/
 
   Estado toDomain() {
     return Estado(

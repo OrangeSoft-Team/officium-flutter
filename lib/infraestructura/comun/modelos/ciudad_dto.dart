@@ -18,12 +18,6 @@ abstract class CiudadDTO implements _$CiudadDTO {
   factory CiudadDTO.fromJson(Map<String, dynamic> json) =>
       _$CiudadDTOFromJson(json);
   
-  /*factory CiudadDTO.fromDomain(Ciudad ciudad) {
-    return CiudadDTO(
-     
-    );
-  }*/
-  
   Ciudad toDomain() {
     return Ciudad(
       uuid: Identificador.fromUniqueString(uuidCiudad),
