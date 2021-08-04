@@ -7,5 +7,5 @@ class VerListaEntrevistasState with _$VerListaEntrevistasState {
   const factory VerListaEntrevistasState.cargaExitosa(
       List<Entrevista> entrevistas) = _CargaExitosa;
   const factory VerListaEntrevistasState.cargaFallida(
-      ContratacionExcepcion entrevistaFacilladaExcepcion) = _CargaFallida;
+      ContratacionExcepcion entrevistaFallidaExcepcion) = _CargaFallida;
 }

@@ -376,10 +376,9 @@ class _$VerListaEntrevistasStateTearOff {
     );
   }
 
-  _CargaFallida cargaFallida(
-      ContratacionExcepcion entrevistaFacilladaExcepcion) {
+  _CargaFallida cargaFallida(ContratacionExcepcion entrevistaFallidaExcepcion) {
     return _CargaFallida(
-      entrevistaFacilladaExcepcion,
+      entrevistaFallidaExcepcion,
     );
   }
 }
@@ -394,8 +393,7 @@ mixin _$VerListaEntrevistasState {
     required TResult Function() inicial,
     required TResult Function() cargaEnProgreso,
     required TResult Function(List<Entrevista> entrevistas) cargaExitosa,
-    required TResult Function(
-            ContratacionExcepcion entrevistaFacilladaExcepcion)
+    required TResult Function(ContratacionExcepcion entrevistaFallidaExcepcion)
         cargaFallida,
   }) =>
       throw _privateConstructorUsedError;
@@ -404,7 +402,7 @@ mixin _$VerListaEntrevistasState {
     TResult Function()? inicial,
     TResult Function()? cargaEnProgreso,
     TResult Function(List<Entrevista> entrevistas)? cargaExitosa,
-    TResult Function(ContratacionExcepcion entrevistaFacilladaExcepcion)?
+    TResult Function(ContratacionExcepcion entrevistaFallidaExcepcion)?
         cargaFallida,
     required TResult orElse(),
   }) =>
@@ -486,8 +484,7 @@ class _$_Inicial implements _Inicial {
     required TResult Function() inicial,
     required TResult Function() cargaEnProgreso,
     required TResult Function(List<Entrevista> entrevistas) cargaExitosa,
-    required TResult Function(
-            ContratacionExcepcion entrevistaFacilladaExcepcion)
+    required TResult Function(ContratacionExcepcion entrevistaFallidaExcepcion)
         cargaFallida,
   }) {
     return inicial();
@@ -499,7 +496,7 @@ class _$_Inicial implements _Inicial {
     TResult Function()? inicial,
     TResult Function()? cargaEnProgreso,
     TResult Function(List<Entrevista> entrevistas)? cargaExitosa,
-    TResult Function(ContratacionExcepcion entrevistaFacilladaExcepcion)?
+    TResult Function(ContratacionExcepcion entrevistaFallidaExcepcion)?
         cargaFallida,
     required TResult orElse(),
   }) {
@@ -583,8 +580,7 @@ class _$_CargaEnProgreso implements _CargaEnProgreso {
     required TResult Function() inicial,
     required TResult Function() cargaEnProgreso,
     required TResult Function(List<Entrevista> entrevistas) cargaExitosa,
-    required TResult Function(
-            ContratacionExcepcion entrevistaFacilladaExcepcion)
+    required TResult Function(ContratacionExcepcion entrevistaFallidaExcepcion)
         cargaFallida,
   }) {
     return cargaEnProgreso();
@@ -596,7 +592,7 @@ class _$_CargaEnProgreso implements _CargaEnProgreso {
     TResult Function()? inicial,
     TResult Function()? cargaEnProgreso,
     TResult Function(List<Entrevista> entrevistas)? cargaExitosa,
-    TResult Function(ContratacionExcepcion entrevistaFacilladaExcepcion)?
+    TResult Function(ContratacionExcepcion entrevistaFallidaExcepcion)?
         cargaFallida,
     required TResult orElse(),
   }) {
@@ -706,8 +702,7 @@ class _$_CargaExitosa implements _CargaExitosa {
     required TResult Function() inicial,
     required TResult Function() cargaEnProgreso,
     required TResult Function(List<Entrevista> entrevistas) cargaExitosa,
-    required TResult Function(
-            ContratacionExcepcion entrevistaFacilladaExcepcion)
+    required TResult Function(ContratacionExcepcion entrevistaFallidaExcepcion)
         cargaFallida,
   }) {
     return cargaExitosa(entrevistas);
@@ -719,7 +714,7 @@ class _$_CargaExitosa implements _CargaExitosa {
     TResult Function()? inicial,
     TResult Function()? cargaEnProgreso,
     TResult Function(List<Entrevista> entrevistas)? cargaExitosa,
-    TResult Function(ContratacionExcepcion entrevistaFacilladaExcepcion)?
+    TResult Function(ContratacionExcepcion entrevistaFallidaExcepcion)?
         cargaFallida,
     required TResult orElse(),
   }) {
@@ -770,9 +765,9 @@ abstract class _$CargaFallidaCopyWith<$Res> {
   factory _$CargaFallidaCopyWith(
           _CargaFallida value, $Res Function(_CargaFallida) then) =
       __$CargaFallidaCopyWithImpl<$Res>;
-  $Res call({ContratacionExcepcion entrevistaFacilladaExcepcion});
+  $Res call({ContratacionExcepcion entrevistaFallidaExcepcion});
 
-  $ContratacionExcepcionCopyWith<$Res> get entrevistaFacilladaExcepcion;
+  $ContratacionExcepcionCopyWith<$Res> get entrevistaFallidaExcepcion;
 }
 
 /// @nodoc
@@ -788,21 +783,21 @@ class __$CargaFallidaCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? entrevistaFacilladaExcepcion = freezed,
+    Object? entrevistaFallidaExcepcion = freezed,
   }) {
     return _then(_CargaFallida(
-      entrevistaFacilladaExcepcion == freezed
-          ? _value.entrevistaFacilladaExcepcion
-          : entrevistaFacilladaExcepcion // ignore: cast_nullable_to_non_nullable
+      entrevistaFallidaExcepcion == freezed
+          ? _value.entrevistaFallidaExcepcion
+          : entrevistaFallidaExcepcion // ignore: cast_nullable_to_non_nullable
               as ContratacionExcepcion,
     ));
   }
 
   @override
-  $ContratacionExcepcionCopyWith<$Res> get entrevistaFacilladaExcepcion {
+  $ContratacionExcepcionCopyWith<$Res> get entrevistaFallidaExcepcion {
     return $ContratacionExcepcionCopyWith<$Res>(
-        _value.entrevistaFacilladaExcepcion, (value) {
-      return _then(_value.copyWith(entrevistaFacilladaExcepcion: value));
+        _value.entrevistaFallidaExcepcion, (value) {
+      return _then(_value.copyWith(entrevistaFallidaExcepcion: value));
     });
   }
 }
@@ -810,31 +805,31 @@ class __$CargaFallidaCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_CargaFallida implements _CargaFallida {
-  const _$_CargaFallida(this.entrevistaFacilladaExcepcion);
+  const _$_CargaFallida(this.entrevistaFallidaExcepcion);
 
   @override
-  final ContratacionExcepcion entrevistaFacilladaExcepcion;
+  final ContratacionExcepcion entrevistaFallidaExcepcion;
 
   @override
   String toString() {
-    return 'VerListaEntrevistasState.cargaFallida(entrevistaFacilladaExcepcion: $entrevistaFacilladaExcepcion)';
+    return 'VerListaEntrevistasState.cargaFallida(entrevistaFallidaExcepcion: $entrevistaFallidaExcepcion)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _CargaFallida &&
-            (identical(other.entrevistaFacilladaExcepcion,
-                    entrevistaFacilladaExcepcion) ||
+            (identical(other.entrevistaFallidaExcepcion,
+                    entrevistaFallidaExcepcion) ||
                 const DeepCollectionEquality().equals(
-                    other.entrevistaFacilladaExcepcion,
-                    entrevistaFacilladaExcepcion)));
+                    other.entrevistaFallidaExcepcion,
+                    entrevistaFallidaExcepcion)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(entrevistaFacilladaExcepcion);
+      const DeepCollectionEquality().hash(entrevistaFallidaExcepcion);
 
   @JsonKey(ignore: true)
   @override
@@ -847,11 +842,10 @@ class _$_CargaFallida implements _CargaFallida {
     required TResult Function() inicial,
     required TResult Function() cargaEnProgreso,
     required TResult Function(List<Entrevista> entrevistas) cargaExitosa,
-    required TResult Function(
-            ContratacionExcepcion entrevistaFacilladaExcepcion)
+    required TResult Function(ContratacionExcepcion entrevistaFallidaExcepcion)
         cargaFallida,
   }) {
-    return cargaFallida(entrevistaFacilladaExcepcion);
+    return cargaFallida(entrevistaFallidaExcepcion);
   }
 
   @override
@@ -860,12 +854,12 @@ class _$_CargaFallida implements _CargaFallida {
     TResult Function()? inicial,
     TResult Function()? cargaEnProgreso,
     TResult Function(List<Entrevista> entrevistas)? cargaExitosa,
-    TResult Function(ContratacionExcepcion entrevistaFacilladaExcepcion)?
+    TResult Function(ContratacionExcepcion entrevistaFallidaExcepcion)?
         cargaFallida,
     required TResult orElse(),
   }) {
     if (cargaFallida != null) {
-      return cargaFallida(entrevistaFacilladaExcepcion);
+      return cargaFallida(entrevistaFallidaExcepcion);
     }
     return orElse();
   }
@@ -899,9 +893,9 @@ class _$_CargaFallida implements _CargaFallida {
 
 abstract class _CargaFallida implements VerListaEntrevistasState {
   const factory _CargaFallida(
-      ContratacionExcepcion entrevistaFacilladaExcepcion) = _$_CargaFallida;
+      ContratacionExcepcion entrevistaFallidaExcepcion) = _$_CargaFallida;
 
-  ContratacionExcepcion get entrevistaFacilladaExcepcion =>
+  ContratacionExcepcion get entrevistaFallidaExcepcion =>
       throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   _$CargaFallidaCopyWith<_CargaFallida> get copyWith =>

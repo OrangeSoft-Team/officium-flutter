@@ -4,5 +4,5 @@ part of 'confirmar_propuesta_entrevista_bloc.dart';
 class ConfirmarPropuestaEntrevistaEvent
     with _$ConfirmarPropuestaEntrevistaEvent {
   const factory ConfirmarPropuestaEntrevistaEvent.entrevistaConfirmada(
-      Identificador uuidPostulacionOfertaLabioral) = _EntrevistaConfirmada;
+      Identificador uuidEntrevista) = _EntrevistaConfirmada;
 }
