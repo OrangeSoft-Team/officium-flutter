@@ -8,6 +8,7 @@ import 'package:officium_flutter/dominio/autentificacion/excepciones_dominio/aut
 import 'package:officium_flutter/dominio/autentificacion/servicios_dominio/fachadas/i_fachada_autentificacion.dart';
 import 'package:officium_flutter/dominio/autentificacion/value_objecs/email.dart';
 import 'package:officium_flutter/dominio/autentificacion/value_objecs/password.dart';
+import 'package:officium_flutter/dominio/core/entidades/empleado.dart';
 
 part 'iniciar_sesion_event.dart';
 part 'iniciar_sesion_state.dart';
@@ -45,13 +46,13 @@ class IniciarSesionBloc extends Bloc<IniciarSesionEvent, IniciarSesionState> {
 
   Stream<IniciarSesionState>
       _realizaAccionFachadaAutentificacionConEmailYPassword(
-    Future<Either<ExcepcionAutentificacion, Unit>> Function({
+    Future<Either<ExcepcionAutentificacion, Empleado>> Function({
       required EmailAddress emailAddress,
       required Password password,
     })
         forwardedCall,
   ) async* {
-    Either<ExcepcionAutentificacion, Unit> exitoOFallo;
+    Either<ExcepcionAutentificacion, Empleado> exitoOFallo;
 
     final esEmailValido = state.email.isValid();
     final esPasswordValido = state.password.isValid();

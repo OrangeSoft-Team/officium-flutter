@@ -11,7 +11,16 @@ import 'package:officium_flutter/dominio/autentificacion/excepciones_dominio/aut
 import 'package:officium_flutter/dominio/autentificacion/servicios_dominio/fachadas/i_fachada_autentificacion.dart';
 import 'package:officium_flutter/dominio/autentificacion/value_objecs/email.dart';
 import 'package:officium_flutter/dominio/autentificacion/value_objecs/password.dart';
+import 'package:officium_flutter/dominio/comun/value_objects/genero.dart';
+import 'package:officium_flutter/dominio/comun/value_objects/identificador.dart';
 import 'package:officium_flutter/dominio/core/entidades/empleado.dart';
+import 'package:officium_flutter/dominio/core/value_objects/empleado/codigo_postal.dart';
+import 'package:officium_flutter/dominio/core/value_objects/empleado/direccion_calle.dart';
+import 'package:officium_flutter/dominio/core/value_objects/empleado/fecha_nacimiento.dart';
+import 'package:officium_flutter/dominio/core/value_objects/empleado/nivel_educativo.dart';
+import 'package:officium_flutter/dominio/core/value_objects/empleado/numero_telefonico.dart';
+import 'package:officium_flutter/dominio/core/value_objects/empleado/primer_apellido.dart';
+import 'package:officium_flutter/dominio/core/value_objects/empleado/primer_nombre.dart';
 import 'package:officium_flutter/infraestructura/autentificacion/modelos/datos_inicio_sesion_empleado_dto.dart';
 import 'package:officium_flutter/infraestructura/autentificacion/modelos/datos_registro_empleado_dto.dart';
 import 'package:officium_flutter/infraestructura/comun/excepciones.dart';
@@ -96,13 +105,13 @@ class FirebaseAuthFuente implements IAutentificacionFachada {
   }
 
   @override
-  Future<Either<ExcepcionAutentificacion, Unit>> loginConEmailAndPassword(
+  Future<Either<ExcepcionAutentificacion, Empleado>> loginConEmailAndPassword(
       {required EmailAddress emailAddress, required Password password}) async {
     try {
       final firebaseResponse = await firebaseAuth.signInWithEmailAndPassword(
           email: emailAddress.getOrCrash(), password: password.getOrCrash());
       final AuthCredential? userCredential = firebaseResponse.credential;
-      final userUid = firebaseResponse.user?.uid;
+      final String? userUid = firebaseResponse.user?.uid;
       final datosInicioSesion = DatosInicioSesionEmpleadoDTO(
           correoElectronico: emailAddress.getOrCrash(),
           // token: userCredential?.token.toString() ?? ''
@@ -125,16 +134,36 @@ class FirebaseAuthFuente implements IAutentificacionFachada {
         // final jwtCookie = apiResponse.headers['set-cookie'];
         //Map cookies = {};
         //Cookie.fromSetCookieValue(value)
+        Empleado emp = Empleado(
+          uuid: Identificador.fromUniqueString(firebaseResponse.user!.uid),
+          primerNombre: PrimerNombre(jsonResponse['primerNombre'].toString()),
+          primerApellido:
+              PrimerApellido(jsonResponse['primerApellido'].toString()),
+          genero: Genero('masculino'),
+          nivelEducativo: NivelEducativo('NINGUNO'),
+          numeroTelefonico: NumeroTelefonico('581010101010'),
+          fechaNacimiento: FechaNacimiento(
+              DateTime.now().subtract(const Duration(days: 20 * 365))),
+          codigoPostal: CodigoPostal('1010'),
+          direccionCalleUno: DireccionCalle('aasa'),
+          statusEmpleado: true,
+          uuidPais: Identificador.fromUniqueString(
+              "9d661655-4526-4f57-afc6-4464e5a71e75"),
+          uuidEstado: Identificador.fromUniqueString(
+              "dcf3d05b-a4b6-44a9-811a-103c078495a8"),
+          uuidCiudad: Identificador.fromUniqueString(
+              "a02cdc9b-8632-4540-aa96-d95d3ef53dba"),
+        );
         final responseCookies = apiResponse.cookies;
         if (responseCookies.isEmpty) {
           throw ServerException();
         }
         await fuenteLocal.asignarTokenLocal(responseCookies[0]);
         // final body = apiResponse.();
-        return right(unit);
+
+        return right(emp);
       } else {
         return left(const ExcepcionAutentificacion.serverError());
-        throw ServerException();
       }
     } on FirebaseAuthException catch (e) {
       if (e.code == 'ERROR_WRONG_PASSWORD' ||

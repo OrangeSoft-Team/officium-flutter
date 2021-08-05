@@ -11,7 +11,7 @@ class HomePage extends StatelessWidget {
       drawer: DrawerUsuario(),
       appBar: AppBar(
         title: const Text(
-          'Flutter Officium',
+          'Officium',
         ),
         actions: [
           IconButton(

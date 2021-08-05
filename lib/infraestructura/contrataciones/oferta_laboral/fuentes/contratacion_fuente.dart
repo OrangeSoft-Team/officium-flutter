@@ -12,9 +12,10 @@ import 'package:officium_flutter/infraestructura/contrataciones/oferta_laboral/m
 import 'package:officium_flutter/infraestructura/contrataciones/oferta_laboral/modelos/postulacion_oferta_laboral_dto.dart';
 
 // ignore: constant_identifier_names
-const DIR_SPRING = 'http://orangesoft.ddns.net:3000';
+const DIR_SPRING = 'http://orangesoft.ddns.net';
+// const DIR_SPRING = 'https://officium-spring.herokuapp.com';
 // ignore: constant_identifier_names
-const DIR_NEST = 'http://officium-nest.ddns.net:2000';
+const DIR_NEST = 'https://officium-nest.herokuapp.com';
 
 @LazySingleton(as: IContratacionFuente)
 class OfertaLaboralFuente implements IContratacionFuente {
@@ -28,7 +29,7 @@ class OfertaLaboralFuente implements IContratacionFuente {
     final client2 = HttpClient();
     final bodyJson = jsonEncode(postulacionOfertaLaboral);
     final request = await client2.postUrl(Uri.parse(
-        "$DIR_SPRING/api/empleado/ofertas_laborales/${postulacionOfertaLaboral.uuidOfertaLaboral}"));
+        "$DIR_SPRING/api/empleado/ofertas_laborales/${postulacionOfertaLaboral.uuidOfertaLaboral}/"));
     request.headers
         .add(HttpHeaders.contentTypeHeader, "application/json; charset=UTF-8");
     request.write(bodyJson);
@@ -45,7 +46,7 @@ class OfertaLaboralFuente implements IContratacionFuente {
       Identificador uuidOfertaLaboral) async {
     final response = await cliente.get(
       Uri.parse(
-          '$DIR_SPRING/api/empleado/ofertas_laborales/${uuidOfertaLaboral.getOrCrash()}'),
+          '$DIR_SPRING/ofertas_laborales/${uuidOfertaLaboral.getOrCrash()}'),
       headers: {
         'Content-Type': 'application/json',
       },
@@ -65,7 +66,7 @@ class OfertaLaboralFuente implements IContratacionFuente {
     final List<OfertaLaboralDTO> listaDeOfertas = <OfertaLaboralDTO>[];
 
     final response = await cliente.get(
-      Uri.parse('$DIR_SPRING/api/empleado/ofertas_laborales'),
+      Uri.parse('$DIR_SPRING/api/empleado/ofertas_laborales/'),
       headers: {
         'Content-Type': 'application/json',
       },

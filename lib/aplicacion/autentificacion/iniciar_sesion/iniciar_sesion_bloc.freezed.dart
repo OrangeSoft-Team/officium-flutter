@@ -437,7 +437,7 @@ class _$IniciarSesionStateTearOff {
       required Password password,
       required bool estaLogueando,
       required bool mostrarMensajesDeError,
-      required Option<Either<ExcepcionAutentificacion, Unit>>
+      required Option<Either<ExcepcionAutentificacion, Empleado>>
           opcionDeErrorOExitoDeLogin}) {
     return _IniciarSesionState(
       email: email,
@@ -458,7 +458,7 @@ mixin _$IniciarSesionState {
   Password get password => throw _privateConstructorUsedError;
   bool get estaLogueando => throw _privateConstructorUsedError;
   bool get mostrarMensajesDeError => throw _privateConstructorUsedError;
-  Option<Either<ExcepcionAutentificacion, Unit>>
+  Option<Either<ExcepcionAutentificacion, Empleado>>
       get opcionDeErrorOExitoDeLogin => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -476,7 +476,7 @@ abstract class $IniciarSesionStateCopyWith<$Res> {
       Password password,
       bool estaLogueando,
       bool mostrarMensajesDeError,
-      Option<Either<ExcepcionAutentificacion, Unit>>
+      Option<Either<ExcepcionAutentificacion, Empleado>>
           opcionDeErrorOExitoDeLogin});
 }
 
@@ -517,7 +517,7 @@ class _$IniciarSesionStateCopyWithImpl<$Res>
       opcionDeErrorOExitoDeLogin: opcionDeErrorOExitoDeLogin == freezed
           ? _value.opcionDeErrorOExitoDeLogin
           : opcionDeErrorOExitoDeLogin // ignore: cast_nullable_to_non_nullable
-              as Option<Either<ExcepcionAutentificacion, Unit>>,
+              as Option<Either<ExcepcionAutentificacion, Empleado>>,
     ));
   }
 }
@@ -534,7 +534,7 @@ abstract class _$IniciarSesionStateCopyWith<$Res>
       Password password,
       bool estaLogueando,
       bool mostrarMensajesDeError,
-      Option<Either<ExcepcionAutentificacion, Unit>>
+      Option<Either<ExcepcionAutentificacion, Empleado>>
           opcionDeErrorOExitoDeLogin});
 }
 
@@ -577,7 +577,7 @@ class __$IniciarSesionStateCopyWithImpl<$Res>
       opcionDeErrorOExitoDeLogin: opcionDeErrorOExitoDeLogin == freezed
           ? _value.opcionDeErrorOExitoDeLogin
           : opcionDeErrorOExitoDeLogin // ignore: cast_nullable_to_non_nullable
-              as Option<Either<ExcepcionAutentificacion, Unit>>,
+              as Option<Either<ExcepcionAutentificacion, Empleado>>,
     ));
   }
 }
@@ -601,7 +601,7 @@ class _$_IniciarSesionState implements _IniciarSesionState {
   @override
   final bool mostrarMensajesDeError;
   @override
-  final Option<Either<ExcepcionAutentificacion, Unit>>
+  final Option<Either<ExcepcionAutentificacion, Empleado>>
       opcionDeErrorOExitoDeLogin;
 
   @override
@@ -652,7 +652,7 @@ abstract class _IniciarSesionState implements IniciarSesionState {
       required Password password,
       required bool estaLogueando,
       required bool mostrarMensajesDeError,
-      required Option<Either<ExcepcionAutentificacion, Unit>>
+      required Option<Either<ExcepcionAutentificacion, Empleado>>
           opcionDeErrorOExitoDeLogin}) = _$_IniciarSesionState;
 
   @override
@@ -664,7 +664,7 @@ abstract class _IniciarSesionState implements IniciarSesionState {
   @override
   bool get mostrarMensajesDeError => throw _privateConstructorUsedError;
   @override
-  Option<Either<ExcepcionAutentificacion, Unit>>
+  Option<Either<ExcepcionAutentificacion, Empleado>>
       get opcionDeErrorOExitoDeLogin => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)

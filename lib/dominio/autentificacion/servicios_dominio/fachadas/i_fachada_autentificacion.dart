@@ -11,7 +11,7 @@ abstract class IAutentificacionFachada {
     required EmailAddress emailAddress,
     required Password password,
   });
-  Future<Either<ExcepcionAutentificacion, Unit>> loginConEmailAndPassword({
+  Future<Either<ExcepcionAutentificacion, Empleado>> loginConEmailAndPassword({
     required EmailAddress emailAddress,
     required Password password,
   });

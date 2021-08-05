@@ -7,7 +7,7 @@ class IniciarSesionState with _$IniciarSesionState {
     required Password password,
     required bool estaLogueando,
     required bool mostrarMensajesDeError,
-    required Option<Either<ExcepcionAutentificacion, Unit>>
+    required Option<Either<ExcepcionAutentificacion, Empleado>>
         opcionDeErrorOExitoDeLogin,
   }) = _IniciarSesionState;
 

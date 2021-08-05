@@ -15,7 +15,6 @@ import 'package:officium_flutter/infraestructura/contrataciones/oferta_laboral/m
 import 'package:officium_flutter/infraestructura/contrataciones/postulacion/fuentes/i_postulacion_fuente.dart';
 import 'package:officium_flutter/infraestructura/contrataciones/trabajo/fuentes/i_trabajo_fuente.dart';
 
-
 @LazySingleton(as: IContratacionesRepositorio)
 class ContratacionRepositorio implements IContratacionesRepositorio {
   final IContratacionFuente fuenteDeDatos;
@@ -23,12 +22,11 @@ class ContratacionRepositorio implements IContratacionesRepositorio {
   final ITrabajoFuente fuenteDeDatosTrabajo;
   final IEntrevistaFuente fuenteDeDatosEntrevista;
 
-  ContratacionRepositorio({
-    required this.fuenteDeDatos,
-    required this.fuenteDeDatosPostulacion,
-    required this.fuenteDeDatosTrabajo,
-    required this.fuenteDeDatosEntrevista
-  });
+  ContratacionRepositorio(
+      {required this.fuenteDeDatos,
+      required this.fuenteDeDatosPostulacion,
+      required this.fuenteDeDatosTrabajo,
+      required this.fuenteDeDatosEntrevista});
 
   @override
   Future<Either<ContratacionExcepcion, Unit>> aplicarOfertaLaboral(
@@ -71,14 +69,15 @@ class ContratacionRepositorio implements IContratacionesRepositorio {
   @override
   Stream<Either<ContratacionExcepcion, List<PostulacionOfertaLaboral>>>
       verTodasLasPostulacionesOfertaLaboral(Identificador uuidEmpleado) async* {
-    final List<PostulacionOfertaLaboral> postulacionesActivasEmpleado = <PostulacionOfertaLaboral>[]; 
+    final List<PostulacionOfertaLaboral> postulacionesActivasEmpleado =
+        <PostulacionOfertaLaboral>[];
     try {
-      final respuestaFuente = await fuenteDeDatosPostulacion.obtenerPostulacionesActivasEmpleado(uuidEmpleado.toString());
+      final respuestaFuente = await fuenteDeDatosPostulacion
+          .obtenerPostulacionesActivasEmpleado(uuidEmpleado.toString());
       for (final postulacionEmpleadoDto in respuestaFuente) {
         postulacionesActivasEmpleado.add(postulacionEmpleadoDto.toDomain());
       }
-    }
-    catch (e) {
+    } catch (e) {
       yield const Left(ContratacionExcepcion.errorServidor());
     }
   }
@@ -97,12 +96,13 @@ class ContratacionRepositorio implements IContratacionesRepositorio {
   }
 
   @override
-  Future<Either<ContratacionExcepcion, Unit>> cancelarPostulacionOfertaLaboral(Identificador uuidPostulacion) async {
+  Future<Either<ContratacionExcepcion, Unit>> cancelarPostulacionOfertaLaboral(
+      Identificador uuidPostulacion) async {
     try {
-      final respuestaFuente = await fuenteDeDatosPostulacion.cancelarPostulacion(uuidPostulacion.toString());
+      final respuestaFuente = await fuenteDeDatosPostulacion
+          .cancelarPostulacion(uuidPostulacion.toString());
       return const Right(unit);
-    }
-    catch (e) {
+    } catch (e) {
       return const Left(ContratacionExcepcion.errorServidor());
     }
   }
@@ -111,21 +111,22 @@ class ContratacionRepositorio implements IContratacionesRepositorio {
   Future<Either<ContratacionExcepcion, Unit>> cancelarPropuestaEntrevista(
       Identificador uuidEntrevista) async {
     try {
-      final respuestaFuente = await fuenteDeDatosEntrevista.rechazarPropuestaEntrevista(uuidEntrevista.toString());
+      final respuestaFuente = await fuenteDeDatosEntrevista
+          .rechazarPropuestaEntrevista(uuidEntrevista.toString());
       return const Right(unit);
-    }
-    catch (e) {
+    } catch (e) {
       return const Left(ContratacionExcepcion.errorServidor());
     }
   }
 
   @override
-  Future<Either<ContratacionExcepcion, Unit>> confirmarPropuestaEntrevista(Identificador uuidEntrevista) async {
+  Future<Either<ContratacionExcepcion, Unit>> confirmarPropuestaEntrevista(
+      Identificador uuidEntrevista) async {
     try {
-      final respuestaFuente = await fuenteDeDatosEntrevista.confirmarPropuestaEntrevista(uuidEntrevista.toString());
+      final respuestaFuente = await fuenteDeDatosEntrevista
+          .confirmarPropuestaEntrevista(uuidEntrevista.toString());
       return const Right(unit);
-    }
-    catch (e) {
+    } catch (e) {
       return const Left(ContratacionExcepcion.errorServidor());
     }
   }
@@ -134,21 +135,22 @@ class ContratacionRepositorio implements IContratacionesRepositorio {
   Future<Either<ContratacionExcepcion, Entrevista>> consultarDetalleEntrevista(
       Identificador uuidEntrevista) async {
     try {
-      final respuestaFuente = await fuenteDeDatosEntrevista.obtenerDetallePropuestaEntrevista(uuidEntrevista.toString());
+      final respuestaFuente = await fuenteDeDatosEntrevista
+          .obtenerDetallePropuestaEntrevista(uuidEntrevista.toString());
       return Right(respuestaFuente.toDomain());
-    }
-    catch (e) {
+    } catch (e) {
       return const Left(ContratacionExcepcion.errorServidor());
     }
   }
 
   @override
-  Future<Either<ContratacionExcepcion, Unit>> renunciarTrabajo(Identificador uuidTrabajo) async {
+  Future<Either<ContratacionExcepcion, Unit>> renunciarTrabajo(
+      Identificador uuidTrabajo) async {
     try {
-      final respuestaFuente = await fuenteDeDatosTrabajo.renunciarTrabajoEmpleado(uuidTrabajo.toString());
+      final respuestaFuente = await fuenteDeDatosTrabajo
+          .renunciarTrabajoEmpleado(uuidTrabajo.toString());
       return const Right(unit);
-    }
-    catch (e) {
+    } catch (e) {
       return const Left(ContratacionExcepcion.errorServidor());
     }
   }
@@ -158,12 +160,12 @@ class ContratacionRepositorio implements IContratacionesRepositorio {
       verTodosLosTrabajosEmpleado(Identificador uuidEmpleado) async* {
     final List<Trabajo> trabajosEmpleado = <Trabajo>[];
     try {
-      final respuestaFuente = await fuenteDeDatosTrabajo.obtenerTrabajosEmpleado();
-      for(final trabajoDto in respuestaFuente){
+      final respuestaFuente =
+          await fuenteDeDatosTrabajo.obtenerTrabajosEmpleado();
+      for (final trabajoDto in respuestaFuente) {
         trabajosEmpleado.add(trabajoDto.toDomain());
       }
-    }
-    catch (e) {
+    } catch (e) {
       yield const Left(ContratacionExcepcion.errorServidor());
     }
   }
