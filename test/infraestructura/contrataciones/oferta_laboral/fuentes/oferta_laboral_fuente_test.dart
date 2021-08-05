@@ -17,7 +17,7 @@ class TestData {
   TestData();
 }
 
-const DIR_SPRING = 'http://orangesoft.ddns.net:3000';
+const DIR_SPRING = 'http://orangesoft.ddns.net';
 @GenerateMocks([http.Client])
 void main() {
   MockClient mockHttpClient = MockClient();
@@ -54,7 +54,7 @@ void main() {
 
       verify(mockHttpClient.get(
         Uri.parse(
-            '$DIR_SPRING/api/empleado/ofertas_laborales/${tOfertasLaboraleDetalleDto.uuid}'),
+            '$DIR_SPRING/ofertas_laborales/${tOfertasLaboraleDetalleDto.uuid}'),
         headers: {
           'Content-Type': 'application/json',
         },

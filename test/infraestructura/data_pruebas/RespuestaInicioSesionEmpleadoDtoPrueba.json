@@ -1,4 +1,5 @@
 {   
     "primerNombre":"Test nombre",
-    "primerApellido":"Test apellido"
+    "primerApellido":"Test apellido",
+    "uid":"1"
 }
