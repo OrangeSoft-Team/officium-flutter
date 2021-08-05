@@ -2,20 +2,34 @@
 // in officium_flutter/test/infraestructura/contrataciones/oferta_laboral/repositorios/oferta_laboral_repositorio_test.dart.
 // Do not manually edit this file.
 
-import 'dart:async' as _i5;
+import 'dart:async' as _i7;
 
 import 'package:dartz/dartz.dart' as _i3;
 import 'package:mockito/mockito.dart' as _i1;
 import 'package:officium_flutter/dominio/comun/value_objects/identificador.dart'
-    as _i7;
+    as _i9;
+import 'package:officium_flutter/infraestructura/contrataciones/entrevista/fuentes/i_entrevista_fuente.dart'
+    as _i15;
+import 'package:officium_flutter/infraestructura/contrataciones/entrevista/modelos/detalle_propuesta_entrevista_empleado_dto.dart'
+    as _i5;
 import 'package:officium_flutter/infraestructura/contrataciones/oferta_laboral/fuentes/i_contratacion_fuente.dart'
-    as _i4;
+    as _i6;
 import 'package:officium_flutter/infraestructura/contrataciones/oferta_laboral/modelos/oferta_laboral_detalle_dto.dart'
     as _i2;
 import 'package:officium_flutter/infraestructura/contrataciones/oferta_laboral/modelos/oferta_laboral_dto.dart'
-    as _i6;
-import 'package:officium_flutter/infraestructura/contrataciones/oferta_laboral/modelos/postulacion_oferta_laboral_dto.dart'
     as _i8;
+import 'package:officium_flutter/infraestructura/contrataciones/oferta_laboral/modelos/postulacion_oferta_laboral_dto.dart'
+    as _i10;
+import 'package:officium_flutter/infraestructura/contrataciones/postulacion/fuentes/i_postulacion_fuente.dart'
+    as _i13;
+import 'package:officium_flutter/infraestructura/contrataciones/postulacion/modelos/postulacion_empleado_dto.dart'
+    as _i14;
+import 'package:officium_flutter/infraestructura/contrataciones/trabajo/fuentes/i_trabajo_fuente.dart'
+    as _i11;
+import 'package:officium_flutter/infraestructura/contrataciones/trabajo/modelos/detalle_trabajo_empleado_dto.dart'
+    as _i4;
+import 'package:officium_flutter/infraestructura/contrataciones/trabajo/modelos/trabajo_empleado_dto.dart'
+    as _i12;
 
 // ignore_for_file: avoid_redundant_argument_values
 // ignore_for_file: avoid_setters_without_getters
@@ -30,35 +44,136 @@ class _FakeOfertaLaboralDetalleDTO extends _i1.Fake
 
 class _FakeUnit extends _i1.Fake implements _i3.Unit {}
 
+class _FakeDetalleTrabajoEmpleadoDTO extends _i1.Fake
+    implements _i4.DetalleTrabajoEmpleadoDTO {}
+
+class _FakeDetallePropuestaEntrevistaEmpleadoDTO extends _i1.Fake
+    implements _i5.DetallePropuestaEntrevistaEmpleadoDTO {}
+
 /// A class which mocks [IContratacionFuente].
 ///
 /// See the documentation for Mockito's code generation for more information.
 class MockIContratacionFuente extends _i1.Mock
-    implements _i4.IContratacionFuente {
+    implements _i6.IContratacionFuente {
   MockIContratacionFuente() {
     _i1.throwOnMissingStub(this);
   }
 
   @override
-  _i5.Future<List<_i6.OfertaLaboralDTO>> obtenerOfertasLaborales() =>
+  _i7.Future<List<_i8.OfertaLaboralDTO>> obtenerOfertasLaborales() =>
       (super.noSuchMethod(Invocation.method(#obtenerOfertasLaborales, []),
-              returnValue: Future<List<_i6.OfertaLaboralDTO>>.value(
-                  <_i6.OfertaLaboralDTO>[]))
-          as _i5.Future<List<_i6.OfertaLaboralDTO>>);
+              returnValue: Future<List<_i8.OfertaLaboralDTO>>.value(
+                  <_i8.OfertaLaboralDTO>[]))
+          as _i7.Future<List<_i8.OfertaLaboralDTO>>);
   @override
-  _i5.Future<_i2.OfertaLaboralDetalleDTO> obtenerDetalleOfertasLaboral(
-          _i7.Identificador? uuidOfertaLaboral) =>
+  _i7.Future<_i2.OfertaLaboralDetalleDTO> obtenerDetalleOfertasLaboral(
+          _i9.Identificador? uuidOfertaLaboral) =>
       (super.noSuchMethod(
           Invocation.method(#obtenerDetalleOfertasLaboral, [uuidOfertaLaboral]),
           returnValue: Future<_i2.OfertaLaboralDetalleDTO>.value(
-              _FakeOfertaLaboralDetalleDTO())) as _i5
+              _FakeOfertaLaboralDetalleDTO())) as _i7
           .Future<_i2.OfertaLaboralDetalleDTO>);
   @override
-  _i5.Future<_i3.Unit> aplicarOfertaLaboral(_i7.Identificador? uuidOferta,
-          _i8.PostulacionOfertaLaboralDTO? postulacionOfertaLaboral) =>
+  _i7.Future<_i3.Unit> aplicarOfertaLaboral(_i9.Identificador? uuidOferta,
+          _i10.PostulacionOfertaLaboralDTO? postulacionOfertaLaboral) =>
       (super.noSuchMethod(
           Invocation.method(
               #aplicarOfertaLaboral, [uuidOferta, postulacionOfertaLaboral]),
           returnValue:
-              Future<_i3.Unit>.value(_FakeUnit())) as _i5.Future<_i3.Unit>);
+              Future<_i3.Unit>.value(_FakeUnit())) as _i7.Future<_i3.Unit>);
+}
+
+/// A class which mocks [ITrabajoFuente].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockITrabajoFuente extends _i1.Mock implements _i11.ITrabajoFuente {
+  MockITrabajoFuente() {
+    _i1.throwOnMissingStub(this);
+  }
+
+  @override
+  _i7.Future<List<_i12.TrabajoEmpleadoDTO>> obtenerTrabajosEmpleado() =>
+      (super.noSuchMethod(Invocation.method(#obtenerTrabajosEmpleado, []),
+              returnValue: Future<List<_i12.TrabajoEmpleadoDTO>>.value(
+                  <_i12.TrabajoEmpleadoDTO>[]))
+          as _i7.Future<List<_i12.TrabajoEmpleadoDTO>>);
+  @override
+  _i7.Future<_i4.DetalleTrabajoEmpleadoDTO> obtenerDetalleTrabajo(
+          String? uuidTrabajo) =>
+      (super.noSuchMethod(
+              Invocation.method(#obtenerDetalleTrabajo, [uuidTrabajo]),
+              returnValue: Future<_i4.DetalleTrabajoEmpleadoDTO>.value(
+                  _FakeDetalleTrabajoEmpleadoDTO()))
+          as _i7.Future<_i4.DetalleTrabajoEmpleadoDTO>);
+  @override
+  _i7.Future<_i3.Unit> renunciarTrabajoEmpleado(String? uuidTrabajo) =>
+      (super.noSuchMethod(
+              Invocation.method(#renunciarTrabajoEmpleado, [uuidTrabajo]),
+              returnValue: Future<_i3.Unit>.value(_FakeUnit()))
+          as _i7.Future<_i3.Unit>);
+}
+
+/// A class which mocks [IPostulacionFuente].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockIPostulacionFuente extends _i1.Mock
+    implements _i13.IPostulacionFuente {
+  MockIPostulacionFuente() {
+    _i1.throwOnMissingStub(this);
+  }
+
+  @override
+  _i7.Future<_i3.Unit> aplicarOfertaLaboral(
+          _i10.PostulacionOfertaLaboralDTO? postulacionOfertaLaboral) =>
+      (super.noSuchMethod(
+          Invocation.method(#aplicarOfertaLaboral, [postulacionOfertaLaboral]),
+          returnValue:
+              Future<_i3.Unit>.value(_FakeUnit())) as _i7.Future<_i3.Unit>);
+  @override
+  _i7.Future<List<_i14.PostulacionEmpleadoDTO>>
+      obtenerPostulacionesActivasEmpleado(String? uuidEmpleado) =>
+          (super.noSuchMethod(
+                  Invocation.method(
+                      #obtenerPostulacionesActivasEmpleado, [uuidEmpleado]),
+                  returnValue: Future<List<_i14.PostulacionEmpleadoDTO>>.value(
+                      <_i14.PostulacionEmpleadoDTO>[]))
+              as _i7.Future<List<_i14.PostulacionEmpleadoDTO>>);
+  @override
+  _i7.Future<_i3.Unit> cancelarPostulacion(String? uuidPostulacion) =>
+      (super.noSuchMethod(
+              Invocation.method(#cancelarPostulacion, [uuidPostulacion]),
+              returnValue: Future<_i3.Unit>.value(_FakeUnit()))
+          as _i7.Future<_i3.Unit>);
+}
+
+/// A class which mocks [IEntrevistaFuente].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockIEntrevistaFuente extends _i1.Mock implements _i15.IEntrevistaFuente {
+  MockIEntrevistaFuente() {
+    _i1.throwOnMissingStub(this);
+  }
+
+  @override
+  _i7.Future<_i3.Unit> confirmarPropuestaEntrevista(String? uuidEntrevista) =>
+      (super.noSuchMethod(
+          Invocation.method(#confirmarPropuestaEntrevista, [uuidEntrevista]),
+          returnValue:
+              Future<_i3.Unit>.value(_FakeUnit())) as _i7.Future<_i3.Unit>);
+  @override
+  _i7.Future<_i3.Unit> rechazarPropuestaEntrevista(String? uuidEntrevista) =>
+      (super.noSuchMethod(
+              Invocation.method(#rechazarPropuestaEntrevista, [uuidEntrevista]),
+              returnValue: Future<_i3.Unit>.value(_FakeUnit()))
+          as _i7.Future<_i3.Unit>);
+  @override
+  _i7.Future<_i5.DetallePropuestaEntrevistaEmpleadoDTO>
+      obtenerDetallePropuestaEntrevista(String? uuidEntrevista) =>
+          (super.noSuchMethod(
+                  Invocation.method(
+                      #obtenerDetallePropuestaEntrevista, [uuidEntrevista]),
+                  returnValue:
+                      Future<_i5.DetallePropuestaEntrevistaEmpleadoDTO>.value(
+                          _FakeDetallePropuestaEntrevistaEmpleadoDTO()))
+              as _i7.Future<_i5.DetallePropuestaEntrevistaEmpleadoDTO>);
 }

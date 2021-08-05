@@ -8,19 +8,29 @@ import 'package:mockito/mockito.dart';
 import 'package:officium_flutter/dominio/contrataciones/entidades/oferta_laboral.dart';
 import 'package:officium_flutter/dominio/contrataciones/entidades/postulacion_oferta.dart';
 import 'package:officium_flutter/dominio/contrataciones/excepciones_dominio/contrataciones_excepciones.dart';
+import 'package:officium_flutter/infraestructura/contrataciones/entrevista/fuentes/i_entrevista_fuente.dart';
 import 'package:officium_flutter/infraestructura/contrataciones/oferta_laboral/fuentes/i_contratacion_fuente.dart';
 import 'package:officium_flutter/infraestructura/contrataciones/oferta_laboral/modelos/oferta_laboral_detalle_dto.dart';
 import 'package:officium_flutter/infraestructura/contrataciones/oferta_laboral/modelos/oferta_laboral_dto.dart';
 import 'package:officium_flutter/infraestructura/contrataciones/oferta_laboral/modelos/postulacion_oferta_laboral_dto.dart';
 import 'package:officium_flutter/infraestructura/contrataciones/oferta_laboral/repositorios/contratacion_repositorio.dart';
+import 'package:officium_flutter/infraestructura/contrataciones/postulacion/fuentes/i_postulacion_fuente.dart';
+import 'package:officium_flutter/infraestructura/contrataciones/trabajo/fuentes/i_trabajo_fuente.dart';
 import '../../../data_pruebas/lector_json.dart';
 import 'oferta_laboral_repositorio_test.mocks.dart';
 
-@GenerateMocks([IContratacionFuente])
+@GenerateMocks([IContratacionFuente,ITrabajoFuente,IPostulacionFuente,IEntrevistaFuente])
 void main() {
   final mockFuenteDeDatos = MockIContratacionFuente();
-  final ContratacionRepositorio ofertaLaboralRepositorio =
-      ContratacionRepositorio(fuenteDeDatos: mockFuenteDeDatos);
+  final mockFuentePostulacion = MockIPostulacionFuente();
+  final mockFuenteTrabajo = MockITrabajoFuente();
+  final mockFuenteEntrevista = MockIEntrevistaFuente();
+  final ContratacionRepositorio ofertaLaboralRepositorio = ContratacionRepositorio(
+      fuenteDeDatos: mockFuenteDeDatos, 
+      fuenteDeDatosTrabajo: mockFuenteTrabajo,
+      fuenteDeDatosEntrevista: mockFuenteEntrevista,
+      fuenteDeDatosPostulacion: mockFuentePostulacion
+      );
 
   group('Obtener ofertas laborales', () {
     final tOfertasLaboralesDto = <OfertaLaboralDTO>[

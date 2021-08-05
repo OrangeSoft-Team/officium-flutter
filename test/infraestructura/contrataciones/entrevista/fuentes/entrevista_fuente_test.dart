@@ -13,14 +13,15 @@ import '../../../data_pruebas/test_data.dart';
 import 'entrevista_fuente_test.mocks.dart';
 
 const DIR_NEST = 'http://officium-nest.ddns.net:2000';
+
 @GenerateMocks([HttpClient,HttpClientRequest,HttpClientResponse, HttpHeaders, Stream])
 void main () {
-  MockHttpClient mockHttpClient =  MockHttpClient();
+  final MockHttpClient mockHttpClient =  MockHttpClient();
   final MockHttpClientRequest mockHttpClientRequest =  MockHttpClientRequest();
   final MockHttpHeaders mockHttpHeaders =  MockHttpHeaders();
   final MockStream mockStream =  MockStream();
   final MockHttpClientResponse mockHttpClientResponse =  MockHttpClientResponse();
-  EntrevistaFuente fuenteDeDatos = EntrevistaFuente(cliente: mockHttpClient);;
+  final EntrevistaFuente fuenteDeDatos = EntrevistaFuente(cliente: mockHttpClient);;
 
   void setUpMockHttpClientSuccess200(String? testData,int code) {
     when(mockHttpClientRequest.headers)
