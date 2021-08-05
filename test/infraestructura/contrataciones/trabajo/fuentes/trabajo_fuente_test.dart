@@ -21,7 +21,7 @@ void main () {
   final MockHttpHeaders mockHttpHeaders =  MockHttpHeaders();
   //final MockStream mockStream =  MockStream();
   final MockHttpClientResponse mockHttpClientResponse =  MockHttpClientResponse();
-  final TrabajoFuente fuenteDeDatos = TrabajoFuente(cliente: mockHttpClient);;
+  final TrabajoFuente fuenteDeDatos = TrabajoFuente(cliente: mockHttpClient);
 
 
   void setUpMockHttpClientSuccess200(String? testData,int code) {

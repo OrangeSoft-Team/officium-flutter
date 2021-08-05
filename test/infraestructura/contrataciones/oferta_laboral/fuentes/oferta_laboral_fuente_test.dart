@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:http/http.dart' as http;
 import 'package:mockito/annotations.dart';
@@ -18,7 +17,7 @@ class TestData {
   TestData();
 }
 
-const DIR_NEST = 'http://officium-nest.ddns.net:2000';
+const DIR_SPRING = 'http://orangesoft.ddns.net:3000';
 @GenerateMocks([http.Client])
 void main() {
   MockClient mockHttpClient = MockClient();
@@ -55,7 +54,7 @@ void main() {
 
       verify(mockHttpClient.get(
         Uri.parse(
-            '$DIR_NEST/api/empleado/ofertas_laborales/${tOfertasLaboraleDetalleDto.uuid}'),
+            '$DIR_SPRING/api/empleado/ofertas_laborales/${tOfertasLaboraleDetalleDto.uuid}'),
         headers: {
           'Content-Type': 'application/json',
         },

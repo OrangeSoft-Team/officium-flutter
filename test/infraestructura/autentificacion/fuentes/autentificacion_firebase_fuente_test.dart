@@ -8,6 +8,8 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
+import 'package:officium_flutter/dominio/autentificacion/value_objecs/email.dart';
+import 'package:officium_flutter/dominio/autentificacion/value_objecs/password.dart';
 import 'package:officium_flutter/infraestructura/autentificacion/fuentes/autentificacion_firebase_fuente.dart';
 import 'package:officium_flutter/infraestructura/autentificacion/modelos/datos_inicio_sesion_empleado_dto.dart';
 import 'package:officium_flutter/infraestructura/autentificacion/modelos/respuesta_inicio_sesion_empelado_dto.dart';
@@ -19,6 +21,7 @@ import '../../data_pruebas/test_data.dart';
 import 'autentificacion_firebase_fuente_test.mocks.dart';
 
 const DIR_NEST = 'http://officium-nest.ddns.net:2000';
+
 @GenerateMocks([HttpClient,HttpClientRequest,HttpClientResponse, HttpHeaders, FirebaseAuth,UserCredential, AuthCredential,GoogleSignIn, GoogleSignInAccount, GoogleSignInAuthentication,User, FuenteLocal])
 void main () {
   final MockHttpClient mockHttpClient =  MockHttpClient();
@@ -28,7 +31,7 @@ void main () {
   final MockHttpClientResponse mockHttpClientResponse =  MockHttpClientResponse();
   final MockFirebaseAuth mockFirebaseAuth =  MockFirebaseAuth();
   final MockGoogleSignIn mockGoogleSignIn =  MockGoogleSignIn();
-  final MockGoogleSignInAccount mockGoogleSignInAccount =  MockGoogleSignInAccount();
+  final MockGoogleSignInAccount mockGoogleSignInAccount = MockGoogleSignInAccount();
   final MockGoogleSignInAuthentication mockGoogleSignInAuthentication =  MockGoogleSignInAuthentication();
   final MockUser mockUser =  MockUser();
   final MockFuenteLocal mockFuenteLocal =  MockFuenteLocal();
@@ -108,7 +111,7 @@ void main () {
       setUpMockHttpClientSuccess200(TestData().repuestaInicioSesionEmpleado, 200);
       firebaseSetup();
 
-      final result = await fuenteDeDatos.ingresarConCorreoClave(tDatosInicioSesionDto.correoElectronico,'1234');
+      final result = await fuenteDeDatos.loginConEmailAndPassword(emailAddress: EmailAddress(tDatosInicioSesionDto.correoElectronico),password: Password('1234'));
       verify(mockHttpClient.postUrl(Uri.parse('$DIR_NEST/api/empleado/auth')));
       expect(result, equals(tRespuestaInicioSesionDto));
     });
@@ -122,19 +125,24 @@ void main () {
       setUpMockHttpClientFailure(500);
       firebaseSetup();
 
-      final call = fuenteDeDatos.ingresarConCorreoClave;
+      final call = fuenteDeDatos.loginConEmailAndPassword;
       
       verifyNever(mockHttpClient.postUrl(Uri.parse('$DIR_NEST/api/empleado/auth')));
       
-      expect(() async => call(tDatosInicioSesionDto.correoElectronico,'1234'),throwsA(const TypeMatcher<ServerException>()));
+      expect(() async => call(
+        emailAddress:EmailAddress(tDatosInicioSesionDto.correoElectronico),
+        password:Password('1234')),throwsA(const TypeMatcher<ServerException>()));
     });
 
     test(': Debe retornar excepcion tipo FirebaseAuthException ante error de plataforma', () {
       when(mockFirebaseAuth.signInWithEmailAndPassword(
               email: anyNamed('email'), password: anyNamed('password')))
           .thenAnswer((_) async => throw FirebaseAuthException(code:'ERROR_USER_NOT_FOUND'));
-      final call = fuenteDeDatos.ingresarConCorreoClave;
-      expect(() async => call(tDatosInicioSesionDto.correoElectronico,'1234'),throwsA(const TypeMatcher<FirebaseAuthException>()));
+      final call = fuenteDeDatos.loginConEmailAndPassword;
+      expect(() async => call(
+        emailAddress:EmailAddress(tDatosInicioSesionDto.correoElectronico),
+        password:Password('1234')
+        ),throwsA(const TypeMatcher<FirebaseAuthException>()));
     });
   });
   group('Inicio sesion googleSign + EndPoint  GET empleado/auth ', () {
@@ -150,14 +158,14 @@ void main () {
         .thenAnswer((_) async => '1234');
       googleSignInSuccesfulSetup();
       setUpMockHttpClientSuccess200(TestData().repuestaInicioSesionEmpleado, 200);
-      final result = await fuenteDeDatos.ingresarConGoogle();
+      final result = await fuenteDeDatos.loginGoogle();
       verify(mockHttpClient.postUrl(Uri.parse('$DIR_NEST/api/empleado/auth')));
       expect(result, equals(tRespuestaInicioSesionDto));
     });
     test(': Debe retornar excepcion tipo PlatformException ante error de plataforma', () {
     when(mockGoogleSignIn.signIn())
     .thenAnswer((_) async => null);
-      final call = fuenteDeDatos.ingresarConGoogle;
+      final call = fuenteDeDatos.loginGoogle;
       expect(() async => call(),throwsA(const TypeMatcher<PlatformException>()));
     });
   });

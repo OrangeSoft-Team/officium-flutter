@@ -1,11 +1,9 @@
 import 'dart:convert';
 import 'dart:io';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:http/http.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 import 'package:officium_flutter/infraestructura/comun/excepciones.dart';
-import 'package:officium_flutter/infraestructura/comun/response_parser.dart';
 import 'package:officium_flutter/infraestructura/core/empleado/fuentes/empleado_fuente.dart';
 import 'package:officium_flutter/infraestructura/core/empleado/modelos/actualizar_habilidades_empleado_dto.dart';
 import 'package:officium_flutter/infraestructura/core/empleado/modelos/datos_basicos_empleado_dto.dart';

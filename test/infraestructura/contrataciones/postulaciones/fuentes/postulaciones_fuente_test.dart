@@ -14,13 +14,13 @@ import '../../../data_pruebas/lector_json.dart';
 import '../../../data_pruebas/test_data.dart';
 import 'postulaciones_fuente_test.mocks.dart';
 
-const DIR_NEST = 'http://officium-nest.ddns.net:2000';
+const DIR_SPRING = 'http://orangesoft.ddns.net:3000';
 @GenerateMocks([HttpClient,HttpClientRequest,HttpClientResponse, HttpHeaders, Stream])
 void main () {
   MockHttpClient mockHttpClient =  MockHttpClient();
   final MockHttpClientRequest mockHttpClientRequest =  MockHttpClientRequest();
   final MockHttpHeaders mockHttpHeaders =  MockHttpHeaders();
-  final MockStream mockStream =  MockStream();
+  //final MockStream mockStream =  MockStream();
   final MockHttpClientResponse mockHttpClientResponse =  MockHttpClientResponse();
   PostulacionFuente fuenteDeDatos = PostulacionFuente(cliente: mockHttpClient);;
 
@@ -73,7 +73,7 @@ void main () {
 
       final result = await fuenteDeDatos.obtenerPostulacionesActivasEmpleado('1');
 
-      verify(mockHttpClient.getUrl(Uri.parse('$DIR_NEST/api/empleado/postulaciones')));
+      verify(mockHttpClient.getUrl(Uri.parse('$DIR_SPRING/api/empleado/postulaciones')));
 
       expect(result, equals(tListaPostulacionesDto));  
     });
@@ -91,7 +91,7 @@ void main () {
       final result = await fuenteDeDatos.aplicarOfertaLaboral(tPostulacionOfertaLaboralDto);
 
       verify(mockHttpClient.postUrl(
-        Uri.parse("$DIR_NEST/api/empleado/ofertas_laborales/${tPostulacionOfertaLaboralDto.uuidOfertaLaboral}"),
+        Uri.parse("$DIR_SPRING/api/empleado/ofertas_laborales/${tPostulacionOfertaLaboralDto.uuidOfertaLaboral}"),
       ));
 
       expect(result, equals(unit));
@@ -106,7 +106,7 @@ void main () {
     });
   });
 
-  group('EndPoint  PUT mpleado/oferta_laboral/:uuid_postulacion/cancelar ', () {
+  group('EndPoint  PUT empleado/oferta_laboral/:uuid_postulacion/cancelar ', () {
     final List<PostulacionEmpleadoDTO> tListaPostulacionesDto = [];
     for (final dto
         in jsonDecode(fixture(TestData().listaPostulacionesActivas)) as List) {
@@ -121,7 +121,7 @@ void main () {
       
       final result = await fuenteDeDatos.cancelarPostulacion(tListaPostulacionesDto[0].uuid);
       verify(mockHttpClient.putUrl(
-        Uri.parse('$DIR_NEST/api/empleado/oferta_laboral/${tListaPostulacionesDto[0].uuid}/cancelar'),
+        Uri.parse('$DIR_SPRING/api/empleado/oferta_laboral/${tListaPostulacionesDto[0].uuid}/cancelar')
       ));
 
       expect(result, equals(unit));

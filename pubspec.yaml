@@ -48,9 +48,14 @@ dependencies:
 dev_dependencies:
   auto_route_generator: ^2.1.0
   bloc_test: ^8.0.2
-  build_runner: 2.0.4  
+  build_runner: 2.0.4 
+  integration_test:
+    sdk: flutter 
   flutter_test:
-    sdk: flutter  
+    sdk: flutter
+  flutter_driver:
+    sdk: flutter
+  test: any  
   freezed: ^0.14.2
   injectable_generator: ^1.4.1
   json_serializable: ^4.1.3
