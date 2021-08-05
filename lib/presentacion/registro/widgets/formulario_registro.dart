@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:injectable/injectable.dart';
 import 'package:intl/intl.dart';
 import 'package:officium_flutter/aplicacion/autentificacion/estado_autentificacion/estado_autentificacion_bloc.dart';
-import 'package:officium_flutter/aplicacion/autentificacion/iniciar_sesion/iniciar_sesion_bloc.dart';
 import 'package:officium_flutter/aplicacion/autentificacion/registro/registro_bloc.dart';
 
 class FormularioRegistro extends StatefulWidget {
@@ -19,7 +17,7 @@ class _FormularioRegistroState extends State<FormularioRegistro> {
   DateTime _fecha = DateTime.now();
   final TextEditingController _pass = TextEditingController();
   final TextEditingController _confirmPass = TextEditingController();
-  ScrollController scrollController = new ScrollController();
+  ScrollController scrollController = ScrollController();
 
   final List<String> _generos = ['masculino', 'femenino', 'otro'];
   final List<String> _nivelEducativo = [
@@ -53,7 +51,7 @@ class _FormularioRegistroState extends State<FormularioRegistro> {
                           'Ya existe una cuenta asociada al email'),
                 ),
                 action: SnackBarAction(
-                  label: 'Action',
+                  label: 'Olvidar',
                   onPressed: () {},
                 ),
               );
@@ -116,6 +114,7 @@ class _FormularioRegistroState extends State<FormularioRegistro> {
                             .registrarConDatosBasicosPresionado());
                         if (!state.mostrarMensajesError) {
                           scrollController.jumpTo(0.0);
+                          Navigator.of(context).pushReplacementNamed("/");
                         }
                       },
                       child: const Text('Registrarse'),
